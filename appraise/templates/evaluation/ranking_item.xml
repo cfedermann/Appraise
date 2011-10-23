@@ -1,0 +1,9 @@
+{% extends "evaluation/ranking_task.xml" %}
+{% block items %}{% for item in items %}  <ranking-item id="{{item.id}}" sentence_id="{{item.sentence_id}}" user="{{item.user}}">
+    <source>{{item.source}}</source>
+    <systemA name="lucy" rank="{{item.rankA}}">{{item.systemA}}</systemA>
+    <systemB name="moses" rank="{{item.rankB}}">{{item.systemB}}</systemB>
+    <systemC name="trados" rank="{{item.rankC}}">{{item.systemC}}</systemC>
+    <systemD name="google" rank="{{item.rankD}}">{{item.systemD}}</systemD>
+  </ranking-item>
+{%endfor %}{% endblock %}

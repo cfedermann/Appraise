@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script type="text/javascript" src="/appraise/site_media/js/jquery.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="alert-message success">
+  <p id="task_progress">{{task_progress}}</p><p><span id="ajax_progress">Communicating with server... <img id="ajax_loader" src="/appraise/media/ajax-loader.gif" /></span></p>
+</div>
+
+<table>
+  <tr id="source"><th width="80px">Source:</th><td></td><td id="source_text"></td></tr>
+  <tr id="system_0"><th>System A:</th><td id="rank_0" width="20"></td><td id="system_0_text"></td></tr>
+  <tr id="system_1"><th>System B:</th><td id="rank_1"></td><td id="system_1_text"></td></tr>
+  <tr id="system_2"><th>System C:</th><td id="rank_2"></td><td id="system_2_text"></td></tr>
+  <tr id="system_3"><th>System D:</th><td id="rank_3"></td><td id="system_3_text"></td></tr>
+</table>
+<p><input id="reset_button" accesskey="r" type="button" value="Reset" /> (Ctrl-Alt-R)
+   <input id="flag_button" accesskey="f" type="button" value="Flag Error" /> (Ctrl-Alt-F)</p>
+
+<div id="errors">
+  <p>Please check the two most severe error classes which apply for the shown sentence.</p>
+  <p><input id="error_class_0" type="checkbox" /> Missing content word(s)</p>
+  <p><input id="error_class_1" type="checkbox" /> Content word(s) wrong in meaning</p>
+  <p><input id="error_class_2" type="checkbox" /> Wrong functional word(s)</p>
+  <p><input id="error_class_3" type="checkbox" /> Incorrect word form(s)</p>
+  <p><input id="error_class_4" type="checkbox" /> Incorrect word order</p>
+  <p><input id="error_class_5" type="checkbox" /> Incorrect punctuation</p>
+  <p><input id="error_class_6" type="checkbox" /> Other error</p>
+  <p><input id="submit_button" accesskey="s" type="button" value="Submit" /> (Ctrl-Alt-S)</p>
+  <p>Whenever extra commenting is necessary, put your comments here...</p>
+  <textarea id="extra_comments" cols="50" rows="5"></textarea>
+</div>
+
+
+<script type="text/javascript">
+<!--
+/* System constants */
+const SYSTEMS = new Array("System A:", "System B:", "System C:", "System D:");
+const NUMBER_OF_CHOICES = 4;
+const NUMBER_OF_ERRORS = 7;
+const AJAX_HOSTNAME = window.location.href;
+
+/* State variables */
+var NUMBER_OF_RANKING = 1;
+var NUMBER_OF_CLICKS = 0;
+var CLASSIFICATION_ID = null;
+var ORDER = null;
+var ITEM_ID = null;
+
+/*
+ * Pre-flight initialization method.
+ */
+$(document).ready(function(){
+  // Initialize ranking interface.
+  init_ranking();
+
+  // Request initial choices from server.
+  load_ranking();
+});
+
+/*
+ * Initialize ranking interface.
+ */
+function init_ranking() {
+  // Init state variables.
+  NUMBER_OF_RANKING = 1;
+  NUMBER_OF_CLICKS = 0;
+
+  // Hide error classification view for ranking view.
+  $("#errors").hide();
+
+  // Bind "click" event handlers.
+  $("#reset_button").unbind("click").bind("click", init_ranking);
+  $("#flag_button").unbind("click").bind("click", flag_error_and_reload);
+
+  var _system = null;
+  for (var i=0; i<NUMBER_OF_CHOICES; i++) {
+    _system = $("#system_" + i);
+    _system.children("th").html(SYSTEMS[i]);
+    _system.children("td").first().html("");
+    _system.unbind("click").bind("click", rank_handler);
+    _system.unbind("mouseenter mouseleave");
+    _system.hover(
+      function(){$(this).addClass("taraxue_blue");},
+      function(){$(this).removeClass("taraxue_blue");}
+    );
+    _system.removeClass("grey_light");
+    _system.show();
+  }
+}
+
+/*
+ * Request ranking choices from server.
+ */
+function load_ranking() {
+  $.get(AJAX_HOSTNAME, load_ranking_callback);
+}
+
+/*
+ * Load ranking choices from JSON data.
+ */
+function load_ranking_callback(data) {
+  var json = JSON.parse(data);
+
+  if (json.item_id == -1) {
+    window.location.href='/appraise/evaluation';
+  }
+
+  for (var key in json) {
+    if (key == "order") {
+      ORDER = json.order;
+    }
+    else if (key == "item_id") {
+      ITEM_ID = json.item_id;
+    }
+    else {
+      $("#" + key).html(eval("json." + key));
+    }
+  }
+  $("#ajax_progress").fadeOut("slow");
+}
+
+/*
+ * Reload ranking choices from JSON data, 
+ */
+function reload_ranking(data) {
+  init_ranking();
+  load_ranking_callback(data);
+}
+
+/*
+ * Initialize classification interface.
+ */
+function init_classification() {
+  // Clear comments form.
+  $("#extra_comments").val("");
+
+  // Bind "click" event handlers.
+  $("#submit_button").unbind("click").bind("click", save_and_reload);
+  var _error_class = null;
+  for (var i=0; i<NUMBER_OF_ERRORS; i++) {
+    _error_class = $("#error_class_" + i);
+    _error_class.unbind("click").bind("click", click_handler);
+    _error_class.attr("checked", false);
+  }
+
+  // Hide all translations except the one for classification.
+  var _system = null;
+  for (var i=0; i<NUMBER_OF_CHOICES; i++) {
+    _system = $("#system_" + i);
+    if (i == CLASSIFICATION_ID) {
+      _system.children("th").html("Translation:");
+      _system.children("td").first().html("");
+      _system.removeClass("grey_light");
+    }
+    else {
+      _system.hide();
+    }
+  }
+
+  // Show error classification view.
+  $("#errors").fadeIn("slow");
+}
+
+/*
+ * Submit ranking to server and request sentence id for classification.
+ */
+function load_classification() {
+  var ranks = "";
+  for (var i=0; i<NUMBER_OF_CHOICES; i++) {
+    ranks += i + "=" + $("#rank_" + i).html().substr(1);
+    if (i<NUMBER_OF_CHOICES-1) {
+      ranks += ","
+    }
+  }
+  data = {"item_id": ITEM_ID, "ranks": ranks, "order": ORDER,
+    "mode": "RANKING"}
+  $.post(AJAX_HOSTNAME, data, load_classification_callback);
+}
+
+/*
+ * Load sentence id from JSON data and initialize classification interface.
+ */
+function load_classification_callback(data) {
+  var json = JSON.parse(data);
+  CLASSIFICATION_ID = json.system_id;
+
+  // If system_id is -1, an error occurred and we have to reload!
+  if (CLASSIFICATION_ID == -1) {
+    CLASSIFICATION_ID = null;
+    init_ranking();
+  }
+  // Otherwise, we can initialize the classification interface.
+  else {
+    init_classification();
+  }
+  $("#ajax_progress").fadeOut("slow");
+}
+
+/*
+ * "click" event handler which allows to rank the translation choices.
+ */
+function rank_handler(event) {
+  var _system = $(event.target).parent();
+  _system.children("td").first().html("#" + NUMBER_OF_RANKING);
+  _system.addClass("grey_light").removeClass("taraxue_blue");
+  _system.unbind("click mouseenter mouseleave");
+  NUMBER_OF_RANKING++;
+
+  if (NUMBER_OF_RANKING == NUMBER_OF_CHOICES) {
+    var _rank = null;
+    for (var i=0; i<NUMBER_OF_CHOICES; i++) {
+      _rank = $("#rank_" + i);
+      if (_rank.html() == "") {
+        _rank.html("#" + NUMBER_OF_RANKING);
+        $("#system_" + i).addClass("grey_light");
+        break;
+      }
+    }
+
+    $("#ajax_progress").show();
+    window.setTimeout("load_classification()", 500);
+  }
+}
+
+/*
+ * "click" event handler which allows up to two checkboxes to be selected.
+ */
+function click_handler(event) {
+  var error_class = $(event.target);
+
+  if (error_class.attr("checked")) {
+    NUMBER_OF_CLICKS++;
+  }
+  else {
+    NUMBER_OF_CLICKS--;
+  }
+
+  if (NUMBER_OF_CLICKS > 2) {
+    NUMBER_OF_CLICKS = 2;
+    error_class.attr("checked", false);
+  }
+}
+
+/*
+ * Submit classification data to server and request new ranking choices.
+ */
+function save_and_reload() {
+  var errors = "";
+  var checked = $("input:checked");
+  for (var i=0; i<checked.length; i++) {
+    errors += checked[i].id.substr(-1);
+    if (i+1 < checked.length) {
+      errors += ",";
+    }
+  }
+
+  var comments = $("#extra_comments").val();
+
+  data = {"item_id": ITEM_ID, "system_id": CLASSIFICATION_ID,
+    "mode": "CLASSIFICATION", "errors": errors, "comments": comments};
+  $("#ajax_progress").show();
+  $.post(AJAX_HOSTNAME, data, reload_ranking);
+}
+
+/*
+ * Flag sentence as erroneous and request new ranking choices.
+ */
+function flag_error_and_reload() {
+  data = {"item_id": ITEM_ID, "mode": "FLAG_ERROR"};
+  $("#ajax_progress").show();
+  $.post(AJAX_HOSTNAME, data, reload_ranking);
+}
+//-->
+</script>
+{% endblock %}

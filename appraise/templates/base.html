@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <meta name="description" content="Appraise Evaluation Interface">
+    <meta name="author" content="Christian Federmann">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/appraise/site_media/css/bootstrap-1.1.0.modified.css">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container fixed">
+          <h3><a href="/appraise/">Appraise</a></h3>
+          <ul>
+            <li><a href="/appraise/evaluation/">Overview</a></li>
+
+            {% if user.username %}
+            <li><a href="/appraise/logout/">Logout "{{user.username}}"</a></li>
+            {% else %}
+            <li><a href="/appraise/login/">Login</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <section id="content">
+        <div class="row">
+          <div class="span16 columns">
+            {% block content %}{% endblock %}
+            {% block options %}{% endblock %}
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>This is the GitHub version of the Appraise evaluation system. Some rights reserved.{% block footer %}{% endblock %}</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

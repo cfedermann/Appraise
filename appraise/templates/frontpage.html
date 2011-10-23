@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if message %}
+  <div class="alert-message error">
+    <p><strong>Please note:</strong> {{message}}</p>
+  </div>
+{% endif %}
+
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+    <h1>Welcome to Appraise!</h1>
+    <p>This is the Appraise evaluation system for manual evaluation of machine translation output. It supports collaborative collection of human feedback for evaluation tasks such as <em>Translation Quality Checking</em>, <em>Ranking and Error Classification</em>, and <em>Manual Post-Editing</em>.</p>
+
+    <p><a href="/appraise/evaluation/" class="btn primary large">See evaluation tasks &raquo;</a></p>
+  </div>
+
+{% endblock %}

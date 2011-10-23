@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="alert-message success">
+  <p id="task_progress">{{task_progress}}</p>
+</div>
+
+<div class="container">
+
+<div class="span8">
+<blockquote>
+<p><strong>{{source_text}}</strong></p>
+<small>Source</small>
+</blockquote>
+</div>
+
+<div class="span8">
+<blockquote>
+<p><strong>{{translation_text}}</strong></p>
+<small>Translation</small>
+</blockquote>
+</div>
+
+</div>
+
+<form action="" method="post">
+
+<input name="item_id" type="hidden" value="{{item_id}}" />
+<input name="now" type="hidden" value="{{now}}" />
+
+<div class="actions">
+  <button name="submit_button" accesskey="a" type="submit" class="btn" value="A">Acceptable</button>
+  <span class="help-inline">(Ctrl-Alt-A)</span>
+  
+  <button name="submit_button" accesskey="c" type="submit" class="btn" value="C">Can easily be fixed</button>
+  <span class="help-inline">(Ctrl-Alt-C)</span>
+  
+  <button name="submit_button" accesskey="n" type="submit" class="btn" value="N">None of both</button>
+  <span class="help-inline">(Ctrl-Alt-N)</span>
+</div>
+
+</form>
+
+{% endblock %}

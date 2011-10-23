@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+{% endblock %}
+
+{% block header %}
+  <h1 class="grey_dark">Task 2: Manual Post-Editing</h1>
+  <h3 class="grey_light">Select sentence easiest to post-edit and correct it.</h3>
+{% endblock %}
+
+{% block content %}
+<p>&raquo; <a href="/appraise/evaluation/">Back to overview</a></p>
+
+<p id="task_progress"></p> <p id="ajax_progress">Communicating with server... <img id="ajax_loader" src="/appraise/media/ajax-loader.gif" /></p>
+
+<table>
+  <tr id="source"><th>Source:</th><td id="source_text"></td></tr>
+  <tr id="system_0"><th>System A:</th><td id="system_0_text"></td></tr>
+  <tr id="system_1"><th>System B:</th><td id="system_1_text"></td></tr>
+  <tr id="system_2"><th>System C:</th><td id="system_2_text"></td></tr>
+</table>
+
+<div id="errors">
+  <p>Please do a minimal post-correction for the selected sentence.</p>
+  <p><textarea id="postediting" cols="100" rows="5"></textarea></p>
+  <p><input id="submit_button" accesskey="s" type="button" value="Submit" /> (Ctrl-Alt-S)
+     <input id="reset_button" accesskey="r" type="button" value="Reset" /> (Ctrl-Alt-R)</p>
+</div>
+
+
+<script>
+<!--
+/* System constants */
+const SYSTEMS = new Array("System A:", "System B:", "System C:");
+const NUMBER_OF_CHOICES = 3;
+const AJAX_HOSTNAME = window.location.href;
+
+/* State variables */
+var POSTEDITING_ID = null;
+var ORDER = null;
+var ITEM_ID = null;
+
+/*
+ * Pre-flight initialization method.
+ */
+$(document).ready(function() {
+  // Initialize post-editing interface.
+  init_editing();
+
+  // Request initial post-editing data from server.
+  load_editing();
+});
+
+/*
+ * Initialize post-editing interface.
+ */
+function init_editing() {
+  // Init state variables.
+  POSTEDITING_ID = null;
+
+  // Hide post-editing textarea initially.
+  $("#errors").hide();
+
+  // Bind "click" event handlers.
+  $("#reset_button").unbind("click").bind("click", init_editing);
+  $("#submit_button").unbind("click").bind("click", save_and_continue);
+
+  var _system = null;
+  for (var i=0; i<NUMBER_OF_CHOICES; i++) {
+    _system = $("#system_" + i);
+    _system.children("th").html(SYSTEMS[i]);
+    _system.unbind("click").bind("click", edit_handler);
+    _system.unbind("mouseenter mouseleave");
+    _system.hover(
+      function(){$(this).addClass("taraxue_blue");},
+      function(){$(this).removeClass("taraxue_blue");}
+    );
+    _system.show();
+  }
+}
+
+/*
+ * Request post-editing data from server.
+ */
+function load_editing() {
+  $.get(AJAX_HOSTNAME, load_editing_callback);
+}
+
+/*
+ * Load post-editing data from JSON data.
+ */
+function load_editing_callback(data) {
+  var json = JSON.parse(data);
+
+  if (json.item_id == -1) {
+    window.location.href='/appraise/evaluation';
+  }
+
+  for (var key in json) {
+    if (key == "order") {
+      ORDER = json.order;
+    }
+    else if (key == "item_id") {
+      ITEM_ID = json.item_id;
+    }
+    else {
+      $("#" + key).html(eval("json." + key));
+    }
+  }
+  $("#ajax_progress").fadeOut("slow");
+}
+
+/*
+ * Reload post-editing data from JSON data, 
+ */
+function reload_editing(data) {
+  init_editing();
+  load_editing_callback(data);
+}
+
+/*
+ * Selects a translation for minimal post-editing, hiding the others.
+ */
+function edit_handler(event) {
+  var _system = $(event.target).parent();
+  POSTEDITING_ID = _system.attr("id");
+
+  for (var i=0; i<NUMBER_OF_CHOICES; i++) {
+    var current = $("#system_" + i);
+    if (current.attr("id") != _system.attr("id")) {
+      current.hide();
+    }
+    else {
+      current.removeClass("taraxue_blue");
+      current.unbind("click mouseenter mouseleave");
+    }
+  }
+  
+  $("#postediting").val(_system.children("td").html());
+  $("#errors").fadeIn("slow");
+}
+
+function save_and_continue() {
+  var text = $("#postediting").val();
+  if (text == "" || text == $("#" + POSTEDITING_ID).html()) {
+    return;
+  }
+
+  data = {"item_id": ITEM_ID, "system_id": POSTEDITING_ID.substr(-1),
+    "text": text, "order": ORDER};
+  $("#ajax_progress").show();
+  $.post(AJAX_HOSTNAME, data, reload_editing);
+}
+//-->
+</script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if form.errors %}
+  <div class="alert-message error">
+    <p>Your username and password did not match. Please try again.</p>
+  </div>
+  {% endif %}
+
+  <h1>User Authentication <small>Your username and password, please...</small></h1>
+
+  <form method="post" action="{% url appraise.views.login %}">
+  {% csrf_token %}
+
+  <fieldset>
+
+  <div class="clearfix">
+    <label for="id_username">Username</label>
+    <div class="input">
+      <div class="input-prepend">
+        <span class="add-on">required</span>
+        <input name="username" id="id_username" class="xlarge" type="text" size="30" value="{{username}}" />
+      </div>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <label for="id_password">Password</label>
+    <div class="input">
+      <div class="input-prepend">
+        <span class="add-on">required</span>
+        <input name="password" id="id_password" class="xlarge" type="password" size="30" />
+      </div>
+    </div>
+  </div>
+
+  </fieldset>
+
+  <div class="actions">
+    <button type="submit" class="btn primary">Login</button>
+  </div>
+  
+  <input type="hidden" name="next" value="{{ next }}" />
+  
+  </form>
+{% endblock %}

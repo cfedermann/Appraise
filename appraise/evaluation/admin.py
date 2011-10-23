@@ -1,0 +1,74 @@
+# -*- coding: utf-8 -*-
+"""
+Project: Appraise evaluation system
+ Author: Christian Federmann <cfedermann@dfki.de>
+"""
+from django.contrib import admin
+from django.forms import Textarea
+from django.db.models import TextField
+from appraise.evaluation.models import RankingTask, RankingItem, \
+  RankingResult, ClassificationResult, EditingTask, EditingItem, \
+  EditingResult, LucyTask, LucyItem, LucyResult, QualityTask, QualityItem, \
+  QualityResult
+
+class QualityTaskAdmin(admin.ModelAdmin):
+    """Admin class for QualityTask instances."""
+    list_display = ('shortname', 'task_id', 'completed')
+    search_fields = ('shortname', 'description')
+    readonly_fields = ('task_id',)
+    
+    fieldsets = (
+      (None, {
+        'fields': ('shortname', 'description', 'users')
+      }),
+      ('Advanced Options', {
+        'classes': ('collapse',),
+        'fields': ('task_id',)
+      })
+    )
+
+class QualityItemAdmin(admin.ModelAdmin):
+    """Admin class for QualityItem instances."""
+    list_display = ('source', 'translation')
+    list_filter = ('edited',)
+    search_fields = ('source', 'translation', 'context')
+    
+    fieldsets = (
+      (None, {
+        'fields': ('source', 'translation', 'context')
+      }),
+      ('Advanced Options', {
+        'classes': ('collapse',),
+        'fields': ('edited', 'task')
+      })
+    )
+    
+    formfield_overrides = {
+      TextField: {'widget': Textarea(attrs={'rows': 4, 'cols': 80})},
+    }
+
+class QualityResultAdmin(admin.ModelAdmin):
+    """Admin class for QualityResult instances."""
+    list_display = ('quality', 'item', 'user', 'duration_in_seconds')
+    list_filter = ('quality', 'user')
+    exclude = ('duration',)
+
+    fieldsets = (
+      (None, {
+        'fields': ('quality', 'item', 'user',)
+      }),
+    )
+
+admin.site.register(RankingTask)
+admin.site.register(RankingItem)
+admin.site.register(RankingResult)
+admin.site.register(ClassificationResult)
+admin.site.register(EditingTask)
+admin.site.register(EditingItem)
+admin.site.register(EditingResult)
+admin.site.register(LucyTask)
+admin.site.register(LucyItem)
+admin.site.register(LucyResult)
+admin.site.register(QualityTask, QualityTaskAdmin)
+admin.site.register(QualityItem, QualityItemAdmin)
+admin.site.register(QualityResult, QualityResultAdmin)

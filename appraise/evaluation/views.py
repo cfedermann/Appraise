@@ -103,7 +103,7 @@ def ranking(request, task_id):
                     #   translation from the previous ranking.
                     for k in range(4):
                         print "_r[_o[k]] = {0}".format(_rank[_order[k]])
-                        if _rank[_order[k]] == 1:
+                        if _rank[k] == 1:
                             system_id = k
 
                 json = simplejson.dumps({'system_id': system_id})

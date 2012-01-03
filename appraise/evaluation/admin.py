@@ -11,6 +11,40 @@ from appraise.evaluation.models import RankingTask, RankingItem, \
   EditingResult, LucyTask, LucyItem, LucyResult, QualityTask, QualityItem, \
   QualityResult
 
+from appraise.evaluation.models import EvaluationTask
+
+
+class EvaluationTaskAdmin(admin.ModelAdmin):
+    """
+    ModelAdmin class for EvaluationTask objects.
+    """
+    list_display = ('task_name', 'task_type', 'task_id')
+    list_filter = ('task_type', 'active')
+    search_fields = ('task_name', 'description')
+    readonly_fields = ('task_id',)
+    
+    fieldsets = (
+      ('Required Information', {
+        'classes': ('wide',),
+        'fields': ('task_name', 'task_type', 'task_xml')
+      }),
+      ('Optional Information', {
+        'classes': ('wide',),
+        'fields': ('active', 'description', 'users')
+      })
+    )
+    
+    def get_readonly_fields(self, request, obj=None):
+        """
+        We only allow changing task_xml and task_type on object creation.
+        
+        - http://stackoverflow.com/questions/2639654/django-read-only-field
+        """
+        if obj is not None:
+            return self.readonly_fields + ('task_xml', 'task_type')
+        
+        return self.readonly_fields
+
 class QualityTaskAdmin(admin.ModelAdmin):
     """Admin class for QualityTask instances."""
     list_display = ('shortname', 'task_id', 'completed')
@@ -72,3 +106,5 @@ admin.site.register(LucyResult)
 admin.site.register(QualityTask, QualityTaskAdmin)
 admin.site.register(QualityItem, QualityItemAdmin)
 admin.site.register(QualityResult, QualityResultAdmin)
+
+admin.site.register(EvaluationTask, EvaluationTaskAdmin)

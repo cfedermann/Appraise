@@ -18,11 +18,136 @@ LOGGER.addHandler(LOG_HANDLER)
 def _create_id():
     """Creates a random UUID-4 32-digit hex number for use as task id."""
     new_id = uuid.uuid4().hex
+    ###while EvaluationTask.objects.filter(task_id=new_id):
+    ###    new_id = uuid.uuid4().hex
+
     #while (RankingTask.objects.filter(task_id=new_id) or
     #  EditingTask.objects.filter(task_id=new_id)):
     #    new_id = uuid.uuid4().hex
 
     return new_id
+
+
+from django.core.exceptions import ValidationError
+from django.dispatch import receiver
+from django.db.models.signals import pre_delete
+
+APPRAISE_TASK_TYPE_CHOICES = (
+  ('1', 'Quality Checking'),
+  ('2', 'Ranking'),
+  ('3', 'Post-editing'),
+  ('4', 'Error classification'),
+)
+
+
+def validate_source_xml_file(value):
+    """
+    dumdidum
+    """
+    #raise ValidationError('Thunder in the heavens!')
+    return value
+
+# TODO: decide on status information such as creation_date, modification_date,
+#   and owner/creator.
+#
+# Also check if task_type could/should be derived from the given source XML!
+#
+# Static method to perform the import process; this will roll-back any changes
+#   in case of errors to avoid polluting the database.  Also, existing objects
+#   with identical information will be re-used to avoid duplication.
+class EvaluationTask(models.Model):
+    """
+    Evaluation Task object model.
+    """
+    task_id = models.CharField(
+      max_length=32,
+      db_index=True,
+      default=_create_id(),
+      editable=False,
+      help_text="Unique task identifier for this evaluation task.",
+      verbose_name="Task identifier"
+    )
+
+    task_name = models.CharField(
+      max_length=100,
+      db_index=True,
+      help_text="Unique, descriptive name for this evaluation task.",
+      unique=True,
+      verbose_name="Task name"
+    )
+
+    task_type = models.CharField(
+      max_length=1,
+      choices=APPRAISE_TASK_TYPE_CHOICES,
+      db_index=True,
+      help_text="Type choice for this evaluation task.",
+      verbose_name="Task type"
+    )
+
+    # TODO: fix upload_to to a good value.
+    task_xml = models.FileField(
+      upload_to='source-xml',
+      help_text="XML source file for this evaluation task.",
+      validators=[validate_source_xml_file],
+      verbose_name="Task source XML"
+    )
+
+    description = models.TextField(
+      blank=True,
+      help_text="(Optional) Text describing this evaluation task.",
+      verbose_name="Description"
+    )
+
+    users = models.ManyToManyField(
+      User,
+      blank=True,
+      null=True,
+      help_text="(Optional) Users allowed to work on this evaluation task."
+    )
+
+    active = models.BooleanField(
+      db_index=True,
+      default=True,
+      help_text="Indicates that this evaluation task is still in use.",
+      verbose_name="Active?"
+    )
+
+    class Meta:
+        """
+        Metadata options for the EvaluationTask object model.
+        """
+        ordering = ('task_name', 'task_type', 'task_id')
+        verbose_name = "EvaluationTask object"
+        verbose_name_plural = "EvaluationTask objects"
+    
+    def save(self, *args, **kwargs):
+        """
+        Save blabla... the Children of the Cross!
+        """
+        print self.task_xml, dir(self.task_xml)
+        
+        # Enforce validation before saving EvaluationTask objects.
+        self.full_clean()
+        
+        super(EvaluationTask, self).save(*args, **kwargs)
+    
+    def NOT_USED_clean_fields(self, exclude=[]):
+        """
+        Validate blabla...
+        """
+        if not self.task_xml:
+            raise ValidationError('Tell me lil boy... what have you been through')
+
+
+@receiver(pre_delete, sender=EvaluationTask)
+def remove_task_xml_file_on_delete(sender, instance, **kwargs):
+    """
+    Removes the task_xml file when the EvaluationTask instance is deleted.
+    """
+    # We have to use save=False as otherwise validation would fail ;)
+    instance.task_xml.delete(save=False)
+
+
 
 
 class RankingTask(models.Model):
@@ -35,72 +160,72 @@ class RankingTask(models.Model):
       help_text="Users allowed to work on this ranking/classification task."
     )
     task_id = models.CharField(max_length=32, default=_create_id())
-    
+
     def __unicode__(self):
         """Returns a Unicode String representation of the ranking task."""
         return u'<ranking-task id="{0}" name="{1}">'.format(self.id,
           self.shortname)
-    
+
     def get_status(self):
         """Returns a tuple containing (edited, total) sentences."""
         total = RankingItem.objects.filter(task=self).count()
         edited = RankingItem.objects.filter(task=self, edited=True).count()
         return (edited, total)
-    
+
     def get_rankA(self):
         """Returns the average rank of system A."""
         edited = RankingItem.objects.filter(task=self, edited=True).count()
-        
+
         rank = 0
         for k in range(4):
             rank += (k+1) * RankingResult.objects.filter(item__task=self,
             item__edited=True, rankA=str(k+1)).count()
-        
+
         if edited:
             return rank/float(edited)
-        
+
         return None
-    
+
     def get_rankB(self):
         """Returns the average rank of system B."""
         edited = RankingItem.objects.filter(task=self, edited=True).count()
-        
+
         rank = 0
         for k in range(4):
             rank += (k+1) * RankingResult.objects.filter(item__task=self,
             item__edited=True, rankB=str(k+1)).count()
-        
+
         if edited:
             return rank/float(edited)
-        
+
         return None
-    
+
     def get_rankC(self):
         """Returns the average rank of system C."""
         edited = RankingItem.objects.filter(task=self, edited=True).count()
-        
+
         rank = 0
         for k in range(4):
             rank += (k+1) * RankingResult.objects.filter(item__task=self,
             item__edited=True, rankC=str(k+1)).count()
-        
+
         if edited:
             return rank/float(edited)
-        
+
         return None
-    
+
     def get_rankD(self):
         """Returns the average rank of system D."""
         edited = RankingItem.objects.filter(task=self, edited=True).count()
-        
+
         rank = 0
         for k in range(4):
             rank += (k+1) * RankingResult.objects.filter(item__task=self,
             item__edited=True, rankD=str(k+1)).count()
-        
+
         if edited:
             return rank/float(edited)
-        
+
         return None
 
 
@@ -167,12 +292,12 @@ class EditingTask(models.Model):
       help_text="Users allowed to work on this editing task."
     )
     task_id = models.CharField(max_length=32, default=_create_id())
-    
+
     def __unicode__(self):
         """Returns a Unicode String representation of the editing task."""
         return u'<editing-task id="{0}" name="{1}">'.format(self.id,
           self.shortname)
-    
+
     def get_status(self):
         """Returns a tuple containing (edited, total) sentences."""
         total = EditingItem.objects.filter(task=self).count()
@@ -218,18 +343,18 @@ class LucyTask(models.Model):
       help_text="Users allowed to work on this Lucy ranking task."
     )
     task_id = models.CharField(max_length=32, default=_create_id())
-    
+
     def __unicode__(self):
         """Returns a Unicode String representation of the Lucy task."""
         return u'<lucy-task id="{0}" name="{1}">'.format(self.id,
           self.shortname)
-    
+
     def get_status(self):
         """Returns a tuple containing (edited, total) sentences."""
         total = LucyItem.objects.filter(task=self).count()
         edited = LucyResult.objects.filter(item__task__id=self.id).count()
         return (edited, total)
-    
+
     def get_results(self):
         """Returns a list of tuples containing the results for this task."""
         results = LucyResult.objects.filter(item__task__id=self.id)
@@ -238,7 +363,7 @@ class LucyTask(models.Model):
         for result in results:
             rankings[result.ranking] += 1
             sigma += 1
-        
+
         return (rankings['W++'], rankings['W+'], rankings['=='],
           rankings['B+'], rankings['B++'], sigma)
 
@@ -301,60 +426,60 @@ class QualityTask(models.Model):
         total = QualityItem.objects.filter(task=self).count()
         edited = QualityItem.objects.filter(task=self, edited=True).count()
         return (edited, total)
-    
+
     def get_acceptable(self):
         """Returns a tuple containing (acceptable, percentage) information."""
         edited = QualityItem.objects.filter(task=self, edited=True).count()
         acceptable = QualityResult.objects.filter(item__task=self,
           item__edited=True, quality="A").count()
-        
+
         if not edited:
             return (0, 0)
-        
+
         return (acceptable, 100 * acceptable/float(edited))
-    
+
     def get_canbefixed(self):
         """Returns a tuple containing (canbefixed, percentage) information."""
         edited = QualityItem.objects.filter(task=self, edited=True).count()
         canbefixed = QualityResult.objects.filter(item__task=self,
           item__edited=True, quality="C").count()
-        
+
         if not edited:
             return (0, 0)
-        
+
         return (canbefixed, 100 * canbefixed/float(edited))
-    
+
     def get_noneofboth(self):
         """Returns a tuple containing (noneofboth, percentage) information."""
         edited = QualityItem.objects.filter(task=self, edited=True).count()
         noneofboth = QualityResult.objects.filter(item__task=self,
           item__edited=True, quality="N").count()
-        
+
         if not edited:
             return (0, 0)
-        
+
         return (noneofboth, 100 * noneofboth/float(edited))
-    
+
     def get_duration(self):
         """Returns the average duration time as String."""
         edited = QualityItem.objects.filter(task=self, edited=True).count()
         durations = QualityResult.objects.filter(item__task=self,
           item__edited=True).values_list('duration', flat=True)
-        
+
         if not edited:
             return None
-                
+
         average = 0
         for duration in durations:
             _duration = duration.hour * 3600 + duration.minute * 60 \
               + duration.second + (duration.microsecond / 1000000.0)
-            
+
             average += _duration
-        
+
         average /= float(edited)
-        
+
         return average
-    
+
     def completed(self):
         """Checks if this task is completed."""
         total = QualityItem.objects.filter(task=self).count()

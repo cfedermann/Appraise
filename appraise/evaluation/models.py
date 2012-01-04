@@ -140,6 +140,12 @@ class EvaluationTask(models.Model):
             except ParseError:
                 self.task_attributes = {}
     
+    def __unicode__(self):
+        """
+        Returns a Unicode String for this EvaluationTask object.
+        """
+        return u'<evaluation-task id="{0}">'.format(self.id)
+    
     def save(self, *args, **kwargs):
         """
         Makes sure that validation is run before saving an object instance.
@@ -162,6 +168,12 @@ def remove_task_xml_file_on_delete(sender, instance, **kwargs):
     # We have to use save=False as otherwise validation would fail ;)
     instance.task_xml.delete(save=False)
 
+
+class EvaluationItem(models.Model):
+    """
+    Evaluation Item object model.
+    """
+    pass
 
 
 

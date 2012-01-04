@@ -3,6 +3,8 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@dfki.de>
 """
+from xml.etree.ElementTree import fromstring, ParseError
+
 import logging
 import uuid
 from django.db import models
@@ -50,8 +52,6 @@ def validate_source_xml_file(value):
 # TODO: decide on status information such as creation_date, modification_date,
 #   and owner/creator.
 #
-# Also check if task_type could/should be derived from the given source XML!
-#
 # Static method to perform the import process; this will roll-back any changes
 #   in case of errors to avoid polluting the database.  Also, existing objects
 #   with identical information will be re-used to avoid duplication.
@@ -89,8 +89,11 @@ class EvaluationTask(models.Model):
       upload_to='source-xml',
       help_text="XML source file for this evaluation task.",
       validators=[validate_source_xml_file],
-      verbose_name="Task source XML"
+      verbose_name="Task XML source"
     )
+    
+    # The following is derived from task_xml and NOT stored in the database.
+    task_attributes = {}
 
     description = models.TextField(
       blank=True,
@@ -120,12 +123,27 @@ class EvaluationTask(models.Model):
         verbose_name = "EvaluationTask object"
         verbose_name_plural = "EvaluationTask objects"
     
+    def __init__(self, *args, **kwargs):
+        """
+        Makes sure that self.task_attributes are available.
+        """
+        super(EvaluationTask, self).__init__(*args, **kwargs)
+        
+        # If a task_xml file is available, populate self.task_attributes.
+        if self.task_xml:
+            try:
+                _task_xml = fromstring(self.task_xml.read())
+                self.task_attributes = {}
+                for key, value in _task_xml.attrib.items():
+                    self.task_attributes[key] = value
+            
+            except ParseError:
+                self.task_attributes = {}
+    
     def save(self, *args, **kwargs):
         """
-        Save blabla... the Children of the Cross!
+        Makes sure that validation is run before saving an object instance.
         """
-        print self.task_xml, dir(self.task_xml)
-        
         # Enforce validation before saving EvaluationTask objects.
         self.full_clean()
         

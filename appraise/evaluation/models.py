@@ -147,14 +147,11 @@ class EvaluationTask(models.Model):
         # Enforce validation before saving EvaluationTask objects.
         self.full_clean()
         
+        # Double check that the given XML source file is valid.
+        # if not self.id:
+        #     raise ValidationError('Check task_xml contents before saving!')
+        
         super(EvaluationTask, self).save(*args, **kwargs)
-    
-    def NOT_USED_clean_fields(self, exclude=[]):
-        """
-        Validate blabla...
-        """
-        if not self.task_xml:
-            raise ValidationError('Tell me lil boy... what have you been through')
 
 
 @receiver(pre_delete, sender=EvaluationTask)

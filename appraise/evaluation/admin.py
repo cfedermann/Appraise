@@ -11,7 +11,7 @@ from appraise.evaluation.models import RankingTask, RankingItem, \
   EditingResult, LucyTask, LucyItem, LucyResult, QualityTask, QualityItem, \
   QualityResult
 
-from appraise.evaluation.models import EvaluationTask
+from appraise.evaluation.models import EvaluationTask, EvaluationItem
 
 
 class EvaluationTaskAdmin(admin.ModelAdmin):
@@ -108,3 +108,4 @@ admin.site.register(QualityItem, QualityItemAdmin)
 admin.site.register(QualityResult, QualityResultAdmin)
 
 admin.site.register(EvaluationTask, EvaluationTaskAdmin)
+admin.site.register(EvaluationItem)

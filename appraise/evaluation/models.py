@@ -130,15 +130,7 @@ class EvaluationTask(models.Model):
         super(EvaluationTask, self).__init__(*args, **kwargs)
         
         # If a task_xml file is available, populate self.task_attributes.
-        if self.task_xml:
-            try:
-                _task_xml = fromstring(self.task_xml.read())
-                self.task_attributes = {}
-                for key, value in _task_xml.attrib.items():
-                    self.task_attributes[key] = value
-            
-            except ParseError:
-                self.task_attributes = {}
+        self.reload_dynamic_fields()
     
     def __unicode__(self):
         """
@@ -158,6 +150,21 @@ class EvaluationTask(models.Model):
         #     raise ValidationError('Check task_xml contents before saving!')
         
         super(EvaluationTask, self).save(*args, **kwargs)
+    
+    def reload_dynamic_fields(self):
+        """
+        Reloads task_attributes from self.task_xml contents.
+        """
+        # If a task_xml file is available, populate self.task_attributes.
+        if self.task_xml:
+            try:
+                _task_xml = fromstring(self.task_xml.read())
+                self.task_attributes = {}
+                for key, value in _task_xml.attrib.items():
+                    self.task_attributes[key] = value
+            
+            except ParseError:
+                self.task_attributes = {}
 
 
 @receiver(pre_delete, sender=EvaluationTask)

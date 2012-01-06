@@ -92,7 +92,7 @@ class EvaluationTask(models.Model):
       verbose_name="Task XML source"
     )
     
-    # The following is derived from task_xml and NOT stored in the database.
+    # This is derived from task_xml and NOT stored in the database.
     task_attributes = {}
 
     description = models.TextField(
@@ -169,11 +169,95 @@ def remove_task_xml_file_on_delete(sender, instance, **kwargs):
     instance.task_xml.delete(save=False)
 
 
+# TODO: fix validation for item_xml -- what do we put into ValidationError?
+def validate_item_xml(value):
+    """
+    Checks that item_xml contains source, reference, some translation tags.
+    """
+    try:
+        _item_xml = fromstring(value)
+    
+    except ParseError:
+        from traceback import format_exc
+        raise ValidationError("Invalid item_xml value: {0}".format(format_exc()))
+    
+
+
 class EvaluationItem(models.Model):
     """
     Evaluation Item object model.
     """
-    pass
+    task = models.ForeignKey(EvaluationTask)
+    
+    item_xml = models.TextField(
+      help_text="XML source for this evaluation item.",
+      validators=[validate_item_xml],
+      verbose_name="Translations XML source"
+    )
+    
+    # These fields are derived from item_xml and NOT stored in the database.
+    source = None
+    reference = None
+    translations = None
+    
+    class Meta:
+        """
+        Metadata options for the EvaluationItem object model.
+        """
+        ordering = ('id',)
+        verbose_name = "EvaluationItem object"
+        verbose_name_plural = "EvaluationItem objects"
+    
+    def __init__(self, *args, **kwargs):
+        """
+        Makes sure that self.translations are available.
+        """
+        super(EvaluationItem, self).__init__(*args, **kwargs)
+        
+        # If item_xml is available, populate self.source, self.reference and
+        # self.translations from the contained XML data.
+        if self.item_xml:
+            try:
+                _item_xml = fromstring(self.item_xml)
+                
+                _source = _item_xml.find('source')
+                if _source is not None:
+                  self.source = (_source.text, _source.attrib)
+
+                _reference = _item_xml.find('reference')
+                if _reference is not None:
+                  self.reference = (_reference.text, _reference.attrib)
+                
+                self.translations = []
+                for _translation in _item_xml.iterfind('translation'):
+                    self.translations.append((_translation.text,
+                      _translation.attrib))
+            
+            except ParseError:
+                from traceback import print_exc
+                print_exc
+                self.source = None
+                self.reference = None
+                self.translations = None
+    
+    def __unicode__(self):
+        """
+        Returns a Unicode String for this EvaluationItem object.
+        """
+        return u'<evaluation-item id="{0}">'.format(self.id)
+
+    def save(self, *args, **kwargs):
+        """
+        Makes sure that validation is run before saving an object instance.
+        """
+        # Enforce validation before saving EvaluationItem objects.
+        self.full_clean()        
+        
+        super(EvaluationItem, self).save(*args, **kwargs)
+    
+    # TODO: add "load_from_xml()" method to allow re-loading of XML-based
+    #   fields such as source, reference, and translations.  Also apply this
+    #   to the EvaluationTask object model above!
 
 
 

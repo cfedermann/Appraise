@@ -214,8 +214,28 @@ class EvaluationItem(models.Model):
         """
         super(EvaluationItem, self).__init__(*args, **kwargs)
         
-        # If item_xml is available, populate self.source, self.reference and
-        # self.translations from the contained XML data.
+        # If item_xml is available, populate dynamic fields.
+        self.reload_dynamic_fields()
+    
+    def __unicode__(self):
+        """
+        Returns a Unicode String for this EvaluationItem object.
+        """
+        return u'<evaluation-item id="{0}">'.format(self.id)
+
+    def save(self, *args, **kwargs):
+        """
+        Makes sure that validation is run before saving an object instance.
+        """
+        # Enforce validation before saving EvaluationItem objects.
+        self.full_clean()        
+        
+        super(EvaluationItem, self).save(*args, **kwargs)
+    
+    def reload_dynamic_fields(self):
+        """
+        Reloads source, reference, and translations from self.item_xml.
+        """
         if self.item_xml:
             try:
                 _item_xml = fromstring(self.item_xml)
@@ -234,31 +254,10 @@ class EvaluationItem(models.Model):
                       _translation.attrib))
             
             except ParseError:
-                from traceback import print_exc
-                print_exc
                 self.source = None
                 self.reference = None
                 self.translations = None
     
-    def __unicode__(self):
-        """
-        Returns a Unicode String for this EvaluationItem object.
-        """
-        return u'<evaluation-item id="{0}">'.format(self.id)
-
-    def save(self, *args, **kwargs):
-        """
-        Makes sure that validation is run before saving an object instance.
-        """
-        # Enforce validation before saving EvaluationItem objects.
-        self.full_clean()        
-        
-        super(EvaluationItem, self).save(*args, **kwargs)
-    
-    # TODO: add "load_from_xml()" method to allow re-loading of XML-based
-    #   fields such as source, reference, and translations.  Also apply this
-    #   to the EvaluationTask object model above!
-
 
 
 class RankingTask(models.Model):

@@ -2,6 +2,31 @@
 
 {% block content %}
 
+{% for task_type, tasks in evaluation_tasks.items %}
+<h2>{{task_type}} Tasks</h2>
+{% if tasks %}
+<table class="common-table zebra-striped">
+<tr>
+  <th>Task name</th>
+{% autoescape off%}
+  {{tasks.0.header}}
+{% endautoescape %}
+</tr>
+{% for task in tasks %}
+<tr>
+  <td><a href="{{task.url}}">{{task.task_name}}</a></td>
+{% autoescape off%}
+  {{task.status}}
+{% endautoescape %}
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p class="grey_light">There are no {{task_type|lower}} tasks available at the moment.</p>
+{% endif %}
+
+{% endfor %}
+
 <!--
 {% if quality_tasks %}
 <h2>Acceptability of Translations</h2>

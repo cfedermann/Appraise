@@ -44,9 +44,45 @@ APPRAISE_TASK_TYPE_CHOICES = (
 
 def validate_source_xml_file(value):
     """
-    dumdidum
+    Validates the given XML source value.
     """
-    #raise ValidationError('Thunder in the heavens!')
+    # First, we try to instantiate an ElementTree from the given value.
+    try:
+        _tree = fromstring(value)
+    
+    except ParseError, msg:
+        raise ValidationError('Invalid XML: "{0}".'.format(msg))
+    
+    # Then, we check that the top-level tag name is <set>.
+    if not _tree.tag == 'set':
+        raise ValidationError('Invalid XML: expected <set> on top-level.')
+    
+    # Finally, we check that all children of <set> are <seg> containers and
+    # make sure that each <seg> element contains at least a <source> and one
+    # <translation> element.  The <translation> elements require at least one
+    # XML attribute named "system" and some value to be valid.
+    for _child in _tree:
+        if not _child.tag == 'seg':
+            raise ValidationError('Invalid XML: illegal tag: "{0}".'.format(
+              _child.tag))
+        
+        try:
+            assert(len(_child.findall('source')) == 1), \
+              'exactly one <source> element expected'
+            
+            assert(len(_child.findall('translation')) >= 1), \
+              'one or more <translation> elements expected'
+            
+            for _translation in _child.iterfind('translation'):
+                assert('system' in _translation.attrib.keys()), \
+                  'missing required attribute "system"'
+                
+                assert(_translation.text is not None), \
+                  'missing required text value'
+        
+        except AssertionError, msg:
+            raise ValidationError('Invalid XML: "{0}".'.format(msg))
+    
     return value
 
 # TODO: decide on status information such as creation_date, modification_date,

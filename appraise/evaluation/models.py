@@ -3,7 +3,7 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@dfki.de>
 """
-from xml.etree.ElementTree import Element, fromstring, ParseError
+from xml.etree.ElementTree import Element, fromstring, ParseError, tostring
 
 import logging
 import uuid
@@ -169,8 +169,17 @@ class EvaluationTask(models.Model):
         if not self.id:
             self.full_clean()
             
-            # TODO: if we get here, we have to take care of instantiating all
-            # EvaluationItem object instances for this EvaluationTask!
+            # We have to call save() here to get an id for this task.
+            super(EvaluationTask, self).save(*args, **kwargs)
+            
+            self.task_xml.open()
+            _tree = fromstring(self.task_xml.read())
+            self.task_xml.close()
+            
+            for _child in _tree:
+                new_item = EvaluationItem(task=self,
+                  item_xml=tostring(_child))
+                new_item.save()
         
         super(EvaluationTask, self).save(*args, **kwargs)
     
@@ -317,7 +326,6 @@ class EvaluationItem(models.Model):
                 self.source = None
                 self.reference = None
                 self.translations = None
-    
 
 
 class RankingTask(models.Model):

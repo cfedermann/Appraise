@@ -5,6 +5,7 @@ Project: Appraise evaluation system
 """
 import logging
 from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
@@ -18,6 +19,9 @@ from appraise.evaluation.models import ClassificationResult
 from appraise.evaluation.models import EditingTask, EditingItem, EditingResult
 from appraise.evaluation.models import LucyTask, LucyItem, LucyResult
 from appraise.evaluation.models import QualityTask, QualityItem, QualityResult
+
+from appraise.evaluation.models import APPRAISE_TASK_TYPE_CHOICES
+from appraise.evaluation.models import EvaluationTask, EvaluationItem
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
 
 # Setup logging support.
@@ -33,6 +37,20 @@ def overview(request):
       request.user.username or "Anonymous"))
     
     if request.user.is_staff:
+        
+        evaluation_tasks = {}
+        for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
+            _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
+            evaluation_tasks[task_type] = []
+            
+            for _task in _tasks:
+                _url = reverse('appraise.evaluation.views.ranking',
+                  kwargs={'task_id': _task.task_id})
+                _task_data = {'url': _url, 'task_name': _task.task_name,
+                  'header': _task.get_status_header,
+                  'status': _task.get_status_for_user(request.user)}
+                evaluation_tasks[task_type].append(_task_data)
+        
         ranking_tasks = RankingTask.objects.all()
         editing_tasks = EditingTask.objects.all()
         lucy_tasks = LucyTask.objects.all()
@@ -45,6 +63,9 @@ def overview(request):
     quality_tasks = QualityTask.objects.filter(users=request.user)
       
     dictionary = {'title': 'Evaluation Task Overview',
+    
+      'evaluation_tasks': evaluation_tasks,
+    
       'ranking_tasks': ranking_tasks.order_by('shortname'),
       'editing_tasks': editing_tasks.order_by('shortname'),
       'lucy_tasks': lucy_tasks.order_by('shortname'),

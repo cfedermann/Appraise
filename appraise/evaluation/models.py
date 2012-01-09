@@ -169,6 +169,10 @@ class EvaluationTask(models.Model):
         if not self.id:
             self.full_clean()
             
+            # TODO: decide on validation of task type -- do we want to do this
+            # or do we just validate the "general" XML format; raising an
+            # error in view/edit mode only?
+            
             # We have to call save() here to get an id for this task.
             super(EvaluationTask, self).save(*args, **kwargs)
             
@@ -197,7 +201,19 @@ class EvaluationTask(models.Model):
             
             except ParseError:
                 self.task_attributes = {}
-
+    
+    @classmethod
+    def get_status_header(self):
+        """
+        """
+        return '<th>Overall completion</th><th>Avg. Rank A</th><th>Avg. Rank B</th><th>Avg. Rank C</th><th>Avg. Rank D</th>'
+    
+    def get_status_for_user(self, user=None):
+        """
+        """
+        print 'YAY'
+        print user
+        return '<td>0/1</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td>'
 
 @receiver(pre_delete, sender=EvaluationTask)
 def remove_task_xml_file_on_delete(sender, instance, **kwargs):

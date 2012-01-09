@@ -3,7 +3,7 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@dfki.de>
 """
-from xml.etree.ElementTree import fromstring, ParseError
+from xml.etree.ElementTree import Element, fromstring, ParseError
 
 import logging
 import uuid
@@ -46,58 +46,28 @@ def validate_source_xml_file(value):
     """
     Validates the given XML source value.
     """
+    value.open()
+    
     # First, we try to instantiate an ElementTree from the given value.
-    print "\n\nvalidate_source_xml_file CALLED\n\n"
     try:
-        value.open(0)
         _tree = fromstring(value.read())
-    
-    except ParseError, msg:
-        raise ValidationError('Invalid XML: "{0}".'.format(msg))
-    
-    # Then, we check that the top-level tag name is <set>.
-    if not _tree.tag == 'set':
-        raise ValidationError('Invalid XML: expected <set> on top-level.')
-    
-    try:
+        
+        # Then, we check that the top-level tag name is <set>.
+        assert(_tree.tag == 'set'), 'expected <set> on top-level'
+        
+        # And that required XML attributes are available.
         for _attr in ('id', 'source-language', 'target-language'):
             assert(_attr in _tree.attrib.keys()), \
               'missing required <set> attribute {0}'.format(_attr)
         
-        # Finally, we check that all children of <set> are <seg> containers and
-        # make sure that each <seg> element contains at least a <source> and one
-        # <translation> element.  The <translation> elements require at least one
-        # XML attribute named "system" and some value to be valid.
+        # Finally, we check that all children of <set> are <seg> containers
+        # and make sure that each <seg> element contains at least a <source>
+        # and one <translation> element.  The <translation> elements require
+        # at least one XML attribute "system" and some value to be valid.
         for _child in _tree:
-            if not _child.tag == 'seg':
-                raise ValidationError('Invalid XML: illegal tag: "{0}".'.format(
-                  _child.tag))
-            
-            for _attr in ('id', 'doc-id'):
-                assert(_attr in _tree.attrib.keys()), \
-                  'missing required <seg> attribute {0}'.format(_attr)
-        
-            assert(len(_child.findall('source')) == 1), \
-              'exactly one <source> element expected'
-        
-            assert(_child.find('source').text is not None), \
-              'missing required <source> text value'
-        
-            if _child.find('reference') is not None:
-                assert(_child.find('reference').text is not None), \
-                  'missing required <reference> text value'
-        
-            assert(len(_child.findall('translation')) >= 1), \
-              'one or more <translation> elements expected'
-        
-            for _translation in _child.iterfind('translation'):
-                assert('system' in _translation.attrib.keys()), \
-                  'missing required <translation> attribute "system"'
-            
-                assert(_translation.text is not None), \
-                  'missing required <translation> text value'
+            validate_item_xml(_child)
     
-    except AssertionError, msg:
+    except (AssertionError, ParseError), msg:
         raise ValidationError('Invalid XML: "{0}".'.format(msg))
     
     value.close()
@@ -230,18 +200,47 @@ def remove_task_xml_file_on_delete(sender, instance, **kwargs):
         instance.task_xml.delete(save=False)
 
 
-# TODO: fix validation for item_xml -- what do we put into ValidationError?
 def validate_item_xml(value):
     """
     Checks that item_xml contains source, reference, some translation tags.
     """
     try:
-        _item_xml = fromstring(value)
+        if isinstance(value, Element):
+            _tree = value
+        
+        else:
+            _tree = fromstring(value)
+        
+        if not _tree.tag == 'seg':
+            raise ValidationError('Invalid XML: illegal tag: "{0}".'.format(
+              _tree.tag))
+        
+        for _attr in ('id', 'doc-id'):
+            assert(_attr in _tree.attrib.keys()), \
+              'missing required <seg> attribute {0}'.format(_attr)
+        
+        assert(len(_tree.findall('source')) == 1), \
+          'exactly one <source> element expected'
+        
+        assert(_tree.find('source').text is not None), \
+          'missing required <source> text value'
+        
+        if _tree.find('reference') is not None:
+            assert(_tree.find('reference').text is not None), \
+              'missing required <reference> text value'
+        
+        assert(len(_tree.findall('translation')) >= 1), \
+          'one or more <translation> elements expected'
+        
+        for _translation in _tree.iterfind('translation'):
+            assert('system' in _translation.attrib.keys()), \
+              'missing required <translation> attribute "system"'
+            
+            assert(_translation.text is not None), \
+              'missing required <translation> text value'
     
-    except ParseError:
-        from traceback import format_exc
-        raise ValidationError("Invalid item_xml value: {0}".format(format_exc()))
-    
+    except (AssertionError, ParseError), msg:
+        raise ValidationError('Invalid XML: "{0}".'.format(msg))
 
 
 class EvaluationItem(models.Model):

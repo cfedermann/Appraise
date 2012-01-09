@@ -59,38 +59,46 @@ def validate_source_xml_file(value):
     if not _tree.tag == 'set':
         raise ValidationError('Invalid XML: expected <set> on top-level.')
     
-    # Finally, we check that all children of <set> are <seg> containers and
-    # make sure that each <seg> element contains at least a <source> and one
-    # <translation> element.  The <translation> elements require at least one
-    # XML attribute named "system" and some value to be valid.
-    for _child in _tree:
-        if not _child.tag == 'seg':
-            raise ValidationError('Invalid XML: illegal tag: "{0}".'.format(
-              _child.tag))
+    try:
+        for _attr in ('id', 'source-language', 'target-language'):
+            assert(_attr in _tree.attrib.keys()), \
+              'missing required <set> attribute {0}'.format(_attr)
         
-        try:
+        # Finally, we check that all children of <set> are <seg> containers and
+        # make sure that each <seg> element contains at least a <source> and one
+        # <translation> element.  The <translation> elements require at least one
+        # XML attribute named "system" and some value to be valid.
+        for _child in _tree:
+            if not _child.tag == 'seg':
+                raise ValidationError('Invalid XML: illegal tag: "{0}".'.format(
+                  _child.tag))
+            
+            for _attr in ('id', 'doc-id'):
+                assert(_attr in _tree.attrib.keys()), \
+                  'missing required <seg> attribute {0}'.format(_attr)
+        
             assert(len(_child.findall('source')) == 1), \
               'exactly one <source> element expected'
-            
+        
             assert(_child.find('source').text is not None), \
               'missing required <source> text value'
-            
+        
             if _child.find('reference') is not None:
                 assert(_child.find('reference').text is not None), \
                   'missing required <reference> text value'
-            
+        
             assert(len(_child.findall('translation')) >= 1), \
               'one or more <translation> elements expected'
-            
+        
             for _translation in _child.iterfind('translation'):
                 assert('system' in _translation.attrib.keys()), \
                   'missing required <translation> attribute "system"'
-                
+            
                 assert(_translation.text is not None), \
                   'missing required <translation> text value'
-        
-        except AssertionError, msg:
-            raise ValidationError('Invalid XML: "{0}".'.format(msg))
+    
+    except AssertionError, msg:
+        raise ValidationError('Invalid XML: "{0}".'.format(msg))
     
     value.close()
     return value
@@ -190,10 +198,9 @@ class EvaluationTask(models.Model):
         # Enforce validation before saving EvaluationTask objects.
         if not self.id:
             self.full_clean()
-        
-        # Double check that the given XML source file is valid.
-        # if not self.id:
-        #     raise ValidationError('Check task_xml contents before saving!')
+            
+            # TODO: if we get here, we have to take care of instantiating all
+            # EvaluationItem object instances for this EvaluationTask!
         
         super(EvaluationTask, self).save(*args, **kwargs)
     

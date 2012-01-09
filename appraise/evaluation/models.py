@@ -249,11 +249,11 @@ class EvaluationItem(models.Model):
                 
                 _source = _item_xml.find('source')
                 if _source is not None:
-                  self.source = (_source.text, _source.attrib)
+                    self.source = (_source.text, _source.attrib)
 
                 _reference = _item_xml.find('reference')
                 if _reference is not None:
-                  self.reference = (_reference.text, _reference.attrib)
+                    self.reference = (_reference.text, _reference.attrib)
                 
                 self.translations = []
                 for _translation in _item_xml.iterfind('translation'):

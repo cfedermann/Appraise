@@ -47,8 +47,10 @@ def validate_source_xml_file(value):
     Validates the given XML source value.
     """
     # First, we try to instantiate an ElementTree from the given value.
+    print "\n\nvalidate_source_xml_file CALLED\n\n"
     try:
-        _tree = fromstring(value)
+        value.open(0)
+        _tree = fromstring(value.read())
     
     except ParseError, msg:
         raise ValidationError('Invalid XML: "{0}".'.format(msg))
@@ -70,19 +72,27 @@ def validate_source_xml_file(value):
             assert(len(_child.findall('source')) == 1), \
               'exactly one <source> element expected'
             
+            assert(_child.find('source').text is not None), \
+              'missing required <source> text value'
+            
+            if _child.find('reference') is not None:
+                assert(_child.find('reference').text is not None), \
+                  'missing required <reference> text value'
+            
             assert(len(_child.findall('translation')) >= 1), \
               'one or more <translation> elements expected'
             
             for _translation in _child.iterfind('translation'):
                 assert('system' in _translation.attrib.keys()), \
-                  'missing required attribute "system"'
+                  'missing required <translation> attribute "system"'
                 
                 assert(_translation.text is not None), \
-                  'missing required text value'
+                  'missing required <translation> text value'
         
         except AssertionError, msg:
             raise ValidationError('Invalid XML: "{0}".'.format(msg))
     
+    value.close()
     return value
 
 # TODO: decide on status information such as creation_date, modification_date,
@@ -120,7 +130,6 @@ class EvaluationTask(models.Model):
       verbose_name="Task type"
     )
 
-    # TODO: fix upload_to to a good value.
     task_xml = models.FileField(
       upload_to='source-xml',
       help_text="XML source file for this evaluation task.",
@@ -179,7 +188,8 @@ class EvaluationTask(models.Model):
         Makes sure that validation is run before saving an object instance.
         """
         # Enforce validation before saving EvaluationTask objects.
-        self.full_clean()
+        if not self.id:
+            self.full_clean()
         
         # Double check that the given XML source file is valid.
         # if not self.id:
@@ -209,7 +219,8 @@ def remove_task_xml_file_on_delete(sender, instance, **kwargs):
     Removes the task_xml file when the EvaluationTask instance is deleted.
     """
     # We have to use save=False as otherwise validation would fail ;)
-    instance.task_xml.delete(save=False)
+    if len(instance.task_xml.name):
+        instance.task_xml.delete(save=False)
 
 
 # TODO: fix validation for item_xml -- what do we put into ValidationError?

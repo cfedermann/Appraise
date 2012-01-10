@@ -8,9 +8,9 @@
 <table class="common-table zebra-striped">
 <tr>
   <th>Task name</th>
-{% autoescape off%}
-  {{tasks.0.header}}
-{% endautoescape %}
+{% for header in tasks.0.header %}
+  <th>{{header}}</th>
+{% endfor %}
 </tr>
 {% for task in tasks %}
 <tr>

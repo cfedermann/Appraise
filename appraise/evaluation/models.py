@@ -222,7 +222,7 @@ class EvaluationTask(models.Model):
         elif _task_type == 'Error classification':
             pass
         
-        return ''.join(['<th>{0}</th>'.format(item) for item in _header])
+        return _header
     
     def get_status_for_user(self, user=None):
         """

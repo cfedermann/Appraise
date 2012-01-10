@@ -202,11 +202,27 @@ class EvaluationTask(models.Model):
             except ParseError:
                 self.task_attributes = {}
     
-    @classmethod
     def get_status_header(self):
         """
+        Returns the header template for this type of EvaluationTask objects.
         """
-        return '<th>Overall completion</th><th>Avg. Rank A</th><th>Avg. Rank B</th><th>Avg. Rank C</th><th>Avg. Rank D</th>'
+        _task_type = self.get_task_type_display()
+        _header = []
+        
+        if _task_type == 'Quality Checking':
+            pass
+        
+        elif _task_type == 'Ranking':
+            _header.extend(['Overall completion', 'Avg. Rank A',
+              'Avg. Rank B', 'Avg. Rank C', 'Avg. Rank D'])
+        
+        elif _task_type == 'Post-editing':
+            pass
+        
+        elif _task_type == 'Error classification':
+            pass
+        
+        return ''.join(['<th>{0}</th>'.format(item) for item in _header])
     
     def get_status_for_user(self, user=None):
         """

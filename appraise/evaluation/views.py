@@ -33,6 +33,25 @@ LOGGER.addHandler(LOG_HANDLER)
 def _handle_quality_checking(request, task, items):
     now = datetime.now()
     
+    if request.method == "POST":
+        item_id = request.POST.get('item_id')
+        quality = request.POST.get('submit_button')
+        _now = request.POST.get('now')
+        if _now:
+            duration = now - datetime.fromtimestamp(float(_now))
+            print "duration: {}".format(duration)
+        
+        print "item_id: {0}".format(item_id)
+        print "quality: {0}".format(quality)
+        
+        # TODO:
+        #
+        # 1) create suitable result container type instance
+        # 2) serialise result data into XML format
+        # 3) create (or update) result instance and save it
+    
+    # TODO: add loop to find "next item to edit" based on items
+    
     item = items[0]
     dictionary = {'title': 'Translation Quality Checking',
       'task_progress': '{0:03d}/{1:03d}'.format(1, len(items)),

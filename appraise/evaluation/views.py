@@ -31,7 +31,17 @@ LOGGER.addHandler(LOG_HANDLER)
 
 @login_required
 def _handle_quality_checking(request, task, items):
-    pass
+    now = datetime.now()
+    
+    item = items[0]
+    dictionary = {'title': 'Translation Quality Checking',
+      'task_progress': '{0:03d}/{1:03d}'.format(1, len(items)),
+      'source_text': item.source, 'translation_text': item.translations[0],
+      'context_text': item.reference, 'item_id': item.id,
+      'now': mktime(datetime.now().timetuple())}
+    
+    return render_to_response('evaluation/quality_checking.html', dictionary,
+      context_instance=RequestContext(request))
 
 @login_required
 def _handle_ranking(request, task, items):

@@ -213,8 +213,7 @@ class EvaluationTask(models.Model):
             pass
         
         elif _task_type == 'Ranking':
-            _header.extend(['Overall completion', 'Avg. Rank A',
-              'Avg. Rank B', 'Avg. Rank C', 'Avg. Rank D'])
+            _header.extend(['Overall completion'])
         
         elif _task_type == 'Post-editing':
             pass
@@ -226,10 +225,28 @@ class EvaluationTask(models.Model):
     
     def get_status_for_user(self, user=None):
         """
+        Returns the status information with respect to the given user.
         """
-        print 'YAY'
-        print user
-        return '<td>0/1</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td>'
+        _task_type = self.get_task_type_display()
+        _status = []
+        
+        _items = EvaluationItem.objects.filter(task=self).count()
+        
+        if _task_type == 'Quality Checking':
+            pass
+        
+        elif _task_type == 'Ranking':
+            _done = 0
+            _status.extend(['{0}/{1}'.format(_done, _items)])
+        
+        elif _task_type == 'Post-editing':
+            pass
+        
+        elif _task_type == 'Error classification':
+            pass
+        
+        return _status
+
 
 @receiver(pre_delete, sender=EvaluationTask)
 def remove_task_xml_file_on_delete(sender, instance, **kwargs):

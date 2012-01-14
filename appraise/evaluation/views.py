@@ -29,6 +29,49 @@ logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.evaluation.views')
 LOGGER.addHandler(LOG_HANDLER)
 
+@login_required
+def _handle_quality_checking(request, task, items):
+    pass
+
+@login_required
+def _handle_ranking(request, task, items):
+    pass
+
+@login_required
+def _handle_postediting(request, task, items):
+    pass
+
+@login_required
+def _handle_error_classification(request, task, items):
+    pass
+
+@login_required
+def task_handler(request, task_id):
+    LOGGER.info('Rendering task handler view for user "{0}".'.format(
+      request.user.username or "Anonymous"))
+    
+    now = datetime.now()
+    task = get_object_or_404(EvaluationTask, task_id=task_id)
+    items = EvaluationItem.objects.filter(task=task)
+    if not items:
+        return redirect('appraise.evaluation.views.overview')
+    
+    _task_type = task.get_task_type_display() + 'foo'
+    if _task_type == 'Quality Checking':
+        return _handle_quality_checking(request, task, items)
+    
+    elif _task_type == 'Ranking':
+        return _handle_ranking(request, task, items)
+    
+    elif _task_type == 'Post-editing':
+        return _handle_postediting(request, task, items)
+    
+    elif _task_type == 'Error classification':
+        return _handle_error_classification(request, task, items)
+    
+    _msg = 'No handler for task type: "{0}"'.format(_task_type)
+    raise NotImplementedError, _msg
+
 
 @login_required
 def overview(request):
@@ -44,7 +87,7 @@ def overview(request):
             evaluation_tasks[task_type] = []
             
             for _task in _tasks:
-                _url = reverse('appraise.evaluation.views.ranking',
+                _url = reverse('appraise.evaluation.views.task_handler',
                   kwargs={'task_id': _task.task_id})
                 _task_data = {'url': _url, 'task_name': _task.task_name,
                   'header': _task.get_status_header,

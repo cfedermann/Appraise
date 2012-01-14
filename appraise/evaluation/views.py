@@ -56,7 +56,7 @@ def task_handler(request, task_id):
     if not items:
         return redirect('appraise.evaluation.views.overview')
     
-    _task_type = task.get_task_type_display() + 'foo'
+    _task_type = task.get_task_type_display()
     if _task_type == 'Quality Checking':
         return _handle_quality_checking(request, task, items)
     

@@ -15,9 +15,9 @@
 {% for task in tasks %}
 <tr>
   <td><a href="{{task.url}}">{{task.task_name}}</a></td>
-{% autoescape off%}
-  {{task.status}}
-{% endautoescape %}
+{% for status in task.status %}
+  <td>{{status}}</td>
+{% endfor %}
 </tr>
 {% endfor %}
 </table>

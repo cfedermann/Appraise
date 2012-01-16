@@ -1,0 +1,3 @@
+{% for translation in translations %}
+<span onclick="$(this).children('input').attr('checked', 'checked');"><input type="radio" name="rank_{{rank_id}}" value="{{forloop.counter}}" /> Rank {{forloop.counter}}</span>
+{% endfor %}

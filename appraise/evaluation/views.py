@@ -29,6 +29,78 @@ logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.evaluation.views')
 LOGGER.addHandler(LOG_HANDLER)
 
+@login_required
+def _handle_quality_checking(request, task, items):
+    now = datetime.now()
+    
+    if request.method == "POST":
+        item_id = request.POST.get('item_id')
+        quality = request.POST.get('submit_button')
+        _now = request.POST.get('now')
+        if _now:
+            duration = now - datetime.fromtimestamp(float(_now))
+            print "duration: {}".format(duration)
+        
+        print "item_id: {0}".format(item_id)
+        print "quality: {0}".format(quality)
+        
+        # TODO:
+        #
+        # 1) create suitable result container type instance
+        # 2) serialise result data into XML format
+        # 3) create (or update) result instance and save it
+    
+    # TODO: add loop to find "next item to edit" based on items
+    
+    item = items[0]
+    dictionary = {'title': 'Translation Quality Checking',
+      'task_progress': '{0:03d}/{1:03d}'.format(1, len(items)),
+      'source_text': item.source, 'translation_text': item.translations[0],
+      'context_text': item.reference, 'item_id': item.id,
+      'now': mktime(datetime.now().timetuple())}
+    
+    return render_to_response('evaluation/quality_checking.html', dictionary,
+      context_instance=RequestContext(request))
+
+@login_required
+def _handle_ranking(request, task, items):
+    pass
+
+@login_required
+def _handle_postediting(request, task, items):
+    pass
+
+@login_required
+def _handle_error_classification(request, task, items):
+    pass
+
+@login_required
+def task_handler(request, task_id):
+    LOGGER.info('Rendering task handler view for user "{0}".'.format(
+      request.user.username or "Anonymous"))
+    
+    now = datetime.now()
+    task = get_object_or_404(EvaluationTask, task_id=task_id)
+    items = EvaluationItem.objects.filter(task=task)
+    if not items:
+        return redirect('appraise.evaluation.views.overview')
+    
+    _task_type = task.get_task_type_display()
+    if _task_type == 'Quality Checking':
+        return _handle_quality_checking(request, task, items)
+    
+    elif _task_type == 'Ranking':
+        return _handle_ranking(request, task, items)
+    
+    elif _task_type == 'Post-editing':
+        return _handle_postediting(request, task, items)
+    
+    elif _task_type == 'Error classification':
+        return _handle_error_classification(request, task, items)
+    
+    _msg = 'No handler for task type: "{0}"'.format(_task_type)
+    raise NotImplementedError, _msg
+
 
 @login_required
 def overview(request):
@@ -44,7 +116,7 @@ def overview(request):
             evaluation_tasks[task_type] = []
             
             for _task in _tasks:
-                _url = reverse('appraise.evaluation.views.ranking',
+                _url = reverse('appraise.evaluation.views.task_handler',
                   kwargs={'task_id': _task.task_id})
                 _task_data = {'url': _url, 'task_name': _task.task_name,
                   'header': _task.get_status_header,

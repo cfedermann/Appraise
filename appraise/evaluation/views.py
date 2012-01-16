@@ -149,41 +149,28 @@ def overview(request):
     """Renders the evaluation tasks overview."""
     LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
       request.user.username or "Anonymous"))
-    
-    if request.user.is_staff:
-        
-        evaluation_tasks = {}
-        for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
+
+    evaluation_tasks = {}
+    for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
+        if request.user.is_staff:
             _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
-            evaluation_tasks[task_type] = []
-            
-            for _task in _tasks:
-                _url = reverse('appraise.evaluation.views.task_handler',
-                  kwargs={'task_id': _task.task_id})
-                _task_data = {'url': _url, 'task_name': _task.task_name,
-                  'header': _task.get_status_header,
-                  'status': _task.get_status_for_user(request.user)}
-                evaluation_tasks[task_type].append(_task_data)
         
-        ranking_tasks = RankingTask.objects.all()
-        editing_tasks = EditingTask.objects.all()
-        lucy_tasks = LucyTask.objects.all()
-    
-    else:
-        ranking_tasks = RankingTask.objects.filter(users=request.user)
-        editing_tasks = EditingTask.objects.filter(users=request.user)
-        lucy_tasks = LucyTask.objects.filter(users=request.user)
-    
-    quality_tasks = QualityTask.objects.filter(users=request.user)
-      
+        else:
+            _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
+              users=request.user)
+        
+        evaluation_tasks[task_type] = []
+        
+        for _task in _tasks:
+            _url = reverse('appraise.evaluation.views.task_handler',
+              kwargs={'task_id': _task.task_id})
+            _task_data = {'url': _url, 'task_name': _task.task_name,
+              'header': _task.get_status_header,
+              'status': _task.get_status_for_user(request.user)}
+            evaluation_tasks[task_type].append(_task_data)
+          
     dictionary = {'title': 'Evaluation Task Overview',
-    
-      'evaluation_tasks': evaluation_tasks,
-    
-      'ranking_tasks': ranking_tasks.order_by('shortname'),
-      'editing_tasks': editing_tasks.order_by('shortname'),
-      'lucy_tasks': lucy_tasks.order_by('shortname'),
-      'quality_tasks': quality_tasks.order_by('shortname')}
+      'evaluation_tasks': evaluation_tasks,}
     return render_to_response('evaluation/overview.html', dictionary,
       context_instance=RequestContext(request))
 

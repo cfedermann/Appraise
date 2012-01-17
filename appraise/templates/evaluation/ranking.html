@@ -14,7 +14,6 @@ function validate_form()
 {
   var checked = $('#translations input[type="radio"]:checked').length;
 
-  // TODO: cancel submit here!
   if (checked != {{translations|length}}) {
     alert('Please assign ranks to all translations...');
     return false;

@@ -1,12 +1,28 @@
 {% extends "base.html" %}
 
 {% block head %}
-<script language="javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script language="javascript" src="/appraise/site_media/js/jquery.js"></script>
+<!--<script language="javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>-->
 <script language="javascript">
 <!--
-function reset_radio_buttons()
+function reset_form()
 {
   $('#translations input[type="radio"]:checked').removeAttr('checked');
+
+  // TODO: this needs to be fixed!
+  //  $('#now').value = Date.now();
+}
+
+function validate_form()
+{
+  var checked = $('#translations input[type="radio"]:checked').length;
+  var all = $('#translations input[type="radio"]').length;
+
+  // TODO: cancel submit here!
+  if (checked != all) {
+    alert('Please assign ranks to all translations...')
+    return false;
+  }
 }
 -->
 </script>
@@ -51,13 +67,13 @@ function reset_radio_buttons()
 
 
 <div class="span16 actions">
-  <button name="submit_button" accesskey="s" type="submit" class="btn" value="S">Submit</button>
+  <button onclick="javascript:validate_form();" name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
   <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
   
-  <button onclick="javascript:reset_radio_buttons();" accesskey="r" type="reset" class="btn" value="R">Reset</button>
+  <button onclick="javascript:reset_form();" accesskey="r" type="reset" class="btn">Reset</button>
   <span class="help-inline">(Ctrl-Alt-R)</span>&nbsp;
   
-  <button name="submit_button" accesskey="f" type="submit" class="btn" value="F">Flag Error</button>
+  <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
   <span class="help-inline">(Ctrl-Alt-F)</span>
 </div>
 

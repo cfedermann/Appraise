@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
+<script language="javascript">
+<!--
+$(document).ready(function() {
+  for (var i=0; i<{{words|length}}; i++)
+  {
+    $('#edit_'+i).hide();
+    $('#view_'+i).html('<em>Click to classify errors for this word...</em>');
+  }
+});
+
+function toggle_classification(id)
+{
+  var edit = $('#edit_'+id);
+  var view = $('#view_'+id);
+
+  if (edit.css('display') == 'inline')
+  {
+    var _errors = new Array();
+    var extra_word = $('input[name="extra_word_'+id+'"]:checked').val();
+    var reordering = $('input[name="reordering_'+id+'"]:checked').val();
+    var lexical_error = $('input[name="lexical_error_'+id+'"]:checked').val();
+    var wrong_form = $('input[name="wrong_form_'+id+'"]:checked').val();
+
+    if (extra_word != undefined)
+      _errors.push(extra_word.toLowerCase() + ' extra word');
+    if (reordering != undefined)
+      _errors.push(reordering.toLowerCase() + ' reordering error');
+    if (lexical_error != undefined)
+      _errors.push(lexical_error.toLowerCase() + ' lexical error');
+    if (wrong_form != undefined)
+      _errors.push(wrong_form.toLowerCase() + ' wrong form');
+
+    edit.hide();
+
+    if (_errors.length)
+      view.html(_errors.join(', '));
+    view.show();
+  }
+  else {
+    edit.show();
+    view.hide();
+  }
+}
+
+function toggle_checkbox(self)
+{
+  var input = self.children('input');
+  if (input.attr('checked') == 'checked')
+    input.removeAttr('checked');
+  else
+    input.attr('checked', 'checked');
+}
+
+function reset_form()
+{
+  $('input[name="missing_words"]').removeAttr('checked');
+  $('input[name="too_many_errors"]').removeAttr('checked');
+  for (var i=0; i<{{words|length}}; i++)
+  {
+    $('#edit_'+i).hide();
+    $('#view_'+i).html('<em>Click to classify errors for this word...</em>');
+    $('#view_'+i).show();
+    $('input[name="extra_word_'+i+'"]').removeAttr('checked');
+    $('input[name="reordering_'+i+'"]').removeAttr('checked');
+    $('input[name="lexical_error_'+i+'"]').removeAttr('checked');
+    $('input[name="wrong_form_'+i+'"]').removeAttr('checked');
+  }
+  $('input[name="now"]').val(Date.now()/1000.0);
+}
+
+function validate_form()
+{
+  if ($('textarea[name="postedited"]').val() == '') {
+{% if translations|length > 1 %}
+    alert('Please post-edit one of the translations...');
+{% else %}
+    alert('Please post-edit the translation...');
+{% endif %}
+    return false;
+  }
+
+  return true;
+}
+-->
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="alert-message success">
+  <p id="task_progress">{{task_progress}}</p>
+</div>
+
+<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+
+
+<div class="container">
+
+<div class="span8">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Source</small>
+</blockquote>
+</div>
+<div class="push8">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context.<strong>{{reference_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Reference</small>
+</blockquote>
+</div>
+
+<blockquote>
+<p><strong>{{translations}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
+<small>Translation (THIS COULD ALSO NOT BE SHOWN...)</small>
+</blockquote>
+
+<form action="" method="post" onsubmit="javascript:return validate_form();">
+
+<input name="item_id" type="hidden" value="{{item_id}}" />
+<input name="now" type="hidden" value="{{now}}" />
+<input name="words" type="hidden" value="{{words|length}}" />
+
+<span onclick="javascript:toggle_checkbox($(this));"><input name="missing_words" type="checkbox" value="MISSING_WORDS"> Missing words</span> <span onclick="javascript:toggle_checkbox($(this));"><input name="too_many_errors" type="checkbox" value="TOO_MANY_ERRORS"> Too many errors</span>
+
+<table id="words">
+{% for word in words %}
+<tr>
+  <th onclick="javascript:toggle_classification({{forloop.counter0}});">{{word}}</th>
+  <td width="100%">
+{% with forloop.counter0 as word_id %}
+{% include 'evaluation/word_classification.html' %}
+{% endwith %}
+  </td>
+</tr>
+{% endfor %}
+</table>
+
+<div class="actions">
+  <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
+  <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
+  
+  <button onclick="javascript:reset_form();" accesskey="r" type="reset" class="btn">Reset</button>
+  <span class="help-inline">(Ctrl-Alt-R)</span>&nbsp;
+  
+  <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
+  <span class="help-inline">(Ctrl-Alt-F)</span>
+</div>
+
+</form>
+
+</div>
+
+{% endblock %}

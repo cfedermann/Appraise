@@ -126,6 +126,8 @@ function validate_form()
 
 <span onclick="javascript:toggle_checkbox($(this));"><input name="missing_words" type="checkbox" value="MISSING_WORDS"> Missing words</span> <span onclick="javascript:toggle_checkbox($(this));"><input name="too_many_errors" type="checkbox" value="TOO_MANY_ERRORS"> Too many errors</span>
 
+<div class="row">
+<div class="span12">
 <table id="words">
 {% for word in words %}
 <tr>
@@ -138,6 +140,12 @@ function validate_form()
 </tr>
 {% endfor %}
 </table>
+</div>
+<div class="span4">
+<h4>Error Summary</h4>
+<em>to be added...</em>
+</div>
+</div>
 
 <div class="actions">
   <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>

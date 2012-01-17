@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
+<script language="javascript">
+<!--
+$(document).ready(function() {
+ $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+});
+
+function start_from_scratch()
+{
+  var input = $('input[name="from_scratch"]');
+  if (input.attr('disabled'))
+  {
+    return;
+  }
+  input.attr('checked', 'checked').attr('disabled', true);
+  $('textarea[name="postedited"]').text('');
+}
+
+function reset_form()
+{
+  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+  $('#translations input[type="radio"]:checked').removeAttr('checked');
+  $('input[name="from_scratch"]').removeAttr('checked');
+  $('input[name="from_scratch"]').removeAttr('disabled');
+  $('input[name="now"]').val(Date.now()/1000.0);
+}
+
+function validate_form()
+{
+  if ($('textarea[name="postedited"]').val() == '') {
+{% if translations|length > 1 %}
+    alert('Please post-edit one of the translations...');
+{% else %}
+    alert('Please post-edit the translation...');
+{% endif %}
+    return false;
+  }
+
+  return true;
+}
+-->
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="alert-message success">
+  <p id="task_progress">{{task_progress}}</p>
+</div>
+
+<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+
+
+<div class="container">
+
+<div class="span8">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Source</small>
+</blockquote>
+</div>
+<div class="push8">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context.<strong>{{reference_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Reference</small>
+</blockquote>
+</div>
+
+<form action="" method="post" onsubmit="javascript:return validate_form();">
+
+<input name="item_id" type="hidden" value="{{item_id}}" />
+<input name="now" type="hidden" value="{{now}}" />
+
+{% if translations|length > 1 %}
+{% for translation in translations %}
+<blockquote id="translations">
+{% with forloop.counter0 as edit_id %}
+{% include 'evaluation/edit_selector.html' %}
+{% endwith %}
+<p><strong>{{translation.0}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
+<small>Translation {{forloop.counter}}</small>
+</blockquote>
+{% endfor %}
+{% else %}
+<input name="translation" type="hidden" value="{{translations.0.0}}" />
+{% endif %}
+
+<span onclick="javascript:start_from_scratch();"><input name="from_scratch" type="checkbox" value="FROM_SCRATCH"> Translate from scratch</span><br/>
+<textarea name="postedited" style="width:99%;height:40px;"></textarea>
+
+<div class="actions">
+  <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
+  <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
+  
+  <button onclick="javascript:reset_form();" accesskey="r" type="reset" class="btn">Reset</button>
+  <span class="help-inline">(Ctrl-Alt-R)</span>&nbsp;
+  
+  <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
+  <span class="help-inline">(Ctrl-Alt-F)</span>
+</div>
+
+</form>
+
+</div>
+
+{% endblock %}

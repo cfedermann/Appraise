@@ -54,8 +54,9 @@ function validate_form()
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
 
+<span id="translations">
 {% for translation in translations %}
-<blockquote id="translations">
+<blockquote>
 {% with forloop.counter0 as rank_id %}
 {% include 'evaluation/rank_selector.html' %}
 {% endwith %}
@@ -63,6 +64,7 @@ function validate_form()
 <small>Translation {{forloop.counter}}</small>
 </blockquote>
 {% endfor %}
+</span>
 
 <div class="actions">
   <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>

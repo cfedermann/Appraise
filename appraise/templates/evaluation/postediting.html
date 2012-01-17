@@ -8,6 +8,14 @@ $(document).ready(function() {
  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
 });
 
+function select_sentence(parent)
+{
+  var input = parent.children('input');
+  input.attr('checked', 'checked');
+  $('#translations').hide();
+  $('textarea[name="postedited"]').text(input.val());
+}
+
 function start_from_scratch()
 {
   var input = $('input[name="from_scratch"]');
@@ -23,6 +31,7 @@ function reset_form()
 {
   $('textarea[name="postedited"]').text($('input[name="translation"]').val());
   $('#translations input[type="radio"]:checked').removeAttr('checked');
+  $('#translations').show();
   $('input[name="from_scratch"]').removeAttr('checked');
   $('input[name="from_scratch"]').removeAttr('disabled');
   $('input[name="now"]').val(Date.now()/1000.0);
@@ -75,8 +84,9 @@ function validate_form()
 <input name="now" type="hidden" value="{{now}}" />
 
 {% if translations|length > 1 %}
+<span id="translations">
 {% for translation in translations %}
-<blockquote id="translations">
+<blockquote>
 {% with forloop.counter0 as edit_id %}
 {% include 'evaluation/edit_selector.html' %}
 {% endwith %}
@@ -84,6 +94,7 @@ function validate_form()
 <small>Translation {{forloop.counter}}</small>
 </blockquote>
 {% endfor %}
+</span>
 {% else %}
 <input name="translation" type="hidden" value="{{translations.0.0}}" />
 {% endif %}

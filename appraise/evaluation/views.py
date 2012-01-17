@@ -175,6 +175,7 @@ def _handle_error_classification(request, task, items):
     
     if request.method == "POST":
         item_id = request.POST.get('item_id')
+        words = request.POST.get('words')
         missing_words = request.POST.get('missing_words')
         too_many_errors = request.POST.get('too_many_errors')
         submit_button = request.POST.get('submit_button')
@@ -186,6 +187,19 @@ def _handle_error_classification(request, task, items):
             print "now: {}".format(_now)
             print "duration: {}".format(duration)
         
+        print request.POST
+        errors = {}
+        if words:
+            for index in range(int(words)):
+                _errors = {}
+                for error in ('extra_word', 'reordering', 'lexical_error',
+                  'wrong_form'):
+                    severity = request.POST.get('{0}_{1}'.format(error, index))
+                    if severity:
+                        _errors[error] = severity
+                if _errors:
+                    errors[index] = _errors
+        
         # TODO: change edit_id to contain only the id of the translation, not
         # the actual translation text itself;  this will also allow to keep
         # track of which sentence has been selected for post-editing.
@@ -194,6 +208,7 @@ def _handle_error_classification(request, task, items):
         print "missing_words: {0}".format(missing_words)
         print "too_many_errors: {0}".format(too_many_errors)
         print "submit_button: {0}".format(submit_button)
+        print "errors: {0}".format(errors)
         print
         
         # TODO:

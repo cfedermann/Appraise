@@ -74,6 +74,7 @@ def _handle_ranking(request, task, items):
         print
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
+            print "now: {}".format(_now)
             print "duration: {}".format(duration)
         
         ranks = {}
@@ -110,7 +111,42 @@ def _handle_ranking(request, task, items):
 
 @login_required
 def _handle_postediting(request, task, items):
-    pass
+    now = datetime.now()
+    
+    if request.method == "POST":
+        item_id = request.POST.get('item_id')
+        submit_button = request.POST.get('submit_button')
+        _now = request.POST.get('now')
+        
+        print
+        if _now:
+            duration = now - datetime.fromtimestamp(float(_now))
+            print "now: {}".format(_now)
+            print "duration: {}".format(duration)
+        
+        print "item_id: {0}".format(item_id)
+        print "submit_button: {0}".format(submit_button)
+        print
+        
+        # TODO:
+        #
+        # 1) create suitable result container type instance
+        # 2) serialise result data into XML format
+        # 3) create (or update) result instance and save it
+    
+    # TODO: add loop to find "next item to edit" based on items
+    
+    item = items[0]
+    print item.translations[0][0]
+    dictionary = {'title': 'Post-editing', 'item_id': item.id,
+      'source_text': item.source, 'reference_text': item.reference,
+      'now': mktime(datetime.now().timetuple()),
+      'translations': item.translations,
+            
+      'task_progress': '{0:03d}/{1:03d}'.format(1, len(items))}
+    
+    return render_to_response('evaluation/postediting.html', dictionary,
+      context_instance=RequestContext(request))
 
 @login_required
 def _handle_error_classification(request, task, items):

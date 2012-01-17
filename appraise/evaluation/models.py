@@ -216,7 +216,7 @@ class EvaluationTask(models.Model):
             _header.extend(['Overall completion'])
         
         elif _task_type == 'Post-editing':
-            pass
+            _header.extend(['Overall completion'])
         
         elif _task_type == 'Error classification':
             pass
@@ -240,7 +240,8 @@ class EvaluationTask(models.Model):
             _status.extend(['{0}/{1}'.format(_done, _items)])
         
         elif _task_type == 'Post-editing':
-            pass
+            _done = 0
+            _status.extend(['{0}/{1}'.format(_done, _items)])
         
         elif _task_type == 'Error classification':
             pass

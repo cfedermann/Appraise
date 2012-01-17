@@ -130,6 +130,7 @@ def _handle_postediting(request, task, items):
     
     if request.method == "POST":
         item_id = request.POST.get('item_id')
+        edit_id = request.POST.get('edit_id')
         submit_button = request.POST.get('submit_button')
         _now = request.POST.get('now')
         
@@ -139,7 +140,12 @@ def _handle_postediting(request, task, items):
             print "now: {}".format(_now)
             print "duration: {}".format(duration)
         
+        # TODO: change edit_id to contain only the id of the translation, not
+        # the actual translation text itself;  this will also allow to keep
+        # track of which sentence has been selected for post-editing.
+        
         print "item_id: {0}".format(item_id)
+        print "edit_id: {0}".format(edit_id)
         print "submit_button: {0}".format(submit_button)
         print
         
@@ -165,7 +171,52 @@ def _handle_postediting(request, task, items):
 
 @login_required
 def _handle_error_classification(request, task, items):
-    pass
+    now = datetime.now()
+    
+    if request.method == "POST":
+        item_id = request.POST.get('item_id')
+        missing_words = request.POST.get('missing_words')
+        too_many_errors = request.POST.get('too_many_errors')
+        submit_button = request.POST.get('submit_button')
+        _now = request.POST.get('now')
+        
+        print
+        if _now:
+            duration = now - datetime.fromtimestamp(float(_now))
+            print "now: {}".format(_now)
+            print "duration: {}".format(duration)
+        
+        # TODO: change edit_id to contain only the id of the translation, not
+        # the actual translation text itself;  this will also allow to keep
+        # track of which sentence has been selected for post-editing.
+        
+        print "item_id: {0}".format(item_id)
+        print "missing_words: {0}".format(missing_words)
+        print "too_many_errors: {0}".format(too_many_errors)
+        print "submit_button: {0}".format(submit_button)
+        print
+        
+        # TODO:
+        #
+        # 1) create suitable result container type instance
+        # 2) serialise result data into XML format
+        # 3) create (or update) result instance and save it
+    
+    # TODO: add loop to find "next item to edit" based on items
+    
+    item = items[0]
+    translations = item.translations[0][0]
+    words = item.translations[0][0].split(' ')
+    dictionary = {'title': 'Error Classification', 'item_id': item.id,
+      'source_text': item.source, 'reference_text': item.reference,
+      'now': mktime(datetime.now().timetuple()),
+      'translations': translations,
+      'words': words,
+            
+      'task_progress': '{0:03d}/{1:03d}'.format(1, len(items))}
+    
+    return render_to_response('evaluation/error_classification.html', dictionary,
+      context_instance=RequestContext(request))
 
 @login_required
 def task_handler(request, task_id):

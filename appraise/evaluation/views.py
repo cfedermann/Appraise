@@ -70,6 +70,7 @@ def _handle_ranking(request, task, items):
         item_id = request.POST.get('item_id')
         submit_button = request.POST.get('submit_button')
         _now = request.POST.get('now')
+        _order = request.POST.get('order')
         
         print
         if _now:
@@ -77,17 +78,24 @@ def _handle_ranking(request, task, items):
             print "now: {}".format(_now)
             print "duration: {}".format(duration)
         
+        if _order:
+            order = [int(x) for x in _order.split(',')]
+        
+        else:
+            order = range(len(items[0].translations))
+        
         ranks = {}
         for index in range(len(items[0].translations)):
             rank = request.POST.get('rank_{0}'.format(index))
             if rank:
-                ranks[index] = int(rank)
+                ranks[order[index]] = int(rank)
             else:
-                ranks[index] = -1
+                ranks[order[index]] = -1
         
         print "item_id: {0}".format(item_id)
         print "submit_button: {0}".format(submit_button)
         print "ranks: {0}".format(ranks)
+        print "order: {0}".format(order)
         print
         
         # TODO:
@@ -99,10 +107,17 @@ def _handle_ranking(request, task, items):
     # TODO: add loop to find "next item to edit" based on items
     
     item = items[0]
+    translations = []
+    order = range(len(item.translations))
+    shuffle(order)
+    for index in order:
+        translations.append(item.translations[index])
+    
     dictionary = {'title': 'Ranking', 'item_id': item.id,
       'source_text': item.source, 'reference_text': item.reference,
       'now': mktime(datetime.now().timetuple()),
-      'translations': item.translations,
+      'translations': translations,
+      'order': ','.join([str(x) for x in order]),
             
       'task_progress': '{0:03d}/{1:03d}'.format(1, len(items))}
     

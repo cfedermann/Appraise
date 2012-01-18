@@ -95,28 +95,37 @@ function validate_form()
   <p id="task_progress">{{task_progress}}</p>
 </div>
 
-<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-
-
 <div class="container">
 
+<div class="row">
+<div class="span16">
+<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+</div>
+</div>
+
+<div class="row">
 <div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Source</small>
 </blockquote>
 </div>
-<div class="push8">
+<div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context.<strong>{{reference_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Reference</small>
 </blockquote>
 </div>
+</div>
 
+<div class="row">
+<div class="span16">
 <blockquote>
 <p><strong>{{translations}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
 <small>Translation (THIS COULD ALSO NOT BE SHOWN...)</small>
 </blockquote>
+</div>
+</div>
 
 <form action="" method="post" onsubmit="javascript:return validate_form();">
 
@@ -147,6 +156,7 @@ function validate_form()
 </div>
 </div>
 
+<div class="row">
 <div class="actions">
   <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
   <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
@@ -156,6 +166,7 @@ function validate_form()
   
   <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
   <span class="help-inline">(Ctrl-Alt-F)</span>
+</div>
 </div>
 
 </form>

@@ -5,7 +5,11 @@
 <script language="javascript">
 <!--
 $(document).ready(function() {
+{% if translations|length > 1 %}
   $('div[name="editor"]').hide();
+{% else %}
+  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+{% endif %}
 });
 
 function select_sentence(parent)
@@ -30,9 +34,13 @@ function start_from_scratch()
 
 function reset_form()
 {
+{% if translations|length > 1 %}
   $('div[name="editor"]').hide();
   $('#translations input[type="radio"]:checked').removeAttr('checked');
   $('#translations').show();
+{% else %}
+  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+{% endif %}
   $('input[name="from_scratch"]').removeAttr('checked');
   $('input[name="from_scratch"]').removeAttr('disabled');
   $('input[name="now"]').val(Date.now()/1000.0);

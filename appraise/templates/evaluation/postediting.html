@@ -71,8 +71,10 @@ function validate_form()
 
 <div class="container">
 
-<div class="row">	
+<div class="row">
+<div class="span16">
 <p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+</div>
 </div>
 
 <div class="row">
@@ -96,7 +98,7 @@ function validate_form()
 <input name="now" type="hidden" value="{{now}}" />
 
 {% if translations|length > 1 %}
-<span id="translations">
+<div id="translations">
 {% for translation in translations %}
 <div class="row">
 <div class="span16">
@@ -110,7 +112,7 @@ function validate_form()
 </div>
 </div>
 {% endfor %}
-</span>
+</div>
 {% else %}
 <input name="translation" type="hidden" value="{{translations.0.0}}" />
 {% endif %}

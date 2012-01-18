@@ -5,7 +5,7 @@
 <script language="javascript">
 <!--
 $(document).ready(function() {
- $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+  $('div[name="editor"]').hide();
 });
 
 function select_sentence(parent)
@@ -14,6 +14,7 @@ function select_sentence(parent)
   input.attr('checked', 'checked');
   $('#translations').hide();
   $('textarea[name="postedited"]').text(input.val());
+  $('div[name="editor"]').show();
 }
 
 function start_from_scratch()
@@ -29,7 +30,7 @@ function start_from_scratch()
 
 function reset_form()
 {
-  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+  $('div[name="editor"]').hide();
   $('#translations input[type="radio"]:checked').removeAttr('checked');
   $('#translations').show();
   $('input[name="from_scratch"]').removeAttr('checked');
@@ -60,22 +61,25 @@ function validate_form()
   <p id="task_progress">{{task_progress}}</p>
 </div>
 
-<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-
-
 <div class="container">
 
+<div class="row">	
+<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+</div>
+
+<div class="row">
 <div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Source</small>
 </blockquote>
 </div>
-<div class="push8">
+<div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context.<strong>{{reference_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Reference</small>
 </blockquote>
+</div>
 </div>
 
 <form action="" method="post" onsubmit="javascript:return validate_form();">
@@ -86,6 +90,8 @@ function validate_form()
 {% if translations|length > 1 %}
 <span id="translations">
 {% for translation in translations %}
+<div class="row">
+<div class="span16">
 <blockquote>
 {% with forloop.counter0 as edit_id %}
 {% include 'evaluation/edit_selector.html' %}
@@ -93,15 +99,22 @@ function validate_form()
 <p><strong>{{translation.0}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
 <small>Translation {{forloop.counter}}</small>
 </blockquote>
+</div>
+</div>
 {% endfor %}
 </span>
 {% else %}
 <input name="translation" type="hidden" value="{{translations.0.0}}" />
 {% endif %}
 
+<div class="row" name="editor">
+<div class="span16">
 <span onclick="javascript:start_from_scratch();"><input name="from_scratch" type="checkbox" value="FROM_SCRATCH"> Translate from scratch</span><br/>
 <textarea name="postedited" style="width:99%;height:40px;"></textarea>
+</div>
+</div>
 
+<div class="row">
 <div class="actions">
   <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
   <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
@@ -111,6 +124,7 @@ function validate_form()
   
   <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
   <span class="help-inline">(Ctrl-Alt-F)</span>
+</div>
 </div>
 
 </form>

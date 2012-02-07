@@ -5,7 +5,7 @@
 <script language="javascript">
 <!--
 $(document).ready(function() {
- $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+ $('textarea[name="postedited"]').val($('input[name="translation"]').val());
 });
 
 function select_sentence(parent)
@@ -13,7 +13,7 @@ function select_sentence(parent)
   var input = parent.children('input');
   input.attr('checked', 'checked');
   $('#translations').hide();
-  $('textarea[name="postedited"]').text(input.val());
+  $('textarea[name="postedited"]').val(input.val());
 }
 
 function start_from_scratch()
@@ -24,12 +24,12 @@ function start_from_scratch()
     return;
   }
   input.attr('checked', 'checked').attr('disabled', true);
-  $('textarea[name="postedited"]').text('');
+  $('textarea[name="postedited"]').val('');
 }
 
 function reset_form()
 {
-  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
+  $('textarea[name="postedited"]').val($('input[name="translation"]').val());
   $('#translations input[type="radio"]:checked').removeAttr('checked');
   $('#translations').show();
   $('input[name="from_scratch"]').removeAttr('checked');

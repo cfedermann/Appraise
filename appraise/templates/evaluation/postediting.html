@@ -99,7 +99,7 @@ function validate_form()
 <input name="translation" type="hidden" value="{{translations.0.0}}" />
 {% endif %}
 
-<span onclick="javascript:start_from_scratch();"><input name="from_scratch" type="checkbox" value="FROM_SCRATCH"> Translate from scratch</span><br/>
+<span onclick="javascript:start_from_scratch();"><input  onclick="javascript:start_from_scratch();" name="from_scratch" type="checkbox" value="FROM_SCRATCH"> Translate from scratch</span><br/>
 <textarea name="postedited" style="width:99%;height:40px;"></textarea>
 
 <div class="actions">

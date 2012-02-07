@@ -14,6 +14,11 @@ $(document).ready(function() {
 
 function toggle_classification(id)
 {
+  if ($('input[name="too_many_errors"]').attr('checked') == 'checked')
+  {
+    return;
+  }
+
   var edit = $('#edit_'+id);
   var view = $('#view_'+id);
 
@@ -46,13 +51,26 @@ function toggle_classification(id)
   }
 }
 
-function toggle_checkbox(self)
+function reset_form_if_too_many_errors_is_clicked(self)
 {
-  var input = self.children('input');
+  if (self.attr('checked') == 'checked') {
+    reset_form();
+    self.attr('checked', 'checked');
+  }
+}
+
+function toggle_checkbox(input_name)
+{
+  var input = $('input[name="'+input_name+'"]');
+
   if (input.attr('checked') == 'checked')
     input.removeAttr('checked');
-  else
+  else {
+    if (input_name == 'too_many_errors') {
+      reset_form();
+    }
     input.attr('checked', 'checked');
+  }
 }
 
 function reset_form()
@@ -124,7 +142,10 @@ function validate_form()
 <input name="now" type="hidden" value="{{now}}" />
 <input name="words" type="hidden" value="{{words|length}}" />
 
-<span onclick="javascript:toggle_checkbox($(this));"><input name="missing_words" type="checkbox" value="MISSING_WORDS"> Missing words</span> <span onclick="javascript:toggle_checkbox($(this));"><input name="too_many_errors" type="checkbox" value="TOO_MANY_ERRORS"> Too many errors</span>
+<input name="missing_words" type="checkbox" value="MISSING_WORDS">
+<span onclick="javascript:toggle_checkbox('missing_words');">Missing words</span>
+<input onclick="javascript:reset_form_if_too_many_errors_is_clicked($(this));" name="too_many_errors" type="checkbox" value="TOO_MANY_ERRORS">
+<span onclick="javascript:toggle_checkbox('too_many_errors');">Too many errors</span>
 
 <div class="row">
 <div class="span12">

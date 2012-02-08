@@ -15,6 +15,26 @@ $(document).ready(function() {
   }
 });
 
+function update_error_summary()
+{
+  var _errors = new Array();
+  for (var i=0; i<ERROR_CLASSES.length; i++) {
+    _total_errors_of_this_class = 0;
+    for (var j=0; j<{{words|length}}; j++) {
+      var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+j+'"]:checked').val();
+
+      if (_error != undefined)
+        _total_errors_of_this_class += 1;
+    }
+
+    if (_total_errors_of_this_class > 0)
+      _errors.push(_total_errors_of_this_class+'x '+ERROR_CLASSES[i].replace('_', ' '));
+  }
+
+  if (_errors.length)
+    $('#error_summary').html(_errors.join('<br/>'));
+}
+
 function summarise_errors_for_word(id)
 {
   var _errors = new Array();
@@ -48,6 +68,8 @@ function toggle_classification(id)
       $('#view_'+i).show();
     }
   }
+
+  update_error_summary();
 }
 
 function reset_form_if_too_many_errors_is_clicked(self)
@@ -86,6 +108,7 @@ function reset_form()
       var _error = $('input[name="'+ERROR_CLASSES[j]+'_'+i+'"]').removeAttr('checked');
     }
   }
+  $('#error_summary').html('<em>No errors classified yet...</em>');
   $('input[name="now"]').val(Date.now()/1000.0);
 }
 
@@ -172,7 +195,7 @@ function validate_form()
 </div>
 <div class="span4">
 <h4>Error Summary</h4>
-<em>to be added...</em>
+<span id="error_summary"><em>No errors classified yet...</em></span>
 </div>
 </div>
 

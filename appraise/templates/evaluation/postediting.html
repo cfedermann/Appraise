@@ -78,7 +78,7 @@ function validate_form()
 </blockquote>
 </div>
 
-<form action="" method="post" onsubmit="javascript:return validate_form();">
+<form action="" method="post">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
@@ -103,14 +103,13 @@ function validate_form()
 <textarea name="postedited" style="width:99%;height:40px;"></textarea>
 
 <div class="actions">
-  <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
-  <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
+  <button name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();">Submit</button>
+  &nbsp;
   
-  <button onclick="javascript:reset_form();" accesskey="r" type="reset" class="btn">Reset</button>
-  <span class="help-inline">(Ctrl-Alt-R)</span>&nbsp;
+  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn">Reset</button>
+  &nbsp;
   
-  <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
-  <span class="help-inline">(Ctrl-Alt-F)</span>
+  <button name="submit_button" accesskey="3" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
 </div>
 
 </form>

@@ -4,6 +4,9 @@
 <script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
 <script language="javascript">
 <!--
+var ERROR_CLASSES = ["terminology", "lexical_choice", "syntax", "insertion",
+  "morphology", "misspelling", "punctuation", "other"];
+
 $(document).ready(function() {
   for (var i=0; i<{{words|length}}; i++)
   {
@@ -15,19 +18,11 @@ $(document).ready(function() {
 function summarise_errors_for_word(id)
 {
   var _errors = new Array();
-  var extra_word = $('input[name="extra_word_'+id+'"]:checked').val();
-  var reordering = $('input[name="reordering_'+id+'"]:checked').val();
-  var lexical_error = $('input[name="lexical_error_'+id+'"]:checked').val();
-  var wrong_form = $('input[name="wrong_form_'+id+'"]:checked').val();
-
-  if (extra_word != undefined)
-    _errors.push(extra_word.toLowerCase() + ' extra word');
-  if (reordering != undefined)
-    _errors.push(reordering.toLowerCase() + ' reordering error');
-  if (lexical_error != undefined)
-    _errors.push(lexical_error.toLowerCase() + ' lexical error');
-  if (wrong_form != undefined)
-    _errors.push(wrong_form.toLowerCase() + ' wrong form');
+  for (var i=0; i<ERROR_CLASSES.length; i++) {
+    var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+id+'"]:checked').val();
+    if (_error != undefined)
+      _errors.push(_error.toLowerCase()+' '+ERROR_CLASSES[i].replace('_', ' '));
+  }
 
   if (_errors.length)
     $('#view_'+id).html(_errors.join(', '));
@@ -86,10 +81,10 @@ function reset_form()
     $('#edit_'+i).hide();
     $('#view_'+i).html('<em>Click to classify errors for this word...</em>');
     $('#view_'+i).show();
-    $('input[name="extra_word_'+i+'"]').removeAttr('checked');
-    $('input[name="reordering_'+i+'"]').removeAttr('checked');
-    $('input[name="lexical_error_'+i+'"]').removeAttr('checked');
-    $('input[name="wrong_form_'+i+'"]').removeAttr('checked');
+
+    for (var j=0; j<ERROR_CLASSES.length; j++) {
+      var _error = $('input[name="'+ERROR_CLASSES[j]+'_'+i+'"]').removeAttr('checked');
+    }
   }
   $('input[name="now"]').val(Date.now()/1000.0);
 }

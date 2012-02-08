@@ -12,6 +12,27 @@ $(document).ready(function() {
   }
 });
 
+function summarise_errors_for_word(id)
+{
+  var _errors = new Array();
+  var extra_word = $('input[name="extra_word_'+id+'"]:checked').val();
+  var reordering = $('input[name="reordering_'+id+'"]:checked').val();
+  var lexical_error = $('input[name="lexical_error_'+id+'"]:checked').val();
+  var wrong_form = $('input[name="wrong_form_'+id+'"]:checked').val();
+
+  if (extra_word != undefined)
+    _errors.push(extra_word.toLowerCase() + ' extra word');
+  if (reordering != undefined)
+    _errors.push(reordering.toLowerCase() + ' reordering error');
+  if (lexical_error != undefined)
+    _errors.push(lexical_error.toLowerCase() + ' lexical error');
+  if (wrong_form != undefined)
+    _errors.push(wrong_form.toLowerCase() + ' wrong form');
+
+  if (_errors.length)
+    $('#view_'+id).html(_errors.join(', '));
+}
+
 function toggle_classification(id)
 {
   if ($('input[name="too_many_errors"]').attr('checked') == 'checked')
@@ -19,35 +40,18 @@ function toggle_classification(id)
     return;
   }
 
-  var edit = $('#edit_'+id);
-  var view = $('#view_'+id);
-
-  if (edit.css('display') == 'inline')
+  for (var i=0; i<{{words|length}}; i++)
   {
-    var _errors = new Array();
-    var extra_word = $('input[name="extra_word_'+id+'"]:checked').val();
-    var reordering = $('input[name="reordering_'+id+'"]:checked').val();
-    var lexical_error = $('input[name="lexical_error_'+id+'"]:checked').val();
-    var wrong_form = $('input[name="wrong_form_'+id+'"]:checked').val();
+    if (i == id) {
+      $('#edit_'+i).show();
+      $('#view_'+i).hide();
+    }
+    else if ($('#edit_'+i).css('display') == 'inline') {
+      summarise_errors_for_word(i);
 
-    if (extra_word != undefined)
-      _errors.push(extra_word.toLowerCase() + ' extra word');
-    if (reordering != undefined)
-      _errors.push(reordering.toLowerCase() + ' reordering error');
-    if (lexical_error != undefined)
-      _errors.push(lexical_error.toLowerCase() + ' lexical error');
-    if (wrong_form != undefined)
-      _errors.push(wrong_form.toLowerCase() + ' wrong form');
-
-    edit.hide();
-
-    if (_errors.length)
-      view.html(_errors.join(', '));
-    view.show();
-  }
-  else {
-    edit.show();
-    view.hide();
+      $('#edit_'+i).hide();
+      $('#view_'+i).show();
+    }
   }
 }
 

@@ -118,6 +118,7 @@ function validate_form()
 
 <div class="container">
 
+{% if reference_text %}
 <div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
@@ -130,6 +131,14 @@ function validate_form()
 <small>Reference</small>
 </blockquote>
 </div>
+{% else %}
+<div class="push16">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Source</small>
+</blockquote>
+</div>
+{% endif %}
 
 <blockquote>
 <p><strong>{{translations}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>

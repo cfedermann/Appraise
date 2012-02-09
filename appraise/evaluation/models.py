@@ -10,6 +10,8 @@ import os
 import uuid
 from django.db import models
 from django.contrib.auth.models import User
+from django.template import Context
+from django.template.loader import get_template
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
 
 # Setup logging support.
@@ -318,6 +320,7 @@ class EvaluationItem(models.Model):
     )
     
     # These fields are derived from item_xml and NOT stored in the database.
+    attributes = None
     source = None
     reference = None
     translations = None
@@ -362,6 +365,8 @@ class EvaluationItem(models.Model):
             try:
                 _item_xml = fromstring(self.item_xml)
                 
+                self.attributes = _item_xml.attrib
+                
                 _source = _item_xml.find('source')
                 if _source is not None:
                     self.source = (_source.text, _source.attrib)
@@ -388,7 +393,7 @@ class EvaluationResult(models.Model):
     item = models.ForeignKey(EvaluationItem)
     user = models.ForeignKey(User)
     
-    duration = models.TimeField(blank=True, null=True)
+    duration = models.TimeField(blank=True, null=True, editable=False)
     
     # TODO: this is a hack to render datetime.datetime information properly...
     #
@@ -434,6 +439,25 @@ class EvaluationResult(models.Model):
                     self.results = [int(x) for x in self.raw_result.split(',')]
                 except Exception, msg:
                     self.results = msg
+    
+    def export_to_xml(self):
+        """
+        Renders this EvaluationResult as XML String.
+        """
+        template = get_template('evaluation/result_ranking.xml')
+        
+        _attr = self.item.attributes.items()
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        
+        translations = []
+        for i, x in enumerate(self.item.translations):
+            _attr = ' '.join(['{}="{}"'.format(k, v) for k,v in x[1].items()])
+            _rank = self.results[i] + 1
+            translations.append((_attr, _rank))
+        
+        context = {'attributes': attributes, 'user': self.user,
+          'duration': '{}'.format(self.duration), 'translations': translations}
+        return template.render(Context(context))
 
 
 class RankingTask(models.Model):

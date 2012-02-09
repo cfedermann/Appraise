@@ -1,0 +1,3 @@
+  <ranking-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}">
+{% for attrs, rank in translations %}    <translation{% if attrs %} {{attrs|safe}}{% endif %} rank="{{rank}}" />
+{% endfor %}  </ranking-item>

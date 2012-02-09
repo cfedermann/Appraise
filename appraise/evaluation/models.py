@@ -390,6 +390,12 @@ class EvaluationResult(models.Model):
     
     duration = models.TimeField(blank=True, null=True)
     
+    # TODO: this is a hack to render datetime.datetime information properly...
+    #
+    # Should be replaced by code within the corresponding ModelAdmin!
+    def _duration(self):
+        return '{}'.format(self.duration)
+    
     raw_result = models.TextField(editable=False, blank=False)
     
     results = None

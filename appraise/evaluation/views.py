@@ -198,7 +198,7 @@ def _handle_postediting(request, task, items):
         if submit_button == 'SUBMIT':
             _results = []
             if from_scratch:
-                _results = 'FROM_SCRATCH'
+                _results.append('FROM_SCRATCH')
             
             _results.append(edit_id)
             _results.append(postedited)

@@ -460,6 +460,9 @@ class EvaluationResult(models.Model):
                 
                 elif _task_type == 'Error classification':
                     self.results = [x.split('=') for x in self.raw_result.split('\n')]
+                
+                elif _task_type == 'Post-editing':
+                    self.results = self.raw_result.split('\n')
             
             except Exception, msg:
                 self.results = msg
@@ -474,6 +477,9 @@ class EvaluationResult(models.Model):
         
         elif _task_type == 'Error classification':
             return self.export_to_error_classification_xml()
+        
+        elif _task_type == 'Post-editing':
+            return self.export_to_postediting_xml()
     
     def export_to_ranking_xml(self):
         """
@@ -497,7 +503,7 @@ class EvaluationResult(models.Model):
           'duration': '{}'.format(self.duration), 'skipped': skipped,
           'translations': translations}
         return template.render(Context(context))
-
+    
     def export_to_error_classification_xml(self):
         """
         Renders this EvaluationResult as Error Classification XML String.
@@ -532,7 +538,32 @@ class EvaluationResult(models.Model):
           'too_many_errors': too_many_errors, 'missing_words': missing_words,
           'errors': errors}
         return template.render(Context(context))
-
+    
+    def export_to_postediting_xml(self):
+        """
+        Renders this EvaluationResult as Post-editing XML String.
+        """
+        template = get_template('evaluation/result_postediting.xml')
+        
+        _attr = self.item.attributes.items()
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        
+        if self.results:
+            from_scratch = self.results[0] == 'FROM_SCRATCH'
+            if from_scratch:
+                edit_id = self.results[1]
+            else:
+                edit_id = self.results[0]
+            
+            postedited = self.results[-1]
+        
+        skipped = self.results is None
+        
+        context = {'attributes': attributes, 'user': self.user,
+          'duration': '{}'.format(self.duration), 'skipped': skipped,
+          'from_scratch': from_scratch, 'edit_id': edit_id,
+          'postedited': postedited}
+        return template.render(Context(context))
 
 class RankingTask(models.Model):
     """An RankingTask represents a set of ranking/classification tasks."""

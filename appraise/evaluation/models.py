@@ -253,6 +253,23 @@ class EvaluationTask(models.Model):
         
         return _status
 
+    def export_to_xml(self):
+        """
+        Renders this EvaluationTask as XML String.
+        """
+        template = get_template('evaluation/result_task.xml')
+        
+        _attr = self.task_attributes.items()
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        
+        results = []
+        for item in EvaluationItem.objects.filter(task=self):
+            for _result in item.evaluationresult_set.all():
+                results.append(_result.export_to_xml())
+        
+        context = {'attributes': attributes, 'results': results}
+        return template.render(Context(context))
+
 
 @receiver(pre_delete, sender=EvaluationTask)
 def remove_task_xml_file_on_delete(sender, instance, **kwargs):

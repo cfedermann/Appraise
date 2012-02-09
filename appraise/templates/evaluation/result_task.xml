@@ -1,0 +1,2 @@
+<ranking-task{% if attributes%} {{attributes|safe}}{% endif %}>
+{% for result in results %}{{result}}{% endfor %}</ranking-task>

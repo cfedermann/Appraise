@@ -138,6 +138,10 @@ def _handle_ranking(request, task, items):
         # 3) create (or update) result instance and save it
     
     # TODO: add loop to find "next item to edit" based on items
+    #
+    #item = None    
+    #if not item:
+    #    return redirect('appraise.evaluation.views.overview')
     
     item = items[0]
     translations = []

@@ -430,7 +430,10 @@ class EvaluationResult(models.Model):
         if self.raw_result:
             _task_type = self.item.task.get_task_type_display()
             if _task_type == 'Ranking':
-                self.results = [int(x) for x in self.raw_result.split(',')]
+                try:
+                    self.results = [int(x) for x in self.raw_result.split(',')]
+                except Exception, msg:
+                    self.results = msg
 
 
 class RankingTask(models.Model):

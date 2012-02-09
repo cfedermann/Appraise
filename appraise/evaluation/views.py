@@ -126,8 +126,13 @@ def _handle_ranking(request, task, items):
         print "order: {0}".format(order)
         print
         
-        _raw_result = range(len(current_item.translations))
-        _raw_result = ','.join([str(ranks[x]) for x in _raw_result])
+        if submit_button == 'SUBMIT':
+            _raw_result = range(len(current_item.translations))
+            _raw_result = ','.join([str(ranks[x]) for x in _raw_result])
+        
+        elif submit_button == 'FLAG_ERROR':
+            _raw_result = 'SKIPPED'
+        
         _save_results(current_item, request.user, duration, _raw_result)
         
 

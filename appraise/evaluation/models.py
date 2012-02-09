@@ -452,31 +452,76 @@ class EvaluationResult(models.Model):
         """
         Reloads source, reference, and translations from self.item_xml.
         """
-        if self.raw_result:
+        if self.raw_result and self.raw_result != 'SKIPPED':
             _task_type = self.item.task.get_task_type_display()
-            if _task_type == 'Ranking':
-                try:
+            try:
+                if _task_type == 'Ranking':
                     self.results = [int(x) for x in self.raw_result.split(',')]
-                except Exception, msg:
-                    self.results = msg
+                
+                elif _task_type == 'Error Classification':
+                    self.results = [x.split('=') for x in self.raw_result.split('\n')]
+            
+            except Exception, msg:
+                self.results = msg
     
     def export_to_xml(self):
         """
         Renders this EvaluationResult as XML String.
+        """
+        _task_type = self.item.task.get_task_type_display()
+        if _task_type == 'Ranking':
+            return self.export_to_ranking_xml()
+        
+        elif _task_type == 'Error Classification':
+            return self.export_to_error_classification_xml()
+    
+    def export_to_ranking_xml(self):
+        """
+        Renders this EvaluationResult as Ranking XML String.
         """
         template = get_template('evaluation/result_ranking.xml')
         
         _attr = self.item.attributes.items()
         attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
         
+        skipped = self.results is None
+        
+        print "foo", self.results, skipped
+        
         translations = []
+        if not skipped:
+            for i, x in enumerate(self.item.translations):
+                _attr = ' '.join(['{}="{}"'.format(k, v) for k,v in x[1].items()])
+                _rank = self.results[i]
+                translations.append((_attr, _rank))
+        
+        context = {'attributes': attributes, 'user': self.user,
+          'duration': '{}'.format(self.duration), 'skipped': skipped,
+          'translations': translations}
+        return template.render(Context(context))
+
+    def export_to_error_classification_xml(self):
+        """
+        Renders this EvaluationResult as Error Classification XML String.
+        """
+        template = get_template('evaluation/result_error_classification.xml')
+        
+        _attr = self.item.attributes.items()
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        
+        errors = []
         for i, x in enumerate(self.item.translations):
             _attr = ' '.join(['{}="{}"'.format(k, v) for k,v in x[1].items()])
             _rank = self.results[i]
             translations.append((_attr, _rank))
         
+        skipped = self.results == ['SKIPPED']
+        
+        too_many_errors = self.results == ['TOO_MANY_ERRORS']
+        
         context = {'attributes': attributes, 'user': self.user,
-          'duration': '{}'.format(self.duration), 'translations': translations}
+          'duration': '{}'.format(self.duration), 'skipped': skipped,
+          'too_many_errors': too_many_errors, 'errors': errors}
         return template.render(Context(context))
 
 

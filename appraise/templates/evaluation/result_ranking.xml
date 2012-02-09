@@ -1,3 +1,5 @@
-  <ranking-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}">
+{% if skipped %}  <ranking-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}" skipped="true" />
+{% else %}  <ranking-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}">
 {% for attrs, rank in translations %}    <translation{% if attrs %} {{attrs|safe}}{% endif %} rank="{{rank}}" />
 {% endfor %}  </ranking-item>
+{% endif %}

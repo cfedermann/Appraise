@@ -196,7 +196,13 @@ def _handle_postediting(request, task, items):
         print
         
         if submit_button == 'SUBMIT':
-            pass
+            _results = []
+            if from_scratch:
+                _results = 'FROM_SCRATCH'
+            
+            _results.append(edit_id)
+            _results.append(postedited)
+            _raw_result = '\n'.join(_results)
         
         elif submit_button == 'FLAG_ERROR':
             _raw_result = 'SKIPPED'

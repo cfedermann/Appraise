@@ -458,7 +458,7 @@ class EvaluationResult(models.Model):
                 if _task_type == 'Ranking':
                     self.results = [int(x) for x in self.raw_result.split(',')]
                 
-                elif _task_type == 'Error Classification':
+                elif _task_type == 'Error classification':
                     self.results = [x.split('=') for x in self.raw_result.split('\n')]
             
             except Exception, msg:
@@ -472,7 +472,7 @@ class EvaluationResult(models.Model):
         if _task_type == 'Ranking':
             return self.export_to_ranking_xml()
         
-        elif _task_type == 'Error Classification':
+        elif _task_type == 'Error classification':
             return self.export_to_error_classification_xml()
     
     def export_to_ranking_xml(self):
@@ -485,8 +485,6 @@ class EvaluationResult(models.Model):
         attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
         
         skipped = self.results is None
-        
-        print "foo", self.results, skipped
         
         translations = []
         if not skipped:
@@ -510,18 +508,29 @@ class EvaluationResult(models.Model):
         attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
         
         errors = []
-        for i, x in enumerate(self.item.translations):
-            _attr = ' '.join(['{}="{}"'.format(k, v) for k,v in x[1].items()])
-            _rank = self.results[i]
-            translations.append((_attr, _rank))
+        too_many_errors = False
+        missing_words = False
         
-        skipped = self.results == ['SKIPPED']
+        if self.results:
+            for error in self.results:
+                if len(error) == 2:
+                    word_id = int(error[0])
+                    for details in error[1].split(','):
+                        error_class, severity = details.split(':')
+                        errors.append((word_id, error_class, severity))
+                
+                elif error[0] == 'MISSING_WORDS':
+                    missing_words = True
+                
+                elif error[0] == 'TOO_MANY_ERRORS':
+                    too_many_errors = True
         
-        too_many_errors = self.results == ['TOO_MANY_ERRORS']
+        skipped = self.results is None
         
         context = {'attributes': attributes, 'user': self.user,
           'duration': '{}'.format(self.duration), 'skipped': skipped,
-          'too_many_errors': too_many_errors, 'errors': errors}
+          'too_many_errors': too_many_errors, 'missing_words': missing_words,
+          'errors': errors}
         return template.render(Context(context))
 
 

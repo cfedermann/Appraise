@@ -31,6 +31,9 @@ LOGGER = logging.getLogger('appraise.evaluation.views')
 LOGGER.addHandler(LOG_HANDLER)
 
 
+ERROR_CLASSES = ("terminology", "lexical_choice", "syntax", "insertion",
+  "morphology", "misspelling", "punctuation", "other")
+
 def _save_results(item, user, duration, raw_result):
     """
     Creates or updates the EvaluationResult for the given item and user.
@@ -93,11 +96,10 @@ def _handle_ranking(request, task, items):
     if request.method == "POST":
         item_id = request.POST.get('item_id')
         submit_button = request.POST.get('submit_button')
-        
-        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
-        
         _now = request.POST.get('now')
         _order = request.POST.get('order')
+        
+        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
         print
         duration = None
@@ -134,13 +136,6 @@ def _handle_ranking(request, task, items):
             _raw_result = 'SKIPPED'
         
         _save_results(current_item, request.user, duration, _raw_result)
-        
-
-        # TODO:
-        #
-        # 1) create suitable result container type instance
-        # 2) serialise result data into XML format
-        # 3) create (or update) result instance and save it
     
     # TODO: add loop to find "next item to edit" based on items
     #
@@ -200,8 +195,12 @@ def _handle_postediting(request, task, items):
         print request.POST
         print
         
-        _raw_result = range(len(current_item.translations))
-        _raw_result = ','.join([str(x) for x in _raw_result])
+        if submit_button == 'SUBMIT':
+            pass
+        
+        elif submit_button == 'FLAG_ERROR':
+            _raw_result = 'SKIPPED'
+        
         _save_results(current_item, request.user, duration, _raw_result)
         
         # TODO:
@@ -236,6 +235,8 @@ def _handle_error_classification(request, task, items):
         submit_button = request.POST.get('submit_button')
         _now = request.POST.get('now')
         
+        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        
         print
         duration = None
         if _now:
@@ -248,8 +249,7 @@ def _handle_error_classification(request, task, items):
         if words:
             for index in range(int(words)):
                 _errors = {}
-                for error in ('extra_word', 'reordering', 'lexical_error',
-                  'wrong_form'):
+                for error in ERROR_CLASSES:
                     severity = request.POST.get('{0}_{1}'.format(error, index))
                     if severity:
                         _errors[error] = severity
@@ -267,11 +267,26 @@ def _handle_error_classification(request, task, items):
         print "errors: {0}".format(errors)
         print
         
-        # TODO:
-        #
-        # 1) create suitable result container type instance
-        # 2) serialise result data into XML format
-        # 3) create (or update) result instance and save it
+        if submit_button == 'SUBMIT':
+            if too_many_errors:
+                _raw_result = 'TOO_MANY_ERRORS'
+            
+            else:
+                _errors = []
+                
+                if missing_words:
+                    _errors.append('MISSING_WORDS')
+                
+                for index, classes in errors.items():
+                    _classes = ['{}:{}'.format(k, v) for k, v in classes.items()]
+                    _errors.append('{}={}'.format(index, ','.join(_classes)))
+                
+                _raw_result = '\n'.join(_errors)
+        
+        elif submit_button == 'FLAG_ERROR':
+            _raw_result = 'SKIPPED'
+        
+        _save_results(current_item, request.user, duration, _raw_result)
     
     # TODO: add loop to find "next item to edit" based on items
     

@@ -30,6 +30,27 @@ logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.evaluation.views')
 LOGGER.addHandler(LOG_HANDLER)
 
+
+def _save_results(item, user, duration, raw_result):
+    """
+    Creates or updates the EvaluationResult for the given item and user.
+    """
+    LOGGER.debug('item: {}, user: {}, duration: {}, raw_result: {}'.format(
+      item, user, duration, raw_result))
+    
+    _existing_result = EvaluationResult.objects.filter(item=item, user=user)
+    
+    if _existing_result:
+        _result = _existing_result[0]
+    
+    else:
+        _result = EvaluationResult(item=item, user=user)
+    
+    _result.duration = duration
+    _result.raw_result = raw_result
+    _result.save()
+
+
 @login_required
 def _handle_quality_checking(request, task, items):
     now = datetime.now()
@@ -102,20 +123,11 @@ def _handle_ranking(request, task, items):
         print "order: {0}".format(order)
         print
         
-        _raw_result = [str(ranks[x]) for x in range(len(current_item.translations))]
-        _existing_result = EvaluationResult.objects.filter(item=current_item,
-          user=request.user)
+        _raw_result = range(len(current_item.translations))
+        _raw_result = ','.join([str(x) for x in _raw_result])
+        _save_results(current_item, request.user, duration, _raw_result)
         
-        if _existing_result:
-            _result = _existing_result[0]
-        
-        else:
-            _result = EvaluationResult(item=current_item, user=request.user)
-        
-        _result.duration = duration
-        _result.raw_result = ','.join(_raw_result)
-        _result.save()
-        
+
         # TODO:
         #
         # 1) create suitable result container type instance
@@ -151,6 +163,8 @@ def _handle_postediting(request, task, items):
         edit_id = request.POST.get('edit_id')
         submit_button = request.POST.get('submit_button')
         _now = request.POST.get('now')
+        
+        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
         print
         if _now:

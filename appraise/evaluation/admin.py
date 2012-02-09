@@ -11,7 +11,8 @@ from appraise.evaluation.models import RankingTask, RankingItem, \
   EditingResult, LucyTask, LucyItem, LucyResult, QualityTask, QualityItem, \
   QualityResult
 
-from appraise.evaluation.models import EvaluationTask, EvaluationItem
+from appraise.evaluation.models import EvaluationTask, EvaluationItem, \
+  EvaluationResult
 
 
 class EvaluationTaskAdmin(admin.ModelAdmin):
@@ -44,6 +45,15 @@ class EvaluationTaskAdmin(admin.ModelAdmin):
             return self.readonly_fields + ('task_xml', 'task_type')
         
         return self.readonly_fields
+
+
+class EvaluationResultAdmin(admin.ModelAdmin):
+    """
+    ModelAdmin class for EvaluationResult objects.
+    """
+    list_display = ('item', 'user', 'duration', 'results')
+    list_filter = ('item', 'user')
+
 
 class QualityTaskAdmin(admin.ModelAdmin):
     """Admin class for QualityTask instances."""
@@ -109,3 +119,4 @@ admin.site.register(QualityResult, QualityResultAdmin)
 
 admin.site.register(EvaluationTask, EvaluationTaskAdmin)
 admin.site.register(EvaluationItem)
+admin.site.register(EvaluationResult, EvaluationResultAdmin)

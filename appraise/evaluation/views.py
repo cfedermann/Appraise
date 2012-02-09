@@ -21,7 +21,8 @@ from appraise.evaluation.models import LucyTask, LucyItem, LucyResult
 from appraise.evaluation.models import QualityTask, QualityItem, QualityResult
 
 from appraise.evaluation.models import APPRAISE_TASK_TYPE_CHOICES
-from appraise.evaluation.models import EvaluationTask, EvaluationItem
+from appraise.evaluation.models import EvaluationTask, EvaluationItem, \
+  EvaluationResult
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
 
 # Setup logging support.
@@ -69,6 +70,9 @@ def _handle_ranking(request, task, items):
     if request.method == "POST":
         item_id = request.POST.get('item_id')
         submit_button = request.POST.get('submit_button')
+        
+        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        
         _now = request.POST.get('now')
         _order = request.POST.get('order')
         
@@ -82,10 +86,10 @@ def _handle_ranking(request, task, items):
             order = [int(x) for x in _order.split(',')]
         
         else:
-            order = range(len(items[0].translations))
+            order = range(len(current_item.translations))
         
         ranks = {}
-        for index in range(len(items[0].translations)):
+        for index in range(len(current_item.translations)):
             rank = request.POST.get('rank_{0}'.format(index))
             if rank:
                 ranks[order[index]] = int(rank)
@@ -97,6 +101,20 @@ def _handle_ranking(request, task, items):
         print "ranks: {0}".format(ranks)
         print "order: {0}".format(order)
         print
+        
+        _raw_result = [str(ranks[x]) for x in range(len(current_item.translations))]
+        _existing_result = EvaluationResult.objects.filter(item=current_item,
+          user=request.user)
+        
+        if _existing_result:
+            _result = _existing_result[0]
+        
+        else:
+            _result = EvaluationResult(item=current_item, user=request.user)
+        
+        _result.duration = duration
+        _result.raw_result = ','.join(_raw_result)
+        _result.save()
         
         # TODO:
         #

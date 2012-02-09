@@ -381,6 +381,52 @@ class EvaluationItem(models.Model):
                 self.translations = None
 
 
+class EvaluationResult(models.Model):
+    """
+    Evaluation Result object model.
+    """
+    item = models.ForeignKey(EvaluationItem)
+    user = models.ForeignKey(User)
+    
+    duration = models.TimeField(blank=True, null=True)
+    
+    raw_result = models.TextField(editable=False, blank=False)
+    
+    results = None
+    
+    class Meta:
+        """
+        Metadata options for the EvaluationResult object model.
+        """
+        ordering = ('id',)
+        verbose_name = "EvaluationResult object"
+        verbose_name_plural = "EvaluationResult objects"
+    
+    def __init__(self, *args, **kwargs):
+        """
+        Makes sure that self.results are available.
+        """
+        super(EvaluationResult, self).__init__(*args, **kwargs)
+        
+        # If raw_result is available, populate dynamic field.
+        self.reload_dynamic_fields()
+    
+    def __unicode__(self):
+        """
+        Returns a Unicode String for this EvaluationResult object.
+        """
+        return u'<evaluation-result id="{0}">'.format(self.id)
+    
+    def reload_dynamic_fields(self):
+        """
+        Reloads source, reference, and translations from self.item_xml.
+        """
+        if self.raw_result:
+            _task_type = self.item.task.get_task_type_display()
+            if _task_type == 'Ranking':
+                self.results = [int(x) for x in self.raw_result.split(',')]
+
+
 class RankingTask(models.Model):
     """An RankingTask represents a set of ranking/classification tasks."""
     shortname = models.CharField(max_length=50)

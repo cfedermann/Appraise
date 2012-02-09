@@ -4,9 +4,12 @@
 <script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
 <script language="javascript">
 <!--
+var selection_done = false;
+
 $(document).ready(function() {
 {% if translations|length > 1 %}
   $('textarea[name="postedited"]').html('');
+  $('input[name="from_scratch"]').attr('disabled', true);
 {% else %}
   $('textarea[name="postedited"]').html($('input[name="translation"]').val());
 {% endif %}
@@ -17,7 +20,10 @@ function select_sentence(parent)
   var input = parent.children('input');
   input.attr('checked', 'checked');
   $('#translations').hide();
-  $('textarea[name="postedited"]').val(input.val());
+  $('textarea[name="postedited"]').val($('input[name="translation_'+input.val()+'"]').val());
+
+  $('input[name="from_scratch"]').removeAttr('disabled');
+  selection_done = true;
 }
 
 function start_from_scratch()
@@ -42,12 +48,17 @@ function reset_form()
 {% endif %}
 
   $('input[name="from_scratch"]').removeAttr('checked');
-  $('input[name="from_scratch"]').removeAttr('disabled');
+  $('input[name="from_scratch"]').attr('disabled', true);
   $('input[name="now"]').val(Date.now()/1000.0);
+  selection_done = false;
 }
 
 function validate_form()
 {
+  if (!selection_done) {
+    return;
+  }
+
   if ($('textarea[name="postedited"]').val() == '') {
 {% if translations|length > 1 %}
     alert('Please post-edit one of the translations...');
@@ -58,6 +69,12 @@ function validate_form()
   }
 
   return true;
+}
+
+function on_submit_activate_from_scratch_again()
+{
+  alert('hmm...');
+  $('input[name="from_scratch"]').removeAttr('disabled');
 }
 -->
 </script>
@@ -96,7 +113,7 @@ function validate_form()
 </div>
 {% endif %}
 
-<form action="" method="post">
+<form action="" method="post" onsubmit="javascript:on_submit_activate_from_scratch_again();">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
@@ -117,7 +134,7 @@ function validate_form()
 <input name="translation" type="hidden" value="{{translations.0.0}}" />
 {% endif %}
 
-<span onclick="javascript:start_from_scratch();"><input  onclick="javascript:start_from_scratch();" name="from_scratch" type="checkbox" value="FROM_SCRATCH"> Translate from scratch</span><br/>
+<input onclick="javascript:start_from_scratch();" name="from_scratch" type="checkbox" value="FROM_SCRATCH" /><span onclick="javascript:start_from_scratch();"> Translate from scratch</span><br/>
 <textarea name="postedited" style="width:99%;height:40px;"></textarea>
 
 <div class="actions">

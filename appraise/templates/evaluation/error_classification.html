@@ -173,7 +173,7 @@ function validate_form()
 <input name="now" type="hidden" value="{{now}}" />
 <input name="words" type="hidden" value="{{words|length}}" />
 
-<input name="missing_words" type="checkbox" value="MISSING_WORDS">
+<input name="missing_words" type="checkbox" value="MISSING_WORDS" />
 <span onclick="javascript:toggle_checkbox('missing_words');">Missing words</span>
 <input onclick="javascript:reset_form_if_too_many_errors_is_clicked($(this));" name="too_many_errors" type="checkbox" value="TOO_MANY_ERRORS">
 <span onclick="javascript:toggle_checkbox('too_many_errors');">Too many errors</span>

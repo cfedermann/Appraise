@@ -52,7 +52,7 @@ class EvaluationResultAdmin(admin.ModelAdmin):
     ModelAdmin class for EvaluationResult objects.
     """
     list_display = ('item', 'user', '_duration', 'results')
-    list_filter = ('item', 'user')
+    list_filter = ('item__task', 'user')
 
 
 class QualityTaskAdmin(admin.ModelAdmin):

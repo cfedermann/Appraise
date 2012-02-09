@@ -59,6 +59,8 @@ def _handle_quality_checking(request, task, items):
         item_id = request.POST.get('item_id')
         quality = request.POST.get('submit_button')
         _now = request.POST.get('now')
+        
+        duration = None
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
             print "duration: {}".format(duration)
@@ -98,6 +100,7 @@ def _handle_ranking(request, task, items):
         _order = request.POST.get('order')
         
         print
+        duration = None
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
             print "now: {}".format(_now)
@@ -162,11 +165,14 @@ def _handle_postediting(request, task, items):
         item_id = request.POST.get('item_id')
         edit_id = request.POST.get('edit_id')
         submit_button = request.POST.get('submit_button')
+        from_scratch = request.POST.get('from_scratch')
+        postedited = request.POST.get('postedited')
         _now = request.POST.get('now')
         
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
         print
+        duration = None
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
             print "now: {}".format(_now)
@@ -179,7 +185,15 @@ def _handle_postediting(request, task, items):
         print "item_id: {0}".format(item_id)
         print "edit_id: {0}".format(edit_id)
         print "submit_button: {0}".format(submit_button)
+        print "from_scratch: {0}".format(from_scratch)
+        print "postedited: {0}".format(postedited)
         print
+        print request.POST
+        print
+        
+        _raw_result = range(len(current_item.translations))
+        _raw_result = ','.join([str(x) for x in _raw_result])
+        _save_results(current_item, request.user, duration, _raw_result)
         
         # TODO:
         #
@@ -214,6 +228,7 @@ def _handle_error_classification(request, task, items):
         _now = request.POST.get('now')
         
         print
+        duration = None
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
             print "now: {}".format(_now)

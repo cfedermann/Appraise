@@ -259,6 +259,8 @@ class EvaluationTask(models.Model):
         """
         template = get_template('evaluation/result_task.xml')
         
+        _task_type = self.get_task_type_display().lower().replace(' ', '-')
+        
         _attr = self.task_attributes.items()
         attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
         
@@ -267,7 +269,8 @@ class EvaluationTask(models.Model):
             for _result in item.evaluationresult_set.all():
                 results.append(_result.export_to_xml())
         
-        context = {'attributes': attributes, 'results': results}
+        context = {'task_type': _task_type, 'attributes': attributes,
+          'results': results}
         return template.render(Context(context))
 
 

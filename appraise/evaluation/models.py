@@ -469,7 +469,7 @@ class EvaluationResult(models.Model):
         translations = []
         for i, x in enumerate(self.item.translations):
             _attr = ' '.join(['{}="{}"'.format(k, v) for k,v in x[1].items()])
-            _rank = self.results[i] + 1
+            _rank = self.results[i]
             translations.append((_attr, _rank))
         
         context = {'attributes': attributes, 'user': self.user,

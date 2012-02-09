@@ -6,7 +6,7 @@
 <!--
 function reset_form()
 {
-  $('#translations input[type="radio"]:checked').removeAttr('checked');
+  $('#translations input[type="radio"]').removeAttr('checked');
   $('input[name="now"]').val(Date.now()/1000.0);
 }
 
@@ -31,15 +31,12 @@ function validate_form()
   <p id="task_progress">{{task_progress}}</p>
 </div>
 
+<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+
+
 <div class="container">
 
-<div class="row">
-<div class="span16">
-<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-</div>
-</div>
-
-<div class="row">
+{% if reference_text %}
 <div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
@@ -52,18 +49,23 @@ function validate_form()
 <small>Reference</small>
 </blockquote>
 </div>
+{% else %}
+<div class="push16">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Source</small>
+</blockquote>
 </div>
+{% endif %}
 
-<form action="" method="post" onsubmit="javascript:return validate_form();">
+<form action="" method="post">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
 <input name="order" type="hidden" value="{{order}}" />
 
-<div id="translations">
+<span id="translations">
 {% for translation in translations %}
-<div class="row">
-<div class="span16">
 <blockquote>
 {% with forloop.counter0 as rank_id %}
 {% include 'evaluation/rank_selector.html' %}
@@ -71,22 +73,17 @@ function validate_form()
 <p><strong>{{translation.0}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
 <small>Translation {{forloop.counter}}</small>
 </blockquote>
-</div>
-</div>
 {% endfor %}
-</div>
+</span>
 
-<div class="row">
 <div class="actions">
-  <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
-  <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
+  <button name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();">Submit</button>
+  &nbsp;
   
-  <button onclick="javascript:reset_form();" accesskey="r" type="reset" class="btn">Reset</button>
-  <span class="help-inline">(Ctrl-Alt-R)</span>&nbsp;
+  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn">Reset</button>
+  &nbsp;
   
-  <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
-  <span class="help-inline">(Ctrl-Alt-F)</span>
-</div>
+  <button name="submit_button" accesskey="3" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
 </div>
 
 </form>

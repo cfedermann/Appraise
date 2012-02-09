@@ -5,11 +5,7 @@
 <script language="javascript">
 <!--
 $(document).ready(function() {
-{% if translations|length > 1 %}
-  $('div[name="editor"]').hide();
-{% else %}
-  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
-{% endif %}
+ $('textarea[name="postedited"]').val($('input[name="translation"]').val());
 });
 
 function select_sentence(parent)
@@ -17,8 +13,7 @@ function select_sentence(parent)
   var input = parent.children('input');
   input.attr('checked', 'checked');
   $('#translations').hide();
-  $('textarea[name="postedited"]').text(input.val());
-  $('div[name="editor"]').show();
+  $('textarea[name="postedited"]').val(input.val());
 }
 
 function start_from_scratch()
@@ -29,18 +24,14 @@ function start_from_scratch()
     return;
   }
   input.attr('checked', 'checked').attr('disabled', true);
-  $('textarea[name="postedited"]').text('');
+  $('textarea[name="postedited"]').val('');
 }
 
 function reset_form()
 {
-{% if translations|length > 1 %}
-  $('div[name="editor"]').hide();
+  $('textarea[name="postedited"]').val($('input[name="translation"]').val());
   $('#translations input[type="radio"]:checked').removeAttr('checked');
   $('#translations').show();
-{% else %}
-  $('textarea[name="postedited"]').text($('input[name="translation"]').val());
-{% endif %}
   $('input[name="from_scratch"]').removeAttr('checked');
   $('input[name="from_scratch"]').removeAttr('disabled');
   $('input[name="now"]').val(Date.now()/1000.0);
@@ -69,39 +60,41 @@ function validate_form()
   <p id="task_progress">{{task_progress}}</p>
 </div>
 
+<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+
+
 <div class="container">
 
-<div class="row">
-<div class="span16">
-<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-</div>
-</div>
-
-<div class="row">
+{% if reference_text %}
 <div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Source</small>
 </blockquote>
 </div>
-<div class="span8">
+<div class="push8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context.<strong>{{reference_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Reference</small>
 </blockquote>
 </div>
+{% else %}
+<div class="push16">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Source</small>
+</blockquote>
 </div>
+{% endif %}
 
-<form action="" method="post" onsubmit="javascript:return validate_form();">
+<form action="" method="post">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
 
 {% if translations|length > 1 %}
-<div id="translations">
+<span id="translations">
 {% for translation in translations %}
-<div class="row">
-<div class="span16">
 <blockquote>
 {% with forloop.counter0 as edit_id %}
 {% include 'evaluation/edit_selector.html' %}
@@ -109,32 +102,23 @@ function validate_form()
 <p><strong>{{translation.0}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
 <small>Translation {{forloop.counter}}</small>
 </blockquote>
-</div>
-</div>
 {% endfor %}
-</div>
+</span>
 {% else %}
 <input name="translation" type="hidden" value="{{translations.0.0}}" />
 {% endif %}
 
-<div class="row" name="editor">
-<div class="span16">
-<span onclick="javascript:start_from_scratch();"><input name="from_scratch" type="checkbox" value="FROM_SCRATCH"> Translate from scratch</span><br/>
+<span onclick="javascript:start_from_scratch();"><input  onclick="javascript:start_from_scratch();" name="from_scratch" type="checkbox" value="FROM_SCRATCH"> Translate from scratch</span><br/>
 <textarea name="postedited" style="width:99%;height:40px;"></textarea>
-</div>
-</div>
 
-<div class="row">
 <div class="actions">
-  <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
-  <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
+  <button name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();">Submit</button>
+  &nbsp;
   
-  <button onclick="javascript:reset_form();" accesskey="r" type="reset" class="btn">Reset</button>
-  <span class="help-inline">(Ctrl-Alt-R)</span>&nbsp;
+  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn">Reset</button>
+  &nbsp;
   
-  <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
-  <span class="help-inline">(Ctrl-Alt-F)</span>
-</div>
+  <button name="submit_button" accesskey="3" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
 </div>
 
 </form>

@@ -6,6 +6,7 @@ Project: Appraise evaluation system
 from xml.etree.ElementTree import Element, fromstring, ParseError, tostring
 
 import logging
+import os
 import uuid
 from django.db import models
 from django.contrib.auth.models import User
@@ -19,7 +20,8 @@ LOGGER.addHandler(LOG_HANDLER)
 
 def _create_id():
     """Creates a random UUID-4 32-digit hex number for use as task id."""
-    new_id = uuid.uuid4().hex
+    new_id = uuid.UUID(bytes=os.urandom(16), version=4).hex
+    #new_id = uuid.uuid4().hex
     ###while EvaluationTask.objects.filter(task_id=new_id):
     ###    new_id = uuid.uuid4().hex
 

@@ -4,6 +4,9 @@
 <script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
 <script language="javascript">
 <!--
+var ERROR_CLASSES = ["terminology", "lexical_choice", "syntax", "insertion",
+  "morphology", "misspelling", "punctuation", "other"];
+
 $(document).ready(function() {
   for (var i=0; i<{{words|length}}; i++)
   {
@@ -12,47 +15,83 @@ $(document).ready(function() {
   }
 });
 
+function update_error_summary()
+{
+  var _errors = new Array();
+  for (var i=0; i<ERROR_CLASSES.length; i++) {
+    _total_errors_of_this_class = 0;
+    for (var j=0; j<{{words|length}}; j++) {
+      var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+j+'"]:checked').val();
+
+      if (_error != undefined)
+        _total_errors_of_this_class += 1;
+    }
+
+    if (_total_errors_of_this_class > 0)
+      _errors.push(_total_errors_of_this_class+'x '+ERROR_CLASSES[i].replace('_', ' '));
+  }
+
+  if (_errors.length)
+    $('#error_summary').html(_errors.join('<br/>'));
+}
+
+function summarise_errors_for_word(id)
+{
+  var _errors = new Array();
+  for (var i=0; i<ERROR_CLASSES.length; i++) {
+    var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+id+'"]:checked').val();
+    if (_error != undefined)
+      _errors.push(_error.toLowerCase()+' '+ERROR_CLASSES[i].replace('_', ' '));
+  }
+
+  if (_errors.length)
+    $('#view_'+id).html(_errors.join(', '));
+}
+
 function toggle_classification(id)
 {
-  var edit = $('#edit_'+id);
-  var view = $('#view_'+id);
-
-  if (edit.css('display') == 'inline')
+  if ($('input[name="too_many_errors"]').attr('checked') == 'checked')
   {
-    var _errors = new Array();
-    var extra_word = $('input[name="extra_word_'+id+'"]:checked').val();
-    var reordering = $('input[name="reordering_'+id+'"]:checked').val();
-    var lexical_error = $('input[name="lexical_error_'+id+'"]:checked').val();
-    var wrong_form = $('input[name="wrong_form_'+id+'"]:checked').val();
-
-    if (extra_word != undefined)
-      _errors.push(extra_word.toLowerCase() + ' extra word');
-    if (reordering != undefined)
-      _errors.push(reordering.toLowerCase() + ' reordering error');
-    if (lexical_error != undefined)
-      _errors.push(lexical_error.toLowerCase() + ' lexical error');
-    if (wrong_form != undefined)
-      _errors.push(wrong_form.toLowerCase() + ' wrong form');
-
-    edit.hide();
-
-    if (_errors.length)
-      view.html(_errors.join(', '));
-    view.show();
+    return;
   }
-  else {
-    edit.show();
-    view.hide();
+
+  for (var i=0; i<{{words|length}}; i++)
+  {
+    if (i == id) {
+      $('#edit_'+i).show();
+      $('#view_'+i).hide();
+    }
+    else if ($('#edit_'+i).css('display') == 'inline') {
+      summarise_errors_for_word(i);
+
+      $('#edit_'+i).hide();
+      $('#view_'+i).show();
+    }
+  }
+
+  update_error_summary();
+}
+
+function reset_form_if_too_many_errors_is_clicked(self)
+{
+  if (self.attr('checked') == 'checked') {
+    reset_form();
+    self.attr('checked', 'checked');
   }
 }
 
-function toggle_checkbox(self)
+function toggle_checkbox(input_name)
 {
-  var input = self.children('input');
+  var input = $('input[name="'+input_name+'"]');
+
   if (input.attr('checked') == 'checked')
     input.removeAttr('checked');
-  else
+  else {
+    if (input_name == 'too_many_errors') {
+      reset_form();
+    }
     input.attr('checked', 'checked');
+  }
 }
 
 function reset_form()
@@ -64,11 +103,12 @@ function reset_form()
     $('#edit_'+i).hide();
     $('#view_'+i).html('<em>Click to classify errors for this word...</em>');
     $('#view_'+i).show();
-    $('input[name="extra_word_'+i+'"]').removeAttr('checked');
-    $('input[name="reordering_'+i+'"]').removeAttr('checked');
-    $('input[name="lexical_error_'+i+'"]').removeAttr('checked');
-    $('input[name="wrong_form_'+i+'"]').removeAttr('checked');
+
+    for (var j=0; j<ERROR_CLASSES.length; j++) {
+      var _error = $('input[name="'+ERROR_CLASSES[j]+'_'+i+'"]').removeAttr('checked');
+    }
   }
+  $('#error_summary').html('<em>No errors classified yet...</em>');
   $('input[name="now"]').val(Date.now()/1000.0);
 }
 
@@ -95,45 +135,48 @@ function validate_form()
   <p id="task_progress">{{task_progress}}</p>
 </div>
 
+<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+
+
 <div class="container">
 
-<div class="row">
-<div class="span16">
-<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-</div>
-</div>
-
-<div class="row">
+{% if reference_text %}
 <div class="span8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Source</small>
 </blockquote>
 </div>
-<div class="span8">
+<div class="push8">
 <blockquote>
 <p>Left context. Left context. Left context. Left context. Left context. Left context.<strong>{{reference_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
 <small>Reference</small>
 </blockquote>
 </div>
+{% else %}
+<div class="push16">
+<blockquote>
+<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<small>Source</small>
+</blockquote>
 </div>
+{% endif %}
 
-<div class="row">
-<div class="span16">
 <blockquote>
 <p><strong>{{translations}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
 <small>Translation (THIS COULD ALSO NOT BE SHOWN...)</small>
 </blockquote>
-</div>
-</div>
 
-<form action="" method="post" onsubmit="javascript:return validate_form();">
+<form action="" method="post">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
 <input name="words" type="hidden" value="{{words|length}}" />
 
-<span onclick="javascript:toggle_checkbox($(this));"><input name="missing_words" type="checkbox" value="MISSING_WORDS"> Missing words</span> <span onclick="javascript:toggle_checkbox($(this));"><input name="too_many_errors" type="checkbox" value="TOO_MANY_ERRORS"> Too many errors</span>
+<input name="missing_words" type="checkbox" value="MISSING_WORDS">
+<span onclick="javascript:toggle_checkbox('missing_words');">Missing words</span>
+<input onclick="javascript:reset_form_if_too_many_errors_is_clicked($(this));" name="too_many_errors" type="checkbox" value="TOO_MANY_ERRORS">
+<span onclick="javascript:toggle_checkbox('too_many_errors');">Too many errors</span>
 
 <div class="row">
 <div class="span12">
@@ -152,21 +195,18 @@ function validate_form()
 </div>
 <div class="span4">
 <h4>Error Summary</h4>
-<em>to be added...</em>
+<span id="error_summary"><em>No errors classified yet...</em></span>
 </div>
 </div>
 
-<div class="row">
 <div class="actions">
-  <button name="submit_button" accesskey="s" type="submit" class="btn" value="SUBMIT">Submit</button>
-  <span class="help-inline">(Ctrl-Alt-S)</span>&nbsp;
+  <button name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();">Submit</button>
+  &nbsp;
   
-  <button onclick="javascript:reset_form();" accesskey="r" type="reset" class="btn">Reset</button>
-  <span class="help-inline">(Ctrl-Alt-R)</span>&nbsp;
+  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn">Reset</button>
+  &nbsp;
   
-  <button name="submit_button" accesskey="f" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
-  <span class="help-inline">(Ctrl-Alt-F)</span>
-</div>
+  <button name="submit_button" accesskey="3" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
 </div>
 
 </form>

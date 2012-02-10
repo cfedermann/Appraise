@@ -323,15 +323,18 @@ def _handle_error_classification(request, task, items):
     if not item:
         return redirect('appraise.evaluation.views.overview')
     
-    translations = item.translations[0][0]
+    source_text, reference_text = _compute_context_for_item(item)
+    _finished, _total = task.get_finished_for_user(request.user)
+    
+    translation = item.translations[0][0]
     words = item.translations[0][0].split(' ')
     dictionary = {'title': 'Error Classification', 'item_id': item.id,
-      'source_text': item.source, 'reference_text': item.reference,
+      'source_text': source_text, 'reference_text': reference_text,
       'now': mktime(datetime.now().timetuple()),
-      'translations': translations,
+      'translation': translation,
       'words': words,
-            
-      'task_progress': '{0:03d}/{1:03d}'.format(1, len(items))}
+      'description': task.description,
+      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total)}
     
     return render_to_response('evaluation/error_classification.html', dictionary,
       context_instance=RequestContext(request))

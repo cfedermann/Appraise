@@ -141,36 +141,35 @@ function validate_form()
   <p id="task_progress">{{task_progress}}</p>
 </div>
 
-<p><em>TASK DESCRIPTION GOES HERE...</em> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-
+{% if description %}<p>{{description}}</p>{% endif %}
 
 <div class="container">
 
-{% if reference_text %}
+{% if reference_text.1 %}
 <div class="span8">
 <blockquote>
-<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>
 <div class="push8">
 <blockquote>
-<p>Left context. Left context. Left context. Left context. Left context. Left context.<strong>{{reference_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<p>{% if reference_text.0 %}{{reference_text.0}} {% endif %}<strong>{{reference_text.1}}</strong>{% if reference_text.2 %} {{reference_text.2}}{% endif %}</p>
 <small>Reference</small>
 </blockquote>
 </div>
 {% else %}
 <div class="push16">
 <blockquote>
-<p>Left context. Left context. Left context. Left context. Left context. Left context. <strong>{{source_text.0}}</strong> Right context. Right context. Right context. Right context. Right context. Right context.</p>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>
 {% endif %}
 
 <blockquote>
-<p><strong>{{translations}} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</strong></p>
-<small>Translation (THIS COULD ALSO NOT BE SHOWN...)</small>
+<p><strong>{{translation}}</strong></p>
+<small>Translation</small>
 </blockquote>
 
 <form action="" method="post">

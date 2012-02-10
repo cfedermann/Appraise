@@ -23,16 +23,19 @@ function update_error_summary()
     for (var j=0; j<{{words|length}}; j++) {
       var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+j+'"]:checked').val();
 
-      if (_error != undefined)
+      if (_error != undefined) {
         _total_errors_of_this_class += 1;
+      }
     }
 
-    if (_total_errors_of_this_class > 0)
+    if (_total_errors_of_this_class > 0) {
       _errors.push(_total_errors_of_this_class+'x '+ERROR_CLASSES[i].replace('_', ' '));
+    }
   }
 
-  if (_errors.length)
+  if (_errors.length) {
     $('#error_summary').html(_errors.join('<br/>'));
+  }
 }
 
 function summarise_errors_for_word(id)
@@ -40,12 +43,14 @@ function summarise_errors_for_word(id)
   var _errors = new Array();
   for (var i=0; i<ERROR_CLASSES.length; i++) {
     var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+id+'"]:checked').val();
-    if (_error != undefined)
+    if (_error != undefined) {
       _errors.push(_error.toLowerCase()+' '+ERROR_CLASSES[i].replace('_', ' '));
+    }
   }
 
-  if (_errors.length)
+  if (_errors.length) {
     $('#view_'+id).html(_errors.join(', '));
+  }
 }
 
 function toggle_classification(id)
@@ -84,8 +89,9 @@ function toggle_checkbox(input_name)
 {
   var input = $('input[name="'+input_name+'"]');
 
-  if (input.attr('checked') == 'checked')
+  if (input.attr('checked') == 'checked') {
     input.removeAttr('checked');
+  }
   else {
     if (input_name == 'too_many_errors') {
       reset_form();
@@ -114,7 +120,7 @@ function reset_form()
 
 function validate_form()
 {
-  if ($('textarea[name="postedited"]').val() == '') {
+  if ($('textarea[name="postedited"]').val() === '') {
 {% if translations|length > 1 %}
     alert('Please post-edit one of the translations...');
 {% else %}

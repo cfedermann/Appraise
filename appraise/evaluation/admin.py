@@ -3,8 +3,12 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@dfki.de>
 """
+from datetime import date
 from django.contrib import admin
 from django.forms import Textarea
+from django.http import HttpResponse
+from django.template import Context
+from django.template.loader import get_template
 from django.db.models import TextField
 from appraise.evaluation.models import RankingTask, RankingItem, \
   RankingResult, ClassificationResult, EditingTask, EditingItem, \
@@ -15,6 +19,29 @@ from appraise.evaluation.models import EvaluationTask, EvaluationItem, \
   EvaluationResult
 
 
+def export_task_xml(modeladmin, request, queryset):
+    """
+    Exports the tasks in the given queryset to XML download.
+    """
+    template = get_template('evaluation/result_export.xml')
+    
+    tasks = []
+    for task in queryset:
+        if isinstance(task, EvaluationTask):
+            tasks.append(task.export_to_xml())
+    
+    export_xml = template.render(Context({'tasks': tasks}))
+    export_filename = 'exported-tasks-{}-{}.xml'.format(request.user,
+      date.today())
+    
+    # We return it as a "text/plain" file attachment with charset "UTF-8".
+    response = HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')
+    response['Content-Disposition'] = 'attachment; filename="{0}.txt"'.format(
+      export_filename)
+    return response
+
+export_task_xml.short_description = "Export selected tasks to XML"
+
 class EvaluationTaskAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for EvaluationTask objects.
@@ -23,6 +50,7 @@ class EvaluationTaskAdmin(admin.ModelAdmin):
     list_filter = ('task_type', 'active')
     search_fields = ('task_name', 'description')
     readonly_fields = ('task_id',)
+    actions = (export_task_xml,)
     
     fieldsets = (
       ('Required Information', {

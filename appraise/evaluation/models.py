@@ -212,19 +212,19 @@ class EvaluationTask(models.Model):
         """
         # pylint: disable-msg=E1101
         _task_type = self.get_task_type_display()
-        _header = []
+        _header = ['Overall completion', 'Average duration']
         
         if _task_type == 'Quality Checking':
             pass
         
         elif _task_type == 'Ranking':
-            _header.extend(['Overall completion'])
+            pass
         
         elif _task_type == 'Post-editing':
-            _header.extend(['Overall completion'])
+            pass
         
         elif _task_type == 'Error classification':
-            _header.extend(['Overall completion'])
+            pass
         
         return _header
     
@@ -239,17 +239,36 @@ class EvaluationTask(models.Model):
         _items = EvaluationItem.objects.filter(task=self).count()
         _done = EvaluationResult.objects.filter(user=user, item__task=self).count()
         
+        _status.append('{0}/{1}'.format(_done, _items))
+        
+        _results = EvaluationResult.objects.filter(item__task=self)
+        _durations = _results.values_list('duration', flat=True)
+        _average_duration = 0
+        for duration in _durations:
+            _duration = duration.hour * 3600 + duration.minute * 60 \
+              + duration.second + (duration.microsecond / 1000000.0)
+
+            _average_duration += _duration
+        
+        if len(_durations):
+            _average_duration /= float(len(_durations))
+        
+        else:
+            _average_duration = 0
+        
+        _status.append('{:.2f} sec'.format(_average_duration))
+        
         if _task_type == 'Quality Checking':
             pass
         
         elif _task_type == 'Ranking':
-            _status.extend(['{0}/{1}'.format(_done, _items)])
+            pass
         
         elif _task_type == 'Post-editing':
-            _status.extend(['{0}/{1}'.format(_done, _items)])
+            pass
         
         elif _task_type == 'Error classification':
-            _status.extend(['{0}/{1}'.format(_done, _items)])
+            pass
         
         return _status
     

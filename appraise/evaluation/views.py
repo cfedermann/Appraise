@@ -54,6 +54,21 @@ def _save_results(item, user, duration, raw_result):
     _result.save()
 
 
+def _find_next_item_to_process(items, user):
+    exclusion_list = EvaluationResult.objects.filter(user=user)
+    exclusion_list = exclusion_list.values_list('item__pk', flat=True)
+    
+    filtered_items = items.exclude(pk__in=exclusion_list)
+    
+    print "\nexclusion_list: {}\n".format(exclusion_list)
+    print "\filtered_items: {}\n".format(filtered_items)
+    
+    if filtered_items:
+        return filtered_items[0]
+    
+    return None
+
+
 @login_required
 def _handle_quality_checking(request, task, items):
     now = datetime.now()
@@ -101,12 +116,9 @@ def _handle_ranking(request, task, items):
         
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
-        print
         duration = None
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
-            print "now: {}".format(_now)
-            print "duration: {}".format(duration)
         
         if _order:
             order = [int(x) for x in _order.split(',')]
@@ -122,6 +134,7 @@ def _handle_ranking(request, task, items):
             else:
                 ranks[order[index]] = -1
         
+        print
         print "item_id: {0}".format(item_id)
         print "submit_button: {0}".format(submit_button)
         print "ranks: {0}".format(ranks)
@@ -136,14 +149,11 @@ def _handle_ranking(request, task, items):
             _raw_result = 'SKIPPED'
         
         _save_results(current_item, request.user, duration, _raw_result)
+
+    item = _find_next_item_to_process(items, request.user)
+    if not item:
+        return redirect('appraise.evaluation.views.overview')
     
-    # TODO: add loop to find "next item to edit" based on items
-    #
-    #item = None    
-    #if not item:
-    #    return redirect('appraise.evaluation.views.overview')
-    
-    item = items[0]
     translations = []
     order = range(len(item.translations))
     shuffle(order)
@@ -167,25 +177,19 @@ def _handle_postediting(request, task, items):
     
     if request.method == "POST":
         item_id = request.POST.get('item_id')
-        edit_id = request.POST.get('edit_id')
+        edit_id = request.POST.get('edit_id', 0)
         submit_button = request.POST.get('submit_button')
         from_scratch = request.POST.get('from_scratch')
-        postedited = request.POST.get('postedited')
+        postedited = request.POST.get('postedited', 'EMPTY')
         _now = request.POST.get('now')
         
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
-        print
         duration = None
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
-            print "now: {}".format(_now)
-            print "duration: {}".format(duration)
         
-        # TODO: change edit_id to contain only the id of the translation, not
-        # the actual translation text itself;  this will also allow to keep
-        # track of which sentence has been selected for post-editing.
-        
+        print
         print "item_id: {0}".format(item_id)
         print "edit_id: {0}".format(edit_id)
         print "submit_button: {0}".format(submit_button)
@@ -208,17 +212,11 @@ def _handle_postediting(request, task, items):
             _raw_result = 'SKIPPED'
         
         _save_results(current_item, request.user, duration, _raw_result)
-        
-        # TODO:
-        #
-        # 1) create suitable result container type instance
-        # 2) serialise result data into XML format
-        # 3) create (or update) result instance and save it
     
-    # TODO: add loop to find "next item to edit" based on items
+    item = _find_next_item_to_process(items, request.user)
+    if not item:
+        return redirect('appraise.evaluation.views.overview')
     
-    item = items[0]
-    print item.translations[0][0]
     dictionary = {'title': 'Post-editing', 'item_id': item.id,
       'source_text': item.source, 'reference_text': item.reference,
       'now': mktime(datetime.now().timetuple()),
@@ -243,14 +241,10 @@ def _handle_error_classification(request, task, items):
         
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
-        print
         duration = None
         if _now:
             duration = now - datetime.fromtimestamp(float(_now))
-            print "now: {}".format(_now)
-            print "duration: {}".format(duration)
-        
-        print request.POST
+
         errors = {}
         if words:
             for index in range(int(words)):
@@ -262,10 +256,7 @@ def _handle_error_classification(request, task, items):
                 if _errors:
                     errors[index] = _errors
         
-        # TODO: change edit_id to contain only the id of the translation, not
-        # the actual translation text itself;  this will also allow to keep
-        # track of which sentence has been selected for post-editing.
-        
+        print
         print "item_id: {0}".format(item_id)
         print "missing_words: {0}".format(missing_words)
         print "too_many_errors: {0}".format(too_many_errors)
@@ -283,9 +274,9 @@ def _handle_error_classification(request, task, items):
                 if missing_words:
                     _errors.append('MISSING_WORDS')
                 
-                for index, classes in errors.items():
-                    _classes = ['{}:{}'.format(k, v) for k, v in classes.items()]
-                    _errors.append('{}={}'.format(index, ','.join(_classes)))
+                for index, data in errors.items():
+                    _word_i = ['{}:{}'.format(k, v) for k, v in data.items()]
+                    _errors.append('{}={}'.format(index, ','.join(_word_i)))
                 
                 _raw_result = '\n'.join(_errors)
         
@@ -294,9 +285,10 @@ def _handle_error_classification(request, task, items):
         
         _save_results(current_item, request.user, duration, _raw_result)
     
-    # TODO: add loop to find "next item to edit" based on items
+    item = _find_next_item_to_process(items, request.user)
+    if not item:
+        return redirect('appraise.evaluation.views.overview')
     
-    item = items[0]
     translations = item.translations[0][0]
     words = item.translations[0][0].split(' ')
     dictionary = {'title': 'Error Classification', 'item_id': item.id,
@@ -343,7 +335,7 @@ def overview(request):
     """Renders the evaluation tasks overview."""
     LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
       request.user.username or "Anonymous"))
-
+    
     evaluation_tasks = {}
     for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
         if request.user.is_staff:

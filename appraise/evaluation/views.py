@@ -69,6 +69,35 @@ def _find_next_item_to_process(items, user):
     return None
 
 
+def _compute_context_for_item(item):
+    """
+    Computes the source and reference texts for item, including context.
+    """
+    source_text = [None, None, None]
+    reference_text = [None, None, None]
+    
+    left_context = EvaluationItem.objects.filter(task=item.task, pk=item.id-1)
+    right_context = EvaluationItem.objects.filter(task=item.task, pk=item.id+1)
+    
+    if left_context:
+        _left = left_context[0]
+        source_text[0] = _left.source[0]
+        if _left.reference:
+            reference_text[0] = _left.reference[0]
+    
+    source_text[1] = item.source[0]
+    if item.reference:
+        reference_text[1] = item.reference[0]
+    
+    if right_context:
+        _right = right_context[0]
+        source_text[2] = _right.source[0]
+        if _right.reference:
+            reference_text[2] = _right.reference[0]
+    
+    return (source_text, reference_text)
+
+
 @login_required
 def _handle_quality_checking(request, task, items):
     now = datetime.now()
@@ -152,19 +181,23 @@ def _handle_ranking(request, task, items):
     if not item:
         return redirect('appraise.evaluation.views.overview')
     
+    source_text, reference_text = _compute_context_for_item(item)
+    
     translations = []
     order = range(len(item.translations))
     shuffle(order)
     for index in order:
         translations.append(item.translations[index])
     
+    _finished, _total = task.get_finished_for_user(request.user)
+    
     dictionary = {'title': 'Ranking', 'item_id': item.id,
-      'source_text': item.source, 'reference_text': item.reference,
+      'source_text': source_text, 'reference_text': reference_text,
       'now': mktime(datetime.now().timetuple()),
       'translations': translations,
       'order': ','.join([str(x) for x in order]),
-            
-      'task_progress': '{0:03d}/{1:03d}'.format(1, len(items))}
+      'description': task.description,
+      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total)}
     
     return render_to_response('evaluation/ranking.html', dictionary,
       context_instance=RequestContext(request))

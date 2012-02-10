@@ -279,6 +279,14 @@ class EvaluationTask(models.Model):
         _items = EvaluationItem.objects.filter(task=self).count()
         _done = EvaluationResult.objects.filter(user=user, item__task=self).count()
         return _items == _done
+    
+    def get_finished_for_user(self, user=None):
+        """
+        Returns tuple (finished, total) number of items for the given user.
+        """
+        _items = EvaluationItem.objects.filter(task=self).count()
+        _done = EvaluationResult.objects.filter(user=user, item__task=self).count()
+        return (_done, _items)
 
     def export_to_xml(self):
         """

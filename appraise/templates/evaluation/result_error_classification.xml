@@ -1,0 +1,5 @@
+{% if skipped or too_many_errors %}  <error-classification-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}"{% if skipped %} skipped="true"{% endif %}{% if too_many_errors %} too-many-errors="true"{% endif %} />
+{% else %}  <error-classification-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}"{% if missing_words %} missing-words="true"{% endif %}>
+{% for word_id, error_type, severity in errors %}    <error word-id="{{word_id}}" type="{{error_type}}" severity="{{severity|lower}}" />
+{% endfor %}  </error-classification-item>
+{% endif %}

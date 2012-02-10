@@ -1,0 +1,5 @@
+{% if skipped %}  <post-editing-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}" skipped="true" />
+{% else %}  <post-editing-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}"{% if from_scratch %} from-scratch="true"{% endif %}>
+    <post-edited {% if translation_attributes %}{{translation_attributes|safe}}{% else %}edit-id="{{edit_id}}"{% endif %}>{{postedited}}</post-edited>
+  </post-editing-item>
+{% endif %}

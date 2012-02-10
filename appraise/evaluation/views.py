@@ -352,7 +352,8 @@ def overview(request):
               kwargs={'task_id': _task.task_id})
             _task_data = {'url': _url, 'task_name': _task.task_name,
               'header': _task.get_status_header,
-              'status': _task.get_status_for_user(request.user)}
+              'status': _task.get_status_for_user(request.user),
+              'finished': _task.is_finished_for_user(request.user)}
             evaluation_tasks[task_type].append(_task_data)
           
     dictionary = {'title': 'Evaluation Task Overview',

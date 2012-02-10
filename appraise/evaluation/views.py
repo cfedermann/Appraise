@@ -374,7 +374,7 @@ def overview(request):
     
     evaluation_tasks = {}
     for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
-        if request.user.is_staff:
+        if request.user.is_superuser:
             _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
         
         else:

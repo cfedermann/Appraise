@@ -90,7 +90,7 @@ class EvaluationTask(models.Model):
     task_id = models.CharField(
       max_length=32,
       db_index=True,
-      default=_create_id(),
+      unique=True,
       editable=False,
       help_text="Unique task identifier for this evaluation task.",
       verbose_name="Task identifier"
@@ -156,6 +156,9 @@ class EvaluationTask(models.Model):
         """
         super(EvaluationTask, self).__init__(*args, **kwargs)
         
+        if not self.task_id:
+            self.task_id = self.__class__._create_task_id()
+        
         # If a task_xml file is available, populate self.task_attributes.
         self.reload_dynamic_fields()
     
@@ -164,6 +167,15 @@ class EvaluationTask(models.Model):
         Returns a Unicode String for this EvaluationTask object.
         """
         return u'<evaluation-task id="{0}">'.format(self.id)
+    
+    @classmethod
+    def _create_task_id(cls):
+        """Creates a random UUID-4 32-digit hex number for use as task id."""
+        new_id = uuid.uuid4().hex
+        while cls.objects.filter(task_id=new_id):
+            new_id = uuid.uuid4().hex
+        
+        return new_id
     
     def save(self, *args, **kwargs):
         """

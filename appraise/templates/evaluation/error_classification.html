@@ -13,6 +13,7 @@ $(document).ready(function() {
     $('#edit_'+i).hide();
     $('#view_'+i).html('<em>Click to classify errors for this word...</em>');
   }
+  $('input[name="now"]').val(Date.now()/1000.0);
 });
 
 function update_error_summary()

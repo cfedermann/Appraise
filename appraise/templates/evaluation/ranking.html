@@ -4,6 +4,10 @@
 <script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
 <script language="javascript">
 <!--
+$(document).ready(function() {
+  $('input[name="now"]').val(Date.now()/1000.0);
+}
+
 function reset_form()
 {
   $('#translations input[type="radio"]').removeAttr('checked');

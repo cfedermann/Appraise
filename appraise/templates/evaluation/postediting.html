@@ -13,6 +13,7 @@ $(document).ready(function() {
 {% else %}
   $('textarea[name="postedited"]').html($('input[name="translation"]').val());
 {% endif %}
+  $('input[name="now"]').val(Date.now()/1000.0);
 });
 
 function select_sentence(parent)

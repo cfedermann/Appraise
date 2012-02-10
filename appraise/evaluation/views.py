@@ -39,7 +39,7 @@ def _save_results(item, user, duration, raw_result):
     Creates or updates the EvaluationResult for the given item and user.
     """
     LOGGER.debug('item: {}, user: {}, duration: {}, raw_result: {}'.format(
-      item, user, duration, raw_result))
+      item, user, duration, raw_result.encode('utf-8')))
     
     _existing_result = EvaluationResult.objects.filter(item=item, user=user)
     
@@ -194,7 +194,7 @@ def _handle_postediting(request, task, items):
         print "edit_id: {0}".format(edit_id)
         print "submit_button: {0}".format(submit_button)
         print "from_scratch: {0}".format(from_scratch)
-        print "postedited: {0}".format(postedited)
+        print "postedited: {0}".format(postedited.encode('utf-8'))
         print
         print request.POST
         print

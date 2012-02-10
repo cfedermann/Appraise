@@ -565,10 +565,14 @@ class EvaluationResult(models.Model):
         
         skipped = self.results is None
         
+        _attr = self.item.translations[int(edit_id)][1].items()
+        translation_attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        
         context = {'attributes': attributes, 'user': self.user,
           'duration': '{}'.format(self.duration), 'skipped': skipped,
           'from_scratch': from_scratch, 'edit_id': edit_id,
-          'postedited': postedited}
+          'translation_attributes': translation_attributes,
+          'postedited': postedited.encode('utf-8')}
         return template.render(Context(context))
 
 class RankingTask(models.Model):

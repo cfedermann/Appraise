@@ -86,13 +86,11 @@ def _handle_quality_checking(request, task, items):
         print "item_id: {0}".format(item_id)
         print "quality: {0}".format(quality)
         
-        # TODO:
-        #
         # 1) create suitable result container type instance
         # 2) serialise result data into XML format
         # 3) create (or update) result instance and save it
     
-    # TODO: add loop to find "next item to edit" based on items
+    # add loop to find "next item to edit" based on items
     
     item = items[0]
     dictionary = {'title': 'Translation Quality Checking',
@@ -307,7 +305,6 @@ def task_handler(request, task_id):
     LOGGER.info('Rendering task handler view for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
-    now = datetime.now()
     task = get_object_or_404(EvaluationTask, task_id=task_id)
     items = EvaluationItem.objects.filter(task=task)
     if not items:
@@ -639,6 +636,8 @@ def lucy_ranking(request, task_id):
                         new_result = LucyResult(item=item, user=request.user,
                           ranking=ranks)
                         new_result.save()
+                
+                # pylint: disable-msg=W0703
                 except Exception:
                     print format_exc()
 
@@ -729,6 +728,7 @@ def quality_checking(request, task_id):
                     
                     new_result.save()
             
+            # pylint: disable-msg=W0703
             except Exception:
                 print format_exc()
             

@@ -56,10 +56,10 @@ function reset_form()
 function validate_form()
 {
   if (!selection_done) {
-    return;
+    return false;
   }
 
-  if ($('textarea[name="postedited"]').val() == '') {
+  if ($('textarea[name="postedited"]').val() === '') {
 {% if translations|length > 1 %}
     alert('Please post-edit one of the translations...');
 {% else %}

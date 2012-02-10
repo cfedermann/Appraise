@@ -210,6 +210,7 @@ class EvaluationTask(models.Model):
         """
         Returns the header template for this type of EvaluationTask objects.
         """
+        # pylint: disable-msg=E1101
         _task_type = self.get_task_type_display()
         _header = []
         
@@ -231,6 +232,7 @@ class EvaluationTask(models.Model):
         """
         Returns the status information with respect to the given user.
         """
+        # pylint: disable-msg=E1101
         _task_type = self.get_task_type_display()
         _status = []
         
@@ -265,10 +267,11 @@ class EvaluationTask(models.Model):
         """
         template = get_template('evaluation/result_task.xml')
         
+        # pylint: disable-msg=E1101
         _task_type = self.get_task_type_display().lower().replace(' ', '-')
         
         _attr = self.task_attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         results = []
         for item in EvaluationItem.objects.filter(task=self):
@@ -470,6 +473,7 @@ class EvaluationResult(models.Model):
                 elif _task_type == 'Post-editing':
                     self.results = self.raw_result.split('\n')
             
+            # pylint: disable-msg=W0703
             except Exception, msg:
                 self.results = msg
     
@@ -494,15 +498,16 @@ class EvaluationResult(models.Model):
         template = get_template('evaluation/result_ranking.xml')
         
         _attr = self.item.attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         skipped = self.results is None
         
         translations = []
         if not skipped:
-            for i, x in enumerate(self.item.translations):
-                _attr = ' '.join(['{}="{}"'.format(k, v) for k,v in x[1].items()])
-                _rank = self.results[i]
+            for index, translation in enumerate(self.item.translations):
+                _items = translation[1].items()
+                _attr = ' '.join(['{}="{}"'.format(k, v) for k, v in _items])
+                _rank = self.results[index]
                 translations.append((_attr, _rank))
         
         context = {'attributes': attributes, 'user': self.user,
@@ -517,7 +522,7 @@ class EvaluationResult(models.Model):
         template = get_template('evaluation/result_error_classification.xml')
         
         _attr = self.item.attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         errors = []
         too_many_errors = False
@@ -552,7 +557,7 @@ class EvaluationResult(models.Model):
         template = get_template('evaluation/result_postediting.xml')
         
         _attr = self.item.attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         if self.results:
             from_scratch = self.results[0] == 'FROM_SCRATCH'
@@ -566,7 +571,7 @@ class EvaluationResult(models.Model):
         skipped = self.results is None
         
         _attr = self.item.translations[int(edit_id)][1].items()
-        translation_attributes = ' '.join(['{}="{}"'.format(k, v) for k,v in _attr])
+        translation_attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         context = {'attributes': attributes, 'user': self.user,
           'duration': '{}'.format(self.duration), 'skipped': skipped,

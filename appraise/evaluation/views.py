@@ -379,7 +379,7 @@ def overview(request):
         
         else:
             _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
-              users=request.user)
+              users=request.user, active=True)
         
         evaluation_tasks[task_type] = []
         

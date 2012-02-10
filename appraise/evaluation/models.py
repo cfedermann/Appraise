@@ -235,23 +235,29 @@ class EvaluationTask(models.Model):
         _status = []
         
         _items = EvaluationItem.objects.filter(task=self).count()
+        _done = EvaluationResult.objects.filter(user=user, item__task=self).count()
         
         if _task_type == 'Quality Checking':
             pass
         
         elif _task_type == 'Ranking':
-            _done = 0
             _status.extend(['{0}/{1}'.format(_done, _items)])
         
         elif _task_type == 'Post-editing':
-            _done = 0
             _status.extend(['{0}/{1}'.format(_done, _items)])
         
         elif _task_type == 'Error classification':
-            _done = 0
             _status.extend(['{0}/{1}'.format(_done, _items)])
         
         return _status
+    
+    def is_finished_for_user(self, user=None):
+        """
+        Returns True if this task is finished for the given user.
+        """
+        _items = EvaluationItem.objects.filter(task=self).count()
+        _done = EvaluationResult.objects.filter(user=user, item__task=self).count()
+        return _items == _done
 
     def export_to_xml(self):
         """

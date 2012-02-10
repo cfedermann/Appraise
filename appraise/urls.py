@@ -3,10 +3,10 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@dfki.de>
 """
+# pylint: disable-msg=W0611
 from django.conf.urls.defaults import patterns, include, handler404, \
   handler500
 from django.contrib import admin
-from django.views.generic.list_detail import object_list, object_detail
 
 from appraise.settings import MEDIA_ROOT, DEBUG
 

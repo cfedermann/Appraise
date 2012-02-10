@@ -569,6 +569,9 @@ class EvaluationResult(models.Model):
                 elif error[0] == 'TOO_MANY_ERRORS':
                     too_many_errors = True
         
+        # Sort by increasing word id.
+        errors.sort()
+        
         skipped = self.results is None
         
         context = {'attributes': attributes, 'user': self.user,

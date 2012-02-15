@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block head %}
+<style>
+.error-class {
+  display: inline-block;
+  width: 150px;
+}
+</style>
 <script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
 <script language="javascript">
 <!--
@@ -24,7 +30,7 @@ function update_error_summary()
     for (var j=0; j<{{words|length}}; j++) {
       var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+j+'"]:checked').val();
 
-      if (_error != undefined) {
+      if (_error != undefined && _error != 'NONE') {
         _total_errors_of_this_class += 1;
       }
     }
@@ -44,7 +50,7 @@ function summarise_errors_for_word(id)
   var _errors = new Array();
   for (var i=0; i<ERROR_CLASSES.length; i++) {
     var _error = $('input[name="'+ERROR_CLASSES[i]+'_'+id+'"]:checked').val();
-    if (_error != undefined) {
+    if (_error != undefined && _error != 'NONE') {
       _errors.push(_error.toLowerCase()+' '+ERROR_CLASSES[i].replace('_', ' '));
     }
   }
@@ -112,7 +118,9 @@ function reset_form()
     $('#view_'+i).show();
 
     for (var j=0; j<ERROR_CLASSES.length; j++) {
-      var _error = $('input[name="'+ERROR_CLASSES[j]+'_'+i+'"]').removeAttr('checked');
+      var _class = ERROR_CLASSES[j];
+      var _error = $('input[name="'+_class+'_'+i+'"][value="NONE"]');
+      _error.attr('checked', 'checked');
     }
   }
   $('#error_summary').html('<em>No errors classified yet...</em>');

@@ -285,7 +285,7 @@ def _handle_error_classification(request, task, items):
                 _errors = {}
                 for error in ERROR_CLASSES:
                     severity = request.POST.get('{0}_{1}'.format(error, index))
-                    if severity:
+                    if severity and severity != "NONE":
                         _errors[error] = severity
                 if _errors:
                     errors[index] = _errors

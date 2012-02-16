@@ -7,7 +7,7 @@ import logging
 from django.contrib.auth.views import login as LOGIN, logout as LOGOUT
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from appraise.settings import LOG_LEVEL, LOG_HANDLER
+from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
@@ -19,7 +19,8 @@ def frontpage(request):
     LOGGER.info('Rendering frontpage view for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
-    dictionary = {'title': 'Appraise evaluation system'}
+    dictionary = {'title': 'Appraise evaluation system',
+      'commit_tag': COMMIT_TAG}
     return render_to_response('frontpage.html', dictionary,
       context_instance=RequestContext(request))
 
@@ -32,11 +33,12 @@ def login(request, template_name):
     if request.user.username:
         dictionary = {'title': 'Appraise evaluation system',
           'message': 'You are already logged in as "{0}".'.format(
-            request.user.username)}
+            request.user.username), 'commit_tag': COMMIT_TAG}
         return render_to_response('frontpage.html', dictionary,
           context_instance=RequestContext(request))
     
-    return LOGIN(request, template_name)
+    extra_context = {'commit_tag': COMMIT_TAG}
+    return LOGIN(request, template_name, extra_context=extra_context)
 
 
 def logout(request, next_page):

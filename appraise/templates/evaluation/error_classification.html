@@ -146,40 +146,45 @@ function validate_form()
 
 {% block content %}
 
-<div class="alert-message success">
-  <p id="task_progress">{{task_progress}}</p>
+<div class="alert alert-info">
+  <strong id="task_progress">{{task_progress}}</strong>
 </div>
 
 {% if description %}<p>{{description}}</p>{% endif %}
 
 <div class="container">
-
+<div class="row">
 {% if reference_text.1 %}
-<div class="span8">
+<div class="span5">
 <blockquote>
 <p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>
-<div class="push8">
+<div class="span5 offset1">
 <blockquote>
 <p>{% if reference_text.0 %}{{reference_text.0}} {% endif %}<strong>{{reference_text.1}}</strong>{% if reference_text.2 %} {{reference_text.2}}{% endif %}</p>
 <small>Reference</small>
 </blockquote>
 </div>
 {% else %}
-<div class="push16">
+<div class="span12">
 <blockquote>
 <p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>
 {% endif %}
+</div>
 
+<div class="row">
+<div class="span11">
 <blockquote>
 <p><strong>{{translation}}</strong></p>
 <small>Translation</small>
 </blockquote>
+</div>
+</div>
 
 <form action="" method="post">
 
@@ -193,11 +198,11 @@ function validate_form()
 <span onclick="javascript:toggle_checkbox('too_many_errors');">Too many errors</span>
 
 <div class="row">
-<div class="span12">
-<table id="words">
+<div class="span5">
+<table id="words" class="table table-striped table-bordered">
 {% for word in words %}
 <tr>
-  <th onclick="javascript:toggle_classification({{forloop.counter0}});">{{word}}</th>
+  <th onclick="javascript:toggle_classification({{forloop.counter0}});" style="vertical-align:middle;">{{word}}</th>
   <td width="100%">
 {% with forloop.counter0 as word_id %}
 {% include 'evaluation/word_classification.html' %}
@@ -207,20 +212,26 @@ function validate_form()
 {% endfor %}
 </table>
 </div>
-<div class="span4">
-<h4>Error Summary</h4>
-<span id="error_summary"><em>No errors classified yet...</em></span>
+<div class="span2 offset1">
+<table class="table table-striped table-bordered">
+<tr>
+  <th>Error Summary</th>
+</tr>
+<tr>
+  <td><span id="error_summary"><em>No errors classified yet...</em></span></td>
+</tr>
+</table>
 </div>
 </div>
 
 <div class="actions">
-  <button name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();">Submit</button>
+  <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
   &nbsp;
   
-  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn">Reset</button>
+  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>
   &nbsp;
   
-  <button name="submit_button" accesskey="3" type="submit" class="btn" value="FLAG_ERROR">Flag Error</button>
+  <button name="submit_button" accesskey="3" type="submit" class="btn" value="FLAG_ERROR"><i class="icon-exclamation-sign"></i> Flag Error</button>
 </div>
 
 </form>

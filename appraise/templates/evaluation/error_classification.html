@@ -7,8 +7,8 @@
   width: 150px;
 }
 </style>
-<script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
-<script language="javascript">
+<script src="/appraise/site_media/jquery-1.7.1.min.js"></script>
+<script>
 <!--
 var ERROR_CLASSES = ["terminology", "lexical_choice", "syntax", "insertion",
   "morphology", "misspelling", "punctuation", "other"];
@@ -192,7 +192,7 @@ function validate_form()
 </div>
 </div>
 
-<form action="" method="post">
+<form action="{{action_url}}" method="post">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
@@ -209,7 +209,7 @@ function validate_form()
 {% for word in words %}
 <tr>
   <th onclick="javascript:toggle_classification({{forloop.counter0}});" style="vertical-align:middle;">{{word}}</th>
-  <td width="100%">
+  <td style="width: 100%;">
 {% with forloop.counter0 as word_id %}
 {% include 'evaluation/word_classification.html' %}
 {% endwith %}
@@ -231,7 +231,7 @@ function validate_form()
 </div>
 
 <div class="actions">
-  <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
+  <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
   &nbsp;
   
   <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>

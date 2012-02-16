@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block head %}
-<script language="javascript" src="/appraise/site_media/jquery-1.7.1.min.js"></script>
-<script language="javascript">
+<script src="/appraise/site_media/jquery-1.7.1.min.js"></script>
+<script>
 <!--
 var selection_done = {% if translations|length > 1 %}false{% else %}true{% endif %};
 
@@ -119,7 +119,7 @@ function on_submit_activate_from_scratch_again()
 {% endif %}
 </div>
 
-<form action="" method="post" onsubmit="javascript:on_submit_activate_from_scratch_again();">
+<form action="{{action_url}}" method="post" onsubmit="javascript:on_submit_activate_from_scratch_again();">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
@@ -149,7 +149,7 @@ function on_submit_activate_from_scratch_again()
 <textarea name="postedited" style="width:99%;height:40px;"></textarea>
 
 <div class="actions">
-  <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" class="btn" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
+  <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
   &nbsp;
   
   <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>

@@ -126,7 +126,8 @@ def _handle_quality_checking(request, task, items):
       'task_progress': '{0:03d}/{1:03d}'.format(1, len(items)),
       'source_text': item.source, 'translation_text': item.translations[0],
       'context_text': item.reference, 'item_id': item.id,
-      'now': mktime(datetime.now().timetuple())}
+      'now': mktime(datetime.now().timetuple()),
+      'action_url': request.path}
     
     return render_to_response('evaluation/quality_checking.html', dictionary,
       context_instance=RequestContext(request))
@@ -197,7 +198,8 @@ def _handle_ranking(request, task, items):
       'translations': translations,
       'order': ','.join([str(x) for x in order]),
       'description': task.description,
-      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total)}
+      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
+      'action_url': request.path}
     
     return render_to_response('evaluation/ranking.html', dictionary,
       context_instance=RequestContext(request))
@@ -256,7 +258,8 @@ def _handle_postediting(request, task, items):
       'now': mktime(datetime.now().timetuple()),
       'translations': item.translations,
       'description': task.description,
-      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total)}
+      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
+      'action_url': request.path}
     
     return render_to_response('evaluation/postediting.html', dictionary,
       context_instance=RequestContext(request))
@@ -334,7 +337,8 @@ def _handle_error_classification(request, task, items):
       'translation': translation,
       'words': words,
       'description': task.description,
-      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total)}
+      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
+      'action_url': request.path}
     
     return render_to_response('evaluation/error_classification.html', dictionary,
       context_instance=RequestContext(request))

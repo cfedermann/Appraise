@@ -23,7 +23,7 @@ from appraise.evaluation.models import QualityTask, QualityItem, QualityResult
 from appraise.evaluation.models import APPRAISE_TASK_TYPE_CHOICES
 from appraise.evaluation.models import EvaluationTask, EvaluationItem, \
   EvaluationResult
-from appraise.settings import LOG_LEVEL, LOG_HANDLER
+from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
@@ -127,7 +127,7 @@ def _handle_quality_checking(request, task, items):
       'source_text': item.source, 'translation_text': item.translations[0],
       'context_text': item.reference, 'item_id': item.id,
       'now': mktime(datetime.now().timetuple()),
-      'action_url': request.path}
+      'action_url': request.path, 'commit_tag': COMMIT_TAG}
     
     return render_to_response('evaluation/quality_checking.html', dictionary,
       context_instance=RequestContext(request))
@@ -199,7 +199,7 @@ def _handle_ranking(request, task, items):
       'order': ','.join([str(x) for x in order]),
       'description': task.description,
       'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
-      'action_url': request.path}
+      'action_url': request.path, 'commit_tag': COMMIT_TAG}
     
     return render_to_response('evaluation/ranking.html', dictionary,
       context_instance=RequestContext(request))
@@ -259,7 +259,7 @@ def _handle_postediting(request, task, items):
       'translations': item.translations,
       'description': task.description,
       'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
-      'action_url': request.path}
+      'action_url': request.path, 'commit_tag': COMMIT_TAG}
     
     return render_to_response('evaluation/postediting.html', dictionary,
       context_instance=RequestContext(request))
@@ -338,7 +338,7 @@ def _handle_error_classification(request, task, items):
       'words': words,
       'description': task.description,
       'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
-      'action_url': request.path}
+      'action_url': request.path, 'commit_tag': COMMIT_TAG}
     
     return render_to_response('evaluation/error_classification.html', dictionary,
       context_instance=RequestContext(request))
@@ -397,9 +397,12 @@ def overview(request):
             evaluation_tasks[task_type].append(_task_data)
           
     dictionary = {'title': 'Evaluation Task Overview',
-      'evaluation_tasks': evaluation_tasks,}
+      'evaluation_tasks': evaluation_tasks, 'commit_tag': COMMIT_TAG}
     return render_to_response('evaluation/overview.html', dictionary,
       context_instance=RequestContext(request))
+
+
+# TODO: remove any outdated code from the repository :)
 
 @login_required
 def ranking(request, task_id):

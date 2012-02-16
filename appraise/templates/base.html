@@ -67,7 +67,7 @@
      <hr/>
 
       <footer>
-        <p>This is the GitHub version of the Appraise evaluation system. Some rights reserved.{% block footer %}{% endblock %}</p>
+        <p>This is the GitHub version {% if commit_tag %}<code><a href="https://github.com/cfedermann/Appraise/commit/{{commit_tag}}">{{commit_tag|stringformat:".8s"}}</a></code>{% endif %} of the Appraise evaluation system. Some rights reserved.{% block footer %}{% endblock %}</p>
       </footer>
 
     </div> <!-- /container -->

@@ -6,6 +6,15 @@ Project: Appraise evaluation system
 import os
 ROOT_PATH = os.getcwd()
 
+from subprocess import check_output
+try:
+    commit_log = check_output(['git', 'log', '--pretty=oneline'])
+    COMMIT_TAG = commit_log.split('\n')[0].split()[0]
+
+except Exception, e:
+    print e
+    COMMIT_TAG = None
+
 FORCE_SCRIPT_NAME = ""
 
 import logging

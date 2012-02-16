@@ -150,9 +150,15 @@ function validate_form()
   <strong id="task_progress">{{task_progress}}</strong>
 </div>
 
-{% if description %}<p>{{description}}</p>{% endif %}
-
 <div class="container">
+{% if description %}
+<div class="row">
+<div class="span11">
+<p>{{description}}</p>
+</div>
+</div>
+{% endif %}
+
 <div class="row">
 {% if reference_text.1 %}
 <div class="span5">

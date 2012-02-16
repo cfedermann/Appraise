@@ -14,7 +14,7 @@
 </tr>
 {% for task in tasks %}
 <tr>
-  <td width="60%">{% if not task.finished %}<a href="{{task.url}}">{{task.task_name}}</a>{% else %}{{task.task_name}}{% endif %}</td>
+  <td style="width: 60%;">{% if not task.finished %}<a href="{{task.url}}">{{task.task_name}}</a>{% else %}{{task.task_name}}{% endif %}</td>
 {% for status in task.status %}
   <td>{{status}}</td>
 {% endfor %}

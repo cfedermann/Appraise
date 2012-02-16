@@ -12,7 +12,13 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link rel="stylesheet" href="/appraise/site_media/css/bootstrap-1.1.0.modified.css">
+    <link rel="stylesheet" href="/appraise/site_media/css/bootstrap.css">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link rel="stylesheet" href="/appraise/site_media/css/bootstrap-responsive.css">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -25,39 +31,50 @@
 
   <body>
 
-    <div class="topbar">
-      <div class="fill">
-        <div class="container fixed">
-          <h3><a href="/appraise/">Appraise</a></h3>
-          <ul>
-            <li><a href="/appraise/evaluation/">Overview</a></li>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/appraise/">Appraise</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/appraise/evaluation/">Overview</a></li>
 
-            {% if user.username %}
-            <li><a href="/appraise/logout/">Logout "{{user.username}}"</a></li>
-            {% else %}
-            <li><a href="/appraise/login/">Login</a></li>
-            {% endif %}
-          </ul>
+{% if user.username %}
+              <li><a href="/appraise/logout/">Logout "{{user.username}}"</a></li>
+{% else %}
+              <li><a href="/appraise/login/">Login</a></li>
+{% endif %}
+
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container">
-
-      <section id="content">
-        <div class="row">
-          <div class="span16 columns">
-            {% block content %}{% endblock %}
-            {% block options %}{% endblock %}
-          </div>
+      <div class="row">
+        <div class="span12">
+          {% block content %}{% endblock %}
+          {% block options %}{% endblock %}
         </div>
-      </section>
+      </div>
 
       <footer>
         <p>This is the GitHub version of the Appraise evaluation system. Some rights reserved.{% block footer %}{% endblock %}</p>
       </footer>
 
     </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/appraise/site_media/js/jquery.js"></script>
+    <script src="/appraise/site_media/js/bootstrap.js"></script>
 
   </body>
 </html>

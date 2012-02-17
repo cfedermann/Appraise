@@ -402,8 +402,6 @@ def overview(request):
       context_instance=RequestContext(request))
 
 
-# TODO: remove any outdated code from the repository :)
-
 @login_required
 def ranking(request, task_id):
     """Renders the task 1: ranking and error classification view."""

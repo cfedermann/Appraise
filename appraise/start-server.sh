@@ -1,5 +1,7 @@
 #!/bin/bash
-# taraXue Django website
+#
+# Project: Appraise evaluation system
+#  Author: Christian Federmann <cfedermann@dfki.de>
 
 PROJECT_ROOT=`pwd`
 DJANGO_PID="$PROJECT_ROOT/django.pid"

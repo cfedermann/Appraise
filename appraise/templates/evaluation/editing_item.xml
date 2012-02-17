@@ -1,7 +1,0 @@
-{% extends "evaluation/editing_task.xml" %}
-{% block items %}{% for item in items %}  <editing-item id="{{item.id}}" sentence_id="{{item.sentence_id}}" user="{{item.user}}">
-    <source>{{item.source}}</source>
-    <system{{item.system}} name="{{item.system_name}}">{{item.system_text}}</system{{item.system}}>
-    <post-edited>{{item.postedited}}</post-edited>
-  </editing-item>
-{%endfor %}{% endblock %}

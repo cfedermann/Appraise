@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<editing-task name="{{shortname}}">
-{% block items %}{% endblock %}</editing-task>

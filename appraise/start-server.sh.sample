@@ -17,5 +17,7 @@ if [ -f $LIGHTTPD_PID ]; then
     rm -f -- $LIGHTTPD_PID
 fi
 
-/share/emplus/website/python26/bin/python manage.py runfcgi host=134.96.187.245 port=7070 method=threaded pidfile=$DJANGO_PID
-/share/emplus/website/lighttpd/sbin/lighttpd -f /share/emplus/website/lighttpd/etc/appraise.conf
+# Adapt and uncomment the following two lines to actually start the server.
+#
+# /path/to/bin/python manage.py runfcgi host=127.0.0.1 port=1234 method=threaded pidfile=$DJANGO_PID
+# /path/to/sbin/lighttpd -f /path/to/lighttpd/etc/appraise.conf

@@ -1,1 +1,4 @@
+django.pid
+lighttpd.pid
 start-server.sh
+media/source-xml

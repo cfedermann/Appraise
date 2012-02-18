@@ -452,7 +452,7 @@ def overview(request):
     
     evaluation_tasks = {}
     for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
-        # We collect a list of EvaluationTask instances for this task_type.
+        # We collect a list of task descriptions for this task_type.
         evaluation_tasks[task_type] = []
         
         # Super users see all EvaluationTask items, even non-active ones.

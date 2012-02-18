@@ -173,26 +173,33 @@ def _handle_ranking(request, task, items):
     and creates an EvaluationResult instance on HTTP POST submission.
     
     """
-    now = datetime.now()
+    start_datetime = datetime.now()
+    form_valid = False
     
+    # If the request has been submitted via HTTP POST, extract data from it.
     if request.method == "POST":
-        item_id = request.POST.get('item_id')
-        submit_button = request.POST.get('submit_button')
-        _now = request.POST.get('now')
-        _order = request.POST.get('order')
+        item_id = request.POST.get('item_id', None)
+        now_timestamp = request.POST.get('now', None)
+        order_random = request.POST.get('order', None)
+        submit_button = request.POST.get('submit_button', None)
         
+        # The form is only valid if all variables could be found.
+        form_valid = all((item_id, now_timestamp, order_random,
+          submit_button))
+    
+    # If the form is valid, we have to save the results to the database.
+    if form_valid:
+        # Retrieve EvalutionItem instance for the given id or raise Http404.
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
-        duration = None
-        if _now:
-            duration = now - datetime.fromtimestamp(float(_now))
+        # Compute duration for this item.
+        now_datetime = datetime.fromtimestamp(float(now_timestamp))
+        duration = start_datetime - now_datetime
         
-        if _order:
-            order = [int(x) for x in _order.split(',')]
+        # Initialise order from order_random.
+        order = [int(x) for x in order_random.split(',')]
         
-        else:
-            order = range(len(current_item.translations))
-        
+        # Compute ranks for translation alternatives using order.
         ranks = {}
         for index in range(len(current_item.translations)):
             rank = request.POST.get('rank_{0}'.format(index), -1)
@@ -205,40 +212,56 @@ def _handle_ranking(request, task, items):
         print "order: {0}".format(order)
         print
         
-        if submit_button == 'SUBMIT':
+        # If "Flag Error" was clicked, _raw_result is set to "SKIPPED".
+        if submit_button == 'FLAG_ERROR':
+            _raw_result = 'SKIPPED'
+        
+        # Otherwise, the _raw_result is a comma-separated list of ranks.
+        elif submit_button == 'SUBMIT':
             _raw_result = range(len(current_item.translations))
             _raw_result = ','.join([str(ranks[x]) for x in _raw_result])
         
-        elif submit_button == 'FLAG_ERROR':
-            _raw_result = 'SKIPPED'
-        
+        # Save results for this item to the Django database.
         _save_results(current_item, request.user, duration, _raw_result)
-
+    
+    # Find next item the current user should process or return to overview.
     item = _find_next_item_to_process(items, request.user)
     if not item:
         return redirect('appraise.evaluation.views.overview')
-    
+
+    # Compute source and reference texts including context where possible.
     source_text, reference_text = _compute_context_for_item(item)
     
+    # Retrieve the number of finished items for this user and the total number
+    # of items for this task. We increase finished_items by one as we are
+    # processing the first unfinished item.
+    finished_items, total_items = task.get_finished_for_user(request.user)
+    finished_items += 1
+    
+    # Create list of translation alternatives in randomised order.
     translations = []
     order = range(len(item.translations))
     shuffle(order)
     for index in order:
         translations.append(item.translations[index])
     
-    _finished, _total = task.get_finished_for_user(request.user)
-    
-    dictionary = {'title': 'Ranking', 'item_id': item.id,
-      'source_text': source_text, 'reference_text': reference_text,
-      'now': mktime(datetime.now().timetuple()),
-      'translations': translations,
-      'order': ','.join([str(x) for x in order]),
+    template_context = {
+      'action_url': request.path,
+      'commit_tag': COMMIT_TAG,
       'description': task.description,
-      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
-      'action_url': request.path, 'commit_tag': COMMIT_TAG}
+      'item_id': item.id,
+      'now': mktime(datetime.now().timetuple()),
+      'order': ','.join([str(x) for x in order]),
+      'reference_text': reference_text,
+      'source_text': source_text,
+      'task_progress': '{0:03d}/{1:03d}'.format(finished_items, total_items),
+      'title': 'Ranking',
+      'translations': translations,
+    }
     
-    return render_to_response('evaluation/ranking.html', dictionary,
+    return render_to_response('evaluation/ranking.html', template_context,
       context_instance=RequestContext(request))
+
 
 @login_required
 def _handle_postediting(request, task, items):

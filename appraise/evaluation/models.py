@@ -30,6 +30,7 @@ APPRAISE_TASK_TYPE_CHOICES = (
   ('2', 'Ranking'),
   ('3', 'Post-editing'),
   ('4', 'Error classification'),
+  ('5', '3-Way Ranking'),
 )
 
 
@@ -226,35 +227,23 @@ class EvaluationTask(models.Model):
         _task_type = self.get_task_type_display()
         _status = []
         
+        # Compute completion status for this task and the given user.
         _items = EvaluationItem.objects.filter(task=self).count()
         _done = EvaluationResult.objects.filter(user=user,
           item__task=self).count()
         
         _status.append('{0}/{1}'.format(_done, _items))
         
-        _results = EvaluationResult.objects.filter(item__task=self)
+        # Compute average duration for this task and the given users
+        _results = EvaluationResult.objects.filter(user=user, item__task=self)
         _durations = _results.values_list('duration', flat=True)
         
         _durations = [datetime_to_seconds(d) for d in _durations]
         _average_duration = reduce(lambda x, y: (x+y)/2.0, _durations, 0)
         
-        # cfedermann: replaced by more elegant code.
-        #
-        # _average_duration = 0
-        # for duration in _durations:
-        #     _duration = duration.hour * 3600 + duration.minute * 60 \
-        #       + duration.second + (duration.microsecond / 1000000.0)
-        #
-        #     _average_duration += _duration
-        #
-        # if len(_durations):
-        #     _average_duration /= float(len(_durations))
-        #
-        # else:
-        #     _average_duration = 0
-        
         _status.append('{:.2f} sec'.format(_average_duration))
         
+        # We could add task type specific status information here.
         if _task_type == 'Quality Checking':
             pass
         
@@ -274,7 +263,8 @@ class EvaluationTask(models.Model):
         Returns True if this task is finished for the given user.
         """
         _items = EvaluationItem.objects.filter(task=self).count()
-        _done = EvaluationResult.objects.filter(user=user, item__task=self).count()
+        _done = EvaluationResult.objects.filter(user=user,
+          item__task=self).count()
         return _items == _done
     
     def get_finished_for_user(self, user=None):
@@ -282,7 +272,8 @@ class EvaluationTask(models.Model):
         Returns tuple (finished, total) number of items for the given user.
         """
         _items = EvaluationItem.objects.filter(task=self).count()
-        _done = EvaluationResult.objects.filter(user=user, item__task=self).count()
+        _done = EvaluationResult.objects.filter(user=user,
+          item__task=self).count()
         return (_done, _items)
 
     def export_to_xml(self):
@@ -489,10 +480,12 @@ class EvaluationResult(models.Model):
             _task_type = self.item.task.get_task_type_display()
             try:
                 if _task_type == 'Ranking':
-                    self.results = [int(x) for x in self.raw_result.split(',')]
+                    self.results = self.raw_result.split(',')
+                    self.results = [int(x) for x in self.results]
                 
                 elif _task_type == 'Error classification':
-                    self.results = [x.split('=') for x in self.raw_result.split('\n')]
+                    self.results = self.raw_result.split('\n')
+                    self.results = [x.split('=') for x in self.results]
                 
                 elif _task_type == 'Post-editing':
                     self.results = self.raw_result.split('\n')
@@ -598,11 +591,11 @@ class EvaluationResult(models.Model):
         skipped = self.results is None
         
         _attr = self.item.translations[int(edit_id)][1].items()
-        translation_attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
+        _export_attr = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         context = {'attributes': attributes, 'user': self.user,
           'duration': '{}'.format(self.duration), 'skipped': skipped,
           'from_scratch': from_scratch, 'edit_id': edit_id,
-          'translation_attributes': translation_attributes,
+          'translation_attributes': _export_attr,
           'postedited': postedited.encode('utf-8')}
         return template.render(Context(context))

@@ -15,7 +15,9 @@ LOGGER = logging.getLogger('appraise.views')
 LOGGER.addHandler(LOG_HANDLER)
 
 def frontpage(request):
-    """Renders the front page view."""
+    """
+    Renders the front page view.
+    """
     LOGGER.info('Rendering frontpage view for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
@@ -26,7 +28,9 @@ def frontpage(request):
 
 
 def login(request, template_name):
-    """Renders login view by connecting to django.contrib.auth.views."""
+    """
+    Renders login view by connecting to django.contrib.auth.views.
+    """
     LOGGER.info('Rendering login view for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
@@ -42,7 +46,9 @@ def login(request, template_name):
 
 
 def logout(request, next_page):
-    """Renders logout view by connecting to django.contrib.auth.views."""
+    """
+    Renders logout view by connecting to django.contrib.auth.views.
+    """
     LOGGER.info('Logging out user "{0}", redirecting to "{1}".'.format(
       request.user.username or "Anonymous", next_page)) 
     

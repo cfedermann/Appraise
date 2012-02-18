@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="row">
+<div class="span12">
 {% for task_type, tasks in evaluation_tasks.items %}
 <h2>{{task_type}} Tasks</h2>
 {% if tasks %}
@@ -26,123 +27,6 @@
 {% endif %}
 
 {% endfor %}
-
-<!--
-{% if quality_tasks %}
-<h2>Acceptability of Translations</h2>
-<p>A source sentence and the corresponding translation are shown in the interface. Given the scenario described below, the user has to judge whether the translation
-</p>
-<ul>
-  <li>is acceptable,</li>
-  <li>can be made acceptable with a few changes,</li>
-  <li>is neither of both.</li>
-</ul>
-
-<h2>Scenario</h2>
-<p>Assume you are working on a translation task for an online news service such as <a href="http://www.stern.de/">stern.de</a>. Your job is to check existing translations as to whether they can be used 'as-is' or as to whether a trained online translator (post-editor) can make them acceptable with one or few changes. The goal is not to come up with a perfect translation.</p>
-
-<p>Since the sentences are shown without context, please assume in case of doubt (ambiguities, etc.) that the given translation is the right one.</p>
-
-<table class="common-table zebra-striped">
-<tr>
-  <th>Task name</th>
-  <th>Overall completion</th>
-  <th>Acceptable</th>
-  <th>Can easily be fixed</th>
-  <th>None of both</th>
-  <th>Average duration</th>
-</tr>
-{% for task in quality_tasks %}
-<tr>
-  <td><a href="/appraise/quality-checking/{{task.task_id}}/">{{task.shortname}}</a></td>
-  <td align="right">{{task.get_status|first}}/{{task.get_status|last}} sentences</td>
-  <td align="right">{{task.get_acceptable|first}} <small>({{task.get_acceptable|last|floatformat}}%)</small></td>
-  <td align="right">{{task.get_canbefixed|first}} <small>({{task.get_canbefixed|last|floatformat}}%)</small></td>
-  <td align="right">{{task.get_noneofboth|first}} <small>({{task.get_noneofboth|last|floatformat}}%)</small></td>
-  <td align="right">{% if task.get_duration %}{{task.get_duration|floatformat}} sec{% else %}N/A{% endif %}</td>
-</tr>
-{% endfor %}
-</table>
-{% else %}
-<p>There is nothing to see here yet...</p>
-{% endif %}
--->
-
-<!--
-{% if ranking_tasks %}
-<h2>Ranking and Error Classification Tasks</h2>
-<p>A set of (two or more) translated sentences is displayed alongside the original sentence. The user selects the sentence that best possibly conserves the meaning of the original sentence. Once done, the other sentences disappear and a set of checkboxes is shown which can be used to classify the errors inside the best translation. Free text comments can be added to a dedicated comment text area.</p>
-{% if ranking_tasks %}
-<table class="common-table zebra-striped">
-<tr>
-  <th>Task name</th><th>Overall completion</th><th>Avg. Rank A</th><th>Avg. Rank B</th><th>Avg. Rank C</th><th>Avg. Rank D</th>
-</tr>
-{% for task in ranking_tasks %}
-<tr>
-  <td><a href="/appraise/ranking-classification/{{task.task_id}}/">{{task.shortname}}</a></td>
-  {% with task.get_status as status %}
-  <td align="right">{{status|first}}/{{status|last}} sentences</td>
-  {% endwith %}
-  <td align="right">{% if task.get_rankA %}{{task.get_rankA}}{% else %}N/A{% endif %}</td>
-  <td align="right">{% if task.get_rankB %}{{task.get_rankB}}{% else %}N/A{% endif %}</td>
-  <td align="right">{% if task.get_rankC %}{{task.get_rankC}}{% else %}N/A{% endif %}</td>
-  <td align="right">{% if task.get_rankD %}{{task.get_rankD}}{% else %}N/A{% endif %}</td>
-</tr>
-{% endfor %}
-</table>
-{% else %}
-<p class="grey_light">There are no ranking and error classification tasks available at the moment.</p>
-{% endif %}
-{% endif %}
--->
-
-<!--
-
-{% if editing_tasks %}
-<h2>Task 2: Manual Post-Editing</h2>
-<p>A set of (two or more) translated sentences is displayed alongside the original sentence. The user selects the sentence that seems to be easiest to post-edit. Once done, the other sentences disappear and a text box for post-editing the sentence is given. Minimal post-editing only, no big grammatical changes should be introduced. Again, free text comments can be added.</p>
-{% if editing_tasks %}
-<table class="common-table zebra-striped">
-<tr>
-  <th>Task name</th><th>Overall completion</th>
-</tr>
-{% for task in editing_tasks %}
-<tr>
-  <td><a href="/appraise/post-editing/{{task.task_id}}/">{{task.shortname}}</a></td>
-  {% with task.get_status as status %}
-  <td align="right">{{status|first}}/{{status|last}} sentences</td>
-  {% endwith %}
-</tr>
-{% endfor %}
-</table>
-{% else %}
-<p class="grey_light">There are no post-editing tasks available at the moment.</p>
-{% endif %}
-{% endif %}
-
-{% if lucy_tasks %}
-<h2>Task 3: Lucy Ranking</h2>
-<p>A set of translated sentences is displayed alongside the original sentence and the reference translation. The user ranks the two sentence according to a simple 5-level ranking scheme.</p>
-{% if lucy_tasks %}
-<table class="common-table zebra-striped">
-<tr>
-  <th>Task name</th><th>Overall completion</th><th>Ranking results</th>
-</tr>
-{% for task in lucy_tasks %}
-<tr>
-  <td><a href="/appraise/lucy-ranking/{{task.task_id}}/">{{task.shortname}}</a></td>
-  {% with task.get_status as status %}
-  <td align="right">{{status|first}}/{{status|last}} sentences</td>
-  {% endwith %}
-  {% with task.get_results as results %}
-  <td align="right">{{results}}</td>
-  {% endwith %}
-</tr>
-{% endfor %}
-</table>
-{% else %}
-<p class="grey_light">There are no Lucy ranking tasks available at the moment.</p>
-{% endif %}
-{% endif %}
--->
+</div>
+</div>
 {% endblock %}

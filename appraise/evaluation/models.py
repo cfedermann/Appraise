@@ -479,7 +479,10 @@ class EvaluationResult(models.Model):
         if self.raw_result and self.raw_result != 'SKIPPED':
             _task_type = self.item.task.get_task_type_display()
             try:
-                if _task_type == 'Ranking':
+                if _task_type == 'Quality Checking':
+                    self.results = self.raw_result
+                
+                elif _task_type == 'Ranking':
                     self.results = self.raw_result.split(',')
                     self.results = [int(x) for x in self.results]
                 

@@ -483,12 +483,12 @@ class EvaluationResult(models.Model):
                     self.results = self.raw_result.split(',')
                     self.results = [int(x) for x in self.results]
                 
+                elif _task_type == 'Post-editing':
+                    self.results = self.raw_result.split('\n')
+                
                 elif _task_type == 'Error classification':
                     self.results = self.raw_result.split('\n')
                     self.results = [x.split('=') for x in self.results]
-                
-                elif _task_type == 'Post-editing':
-                    self.results = self.raw_result.split('\n')
             
             # pylint: disable-msg=W0703
             except Exception, msg:
@@ -502,11 +502,11 @@ class EvaluationResult(models.Model):
         if _task_type == 'Ranking':
             return self.export_to_ranking_xml()
         
-        elif _task_type == 'Error classification':
-            return self.export_to_error_classification_xml()
-        
         elif _task_type == 'Post-editing':
             return self.export_to_postediting_xml()
+        
+        elif _task_type == 'Error classification':
+            return self.export_to_error_classification_xml()
     
     def export_to_ranking_xml(self):
         """

@@ -10,27 +10,24 @@ from django.contrib import admin
 
 from appraise.settings import MEDIA_ROOT, DEBUG
 
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
   (r'^appraise/$', 'appraise.views.frontpage'),
+
   (r'^appraise/login/$', 'appraise.views.login',
     {'template_name': 'login.html'}),
+
   (r'^appraise/logout/$', 'appraise.views.logout',
     {'next_page': '/appraise/'}),
+
   (r'^appraise/admin/', include(admin.site.urls)),
 
   (r'^appraise/evaluation/$', 'appraise.evaluation.views.overview'),
-  
+
   (r'^appraise/evaluation/(?P<task_id>[a-f0-9]{32})/',
     'appraise.evaluation.views.task_handler'),
-  
-  (r'^appraise/ranking-classification/(?P<task_id>[a-f0-9]{32})/',
-    'appraise.evaluation.views.ranking'),
-  (r'^appraise/post-editing/(?P<task_id>[a-f0-9]{32})/',
-    'appraise.evaluation.views.editing'),
-  (r'^appraise/quality-checking/(?P<task_id>[a-f0-9]{32})/',
-    'appraise.evaluation.views.quality_checking'),
 )
 
 if DEBUG:

@@ -452,6 +452,10 @@ def overview(request):
     
     evaluation_tasks = {}
     for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
+        # We collect a list of EvaluationTask instances for this task_type.
+        evaluation_tasks[task_type] = []
+        
+        # Super users see all EvaluationTask items, even non-active ones.
         if request.user.is_superuser:
             _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
         
@@ -459,18 +463,29 @@ def overview(request):
             _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
               users=request.user, active=True)
         
-        evaluation_tasks[task_type] = []
-        
+        # Loop over the QuerySet and compute task description data.
         for _task in _tasks:
+            # TODO: Shouldn't this be implemented inside the task class in
+            # get_absolute_url() instead?
             _url = reverse('appraise.evaluation.views.task_handler',
               kwargs={'task_id': _task.task_id})
-            _task_data = {'url': _url, 'task_name': _task.task_name,
+            
+            _task_data = {
+              'finished': _task.is_finished_for_user(request.user),
               'header': _task.get_status_header,
               'status': _task.get_status_for_user(request.user),
-              'finished': _task.is_finished_for_user(request.user)}
+              'task_name': _task.task_name,
+              'url': _url,
+            }
+            
+            # Append new task description to current task_type list.
             evaluation_tasks[task_type].append(_task_data)
           
-    dictionary = {'title': 'Evaluation Task Overview',
-      'evaluation_tasks': evaluation_tasks, 'commit_tag': COMMIT_TAG}
-    return render_to_response('evaluation/overview.html', dictionary,
+    template_context = {
+      'commit_tag': COMMIT_TAG,
+      'evaluation_tasks': evaluation_tasks,
+      'title': 'Evaluation Task Overview',
+    }
+    
+    return render_to_response('evaluation/overview.html', template_context,
       context_instance=RequestContext(request))

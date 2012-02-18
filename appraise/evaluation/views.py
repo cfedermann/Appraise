@@ -205,13 +205,6 @@ def _handle_ranking(request, task, items):
             rank = request.POST.get('rank_{0}'.format(index), -1)
             ranks[order[index]] = int(rank)
         
-        print
-        print "item_id: {0}".format(item_id)
-        print "submit_button: {0}".format(submit_button)
-        print "ranks: {0}".format(ranks)
-        print "order: {0}".format(order)
-        print
-        
         # If "Flag Error" was clicked, _raw_result is set to "SKIPPED".
         if submit_button == 'FLAG_ERROR':
             _raw_result = 'SKIPPED'

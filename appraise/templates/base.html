@@ -57,14 +57,9 @@
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="span12">
-          {% block content %}{% endblock %}
-          {% block options %}{% endblock %}
-        </div>
-      </div>
+      {% block content %}{% endblock %}
 
-     <hr/>
+      <hr/>
 
       <footer>
         <p>This is the GitHub version {% if commit_tag %}<code><a href="https://github.com/cfedermann/Appraise/commit/{{commit_tag}}">{{commit_tag|stringformat:".8s"}}</a></code>{% endif %} of the Appraise evaluation system. Some rights reserved.{% block footer %}{% endblock %}</p>

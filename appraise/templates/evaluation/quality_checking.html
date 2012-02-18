@@ -2,26 +2,41 @@
 
 {% block content %}
 
-<div class="alert-message success">
-  <p id="task_progress">{{task_progress}}</p>
+<div class="alert alert-info">
+  <strong id="task_progress">{{task_progress}}</strong>
 </div>
 
 <div class="container">
+{% if description %}
+<div class="row">
+<div class="span11">
+<p>{{description}}</p>
+</div>
+</div>
+{% endif %}
 
-<div class="span8">
+<div class="row">
+{% if reference_text.1 %}
+<div class="span5">
 <blockquote>
-<p><strong>{{source_text.0}}</strong></p>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>
-
-<div class="span8">
+<div class="span5 offset1">
 <blockquote>
-<p><strong>{{translation_text.0}}</strong></p>
-<small>Translation</small>
+<p>{% if reference_text.0 %}{{reference_text.0}} {% endif %}<strong>{{reference_text.1}}</strong>{% if reference_text.2 %} {{reference_text.2}}{% endif %}</p>
+<small>Reference</small>
 </blockquote>
 </div>
-
+{% else %}
+<div class="span12">
+<blockquote>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
+<small>Source</small>
+</blockquote>
+</div>
+{% endif %}
 </div>
 
 <form action="{{action_url}}" method="post">
@@ -29,17 +44,30 @@
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="now" type="hidden" value="{{now}}" />
 
+<div class="row">
+<div class="span11">
+<blockquote>
+<p><strong>{{translation.0}}</strong></p>
+<small>Translation</small>
+</blockquote>
+</div>
+</div>
+
 <div class="actions">
-  <button name="submit_button" accesskey="a" type="submit" class="btn" value="A">Acceptable</button>
-  <span class="help-inline">(Ctrl-Alt-A)</span>
+  <button class="btn" name="submit_button" accesskey="1" type="submit" value="ACCEPTABLE"><i class="icon-ok"></i> Acceptable</button>
+  &nbsp;
   
-  <button name="submit_button" accesskey="c" type="submit" class="btn" value="C">Can easily be fixed</button>
-  <span class="help-inline">(Ctrl-Alt-C)</span>
+  <button class="btn" name="submit_button" accesskey="2" type="submit" value="CAN_EASILY_BE_FIXED"><i class="icon-pencil"></i> Can easily be fixed</button>
+  &nbsp;
   
-  <button name="submit_button" accesskey="n" type="submit" class="btn" value="N">None of both</button>
-  <span class="help-inline">(Ctrl-Alt-N)</span>
+  <button class="btn" name="submit_button" accesskey="3" type="submit" value="NONE_OF_BOTH"><i class="icon-remove"></i> None of both</button>
+  &nbsp;
+  
+  <button class="btn btn-danger" name="submit_button" accesskey="4" type="submit" value="FLAG_ERROR"><i class="icon-exclamation-sign icon-white"></i> Flag Error</button>
 </div>
 
 </form>
+
+</div>
 
 {% endblock %}

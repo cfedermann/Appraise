@@ -101,37 +101,68 @@ def _handle_quality_checking(request, task, items):
     and creates an EvaluationResult instance on HTTP POST submission.
     
     """
-    now = datetime.now()
+    start_datetime = datetime.now()
+    form_valid = False
     
+    # If the request has been submitted via HTTP POST, extract data from it.
     if request.method == "POST":
-        item_id = request.POST.get('item_id')
-        quality = request.POST.get('submit_button')
-        _now = request.POST.get('now')
+        item_id = request.POST.get('item_id', None)
+        now_timestamp = request.POST.get('now', None)
+        submit_button = request.POST.get('submit_button', None)
         
-        duration = None
-        if _now:
-            duration = now - datetime.fromtimestamp(float(_now))
-            print "duration: {}".format(duration)
-        
-        print "item_id: {0}".format(item_id)
-        print "quality: {0}".format(quality)
-        
-        # 1) create suitable result container type instance
-        # 2) serialise result data into XML format
-        # 3) create (or update) result instance and save it
+        # The form is only valid if all variables could be found.
+        form_valid = all((item_id, now_timestamp, submit_button))
     
-    # add loop to find "next item to edit" based on items
+    # If the form is valid, we have to save the results to the database.
+    if form_valid:
+        # Retrieve EvalutionItem instance for the given id or raise Http404.
+        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        
+        # Compute duration for this item.
+        now_datetime = datetime.fromtimestamp(float(now_timestamp))
+        duration = start_datetime - now_datetime
+        
+        # If "Flag Error" was clicked, _raw_result is set to "SKIPPED".
+        if submit_button == 'FLAG_ERROR':
+            _raw_result = 'SKIPPED'
+        
+        # Otherwise, for quality checking, we just pass through the value.
+        else:
+            _raw_result = submit_button
+        
+        # Save results for this item to the Django database.
+        _save_results(current_item, request.user, duration, _raw_result)
     
-    item = items[0]
-    dictionary = {'title': 'Translation Quality Checking',
-      'task_progress': '{0:03d}/{1:03d}'.format(1, len(items)),
-      'source_text': item.source, 'translation_text': item.translations[0],
-      'context_text': item.reference, 'item_id': item.id,
+    # Find next item the current user should process or return to overview.
+    item = _find_next_item_to_process(items, request.user)
+    if not item:
+        return redirect('appraise.evaluation.views.overview')
+    
+    # Compute source and reference texts including context where possible.
+    source_text, reference_text = _compute_context_for_item(item)
+    
+    # Retrieve the number of finished items for this user and the total number
+    # of items for this task. We increase finished_items by one as we are
+    # processing the first unfinished item.
+    finished_items, total_items = task.get_finished_for_user(request.user)
+    finished_items += 1
+    
+    template_context = {
+      'action_url': request.path,
+      'commit_tag': COMMIT_TAG,
+      'description': task.description,
+      'item_id': item.id,
       'now': mktime(datetime.now().timetuple()),
-      'action_url': request.path, 'commit_tag': COMMIT_TAG}
+      'reference_text': reference_text,
+      'source_text': source_text,
+      'task_progress': '{0:03d}/{1:03d}'.format(finished_items, total_items),
+      'title': 'Translation Quality Checking',
+      'translation': item.translations[0],
+    }
     
-    return render_to_response('evaluation/quality_checking.html', dictionary,
-      context_instance=RequestContext(request))
+    return render_to_response('evaluation/quality_checking.html',
+      template_context, context_instance=RequestContext(request))
+
 
 @login_required
 def _handle_ranking(request, task, items):

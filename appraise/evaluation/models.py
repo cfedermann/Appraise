@@ -12,6 +12,7 @@ from django.dispatch import receiver
 
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.template import Context
 from django.template.loader import get_template
@@ -181,6 +182,14 @@ class EvaluationTask(models.Model):
                 new_item.save()
         
         super(EvaluationTask, self).save(*args, **kwargs)
+    
+    def get_absolute_url(self):
+        """
+        Returns the URL for this EvaluationTask object instance.
+        """
+        task_handler_view = 'appraise.evaluation.views.task_handler'
+        kwargs = {'task_id': self.task_id}
+        return reverse(task_handler_view, kwargs=kwargs)
     
     def reload_dynamic_fields(self):
         """
@@ -445,10 +454,10 @@ class EvaluationResult(models.Model):
     
     duration = models.TimeField(blank=True, null=True, editable=False)
     
-    # TODO: this is a hack to render datetime.datetime information properly...
-    #
-    # Should be replaced by code within the corresponding ModelAdmin!
-    def _duration(self):
+    def readable_duration(self):
+        """
+        Returns a readable version of the this EvaluationResult's duration.
+        """
         return '{}'.format(self.duration)
     
     raw_result = models.TextField(editable=False, blank=False)

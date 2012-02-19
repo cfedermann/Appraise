@@ -9,10 +9,11 @@ ROOT_PATH = os.getcwd()
 from subprocess import check_output
 try:
     commit_log = check_output(['git', 'log', '--pretty=oneline'])
+    # pylint: disable-msg=E1103
     COMMIT_TAG = commit_log.split('\n')[0].split()[0]
 
+# pylint: disable-msg=W0703
 except Exception, e:
-    print e
     COMMIT_TAG = None
 
 FORCE_SCRIPT_NAME = ""

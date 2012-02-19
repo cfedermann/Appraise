@@ -10,7 +10,6 @@ from random import randint, seed, shuffle
 from time import mktime
 
 from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 
@@ -500,9 +499,6 @@ def _handle_three_way_ranking(request, task, items):
       'translations': translations,
     }
     
-    for k, v in template_context.items():
-        print "{} -> {}".format(k, v)
-
     return render_to_response('evaluation/three_way_ranking.html',
       template_context, context_instance=RequestContext(request))
 
@@ -569,17 +565,12 @@ def overview(request):
         
         # Loop over the QuerySet and compute task description data.
         for _task in _tasks:
-            # TODO: Shouldn't this be implemented inside the task class in
-            # get_absolute_url() instead?
-            _url = reverse('appraise.evaluation.views.task_handler',
-              kwargs={'task_id': _task.task_id})
-            
             _task_data = {
               'finished': _task.is_finished_for_user(request.user),
               'header': _task.get_status_header,
               'status': _task.get_status_for_user(request.user),
               'task_name': _task.task_name,
-              'url': _url,
+              'url': _task.get_absolute_url(),
             }
             
             # Append new task description to current task_type list.

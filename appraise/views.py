@@ -5,7 +5,7 @@ Project: Appraise evaluation system
 """
 import logging
 from django.contrib.auth.views import login as LOGIN, logout as LOGOUT
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.template import RequestContext
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
 
@@ -21,10 +21,12 @@ def frontpage(request):
     LOGGER.info('Rendering frontpage view for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
-    dictionary = {'title': 'Appraise evaluation system',
-      'commit_tag': COMMIT_TAG}
-    return render_to_response('frontpage.html', dictionary,
-      context_instance=RequestContext(request))
+    dictionary = {
+      'commit_tag': COMMIT_TAG,
+      'title': 'Appraise evaluation system',
+    }
+    
+    return render(request, 'frontpage.html', dictionary)
 
 
 def login(request, template_name):
@@ -35,11 +37,14 @@ def login(request, template_name):
       request.user.username or "Anonymous"))
     
     if request.user.username:
-        dictionary = {'title': 'Appraise evaluation system',
+        dictionary = {
+          'commit_tag': COMMIT_TAG,
           'message': 'You are already logged in as "{0}".'.format(
-            request.user.username), 'commit_tag': COMMIT_TAG}
-        return render_to_response('frontpage.html', dictionary,
-          context_instance=RequestContext(request))
+            request.user.username),
+          'title': 'Appraise evaluation system',
+        }
+        
+        return render(request, 'frontpage.html', dictionary)
     
     extra_context = {'commit_tag': COMMIT_TAG}
     return LOGIN(request, template_name, extra_context=extra_context)

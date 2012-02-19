@@ -10,7 +10,7 @@ from random import randint, seed, shuffle
 from time import mktime
 
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render_to_response, get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.template import RequestContext
 
 from appraise.evaluation.models import APPRAISE_TASK_TYPE_CHOICES, \
@@ -146,7 +146,7 @@ def _handle_quality_checking(request, task, items):
     finished_items, total_items = task.get_finished_for_user(request.user)
     finished_items += 1
     
-    template_context = {
+    dictionary = {
       'action_url': request.path,
       'commit_tag': COMMIT_TAG,
       'description': task.description,
@@ -159,8 +159,7 @@ def _handle_quality_checking(request, task, items):
       'translation': item.translations[0],
     }
     
-    return render_to_response('evaluation/quality_checking.html',
-      template_context, context_instance=RequestContext(request))
+    return render(request, 'evaluation/quality_checking.html', dictionary)
 
 
 @login_required
@@ -237,7 +236,7 @@ def _handle_ranking(request, task, items):
     for index in order:
         translations.append(item.translations[index])
     
-    template_context = {
+    dictionary = {
       'action_url': request.path,
       'commit_tag': COMMIT_TAG,
       'description': task.description,
@@ -251,8 +250,7 @@ def _handle_ranking(request, task, items):
       'translations': translations,
     }
     
-    return render_to_response('evaluation/ranking.html', template_context,
-      context_instance=RequestContext(request))
+    return render(request, 'evaluation/ranking.html', dictionary)
 
 
 @login_required
@@ -319,8 +317,7 @@ def _handle_postediting(request, task, items):
       'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
       'action_url': request.path, 'commit_tag': COMMIT_TAG}
     
-    return render_to_response('evaluation/postediting.html', dictionary,
-      context_instance=RequestContext(request))
+    return render(request, 'evaluation/postediting.html', dictionary)
 
 
 @login_required
@@ -406,8 +403,7 @@ def _handle_error_classification(request, task, items):
       'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
       'action_url': request.path, 'commit_tag': COMMIT_TAG}
     
-    return render_to_response('evaluation/error_classification.html', dictionary,
-      context_instance=RequestContext(request))
+    return render(request, 'evaluation/error_classification.html', dictionary)
 
 
 def _handle_three_way_ranking(request, task, items):
@@ -485,7 +481,7 @@ def _handle_three_way_ranking(request, task, items):
         translations.reverse()
         order_reversed = True
 
-    template_context = {
+    dictionary = {
       'action_url': request.path,
       'commit_tag': COMMIT_TAG,
       'description': task.description,
@@ -499,8 +495,7 @@ def _handle_three_way_ranking(request, task, items):
       'translations': translations,
     }
     
-    return render_to_response('evaluation/three_way_ranking.html',
-      template_context, context_instance=RequestContext(request))
+    return render(request, 'evaluation/three_way_ranking.html', dictionary)
 
 
 @login_required
@@ -580,11 +575,10 @@ def overview(request):
         if len(evaluation_tasks[task_type]) == 0:
             evaluation_tasks.pop(task_type)
     
-    template_context = {
+    dictionary = {
       'commit_tag': COMMIT_TAG,
       'evaluation_tasks': evaluation_tasks,
       'title': 'Evaluation Task Overview',
     }
     
-    return render_to_response('evaluation/overview.html', template_context,
-      context_instance=RequestContext(request))
+    return render(request, 'evaluation/overview.html', dictionary)

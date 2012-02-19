@@ -217,6 +217,9 @@ class EvaluationTask(models.Model):
         elif _task_type == 'Error classification':
             pass
         
+        elif _task_type == '3-Way Ranking':
+            pass
+        
         return _header
     
     def get_status_for_user(self, user=None):
@@ -254,6 +257,9 @@ class EvaluationTask(models.Model):
             pass
         
         elif _task_type == 'Error classification':
+            pass
+        
+        elif _task_type == '3-Way Ranking':
             pass
         
         return _status
@@ -492,6 +498,9 @@ class EvaluationResult(models.Model):
                 elif _task_type == 'Error classification':
                     self.results = self.raw_result.split('\n')
                     self.results = [x.split('=') for x in self.results]
+                
+                elif _task_type == '3-Way Ranking':
+                    self.results = self.raw_result
             
             # pylint: disable-msg=W0703
             except Exception, msg:
@@ -502,7 +511,10 @@ class EvaluationResult(models.Model):
         Renders this EvaluationResult as XML String.
         """
         _task_type = self.item.task.get_task_type_display()
-        if _task_type == 'Ranking':
+        if _task_type == 'Quality Checking':
+            return self.export_to_quality_checking_xml()
+        
+        elif _task_type == 'Ranking':
             return self.export_to_ranking_xml()
         
         elif _task_type == 'Post-editing':
@@ -510,6 +522,15 @@ class EvaluationResult(models.Model):
         
         elif _task_type == 'Error classification':
             return self.export_to_error_classification_xml()
+        
+        elif _task_type == '3-Way Ranking':
+            return self.export_to_three_way_ranking_xml()
+    
+    def export_to_quality_checking_xml(self):
+        """
+        Renders this EvaluationResult as Quality Checking XML String.
+        """
+        pass
     
     def export_to_ranking_xml(self):
         """
@@ -533,6 +554,36 @@ class EvaluationResult(models.Model):
         context = {'attributes': attributes, 'user': self.user,
           'duration': '{}'.format(self.duration), 'skipped': skipped,
           'translations': translations}
+        return template.render(Context(context))
+    
+    def export_to_postediting_xml(self):
+        """
+        Renders this EvaluationResult as Post-editing XML String.
+        """
+        template = get_template('evaluation/result_postediting.xml')
+        
+        _attr = self.item.attributes.items()
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
+        
+        if self.results:
+            from_scratch = self.results[0] == 'FROM_SCRATCH'
+            if from_scratch:
+                edit_id = self.results[1]
+            else:
+                edit_id = self.results[0]
+            
+            postedited = self.results[-1]
+        
+        skipped = self.results is None
+        
+        _attr = self.item.translations[int(edit_id)][1].items()
+        _export_attr = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
+        
+        context = {'attributes': attributes, 'user': self.user,
+          'duration': '{}'.format(self.duration), 'skipped': skipped,
+          'from_scratch': from_scratch, 'edit_id': edit_id,
+          'translation_attributes': _export_attr,
+          'postedited': postedited.encode('utf-8')}
         return template.render(Context(context))
     
     def export_to_error_classification_xml(self):
@@ -573,32 +624,9 @@ class EvaluationResult(models.Model):
           'errors': errors}
         return template.render(Context(context))
     
-    def export_to_postediting_xml(self):
+    def export_to_three_way_ranking_xml(self):
         """
-        Renders this EvaluationResult as Post-editing XML String.
+        Renders this EvaluationResult as 3-Way Ranking XML String.
         """
-        template = get_template('evaluation/result_postediting.xml')
-        
-        _attr = self.item.attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
-        
-        if self.results:
-            from_scratch = self.results[0] == 'FROM_SCRATCH'
-            if from_scratch:
-                edit_id = self.results[1]
-            else:
-                edit_id = self.results[0]
-            
-            postedited = self.results[-1]
-        
-        skipped = self.results is None
-        
-        _attr = self.item.translations[int(edit_id)][1].items()
-        _export_attr = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
-        
-        context = {'attributes': attributes, 'user': self.user,
-          'duration': '{}'.format(self.duration), 'skipped': skipped,
-          'from_scratch': from_scratch, 'edit_id': edit_id,
-          'translation_attributes': _export_attr,
-          'postedited': postedited.encode('utf-8')}
-        return template.render(Context(context))
+        pass
+    

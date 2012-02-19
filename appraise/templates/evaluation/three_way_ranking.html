@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="alert alert-info">
+  <strong id="task_progress">{{task_progress}}</strong>
+</div>
+
+<div class="container">
+{% if description %}
+<div class="row">
+<div class="span11">
+<p>{{description}}</p>
+</div>
+</div>
+{% endif %}
+
+<div class="row">
+{% if reference_text.1 %}
+<div class="span5">
+<blockquote>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
+<small>Source</small>
+</blockquote>
+</div>
+<div class="span5 offset1">
+<blockquote>
+<p>{% if reference_text.0 %}{{reference_text.0}} {% endif %}<strong>{{reference_text.1}}</strong>{% if reference_text.2 %} {{reference_text.2}}{% endif %}</p>
+<small>Reference</small>
+</blockquote>
+</div>
+{% else %}
+<div class="span12">
+<blockquote>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
+<small>Source</small>
+</blockquote>
+</div>
+{% endif %}
+</div>
+
+<form action="{{action_url}}" method="post">
+
+<input name="item_id" type="hidden" value="{{item_id}}" />
+<input name="now" type="hidden" value="{{now}}" />
+<input name="order_reversed" type="hidden" value="{{order_reversed|yesno}}" />
+
+<div class="row">
+<div class="span11">
+<blockquote>
+<p><strong>{{translations.0.0}}</strong></p>
+<small>Translation A</small>
+</blockquote>
+</div>
+</div>
+
+<div class="row">
+<div class="span11">
+<blockquote>
+<p><strong>{{translations.1.0}}</strong></p>
+<small>Translation B</small>
+</blockquote>
+</div>
+</div>
+
+
+<div class="actions">
+  <button class="btn" name="submit_button" accesskey="1" type="submit" value="A>B"><i class="icon-plus-sign"></i> A &gt; B</button>
+  &nbsp;
+  
+  <button class="btn" name="submit_button" accesskey="2" type="submit" value="A=B"><i class="icon-adjust"></i> A = B</button>
+  &nbsp;
+  
+  <button class="btn" name="submit_button" accesskey="3" type="submit" value="A<B"><i class="icon-minus-sign"></i> A &lt; B</button>
+  &nbsp;
+  
+  <button class="btn btn-danger" name="submit_button" accesskey="4" type="submit" value="FLAG_ERROR"><i class="icon-exclamation-sign icon-white"></i> Flag Error</button>
+</div>
+
+</form>
+
+</div>
+
+{% endblock %}

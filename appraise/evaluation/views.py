@@ -6,7 +6,7 @@ Project: Appraise evaluation system
 import logging
 
 from datetime import datetime
-from random import shuffle
+from random import randint, seed, shuffle
 from time import mktime
 
 from django.contrib.auth.decorators import login_required
@@ -323,6 +323,7 @@ def _handle_postediting(request, task, items):
     return render_to_response('evaluation/postediting.html', dictionary,
       context_instance=RequestContext(request))
 
+
 @login_required
 def _handle_error_classification(request, task, items):
     """
@@ -409,6 +410,103 @@ def _handle_error_classification(request, task, items):
     return render_to_response('evaluation/error_classification.html', dictionary,
       context_instance=RequestContext(request))
 
+
+def _handle_three_way_ranking(request, task, items):
+    """
+    Handler for 3-Way Ranking tasks.
+
+    Finds the next item belonging to the given task, renders the page template
+    and creates an EvaluationResult instance on HTTP POST submission.
+
+    """
+    start_datetime = datetime.now()
+    form_valid = False
+
+    # If the request has been submitted via HTTP POST, extract data from it.
+    if request.method == "POST":
+        item_id = request.POST.get('item_id', None)
+        now_timestamp = request.POST.get('now', None)
+        order_reversed = request.POST.get('order_reversed', None)
+        submit_button = request.POST.get('submit_button', None)
+
+        # The form is only valid if all variables could be found.
+        form_valid = all((item_id, now_timestamp, order_reversed,
+          submit_button))
+
+    # If the form is valid, we have to save the results to the database.
+    if form_valid:
+        # Retrieve EvalutionItem instance for the given id or raise Http404.
+        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+
+        # Compute duration for this item.
+        now_datetime = datetime.fromtimestamp(float(now_timestamp))
+        duration = start_datetime - now_datetime
+
+        # If "Flag Error" was clicked, _raw_result is set to "SKIPPED".
+        if submit_button == 'FLAG_ERROR':
+            _raw_result = 'SKIPPED'
+
+        # Otherwise, for quality checking, we just pass through the value.
+        # However, if the order had been reversed when rendering this form,
+        # we have to invert the outcoming result here.
+        else:
+            _raw_result = submit_button
+            
+            if order_reversed == 'yes':
+                if submit_button == 'A>B':
+                    _raw_result = 'A<B'
+                
+                elif submit_button == 'A<B':
+                    _raw_result = 'A>B'
+
+        # Save results for this item to the Django database.
+        _save_results(current_item, request.user, duration, _raw_result)
+
+    # Find next item the current user should process or return to overview.
+    item = _find_next_item_to_process(items, request.user)
+    if not item:
+        return redirect('appraise.evaluation.views.overview')
+
+    # Compute source and reference texts including context where possible.
+    source_text, reference_text = _compute_context_for_item(item)
+
+    # Retrieve the number of finished items for this user and the total number
+    # of items for this task. We increase finished_items by one as we are
+    # processing the first unfinished item.
+    finished_items, total_items = task.get_finished_for_user(request.user)
+    finished_items += 1
+
+    # Create list of translation alternatives in randomised order.  For 3-Way
+    # Ranking tasks, we only use the first two translations which may come in
+    # random order.  If so, order_reversed is set to True to allow us to later
+    # create proper EvaluationResult instances.
+    translations = item.translations[:2]
+    order_reversed = False
+    if randint(0, 1):
+        translations.reverse()
+        order_reversed = True
+
+    template_context = {
+      'action_url': request.path,
+      'commit_tag': COMMIT_TAG,
+      'description': task.description,
+      'item_id': item.id,
+      'now': mktime(datetime.now().timetuple()),
+      'order_reversed': order_reversed,
+      'reference_text': reference_text,
+      'source_text': source_text,
+      'task_progress': '{0:03d}/{1:03d}'.format(finished_items, total_items),
+      'title': 'Ranking',
+      'translations': translations,
+    }
+    
+    for k, v in template_context.items():
+        print "{} -> {}".format(k, v)
+
+    return render_to_response('evaluation/three_way_ranking.html',
+      template_context, context_instance=RequestContext(request))
+
+
 @login_required
 def task_handler(request, task_id):
     """
@@ -438,6 +536,9 @@ def task_handler(request, task_id):
     elif _task_type == 'Error classification':
         return _handle_error_classification(request, task, items)
     
+    elif _task_type == '3-Way Ranking':
+        return _handle_three_way_ranking(request, task, items)
+    
     _msg = 'No handler for task type: "{0}"'.format(_task_type)
     raise NotImplementedError, _msg
 
@@ -449,6 +550,9 @@ def overview(request):
     """
     LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
       request.user.username or "Anonymous"))
+    
+    # Re-initialise random number generator.
+    seed(None)
     
     evaluation_tasks = {}
     for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:

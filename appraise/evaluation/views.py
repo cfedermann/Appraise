@@ -575,7 +575,11 @@ def overview(request):
             
             # Append new task description to current task_type list.
             evaluation_tasks[task_type].append(_task_data)
-          
+        
+        # If there are no tasks descriptions for this task_type, we skip it.
+        if len(evaluation_tasks[task_type]) == 0:
+            evaluation_tasks.pop(task_type)
+    
     template_context = {
       'commit_tag': COMMIT_TAG,
       'evaluation_tasks': evaluation_tasks,

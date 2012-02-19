@@ -530,7 +530,20 @@ class EvaluationResult(models.Model):
         """
         Renders this EvaluationResult as Quality Checking XML String.
         """
-        pass
+        template = get_template('evaluation/result_quality_checking.xml')
+        
+        _attr = self.item.attributes.items()
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
+        
+        context = {
+          'attributes': attributes,
+          'duration': '{}'.format(self.duration),
+          'result': self.results,
+          'skipped': self.results is None,
+          'user': self.user,
+        }
+        
+        return template.render(Context(context))
     
     def export_to_ranking_xml(self):
         """
@@ -551,9 +564,14 @@ class EvaluationResult(models.Model):
                 _rank = self.results[index]
                 translations.append((_attr, _rank))
         
-        context = {'attributes': attributes, 'user': self.user,
-          'duration': '{}'.format(self.duration), 'skipped': skipped,
-          'translations': translations}
+        context = {
+          'attributes': attributes,
+          'duration': '{}'.format(self.duration),
+          'skipped': skipped,
+          'translations': translations,
+          'user': self.user,
+        }
+        
         return template.render(Context(context))
     
     def export_to_postediting_xml(self):
@@ -579,11 +597,17 @@ class EvaluationResult(models.Model):
         _attr = self.item.translations[int(edit_id)][1].items()
         _export_attr = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
-        context = {'attributes': attributes, 'user': self.user,
-          'duration': '{}'.format(self.duration), 'skipped': skipped,
-          'from_scratch': from_scratch, 'edit_id': edit_id,
+        context = {
+          'attributes': attributes,
+          'duration': '{}'.format(self.duration),
+          'edit_id': edit_id,
+          'from_scratch': from_scratch,
+          'postedited': postedited.encode('utf-8'),
+          'skipped': skipped,
           'translation_attributes': _export_attr,
-          'postedited': postedited.encode('utf-8')}
+          'user': self.user,
+        }
+        
         return template.render(Context(context))
     
     def export_to_error_classification_xml(self):
@@ -618,15 +642,34 @@ class EvaluationResult(models.Model):
         
         skipped = self.results is None
         
-        context = {'attributes': attributes, 'user': self.user,
-          'duration': '{}'.format(self.duration), 'skipped': skipped,
-          'too_many_errors': too_many_errors, 'missing_words': missing_words,
-          'errors': errors}
+        context = {
+          'attributes': attributes,
+          'duration': '{}'.format(self.duration),
+          'errors': errors,
+          'missing_words': missing_words,
+          'skipped': skipped,
+          'too_many_errors': too_many_errors,
+          'user': self.user,
+        }
+        
         return template.render(Context(context))
     
     def export_to_three_way_ranking_xml(self):
         """
         Renders this EvaluationResult as 3-Way Ranking XML String.
         """
-        pass
-    
+        template = get_template('evaluation/result_three_way_ranking.xml')
+        
+        _attr = self.item.attributes.items()
+        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
+        
+        context = {
+          'attributes': attributes,
+          'duration': '{}'.format(self.duration),
+          'result': self.results,
+          'skipped': self.results is None,
+          'user': self.user,
+        }
+        
+        return template.render(Context(context))
+

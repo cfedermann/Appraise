@@ -1,0 +1,3 @@
+{% if skipped %}  <quality-checking-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}" skipped="true" />
+{% else %}  <quality-checking-item{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}" result="{{result}}" />
+{% endif %}

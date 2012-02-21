@@ -19,7 +19,7 @@
 {% if reference_text.1 %}
 <div class="span5">
 <blockquote>
-<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1|safe}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>
@@ -32,7 +32,7 @@
 {% else %}
 <div class="span12">
 <blockquote>
-<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1|safe}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>

@@ -58,9 +58,13 @@ def export_feature_vectors(modeladmin, request, queryset):
         
         _classes = ('YES', 'YES')
         if result.raw_result == 'SKIPPED':
+            # We do not use skipped results at the moment.
+            continue
             _classes = ('NO', 'NO')
+        
         elif result.raw_result == 'A>B':
             _classes = ('YES', 'NO')
+        
         elif result.raw_result == 'A<B':
             _classes = ('NO', 'YES')
         

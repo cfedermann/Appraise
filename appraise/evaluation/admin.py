@@ -71,8 +71,8 @@ def export_feature_vectors(modeladmin, request, queryset):
         featuresB = []
         for index in range(12):
             _feature = 'feat{}'.format(index)
-            featuresA.append(str(getattr(translationA_attr, _feature, 0)))
-            featuresB.append(str(getattr(translationB_attr, _feature, 0)))
+            featuresA.append(translationA_attr.get(_feature, '0'))
+            featuresB.append(translationB_attr.get(_feature, '0'))
         
         featuresA.append(_classes[0])
         featuresB.append(_classes[1])

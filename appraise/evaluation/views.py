@@ -464,6 +464,17 @@ def _handle_three_way_ranking(request, task, items):
 
     # Compute source and reference texts including context where possible.
     source_text, reference_text = _compute_context_for_item(item)
+    
+    # Replace [[[markup]]] with proper HTML markup in the current sentence
+    # only.  To avoid confusion, we delete the [[[markup]]] from the context.
+    if source_text[0]:
+        source_text[0] = source_text[0].replace('[[[', '').replace(']]]', '')
+    
+    source_text[1] = source_text[1].replace('[[[', '<code>')
+    source_text[1] = source_text[1].replace(']]]', '</code>')
+    
+    if source_text[2]:
+        source_text[2] = source_text[2].replace('[[[', '').replace(']]]', '')
 
     # Retrieve the number of finished items for this user and the total number
     # of items for this task. We increase finished_items by one as we are
@@ -491,7 +502,7 @@ def _handle_three_way_ranking(request, task, items):
       'reference_text': reference_text,
       'source_text': source_text,
       'task_progress': '{0:03d}/{1:03d}'.format(finished_items, total_items),
-      'title': 'Ranking',
+      'title': '3-Way Ranking',
       'translations': translations,
     }
     

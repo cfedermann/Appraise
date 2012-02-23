@@ -523,10 +523,6 @@ def task_handler(request, task_id):
     task = get_object_or_404(EvaluationTask, task_id=task_id)
     items = EvaluationItem.objects.filter(task=task)
     if not items:
-        # Make sure that completed tasks are auto-deactivated.
-        task.active = False
-        task.save()
-        
         return redirect('appraise.evaluation.views.overview')
     
     _task_type = task.get_task_type_display()

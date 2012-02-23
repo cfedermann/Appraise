@@ -115,6 +115,7 @@ class EvaluationTask(models.Model):
     users = models.ManyToManyField(
       User,
       blank=True,
+      db_index=True,
       null=True,
       help_text="(Optional) Users allowed to work on this evaluation task."
     )
@@ -370,7 +371,10 @@ class EvaluationItem(models.Model):
     """
     Evaluation Item object model.
     """
-    task = models.ForeignKey(EvaluationTask)
+    task = models.ForeignKey(
+      EvaluationTask,
+      db_index=True
+    )
     
     item_xml = models.TextField(
       help_text="XML source for this evaluation item.",
@@ -449,8 +453,15 @@ class EvaluationResult(models.Model):
     """
     Evaluation Result object model.
     """
-    item = models.ForeignKey(EvaluationItem)
-    user = models.ForeignKey(User)
+    item = models.ForeignKey(
+      EvaluationItem,
+      db_index=True
+    )
+    
+    user = models.ForeignKey(
+      User,
+      db_index=True
+    )
     
     duration = models.TimeField(blank=True, null=True, editable=False)
     

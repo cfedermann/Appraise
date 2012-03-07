@@ -143,9 +143,6 @@ class EvaluationTask(models.Model):
         
         if not self.task_id:
             self.task_id = self.__class__._create_task_id()
-        
-        # If a task_xml file is available, populate self.task_attributes.
-        self.reload_dynamic_fields()
     
     def __unicode__(self):
         """
@@ -300,6 +297,9 @@ class EvaluationTask(models.Model):
         
         # pylint: disable-msg=E1101
         _task_type = self.get_task_type_display().lower().replace(' ', '-')
+        
+        # If a task_xml file is available, populate self.task_attributes.
+        self.reload_dynamic_fields()
         
         _attr = self.task_attributes.items()
         attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
@@ -603,7 +603,9 @@ class EvaluationResult(models.Model):
         _attr = self.item.attributes.items()
         attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
-        if self.results:
+        skipped = self.results is None
+        
+        if not skipped:
             from_scratch = self.results[0] == 'FROM_SCRATCH'
             if from_scratch:
                 edit_id = self.results[1]
@@ -611,10 +613,15 @@ class EvaluationResult(models.Model):
                 edit_id = self.results[0]
             
             postedited = self.results[-1]
+            
+            _attr = self.item.translations[int(edit_id)][1].items()
         
-        skipped = self.results is None
-        
-        _attr = self.item.translations[int(edit_id)][1].items()
+        else:
+            from_scratch = False
+            edit_id = None
+            postedited = ''
+            _attr = []
+
         _export_attr = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         context = {

@@ -119,6 +119,13 @@ class EvaluationTask(models.Model):
       null=True,
       help_text="(Optional) Users allowed to work on this evaluation task."
     )
+    
+    random = models.BooleanField(
+      db_index=True,
+      default=True,
+      help_text="Indicates that the items of this evaluation task should appear in random order",
+      verbose_name="Random?"
+    )
 
     active = models.BooleanField(
       db_index=True,
@@ -126,6 +133,9 @@ class EvaluationTask(models.Model):
       help_text="Indicates that this evaluation task is still in use.",
       verbose_name="Active?"
     )
+    
+    
+
 
     class Meta:
         """

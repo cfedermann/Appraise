@@ -110,7 +110,7 @@ class EvaluationTaskAdmin(admin.ModelAdmin):
       }),
       ('Optional Information', {
         'classes': ('wide',),
-        'fields': ('active', 'description', 'users')
+        'fields': ('active', 'random_order', 'description', 'users')
       })
     )
     

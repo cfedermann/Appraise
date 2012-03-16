@@ -102,7 +102,7 @@ class EvaluationTask(models.Model):
       validators=[validate_source_xml_file],
       verbose_name="Task XML source"
     )
-    
+
     # This is derived from task_xml and NOT stored in the database.
     task_attributes = {}
 
@@ -119,12 +119,12 @@ class EvaluationTask(models.Model):
       null=True,
       help_text="(Optional) Users allowed to work on this evaluation task."
     )
-    
-    random = models.BooleanField(
+
+    random_order = models.BooleanField(
       db_index=True,
-      default=True,
-      help_text="Indicates that the items of this evaluation task should appear in random order",
-      verbose_name="Random?"
+      default=False,
+      help_text="Should items from this task be shown in random order?",
+      verbose_name="Random order?"
     )
 
     active = models.BooleanField(
@@ -133,8 +133,6 @@ class EvaluationTask(models.Model):
       help_text="Indicates that this evaluation task is still in use.",
       verbose_name="Active?"
     )
-    
-    
 
 
     class Meta:

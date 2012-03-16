@@ -54,7 +54,9 @@ def _find_next_item_to_process(items, user, random_order=False):
     user_results = EvaluationResult.objects.filter(user=user)
     
     processed_items = user_results.values_list('item__pk', flat=True)
-    unprocessed_items = items.exclude(pk__in=processed_items)
+    
+    # cfedermann: this might be sub optimal wrt. performance!
+    unprocessed_items = list(items.exclude(pk__in=processed_items))
     
     if random_order:
         shuffle(unprocessed_items)

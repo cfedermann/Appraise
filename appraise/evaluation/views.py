@@ -47,7 +47,7 @@ def _save_results(item, user, duration, raw_result):
     _result.save()
 
 
-def _find_next_item_to_process(items, user, random=False):
+def _find_next_item_to_process(items, user, random_order=False):
     """
     Computes the next item the current user should process or None, if done.
     """
@@ -56,7 +56,7 @@ def _find_next_item_to_process(items, user, random=False):
     processed_items = user_results.values_list('item__pk', flat=True)
     unprocessed_items = items.exclude(pk__in=processed_items)
     
-    if random:
+    if random_order:
         shuffle(unprocessed_items)
     
     if unprocessed_items:
@@ -219,7 +219,7 @@ def _handle_ranking(request, task, items):
         _save_results(current_item, request.user, duration, _raw_result)
     
     # Find next item the current user should process or return to overview.
-    item = _find_next_item_to_process(items, request.user, task.random)
+    item = _find_next_item_to_process(items, request.user, task.random_order)
     if not item:
         return redirect('appraise.evaluation.views.overview')
 

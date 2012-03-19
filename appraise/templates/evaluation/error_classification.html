@@ -19,7 +19,7 @@ $(document).ready(function() {
     $('#edit_'+i).hide();
     $('#view_'+i).html('<em>Click to classify errors for this word...</em>');
   }
-  $('input[name="now"]').val(Date.now()/1000.0);
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
 });
 
 function update_error_summary()
@@ -107,6 +107,11 @@ function toggle_checkbox(input_name)
   }
 }
 
+function add_end_timestamp()
+{
+  $('input[name="end_timestamp"]').val(Date.now()/1000.0);
+}
+
 function reset_form()
 {
   $('input[name="missing_words"]').removeAttr('checked');
@@ -124,7 +129,7 @@ function reset_form()
     }
   }
   $('#error_summary').html('<em>No errors classified yet...</em>');
-  $('input[name="now"]').val(Date.now()/1000.0);
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
 }
 
 function validate_form()
@@ -192,10 +197,11 @@ function validate_form()
 </div>
 </div>
 
-<form action="{{action_url}}" method="post">
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
 
+<input name="end_timestamp" type="hidden" value="" />
 <input name="item_id" type="hidden" value="{{item_id}}" />
-<input name="now" type="hidden" value="{{now}}" />
+<input name="start_timestamp" type="hidden" value="" />
 <input name="words" type="hidden" value="{{words|length}}" />
 
 <input name="missing_words" type="checkbox" value="MISSING_WORDS" />

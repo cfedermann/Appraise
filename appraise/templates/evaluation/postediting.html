@@ -13,7 +13,7 @@ $(document).ready(function() {
 {% else %}
   $('textarea[name="postedited"]').html($('input[name="translation"]').val());
 {% endif %}
-  $('input[name="now"]').val(Date.now()/1000.0);
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
 });
 
 function select_sentence(parent)
@@ -38,6 +38,11 @@ function start_from_scratch()
   $('textarea[name="postedited"]').val('');
 }
 
+function add_end_timestamp()
+{
+  $('input[name="end_timestamp"]').val(Date.now()/1000.0);
+}
+
 function reset_form()
 {
 {% if translations|length > 1 %}
@@ -50,7 +55,7 @@ function reset_form()
 
   $('input[name="from_scratch"]').removeAttr('checked');
   $('input[name="from_scratch"]').attr('disabled', true);
-  $('input[name="now"]').val(Date.now()/1000.0);
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
   selection_done = false;
 }
 
@@ -119,10 +124,11 @@ function on_submit_activate_from_scratch_again()
 {% endif %}
 </div>
 
-<form action="{{action_url}}" method="post" onsubmit="javascript:on_submit_activate_from_scratch_again();">
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp;on_submit_activate_from_scratch_again();">
 
+<input name="end_timestamp" type="hidden" value="" />
 <input name="item_id" type="hidden" value="{{item_id}}" />
-<input name="now" type="hidden" value="{{now}}" />
+<input name="start_timestamp" type="hidden" value="" />
 
 {% if translations|length > 1 %}
 <span id="translations">

@@ -8,7 +8,7 @@ $(document).ready(function() {
   $('input[name="start_timestamp"]').val(Date.now()/1000.0);
 });
 
-function add_submit_timestamp()
+function add_end_timestamp()
 {
   $('input[name="end_timestamp"]').val(Date.now()/1000.0);
 }
@@ -73,12 +73,12 @@ function validate_form()
 {% endif %}
 </div>
 
-<form action="{{action_url}}" method="post" onsubmit="javascript:add_submit_timestamp();">
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
 
+<input name="end_timestamp" type="hidden" value="" />
 <input name="item_id" type="hidden" value="{{item_id}}" />
 <input name="start_timestamp" type="hidden" value="" />
 <input name="order" type="hidden" value="{{order}}" />
-<input name="end_timestamp" type="hidden" value="" />
 
 <span id="translations">
 {% for translation in translations %}

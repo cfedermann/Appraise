@@ -200,12 +200,6 @@ def _handle_ranking(request, task, items):
         end_datetime = datetime.fromtimestamp(float(end_timestamp))
         duration = end_datetime - start_datetime
         
-        LOGGER.debug('start_timestamp: {}'.format(start_timestamp))
-        LOGGER.debug('start__datetime: {}'.format(start_datetime))
-        LOGGER.debug('end_timestamp: {}'.format(end_timestamp))
-        LOGGER.debug('end_datetime: {}'.format(end_datetime))
-        LOGGER.debug('duration: {}'.format(duration))
-        
         # Initialise order from order_random.
         order = [int(x) for x in order_random.split(',')]
         
@@ -273,21 +267,23 @@ def _handle_postediting(request, task, items):
     and creates an EvaluationResult instance on HTTP POST submission.
     
     """
-    now = datetime.now()
-    
     if request.method == "POST":
         item_id = request.POST.get('item_id')
         edit_id = request.POST.get('edit_id', 0)
+        end_timestamp = request.POST.get('end_timestamp', None)
         submit_button = request.POST.get('submit_button')
         from_scratch = request.POST.get('from_scratch')
         postedited = request.POST.get('postedited', 'EMPTY')
-        _now = request.POST.get('now')
+        start_timestamp = request.POST.get('start_timestamp', None)
         
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
+        # Compute duration for this item.
         duration = None
-        if _now:
-            duration = now - datetime.fromtimestamp(float(_now))
+        if end_timestamp and start_timestamp:
+            start_datetime = datetime.fromtimestamp(float(start_timestamp))
+            end_datetime = datetime.fromtimestamp(float(end_timestamp))
+            duration = end_datetime - start_datetime
         
         print
         print "item_id: {0}".format(item_id)
@@ -322,7 +318,6 @@ def _handle_postediting(request, task, items):
     
     dictionary = {'title': 'Post-editing', 'item_id': item.id,
       'source_text': source_text, 'reference_text': reference_text,
-      'now': mktime(datetime.now().timetuple()),
       'translations': item.translations,
       'description': task.description,
       'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
@@ -340,22 +335,24 @@ def _handle_error_classification(request, task, items):
     and creates an EvaluationResult instance on HTTP POST submission.
     
     """
-    now = datetime.now()
-    
     if request.method == "POST":
+        end_timestamp = request.POST.get('start_timestamp', None)
         item_id = request.POST.get('item_id')
         words = request.POST.get('words')
         missing_words = request.POST.get('missing_words')
         too_many_errors = request.POST.get('too_many_errors')
+        start_timestamp = request.POST.get('start_timestamp', None)
         submit_button = request.POST.get('submit_button')
-        _now = request.POST.get('now')
         
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
+        # Compute duration for this item.
         duration = None
-        if _now:
-            duration = now - datetime.fromtimestamp(float(_now))
-
+        if end_timestamp and start_timestamp:
+            start_datetime = datetime.fromtimestamp(float(start_timestamp))
+            end_datetime = datetime.fromtimestamp(float(end_timestamp))
+            duration = end_datetime - start_datetime
+        
         errors = {}
         if words:
             for index in range(int(words)):
@@ -407,7 +404,6 @@ def _handle_error_classification(request, task, items):
     words = item.translations[0][0].split(' ')
     dictionary = {'title': 'Error Classification', 'item_id': item.id,
       'source_text': source_text, 'reference_text': reference_text,
-      'now': mktime(datetime.now().timetuple()),
       'translation': translation,
       'words': words,
       'description': task.description,

@@ -124,7 +124,7 @@ function on_submit_activate_from_scratch_again()
 {% endif %}
 </div>
 
-<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp;on_submit_activate_from_scratch_again();">
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();on_submit_activate_from_scratch_again();">
 
 <input name="end_timestamp" type="hidden" value="" />
 <input name="item_id" type="hidden" value="{{item_id}}" />

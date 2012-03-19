@@ -5,18 +5,18 @@
 <script>
 <!--
 $(document).ready(function() {
-  $('input[name="now"]').val(Date.now()/1000.0);
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
 });
 
 function add_submit_timestamp()
 {
-  $('input[name="submitted"]').val(Date.now()/1000.0);
+  $('input[name="end_timestamp"]').val(Date.now()/1000.0);
 }
 
 function reset_form()
 {
   $('#translations input[type="radio"]').removeAttr('checked');
-  $('input[name="now"]').val(Date.now()/1000.0);
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
 }
 
 function validate_form()

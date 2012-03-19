@@ -257,7 +257,7 @@ class EvaluationTask(models.Model):
         _results = EvaluationResult.objects.filter(user=user, item__task=self)
         _durations = _results.values_list('duration', flat=True)
         
-        _durations = [datetime_to_seconds(d) for d in _durations]
+        _durations = [datetime_to_seconds(d) for d in _durations if d]
         _average_duration = reduce(lambda x, y: (x+y)/2.0, _durations, 0)
         
         _status.append('{:.2f} sec'.format(_average_duration))

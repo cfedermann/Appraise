@@ -176,19 +176,19 @@ def _handle_ranking(request, task, items):
     and creates an EvaluationResult instance on HTTP POST submission.
     
     """
-    start_datetime = datetime.now()
     form_valid = False
     
     # If the request has been submitted via HTTP POST, extract data from it.
     if request.method == "POST":
         item_id = request.POST.get('item_id', None)
-        now_timestamp = request.POST.get('now', None)
+        end_timestamp = request.POST.get('end_timestamp', None)
         order_random = request.POST.get('order', None)
+        start_timestamp = request.POST.get('start_timestamp', None)
         submit_button = request.POST.get('submit_button', None)
         
         # The form is only valid if all variables could be found.
-        form_valid = all((item_id, now_timestamp, order_random,
-          submit_button))
+        form_valid = all((item_id, end_timestamp, order_random,
+          start_timestamp, submit_button))
     
     # If the form is valid, we have to save the results to the database.
     if form_valid:
@@ -196,8 +196,15 @@ def _handle_ranking(request, task, items):
         current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
         
         # Compute duration for this item.
-        now_datetime = datetime.fromtimestamp(float(now_timestamp))
-        duration = start_datetime - now_datetime
+        start_datetime = datetime.fromtimestamp(float(start_timestamp))
+        end_datetime = datetime.fromtimestamp(float(end_timestamp))
+        duration = end_datetime - start_datetime
+        
+        LOGGER.debug('start_timestamp: {}'.format(start_timestamp))
+        LOGGER.debug('start__datetime: {}'.format(start_datetime))
+        LOGGER.debug('end_timestamp: {}'.format(end_timestamp))
+        LOGGER.debug('end_datetime: {}'.format(end_datetime))
+        LOGGER.debug('duration: {}'.format(duration))
         
         # Initialise order from order_random.
         order = [int(x) for x in order_random.split(',')]
@@ -246,7 +253,6 @@ def _handle_ranking(request, task, items):
       'commit_tag': COMMIT_TAG,
       'description': task.description,
       'item_id': item.id,
-      'now': mktime(datetime.now().timetuple()),
       'order': ','.join([str(x) for x in order]),
       'reference_text': reference_text,
       'source_text': source_text,

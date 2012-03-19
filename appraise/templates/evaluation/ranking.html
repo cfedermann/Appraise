@@ -8,6 +8,11 @@ $(document).ready(function() {
   $('input[name="now"]').val(Date.now()/1000.0);
 });
 
+function add_submit_timestamp()
+{
+  $('input[name="submitted"]').val(Date.now()/1000.0);
+}
+
 function reset_form()
 {
   $('#translations input[type="radio"]').removeAttr('checked');
@@ -68,11 +73,12 @@ function validate_form()
 {% endif %}
 </div>
 
-<form action="{{action_url}}" method="post">
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_submit_timestamp();">
 
 <input name="item_id" type="hidden" value="{{item_id}}" />
-<input name="now" type="hidden" value="{{now}}" />
+<input name="start_timestamp" type="hidden" value="" />
 <input name="order" type="hidden" value="{{order}}" />
+<input name="end_timestamp" type="hidden" value="" />
 
 <span id="translations">
 {% for translation in translations %}

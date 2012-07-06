@@ -620,23 +620,22 @@ def status_view(request, task_id=None):
         for user in task.users.all():
             status.append((user.username, task.get_status_for_user(user)))
         
+        result_data = []
+        users = list(task.users.all())
+        
+        for item in EvaluationItem.objects.filter(task=task):
+            results = []
+            for user in users:
+                q = EvaluationResult.objects.filter(user=user, item=item)
+                if q.exists():
+                    category = str(q[0].results)
+                    results.append((user.id, item.id, category))
+            
+            if len(results) == len(users):
+                result_data.extend(results)
+        
         try:
-            result_data = []
-            
             from nltk.metrics.agreement import AnnotationTask
-            
-            users = list(task.users.all())
-            
-            for item in EvaluationItem.objects.filter(task=task):
-                results = []
-                for user in users:
-                    q = EvaluationResult.objects.filter(user=user, item=item)
-                    if q.exists():
-                        category = str(q[0].results)
-                        results.append((user.id, item.id, category))
-                
-                if len(results) == len(users):
-                    result_data.extend(results)
             
             annotation_task = AnnotationTask(result_data)
             

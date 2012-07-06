@@ -604,7 +604,7 @@ def overview(request):
 
 
 @staff_member_required
-def status(request, task_id=None):
+def status_view(request, task_id=None):
     """
     Renders the evaluation tasks status page for staff users.
     """

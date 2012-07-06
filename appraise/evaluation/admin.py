@@ -46,7 +46,7 @@ class EvaluationTaskAdmin(admin.ModelAdmin):
     list_filter = ('task_type', 'active')
     search_fields = ('task_name', 'description')
     readonly_fields = ('task_id',)
-    actions = (export_task_xml, export_feature_vectors)
+    actions = (export_task_xml,)
     filter_horizontal = ('users',)
     
     fieldsets = (

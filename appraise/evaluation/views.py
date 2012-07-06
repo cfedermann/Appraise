@@ -604,48 +604,70 @@ def overview(request):
 
 
 @staff_member_required
-def status(request):
+def status(request, task_id=None):
     """
     Renders the evaluation tasks status page for staff users.
     """
     LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
       request.user.username))
+    
+    if task_id:
+        task = get_object_or_404(EvaluationTask, task_id=task_id)
+        
+        headers = task.get_status_header()
+        users = []
+        
+        for user in task.users.all():
+            _data = (user.username, task.get_status_for_user(user))
+            users.append(_data)
+        
+        dictionary = {
+          'combined': task.get_status_for_users(),
+          'commit_tag': COMMIT_TAG,
+          'headers': headers,
+          'users': users,
+          'task_name': task.task_name,
+          'title': 'Evaluation Task Status',
+        }
 
-    evaluation_tasks = {}
-    for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
-        # We collect a list of task descriptions for this task_type.
-        evaluation_tasks[task_type] = []
+        return render(request, 'evaluation/status_task.html', dictionary)
+    
+    else:
+        evaluation_tasks = {}
+        for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
+            # We collect a list of task descriptions for this task_type.
+            evaluation_tasks[task_type] = []
         
-        # Super users see all EvaluationTask items, even non-active ones.
-        if request.user.is_superuser:
-            _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
+            # Super users see all EvaluationTask items, even non-active ones.
+            if request.user.is_superuser:
+                _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
         
-        else:
-            _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
-              active=True)
+            else:
+                _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
+                  active=True)
         
-        # Loop over the QuerySet and compute task description data.
-        for _task in _tasks:
-            _task_data = {
-              'finished': _task.is_finished_for_user(request.user),
-              'header': _task.get_status_header,
-              'status': _task.get_status_for_users(),
-              'task_name': _task.task_name,
-              'url': _task.get_absolute_url(),
-            }
+            # Loop over the QuerySet and compute task description data.
+            for _task in _tasks:
+                _task_data = {
+                  'finished': _task.is_finished_for_user(request.user),
+                  'header': _task.get_status_header,
+                  'status': _task.get_status_for_users(),
+                  'task_name': _task.task_name,
+                  'url': _task.get_status_url(),
+                }
             
-            # Append new task description to current task_type list.
-            evaluation_tasks[task_type].append(_task_data)
+                # Append new task description to current task_type list.
+                evaluation_tasks[task_type].append(_task_data)
         
-        # If there are no tasks descriptions for this task_type, we skip it.
-        if len(evaluation_tasks[task_type]) == 0:
-            evaluation_tasks.pop(task_type)
+            # If there are no tasks descriptions for this task_type, we skip it.
+            if len(evaluation_tasks[task_type]) == 0:
+                evaluation_tasks.pop(task_type)
 
-    dictionary = {
-      'active_page': "STATUS",
-      'commit_tag': COMMIT_TAG,
-      'evaluation_tasks': evaluation_tasks,
-      'title': 'Evaluation Task Overview',
-    }
+        dictionary = {
+          'active_page': "STATUS",
+          'commit_tag': COMMIT_TAG,
+          'evaluation_tasks': evaluation_tasks,
+          'title': 'Evaluation Task Status',
+        }
 
-    return render(request, 'evaluation/overview.html', dictionary)
+        return render(request, 'evaluation/status.html', dictionary)

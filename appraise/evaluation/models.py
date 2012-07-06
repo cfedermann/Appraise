@@ -198,6 +198,14 @@ class EvaluationTask(models.Model):
         kwargs = {'task_id': self.task_id}
         return reverse(task_handler_view, kwargs=kwargs)
     
+    def get_status_url(self):
+        """
+        Returns the status URL for this EvaluationTask object instance.
+        """
+        status_handler_view = 'appraise.evaluation.views.status'
+        kwargs = {'task_id': self.task_id}
+        return reverse(status_handler_view, kwargs=kwargs)
+    
     def reload_dynamic_fields(self):
         """
         Reloads task_attributes from self.task_xml contents.

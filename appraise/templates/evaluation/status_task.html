@@ -28,4 +28,24 @@
 </table>
 </div>
 </div>
+{% if scores %}
+<div class="row">
+<div class="span12">
+<h3>Inter-annotator Agreement</h3>
+<table class="table table-striped table-bordered">
+<tr>
+  <th style="width: 25%;">Krippendorff's Alpha</th>
+  <th style="width: 25%;">Cohen's Kappa</th>
+  <th style="width: 25%;">Bennet's S</th>
+  <th style="width: 25%;">Scott's Pi</th>
+</tr>
+<tr>
+{% for score in scores %}
+  <td>{% if score %}{{score}}{% else %}N/A{% endif %}</td>
+{% endfor %}
+</tr>
+</table>
+</div>
+</div>
+{% endif %}
 {% endblock %}

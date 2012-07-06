@@ -624,6 +624,7 @@ def status_view(request, task_id=None):
           'combined': task.get_status_for_users(),
           'commit_tag': COMMIT_TAG,
           'headers': headers,
+          'scores': None,
           'status': status,
           'task_name': task.task_name,
           'title': 'Evaluation Task Status',

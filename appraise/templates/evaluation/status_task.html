@@ -48,4 +48,13 @@
 </div>
 </div>
 {% endif %}
+
+{% if result_data %}
+<div class="row">
+<div class="span12">
+<h3>Agreement Data</h3>
+<pre>{{result_data}}</pre>
+</div>
+</div>
+{% endif %}
 {% endblock %}

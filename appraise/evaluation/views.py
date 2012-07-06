@@ -620,11 +620,45 @@ def status_view(request, task_id=None):
         for user in task.users.all():
             status.append((user.username, task.get_status_for_user(user)))
         
+        try:
+            result_data = []
+            
+            from nltk.metrics.agreement import AnnotationTask
+            
+            users = list(task.users.all())
+            
+            for item in EvaluationItem.objects.filter(task=task):
+                results = []
+                for user in users:
+                    q = EvaluationResult.objects.filter(user=user, item=item)
+                    if q.exists():
+                        category = str(q[0].results)
+                        results.append((user.id, item.id, category))
+                
+                if len(results) == len(users):
+                    result_data.extend(results)
+            
+            annotation_task = AnnotationTask(result_data)
+            
+            scores = (
+              annotation_task.alpha(),
+              annotation_task.kappa(),
+              annotation_task.S(),
+              annotation_task.pi()
+            )
+        
+        except ZeroDivisionError:
+            scores = None
+        
+        except ImportError:
+            scores = None
+        
         dictionary = {
           'combined': task.get_status_for_users(),
           'commit_tag': COMMIT_TAG,
           'headers': headers,
-          'scores': None,
+          'scores': scores,
+          'result_data': result_data,
           'status': status,
           'task_name': task.task_name,
           'title': 'Evaluation Task Status',

@@ -615,17 +615,16 @@ def status(request, task_id=None):
         task = get_object_or_404(EvaluationTask, task_id=task_id)
         
         headers = task.get_status_header()
-        users = []
+        status = []
         
         for user in task.users.all():
-            _data = (user.username, task.get_status_for_user(user))
-            users.append(_data)
+            status.append((user.username, task.get_status_for_user(user)))
         
         dictionary = {
           'combined': task.get_status_for_users(),
           'commit_tag': COMMIT_TAG,
           'headers': headers,
-          'users': users,
+          'status': status,
           'task_name': task.task_name,
           'title': 'Evaluation Task Status',
         }

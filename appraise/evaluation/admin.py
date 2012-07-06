@@ -38,61 +38,6 @@ def export_task_xml(modeladmin, request, queryset):
 export_task_xml.short_description = "Export selected tasks to XML"
 
 
-def export_feature_vectors(modeladmin, request, queryset):
-    """
-    Exports feature vectors for the tasks in the given query to download.
-    """
-    feature_vectors = []
-    
-    results = []
-    for task in queryset:
-        if isinstance(task, EvaluationTask) and task.task_type == '5':
-            for item in EvaluationItem.objects.filter(task=task):
-                for _result in item.evaluationresult_set.all():
-                    results.append(_result.id)
-    
-    for result_id in results:
-        result = EvaluationResult.objects.get(pk=result_id)
-        if not result:
-            continue
-        
-        _classes = ('YES', 'YES')
-        if result.raw_result == 'SKIPPED':
-            _classes = ('NO', 'NO')
-        
-        elif result.raw_result == 'A>B':
-            _classes = ('YES', 'NO')
-        
-        elif result.raw_result == 'A<B':
-            _classes = ('NO', 'YES')
-        
-        translationA_attr = result.item.translations[0][1]
-        translationB_attr = result.item.translations[1][1]
-        
-        featuresA = []
-        featuresB = []
-        for index in range(12):
-            _feature = 'feat{}'.format(index+1)
-            featuresA.append(translationA_attr.get(_feature, '0'))
-            featuresB.append(translationB_attr.get(_feature, '0'))
-        
-        featuresA.append(_classes[0])
-        featuresB.append(_classes[1])
-                
-        feature_vectors.append('\t'.join(tuple(featuresA)))
-        feature_vectors.append('\t'.join(tuple(featuresB)))
-    
-    features_filename = 'exported-features-{}-{}'.format(request.user,
-      date.today())
-    response = HttpResponse('\n'.join(feature_vectors), mimetype='text/plain')
-    response['Content-Disposition'] = 'attachment; filename="{}.data"'.format(
-      features_filename)
-    return response
-
-export_feature_vectors.short_description = 'Export feature vectors for ' \
-  'selected tasks'
-
-
 class EvaluationTaskAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for EvaluationTask objects.

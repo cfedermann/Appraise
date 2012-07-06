@@ -1,0 +1,32 @@
+<set id="spiegel-20120210" source-language="ger" target-language="eng">
+    <seg id="1" doc-id="source-text.de.txt">
+      <source>In der syrischen Stadt Aleppo sind nach staatlichen Angaben mehrere große Sprengsätze detoniert, offenbar vor zwei Einrichtungen der Sicherheitskräfte.</source>
+      <translation system="google">In the Syrian city of Aleppo after government data several large bombs are detonated, apparently, two institutions of the security forces.</translation>
+      <translation system="bing">In Aleppo, Syria, Syrian several large explosive devices are detonates according to State, apparently before two installations of the security forces.</translation>
+      <translation system="yahoo">In the Syrian city Aleppo detonated according to national instructions several large explosive devices, obviously before two mechanisms of the security forces.</translation>
+    </seg>
+    <seg id="2" doc-id="source-text.de.txt">
+      <source>Die Nachrichtenagentur Sana meldet, die Terroranschläge hätten einem Gebäude des Militärgeheimdienstes und dem Sitz der Ordnungspolizei gegolten.</source>
+      <translation system="google">The news agency Sana reported that terrorist attacks would have been considered a building of military intelligence and the seat of the Order Police.</translation>
+      <translation system="bing">The news agency Sana reports the terrorist attacks would have applied a building of military intelligence, and the seat of the Ordnungspolizei.</translation>
+      <translation system="yahoo">The press agency Sana announces, the terrorist attacks would have been valid a building of the military secret service and the seat of the order police.</translation>
+    </seg>
+    <seg id="3" doc-id="source-text.de.txt">
+      <source>Es habe mehrere "Märtyrer" gegeben.</source>
+      <translation system="google">There have been several &quot;martyrs&quot;.</translation>
+      <translation system="bing">There have been several "martyrs".</translation>
+      <translation system="yahoo">It &quot; several; Märtyrer&quot; given.</translation>
+    </seg>
+    <seg id="4" doc-id="source-text.de.txt">
+      <source>Nach Angaben des Staatsfernsehens kamen 25 Menschen ums Leben, demnach gibt es 175 Verletzte.</source>
+      <translation system="google">According to state television 25 people died and therefore there are 175 injured.</translation>
+      <translation system="bing">According to data of State television, 25 people came, therefore, there are 175 injured.</translation>
+      <translation system="yahoo">To data of public television 25 humans died, therefore give it to 175 injured.</translation>
+    </seg>
+    <seg id="5" doc-id="source-text.de.txt">
+       <source>Unter den Opfern sollen Zivilpersonen und Militärangehörige sein.</source>
+      <translation system="google">Among the victims are to be civilians and military personnel.</translation>
+      <translation system="bing">Civilians and military personnel should be among the victims.</translation>
+      <translation system="yahoo">Among the victims civilians and military member are to be.</translation>
+    </seg>
+</set>

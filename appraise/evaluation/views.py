@@ -638,7 +638,7 @@ def status_view(request, task_id=None):
         try:
             # Computing inter-annotator agreement only makes sense for more
             # than one coder -- otherwise, we only display result_data...
-            if task.users.count() > 1:
+            if len(users) > 1:
                 from nltk.metrics.agreement import AnnotationTask
                 annotation_task = AnnotationTask(result_data)
                 

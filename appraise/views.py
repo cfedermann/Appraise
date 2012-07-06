@@ -6,7 +6,6 @@ Project: Appraise evaluation system
 import logging
 from django.contrib.auth.views import login as LOGIN, logout as LOGOUT
 from django.shortcuts import render
-from django.template import RequestContext
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
 
 # Setup logging support.

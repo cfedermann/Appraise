@@ -202,7 +202,7 @@ class EvaluationTask(models.Model):
         """
         Returns the status URL for this EvaluationTask object instance.
         """
-        status_handler_view = 'appraise.evaluation.views.status'
+        status_handler_view = 'appraise.evaluation.views.status_view'
         kwargs = {'task_id': self.task_id}
         return reverse(status_handler_view, kwargs=kwargs)
     

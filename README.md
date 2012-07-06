@@ -18,6 +18,8 @@ Appraise is an open-source tool for manual evaluation of Machine Translation out
 
 It features an extensible XML import/output format and can easily be adapted to new annotation tasks. The next version of Appraise will also include automatic computation of inter-annotator agreements allowing quick access to evaluation results.
 
+Appraise is available under [an open, BSD-style license][4].
+
 ## How does it look like?
 
 You can see [a deployed version of Appraise here][2]. If you want to play around with it, you will need an account in order to login to the system. I'll be happy to create an account for you, just drop me an email `cfedermann [at] dfki [dot] de`.
@@ -61,3 +63,4 @@ Point your browser to [http://127.0.0.1:8000/appraise/](http://127.0.0.1:8000/ap
 [1]: http://www.statmt.org/mtm12/
 [2]: http://www.dfki.de/appraise/
 [3]: http://www.djangoproject.com/
+[4]: https://raw.github.com/cfedermann/Appraise/master/appraise/LICENSE

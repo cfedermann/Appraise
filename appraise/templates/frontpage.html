@@ -12,7 +12,7 @@
     <h1>Welcome to Appraise!</h1>
     <p>This is the Appraise evaluation system for manual evaluation of machine translation output. It supports collaborative collection of human feedback for evaluation tasks such as <em>Translation Quality Checking</em>, <em>Ranking and Error Classification</em>, and <em>Manual Post-Editing</em>.</p>
 
-    <p><a href="/appraise/evaluation/" class="btn btn-primary btn-large">See evaluation tasks &raquo;</a></p>
+    <p><a href="{% url appraise.evaluation.views.overview %}" class="btn btn-primary btn-large">See evaluation tasks &raquo;</a></p>
   </div>
 
 {% endblock %}

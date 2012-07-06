@@ -12,13 +12,13 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link rel="stylesheet" href="/appraise/site_media/css/bootstrap.css">
+    <link rel="stylesheet" href="{% url appraise.views.frontpage %}site_media/css/bootstrap.css">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link rel="stylesheet" href="/appraise/site_media/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="{% url appraise.views.frontpage %}site_media/css/bootstrap-responsive.css">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -39,15 +39,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/appraise/">Appraise</a>
+          <a class="brand" href="{% url appraise.views.frontpage %}">Appraise</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="/appraise/evaluation/">Overview</a></li>
+              <li class="active"><a href="{% url appraise.evaluation.views.overview %}">Overview</a></li>
 
 {% if user.username %}
-              <li><a href="/appraise/logout/">Logout "{{user.username}}"</a></li>
+              <li><a href="{% url appraise.views.logout %}">Logout "{{user.username}}"</a></li>
 {% else %}
-              <li><a href="/appraise/login/">Login</a></li>
+              <li><a href="{% url appraise.views.login %}">Login</a></li>
 {% endif %}
 
             </ul>
@@ -70,8 +70,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/appraise/site_media/js/jquery.js"></script>
-    <script src="/appraise/site_media/js/bootstrap.js"></script>
+    <script src="{% url appraise.views.frontpage %}site_media/js/jquery.js"></script>
+    <script src="{% url appraise.views.frontpage %}site_media/js/bootstrap.js"></script>
 
   </body>
 </html>

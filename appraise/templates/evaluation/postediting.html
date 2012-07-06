@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-<script src="/appraise/site_media/jquery-1.7.1.min.js"></script>
+<script src="{% url appraise.views.frontpage %}site_media/jquery-1.7.1.min.js"></script>
 <script>
 <!--
 var selection_done = {% if translations|length > 1 %}false{% else %}true{% endif %};

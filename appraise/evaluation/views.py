@@ -612,6 +612,34 @@ def status(request):
       request.user.username))
 
     evaluation_tasks = {}
+    for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
+        # We collect a list of task descriptions for this task_type.
+        evaluation_tasks[task_type] = []
+        
+        # Super users see all EvaluationTask items, even non-active ones.
+        if request.user.is_superuser:
+            _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
+        
+        else:
+            _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
+              active=True)
+        
+        # Loop over the QuerySet and compute task description data.
+        for _task in _tasks:
+            _task_data = {
+              'finished': _task.is_finished_for_user(request.user),
+              'header': _task.get_status_header,
+              'status': _task.get_status_for_users(),
+              'task_name': _task.task_name,
+              'url': _task.get_absolute_url(),
+            }
+            
+            # Append new task description to current task_type list.
+            evaluation_tasks[task_type].append(_task_data)
+        
+        # If there are no tasks descriptions for this task_type, we skip it.
+        if len(evaluation_tasks[task_type]) == 0:
+            evaluation_tasks.pop(task_type)
 
     dictionary = {
       'active_page': "STATUS",

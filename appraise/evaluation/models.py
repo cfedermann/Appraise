@@ -295,6 +295,8 @@ class EvaluationTask(models.Model):
               item__task=self).count())
         
         # Minimal number of completed items counts here.
+        if not len(_done):
+            _done = [0]
         _status.append('{0}/{1}'.format(min(_done), _items))
         
         # Compute average duration for this task and all possible users.

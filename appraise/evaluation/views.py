@@ -9,6 +9,7 @@ from datetime import datetime
 from random import randint, seed, shuffle
 from time import mktime
 
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -593,9 +594,30 @@ def overview(request):
             evaluation_tasks.pop(task_type)
     
     dictionary = {
+      'active_page': "OVERVIEW",
       'commit_tag': COMMIT_TAG,
       'evaluation_tasks': evaluation_tasks,
       'title': 'Evaluation Task Overview',
     }
     
+    return render(request, 'evaluation/overview.html', dictionary)
+
+
+@staff_member_required
+def status(request):
+    """
+    Renders the evaluation tasks status page for staff users.
+    """
+    LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
+      request.user.username))
+
+    evaluation_tasks = {}
+
+    dictionary = {
+      'active_page': "STATUS",
+      'commit_tag': COMMIT_TAG,
+      'evaluation_tasks': evaluation_tasks,
+      'title': 'Evaluation Task Overview',
+    }
+
     return render(request, 'evaluation/overview.html', dictionary)

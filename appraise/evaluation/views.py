@@ -637,6 +637,8 @@ def status_view(request, task_id=None):
         try:
             from nltk.metrics.agreement import AnnotationTask
             
+            # We have to sort annotation data to prevent StopIterator errors.
+            result_data.sort()
             annotation_task = AnnotationTask(result_data)
             
             scores = (

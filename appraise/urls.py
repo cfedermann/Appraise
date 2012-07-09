@@ -28,6 +28,12 @@ urlpatterns = patterns('',
 
   (r'^appraise/evaluation/(?P<task_id>[a-f0-9]{32})/',
     'appraise.evaluation.views.task_handler'),
+
+  (r'^appraise/status/$', 'appraise.evaluation.views.status_view'),
+
+  (r'^appraise/status/(?P<task_id>[a-f0-9]{32})/',
+    'appraise.evaluation.views.status_view'),
+
 )
 
 if DEBUG:

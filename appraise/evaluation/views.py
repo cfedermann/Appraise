@@ -9,6 +9,7 @@ from datetime import datetime
 from random import randint, seed, shuffle
 from time import mktime
 
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -593,9 +594,119 @@ def overview(request):
             evaluation_tasks.pop(task_type)
     
     dictionary = {
+      'active_page': "OVERVIEW",
       'commit_tag': COMMIT_TAG,
       'evaluation_tasks': evaluation_tasks,
       'title': 'Evaluation Task Overview',
     }
     
     return render(request, 'evaluation/overview.html', dictionary)
+
+
+@staff_member_required
+def status_view(request, task_id=None):
+    """
+    Renders the evaluation tasks status page for staff users.
+    """
+    LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
+      request.user.username))
+    
+    if task_id:
+        task = get_object_or_404(EvaluationTask, task_id=task_id)
+        
+        headers = task.get_status_header()
+        status = []
+        
+        for user in task.users.all():
+            status.append((user.username, task.get_status_for_user(user)))
+        
+        scores = None
+        result_data = []
+        users = list(task.users.all())
+        
+        for item in EvaluationItem.objects.filter(task=task):
+            results = []
+            for user in users:
+                q = EvaluationResult.objects.filter(user=user, item=item)
+                if q.exists():
+                    category = str(q[0].results)
+                    results.append((user.id, item.id, category))
+            
+            if len(results) == len(users):
+                result_data.extend(results)
+        
+        try:
+            # Computing inter-annotator agreement only makes sense for more
+            # than one coder -- otherwise, we only display result_data...
+            if len(users) > 1:
+                from nltk.metrics.agreement import AnnotationTask
+
+                # We have to sort annotation data to prevent StopIterator errors.
+                result_data.sort()
+                annotation_task = AnnotationTask(result_data)
+                
+                scores = (
+                  annotation_task.alpha(),
+                  annotation_task.kappa(),
+                  annotation_task.S(),
+                  annotation_task.pi()
+                )
+        
+        except ZeroDivisionError:
+            scores = None
+        
+        except ImportError:
+            scores = None
+        
+        dictionary = {
+          'combined': task.get_status_for_users(),
+          'commit_tag': COMMIT_TAG,
+          'headers': headers,
+          'scores': scores,
+          'result_data': result_data,
+          'status': status,
+          'task_name': task.task_name,
+          'title': 'Evaluation Task Status',
+        }
+
+        return render(request, 'evaluation/status_task.html', dictionary)
+    
+    else:
+        evaluation_tasks = {}
+        for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
+            # We collect a list of task descriptions for this task_type.
+            evaluation_tasks[task_type] = []
+        
+            # Super users see all EvaluationTask items, even non-active ones.
+            if request.user.is_superuser:
+                _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
+        
+            else:
+                _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
+                  active=True)
+        
+            # Loop over the QuerySet and compute task description data.
+            for _task in _tasks:
+                _task_data = {
+                  'finished': _task.is_finished_for_user(request.user),
+                  'header': _task.get_status_header,
+                  'status': _task.get_status_for_users(),
+                  'task_name': _task.task_name,
+                  'url': _task.get_status_url(),
+                }
+            
+                # Append new task description to current task_type list.
+                evaluation_tasks[task_type].append(_task_data)
+        
+            # If there are no tasks descriptions for this task_type, we skip it.
+            if len(evaluation_tasks[task_type]) == 0:
+                evaluation_tasks.pop(task_type)
+
+        dictionary = {
+          'active_page': "STATUS",
+          'commit_tag': COMMIT_TAG,
+          'evaluation_tasks': evaluation_tasks,
+          'title': 'Evaluation Task Status',
+        }
+
+        return render(request, 'evaluation/status.html', dictionary)

@@ -198,6 +198,14 @@ class EvaluationTask(models.Model):
         kwargs = {'task_id': self.task_id}
         return reverse(task_handler_view, kwargs=kwargs)
     
+    def get_status_url(self):
+        """
+        Returns the status URL for this EvaluationTask object instance.
+        """
+        status_handler_view = 'appraise.evaluation.views.status_view'
+        kwargs = {'task_id': self.task_id}
+        return reverse(status_handler_view, kwargs=kwargs)
+    
     def reload_dynamic_fields(self):
         """
         Reloads task_attributes from self.task_xml contents.
@@ -253,12 +261,12 @@ class EvaluationTask(models.Model):
         
         _status.append('{0}/{1}'.format(_done, _items))
         
-        # Compute average duration for this task and the given users
+        # Compute average duration for this task and the given user.
         _results = EvaluationResult.objects.filter(user=user, item__task=self)
         _durations = _results.values_list('duration', flat=True)
         
         _durations = [datetime_to_seconds(d) for d in _durations if d]
-        _average_duration = reduce(lambda x, y: (x+y)/2.0, _durations, 0)
+        _average_duration = sum(_durations) / (float(len(_durations)) or 1)
         
         _status.append('{:.2f} sec'.format(_average_duration))
         
@@ -277,6 +285,38 @@ class EvaluationTask(models.Model):
         
         elif _task_type == '3-Way Ranking':
             pass
+        
+        return _status
+    
+    def get_status_for_users(self):
+        """
+        Returns the status information with respect to all users.
+        """
+        _status = []
+        
+        # Compute completion status for this task and all possible users.
+        _items = EvaluationItem.objects.filter(task=self).count()
+        _done = []
+        
+        for user in self.users.all():
+            _done.append(EvaluationResult.objects.filter(user=user,
+              item__task=self).count())
+        
+        # Minimal number of completed items counts here.
+        _status.append('{0}/{1}'.format(min(_done or [0]), _items))
+        
+        # Compute average duration for this task and all possible users.
+        _durations = []
+
+        for user in self.users.all():
+            _results = EvaluationResult.objects.filter(user=user,
+              item__task=self)
+            _durations.extend(_results.values_list('duration', flat=True))
+        
+        _durations = [datetime_to_seconds(d) for d in _durations if d]
+        _average_duration = sum(_durations) / (float(len(_durations)) or 1)
+        
+        _status.append('{:.2f} sec'.format(_average_duration))
         
         return _status
     

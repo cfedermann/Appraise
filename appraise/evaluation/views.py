@@ -620,6 +620,7 @@ def status_view(request, task_id=None):
         for user in task.users.all():
             status.append((user.username, task.get_status_for_user(user)))
         
+        scores = None
         result_data = []
         users = list(task.users.all())
         
@@ -635,18 +636,21 @@ def status_view(request, task_id=None):
                 result_data.extend(results)
         
         try:
-            from nltk.metrics.agreement import AnnotationTask
-            
-            # We have to sort annotation data to prevent StopIterator errors.
-            result_data.sort()
-            annotation_task = AnnotationTask(result_data)
-            
-            scores = (
-              annotation_task.alpha(),
-              annotation_task.kappa(),
-              annotation_task.S(),
-              annotation_task.pi()
-            )
+            # Computing inter-annotator agreement only makes sense for more
+            # than one coder -- otherwise, we only display result_data...
+            if len(users) > 1:
+                from nltk.metrics.agreement import AnnotationTask
+
+                # We have to sort annotation data to prevent StopIterator errors.
+                result_data.sort()
+                annotation_task = AnnotationTask(result_data)
+                
+                scores = (
+                  annotation_task.alpha(),
+                  annotation_task.kappa(),
+                  annotation_task.S(),
+                  annotation_task.pi()
+                )
         
         except ZeroDivisionError:
             scores = None

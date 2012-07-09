@@ -54,7 +54,7 @@ Point your browser to [http://127.0.0.1:8000/appraise/](http://127.0.0.1:8000/ap
 
 > __Christian Federmann__
 > Appraise: An Open-Source Toolkit for Manual Evaluation of Machine Translation Output
-> Submitted to _MT Marathon 2012_
+> Submitted to _MT Marathon 2012_ ___(forthcoming)___
 
 > __Christian Federmann__
 > Appraise: An Open-Source Toolkit for Manual Phrase-Based Evaluation of Translations

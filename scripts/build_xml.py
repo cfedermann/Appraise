@@ -52,7 +52,7 @@ if __name__ == "__main__":
         for line in system:
             systems[i].append(line.strip())
 
-    print u'<set id="%s" source-language="%s" target-language="%s">' \
+    print '<set id="%s" source-language="%s" target-language="%s">' \
       % (args.id, args.sourceLang, args.targetLang)
 
     # TODO: change to use of .format() calls. Check that it works with UTF-8 data.
@@ -60,14 +60,14 @@ if __name__ == "__main__":
 
         # If the sentences are from different documents, we give each of them a
         # different document name so that they will not be presented with context.
-        docid = args.source.name if args.sameDocument else u'{}-{}'.format(
+        docid = args.source.name if args.sameDocument else '{}-{}'.format(
           args.source.name, i+1)
 
-        print u'  <seg id="%d" doc-id="%s">' % (i+1, docid)
-        print u'    <source>%s</source>' % (source[i])
+        print '  <seg id="%d" doc-id="%s">' % (i+1, docid)
+        print '    <source>%s</source>' % (source[i])
         for j, system in enumerate(systems):
-            print u'    <translation system="%s">%s</translation>' \
+            print '    <translation system="%s">%s</translation>' \
               % (args.system[j].name, system[i])
-        print u'  </seg>'
-    print u'</set>'
+        print '  </seg>'
+    print '</set>'
 

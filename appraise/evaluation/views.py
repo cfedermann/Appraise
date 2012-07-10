@@ -57,7 +57,7 @@ def _find_next_item_to_process(items, user, random_order=False):
     
     # cfedermann: this might be sub optimal wrt. performance!
     unprocessed_items = list(items.exclude(pk__in=processed_items))
-    
+
     if random_order:
         shuffle(unprocessed_items)
     
@@ -138,7 +138,7 @@ def _handle_quality_checking(request, task, items):
         _save_results(current_item, request.user, duration, _raw_result)
     
     # Find next item the current user should process or return to overview.
-    item = _find_next_item_to_process(items, request.user)
+    item = _find_next_item_to_process(items, request.user, task.random_order)
     if not item:
         return redirect('appraise.evaluation.views.overview')
     
@@ -309,7 +309,7 @@ def _handle_postediting(request, task, items):
         
         _save_results(current_item, request.user, duration, _raw_result)
     
-    item = _find_next_item_to_process(items, request.user)
+    item = _find_next_item_to_process(items, request.user, task.random_order)
     if not item:
         return redirect('appraise.evaluation.views.overview')
     
@@ -393,7 +393,7 @@ def _handle_error_classification(request, task, items):
         
         _save_results(current_item, request.user, duration, _raw_result)
     
-    item = _find_next_item_to_process(items, request.user)
+    item = _find_next_item_to_process(items, request.user, task.random_order)
     if not item:
         return redirect('appraise.evaluation.views.overview')
     
@@ -465,7 +465,7 @@ def _handle_three_way_ranking(request, task, items):
         _save_results(current_item, request.user, duration, _raw_result)
 
     # Find next item the current user should process or return to overview.
-    item = _find_next_item_to_process(items, request.user)
+    item = _find_next_item_to_process(items, request.user, task.random_order)
     if not item:
         return redirect('appraise.evaluation.views.overview')
 

@@ -50,6 +50,18 @@ You should be greeted with the following output from your terminal:
 
 Point your browser to [http://127.0.0.1:8000/appraise/](http://127.0.0.1:8000/appraise/) and there it is...
 
+### Add users
+
+Users can be added [here](http://127.0.0.1:8000/appraise/admin/auth/user/add/).
+
+### Add evaluation tasks
+
+Evaluation tasks can be created
+[here](http://127.0.0.1:8000/appraise/admin/evaluation/evaluationtask/add/).
+
+You need an XML file in proper format to upload a task; an example file can be found in
+examples/sample-ranking-task.xml .
+
 ## References
 
 > __Christian Federmann__

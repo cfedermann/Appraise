@@ -627,9 +627,9 @@ def status_view(request, task_id=None):
         for item in EvaluationItem.objects.filter(task=task):
             results = []
             for user in users:
-                q = EvaluationResult.objects.filter(user=user, item=item)
-                if q.exists():
-                    category = str(q[0].results)
+                qset = EvaluationResult.objects.filter(user=user, item=item)
+                if qset.exists():
+                    category = str(qset[0].results)
                     results.append((user.id, item.id, category))
             
             if len(results) == len(users):

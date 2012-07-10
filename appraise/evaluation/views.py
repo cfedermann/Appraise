@@ -77,7 +77,7 @@ def _compute_context_for_item(item):
     left_context = EvaluationItem.objects.filter(task=item.task, pk=item.id-1)
     right_context = EvaluationItem.objects.filter(task=item.task, pk=item.id+1)
     
-    # only display the context if the doc-ids are the same
+    # Only display the context if the doc-ids are the same.
     if left_context and (left_context[0].attributes['doc-id'] == item.attributes['doc-id']):
         _left = left_context[0]
         source_text[0] = _left.source[0]
@@ -88,7 +88,7 @@ def _compute_context_for_item(item):
     if item.reference:
         reference_text[1] = item.reference[0]
     
-    # only display the context if the doc-ids are the same
+    # Only display the context if the doc-ids are the same.
     if right_context and (item.attributes['doc-id'] == right_context[0].attributes['doc-id']):
         _right = right_context[0]
         source_text[2] = _right.source[0]

@@ -10,17 +10,12 @@ $(document).ready(function() {
     //
     // This feature is supposed to be experimental for the moment and has only
     // been tested with Safari on Mac OS X so far!
-    if (key.which == 49) {
-      $("#submit_btn_1").focus().click();
-    }
-    else if (key.which == 50) {
-      $("#submit_btn_2").focus().click();
-    }
-    else if (key.which == 51) {
-      $("#submit_btn_3").focus().click();
-    }
-    else if (key.which == 52) {
-      $("#submit_btn_3").focus().click();
+    var keymap = { 49: "1", 50: "2", 51: "3", 52: "4" }
+
+    for (keycode in keymap) {
+      if (key.which == keycode) {
+        $("#submit_btn_" + keymap[keycode]).focus().click();
+      }
     }
   });
 });

@@ -1,5 +1,33 @@
 {% extends "base.html" %}
 
+{% block head %}
+<script src="{% url appraise.views.frontpage %}site_media/jquery-1.7.1.min.js"></script>
+<script>
+<!--
+$(document).ready(function() {
+  $("body").keyup(function (key) {
+    // Maps keys for number 1, 2, 3, 4 to the corresponding submit buttons.
+    //
+    // This feature is supposed to be experimental for the moment and has only
+    // been tested with Safari on Mac OS X so far!
+    if (key.which == 49) {
+      $("#submit_btn_1").focus().click();
+    }
+    else if (key.which == 50) {
+      $("#submit_btn_2").focus().click();
+    }
+    else if (key.which == 51) {
+      $("#submit_btn_3").focus().click();
+    }
+    else if (key.which == 52) {
+      $("#submit_btn_3").focus().click();
+    }
+  });
+});
+-->
+</script>
+{% endblock %}
+
 {% block content %}
 
 <div class="alert alert-info">
@@ -63,15 +91,15 @@
 
 
 <div class="actions">
-  <button class="btn" name="submit_button" accesskey="1" type="submit" value="A>B"><i class="icon-plus-sign"></i> A &gt; B</button>
+  <button class="btn" name="submit_button" id="submit_btn_1" accesskey="1" type="submit" value="A>B"><i class="icon-plus-sign"></i> A &gt; B</button>
   &nbsp;
 
-  <button class="btn" name="submit_button" accesskey="2" type="submit" value="A=B"><i class="icon-adjust"></i> A = B</button>
+  <button class="btn" name="submit_button" id="submit_btn_2" accesskey="2" type="submit" value="A=B"><i class="icon-adjust"></i> A = B</button>
   &nbsp;
 
-  <button class="btn" name="submit_button" accesskey="3" type="submit" value="A<B" id="equals"><i class="icon-minus-sign"></i> A &lt; B</button>
+  <button class="btn" name="submit_button" id="submit_btn_3" accesskey="3" type="submit" value="A<B" id="equals"><i class="icon-minus-sign"></i> A &lt; B</button>
   &nbsp;
-  <button class="btn btn-danger" name="submit_button" accesskey="4" type="submit" value="FLAG_ERROR"><i class="icon-exclamation-sign icon-white"></i> Flag Error</button>
+  <button class="btn btn-danger" name="submit_button" id="submit_btn_4" accesskey="4" type="submit" value="FLAG_ERROR"><i class="icon-exclamation-sign icon-white"></i> Flag Error</button>
 </div>
 
 </form>

@@ -77,6 +77,22 @@ Evaluation tasks can be created
 You need an XML file in proper format to upload a task; an example file can be found in
 examples/sample-ranking-task.xml .
 
+## Deployment with lighttpd
+
+You will need to create a customised `start-server.sh` script inside `Appraise-Software/appraise`. There is a `.sample` file available in this folder which should help you get started quickly. In a nutshell, you have to uncomment and edit the last two lines:
+
+    # /path/to/bin/python manage.py runfcgi host=127.0.0.1 port=1234 method=threaded pidfile=$DJANGO_PID
+
+The first line tells Django to start up in FastCGI mode, binding to hostname `127.0.0.1` and port `1234` in our example, running a `threaded` server and writing the process ID to the file `$DJANGO_PID`. The `.pid` files will be used by `stop-server.sh` to properly shutdown Appraise.
+
+Using Django's `manage.py` with the `runfcgi` command requires you to also install `flup` into the `site-packages` folder of your Python installation. It is available [from here][6].
+
+    # /path/to/sbin/lighttpd -f /path/to/lighttpd/etc/appraise.conf
+
+The second line starts up the `lighttd` server using an appropriate configuration file `appraise.conf`. Have a look at `Appraise-Software/examples/appraise-lighttpd.conf` to create your own.
+
+Once the various `/path/to/XYZ` settings are properly configured, you should be able to launch Appraise in production mode.
+
 ## References
 
 > __Christian Federmann__
@@ -92,3 +108,4 @@ examples/sample-ranking-task.xml .
 [3]: http://www.djangoproject.com/
 [4]: https://raw.github.com/cfedermann/Appraise/master/appraise/LICENSE
 [5]: https://docs.djangoproject.com/en/1.4/howto/static-files/
+[6]: http://pypi.python.org/pypi/flup/1.0.3.dev-20110405

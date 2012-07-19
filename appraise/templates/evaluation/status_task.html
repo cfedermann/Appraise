@@ -40,7 +40,7 @@
 </tr>
 <tr>
 {% for item in raw_results %}
-  <td>{{item.1}} ({{item.2}}%)</td>
+  <td>{{item.1}} ({{item.2|floatformat:2}}%)</td>
 {% endfor %}
 </tr>
 </table>

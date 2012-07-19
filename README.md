@@ -26,18 +26,33 @@ You can see [a deployed version of Appraise here][2]. If you want to play around
 
 ## System Requirements
 
-Appraise is based on the [Django framework][3]. You will need __Python 2.7__ to run it locally. For deployment, a FastCGI compatible web server such as __lighttpd__ is required.
+Appraise is based on the [Django framework][3], version 1.3 or newer. You will need __Python 2.7__ to run it locally. For deployment, a FastCGI compatible web server such as __lighttpd__ is required.
 
 ## Quickstart Instructions
 
-Assuming you have already installed Python and Django, you can clone and start up a local copy of Appraise using the following commands:
+Assuming you have already installed Python and Django, you can clone a local copy of Appraise using the following command; you can change the folder name `Appraise-Software` to anything you like.
 
     $ git clone git://github.com/cfedermann/Appraise.git Appraise-Software
     ...
-    $ cd Appraise-Software/appraise
-    $ python manage.py syncdb
-    ...
-    python manage.py runserver
+
+After having cloned the GitHub project, you have to initialise Appraise. This is a two-step process:
+
+1. Initialise the SQLite database:
+
+        $ cd Appraise-Software/appraise
+        $ python manage.py syncdb
+        ...
+
+2. Collect static files and copy them into `Appraise-Software/appraise/static-files`. Answer `yes` when asked whether you want to overwrite existing files.
+
+        $ python manage.py collectstatic
+        ...
+
+    More information on handling of static files in Django 1.3+ is [available here][5].
+
+Finally, you can start up your local copy of Django using the `runserver` command:
+
+    $ python manage.py runserver
 
 You should be greeted with the following output from your terminal:
 
@@ -76,3 +91,4 @@ examples/sample-ranking-task.xml .
 [2]: http://www.dfki.de/appraise/
 [3]: http://www.djangoproject.com/
 [4]: https://raw.github.com/cfedermann/Appraise/master/appraise/LICENSE
+[5]: https://docs.djangoproject.com/en/1.4/howto/static-files/

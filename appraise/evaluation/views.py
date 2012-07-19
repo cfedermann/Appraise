@@ -5,6 +5,7 @@ Project: Appraise evaluation system
 """
 import logging
 
+from collections import Counter
 from datetime import datetime
 from random import randint, seed, shuffle
 from time import mktime
@@ -624,6 +625,7 @@ def status_view(request, task_id=None):
         
         scores = None
         result_data = []
+        raw_result_data = Counter()
         users = list(task.users.all())
         
         for item in EvaluationItem.objects.filter(task=task):
@@ -633,9 +635,17 @@ def status_view(request, task_id=None):
                 if qset.exists():
                     category = str(qset[0].results)
                     results.append((user.id, item.id, category))
+                    raw_result_data[qset[0].raw_result] += 1
             
             if len(results) == len(users):
                 result_data.extend(results)
+        
+        _raw_results = []
+        _keys = raw_result_data.keys()
+        _total_results = float(sum(raw_result_data.values()))
+        for key in sorted(_keys):
+            value = raw_result_data[key]
+            _raw_results.append((key, value, 100 * value / _total_results))
         
         try:
             # Computing inter-annotator agreement only makes sense for more
@@ -666,6 +676,7 @@ def status_view(request, task_id=None):
           'headers': headers,
           'scores': scores,
           'result_data': result_data,
+          'raw_results': _raw_results,
           'status': status,
           'task_name': task.task_name,
           'title': 'Evaluation Task Status',

@@ -28,6 +28,26 @@
 </table>
 </div>
 </div>
+{% if raw_results %}
+<div class="row">
+<div class="span12">
+<h3>Results Overview</h3>
+<table class="table table-striped table-bordered">
+<tr>
+{% for item in raw_results %}
+  <th>{{item.0}}</th>
+{% endfor %}
+</tr>
+<tr>
+{% for item in raw_results %}
+  <td>{{item.1}} ({{item.2}}%)</td>
+{% endfor %}
+</tr>
+</table>
+</div>
+</div>
+{% endif %}
+
 {% if scores %}
 <div class="row">
 <div class="span12">

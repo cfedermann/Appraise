@@ -18,6 +18,7 @@ if [ -f $LIGHTTPD_PID ]; then
 fi
 
 # Adapt and uncomment the following two lines to actually start the server.
+# An example appraise.conf can be found in examples/appraise-lighttpd.conf
 #
 # /path/to/bin/python manage.py runfcgi host=127.0.0.1 port=1234 method=threaded pidfile=$DJANGO_PID
 # /path/to/sbin/lighttpd -f /path/to/lighttpd/etc/appraise.conf

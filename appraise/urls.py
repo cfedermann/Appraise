@@ -7,6 +7,7 @@ Project: Appraise evaluation system
 from django.conf.urls.defaults import patterns, include, handler404, \
   handler500
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from appraise.settings import MEDIA_ROOT, DEBUG
 
@@ -37,7 +38,4 @@ urlpatterns = patterns('',
 )
 
 if DEBUG:
-    urlpatterns += patterns('',
-      (r'^appraise/site_media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': MEDIA_ROOT}),
-    )
+    urlpatterns += staticfiles_urlpatterns()

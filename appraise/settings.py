@@ -3,6 +3,8 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@dfki.de>
 """
+from django import VERSION as DJANGO_VERSION
+
 import os
 ROOT_PATH = os.getcwd()
 
@@ -41,16 +43,16 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+  # ('Your Name', 'your_email@domain.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '{0}/development.db'.format(ROOT_PATH),
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': '{0}/development.db'.format(ROOT_PATH),
+  }
 }
 
 # Local time zone for this installation. Choices can be found here:
@@ -77,52 +79,67 @@ MEDIA_ROOT = '{0}/media/'.format(ROOT_PATH)
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://www.dfki.de/appraise/media/'
+MEDIA_URL = '/appraise/media/'
 
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = 'http://www.dfki.de/appraise/media/'
+# For Django versions before 1.4, we additionally set ADMIN_MEDIA_PREFIX.
+if DJANGO_VERSION[1] < 4:
+    ADMIN_MEDIA_PREFIX = '/appraise/files/admin/'
+
+# The absolute path to the directory where collectstatic will collect static
+# files for deployment.
+STATIC_ROOT = '{0}/static-files/'.format(ROOT_PATH)
+
+# URL to use when referring to static files located in STATIC_ROOT.
+STATIC_URL = '/appraise/files/'
+
+STATICFILES_DIRS = (
+  '{0}/static'.format(ROOT_PATH),
+)
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '7h$+o^h4f%q#d$u7d^1!3s#a-+u5p*+p*lpz++z^q^9^+a5p--'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+  'django.template.loaders.filesystem.Loader',
+  'django.template.loaders.app_directories.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+  'django.middleware.common.CommonMiddleware',
+  'django.contrib.sessions.middleware.SessionMiddleware',
+  'django.contrib.messages.middleware.MessageMiddleware',
+  'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
 ROOT_URLCONF = 'appraise.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    '{0}/templates'.format(ROOT_PATH),
+  # Put strings here, like "/home/html/django_templates".
+  # Always use forward slashes, even on Windows.
+  # Don't forget to use absolute paths, not relative paths.
+  '{0}/templates'.format(ROOT_PATH),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.contrib.messages.context_processors.messages',
+  'django.core.context_processors.debug', 
+  'django.core.context_processors.i18n',
+  'django.core.context_processors.media',
+  'django.core.context_processors.static',
+  'django.contrib.auth.context_processors.auth',
+  'django.contrib.messages.context_processors.messages',
 )
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.admin',
-    'django.contrib.messages',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.sites',
+  'django.contrib.staticfiles',
+  'django.contrib.admin',
+  'django.contrib.messages',
     
-    'appraise.evaluation',
+  'appraise.evaluation',
 )

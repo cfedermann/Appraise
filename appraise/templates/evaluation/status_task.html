@@ -71,15 +71,6 @@
 </div>
 {% endif %}
 
-{% if result_data %}
-<div class="row">
-<div class="span12">
-<h3>Agreement Data</h3>
-<pre>{{result_data}}</pre>
-</div>
-</div>
-{% endif %}
-
 {% if user.is_staff %}
 <hr/>
 
@@ -91,6 +82,11 @@
 <a class="btn btn-primary" href="{% url appraise.evaluation.views.export_task_results task_id=task_id %}">
   <i class="icon-download icon-white"></i>
   Export results
+</a>
+
+<a class="btn btn-primary" href="{% url appraise.evaluation.views.export_agreement_data task_id=task_id %}">
+  <i class="icon-user icon-white"></i>
+  Agreement data
 </a>
 </div>
 </div>

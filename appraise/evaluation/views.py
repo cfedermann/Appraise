@@ -679,7 +679,6 @@ def status_view(request, task_id=None):
           'commit_tag': COMMIT_TAG,
           'headers': headers,
           'scores': scores,
-          'result_data': result_data,
           'raw_results': _raw_results,
           'status': status,
           'task_id': task.task_id,
@@ -732,7 +731,7 @@ def status_view(request, task_id=None):
 @staff_member_required
 def export_task_results(request, task_id=None):
     """
-    Exports the task with the given task_to to an XML download.
+    Exports the task with the given task_id to an XML download.
     """
     task = get_object_or_404(EvaluationTask, task_id=task_id)
 
@@ -748,5 +747,40 @@ def export_task_results(request, task_id=None):
     return response
 
 
-    export_filename = 'exported-tasks-{}-{}'.format(request.user,
+@staff_member_required
+def export_agreement_data(request, task_id=None):
+    """
+    Exports the agreement data for the task with the given task_id.
+    
+    The format per line is as follows, items are separated by tab characters.
+    
+    <coder>\t<item>\t<class>
+    ...
+    
+    """
+    task = get_object_or_404(EvaluationTask, task_id=task_id)
+    
+    result_data = []
+    users = list(task.users.all())
+    
+    for item in EvaluationItem.objects.filter(task=task):
+        results = []
+        for user in users:
+            qset = EvaluationResult.objects.filter(user=user, item=item)
+            if qset.exists():
+                category = str(qset[0].results)
+                data = '{}\t{}\t{}'.format(user.username, item.id, category)
+                results.append(data)
+        
+        if len(results) == len(users):
+            result_data.extend(results)
+    
+    export_txt = '\n'.join(result_data)
+    export_filename = 'agreement-data-{}-{}'.format(slugify(task.task_name),
       date.today())
+
+    # We return it as a "text/plain" file attachment with charset "UTF-8".
+    response = HttpResponse(export_txt, mimetype='text/plain; charset=UTF-8')
+    response['Content-Disposition'] = 'attachment; filename="{0}.txt"'.format(
+      export_filename)
+    return response

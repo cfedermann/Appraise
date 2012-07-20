@@ -38,6 +38,9 @@ urlpatterns = patterns('',
   (r'^appraise/export/(?P<task_id>[a-f0-9]{32})/',
     'appraise.evaluation.views.export_task_results'),
 
+  (r'^appraise/agreement/(?P<task_id>[a-f0-9]{32})/',
+    'appraise.evaluation.views.export_agreement_data'),
+
 )
 
 if DEBUG:

@@ -218,8 +218,13 @@ class EvaluationTask(models.Model):
                 for key, value in _task_xml.attrib.items():
                     self.task_attributes[key] = value
             
-            except ParseError:
-                self.task_attributes = {}
+            # For parse or IO errors, set self.task_attributes s.t. it gives
+            # the filename and error message to the user for debugging.
+            except (ParseError, IOError), msg:
+                self.task_attributes = {
+                  'filename': self.task_xml.name,
+                  'note': msg
+                }
     
     def get_status_header(self):
         """

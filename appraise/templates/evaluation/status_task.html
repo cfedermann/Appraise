@@ -16,14 +16,24 @@
 {% for status in status %}
 <tr>
   <td style="width: 60%;">{{status.0}}</td>
-{% for status_data in status.1 %}
+{% if status.1.0.0 != '0' %}
+  <td><span class="progress{{status.1.2}}"><div class="bar" style="width: {{status.1.1}}%;">{{status.1.0}}</div></span></td>
+{% else %}
+  <td><span class="label label-important">{{status.1.0}}</span></td>
+{% endif %}
+{% for status_data in status.1|slice:"3:" %}
   <td>{{status_data}}</td>
 {% endfor %}
 </tr>
 {% endfor %}
 <tr>
   <th>Combined</th>
-{% for status in combined %}
+{% if combined.0.0 != '0' %}
+  <td><span class="progress{{combined.2}}"><div class="bar" style="width: {{combined.1}}%;">{{combined.0}}</div></span></td>
+{% else %}
+  <td><span class="label label-important">{{combined.0}}</span></td>
+{% endif %}
+{% for status in combined|slice:"3:" %}
   <td>{{status}}</td>
 {% endfor %}
 </tr>

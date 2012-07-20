@@ -265,6 +265,14 @@ class EvaluationTask(models.Model):
           item__task=self).count()
         
         _status.append('{0}/{1}'.format(_done, _items))
+        _percentage = 100*_done/float(_items)
+        _status.append(_percentage)
+        if _percentage < 33:
+            _status.append(' progress-danger')
+        elif _percentage < 66:
+            _status.append(' progress-warning')
+        else:
+            _status.append(' progress-success')
         
         # Compute average duration for this task and the given user.
         _results = EvaluationResult.objects.filter(user=user, item__task=self)
@@ -309,6 +317,14 @@ class EvaluationTask(models.Model):
         
         # Minimal number of completed items counts here.
         _status.append('{0}/{1}'.format(min(_done or [0]), _items))
+        _percentage = 100*min(_done or [0])/float(_items)
+        _status.append(_percentage)
+        if _percentage < 33:
+            _status.append(' progress-danger')
+        elif _percentage < 66:
+            _status.append(' progress-warning')
+        else:
+            _status.append(' progress-success')
         
         # Compute average duration for this task and all possible users.
         _durations = []

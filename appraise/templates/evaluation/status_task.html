@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="page-header">
+<h1>&raquo;{{task_name}}&laquo; <small>Status Overview</small></h1>
+</div>
 <div class="row">
 <div class="span12">
-<h2>&raquo;{{task_name}}&laquo; Status</h2>
 <table class="table table-striped table-bordered">
 <tr>
   <th>User name</th>
@@ -74,6 +76,18 @@
 <div class="span12">
 <h3>Agreement Data</h3>
 <pre>{{result_data}}</pre>
+</div>
+</div>
+{% endif %}
+
+{% if user.is_staff %}
+<h3>Administration Tools</h3>
+
+<div class="row">
+<div class="span12">
+<div class="well">
+<a class="btn btn-primary" href="{% url appraise.evaluation.views.export_task_results task_id=task_id %}">Export results</a>
+</div>
 </div>
 </div>
 {% endif %}

@@ -682,6 +682,7 @@ def status_view(request, task_id=None):
           'result_data': result_data,
           'raw_results': _raw_results,
           'status': status,
+          'task_id': task.task_id,
           'task_name': task.task_name,
           'title': 'Evaluation Task Status',
         }

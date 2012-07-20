@@ -29,7 +29,7 @@ def export_task_xml(modeladmin, request, queryset):
     export_filename = 'exported-tasks-{}-{}'.format(request.user,
       date.today())
     
-    # We return it as a "text/plain" file attachment with charset "UTF-8".
+    # We return it as a "text/xml" file attachment with charset "UTF-8".
     response = HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')
     response['Content-Disposition'] = 'attachment; filename="{0}.xml"'.format(
       export_filename)

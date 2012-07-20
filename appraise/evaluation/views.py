@@ -6,13 +6,17 @@ Project: Appraise evaluation system
 import logging
 
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, date
 from random import randint, seed, shuffle
 from time import mktime
 
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.template import Context
+from django.template.defaultfilters import slugify
+from django.template.loader import get_template
 
 from appraise.evaluation.models import APPRAISE_TASK_TYPE_CHOICES, \
   EvaluationTask, EvaluationItem, EvaluationResult
@@ -723,3 +727,25 @@ def status_view(request, task_id=None):
         }
 
         return render(request, 'evaluation/status.html', dictionary)
+
+@staff_member_required
+def export_task_results(request, task_id=None):
+    """
+    Exports the task with the given task_to to an XML download.
+    """
+    task = get_object_or_404(EvaluationTask, task_id=task_id)
+
+    template = get_template('evaluation/result_export.xml')
+    export_xml = template.render(Context({'tasks': [task.export_to_xml()]}))
+    export_filename = 'exported-task-{}-{}'.format(slugify(task.task_name),
+      date.today())
+
+    # We return it as a "text/xml" file attachment with charset "UTF-8".
+    response = HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')
+    response['Content-Disposition'] = 'attachment; filename="{0}.xml"'.format(
+      export_filename)
+    return response
+
+
+    export_filename = 'exported-tasks-{}-{}'.format(request.user,
+      date.today())

@@ -8,7 +8,7 @@
 <div class="span12">
 <table class="table table-striped table-bordered">
 <tr>
-  <th>User name</th>
+  <th style="width: 60%;">User name</th>
 {% for header in headers %}
   <th>{{header}}</th>
 {% endfor %}
@@ -16,11 +16,7 @@
 {% for status in status %}
 <tr>
   <td style="width: 60%;">{{status.0}}</td>
-{% if status.1.0.0 != '0' %}
-  <td><span class="progress{{status.1.2}}"><div class="bar" style="width: {{status.1.1}}%;">{{status.1.0}}</div></span></td>
-{% else %}
-  <td><span class="label label-important">{{status.1.0}}</span></td>
-{% endif %}
+  <td><span class="progress{{status.1.2}}"><div class="bar" style="min-width: 25%;width: {{status.1.1}}%;">{{status.1.0}}</div></span></td>
 {% for status_data in status.1|slice:"3:" %}
   <td>{{status_data}}</td>
 {% endfor %}
@@ -28,11 +24,7 @@
 {% endfor %}
 <tr>
   <th>Combined</th>
-{% if combined.0.0 != '0' %}
-  <td><span class="progress{{combined.2}}"><div class="bar" style="width: {{combined.1}}%;">{{combined.0}}</div></span></td>
-{% else %}
-  <td><span class="label label-important">{{combined.0}}</span></td>
-{% endif %}
+  <td><span class="progress{{combined.2}}"><div class="bar" style="min-width: 25%;width: {{combined.1}}%;">{{combined.0}}</div></span></td>
 {% for status in combined|slice:"3:" %}
   <td>{{status}}</td>
 {% endfor %}

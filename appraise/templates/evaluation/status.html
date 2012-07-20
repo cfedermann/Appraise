@@ -17,7 +17,7 @@
 {% for task in tasks %}
 <tr>
   <td style="width: 60%;"><a href="{{task.url}}">{{task.task_name}}</a></td>
-  <td><span class="progress{{task.status.2}}"><div class="bar" style="min-width: 25%;width: {{task.status.1}}%;">{{task.status.0}}</div></span></td>
+  <td><span class="progress{{task.status.2}}"><div class="bar" style="min-width: 33%;width: {{task.status.1}}%;">{{task.status.0}}</div></span></td>
 {% for status_data in task.status|slice:"3:" %}
   <td>{{status_data}}</td>
 {% endfor %}

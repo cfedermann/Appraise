@@ -223,7 +223,7 @@ class EvaluationTask(models.Model):
             except (ParseError, IOError), msg:
                 self.task_attributes = {
                   'filename': self.task_xml.name,
-                  'note': msg
+                  'note': msg,
                 }
     
     def get_status_header(self):

@@ -75,6 +75,10 @@ def _find_next_item_to_process(items, user, random_order=False):
 def _compute_context_for_item(item):
     """
     Computes the source and reference texts for item, including context.
+    
+    Left/right context is only displayed if it belongs to the same document,
+    hence we check the doc-id attribute before adding context.
+    
     """
     source_text = [None, None, None]
     reference_text = [None, None, None]
@@ -82,23 +86,31 @@ def _compute_context_for_item(item):
     left_context = EvaluationItem.objects.filter(task=item.task, pk=item.id-1)
     right_context = EvaluationItem.objects.filter(task=item.task, pk=item.id+1)
     
-    # Only display the context if the doc-ids are the same.
-    if left_context and (left_context[0].attributes['doc-id'] == item.attributes['doc-id']):
-        _left = left_context[0]
-        source_text[0] = _left.source[0]
-        if _left.reference:
-            reference_text[0] = _left.reference[0]
+    _item_doc_id = getattr(item.attributes, 'doc-id', None)
     
+    # Item text and, if available, reference text are always set.
     source_text[1] = item.source[0]
     if item.reference:
         reference_text[1] = item.reference[0]
     
-    # Only display the context if the doc-ids are the same.
-    if right_context and (item.attributes['doc-id'] == right_context[0].attributes['doc-id']):
+    # Only display context if left/right doc-ids match current item's doc-id.
+    if left_context:
+        _left = left_context[0]
+        _left_doc_id = getattr(_left.attributes, 'doc-id', None)
+        
+        if _left_doc_id == _item_doc_id:
+            source_text[0] = _left.source[0]
+            if _left.reference:
+                reference_text[0] = _left.reference[0]
+    
+    if right_context:
         _right = right_context[0]
-        source_text[2] = _right.source[0]
-        if _right.reference:
-            reference_text[2] = _right.reference[0]
+        _right_doc_id = getattr(_right.attributes, 'doc-id', None)
+        
+        if _right_doc_id == _item_doc_id:
+            source_text[2] = _right.source[0]
+            if _right.reference:
+                reference_text[2] = _right.reference[0]
     
     return (source_text, reference_text)
 

@@ -34,6 +34,21 @@ ERROR_CLASSES = ("terminology", "lexical_choice", "syntax", "insertion",
 APPRAISE_TASK_CACHE = {}
 
 
+def _update_task_cache(task, user):
+    """
+    Updates the APPRAISE_TASK_CACHE for the given user.
+    """
+    _task_data = {
+      'finished': task.is_finished_for_user(user),
+      'header': task.get_status_header,
+      'status': task.get_status_for_user(user),
+      'task_name': task.task_name,
+      'url': task.get_absolute_url(),
+    }
+
+    _cache.update({user.username: _task_data})
+
+
 def _save_results(item, user, duration, raw_result):
     """
     Creates or updates the EvaluationResult for the given item and user.
@@ -52,6 +67,8 @@ def _save_results(item, user, duration, raw_result):
     _result.duration = duration
     _result.raw_result = raw_result
     _result.save()
+    
+    _update_task_cache(item.task, user)
 
 
 def _find_next_item_to_process(items, user, random_order=False):

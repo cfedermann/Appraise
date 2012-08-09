@@ -599,11 +599,13 @@ def overview(request):
         
         # Loop over the QuerySet and compute task description data.
         for _task in _tasks:
-            if APPRAISE_TASK_CACHE.has_key(_task.task_id):
-                _cache = APPRAISE_TASK_CACHE[_task.task_id]
-                if _cache.has_key(request.user):
-                    _task_data = _cache[request.user]
-                    continue
+            if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
+                APPRAISE_TASK_CACHE[_task.task_id] = {}
+            
+            _cache = APPRAISE_TASK_CACHE[_task.task_id]
+            if _cache.has_key(request.user.username):
+                _task_data = _cache[request.user.username)]
+                continue
             
             _task_data = {
               'finished': _task.is_finished_for_user(request.user),
@@ -613,7 +615,7 @@ def overview(request):
               'url': _task.get_absolute_url(),
             }
             
-            APPRAISE_TASK_CACHE[_task.task_id] = {request.user: _task_data}
+            _cache.update({request.user.username: _task_data})
             
             # Append new task description to current task_type list.
             evaluation_tasks[task_type].append(_task_data)

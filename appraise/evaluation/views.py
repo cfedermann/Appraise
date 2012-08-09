@@ -38,6 +38,11 @@ def _update_task_cache(task, user):
     """
     Updates the APPRAISE_TASK_CACHE for the given user.
     """
+    if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
+        APPRAISE_TASK_CACHE[_task.task_id] = {}
+    
+    _cache = APPRAISE_TASK_CACHE[_task.task_id]
+    
     _task_data = {
       'finished': task.is_finished_for_user(user),
       'header': task.get_status_header,
@@ -46,7 +51,7 @@ def _update_task_cache(task, user):
       'url': task.get_absolute_url(),
     }
 
-    APPRAISE_TASK_CACHE.update({user.username: _task_data})
+    _cache.update({user.username: _task_data})
 
 
 def _save_results(item, user, duration, raw_result):
@@ -620,19 +625,10 @@ def overview(request):
                 APPRAISE_TASK_CACHE[_task.task_id] = {}
             
             _cache = APPRAISE_TASK_CACHE[_task.task_id]
-            if _cache.has_key(request.user.username):
-                _task_data = _cache[request.user.username]
+            if not _cache.has_key(request.user.username):
+                _update_task_cache(_task, request.user)
             
-            else:
-                _task_data = {
-                  'finished': _task.is_finished_for_user(request.user),
-                  'header': _task.get_status_header,
-                  'status': _task.get_status_for_user(request.user),
-                  'task_name': _task.task_name,
-                  'url': _task.get_absolute_url(),
-                }
-            
-                _cache.update({request.user.username: _task_data})
+            _task_data = _cache[request.user.username]
             
             # Append new task description to current task_type list.
             evaluation_tasks[task_type].append(_task_data)

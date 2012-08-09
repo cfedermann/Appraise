@@ -41,7 +41,7 @@ def _update_task_cache(task, user):
     if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
         APPRAISE_TASK_CACHE[_task.task_id] = {}
     
-    _cache = APPRAISE_TASK_CACHE[_task.task_id]
+    _cache = APPRAISE_TASK_CACHE[task.task_id]
     
     _task_data = {
       'finished': task.is_finished_for_user(user),

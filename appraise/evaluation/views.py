@@ -46,7 +46,7 @@ def _update_task_cache(task, user):
       'url': task.get_absolute_url(),
     }
 
-    _cache.update({user.username: _task_data})
+    APPRAISE_TASK_CACHE.update({user.username: _task_data})
 
 
 def _save_results(item, user, duration, raw_result):

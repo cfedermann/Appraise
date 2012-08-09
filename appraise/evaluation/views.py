@@ -604,18 +604,18 @@ def overview(request):
             
             _cache = APPRAISE_TASK_CACHE[_task.task_id]
             if _cache.has_key(request.user.username):
-                _task_data = _cache[request.user.username)]
-                continue
+                _task_data = _cache[request.user.username]
             
-            _task_data = {
-              'finished': _task.is_finished_for_user(request.user),
-              'header': _task.get_status_header,
-              'status': _task.get_status_for_user(request.user),
-              'task_name': _task.task_name,
-              'url': _task.get_absolute_url(),
-            }
+            else:
+                _task_data = {
+                  'finished': _task.is_finished_for_user(request.user),
+                  'header': _task.get_status_header,
+                  'status': _task.get_status_for_user(request.user),
+                  'task_name': _task.task_name,
+                  'url': _task.get_absolute_url(),
+                }
             
-            _cache.update({request.user.username: _task_data})
+                _cache.update({request.user.username: _task_data})
             
             # Append new task description to current task_type list.
             evaluation_tasks[task_type].append(_task_data)

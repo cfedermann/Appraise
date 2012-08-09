@@ -31,6 +31,8 @@ LOGGER.addHandler(LOG_HANDLER)
 ERROR_CLASSES = ("terminology", "lexical_choice", "syntax", "insertion",
   "morphology", "misspelling", "punctuation", "other")
 
+APPRAISE_TASK_CACHE = {}
+
 
 def _save_results(item, user, duration, raw_result):
     """
@@ -597,6 +599,12 @@ def overview(request):
         
         # Loop over the QuerySet and compute task description data.
         for _task in _tasks:
+            if APPRAISE_TASK_CACHE.has_key(_task.task_id):
+                _cache = APPRAISE_TASK_CACHE[_task.task_id]
+                if _cache.has_key(request.user):
+                    _task_data = _cache[request.user]
+                    continue
+            
             _task_data = {
               'finished': _task.is_finished_for_user(request.user),
               'header': _task.get_status_header,
@@ -604,6 +612,8 @@ def overview(request):
               'task_name': _task.task_name,
               'url': _task.get_absolute_url(),
             }
+            
+            APPRAISE_TASK_CACHE[_task.task_id] = {request.user: _task_data}
             
             # Append new task description to current task_type list.
             evaluation_tasks[task_type].append(_task_data)

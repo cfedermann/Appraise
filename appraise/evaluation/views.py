@@ -32,6 +32,7 @@ ERROR_CLASSES = ("terminology", "lexical_choice", "syntax", "insertion",
   "morphology", "misspelling", "punctuation", "other")
 
 APPRAISE_TASK_CACHE = {}
+CACHE_IMPLEMENTED_FOR_STATUS_VIEW_AS_WELL = False
 
 
 def _update_task_cache(task, user):
@@ -741,6 +742,16 @@ def status_view(request, task_id=None):
         
             # Loop over the QuerySet and compute task description data.
             for _task in _tasks:
+                if CACHE_IMPLEMENTED_FOR_STATUS_VIEW_AS_WELL:
+                    if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
+                        APPRAISE_TASK_CACHE[_task.task_id] = {}
+            
+                    _cache = APPRAISE_TASK_CACHE[_task.task_id]
+                    if not _cache.has_key(request.user.username):
+                        _update_task_cache(_task, request.user)
+            
+                    _task_data = _cache[request.user.username]
+                
                 _task_data = {
                   'finished': _task.is_finished_for_user(request.user),
                   'header': _task.get_status_header,

@@ -778,5 +778,5 @@ def update_task_cache(sender, instance, created, **kwargs):
     from appraise.evaluation.views import _update_task_cache
     
     _task = instance.item.task
-    for _user in _task.users:
+    for _user in _task.users.all():
         _update_task_cache(_task, _user)

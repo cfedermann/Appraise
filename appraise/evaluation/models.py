@@ -780,3 +780,5 @@ def update_task_cache(sender, instance, created, **kwargs):
     _task = instance.item.task
     for _user in _task.users.all():
         _update_task_cache(_task, _user)
+    
+    # TODO: extend this code to also update cache for staff users!

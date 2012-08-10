@@ -32,7 +32,6 @@ ERROR_CLASSES = ("terminology", "lexical_choice", "syntax", "insertion",
   "morphology", "misspelling", "punctuation", "other")
 
 APPRAISE_TASK_CACHE = {}
-CACHE_IMPLEMENTED_FOR_STATUS_VIEW_AS_WELL = False
 
 
 def _update_task_cache(task, user):
@@ -48,10 +47,12 @@ def _update_task_cache(task, user):
       'finished': task.is_finished_for_user(user),
       'header': task.get_status_header,
       'status': task.get_status_for_user(user),
+      'status_users': task.get_status_for_users(),
       'task_name': task.task_name,
       'url': task.get_absolute_url(),
+      'status_url': task.get_status_url(),
     }
-
+    
     _cache.update({user.username: _task_data})
 
 
@@ -73,8 +74,6 @@ def _save_results(item, user, duration, raw_result):
     _result.duration = duration
     _result.raw_result = raw_result
     _result.save()
-    
-    _update_task_cache(item.task, user)
 
 
 def _find_next_item_to_process(items, user, random_order=False):
@@ -742,27 +741,18 @@ def status_view(request, task_id=None):
         
             # Loop over the QuerySet and compute task description data.
             for _task in _tasks:
-                if CACHE_IMPLEMENTED_FOR_STATUS_VIEW_AS_WELL:
-                    if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
-                        APPRAISE_TASK_CACHE[_task.task_id] = {}
-            
-                    _cache = APPRAISE_TASK_CACHE[_task.task_id]
-                    if not _cache.has_key(request.user.username):
-                        _update_task_cache(_task, request.user)
-            
-                    _task_data = _cache[request.user.username]
+                if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
+                    APPRAISE_TASK_CACHE[_task.task_id] = {}
                 
-                _task_data = {
-                  'finished': _task.is_finished_for_user(request.user),
-                  'header': _task.get_status_header,
-                  'status': _task.get_status_for_users(),
-                  'task_name': _task.task_name,
-                  'url': _task.get_status_url(),
-                }
-            
+                _cache = APPRAISE_TASK_CACHE[_task.task_id]
+                if not _cache.has_key(request.user.username):
+                    _update_task_cache(_task, request.user)
+                
+                _task_data = _cache[request.user.username]
+                
                 # Append new task description to current task_type list.
                 evaluation_tasks[task_type].append(_task_data)
-        
+            
             # If there are no tasks descriptions for this task_type, we skip it.
             if len(evaluation_tasks[task_type]) == 0:
                 evaluation_tasks.pop(task_type)

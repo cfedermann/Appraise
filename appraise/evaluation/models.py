@@ -770,3 +770,13 @@ class EvaluationResult(models.Model):
         
         return template.render(Context(context))
 
+@receiver(models.signals.post_save, sender=EvaluationResult)
+def update_task_cache(sender, instance, created, **kwargs):
+    """
+    Updates the APPRAISE_TASK_CACHE for the given EvaluationResult.
+    """
+    from appraise.evaluation.views import _update_task_cache
+    
+    _task = instance.item.task
+    for _user in _task.users:
+        _update_task_cache(_task, _user)

@@ -45,16 +45,18 @@ function add_end_timestamp()
 
 function reset_form()
 {
+  $('input[name="from_scratch"]').removeAttr('checked');
+
 {% if translations|length > 1 %}
   $('#translations input[type="radio"]:checked').removeAttr('checked');
   $('#translations').show();
   $('textarea[name="postedited"]').html('');
+  $('input[name="from_scratch"]').attr('disabled', true);
 {% else %}
   $('textarea[name="postedited"]').html($('input[name="translation"]').val());
+  $('input[name="from_scratch"]').removeAttr('disabled');
 {% endif %}
 
-  $('input[name="from_scratch"]').removeAttr('checked');
-  $('input[name="from_scratch"]').attr('disabled', true);
   $('input[name="start_timestamp"]').val(Date.now()/1000.0);
   selection_done = false;
 }

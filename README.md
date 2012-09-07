@@ -95,13 +95,30 @@ Once the various `/path/to/XYZ` settings are properly configured, you should be 
 
 ## References
 
-> __Christian Federmann__
-> Appraise: An Open-Source Toolkit for Manual Evaluation of Machine Translation Output
-> Submitted to _MT Marathon 2012_ ___(forthcoming)___
+If you use Appraise in your research, please cite the MT Marathon 2012 paper:
 
-> __Christian Federmann__
-> Appraise: An Open-Source Toolkit for Manual Phrase-Based Evaluation of Translations
-> In _Proceedings of the Seventh Conference on International Language Resources and Evaluation_, Valletta, Malta, LREC, 5/2010
+__Christian Federmann__
+Appraise: An Open-Source Toolkit for Manual Evaluation of Machine Translation Output
+In _The Prague Bulletin of Mathematical Linguistics volume 98_, Prague, Czech Republic, 9/2012
+
+### BibTex
+
+    @Article{mtm12_appraise,
+      author =  {Christian Federmann},
+      title =   {Appraise: An Open-Source Toolkit for Manual Evaluation of Machine Translation Output},
+      journal = {The Prague Bulletin of Mathematical Linguistics},
+      volume =  {98},
+      pages =   {25--35},
+      year =    {2012},
+      address = {Prague, Czech Republic},
+      month =   {September}
+    }
+
+A previous version of Appraise had been published at LREC 2010:
+
+__Christian Federmann__
+Appraise: An Open-Source Toolkit for Manual Phrase-Based Evaluation of Translations
+In _Proceedings of the Seventh Conference on International Language Resources and Evaluation_, Valletta, Malta, LREC, 5/2010
 
 [1]: http://www.statmt.org/mtm12/
 [2]: http://www.dfki.de/appraise/

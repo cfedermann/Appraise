@@ -714,6 +714,10 @@ class EvaluationResult(models.Model):
         template = get_template('evaluation/result_error_classification.xml')
         
         _attr = self.item.attributes.items()
+        
+        # cfedermann: add attributes of translations[0] to the _attr list.
+        _attr.extend(self.item.translations[0][1].items())
+        
         attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         errors = []

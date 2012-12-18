@@ -27,6 +27,7 @@ import argparse
 PARSER = argparse.ArgumentParser(description="Build evaluation task input " \
   "file.")
 PARSER.add_argument("source", type=file, help="source language file")
+PARSER.add_argument("reference", type=file, nargs="?", help="reference language file")
 PARSER.add_argument("system", metavar="system", nargs="+", type=file,
   help="parallel files to compare")
 PARSER.add_argument("-id", type=str, default="none", help="ID name to use " \
@@ -45,6 +46,10 @@ if __name__ == "__main__":
     source = []
     for line in args.source:
         source.append(line.strip())
+    
+    reference = []
+    for line in args.reference:
+        reference.append(line.strip())
 
     systems = []
     for i, system in enumerate(args.system):
@@ -65,9 +70,12 @@ if __name__ == "__main__":
 
         print '  <seg id="%d" doc-id="%s">' % (i+1, docid)
         print '    <source>%s</source>' % (source[i])
+        if len(reference) >= i+1:
+            print '    <reference>%s</reference>' % (reference[i])
         for j, system in enumerate(systems):
             print '    <translation system="%s">%s</translation>' \
               % (args.system[j].name, system[i])
         print '  </seg>'
     print '</set>'
 
+    

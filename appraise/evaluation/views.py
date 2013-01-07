@@ -692,7 +692,15 @@ def status_view(request, task_id=None):
             # Computing inter-annotator agreement only makes sense for more
             # than one coder -- otherwise, we only display result_data...
             if len(users) > 1:
-                from nltk.metrics.agreement import AnnotationTask
+                # Check if we can safely use NLTK's AnnotationTask class.
+                try:
+                    from nltk.metrics.agreement import AnnotationTask
+                    chk = AnnotationTask(data=[('b','1','k'),('a','1','k')])
+                    assert(chk == 1.0)
+                
+                except AssertionError:
+                    LOGGER.debug('Fixing outdated version of AnnotationTask.')
+                    from appraise.utils import AnnotationTask
 
                 # We have to sort annotation data to prevent StopIterator errors.
                 result_data.sort()

@@ -314,6 +314,7 @@ def _handle_postediting(request, task, items):
         item_id = request.POST.get('item_id')
         edit_id = request.POST.get('edit_id', 0)
         end_timestamp = request.POST.get('end_timestamp', None)
+        order_random = request.POST.get('order', None)
         submit_button = request.POST.get('submit_button')
         from_scratch = request.POST.get('from_scratch')
         postedited = request.POST.get('postedited', 'EMPTY')
@@ -328,9 +329,14 @@ def _handle_postediting(request, task, items):
             end_datetime = datetime.fromtimestamp(float(end_timestamp))
             duration = end_datetime - start_datetime
         
+        # Initialise order from order_random.
+        order = [int(x) for x in order_random.split(',')]
+        real_id = str(order[int(edit_id)])
+        
         print
         print "item_id: {0}".format(item_id)
         print "edit_id: {0}".format(edit_id)
+        print "real_id: {0}".format(real_id)
         print "submit_button: {0}".format(submit_button)
         print "from_scratch: {0}".format(from_scratch)
         print "postedited: {0}".format(postedited.encode('utf-8'))
@@ -343,7 +349,7 @@ def _handle_postediting(request, task, items):
             if from_scratch:
                 _results.append('FROM_SCRATCH')
             
-            _results.append(edit_id)
+            _results.append(real_id)
             _results.append(postedited)
             _raw_result = '\n'.join(_results)
         
@@ -359,10 +365,18 @@ def _handle_postediting(request, task, items):
     source_text, reference_text = _compute_context_for_item(item)
     _finished, _total = task.get_finished_for_user(request.user)
     
+    # Create list of translation alternatives in randomised order.
+    translations = []
+    order = range(len(item.translations))
+    shuffle(order)
+    for index in order:
+        translations.append(item.translations[index])
+    
     dictionary = {'title': 'Post-editing', 'item_id': item.id,
       'source_text': source_text, 'reference_text': reference_text,
-      'translations': item.translations,
+      'translations': translations,
       'description': task.description,
+      'order': ','.join([str(x) for x in order]),
       'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
       'action_url': request.path, 'commit_tag': COMMIT_TAG}
     

@@ -709,7 +709,8 @@ def status_view(request, task_id=None):
                 # Check if we can safely use NLTK's AnnotationTask class.
                 try:
                     from nltk.metrics.agreement import AnnotationTask
-                    chk = AnnotationTask(data=[('b','1','k'),('a','1','k')])
+                    chk = AnnotationTask(data=[('b', '1', 'k'),
+                      ('a', '1', 'k')])
                     assert(chk == 1.0)
                 
                 except AssertionError:

@@ -17,6 +17,7 @@ def datetime_to_seconds(value):
     return seconds
 
 
+# pylint: disable-msg=E0102
 class AnnotationTask(AnnotationTask):
     """
     Makes sure that agr() works correctly for unordered input.
@@ -29,12 +30,13 @@ class AnnotationTask(AnnotationTask):
     1.0
     
     """
+    # pylint: disable-msg=C0103,W0221
     def agr(self, cA, cB, i, data=None):
         """Agreement between two coders on a given item
         
         """
         data = data or self.data
-        k1 = (x for x in data if x['coder'] in (cA,cB) and x['item']==i).next()
+        k1 = (x for x in data if x['coder'] in (cA, cB) and x['item']==i).next()
         if k1['coder'] == cA:
             k2 = (x for x in data if x['coder']==cB and x['item']==i).next()
         else:

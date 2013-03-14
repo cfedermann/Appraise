@@ -67,6 +67,7 @@ def validate_source_xml_file(value):
     return value
 
 
+# pylint: disable-msg=E1101
 class EvaluationTask(models.Model):
     """
     Evaluation Task object model.

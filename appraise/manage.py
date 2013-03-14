@@ -7,6 +7,7 @@ Project: Appraise evaluation system
 from django.core.management import execute_manager
 
 try:
+    #pylint: disable-msg=W0403
     import settings # Assumed to be in the same directory.
 
 except ImportError:

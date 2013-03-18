@@ -1,37 +1,42 @@
+{% with bootstrap_url="http://twitter.github.com/bootstrap" %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="robots" content="NONE,NOARCHIVE">
     <meta charset="utf-8">
     <title>{{title}}</title>
-    <meta name="description" content="Appraise Evaluation Interface">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Appraise">
     <meta name="author" content="Christian Federmann">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <!-- Le styles -->
-    <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css">
-    <style>
+    <link href="{{bootstrap_url}}/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
       body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 60px;
+        padding-bottom: 40px;
       }
     </style>
-    <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap-responsive.min.css">
+    <link href="{{bootstrap_url}}/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <!-- Le fav and touch icons; TODO: these are missing, right now! -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="{{bootstrap_url}}/assets/js/html5shiv.js"></script>
+    <![endif]-->
 
-    {% block head %}{% endblock %}
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{bootstrap_url}}/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{bootstrap_url}}/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{bootstrap_url}}/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="{{bootstrap_url}}/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="{{bootstrap_url}}/assets/ico/favicon.png">
+
+{% block head %}{% endblock %}
   </head>
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -73,8 +78,20 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{STATIC_URL}}js/jquery-1.7.1.min.js"></script>
-    <script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/jquery.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-transition.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-alert.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-modal.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-dropdown.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-tab.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-tooltip.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-popover.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-button.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-collapse.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-carousel.js"></script>
+    <script src="{{bootstrap_url}}/assets/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>
+{% endwith %}

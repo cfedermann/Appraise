@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Project: Appraise evaluation system
- Author: Christian Federmann <cfedermann@dfki.de>
+ Author: Christian Federmann <cfedermann@gmail.com>
 """
 # pylint: disable-msg=W0611
 from django.conf.urls.defaults import patterns, include, handler404, \

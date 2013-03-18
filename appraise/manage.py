@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Project: Appraise evaluation system
- Author: Christian Federmann <cfedermann@dfki.de>
+ Author: Christian Federmann <cfedermann@gmail.com>
 """
 from django.core.management import execute_manager
 

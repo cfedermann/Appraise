@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Project: Appraise evaluation system
- Author: Christian Federmann <cfedermann@dfki.de>
+ Author: Christian Federmann <cfedermann@gmail.com>
 """
 import logging
 from nltk.metrics.agreement import AnnotationTask

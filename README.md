@@ -22,7 +22,7 @@ Appraise is available under [an open, BSD-style license][4].
 
 ## How does it look like?
 
-You can see [a deployed version of Appraise here][2]. If you want to play around with it, you will need an account in order to login to the system. I'll be happy to create an account for you, just drop me an email `cfedermann [at] dfki [dot] de`.
+You can see [a deployed version of Appraise here][2]. If you want to play around with it, you will need an account in order to login to the system. I'll be happy to create an account for you, just drop me an email `cfedermann [at] gmail [dot] com`.
 
 ## System Requirements
 

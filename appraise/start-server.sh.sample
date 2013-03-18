@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Project: Appraise evaluation system
-#  Author: Christian Federmann <cfedermann@dfki.de>
+#  Author: Christian Federmann <cfedermann@gmail.com>
 
 PROJECT_ROOT=`pwd`
 DJANGO_PID="$PROJECT_ROOT/django.pid"

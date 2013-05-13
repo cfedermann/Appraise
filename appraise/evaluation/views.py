@@ -609,17 +609,6 @@ def task_handler(request, task_id):
     raise NotImplementedError, _msg
 
 
-def mturk_handler(request, task_id):
-    """
-    Task handler integrating with Amazon's Mechanical Turk.
-    
-    Does NOT require a logged in user but will check that the task specified
-    by the given task_id does actually allow external MTurk usage.
-    
-    """
-    raise NotImplementedError, "MTurk handler needs to be implemented still!"
-
-
 @login_required
 def overview(request):
     """

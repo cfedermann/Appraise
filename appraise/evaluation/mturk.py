@@ -162,7 +162,7 @@ def _handle_ranking(request, task, items):
         translations.append(item.translations[index])
     
     dictionary = {
-      'action_url': request.path,
+      'action_url': "http://www.mturk.com/mturk/externalSubmit",
       'commit_tag': COMMIT_TAG,
       'description': task.description,
       'item_id': item.id,

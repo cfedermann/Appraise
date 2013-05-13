@@ -174,7 +174,7 @@ def _handle_ranking(request, task, items):
       'translations': translations,
     }
     
-    return render(request, 'evaluation/ranking.html', dictionary)
+    return render(request, 'evaluation/mturk_ranking.html', dictionary)
 
 
 def task_handler(request, task_id):

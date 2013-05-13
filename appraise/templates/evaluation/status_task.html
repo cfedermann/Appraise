@@ -81,12 +81,12 @@
 <div class="row">
 <div class="span12">
 <div class="well">
-<a class="btn btn-primary" href="{% url appraise.evaluation.views.export_task_results task_id=task_id %}">
+<a class="btn btn-primary" href="{% url 'appraise.evaluation.views.export_task_results' task_id=task_id %}">
   <i class="icon-download icon-white"></i>
   Export results
 </a>
 
-<a class="btn btn-primary" href="{% url appraise.evaluation.views.export_agreement_data task_id=task_id %}">
+<a class="btn btn-primary" href="{% url 'appraise.evaluation.views.export_agreement_data' task_id=task_id %}">
   <i class="icon-user icon-white"></i>
   Agreement data
 </a>

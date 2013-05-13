@@ -154,7 +154,10 @@ def _handle_ranking(request, task, items):
     # Create list of translation alternatives in randomised order.
     translations = []
     order = range(len(item.translations))
-    shuffle(order)
+    
+    if task.random_order:
+        shuffle(order)
+    
     for index in order:
         translations.append(item.translations[index])
     

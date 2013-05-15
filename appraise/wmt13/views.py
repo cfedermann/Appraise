@@ -34,6 +34,48 @@ ERROR_CLASSES = ("terminology", "lexical_choice", "syntax", "insertion",
 APPRAISE_TASK_CACHE = {}
 
 
+from appraise.wmt13.models import HIT, RankingTask, UserHITMapping
+
+
+def _compute_next_task_for_user(user, language_pair):
+    """
+    Computes the next task for the given user and language pair combination.
+
+    This may either be the HIT the given user is currently working on or a
+    new HIT in case the user has completed all previous HITs already.
+
+    By convention, language_pair is a String in format xxx2yyy where both
+    xxx and yyy are ISO-639-3 language codes.
+
+    """
+    # Check if language_pair is valid for the given user.
+    if not user.groups.filter(name=language_pair):
+        return None
+
+    # Check if there exists a current HIT for the given user.
+    current_hitmap = UserHITMapping.objects.filter(user=user,
+      hit__language_pair=language_pair)
+
+    # If there is no current HIT to continue with, find a random HIT for the
+    # given user.  We keep generating a random block_id in [1, 1000] until we
+    # find a matching HIT which the current user has not yet completed.
+    if not current_hitmap:
+        random_hit = None
+        while not random_hit:
+            random_id = randint(1, 1000)
+            random_hit = HIT.objects.filter(block_id=random_id,
+              language_pair=language_pair, active=True)
+            if random_hit:
+                if len(random_hit.users) < 3 or user not in random_hit.users:
+                    random_hit = None
+        # we have a next HIT for user/language pair
+        current_hitmap = UserHITMapping.objects.create(user=user,
+          hit=random_hit)
+
+    return current_hitmap.hit
+
+
+
 def _update_task_cache(task, user):
     """
     Updates the APPRAISE_TASK_CACHE for the given user.

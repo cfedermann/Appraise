@@ -1,0 +1,27 @@
+<hit block-id="1" source-language="ger" target-language="eng" systems="google,bing,yahoo,hybrid,rbmt">
+  <seg>
+    <source>In der syrischen Stadt Aleppo sind nach staatlichen Angaben mehrere große Sprengsätze detoniert, offenbar vor zwei Einrichtungen der Sicherheitskräfte.</source>
+    <!-- optionally, we could add a <reference>...</reference> as well -->
+    <translation>In the Syrian city of Aleppo after government data several large bombs are detonated, apparently, two institutions of the security forces.</translation>
+    <translation>In Aleppo, Syria, Syrian several large explosive devices are detonates according to State, apparently before two installations of the security forces.</translation>
+    <translation>In the Syrian city Aleppo detonated according to national instructions several large explosive devices, obviously before two mechanisms of the security forces.</translation>
+    <translation>In the Syrian city Aleppo detonated according to national instructions several large explosive devices, obviously before two mechanisms of the security forces.</translation>
+    <translation>In the Syrian city Aleppo detonated according to national instructions several large explosive devices, obviously before two mechanisms of the security forces.</translation>
+  </seg>
+  <seg>
+    <source>Die Nachrichtenagentur Sana meldet, die Terroranschläge hätten einem Gebäude des Militärgeheimdienstes und dem Sitz der Ordnungspolizei gegolten.</source>
+    <translation>The news agency Sana reported that terrorist attacks would have been considered a building of military intelligence and the seat of the Order Police.</translation>
+    <translation>The news agency Sana reports the terrorist attacks would have applied a building of military intelligence, and the seat of the Ordnungspolizei.</translation>
+    <translation>The press agency Sana announces, the terrorist attacks would have been valid a building of the military secret service and the seat of the order police.</translation>
+    <translation>The press agency Sana announces, the terrorist attacks would have been valid a building of the military secret service and the seat of the order police.</translation>
+    <translation>The press agency Sana announces, the terrorist attacks would have been valid a building of the military secret service and the seat of the order police.</translation>
+  </seg>
+  <seg>
+    <source>Es habe mehrere "Märtyrer" gegeben.</source>
+    <translation>There have been several &quot;martyrs&quot;.</translation>
+    <translation>There have been several "martyrs".</translation>
+    <translation>It &quot; several; Märtyrer&quot; given.</translation>
+    <translation>It &quot; several; Märtyrer&quot; given.</translation>
+    <translation>It &quot; several; Märtyrer&quot; given.</translation>
+  </seg>
+</hit>

@@ -191,7 +191,7 @@ class HIT(models.Model):
         """
         Returns a Unicode String for this HIT object.
         """
-        return u'<evaluation-task id="{0}">'.format(self.id)
+        return u'<HIT id="{0}">'.format(self.id)
     
     @classmethod
     def _create_hit_id(cls):
@@ -591,7 +591,7 @@ class RankingResult(models.Model):
         """
         Returns a Unicode String for this RankingResult object.
         """
-        return u'<evaluation-result id="{0}">'.format(self.id)
+        return u'<ranking-result id="{0}">'.format(self.id)
     
     def reload_dynamic_fields(self):
         """
@@ -811,3 +811,25 @@ def update_task_cache(sender, instance, created, **kwargs):
         _update_task_cache(_task, _user)
     
     # TODO: extend this code to also update cache for staff users!
+
+
+# pylint: disable-msg=E1101
+class UserHITMapping(models.Model):
+    """
+    Object model mapping users to their current HIT instances.
+    """
+    user = models.ForeignKey(
+      User,
+      db_index=True
+    )
+    hit = models.ForeignKey(
+      HIT,
+      db_index=True
+    )
+
+    class Meta:
+        """
+        Metadata options for the UserHITMapping object model.
+        """
+        verbose_name = "User/HIT mapping instance"
+        verbose_name_plural = "User/HIT mapping instances"

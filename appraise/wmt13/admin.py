@@ -13,6 +13,7 @@ from django.template.loader import get_template
 from appraise.wmt13.models import HIT, RankingTask, RankingResult
 
 
+# TODO: check this code.
 def export_hit_xml(modeladmin, request, queryset):
     """
     Exports the tasks in the given queryset to XML download.

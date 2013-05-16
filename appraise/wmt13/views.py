@@ -18,20 +18,13 @@ from django.template import Context
 from django.template.defaultfilters import slugify
 from django.template.loader import get_template
 
-from appraise.evaluation.models import APPRAISE_TASK_TYPE_CHOICES, \
-  EvaluationTask, EvaluationItem, EvaluationResult
+from appraise.wmt13.models import HIT, RankingTask, RankingResult
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.wmt13.views')
 LOGGER.addHandler(LOG_HANDLER)
-
-
-ERROR_CLASSES = ("terminology", "lexical_choice", "syntax", "insertion",
-  "morphology", "misspelling", "punctuation", "other")
-
-APPRAISE_TASK_CACHE = {}
 
 
 from appraise.wmt13.models import HIT, RankingTask, UserHITMapping
@@ -75,43 +68,20 @@ def _compute_next_task_for_user(user, language_pair):
     return current_hitmap.hit
 
 
-
-def _update_task_cache(task, user):
-    """
-    Updates the APPRAISE_TASK_CACHE for the given user.
-    """
-    if not APPRAISE_TASK_CACHE.has_key(task.task_id):
-        APPRAISE_TASK_CACHE[task.task_id] = {}
-    
-    _cache = APPRAISE_TASK_CACHE[task.task_id]
-    
-    _task_data = {
-      'finished': task.is_finished_for_user(user),
-      'header': task.get_status_header,
-      'status': task.get_status_for_user(user),
-      'status_users': task.get_status_for_users(),
-      'task_name': task.task_name,
-      'url': task.get_absolute_url(),
-      'status_url': task.get_status_url(),
-    }
-    
-    _cache.update({user.username: _task_data})
-
-
 def _save_results(item, user, duration, raw_result):
     """
-    Creates or updates the EvaluationResult for the given item and user.
+    Creates or updates the RankingResult for the given item and user.
     """
     LOGGER.debug('item: {}, user: {}, duration: {}, raw_result: {}'.format(
       item, user, duration, raw_result.encode('utf-8')))
     
-    _existing_result = EvaluationResult.objects.filter(item=item, user=user)
+    _existing_result = RankingResult.objects.filter(item=item, user=user)
     
     if _existing_result:
         _result = _existing_result[0]
     
     else:
-        _result = EvaluationResult(item=item, user=user)
+        _result = RankingResult(item=item, user=user)
     
     _result.duration = duration
     _result.raw_result = raw_result
@@ -122,7 +92,7 @@ def _find_next_item_to_process(items, user, random_order=False):
     """
     Computes the next item the current user should process or None, if done.
     """
-    user_results = EvaluationResult.objects.filter(user=user)
+    user_results = RankingResult.objects.filter(user=user)
     
     processed_items = user_results.values_list('item__pk', flat=True)
     
@@ -149,8 +119,8 @@ def _compute_context_for_item(item):
     source_text = [None, None, None]
     reference_text = [None, None, None]
     
-    left_context = EvaluationItem.objects.filter(task=item.task, pk=item.id-1)
-    right_context = EvaluationItem.objects.filter(task=item.task, pk=item.id+1)
+    left_context = RankingTask.objects.filter(task=item.task, pk=item.id-1)
+    right_context = RankingTask.objects.filter(task=item.task, pk=item.id+1)
     
     _item_doc_id = getattr(item.attributes, 'doc-id', None)
     
@@ -187,7 +157,7 @@ def _handle_quality_checking(request, task, items):
     Handler for Quality Checking tasks.
     
     Finds the next item belonging to the given task, renders the page template
-    and creates an EvaluationResult instance on HTTP POST submission.
+    and creates an RankingResult instance on HTTP POST submission.
     
     """
     start_datetime = datetime.now()
@@ -205,7 +175,7 @@ def _handle_quality_checking(request, task, items):
     # If the form is valid, we have to save the results to the database.
     if form_valid:
         # Retrieve EvalutionItem instance for the given id or raise Http404.
-        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        current_item = get_object_or_404(RankingTask, pk=int(item_id))
         
         # Compute duration for this item.
         now_datetime = datetime.fromtimestamp(float(now_timestamp))
@@ -258,7 +228,7 @@ def _handle_ranking(request, task, items):
     Handler for Ranking tasks.
     
     Finds the next item belonging to the given task, renders the page template
-    and creates an EvaluationResult instance on HTTP POST submission.
+    and creates an RankingResult instance on HTTP POST submission.
     
     """
     form_valid = False
@@ -278,7 +248,7 @@ def _handle_ranking(request, task, items):
     # If the form is valid, we have to save the results to the database.
     if form_valid:
         # Retrieve EvalutionItem instance for the given id or raise Http404.
-        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        current_item = get_object_or_404(RankingTask, pk=int(item_id))
         
         # Compute duration for this item.
         start_datetime = datetime.fromtimestamp(float(start_timestamp))
@@ -349,7 +319,7 @@ def _handle_postediting(request, task, items):
     Handler for Post-editing tasks.
     
     Finds the next item belonging to the given task, renders the page template
-    and creates an EvaluationResult instance on HTTP POST submission.
+    and creates an RankingResult instance on HTTP POST submission.
     
     """
     if request.method == "POST":
@@ -362,7 +332,7 @@ def _handle_postediting(request, task, items):
         postedited = request.POST.get('postedited', 'EMPTY')
         start_timestamp = request.POST.get('start_timestamp', None)
         
-        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        current_item = get_object_or_404(RankingTask, pk=int(item_id))
         
         # Compute duration for this item.
         duration = None
@@ -431,7 +401,7 @@ def _handle_error_classification(request, task, items):
     Handler for Error Classification tasks.
     
     Finds the next item belonging to the given task, renders the page template
-    and creates an EvaluationResult instance on HTTP POST submission.
+    and creates an RankingResult instance on HTTP POST submission.
     
     """
     if request.method == "POST":
@@ -443,7 +413,7 @@ def _handle_error_classification(request, task, items):
         start_timestamp = request.POST.get('start_timestamp', None)
         submit_button = request.POST.get('submit_button')
         
-        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        current_item = get_object_or_404(RankingTask, pk=int(item_id))
         
         # Compute duration for this item.
         duration = None
@@ -517,7 +487,7 @@ def _handle_three_way_ranking(request, task, items):
     Handler for 3-Way Ranking tasks.
 
     Finds the next item belonging to the given task, renders the page template
-    and creates an EvaluationResult instance on HTTP POST submission.
+    and creates an RankingResult instance on HTTP POST submission.
 
     """
     start_datetime = datetime.now()
@@ -537,7 +507,7 @@ def _handle_three_way_ranking(request, task, items):
     # If the form is valid, we have to save the results to the database.
     if form_valid:
         # Retrieve EvalutionItem instance for the given id or raise Http404.
-        current_item = get_object_or_404(EvaluationItem, pk=int(item_id))
+        current_item = get_object_or_404(RankingTask, pk=int(item_id))
 
         # Compute duration for this item.
         now_datetime = datetime.fromtimestamp(float(now_timestamp))
@@ -591,7 +561,7 @@ def _handle_three_way_ranking(request, task, items):
     # Create list of translation alternatives in randomised order.  For 3-Way
     # Ranking tasks, we only use the first two translations which may come in
     # random order.  If so, order_reversed is set to True to allow us to later
-    # create proper EvaluationResult instances.
+    # create proper RankingResult instances.
     translations = item.translations[:2]
     order_reversed = False
     if randint(0, 1):
@@ -620,37 +590,21 @@ def task_handler(request, task_id):
     """
     General task handler.
     
-    Finds the task with the given task_id and redirects to its task handler.
+    Finds the task with the given hit_id and redirects to its task handler.
     
     """
     LOGGER.info('Rendering task handler view for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
-    task = get_object_or_404(EvaluationTask, task_id=task_id)
-    items = EvaluationItem.objects.filter(task=task)
+    task = get_object_or_404(HIT, hit_id=hit_id)
+    items = RankingTask.objects.filter(task=task)
     if not items:
         return redirect('appraise.wmt13.views.overview')
     
-    _task_type = task.get_task_type_display()
-    if _task_type == 'Quality Checking':
-        return _handle_quality_checking(request, task, items)
-    
-    elif _task_type == 'Ranking':
-        return _handle_ranking(request, task, items)
-    
-    elif _task_type == 'Post-editing':
-        return _handle_postediting(request, task, items)
-    
-    elif _task_type == 'Error classification':
-        return _handle_error_classification(request, task, items)
-    
-    elif _task_type == '3-Way Ranking':
-        return _handle_three_way_ranking(request, task, items)
-    
-    _msg = 'No handler for task type: "{0}"'.format(_task_type)
-    raise NotImplementedError, _msg
+    return _handle_ranking(request, task, items)
 
 
+# TODO: check this code.
 @login_required
 def overview(request):
     """
@@ -667,24 +621,17 @@ def overview(request):
         # We collect a list of task descriptions for this task_type.
         evaluation_tasks[task_type] = []
         
-        # Super users see all EvaluationTask items, even non-active ones.
+        # Super users see all HIT items, even non-active ones.
         if request.user.is_superuser:
-            _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
+            _tasks = HIT.objects.filter(task_type=task_type_id)
         
         else:
-            _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
+            _tasks = HIT.objects.filter(task_type=task_type_id,
               users=request.user, active=True)
         
         # Loop over the QuerySet and compute task description data.
         for _task in _tasks:
-            if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
-                APPRAISE_TASK_CACHE[_task.task_id] = {}
-            
-            _cache = APPRAISE_TASK_CACHE[_task.task_id]
-            if not _cache.has_key(request.user.username):
-                _update_task_cache(_task, request.user)
-            
-            _task_data = _cache[request.user.username]
+            _task_data = None
             
             # Append new task description to current task_type list.
             evaluation_tasks[task_type].append(_task_data)
@@ -703,16 +650,17 @@ def overview(request):
     return render(request, 'evaluation/overview.html', dictionary)
 
 
-@staff_member_required
-def status_view(request, task_id=None):
+# TODO: check this code.
+@login_required
+def status_view(request, hit_id=None):
     """
     Renders the evaluation tasks status page for staff users.
     """
     LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
       request.user.username))
     
-    if task_id:
-        task = get_object_or_404(EvaluationTask, task_id=task_id)
+    if hit_id:
+        task = get_object_or_404(HIT, hit_id=hit_id)
         
         headers = task.get_status_header()
         status = []
@@ -725,10 +673,10 @@ def status_view(request, task_id=None):
         raw_result_data = Counter()
         users = list(task.users.all())
         
-        for item in EvaluationItem.objects.filter(task=task):
+        for item in RankingTask.objects.filter(task=task):
             results = []
             for user in users:
-                qset = EvaluationResult.objects.filter(user=user, item=item)
+                qset = RankingResult.objects.filter(user=user, item=item)
                 if qset.exists():
                     category = str(qset[0].results)
                     results.append((user.id, item.id, category))
@@ -783,7 +731,7 @@ def status_view(request, task_id=None):
           'scores': scores,
           'raw_results': _raw_results,
           'status': status,
-          'task_id': task.task_id,
+          'task_id': task.hit_id,
           'task_name': task.task_name,
           'title': 'Evaluation Task Status',
         }
@@ -796,24 +744,17 @@ def status_view(request, task_id=None):
             # We collect a list of task descriptions for this task_type.
             evaluation_tasks[task_type] = []
         
-            # Super users see all EvaluationTask items, even non-active ones.
+            # Super users see all HIT items, even non-active ones.
             if request.user.is_superuser:
-                _tasks = EvaluationTask.objects.filter(task_type=task_type_id)
+                _tasks = HIT.objects.filter(task_type=task_type_id)
         
             else:
-                _tasks = EvaluationTask.objects.filter(task_type=task_type_id,
+                _tasks = HIT.objects.filter(task_type=task_type_id,
                   active=True)
         
             # Loop over the QuerySet and compute task description data.
             for _task in _tasks:
-                if not APPRAISE_TASK_CACHE.has_key(_task.task_id):
-                    APPRAISE_TASK_CACHE[_task.task_id] = {}
-                
-                _cache = APPRAISE_TASK_CACHE[_task.task_id]
-                if not _cache.has_key(request.user.username):
-                    _update_task_cache(_task, request.user)
-                
-                _task_data = _cache[request.user.username]
+                _task_data = None
                 
                 # Append new task description to current task_type list.
                 evaluation_tasks[task_type].append(_task_data)
@@ -830,60 +771,3 @@ def status_view(request, task_id=None):
         }
 
         return render(request, 'evaluation/status.html', dictionary)
-
-@staff_member_required
-def export_task_results(request, task_id=None):
-    """
-    Exports the task with the given task_id to an XML download.
-    """
-    task = get_object_or_404(EvaluationTask, task_id=task_id)
-
-    template = get_template('evaluation/result_export.xml')
-    export_xml = template.render(Context({'tasks': [task.export_to_xml()]}))
-    export_filename = 'exported-task-{}-{}'.format(slugify(task.task_name),
-      date.today())
-
-    # We return it as a "text/xml" file attachment with charset "UTF-8".
-    response = HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')
-    response['Content-Disposition'] = 'attachment; filename="{0}.xml"'.format(
-      export_filename)
-    return response
-
-
-@staff_member_required
-def export_agreement_data(request, task_id=None):
-    """
-    Exports the agreement data for the task with the given task_id.
-    
-    The format per line is as follows, items are separated by tab characters.
-    
-    <coder>\t<item>\t<class>
-    ...
-    
-    """
-    task = get_object_or_404(EvaluationTask, task_id=task_id)
-    
-    result_data = []
-    users = list(task.users.all())
-    
-    for item in EvaluationItem.objects.filter(task=task):
-        results = []
-        for user in users:
-            qset = EvaluationResult.objects.filter(user=user, item=item)
-            if qset.exists():
-                category = str(qset[0].results)
-                data = '{}\t{}\t{}'.format(user.username, item.id, category)
-                results.append(data)
-        
-        if len(results) == len(users):
-            result_data.extend(results)
-    
-    export_txt = '\n'.join(result_data)
-    export_filename = 'agreement-data-{}-{}'.format(slugify(task.task_name),
-      date.today())
-
-    # We return it as a "text/plain" file attachment with charset "UTF-8".
-    response = HttpResponse(export_txt, mimetype='text/plain; charset=UTF-8')
-    response['Content-Disposition'] = 'attachment; filename="{0}.txt"'.format(
-      export_filename)
-    return response

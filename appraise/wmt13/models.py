@@ -46,7 +46,7 @@ def validate_hits_xml_file(value):
     """
     Validates the given HITs XML source value.
     """
-    value.open()
+    value.encode("utf-8")
     
     # First, we try to instantiate an ElementTree from the given value.
     try:
@@ -57,28 +57,11 @@ def validate_hits_xml_file(value):
         
         # Check that all children are valid <hit> elements.
         for _child in _tree:
-            assert(_child.tag == 'hit'), 'expected <hit> on second level'
-            
-            # And that required XML attributes are available.
-            for _attr in HIT_REQUIRED_ATTRIBUTES:
-                assert(_attr in _child.attrib.keys()), \
-                  'missing required <hit> attribute {0}'.format(_attr)
-            
-            # Finally, we check that each <hit> contains exactly 3 children
-            # which are <seg> containers with <source>, <reference> and a
-            # total of 5 <translation> elements. The <reference> is optional.
-            # The <translation> elements require some text value to be valid.
-            _no_of_children = 0
-            for _seg in _child:
-                validate_item_xml(_seg)
-                _no_of_children += 1
-            
-            assert(_no_of_children == 3), 'required 3 <seg> children'
+            validate_hit_xml(tostring(_child))
     
     except (AssertionError, ParseError), msg:
         raise ValidationError('Invalid XML: "{0}".'.format(msg))
     
-    value.close()
     return value
 
 
@@ -128,7 +111,7 @@ class HIT(models.Model):
       db_index=True,
       unique=True,
       editable=False,
-      help_text="Unique task identifier for this HIT instance.",
+      help_text="Unique identifier for this HIT instance.",
       verbose_name="HIT identifier"
     )
     
@@ -180,12 +163,15 @@ class HIT(models.Model):
     
     def __init__(self, *args, **kwargs):
         """
-        Makes sure that self.task_attributes are available.
+        Makes sure that self.hit_attributes are available.
         """
         super(HIT, self).__init__(*args, **kwargs)
         
         if not self.hit_id:
             self.hit_id = self.__class__._create_hit_id()
+        
+        # If a hit_xml file is available, populate self.hit_attributes.
+        self.reload_dynamic_fields()
     
     def __unicode__(self):
         """
@@ -210,14 +196,13 @@ class HIT(models.Model):
         if not self.id:
             self.full_clean()
             
-            # We have to call save() here to get an id for this task.
+            # We have to call save() here to get an id for this instance.
             super(HIT, self).save(*args, **kwargs)
             
             _tree = fromstring(self.hit_xml.encode("utf-8"))
             
             for _child in _tree:
-                new_item = RankingTask(task=self,
-                  item_xml=tostring(_child))
+                new_item = RankingTask(hit=self, item_xml=tostring(_child))
                 new_item.save()
         
         super(HIT, self).save(*args, **kwargs)
@@ -226,35 +211,34 @@ class HIT(models.Model):
         """
         Returns the URL for this HIT object instance.
         """
-        task_handler_view = 'appraise.wmt13.views.task_handler'
-        kwargs = {'task_id': self.task_id}
-        return reverse(task_handler_view, kwargs=kwargs)
+        hit_handler_view = 'appraise.wmt13.views.hit_handler'
+        kwargs = {'hit_id': self.hit_id}
+        return reverse(hit_handler_view, kwargs=kwargs)
     
     def get_status_url(self):
         """
         Returns the status URL for this HIT object instance.
         """
         status_handler_view = 'appraise.wmt13.views.status_view'
-        kwargs = {'task_id': self.task_id}
+        kwargs = {'hit_id': self.hit_id}
         return reverse(status_handler_view, kwargs=kwargs)
     
     def reload_dynamic_fields(self):
         """
-        Reloads task_attributes from self.hit_xml contents.
+        Reloads hit_attributes from self.hit_xml contents.
         """
-        # If a hit_xml file is available, populate self.task_attributes.
+        # If a hit_xml file is available, populate self.hit_attributes.
         if self.hit_xml:
             try:
                 _hit_xml = fromstring(self.hit_xml.read())
-                self.task_attributes = {}
+                self.hit_attributes = {}
                 for key, value in _hit_xml.attrib.items():
-                    self.task_attributes[key] = value
+                    self.hit_attributes[key] = value
             
-            # For parse or IO errors, set self.task_attributes s.t. it gives
-            # the filename and error message to the user for debugging.
-            except (ParseError, IOError), msg:
-                self.task_attributes = {
-                  'filename': self.hit_xml.name,
+            # For parse errors, set self.hit_attributes s.t. it gives an
+            # error message to the user for debugging.
+            except (ParseError), msg:
+                self.hit_attributes = {
                   'note': msg,
                 }
     
@@ -263,32 +247,14 @@ class HIT(models.Model):
         Returns the header template for this type of HIT objects.
         """
         # pylint: disable-msg=E1101
-        _task_type = self.get_task_type_display()
         _header = ['Overall completion', 'Average duration']
-        
-        if _task_type == 'Quality Checking':
-            pass
-        
-        elif _task_type == 'Ranking':
-            pass
-        
-        elif _task_type == 'Post-editing':
-            pass
-        
-        elif _task_type == 'Error classification':
-            pass
-        
-        elif _task_type == '3-Way Ranking':
-            pass
-        
         return _header
     
+    # TODO: check this code.
     def get_status_for_user(self, user=None):
         """
         Returns the status information with respect to the given user.
         """
-        # pylint: disable-msg=E1101
-        _task_type = self.get_task_type_display()
         _status = []
         
         # Compute completion status for this task and the given user.
@@ -315,24 +281,9 @@ class HIT(models.Model):
         
         _status.append('{:.2f} sec'.format(_average_duration))
         
-        # We could add task type specific status information here.
-        if _task_type == 'Quality Checking':
-            pass
-        
-        elif _task_type == 'Ranking':
-            pass
-        
-        elif _task_type == 'Post-editing':
-            pass
-        
-        elif _task_type == 'Error classification':
-            pass
-        
-        elif _task_type == '3-Way Ranking':
-            pass
-        
         return _status
     
+    # TODO: check this code.
     def get_status_for_users(self):
         """
         Returns the status information with respect to all users.
@@ -373,6 +324,7 @@ class HIT(models.Model):
         
         return _status
     
+    # TODO: check this code. (delete?)
     def is_finished_for_user(self, user=None):
         """
         Returns True if this task is finished for the given user.
@@ -382,6 +334,7 @@ class HIT(models.Model):
           item__task=self).count()
         return _items == _done
     
+    # TODO: check this code. (delete?)
     def get_finished_for_user(self, user=None):
         """
         Returns tuple (finished, total) number of items for the given user.
@@ -391,19 +344,17 @@ class HIT(models.Model):
           item__task=self).count()
         return (_done, _items)
 
+    # TODO: check this code.
     def export_to_xml(self):
         """
         Renders this HIT as XML String.
         """
         template = get_template('evaluation/result_task.xml')
         
-        # pylint: disable-msg=E1101
-        _task_type = self.get_task_type_display().lower().replace(' ', '-')
-        
-        # If a hit_xml file is available, populate self.task_attributes.
+        # If a hit_xml file is available, populate self.hit_attributes.
         self.reload_dynamic_fields()
         
-        _attr = self.task_attributes.items()
+        _attr = self.hit_attributes.items()
         attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         results = []
@@ -411,19 +362,9 @@ class HIT(models.Model):
             for _result in item.evaluationresult_set.all():
                 results.append(_result.export_to_xml())
         
-        context = {'task_type': _task_type, 'attributes': attributes,
+        context = {'task_type': 'ranking', 'attributes': attributes,
           'results': results}
         return template.render(Context(context))
-
-
-@receiver(models.signals.pre_delete, sender=HIT)
-def remove_hit_xml_file_on_delete(sender, instance, **kwargs):
-    """
-    Removes the hit_xml file when the corresponding HIT instance is deleted.
-    """
-    # We have to use save=False as otherwise validation would fail ;)
-    if len(instance.hit_xml.name):
-        instance.hit_xml.delete(save=False)
 
 
 def validate_item_xml(value):
@@ -598,24 +539,9 @@ class RankingResult(models.Model):
         Reloads source, reference, and translations from self.item_xml.
         """
         if self.raw_result and self.raw_result != 'SKIPPED':
-            _task_type = self.item.task.get_task_type_display()
             try:
-                if _task_type == 'Quality Checking':
-                    self.results = self.raw_result
-                
-                elif _task_type == 'Ranking':
-                    self.results = self.raw_result.split(',')
-                    self.results = [int(x) for x in self.results]
-                
-                elif _task_type == 'Post-editing':
-                    self.results = self.raw_result.split('\n')
-                
-                elif _task_type == 'Error classification':
-                    self.results = self.raw_result.split('\n')
-                    self.results = [x.split('=') for x in self.results]
-                
-                elif _task_type == '3-Way Ranking':
-                    self.results = self.raw_result
+                self.results = self.raw_result.split(',')
+                self.results = [int(x) for x in self.results]
             
             # pylint: disable-msg=W0703
             except Exception, msg:
@@ -625,40 +551,7 @@ class RankingResult(models.Model):
         """
         Renders this RankingResult as XML String.
         """
-        _task_type = self.item.task.get_task_type_display()
-        if _task_type == 'Quality Checking':
-            return self.export_to_quality_checking_xml()
-        
-        elif _task_type == 'Ranking':
-            return self.export_to_ranking_xml()
-        
-        elif _task_type == 'Post-editing':
-            return self.export_to_postediting_xml()
-        
-        elif _task_type == 'Error classification':
-            return self.export_to_error_classification_xml()
-        
-        elif _task_type == '3-Way Ranking':
-            return self.export_to_three_way_ranking_xml()
-    
-    def export_to_quality_checking_xml(self):
-        """
-        Renders this RankingResult as Quality Checking XML String.
-        """
-        template = get_template('evaluation/result_quality_checking.xml')
-        
-        _attr = self.item.attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
-        
-        context = {
-          'attributes': attributes,
-          'duration': '{}'.format(self.duration),
-          'result': self.results,
-          'skipped': self.results is None,
-          'user': self.user,
-        }
-        
-        return template.render(Context(context))
+        return self.export_to_ranking_xml()
     
     def export_to_ranking_xml(self):
         """
@@ -688,117 +581,9 @@ class RankingResult(models.Model):
         }
         
         return template.render(Context(context))
-    
-    def export_to_postediting_xml(self):
-        """
-        Renders this RankingResult as Post-editing XML String.
-        """
-        template = get_template('evaluation/result_postediting.xml')
-        
-        _attr = self.item.attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
-        
-        skipped = self.results is None
-        
-        if not skipped:
-            from_scratch = self.results[0] == 'FROM_SCRATCH'
-            if from_scratch:
-                edit_id = self.results[1]
-            else:
-                edit_id = self.results[0]
-            
-            postedited = self.results[-1]
-            
-            _attr = self.item.translations[int(edit_id)][1].items()
-        
-        else:
-            from_scratch = False
-            edit_id = None
-            postedited = ''
-            _attr = []
 
-        _export_attr = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
-        
-        context = {
-          'attributes': attributes,
-          'duration': '{}'.format(self.duration),
-          'edit_id': edit_id,
-          'from_scratch': from_scratch,
-          'postedited': postedited.encode('utf-8'),
-          'skipped': skipped,
-          'translation_attributes': _export_attr,
-          'user': self.user,
-        }
-        
-        return template.render(Context(context))
-    
-    def export_to_error_classification_xml(self):
-        """
-        Renders this RankingResult as Error Classification XML String.
-        """
-        template = get_template('evaluation/result_error_classification.xml')
-        
-        _attr = self.item.attributes.items()
-        
-        # cfedermann: add attributes of translations[0] to the _attr list.
-        _attr.extend(self.item.translations[0][1].items())
-        
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
-        
-        errors = []
-        too_many_errors = False
-        missing_words = False
-        
-        if self.results:
-            for error in self.results:
-                if len(error) == 2:
-                    word_id = int(error[0])
-                    for details in error[1].split(','):
-                        error_class, severity = details.split(':')
-                        errors.append((word_id, error_class, severity))
-                
-                elif error[0] == 'MISSING_WORDS':
-                    missing_words = True
-                
-                elif error[0] == 'TOO_MANY_ERRORS':
-                    too_many_errors = True
-        
-        # Sort by increasing word id.
-        errors.sort()
-        
-        skipped = self.results is None
-        
-        context = {
-          'attributes': attributes,
-          'duration': '{}'.format(self.duration),
-          'errors': errors,
-          'missing_words': missing_words,
-          'skipped': skipped,
-          'too_many_errors': too_many_errors,
-          'user': self.user,
-        }
-        
-        return template.render(Context(context))
-    
-    def export_to_three_way_ranking_xml(self):
-        """
-        Renders this RankingResult as 3-Way Ranking XML String.
-        """
-        template = get_template('evaluation/result_three_way_ranking.xml')
-        
-        _attr = self.item.attributes.items()
-        attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
-        
-        context = {
-          'attributes': attributes,
-          'duration': '{}'.format(self.duration),
-          'result': self.results,
-          'skipped': self.results is None,
-          'user': self.user,
-        }
-        
-        return template.render(Context(context))
 
+# TODO: check this code. (delete?)
 @receiver(models.signals.post_save, sender=RankingResult)
 def update_task_cache(sender, instance, created, **kwargs):
     """

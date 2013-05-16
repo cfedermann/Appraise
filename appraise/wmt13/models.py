@@ -583,21 +583,6 @@ class RankingResult(models.Model):
         return template.render(Context(context))
 
 
-# TODO: check this code. (delete?)
-@receiver(models.signals.post_save, sender=RankingResult)
-def update_task_cache(sender, instance, created, **kwargs):
-    """
-    Updates the APPRAISE_TASK_CACHE for the given RankingResult.
-    """
-    from appraise.wmt13.views import _update_task_cache
-    
-    _task = instance.item.task
-    for _user in _task.users.all():
-        _update_task_cache(_task, _user)
-    
-    # TODO: extend this code to also update cache for staff users!
-
-
 # pylint: disable-msg=E1101
 class UserHITMapping(models.Model):
     """

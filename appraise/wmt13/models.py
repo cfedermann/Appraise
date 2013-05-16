@@ -587,6 +587,11 @@ class RankingResult(models.Model):
 class UserHITMapping(models.Model):
     """
     Object model mapping users to their current HIT instances.
+    
+    TODO: we _could_ use a post_save hook on RankingResult instances to check
+    automatically a the corresponding HIT instance would be finished for the
+    current user;  if so, it would be trivial to delete their UserHITMapping.
+    
     """
     user = models.ForeignKey(
       User,

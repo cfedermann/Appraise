@@ -27,6 +27,7 @@ LOGGER = logging.getLogger('appraise.wmt13.views')
 LOGGER.addHandler(LOG_HANDLER)
 
 
+from appraise.wmt13.models import LANGUAGE_PAIR_CHOICES
 from appraise.wmt13.models import HIT, RankingTask, UserHITMapping
 
 
@@ -43,6 +44,8 @@ def _compute_next_task_for_user(user, language_pair):
     """
     # Check if language_pair is valid for the given user.
     if not user.groups.filter(name=language_pair):
+        LOGGER.debug('User {0} does not know language pair {1}.'.format(
+          user, language_pair))
         return None
 
     # Check if there exists a current HIT for the given user.
@@ -53,18 +56,28 @@ def _compute_next_task_for_user(user, language_pair):
     # given user.  We keep generating a random block_id in [1, 1000] until we
     # find a matching HIT which the current user has not yet completed.
     if not current_hitmap:
+        LOGGER.debug('No current HIT for user {0}, fetching HIT.'.format(
+          user))
         random_hit = None
         while not random_hit:
             random_id = randint(1, 1000)
             random_hit = HIT.objects.filter(block_id=random_id,
               language_pair=language_pair, active=True)
             if random_hit:
-                if len(random_hit.users) < 3 or user not in random_hit.users:
+                random_hit_users = list(random_hit[0].users.all())
+                if len(random_hit_users) > 2 or user in random_hit_users:
                     random_hit = None
         # we have a next HIT for user/language pair
         current_hitmap = UserHITMapping.objects.create(user=user,
-          hit=random_hit)
-
+          hit=random_hit[0])
+    
+    # Otherwise, select first match from QuerySet.
+    else:
+        current_hitmap = current_hitmap[0]
+    
+    LOGGER.debug('User {0} currently working on HIT {1}'.format(user,
+      current_hitmap.hit))
+    
     return current_hitmap.hit
 
 
@@ -82,6 +95,9 @@ def _save_results(item, user, duration, raw_result):
     
     else:
         _result = RankingResult(item=item, user=user)
+    
+    print _result
+    print duration, raw_result
     
     _result.duration = duration
     _result.raw_result = raw_result
@@ -119,8 +135,8 @@ def _compute_context_for_item(item):
     source_text = [None, None, None]
     reference_text = [None, None, None]
     
-    left_context = RankingTask.objects.filter(task=item.task, pk=item.id-1)
-    right_context = RankingTask.objects.filter(task=item.task, pk=item.id+1)
+    left_context = RankingTask.objects.filter(hit=item.hit, pk=item.id-1)
+    right_context = RankingTask.objects.filter(hit=item.hit, pk=item.id+1)
     
     _item_doc_id = getattr(item.attributes, 'doc-id', None)
     
@@ -149,77 +165,6 @@ def _compute_context_for_item(item):
                 reference_text[2] = _right.reference[0]
     
     return (source_text, reference_text)
-
-
-@login_required
-def _handle_quality_checking(request, task, items):
-    """
-    Handler for Quality Checking tasks.
-    
-    Finds the next item belonging to the given task, renders the page template
-    and creates an RankingResult instance on HTTP POST submission.
-    
-    """
-    start_datetime = datetime.now()
-    form_valid = False
-    
-    # If the request has been submitted via HTTP POST, extract data from it.
-    if request.method == "POST":
-        item_id = request.POST.get('item_id', None)
-        now_timestamp = request.POST.get('now', None)
-        submit_button = request.POST.get('submit_button', None)
-        
-        # The form is only valid if all variables could be found.
-        form_valid = all((item_id, now_timestamp, submit_button))
-    
-    # If the form is valid, we have to save the results to the database.
-    if form_valid:
-        # Retrieve EvalutionItem instance for the given id or raise Http404.
-        current_item = get_object_or_404(RankingTask, pk=int(item_id))
-        
-        # Compute duration for this item.
-        now_datetime = datetime.fromtimestamp(float(now_timestamp))
-        duration = start_datetime - now_datetime
-        
-        # If "Flag Error" was clicked, _raw_result is set to "SKIPPED".
-        if submit_button == 'FLAG_ERROR':
-            _raw_result = 'SKIPPED'
-        
-        # Otherwise, for quality checking, we just pass through the value.
-        else:
-            _raw_result = submit_button
-        
-        # Save results for this item to the Django database.
-        _save_results(current_item, request.user, duration, _raw_result)
-    
-    # Find next item the current user should process or return to overview.
-    item = _find_next_item_to_process(items, request.user, task.random_order)
-    if not item:
-        return redirect('appraise.wmt13.views.overview')
-    
-    # Compute source and reference texts including context where possible.
-    source_text, reference_text = _compute_context_for_item(item)
-    
-    # Retrieve the number of finished items for this user and the total number
-    # of items for this task. We increase finished_items by one as we are
-    # processing the first unfinished item.
-    finished_items, total_items = task.get_finished_for_user(request.user)
-    finished_items += 1
-    
-    dictionary = {
-      'action_url': request.path,
-      'commit_tag': COMMIT_TAG,
-      'description': task.description,
-      'item_id': item.id,
-      'now': mktime(datetime.now().timetuple()),
-      'reference_text': reference_text,
-      'source_text': source_text,
-      'task_progress': '{0:03d}/{1:03d}'.format(finished_items, total_items),
-      'title': 'Translation Quality Checking',
-      'translation': item.translations[0],
-    }
-    
-    return render(request, 'evaluation/quality_checking.html', dictionary)
 
 
 @login_required
@@ -273,11 +218,17 @@ def _handle_ranking(request, task, items):
             _raw_result = range(len(current_item.translations))
             _raw_result = ','.join([str(ranks[x]) for x in _raw_result])
         
+        print _raw_result
+        print
+        print current_item, type(current_item)
+        print request.user, type(request.user)
+        print duration, type(duration)
+        print _raw_result, type(_raw_result)
         # Save results for this item to the Django database.
         _save_results(current_item, request.user, duration, _raw_result)
     
     # Find next item the current user should process or return to overview.
-    item = _find_next_item_to_process(items, request.user, task.random_order)
+    item = _find_next_item_to_process(items, request.user, False)
     if not item:
         return redirect('appraise.wmt13.views.overview')
 
@@ -300,7 +251,7 @@ def _handle_ranking(request, task, items):
     dictionary = {
       'action_url': request.path,
       'commit_tag': COMMIT_TAG,
-      'description': task.description,
+      'description': "NOT_AVAILABLE",
       'item_id': item.id,
       'order': ','.join([str(x) for x in order]),
       'reference_text': reference_text,
@@ -314,279 +265,7 @@ def _handle_ranking(request, task, items):
 
 
 @login_required
-def _handle_postediting(request, task, items):
-    """
-    Handler for Post-editing tasks.
-    
-    Finds the next item belonging to the given task, renders the page template
-    and creates an RankingResult instance on HTTP POST submission.
-    
-    """
-    if request.method == "POST":
-        item_id = request.POST.get('item_id')
-        edit_id = request.POST.get('edit_id', 0)
-        end_timestamp = request.POST.get('end_timestamp', None)
-        order_random = request.POST.get('order', None)
-        submit_button = request.POST.get('submit_button')
-        from_scratch = request.POST.get('from_scratch')
-        postedited = request.POST.get('postedited', 'EMPTY')
-        start_timestamp = request.POST.get('start_timestamp', None)
-        
-        current_item = get_object_or_404(RankingTask, pk=int(item_id))
-        
-        # Compute duration for this item.
-        duration = None
-        if end_timestamp and start_timestamp:
-            start_datetime = datetime.fromtimestamp(float(start_timestamp))
-            end_datetime = datetime.fromtimestamp(float(end_timestamp))
-            duration = end_datetime - start_datetime
-        
-        # Initialise order from order_random.
-        order = [int(x) for x in order_random.split(',')]
-        real_id = str(order[int(edit_id)])
-        
-        print
-        print "item_id: {0}".format(item_id)
-        print "edit_id: {0}".format(edit_id)
-        print "real_id: {0}".format(real_id)
-        print "submit_button: {0}".format(submit_button)
-        print "from_scratch: {0}".format(from_scratch)
-        print "postedited: {0}".format(postedited.encode('utf-8'))
-        print
-        print request.POST
-        print
-        
-        if submit_button == 'SUBMIT':
-            _results = []
-            if from_scratch:
-                _results.append('FROM_SCRATCH')
-            
-            _results.append(real_id)
-            _results.append(postedited)
-            _raw_result = '\n'.join(_results)
-        
-        elif submit_button == 'FLAG_ERROR':
-            _raw_result = 'SKIPPED'
-        
-        _save_results(current_item, request.user, duration, _raw_result)
-    
-    item = _find_next_item_to_process(items, request.user, task.random_order)
-    if not item:
-        return redirect('appraise.wmt13.views.overview')
-    
-    source_text, reference_text = _compute_context_for_item(item)
-    _finished, _total = task.get_finished_for_user(request.user)
-    
-    # Create list of translation alternatives in randomised order.
-    translations = []
-    order = range(len(item.translations))
-    shuffle(order)
-    for index in order:
-        translations.append(item.translations[index])
-    
-    dictionary = {'title': 'Post-editing', 'item_id': item.id,
-      'source_text': source_text, 'reference_text': reference_text,
-      'translations': translations,
-      'description': task.description,
-      'order': ','.join([str(x) for x in order]),
-      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
-      'action_url': request.path, 'commit_tag': COMMIT_TAG}
-    
-    return render(request, 'evaluation/postediting.html', dictionary)
-
-
-@login_required
-def _handle_error_classification(request, task, items):
-    """
-    Handler for Error Classification tasks.
-    
-    Finds the next item belonging to the given task, renders the page template
-    and creates an RankingResult instance on HTTP POST submission.
-    
-    """
-    if request.method == "POST":
-        end_timestamp = request.POST.get('start_timestamp', None)
-        item_id = request.POST.get('item_id')
-        words = request.POST.get('words')
-        missing_words = request.POST.get('missing_words')
-        too_many_errors = request.POST.get('too_many_errors')
-        start_timestamp = request.POST.get('start_timestamp', None)
-        submit_button = request.POST.get('submit_button')
-        
-        current_item = get_object_or_404(RankingTask, pk=int(item_id))
-        
-        # Compute duration for this item.
-        duration = None
-        if end_timestamp and start_timestamp:
-            start_datetime = datetime.fromtimestamp(float(start_timestamp))
-            end_datetime = datetime.fromtimestamp(float(end_timestamp))
-            duration = end_datetime - start_datetime
-        
-        errors = {}
-        if words:
-            for index in range(int(words)):
-                _errors = {}
-                for error in ERROR_CLASSES:
-                    severity = request.POST.get('{0}_{1}'.format(error, index))
-                    if severity and severity != "NONE":
-                        _errors[error] = severity
-                if _errors:
-                    errors[index] = _errors
-        
-        print
-        print "item_id: {0}".format(item_id)
-        print "missing_words: {0}".format(missing_words)
-        print "too_many_errors: {0}".format(too_many_errors)
-        print "submit_button: {0}".format(submit_button)
-        print "errors: {0}".format(errors)
-        print
-        
-        if submit_button == 'SUBMIT':
-            if too_many_errors:
-                _raw_result = 'TOO_MANY_ERRORS'
-            
-            else:
-                _errors = []
-                
-                if missing_words:
-                    _errors.append('MISSING_WORDS')
-                
-                for index, data in errors.items():
-                    _word_i = ['{}:{}'.format(k, v) for k, v in data.items()]
-                    _errors.append('{}={}'.format(index, ','.join(_word_i)))
-                
-                _raw_result = '\n'.join(_errors)
-        
-        elif submit_button == 'FLAG_ERROR':
-            _raw_result = 'SKIPPED'
-        
-        _save_results(current_item, request.user, duration, _raw_result)
-    
-    item = _find_next_item_to_process(items, request.user, task.random_order)
-    if not item:
-        return redirect('appraise.wmt13.views.overview')
-    
-    source_text, reference_text = _compute_context_for_item(item)
-    _finished, _total = task.get_finished_for_user(request.user)
-    
-    translation = item.translations[0][0]
-    words = item.translations[0][0].split(' ')
-    dictionary = {'title': 'Error Classification', 'item_id': item.id,
-      'source_text': source_text, 'reference_text': reference_text,
-      'translation': translation,
-      'words': words,
-      'description': task.description,
-      'task_progress': '{0:03d}/{1:03d}'.format(_finished+1, _total),
-      'action_url': request.path, 'commit_tag': COMMIT_TAG}
-    
-    return render(request, 'evaluation/error_classification.html', dictionary)
-
-
-def _handle_three_way_ranking(request, task, items):
-    """
-    Handler for 3-Way Ranking tasks.
-
-    Finds the next item belonging to the given task, renders the page template
-    and creates an RankingResult instance on HTTP POST submission.
-
-    """
-    start_datetime = datetime.now()
-    form_valid = False
-
-    # If the request has been submitted via HTTP POST, extract data from it.
-    if request.method == "POST":
-        item_id = request.POST.get('item_id', None)
-        now_timestamp = request.POST.get('now', None)
-        order_reversed = request.POST.get('order_reversed', None)
-        submit_button = request.POST.get('submit_button', None)
-
-        # The form is only valid if all variables could be found.
-        form_valid = all((item_id, now_timestamp, order_reversed,
-          submit_button))
-
-    # If the form is valid, we have to save the results to the database.
-    if form_valid:
-        # Retrieve EvalutionItem instance for the given id or raise Http404.
-        current_item = get_object_or_404(RankingTask, pk=int(item_id))
-
-        # Compute duration for this item.
-        now_datetime = datetime.fromtimestamp(float(now_timestamp))
-        duration = start_datetime - now_datetime
-
-        # If "Flag Error" was clicked, _raw_result is set to "SKIPPED".
-        if submit_button == 'FLAG_ERROR':
-            _raw_result = 'SKIPPED'
-
-        # Otherwise, for quality checking, we just pass through the value.
-        # However, if the order had been reversed when rendering this form,
-        # we have to invert the outcoming result here.
-        else:
-            _raw_result = submit_button
-            
-            if order_reversed == 'yes':
-                if submit_button == 'A>B':
-                    _raw_result = 'A<B'
-                
-                elif submit_button == 'A<B':
-                    _raw_result = 'A>B'
-
-        # Save results for this item to the Django database.
-        _save_results(current_item, request.user, duration, _raw_result)
-
-    # Find next item the current user should process or return to overview.
-    item = _find_next_item_to_process(items, request.user, task.random_order)
-    if not item:
-        return redirect('appraise.wmt13.views.overview')
-
-    # Compute source and reference texts including context where possible.
-    source_text, reference_text = _compute_context_for_item(item)
-    
-    # Replace [[[markup]]] with proper HTML markup in the current sentence
-    # only.  To avoid confusion, we delete the [[[markup]]] from the context.
-    if source_text[0]:
-        source_text[0] = source_text[0].replace('[[[', '').replace(']]]', '')
-    
-    source_text[1] = source_text[1].replace('[[[', '<code>')
-    source_text[1] = source_text[1].replace(']]]', '</code>')
-    
-    if source_text[2]:
-        source_text[2] = source_text[2].replace('[[[', '').replace(']]]', '')
-
-    # Retrieve the number of finished items for this user and the total number
-    # of items for this task. We increase finished_items by one as we are
-    # processing the first unfinished item.
-    finished_items, total_items = task.get_finished_for_user(request.user)
-    finished_items += 1
-
-    # Create list of translation alternatives in randomised order.  For 3-Way
-    # Ranking tasks, we only use the first two translations which may come in
-    # random order.  If so, order_reversed is set to True to allow us to later
-    # create proper RankingResult instances.
-    translations = item.translations[:2]
-    order_reversed = False
-    if randint(0, 1):
-        translations.reverse()
-        order_reversed = True
-
-    dictionary = {
-      'action_url': request.path,
-      'commit_tag': COMMIT_TAG,
-      'description': task.description,
-      'item_id': item.id,
-      'now': mktime(datetime.now().timetuple()),
-      'order_reversed': order_reversed,
-      'reference_text': reference_text,
-      'source_text': source_text,
-      'task_progress': '{0:03d}/{1:03d}'.format(finished_items, total_items),
-      'title': '3-Way Ranking',
-      'translations': translations,
-    }
-    
-    return render(request, 'evaluation/three_way_ranking.html', dictionary)
-
-
-@login_required
-def task_handler(request, task_id):
+def hit_handler(request, hit_id):
     """
     General task handler.
     
@@ -596,12 +275,12 @@ def task_handler(request, task_id):
     LOGGER.info('Rendering task handler view for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
-    task = get_object_or_404(HIT, hit_id=hit_id)
-    items = RankingTask.objects.filter(task=task)
+    hit = get_object_or_404(HIT, hit_id=hit_id)
+    items = RankingTask.objects.filter(hit=hit)
     if not items:
         return redirect('appraise.wmt13.views.overview')
     
-    return _handle_ranking(request, task, items)
+    return _handle_ranking(request, hit, items)
 
 
 # TODO: check this code.
@@ -610,44 +289,39 @@ def overview(request):
     """
     Renders the evaluation tasks overview.
     """
-    LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
+    LOGGER.info('Rendering WMT13 HIT overview for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
     # Re-initialise random number generator.
     seed(None)
     
-    evaluation_tasks = {}
-    for task_type_id, task_type in APPRAISE_TASK_TYPE_CHOICES:
-        # We collect a list of task descriptions for this task_type.
-        evaluation_tasks[task_type] = []
-        
-        # Super users see all HIT items, even non-active ones.
-        if request.user.is_superuser:
-            _tasks = HIT.objects.filter(task_type=task_type_id)
-        
-        else:
-            _tasks = HIT.objects.filter(task_type=task_type_id,
-              users=request.user, active=True)
-        
-        # Loop over the QuerySet and compute task description data.
-        for _task in _tasks:
-            _task_data = None
-            
-            # Append new task description to current task_type list.
-            evaluation_tasks[task_type].append(_task_data)
-        
-        # If there are no tasks descriptions for this task_type, we skip it.
-        if len(evaluation_tasks[task_type]) == 0:
-            evaluation_tasks.pop(task_type)
+    # Collect available language pairs for the current user.
+    language_codes = set([x[0] for x in LANGUAGE_PAIR_CHOICES])
+    language_pairs = request.user.groups.filter(name__in=language_codes)
+    
+    hit_data = []
+    for language_pair in language_pairs:
+        current_hit = _compute_next_task_for_user(request.user, language_pair)
+        if current_hit:
+            hit_data.append(
+              (current_hit.get_language_pair_display(),
+               current_hit.get_absolute_url(), current_hit.block_id,
+               current_hit.get_status_for_user(request.user))
+            )
+    
+    # TODO: add HIT status to HIT object model to speed up things!
+    #       we might then be able to just pass one HIT instance?
+    
+    print hit_data
     
     dictionary = {
       'active_page': "OVERVIEW",
       'commit_tag': COMMIT_TAG,
-      'evaluation_tasks': evaluation_tasks,
-      'title': 'Evaluation Task Overview',
+      'hit_data': hit_data,
+      'title': 'WMT13 Dashboard',
     }
     
-    return render(request, 'evaluation/overview.html', dictionary)
+    return render(request, 'wmt13/overview.html', dictionary)
 
 
 # TODO: check this code.

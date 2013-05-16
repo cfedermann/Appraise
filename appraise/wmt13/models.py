@@ -28,16 +28,16 @@ LOGGER.addHandler(LOG_HANDLER)
 
 
 LANGUAGE_PAIR_CHOICES = (
-  ('eng2ces', 'English->Czech'),
-  ('eng2deu', 'English->German'),
-  ('eng2spa', 'English->Spanish'),
-  ('eng2fra', 'English->French'),
-  ('eng2rus', 'English->Russian'),
-  ('ces2eng', 'Czech->English'),
-  ('deu2eng', 'German->English'),
-  ('spa2eng', 'Spanish->English'),
-  ('fra2eng', 'French->English'),
-  ('rus2eng', 'Russian->English'),
+  ('eng2ces', 'English → Czech'),
+  ('eng2deu', 'English → German'),
+  ('eng2spa', 'English → Spanish'),
+  ('eng2fra', 'English → French'),
+  ('eng2rus', 'English → Russian'),
+  ('ces2eng', 'Czech → English'),
+  ('deu2eng', 'German → English'),
+  ('spa2eng', 'Spanish → English'),
+  ('fra2eng', 'French → English'),
+  ('rus2eng', 'Russian → English'),
 )
 
 
@@ -120,7 +120,8 @@ class HIT(models.Model):
         """
         Returns a Unicode String for this HIT object.
         """
-        return u'<HIT id="{0}">'.format(self.id)
+        return u'<HIT id="{0}" hit="{1}" block="{2}" language-pair="{3}">' \
+          .format(self.id, self.hit_id, self.block_id, self.language_pair)
     
     @classmethod
     def _create_hit_id(cls):
@@ -173,7 +174,7 @@ class HIT(models.Model):
         # If a hit_xml file is available, populate self.hit_attributes.
         if self.hit_xml:
             try:
-                _hit_xml = fromstring(self.hit_xml.read())
+                _hit_xml = fromstring(self.hit_xml.encode("utf-8"))
                 self.hit_attributes = {}
                 for key, value in _hit_xml.attrib.items():
                     self.hit_attributes[key] = value
@@ -181,9 +182,7 @@ class HIT(models.Model):
             # For parse errors, set self.hit_attributes s.t. it gives an
             # error message to the user for debugging.
             except (ParseError), msg:
-                self.hit_attributes = {
-                  'note': msg,
-                }
+                self.hit_attributes = {'note': msg}
     
     def get_status_header(self):
         """
@@ -201,9 +200,9 @@ class HIT(models.Model):
         _status = []
         
         # Compute completion status for this task and the given user.
-        _items = RankingTask.objects.filter(task=self).count()
+        _items = RankingTask.objects.filter(hit=self).count()
         _done = RankingResult.objects.filter(user=user,
-          item__task=self).count()
+          item__hit=self).count()
         
         _status.append('{0}/{1}'.format(_done, _items))
         _percentage = 100*_done/float(_items or 1)
@@ -216,7 +215,7 @@ class HIT(models.Model):
             _status.append(' progress-success')
         
         # Compute average duration for this task and the given user.
-        _results = RankingResult.objects.filter(user=user, item__task=self)
+        _results = RankingResult.objects.filter(user=user, item__hit=self)
         _durations = _results.values_list('duration', flat=True)
         
         _durations = [datetime_to_seconds(d) for d in _durations if d]
@@ -234,12 +233,12 @@ class HIT(models.Model):
         _status = []
         
         # Compute completion status for this task and all possible users.
-        _items = RankingTask.objects.filter(task=self).count()
+        _items = RankingTask.objects.filter(hit=self).count()
         _done = []
         
         for user in self.users.all():
             _done.append(RankingResult.objects.filter(user=user,
-              item__task=self).count())
+              item__hit=self).count())
         
         # Minimal number of completed items counts here.
         _status.append('{0}/{1}'.format(min(_done or [0]), _items))
@@ -257,7 +256,7 @@ class HIT(models.Model):
 
         for user in self.users.all():
             _results = RankingResult.objects.filter(user=user,
-              item__task=self)
+              item__hit=self)
             _durations.extend(_results.values_list('duration', flat=True))
         
         _durations = [datetime_to_seconds(d) for d in _durations if d]
@@ -272,9 +271,9 @@ class HIT(models.Model):
         """
         Returns True if this task is finished for the given user.
         """
-        _items = RankingTask.objects.filter(task=self).count()
+        _items = RankingTask.objects.filter(hit=self).count()
         _done = RankingResult.objects.filter(user=user,
-          item__task=self).count()
+          item__hit=self).count()
         return _items == _done
     
     # TODO: check this code. (delete?)
@@ -282,9 +281,9 @@ class HIT(models.Model):
         """
         Returns tuple (finished, total) number of items for the given user.
         """
-        _items = RankingTask.objects.filter(task=self).count()
+        _items = RankingTask.objects.filter(hit=self).count()
         _done = RankingResult.objects.filter(user=user,
-          item__task=self).count()
+          item__hit=self).count()
         return (_done, _items)
 
     # TODO: check this code.
@@ -301,7 +300,7 @@ class HIT(models.Model):
         attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])
         
         results = []
-        for item in RankingTask.objects.filter(task=self):
+        for item in RankingTask.objects.filter(hit=self):
             for _result in item.evaluationresult_set.all():
                 results.append(_result.export_to_xml())
         
@@ -314,7 +313,7 @@ class RankingTask(models.Model):
     """
     RankingTask object model for WMT13 ranking evaluation.
     """
-    task = models.ForeignKey(
+    hit = models.ForeignKey(
       HIT,
       db_index=True
     )

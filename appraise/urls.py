@@ -46,7 +46,7 @@ urlpatterns = patterns('',
 urlpatterns += patterns('',
   (r'^appraise/wmt13/$', 'appraise.wmt13.views.overview'),
   (r'^appraise/wmt13/(?P<hit_id>[a-f0-9]{8})/',
-    'appraise.wmt13.views.task_handler'),
+    'appraise.wmt13.views.hit_handler'),
 )
 
 if MTURK_ENABLED:

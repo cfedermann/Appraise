@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="span12">
+<table class="table table-striped table-bordered">
+<tr>
+  <th>Task name</th>
+  <th>Language pair</th>
+  <th>Overall completion</th>
+  <th>Average duration</th>
+</tr>
+{% for language_pair, hit_url, block_id, status in hit_data %}
+<tr>
+  <td style="width: 60%;"><a href="{{hit_url}}">Block #{{block_id}}</a></td>
+  <td>{{language_pair}}</td>
+  <td><span class="progress{{status.2}}"><div class="bar" style="min-width: 33%;width: {{status.1}}%;">{{status.0}}</div></span></td>
+{% for status_data in status|slice:"3:" %}
+  <td>{{status_data}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+</div>
+</div>
+{% endblock %}

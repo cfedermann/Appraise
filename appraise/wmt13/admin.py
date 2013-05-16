@@ -10,7 +10,8 @@ from django.http import HttpResponse
 from django.template import Context
 from django.template.loader import get_template
 
-from appraise.wmt13.models import HIT, RankingTask, RankingResult
+from appraise.wmt13.models import HIT, RankingTask, RankingResult, \
+  UserHITMapping
 
 
 # TODO: check this code.
@@ -78,9 +79,10 @@ class RankingResultAdmin(admin.ModelAdmin):
     ModelAdmin class for RankingResult instances.
     """
     list_display = ('item', 'user', 'readable_duration', 'results')
-    list_filter = ('item__task', 'user')
+    list_filter = ('item__hit', 'user')
 
 
 admin.site.register(HIT, HITAdmin)
 admin.site.register(RankingTask)
 admin.site.register(RankingResult, RankingResultAdmin)
+admin.site.register(UserHITMapping)

@@ -17,6 +17,7 @@ from django.db import models
 from django.template import Context
 from django.template.loader import get_template
 
+from appraise.wmt13.validators import validate_hit_xml, validate_segment_xml
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
 from appraise.utils import datetime_to_seconds
 
@@ -38,64 +39,6 @@ LANGUAGE_PAIR_CHOICES = (
   ('fra2eng', 'French->English'),
   ('rus2eng', 'Russian->English'),
 )
-
-HIT_REQUIRED_ATTRIBUTES = ('block-id', 'source-language', 'target-language',
- 'systems')
-
-def validate_hits_xml_file(value):
-    """
-    Validates the given HITs XML source value.
-    """
-    value.encode("utf-8")
-    
-    # First, we try to instantiate an ElementTree from the given value.
-    try:
-        _tree = fromstring(value.read())
-        
-        # Then, we check that the top-level tag name is <hits>.
-        assert(_tree.tag == 'hits'), 'expected <hits> on top-level'
-        
-        # Check that all children are valid <hit> elements.
-        for _child in _tree:
-            validate_hit_xml(tostring(_child))
-    
-    except (AssertionError, ParseError), msg:
-        raise ValidationError('Invalid XML: "{0}".'.format(msg))
-    
-    return value
-
-
-def validate_hit_xml(value):
-    """
-    Validates the given HIT XML source value.
-    """
-    # First, we try to instantiate an ElementTree from the given value.
-    try:
-        _tree = fromstring(value.encode("utf-8"))
-        
-        # Then, we check that the top-level tag name is <hits>.
-        assert(_tree.tag == 'hit'), 'expected <hit> on top-level'
-        
-        # And that required XML attributes are available.
-        for _attr in HIT_REQUIRED_ATTRIBUTES:
-            assert(_attr in _tree.attrib.keys()), \
-              'missing required <hit> attribute {0}'.format(_attr)
-        
-        # Finally, we check that each <hit> contains exactly 3 children
-        # which are <seg> containers with <source>, <reference> and a
-        # total of 5 <translation> elements. The <reference> is optional.
-        # The <translation> elements require some text value to be valid.
-            _no_of_children = 0
-            for _seg in _tree:
-                validate_item_xml(_seg)
-                _no_of_children += 1
-            
-            assert(_no_of_children == 3), 'required 3 <seg> children'
-    
-    except (AssertionError, ParseError), msg:
-        raise ValidationError('Invalid XML: "{0}".'.format(msg))
-    
-    return value
 
 
 # pylint: disable-msg=E1101
@@ -367,42 +310,6 @@ class HIT(models.Model):
         return template.render(Context(context))
 
 
-def validate_item_xml(value):
-    """
-    Checks that item_xml contains source, reference, and 5 translation tags.
-    """
-    try:
-        if isinstance(value, Element):
-            _tree = value
-        
-        else:
-            _tree = fromstring(value)
-        
-        if not _tree.tag == 'seg':
-            raise ValidationError('Invalid XML: illegal tag: "{0}".'.format(
-              _tree.tag))
-        
-        assert(len(_tree.findall('source')) == 1), \
-          'exactly one <source> element expected'
-        
-        assert(_tree.find('source').text is not None), \
-          'missing required <source> text value'
-        
-        if _tree.find('reference') is not None:
-            assert(_tree.find('reference').text is not None), \
-              'missing required <reference> text value'
-        
-        assert(len(_tree.findall('translation')) == 5), \
-          'one or more <translation> elements expected'
-        
-        for _translation in _tree.iterfind('translation'):
-            assert(_translation.text is not None), \
-              'missing required <translation> text value'
-    
-    except (AssertionError, ParseError), msg:
-        raise ValidationError('Invalid XML: "{0}".'.format(msg))
-
-
 class RankingTask(models.Model):
     """
     RankingTask object model for WMT13 ranking evaluation.
@@ -414,7 +321,7 @@ class RankingTask(models.Model):
     
     item_xml = models.TextField(
       help_text="XML source for this RankingTask instance.",
-      validators=[validate_item_xml],
+      validators=[validate_segment_xml],
       verbose_name="RankingTask source XML"
     )
     

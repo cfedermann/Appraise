@@ -92,7 +92,7 @@ def _compute_next_task_for_user(user, language_pair):
         
         # Update User/HIT mappings s.t. the system knows about the next HIT.
         current_hitmap = UserHITMapping.objects.create(user=user,
-          hit=random_hit[0])
+          hit=random_hit)
     
     # Otherwise, select first match from QuerySet.
     else:

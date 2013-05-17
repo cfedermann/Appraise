@@ -1,128 +1,131 @@
-Appraise Evaluation System
-==========================
+<h1 id="appraise_evaluation_system">Appraise Evaluation System</h1>
 
-Initial import into GitHub on Oct 23, 2011.
+<p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt13/">Eighth Workshop on Statistical Machine Translation 2013</a>. Second release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011.</p>
 
-## Update
+<h2 id="update">Update</h2>
 
-A new release of the Appraise software package is currently being prepared in time for the [Seventh MT Marathon 2012][1] which will take place September 3-8, 2012 in Edinburgh, Scotland.
+<p>There's a new release of Appraise for use in the WMT '13; see the new Django app inside <code>appraise.wmt13</code> for more details.</p>
 
-## Overview
+<h2 id="overview">Overview</h2>
 
-Appraise is an open-source tool for manual evaluation of Machine Translation output. Appraise allows to collect human judgments on translation output, implementing annotation tasks such as
+<p>Appraise is an open-source tool for manual evaluation of Machine Translation output. Appraise allows to collect human judgments on translation output, implementing annotation tasks such as</p>
 
-  1. translation quality checking;
-  2. ranking of translations;
-  3. error classification;
-  4. manual post-editing.
+<ol>
+<li>translation quality checking;</li>
+<li>ranking of translations;</li>
+<li>error classification;</li>
+<li>manual post-editing.</li>
+</ol>
 
-It features an extensible XML import/output format and can easily be adapted to new annotation tasks. The next version of Appraise will also include automatic computation of inter-annotator agreements allowing quick access to evaluation results.
+<p>It features an extensible XML import/output format and can easily be adapted to new annotation tasks. The next version of Appraise will also include automatic computation of inter-annotator agreements allowing quick access to evaluation results.</p>
 
-Appraise is available under [an open, BSD-style license][4].
+<p>Appraise is available under <a href="https://raw.github.com/cfedermann/Appraise/master/appraise/LICENSE">an open, BSD-style license</a>.</p>
 
-## How does it look like?
+<h2 id="how_does_it_look_like">How does it look like?</h2>
 
-You can see [a deployed version of Appraise here][2]. If you want to play around with it, you will need an account in order to login to the system. I'll be happy to create an account for you, just drop me an email `cfedermann [at] gmail [dot] com`.
+<p>You can see <a href="http://www.dfki.de/appraise/">a deployed version of Appraise here</a>. If you want to play around with it, you will need an account in order to login to the system. I&#8217;ll be happy to create an account for you, just drop me an email <code>cfedermann [at] gmail [dot] com</code>.</p>
 
-## System Requirements
+<h2 id="system_requirements">System Requirements</h2>
 
-Appraise is based on the [Django framework][3], version 1.3 or newer. You will need __Python 2.7__ to run it locally. For deployment, a FastCGI compatible web server such as __lighttpd__ is required.
+<p>Appraise is based on the <a href="http://www.djangoproject.com/">Django framework</a>, version 1.3 or newer. You will need <strong>Python 2.7</strong> to run it locally. For deployment, a FastCGI compatible web server such as <strong>lighttpd</strong> is required.</p>
 
-## Quickstart Instructions
+<h2 id="quickstart_instructions">Quickstart Instructions</h2>
 
-Assuming you have already installed Python and Django, you can clone a local copy of Appraise using the following command; you can change the folder name `Appraise-Software` to anything you like.
+<p>Assuming you have already installed Python and Django, you can clone a local copy of Appraise using the following command; you can change the folder name <code>Appraise-Software</code> to anything you like.</p>
 
-    $ git clone git://github.com/cfedermann/Appraise.git Appraise-Software
-    ...
+<pre><code>$ git clone git://github.com/cfedermann/Appraise.git Appraise-Software
+...
+</code></pre>
 
-After having cloned the GitHub project, you have to initialise Appraise. This is a two-step process:
+<p>After having cloned the GitHub project, you have to initialise Appraise. This is a two-step process:</p>
 
-1. Initialise the SQLite database:
+<ol>
+<li><p>Initialise the SQLite database:</p>
 
-        $ cd Appraise-Software/appraise
-        $ python manage.py syncdb
-        ...
+<pre><code>$ cd Appraise-Software/appraise
+$ python manage.py syncdb
+...
+</code></pre></li>
+<li><p>Collect static files and copy them into <code>Appraise-Software/appraise/static-files</code>. Answer <code>yes</code> when asked whether you want to overwrite existing files.</p>
 
-2. Collect static files and copy them into `Appraise-Software/appraise/static-files`. Answer `yes` when asked whether you want to overwrite existing files.
+<pre><code>$ python manage.py collectstatic
+...
+</code></pre>
 
-        $ python manage.py collectstatic
-        ...
+<p>More information on handling of static files in Django 1.3+ is <a href="https://docs.djangoproject.com/en/1.4/howto/static-files/">available here</a>.</p></li>
+</ol>
 
-    More information on handling of static files in Django 1.3+ is [available here][5].
+<p>Finally, you can start up your local copy of Django using the <code>runserver</code> command:</p>
 
-Finally, you can start up your local copy of Django using the `runserver` command:
+<pre><code>$ python manage.py runserver
+</code></pre>
 
-    $ python manage.py runserver
+<p>You should be greeted with the following output from your terminal:</p>
 
-You should be greeted with the following output from your terminal:
+<pre><code>Validating models...
 
-    Validating models...
+0 errors found
+Django version 1.3.1, using settings 'appraise.settings'
+Development server is running at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+</code></pre>
 
-    0 errors found
-    Django version 1.3.1, using settings 'appraise.settings'
-    Development server is running at http://127.0.0.1:8000/
-    Quit the server with CONTROL-C.
+<p>Point your browser to <a href="http://127.0.0.1:8000/appraise/">http://127.0.0.1:8000/appraise/</a> and there it is&#8230;</p>
 
-Point your browser to [http://127.0.0.1:8000/appraise/](http://127.0.0.1:8000/appraise/) and there it is...
+<h3 id="add_users">Add users</h3>
 
-### Add users
+<p>Users can be added <a href="http://127.0.0.1:8000/appraise/admin/auth/user/add/">here</a>.</p>
 
-Users can be added [here](http://127.0.0.1:8000/appraise/admin/auth/user/add/).
+<h3 id="add_evaluation_tasks">Add evaluation tasks</h3>
 
-### Add evaluation tasks
+<p>Evaluation tasks can be created
+<a href="http://127.0.0.1:8000/appraise/admin/evaluation/evaluationtask/add/">here</a>.</p>
 
-Evaluation tasks can be created
-[here](http://127.0.0.1:8000/appraise/admin/evaluation/evaluationtask/add/).
+<p>You need an XML file in proper format to upload a task; an example file can be found in
+examples/sample-ranking-task.xml .</p>
 
-You need an XML file in proper format to upload a task; an example file can be found in
-examples/sample-ranking-task.xml .
+<h2 id="deployment_with_lighttpd">Deployment with lighttpd</h2>
 
-## Deployment with lighttpd
+<p>You will need to create a customised <code>start-server.sh</code> script inside <code>Appraise-Software/appraise</code>. There is a <code>.sample</code> file available in this folder which should help you get started quickly. In a nutshell, you have to uncomment and edit the last two lines:</p>
 
-You will need to create a customised `start-server.sh` script inside `Appraise-Software/appraise`. There is a `.sample` file available in this folder which should help you get started quickly. In a nutshell, you have to uncomment and edit the last two lines:
+<pre><code># /path/to/bin/python manage.py runfcgi host=127.0.0.1 port=1234 method=threaded pidfile=$DJANGO_PID
+</code></pre>
 
-    # /path/to/bin/python manage.py runfcgi host=127.0.0.1 port=1234 method=threaded pidfile=$DJANGO_PID
+<p>The first line tells Django to start up in FastCGI mode, binding to hostname <code>127.0.0.1</code> and port <code>1234</code> in our example, running a <code>threaded</code> server and writing the process ID to the file <code>$DJANGO_PID</code>. The <code>.pid</code> files will be used by <code>stop-server.sh</code> to properly shutdown Appraise.</p>
 
-The first line tells Django to start up in FastCGI mode, binding to hostname `127.0.0.1` and port `1234` in our example, running a `threaded` server and writing the process ID to the file `$DJANGO_PID`. The `.pid` files will be used by `stop-server.sh` to properly shutdown Appraise.
+<p>Using Django&#8217;s <code>manage.py</code> with the <code>runfcgi</code> command requires you to also install <code>flup</code> into the <code>site-packages</code> folder of your Python installation. It is available <a href="http://pypi.python.org/pypi/flup/1.0.3.dev-20110405">from here</a>.</p>
 
-Using Django's `manage.py` with the `runfcgi` command requires you to also install `flup` into the `site-packages` folder of your Python installation. It is available [from here][6].
+<pre><code># /path/to/sbin/lighttpd -f /path/to/lighttpd/etc/appraise.conf
+</code></pre>
 
-    # /path/to/sbin/lighttpd -f /path/to/lighttpd/etc/appraise.conf
+<p>The second line starts up the <code>lighttd</code> server using an appropriate configuration file <code>appraise.conf</code>. Have a look at <code>Appraise-Software/examples/appraise-lighttpd.conf</code> to create your own.</p>
 
-The second line starts up the `lighttd` server using an appropriate configuration file `appraise.conf`. Have a look at `Appraise-Software/examples/appraise-lighttpd.conf` to create your own.
+<p>Once the various <code>/path/to/XYZ</code> settings are properly configured, you should be able to launch Appraise in production mode.</p>
 
-Once the various `/path/to/XYZ` settings are properly configured, you should be able to launch Appraise in production mode.
+<h2 id="references">References</h2>
 
-## References
+<p>If you use Appraise in your research, please cite the MT Marathon 2012 paper:</p>
 
-If you use Appraise in your research, please cite the MT Marathon 2012 paper:
-
-__Christian Federmann__
+<p><strong>Christian Federmann</strong>
 Appraise: An Open-Source Toolkit for Manual Evaluation of Machine Translation Output
-In _The Prague Bulletin of Mathematical Linguistics volume 98_, Prague, Czech Republic, 9/2012
+In <em>The Prague Bulletin of Mathematical Linguistics volume 98</em>, Prague, Czech Republic, 9/2012</p>
 
-### BibTex
+<h3 id="bibtex">BibTex</h3>
 
-    @Article{mtm12_appraise,
-      author =  {Christian Federmann},
-      title =   {Appraise: An Open-Source Toolkit for Manual Evaluation of Machine Translation Output},
-      journal = {The Prague Bulletin of Mathematical Linguistics},
-      volume =  {98},
-      pages =   {25--35},
-      year =    {2012},
-      address = {Prague, Czech Republic},
-      month =   {September}
-    }
+<pre><code>@Article{mtm12_appraise,
+  author =  {Christian Federmann},
+  title =   {Appraise: An Open-Source Toolkit for Manual Evaluation of Machine Translation Output},
+  journal = {The Prague Bulletin of Mathematical Linguistics},
+  volume =  {98},
+  pages =   {25--35},
+  year =    {2012},
+  address = {Prague, Czech Republic},
+  month =   {September}
+}
+</code></pre>
 
-A previous version of Appraise had been published at LREC 2010:
+<p>A previous version of Appraise had been published at LREC 2010:</p>
 
-__Christian Federmann__
+<p><strong>Christian Federmann</strong>
 Appraise: An Open-Source Toolkit for Manual Phrase-Based Evaluation of Translations
-In _Proceedings of the Seventh Conference on International Language Resources and Evaluation_, Valletta, Malta, LREC, 5/2010
-
-[1]: http://www.statmt.org/mtm12/
-[2]: http://www.dfki.de/appraise/
-[3]: http://www.djangoproject.com/
-[4]: https://raw.github.com/cfedermann/Appraise/master/appraise/LICENSE
-[5]: https://docs.djangoproject.com/en/1.4/howto/static-files/
-[6]: http://pypi.python.org/pypi/flup/1.0.3.dev-20110405
+In <em>Proceedings of the Seventh Conference on International Language Resources and Evaluation</em>, Valletta, Malta, LREC, 5/2010</p>

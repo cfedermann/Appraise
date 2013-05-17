@@ -279,6 +279,8 @@ def _handle_ranking(request, task, items):
       'commit_tag': COMMIT_TAG,
       'description': "NOT_AVAILABLE",
       'item_id': item.id,
+      'block_id': item.hit.block_id,
+      'language_pair': item.hit.get_language_pair_display(),
       'order': ','.join([str(x) for x in order]),
       'reference_text': reference_text,
       'source_text': source_text,
@@ -287,7 +289,7 @@ def _handle_ranking(request, task, items):
       'translations': translations,
     }
     
-    return render(request, 'evaluation/ranking.html', dictionary)
+    return render(request, 'wmt13/ranking.html', dictionary)
 
 
 @login_required

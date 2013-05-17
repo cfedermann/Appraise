@@ -1,0 +1,5 @@
+<span class="badge badge-success" style="line-height:22px;">Best</span> &larr;
+{% for translation in translations %}
+<span class="badge badge-warning" style="line-height:22px;" onclick="$(this).children('input').attr('checked', 'checked');">Rank {{forloop.counter}} <input type="radio" name="rank_{{rank_id}}" value="{{forloop.counter}}" style="vertical-align:baseline;" /></span>
+{% endfor %}
+&rarr; <span class="badge badge-important" style="line-height:22px;">Worst</span>

@@ -617,6 +617,12 @@ def overview(request):
     LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
+    # Check if user is member in WMT13 group.  If so, redirect to wmt13 app.
+    if request.user.groups.filter(name="WMT13"):
+        LOGGER.info('Redirecting user "{0}" to WMT13 overview.'.format(
+          request.user.username))
+        return redirect('appraise.wmt13.views.overview')
+    
     # Re-initialise random number generator.
     seed(None)
     

@@ -76,11 +76,14 @@ def _compute_next_task_for_user(user, language_pair):
         # Find the next HIT for the current user.
         random_hit = None
         for block_id in block_ids:
-            hit = HIT.objects.get(block_id=block_id)
-            hit_users = list(hit.users.all())
-            if len(hit_users) < 3 and not user in hit_users:
-                random_hit = hit
-                break
+            matching_hits = HIT.objects.filter(block_id=block_id,
+              language_pair=language_pair)
+            
+            for hit in matching_hits:
+                hit_users = list(hit.users.all())
+                if len(hit_users) < 3 and not user in hit_users:
+                    random_hit = hit
+                    break
         
         if False:
             # First check if there exists a HIT with block_id >= random_id.

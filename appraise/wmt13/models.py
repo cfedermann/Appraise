@@ -189,7 +189,7 @@ class HIT(models.Model):
         Returns the header template for this type of HIT objects.
         """
         # pylint: disable-msg=E1101
-        _header = ['Overall completion', 'Average duration']
+        _header = ['Completion', 'Average', 'Duration']
         return _header
     
     # TODO: check this code.
@@ -199,29 +199,18 @@ class HIT(models.Model):
         """
         _status = []
         
-        # Compute completion status for this task and the given user.
-        _items = RankingTask.objects.filter(hit=self).count()
-        _done = RankingResult.objects.filter(user=user,
-          item__hit=self).count()
-        
-        _status.append('{0}/{1}'.format(_done, _items))
-        _percentage = 100*_done/float(_items or 1)
-        _status.append(_percentage)
-        if _percentage < 33:
-            _status.append(' progress-danger')
-        elif _percentage < 66:
-            _status.append(' progress-warning')
-        else:
-            _status.append(' progress-success')
-        
-        # Compute average duration for this task and the given user.
         _results = RankingResult.objects.filter(user=user, item__hit=self)
         _durations = _results.values_list('duration', flat=True)
         
-        _durations = [datetime_to_seconds(d) for d in _durations if d]
-        _average_duration = sum(_durations) / (float(len(_durations)) or 1)
+        # Compute completion status for this task and the given user.
+        _status.append(len(_durations))
         
-        _status.append('{:.2f} sec'.format(_average_duration))
+        # Compute total/average duration for this task and the given user.
+        _durations = [datetime_to_seconds(d) for d in _durations if d]
+        _total_duration = sum(_durations)
+        _average_duration = _total_duration / (float(len(_durations)) or 1)        
+        _status.append('{:.2f}'.format(_average_duration))
+        _status.append('{:.2f}'.format(_total_duration))
         
         return _status
     
@@ -487,6 +476,25 @@ class RankingResult(models.Model):
         }
         
         return template.render(Context(context))
+
+
+@receiver(models.signals.post_save, sender=RankingResult)
+def update_user_hit_mappings(sender, instance, created, **kwargs):
+    """
+    Updates the User/HIT mappings.
+    """
+    hit = instance.item.hit
+    user = instance.user
+    results = RankingResult.objects.filter(user=user, item__hit=hit)
+    
+    if len(results) > 2:
+        LOGGER.debug('Deleting stale User/HIT mapping {0}->{1}'.format(
+          user, hit))
+        hit.users.add(user)
+        UserHITMapping.objects.filter(user=user, hit=hit).delete()
+        
+        from appraise.wmt13.views import _compute_next_task_for_user
+        _compute_next_task_for_user(user, hit.language_pair)
 
 
 # pylint: disable-msg=E1101

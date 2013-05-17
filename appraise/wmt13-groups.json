@@ -1,0 +1,26 @@
+[
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "WMT13", "permissions": []}},
+
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "eng2ces", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "eng2deu", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "eng2spa", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "eng2fra", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "eng2rus", "permissions": []}},
+
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "ces2eng", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "deu2eng", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "spa2eng", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "fra2eng", "permissions": []}},
+  {"pk": 1, "model": "auth.group",
+   "fields": {"name": "rus2eng", "permissions": []}},
+]

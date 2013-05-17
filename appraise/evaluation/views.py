@@ -675,6 +675,12 @@ def status_view(request, task_id=None):
     LOGGER.info('Rendering evaluation task overview for user "{0}".'.format(
       request.user.username))
     
+    # Check if user is member in WMT13 group.  If so, redirect to wmt13 app.
+    if request.user.groups.filter(name="WMT13") is not None:
+        LOGGER.info('Redirecting user "{0}" to WMT13 overview.'.format(
+          request.user.username))
+        return redirect('appraise.wmt13.views.overview')
+    
     if task_id:
         task = get_object_or_404(EvaluationTask, task_id=task_id)
         

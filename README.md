@@ -1,6 +1,6 @@
 <h1 id="appraise_evaluation_system">Appraise Evaluation System</h1>
 
-<p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt13/">Eighth Workshop on Statistical Machine Translation 2013</a>. Second release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011.</p>
+<p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt13/">Eighth Workshop on Statistical Machine Translation 2013</a>. Second release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software became available in summer 2008...</p>
 
 <h2 id="update">Update</h2>
 

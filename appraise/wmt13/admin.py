@@ -79,7 +79,7 @@ class RankingResultAdmin(admin.ModelAdmin):
     ModelAdmin class for RankingResult instances.
     """
     list_display = ('item', 'user', 'readable_duration', 'results')
-    list_filter = ('item__hit', 'user')
+    list_filter = ('item__hit__language_pair', 'user')
 
 
 admin.site.register(HIT, HITAdmin)

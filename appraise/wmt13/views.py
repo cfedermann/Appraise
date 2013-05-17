@@ -63,25 +63,34 @@ def _compute_next_task_for_user(user, language_pair):
         # values_list of all block_ids which are still available for the
         # given user and then draw one of these randomly using random.choice?
         
+        random_id = randint(1, 1000)
         random_hit = None
-        _id_pool = set([x+1 for x in range(1000)])
-        while not random_hit and _id_pool:
-            random_id = randint(1, 1000)
-            if not random_id in _id_pool:
-                continue
-            
-            _id_pool.remove(random_id)
-            random_hit = HIT.objects.filter(block_id=random_id,
-              language_pair=language_pair, active=True)
-            if random_hit:
-                random_hit_users = list(random_hit[0].users.all())
-                if len(random_hit_users) > 2 or user in random_hit_users:
-                    random_hit = None
         
-        # we have a next HIT for user/language pair
+        # Compatible HIT instances need to match the given language pair!
+        hits = HIT.objects.filter(language_pair=language_pair, active=True)
+        
+        # First check if there exists a HIT with block_id >= random_id.
+        random_hits = hits.filter(block_id__gte=random_id)
+        for hit in random_hits:
+            hit_users = list(hit.users.all())
+            if len(hit_users) < 3 and not user in hit_users:
+                random_hit = hit
+                break
+        
+        # If this did not yield a next HIT, try with block_id < random_id.
+        if not random_hit:
+            random_hits = hits.filter(block_id__lt=random_id)
+            for hit in random_hits:
+                hit_users = list(hit.users.all())
+                if len(hit_users) < 3 and not user in hit_users:
+                    random_hit = hit
+                    break
+        
+        # If we still haven't found a next HIT, there simply is none...
         if not random_hit:
             return None
         
+        # Update User/HIT mappings s.t. the system knows about the next HIT.
         current_hitmap = UserHITMapping.objects.create(user=user,
           hit=random_hit[0])
     

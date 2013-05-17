@@ -496,6 +496,20 @@ def update_user_hit_mappings(sender, instance, created, **kwargs):
         from appraise.wmt13.views import _compute_next_task_for_user
         _compute_next_task_for_user(user, hit.language_pair)
 
+@receiver(models.signals.post_delete, sender=RankingResult)
+def remove_user_from_hit(sender, instance, **kwargs):
+    """
+    Removes user from list of users who have completed corresponding HIT.
+    """
+    hit = instance.item.hit
+    user = instance.user
+    
+    LOGGER.debug('Removing user "{0}" from HIT {1}'.format(user, hit))
+    hit.users.remove(user)
+    
+    from appraise.wmt13.views import _compute_next_task_for_user
+    _compute_next_task_for_user(user, hit.language_pair)
+
 
 # pylint: disable-msg=E1101
 class UserHITMapping(models.Model):

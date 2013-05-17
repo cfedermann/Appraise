@@ -58,16 +58,30 @@ def _compute_next_task_for_user(user, language_pair):
     if not current_hitmap:
         LOGGER.debug('No current HIT for user {0}, fetching HIT.'.format(
           user))
+        
+        # TODO: this is bizarre;  maybe we can just live with getting the
+        # values_list of all block_ids which are still available for the
+        # given user and then draw one of these randomly using random.choice?
+        
         random_hit = None
-        while not random_hit:
+        _id_pool = set([x+1 for x in range(1000)])
+        while not random_hit and _id_pool:
             random_id = randint(1, 1000)
+            if not random_id in _id_pool:
+                continue
+            
+            _id_pool.remove(random_id)
             random_hit = HIT.objects.filter(block_id=random_id,
               language_pair=language_pair, active=True)
             if random_hit:
                 random_hit_users = list(random_hit[0].users.all())
                 if len(random_hit_users) > 2 or user in random_hit_users:
                     random_hit = None
+        
         # we have a next HIT for user/language pair
+        if not random_hit:
+            return None
+        
         current_hitmap = UserHITMapping.objects.create(user=user,
           hit=random_hit[0])
     
@@ -99,8 +113,11 @@ def _save_results(item, user, duration, raw_result):
     print _result
     print duration, raw_result
     
-    _result.duration = duration
+    _result.duration = str(duration)
     _result.raw_result = raw_result
+    
+    print type(_result.duration)
+    
     _result.save()
 
 
@@ -326,7 +343,7 @@ def overview(request):
 
 # TODO: check this code.
 @login_required
-def status_view(request, hit_id=None):
+def profile_view(request):
     """
     Renders the evaluation tasks status page for staff users.
     """

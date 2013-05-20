@@ -71,7 +71,9 @@ if __name__ == "__main__":
                   language_pair=language_pair)
             
             else:
-                HIT.objects.get_or_create(block_id=block_id,
+                # Use get_or_create() to avoid exact duplicates.  We do allow
+                # them for WMT13 to measure intra-annotator agreement...
+                HIT.objects.create(block_id=block_id,
                   hit_xml=tostring(_child),
                   language_pair=language_pair)
         

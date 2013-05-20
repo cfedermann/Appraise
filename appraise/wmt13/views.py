@@ -294,7 +294,7 @@ def _handle_ranking(request, task, items):
     dictionary = {
       'action_url': request.path,
       'commit_tag': COMMIT_TAG,
-      'description': "NOT_AVAILABLE",
+      'description': None,
       'item_id': item.id,
       'block_id': item.hit.block_id,
       'language_pair': item.hit.get_language_pair_display(),

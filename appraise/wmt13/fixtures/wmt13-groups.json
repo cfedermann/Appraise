@@ -72,7 +72,5 @@
   {"pk": 36, "model": "auth.group",
    "fields": {"name": "UU", "permissions": []}},
   {"pk": 37, "model": "auth.group",
-   "fields": {"name": "", "permissions": []}},
-  {"pk": 38, "model": "auth.group",
    "fields": {"name": "DFKI", "permissions": []}}
 ]

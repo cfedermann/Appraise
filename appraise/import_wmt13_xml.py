@@ -63,6 +63,10 @@ if __name__ == "__main__":
         language_pair = '{0}2{1}'.format(_child.attrib["source-language"],
           _child.attrib["target-language"])
         
+        # Hotfix potentially wrong ISO codes;  we are using ISO-639-3.
+        language_pair = language_pair.replace('cze', 'ces')
+        language_pair = language_pair.replace('fre', 'fra')
+        
         try:
             _total = _total + 1
             

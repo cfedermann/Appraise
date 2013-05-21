@@ -75,7 +75,7 @@ def validate_hit_xml(value):
         
         # Finally, we check that each <hit> contains exactly 3 children
         # which are <seg> containers with <source>, <reference> and a
-        # total of 5 <translation> elements. The <reference> is optional.
+        # total of 5 <translation> elements. The <reference> is mandatory.
         # The <translation> elements require some text value to be valid.
             _no_of_children = 0
             for _seg in _tree:
@@ -96,7 +96,7 @@ def validate_segment_xml(value):
     
     These are:
     - one <source> element;
-    - an optional <reference> element; and
+    - one <reference> element; and
     - five <translation> elements.
     
     The given value can either be an XML string or an ElementTree.
@@ -119,9 +119,11 @@ def validate_segment_xml(value):
         assert(_tree.find('source').text is not None), \
           'missing required <source> text value'
         
-        if _tree.find('reference') is not None:
-            assert(_tree.find('reference').text is not None), \
-              'missing required <reference> text value'
+        assert(len(_tree.findall('reference')) == 1), \
+          'exactly one <reference> element expected'
+        
+        assert(_tree.find('reference').text is not None), \
+          'missing required <reference> text value'
         
         assert(len(_tree.findall('translation')) == 5), \
           'one or more <translation> elements expected'

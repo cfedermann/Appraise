@@ -65,7 +65,7 @@ if __name__ == "__main__":
         
         # Hotfix potentially wrong ISO codes;  we are using ISO-639-3.
         iso_639_2_to_3_mapping = {'cze': 'ces', 'fre': 'fra', 'ger': 'deu'}
-        for part2_code, part3_code in iso_639_2_to_3_mapping.items()
+        for part2_code, part3_code in iso_639_2_to_3_mapping.items():
             language_pair = language_pair.replace(part2_code, part3_code)
         
         try:

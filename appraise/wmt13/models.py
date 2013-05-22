@@ -485,15 +485,32 @@ class RankingResult(models.Model):
         hit = self.item.hit
         values = []
         
-        values.append(hit.hit_attributes['source-language'])
-        values.append(hit.hit_attributes['target-language'])
-        values.append(item.source[1]['id'])
-        values.append("documentId")
-        values.append(item.source[1]['id'])
-        values.append(self.user.username)
-        for x in hit.hit_attributes['systems'].split(','):
-            values.extend(["systemId", str(x)])
+        iso639_3_to_name_mapping = {'ces': 'Czech', 'deu': 'German',
+          'eng': 'English', 'spa': 'Spanish', 'fre': 'French',
+          'rus': 'Russian'}
         
+        _src_lang = hit.hit_attributes['source-language']
+        _trg_lang = hit.hit_attributes['target-language']
+        _systems = hit.hit_attributes['systems'].split(',')
+        
+        values.append(iso639_3_to_name_mapping[_src_lang]) # srclang
+        values.append(iso639_3_to_name_mapping[_trg_lang]) # trglang
+        values.append(item.source[1]['id'])                # srcIndex
+        values.append('-1')                                # documentId
+        values.append(item.source[1]['id'])                # segmentId
+        values.append(self.user.username)                  # judgeId
+        values.append('-1')                                # system1Number
+        values.append(str(_systems[0]))                    # system1Id
+        values.append('-1')                                # system2Number
+        values.append(str(_systems[1]))                    # system2Id
+        values.append('-1')                                # system3Number
+        values.append(str(_systems[2]))                    # system3Id
+        values.append('-1')                                # system4Number
+        values.append(str(_systems[3]))                    # system4Id
+        values.append('-1')                                # system5Number
+        values.append(str(_systems[4]))                    # system5Id
+
+        # system1rank,system2rank,system3rank,system4rank,system5rank
         if self.results:
             values.extend([str(x) for x in self.results])
         else:

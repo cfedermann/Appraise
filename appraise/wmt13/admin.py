@@ -74,12 +74,36 @@ class HITAdmin(admin.ModelAdmin):
         return self.readonly_fields
 
 
+def export_results_to_csv(modeladmin, request, queryset):
+    """
+    Exports the results in the given queryset to CSV download.
+    """
+    results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,system1Number,system1Id,system2Number,system2Id,system3Number,system3Id,system4Number,system4Id,system']
+    for result in queryset:
+        if isinstance(result, RankingResult):
+            results.append(result.export_to_csv())
+    
+    export_csv = u"\n".join(results)
+    return HttpResponse(export_csv)
+    
+    # Later, we will make this a downloadable attachment instead.
+    export_filename = ""
+    
+    # We return it as a "text/xml" file attachment with charset "UTF-8".
+    response = HttpResponse(export_csv, mimetype='text/plain; charset=UTF-8')
+    response['Content-Disposition'] = 'attachment; filename="{0}.csv"'.format(
+      export_filename)
+    return response
+
+export_results_to_csv.short_description = "Export selected results to CSV"
+
 class RankingResultAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for RankingResult instances.
     """
     list_display = ('item', 'user', 'readable_duration', 'results')
     list_filter = ('item__hit__language_pair', 'user')
+    actions = (export_results_to_csv,)
 
 
 admin.site.register(HIT, HITAdmin)

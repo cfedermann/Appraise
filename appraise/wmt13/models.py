@@ -476,6 +476,31 @@ class RankingResult(models.Model):
         }
         
         return template.render(Context(context))
+    
+    def export_to_csv(self):
+        """
+        Exports this RankingResult in CSV format.
+        """
+        item = self.item
+        hit = self.item.hit
+        values = []
+        
+        values.append(hit.hit_attributes['source-language'])
+        values.append(hit.hit_attributes['target-language'])
+        values.append(item.source[1]['id'])
+        values.append("documentId")
+        values.append(item.source[1]['id'])
+        values.append(self.user.username)
+        for x in hit.hit_attributes['systems'].split(','):
+            values.extend(["systemId", str(x)])
+        
+        if self.results:
+            values.extend([str(x) for x in self.results])
+        else:
+            values.extend(['-1'] * 5)
+        
+        print values
+        return u",".join(values)
 
 
 @receiver(models.signals.post_save, sender=RankingResult)

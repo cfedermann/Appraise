@@ -486,7 +486,7 @@ class RankingResult(models.Model):
         values = []
         
         iso639_3_to_name_mapping = {'ces': 'Czech', 'deu': 'German',
-          'eng': 'English', 'spa': 'Spanish', 'fre': 'French',
+          'eng': 'English', 'spa': 'Spanish', 'fra': 'French',
           'rus': 'Russian'}
         
         _src_lang = hit.hit_attributes['source-language']

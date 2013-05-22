@@ -84,24 +84,9 @@ def _compute_next_task_for_user(user, language_pair):
                 if len(hit_users) < 3 and not user in hit_users:
                     random_hit = hit
                     break
-        
-        if False:
-            # First check if there exists a HIT with block_id >= random_id.
-            random_hits = hits.filter(block_id__gte=random_id)
-            for hit in random_hits:
-                hit_users = list(hit.users.all())
-                if len(hit_users) < 3 and not user in hit_users:
-                    random_hit = hit
-                    break
-        
-            # If this did not yield a next HIT, try with block_id < random_id.
-            if not random_hit:
-                random_hits = hits.filter(block_id__lt=random_id)
-                for hit in random_hits:
-                    hit_users = list(hit.users.all())
-                    if len(hit_users) < 3 and not user in hit_users:
-                        random_hit = hit
-                        break
+            
+            if random_hit:
+                break
         
         # If we still haven't found a next HIT, there simply is none...
         if not random_hit:

@@ -99,6 +99,13 @@ def _compute_next_task_for_user(user, language_pair):
     # Otherwise, select first match from QuerySet.
     else:
         current_hitmap = current_hitmap[0]
+        
+        # Sanity check preventing stale User/HIT mappings to screw up things.
+        if user in current_hitmap.hit.users.all():
+            LOGGER.debug('Detected stale User/HIT mapping {0}->{1}'.format(
+              user, current_hitmap.hit))
+            current_hitmap.delete()
+            return _compute_next_task_for_user(user, language_pair)
     
     LOGGER.debug('User {0} currently working on HIT {1}'.format(user,
       current_hitmap.hit))

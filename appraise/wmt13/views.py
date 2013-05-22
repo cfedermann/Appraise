@@ -20,6 +20,7 @@ from django.template.loader import get_template
 
 from appraise.wmt13.models import HIT, RankingTask, RankingResult
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
+from appraise.utils import datetime_to_seconds
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
@@ -339,11 +340,30 @@ def overview(request):
     hit_data = []
     for language_pair in language_pairs:
         current_hit = _compute_next_task_for_user(request.user, language_pair)
+        completed_hits = list(HIT.objects.filter(language_pair=language_pair,
+          active=True, users=request.user))
+        
+        current_status = []
+        current_status.append(len(completed_hits))
+        
+        _durations = []
+        for completed_hit in completed_hits:
+            _results = RankingResult.objects.filter(user=request.user,
+              item__hit=completed_hit)
+            _durations.extend(_results.values_list('duration', flat=True))
+        
+        _durations = [datetime_to_seconds(d) for d in _durations if d]
+        _total_duration = sum(_durations)
+        _average_duration = _total_duration / float(len(completed_hits) or 1)
+        
+        current_status.append('{:.2f}'.format(_average_duration))
+        current_status.append('{:.2f}'.format(_total_duration))
+        
         if current_hit:
             hit_data.append(
               (current_hit.get_language_pair_display(),
                current_hit.get_absolute_url(), current_hit.block_id,
-               current_hit.get_status_for_user(request.user))
+               current_status)
             )
     
     # TODO: add HIT status to HIT object model to speed up things!

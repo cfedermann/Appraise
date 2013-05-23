@@ -102,7 +102,8 @@ def _compute_next_task_for_user(user, language_pair):
         current_hitmap = current_hitmap[0]
         
         # Sanity check preventing stale User/HIT mappings to screw up things.
-        if user in current_hitmap.hit.users.all():
+        hit_users = list(current_hitmap.hit.users.all())
+        if user in hit_users or len(hit_users) >= 3:
             LOGGER.debug('Detected stale User/HIT mapping {0}->{1}'.format(
               user, current_hitmap.hit))
             current_hitmap.delete()

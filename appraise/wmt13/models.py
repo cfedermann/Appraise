@@ -10,7 +10,7 @@ from xml.etree.ElementTree import Element, fromstring, ParseError, tostring
 
 from django.dispatch import receiver
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -131,6 +131,53 @@ class HIT(models.Model):
             new_id = uuid.uuid4().hex[:8]
         
         return new_id
+    
+    @classmethod
+    def compute_status_for_user(cls, user, language_pair=None):
+        """
+        Computes the HIT completion status for the given user.
+        
+        If language_pair is given, it constraints on the HITs' language pair.
+        
+        Returns a list containing:
+        
+        - number of completed HITs;
+        - average duration per HIT in seconds;
+        - total duration in seconds.
+        
+        """
+        hits_qs = cls.objects.filter(active=True, users=user)
+        if language_pair:
+            hits_qs = hits_qs.filter(language_pair=language_pair)
+        
+        _completed_hits = hits_qs.count()
+        
+        _durations = []
+        for hit in hits_qs:
+            _results = RankingResult.objects.filter(user=user, item__hit=hit)
+            _durations.extend(_results.values_list('duration', flat=True))
+        
+        _durations = [datetime_to_seconds(d) for d in _durations if d]
+        _total_duration = sum(_durations)
+        _average_duration = _total_duration / float(_completed_hits or 1)
+        
+        current_status = []
+        current_status.append(_completed_hits)
+        current_status.append(_average_duration)
+        current_status.append(_total_duration)
+        
+        return current_status
+    
+    @classmethod
+    def compute_status_for_group(cls, group, language_pair=None):
+        """
+        Computes the HIT completion status for users of the given group.
+        """
+        combined = []
+        for user in group.user_set.all():
+            combined.append(cls.compute_status_for_user(user, language_pair))
+        
+        return reduce(lambda x, y: [x[i] + y[i] for i in range(3)], combined)
     
     def save(self, *args, **kwargs):
         """

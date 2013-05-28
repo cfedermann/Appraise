@@ -48,6 +48,7 @@ urlpatterns += patterns('',
   (r'^appraise/wmt13/profile/$', 'appraise.wmt13.views.profile_view'),
   (r'^appraise/wmt13/(?P<hit_id>[a-f0-9]{8})/',
     'appraise.wmt13.views.hit_handler'),
+  (r'^appraise/wmt13/mturk/', 'appraise.wmt13.views.mturk_handler'),
 )
 
 if MTURK_ENABLED:

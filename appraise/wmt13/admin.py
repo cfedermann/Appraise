@@ -39,6 +39,22 @@ def export_hit_xml(modeladmin, request, queryset):
 export_hit_xml.short_description = "Export selected tasks to XML"
 
 
+def export_hit_ids_to_csv(modeladmin, request, queryset):
+    """
+    Exports the HIT ids for the given queryset to CSV download.
+    """
+    results = [u'HITId,trglang']
+    for result in queryset:
+        if isinstance(result, HIT):
+            _hit_id = result.hit_id
+            _target_language = result.hit_attributes['target-language']
+            results.append(u",".join((_hit_id, _target_language)))
+    
+    export_csv = u"\n".join(results)
+    return HttpResponse(export_csv)
+
+export_hit_ids_to_csv.short_description = "Export selected HIT ids to CSV"
+
 class HITAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for HIT instances.
@@ -47,7 +63,7 @@ class HITAdmin(admin.ModelAdmin):
     list_filter = ('language_pair', 'active')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id',)
-    actions = (export_hit_xml,)
+    actions = (export_hit_ids_to_csv,)
     filter_horizontal = ('users',)
     
     fieldsets = (

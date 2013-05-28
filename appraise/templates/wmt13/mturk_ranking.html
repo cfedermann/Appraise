@@ -45,6 +45,10 @@ function validate_form()
 <div class="container">
 
 {% if assignment_id == "ASSIGNMENT_ID_NOT_AVAILABLE" %}
+<div class="alert alert-error">
+This is only a preview version of this HIT.  You cannot complete it before accepting it!
+</div>
+
 <form action="#" method="post">
 {% else %}
 <form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
@@ -194,7 +198,7 @@ function validate_form()
   <button class="btn btn-primary disabled" name="submit_button" accesskey="1" type="button" value="SUBMIT"><i class="icon-ok-sign icon-white"></i> Submit</button>
   &nbsp;
   
-  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>
+  <button accesskey="2" type="button" class="btn disabled"><i class="icon-repeat"></i> Reset</button>
 </div>
 
 {% else %}

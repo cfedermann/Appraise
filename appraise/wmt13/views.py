@@ -373,7 +373,7 @@ def mturk_handler(request):
     
     # Check referrer to determine action_url value.
     action_url = 'http://www.mturk.com/mturk/externalSubmit'
-    if 'workersandbox' in request.META.get('HTTP_REFERER'):
+    if 'workersandbox' in request.META.get('HTTP_REFERER', []):
         action_url = 'http://workersandbox.mturk.com/mturk/externalSubmit'
     
     dictionary = {

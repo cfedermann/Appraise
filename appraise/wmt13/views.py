@@ -12,7 +12,8 @@ from time import mktime
 
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
+from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template import Context
 from django.template.defaultfilters import slugify
@@ -320,6 +321,83 @@ def hit_handler(request, hit_id):
         return redirect('appraise.wmt13.views.overview')
     
     return _handle_ranking(request, hit, items)
+
+
+def mturk_handler(request):
+    """
+    MTurk-enabled task handler.
+    """
+    LOGGER.info('Rendering MTurk task handler view.')
+    
+    try:
+        mturk_HITId = request.GET.get('HITId', None)
+        
+        hit = HIT.objects.get(hit_id=mturk_HITId)
+        items = RankingTask.objects.filter(hit=hit)
+        assert(len(items) == 3)
+    
+    except (AssertionError, ObjectDoesNotExist, MultipleObjectsReturned):
+        return HttpResponseForbidden("MTurk access forbidden")
+    
+    mturk_AssignmentId = request.GET.get('AssignmentId', None)
+    mturk_WorkerId = request.GET.get('WorkerId', None)
+    
+    # Bind items to item variables.
+    item_1 = items[0]
+    item_2 = items[1]
+    item_3 = items[2]
+    
+    # Compute source and reference texts including context where possible.
+    source_text_1, reference_text_1 = _compute_context_for_item(item_1)
+    source_text_2, reference_text_2 = _compute_context_for_item(item_2)
+    source_text_3, reference_text_3 = _compute_context_for_item(item_3)
+    
+    # Create list of translation alternatives in randomised order.
+    translations_1 = []
+    order_1 = range(len(item_1.translations))
+    shuffle(order_1)
+    for index in order_1:
+        translations_1.append(item_1.translations[index])
+    
+    translations_2 = []
+    order_2 = range(len(item_2.translations))
+    shuffle(order_2)
+    for index in order_2:
+        translations_2.append(item_2.translations[index])
+    
+    translations_3 = []
+    order_3 = range(len(item_3.translations))
+    shuffle(order_3)
+    for index in order_3:
+        translations_3.append(item_3.translations[index])
+    
+    # Check referrer to determine action_url value.
+    
+    dictionary = {
+      'action_url': 'http://www.mturk.com/mturk/externalSubmit',
+      'hit_id': hit.hit_id,
+      'assignment_id': mturk_AssignmentId,
+      'worker_id': mturk_WorkerId,
+      'block_id': hit.block_id,
+      'language_pair': hit.get_language_pair_display(),
+      'order_1': ','.join([str(x) for x in order_1]),
+      'order_2': ','.join([str(x) for x in order_2]),
+      'order_3': ','.join([str(x) for x in order_3]),
+      'reference_text_1': reference_text_1,
+      'reference_text_2': reference_text_2,
+      'reference_text_3': reference_text_3,
+      'source_text_1': source_text_1,
+      'source_text_2': source_text_2,
+      'source_text_3': source_text_3,
+      'title': 'Ranking',
+      'translations_1': translations_1,
+      'translations_2': translations_2,
+      'translations_3': translations_3,
+    }
+    
+    print dictionary
+    
+    return render(request, 'wmt13/mturk_ranking.html', dictionary)
 
 
 # TODO: check this code.

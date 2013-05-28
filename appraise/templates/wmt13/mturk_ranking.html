@@ -44,7 +44,11 @@ function validate_form()
 
 <div class="container">
 
+{% if assignment_id == "ASSIGNMENT_ID_NOT_AVAILABLE" %}
+<form action="#" method="post">
+{% else %}
 <form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
+{% endif %}
 
 <input name="hit_id" type="hidden" value="{{hit_id}}" />
 <input name="assignment_id" type="hidden" value="{{assignment_id}}" />

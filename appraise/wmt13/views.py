@@ -372,9 +372,12 @@ def mturk_handler(request):
         translations_3.append(item_3.translations[index])
     
     # Check referrer to determine action_url value.
+    action_url = 'http://www.mturk.com/mturk/externalSubmit'
+    if 'workersandbox' in request.META.get('HTTP_REFERER'):
+        action_url = 'http://workersandbox.mturk.com/mturk/externalSubmit'
     
     dictionary = {
-      'action_url': 'http://www.mturk.com/mturk/externalSubmit',
+      'action_url': action_url,
       'hit_id': hit.hit_id,
       'assignment_id': mturk_AssignmentId,
       'worker_id': mturk_WorkerId,

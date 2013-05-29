@@ -49,9 +49,6 @@
             <ul class="nav">
               <li {% if active_page == "OVERVIEW" %}class="active"{% endif %}><a href="{% url 'appraise.wmt13.views.overview' %}">Overview</a></li>
 
-{% if user.is_staff %}
-              <li {% if active_page == "PROFILE" %}class="active"{% endif %}><a href="{% url 'appraise.wmt13.views.profile_view' %}">Profile</a></li>{% endif %}
-
 {% if user.username %}
               <li><a href="{% url 'appraise.views.logout' %}">Logout "{{user.username}}"</a></li>
 {% else %}

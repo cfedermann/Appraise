@@ -4,7 +4,7 @@
 
 <h2 id="update">Update</h2>
 
-<p>There's a new release of Appraise for use in the WMT '13; see the new Django app inside <code>appraise.wmt13</code> for more details.</p>
+<p>There's a new release of Appraise for use in the WMT '13; see the new Django app inside <code>appraise.wmt13</code> for more details.  The new version also integrates with <a href="http://www.mturk.com/">Amazon's Mechanical Turk</a>, allowing to collect even more manual annotations.</p>
 
 <h2 id="overview">Overview</h2>
 

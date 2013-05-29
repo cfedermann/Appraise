@@ -3,8 +3,6 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 """
-from datetime import date
-
 from django.contrib import admin
 from django.http import HttpResponse
 from django.template import Context
@@ -14,10 +12,9 @@ from appraise.wmt13.models import HIT, RankingTask, RankingResult, \
   UserHITMapping
 
 
-# TODO: check this code.
 def export_hit_xml(modeladmin, request, queryset):
     """
-    Exports the tasks in the given queryset to XML download.
+    Exports the tasks in the given queryset to XML format.
     """
     template = get_template('evaluation/result_export.xml')
     
@@ -27,21 +24,14 @@ def export_hit_xml(modeladmin, request, queryset):
             tasks.append(task.export_to_xml())
     
     export_xml = template.render(Context({'tasks': tasks}))
-    export_filename = 'exported-tasks-{}-{}'.format(request.user,
-      date.today())
-    
-    # We return it as a "text/xml" file attachment with charset "UTF-8".
-    response = HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')
-    response['Content-Disposition'] = 'attachment; filename="{0}.xml"'.format(
-      export_filename)
-    return response
+    return HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')
 
 export_hit_xml.short_description = "Export selected tasks to XML"
 
 
 def export_hit_ids_to_csv(modeladmin, request, queryset):
     """
-    Exports the HIT ids for the given queryset to CSV download.
+    Exports the HIT ids for the given queryset to CSV format.
     """
     results = [u'HITId,blockId,srclang,trglang,system1Id,system2Id,' \
       'system3Id,system4Id,system5Id']
@@ -75,7 +65,7 @@ class HITAdmin(admin.ModelAdmin):
     list_filter = ('language_pair', 'active')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id',)
-    actions = (export_hit_ids_to_csv,)
+    actions = (export_hit_xml, export_hit_ids_to_csv,)
     filter_horizontal = ('users',)
     
     fieldsets = (
@@ -104,7 +94,7 @@ class HITAdmin(admin.ModelAdmin):
 
 def export_results_to_csv(modeladmin, request, queryset):
     """
-    Exports the results in the given queryset to CSV download.
+    Exports the results in the given queryset to CSV format.
     """
     results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \
       'system1Number,system1Id,system2Number,system2Id,system3Number,' \

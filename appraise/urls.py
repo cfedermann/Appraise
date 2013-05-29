@@ -9,7 +9,7 @@ from django.conf.urls.defaults import patterns, include, handler404, \
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from appraise.settings import MEDIA_ROOT, DEBUG, MTURK_ENABLED
+from appraise.settings import MEDIA_ROOT, DEBUG
 
 
 admin.autodiscover()
@@ -49,12 +49,6 @@ urlpatterns += patterns('',
     'appraise.wmt13.views.hit_handler'),
   (r'^appraise/wmt13/mturk/', 'appraise.wmt13.views.mturk_handler'),
 )
-
-if MTURK_ENABLED:
-    urlpatterns += patterns('',
-      (r'^appraise/mturk/(?P<task_id>[a-f0-9]{32})/',
-        'appraise.evaluation.mturk.task_handler'),
-    )
 
 if DEBUG:
     urlpatterns += staticfiles_urlpatterns()

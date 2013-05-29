@@ -18,8 +18,6 @@ try:
 except Exception, e:
     COMMIT_TAG = None
 
-MTURK_ENABLED = False
-
 FORCE_SCRIPT_NAME = ""
 
 import logging

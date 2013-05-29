@@ -7,6 +7,7 @@ import logging
 
 from datetime import datetime
 from random import seed, shuffle
+from urllib import unquote
 
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
@@ -357,8 +358,8 @@ def mturk_handler(request):
     
     # Check referrer to determine action_url value.
     action_url = 'http://www.mturk.com/mturk/externalSubmit'
-    if 'workersandbox' in request.META.get('HTTP_REFERER', []):
-        action_url = 'http://workersandbox.mturk.com/mturk/externalSubmit'
+    if request.META.has_key('mturkSubmitTo'):
+        action_url = unquote(request.META.get('mturkSubmitTo'))
     
     dictionary = {
       'action_url': action_url,
@@ -386,6 +387,9 @@ def mturk_handler(request):
     LOGGER.debug(u'\n\nMTurk data for HIT "{0}":\n\n{1}\n'.format(
       hit.hit_id,
       u'\n'.join([u'{0}\t->\t{1}'.format(*x) for x in dictionary.items()])))
+    
+    LOGGER.debug(u'\n\nMETA request data:\n\n{0}\n'.format(
+      u'\n'.join([u'{0}: {1}'.format(*x) for x in request.META.items()])))
     
     return render(request, 'wmt13/mturk_ranking.html', dictionary)
 

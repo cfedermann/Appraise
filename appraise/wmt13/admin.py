@@ -16,7 +16,7 @@ def export_hit_xml(modeladmin, request, queryset):
     """
     Exports the tasks in the given queryset to XML format.
     """
-    template = get_template('evaluation/result_export.xml')
+    template = get_template('wmt13/result_export.xml')
     
     tasks = []
     for task in queryset:

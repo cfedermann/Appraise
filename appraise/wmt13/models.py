@@ -236,7 +236,7 @@ class HIT(models.Model):
         """
         Renders this HIT as XML String.
         """
-        template = get_template('evaluation/result_task.xml')
+        template = get_template('wmt13/task_result.xml')
         
         # If a hit_xml file is available, populate self.hit_attributes.
         self.reload_dynamic_fields()
@@ -246,11 +246,13 @@ class HIT(models.Model):
         
         results = []
         for item in RankingTask.objects.filter(hit=self):
+            _results = []
             for _result in item.rankingresult_set.all():
-                results.append(_result.export_to_xml())
+                _results.append(_result.export_to_xml())
+            results.append(_results)
         
-        context = {'task_type': 'ranking', 'attributes': attributes,
-          'results': results}
+        context = {'hit_id': self.hit_id, 'attributes': attributes,
+          'results': list(enumerate(results))}
         return template.render(Context(context))
 
 
@@ -411,7 +413,7 @@ class RankingResult(models.Model):
         """
         Renders this RankingResult as Ranking XML String.
         """
-        template = get_template('evaluation/result_ranking.xml')
+        template = get_template('wmt13/ranking_result.xml')
         
         _attr = self.item.attributes.items()
         attributes = ' '.join(['{}="{}"'.format(k, v) for k, v in _attr])

@@ -26,7 +26,7 @@ def export_hit_xml(modeladmin, request, queryset):
     export_xml = template.render(Context({'tasks': tasks}))
     return HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')
 
-export_hit_xml.short_description = "Export selected tasks to XML"
+export_hit_xml.short_description = "Export selected HITs to XML"
 
 
 def export_hit_ids_to_csv(modeladmin, request, queryset):

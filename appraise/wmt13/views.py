@@ -360,6 +360,8 @@ def mturk_handler(request):
     action_url = 'http://www.mturk.com/mturk/externalSubmit'
     if request.GET.has_key('turkSubmitTo'):
         action_url = unquote(request.GET.get('turkSubmitTo'))
+        if not action_url.endswith('/mturk/externalSubmit'):
+            action_url = action_url + '/mturk/externalSubmit'
     
     dictionary = {
       'action_url': action_url,

@@ -5,32 +5,22 @@ Project: Appraise evaluation system
 """
 import logging
 
-from collections import Counter
-from datetime import datetime, date
-from random import randint, seed, shuffle
-from time import mktime
+from datetime import datetime
+from random import seed, shuffle
 
-from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
-from django.http import HttpResponse, HttpResponseForbidden
+from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
-from django.template import Context
-from django.template.defaultfilters import slugify
-from django.template.loader import get_template
 
-from appraise.wmt13.models import HIT, RankingTask, RankingResult
+from appraise.wmt13.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
+  HIT, RankingTask, RankingResult, UserHITMapping
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
-from appraise.utils import datetime_to_seconds
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.wmt13.views')
 LOGGER.addHandler(LOG_HANDLER)
-
-
-from appraise.wmt13.models import LANGUAGE_PAIR_CHOICES
-from appraise.wmt13.models import HIT, RankingTask, UserHITMapping
 
 
 def _compute_next_task_for_user(user, language_pair):
@@ -60,13 +50,6 @@ def _compute_next_task_for_user(user, language_pair):
     if not current_hitmap:
         LOGGER.debug('No current HIT for user {0}, fetching HIT.'.format(
           user))
-        
-        # TODO: this is bizarre;  maybe we can just live with getting the
-        # values_list of all block_ids which are still available for the
-        # given user and then draw one of these randomly using random.choice?
-        
-        random_id = randint(1, 1000)
-        random_hit = None
         
         # Compatible HIT instances need to match the given language pair!
         hits = HIT.objects.filter(language_pair=language_pair, active=True)
@@ -131,13 +114,12 @@ def _save_results(item, user, duration, raw_result):
     else:
         _result = RankingResult(item=item, user=user)
     
-    print _result
-    print duration, raw_result
+    LOGGER.debug(u'\n\nResults data for user "{0}":\n\n{1}\n'.format(
+      user.username or "Anonymous",
+      u'\n'.join([str(x) for x in [_result, duration, raw_result]])))
     
     _result.duration = str(duration)
     _result.raw_result = raw_result
-    
-    print type(_result.duration)
     
     _result.save()
 
@@ -256,12 +238,13 @@ def _handle_ranking(request, task, items):
             _raw_result = range(len(current_item.translations))
             _raw_result = ','.join([str(ranks[x]) for x in _raw_result])
         
-        print _raw_result
-        print
-        print current_item, type(current_item)
-        print request.user, type(request.user)
-        print duration, type(duration)
-        print _raw_result, type(_raw_result)
+        _results_data = [current_item, type(current_item), request.user,
+          type(request.user), duration, type(duration), _raw_result,
+          type(_raw_result)]
+        LOGGER.debug(u'\n\nResults data for user "{0}":\n\n{1}\n'.format(
+          request.user.username or "Anonymous",
+          u'\n'.join([str(x) for x in _results_data])))
+        
         # Save results for this item to the Django database.
         _save_results(current_item, request.user, duration, _raw_result)
     
@@ -322,6 +305,7 @@ def hit_handler(request, hit_id):
     return _handle_ranking(request, hit, items)
 
 
+# pylint: disable-msg=C0103
 def mturk_handler(request):
     """
     MTurk-enabled task handler.
@@ -397,12 +381,13 @@ def mturk_handler(request):
       'translations_3': translations_3,
     }
     
-    print dictionary
+    LOGGER.debug(u'\n\nMTurk data for HIT "{0}":\n\n{1}\n'.format(
+      hit.hit_id,
+      u'\n'.join([u'{0}\t->\t{1}'.format(*x) for x in dictionary.items()])))
     
     return render(request, 'wmt13/mturk_ranking.html', dictionary)
 
 
-# TODO: check this code.
 @login_required
 def overview(request):
     """
@@ -429,10 +414,9 @@ def overview(request):
                hit.block_id, status)
             )
     
-    # TODO: add HIT status to HIT object model to speed up things!
-    #       we might then be able to just pass one HIT instance?
-    
-    print hit_data
+    LOGGER.debug(u'\n\nHIT data for user "{0}":\n\n{1}\n'.format(
+      request.user.username or "Anonymous",
+      u'\n'.join([u'{0}\t{1}\t{2}\t{3}'.format(*x) for x in hit_data])))
     
     dictionary = {
       'active_page': "OVERVIEW",

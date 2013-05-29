@@ -476,7 +476,6 @@ class RankingResult(models.Model):
         else:
             values.extend(['-1'] * 5)
         
-        print values
         return u",".join(values)
 
 

@@ -319,7 +319,8 @@ def mturk_handler(request):
         items = RankingTask.objects.filter(hit=hit)
         assert(len(items) == 3)
     
-    except (AssertionError, ObjectDoesNotExist, MultipleObjectsReturned):
+    except (AssertionError, ObjectDoesNotExist, MultipleObjectsReturned), msg:
+        LOGGER.debug(msg)
         return HttpResponseForbidden("MTurk access forbidden")
     
     mturk_assignmentId = request.GET.get('assignmentId', None)

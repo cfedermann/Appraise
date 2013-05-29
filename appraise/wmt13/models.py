@@ -232,98 +232,6 @@ class HIT(models.Model):
             except (ParseError), msg:
                 self.hit_attributes = {'note': msg}
     
-    def get_status_header(self):
-        """
-        Returns the header template for this type of HIT objects.
-        """
-        # pylint: disable-msg=E1101
-        _header = ['Completion', 'Average', 'Duration']
-        return _header
-    
-    # TODO: check this code.
-    def get_status_for_user(self, user=None):
-        """
-        Returns the status information with respect to the given user.
-        """
-        _status = []
-        
-        _results = RankingResult.objects.filter(user=user, item__hit=self)
-        _durations = _results.values_list('duration', flat=True)
-        
-        # Compute completion status for this task and the given user.
-        _status.append(len(_durations))
-        
-        # Compute total/average duration for this task and the given user.
-        _durations = [datetime_to_seconds(d) for d in _durations if d]
-        _total_duration = sum(_durations)
-        _average_duration = _total_duration / (float(len(_durations)) or 1)        
-        _status.append('{:.2f}'.format(_average_duration))
-        _status.append('{:.2f}'.format(_total_duration))
-        
-        return _status
-    
-    # TODO: check this code.
-    def get_status_for_users(self):
-        """
-        Returns the status information with respect to all users.
-        """
-        _status = []
-        
-        # Compute completion status for this task and all possible users.
-        _items = RankingTask.objects.filter(hit=self).count()
-        _done = []
-        
-        for user in self.users.all():
-            _done.append(RankingResult.objects.filter(user=user,
-              item__hit=self).count())
-        
-        # Minimal number of completed items counts here.
-        _status.append('{0}/{1}'.format(min(_done or [0]), _items))
-        _percentage = 100*min(_done or [0])/float(_items or 1)
-        _status.append(_percentage)
-        if _percentage < 33:
-            _status.append(' progress-danger')
-        elif _percentage < 66:
-            _status.append(' progress-warning')
-        else:
-            _status.append(' progress-success')
-        
-        # Compute average duration for this task and all possible users.
-        _durations = []
-
-        for user in self.users.all():
-            _results = RankingResult.objects.filter(user=user,
-              item__hit=self)
-            _durations.extend(_results.values_list('duration', flat=True))
-        
-        _durations = [datetime_to_seconds(d) for d in _durations if d]
-        _average_duration = sum(_durations) / (float(len(_durations)) or 1)
-        
-        _status.append('{:.2f} sec'.format(_average_duration))
-        
-        return _status
-    
-    # TODO: check this code. (delete?)
-    def is_finished_for_user(self, user=None):
-        """
-        Returns True if this task is finished for the given user.
-        """
-        _items = RankingTask.objects.filter(hit=self).count()
-        _done = RankingResult.objects.filter(user=user,
-          item__hit=self).count()
-        return _items == _done
-    
-    # TODO: check this code. (delete?)
-    def get_finished_for_user(self, user=None):
-        """
-        Returns tuple (finished, total) number of items for the given user.
-        """
-        _items = RankingTask.objects.filter(hit=self).count()
-        _done = RankingResult.objects.filter(user=user,
-          item__hit=self).count()
-        return (_done, _items)
-
-    # TODO: check this code.
     def export_to_xml(self):
         """
         Renders this HIT as XML String.
@@ -338,7 +246,7 @@ class HIT(models.Model):
         
         results = []
         for item in RankingTask.objects.filter(hit=self):
-            for _result in item.evaluationresult_set.all():
+            for _result in item.rankingresult_set.all():
                 results.append(_result.export_to_xml())
         
         context = {'task_type': 'ranking', 'attributes': attributes,

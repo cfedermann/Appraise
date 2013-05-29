@@ -273,11 +273,11 @@ def _handle_ranking(request, task, items):
     # Compute source and reference texts including context where possible.
     source_text, reference_text = _compute_context_for_item(item)
     
-    # Retrieve the number of finished items for this user and the total number
-    # of items for this task. We increase finished_items by one as we are
-    # processing the first unfinished item.
-    finished_items, total_items = task.get_finished_for_user(request.user)
-    finished_items += 1
+    # Retrieve the number of finished items for this user and task. We
+    # increase finished_items by one as we are processing the first
+    # unfinished item.
+    finished_items = 1 + RankingResult.objects.filter(user=request.user,
+      item__hit=item.hit).count()
     
     # Create list of translation alternatives in randomised order.
     translations = []
@@ -289,14 +289,13 @@ def _handle_ranking(request, task, items):
     dictionary = {
       'action_url': request.path,
       'commit_tag': COMMIT_TAG,
-      'description': None,
       'item_id': item.id,
       'block_id': item.hit.block_id,
       'language_pair': item.hit.get_language_pair_display(),
       'order': ','.join([str(x) for x in order]),
       'reference_text': reference_text,
       'source_text': source_text,
-      'task_progress': '{0:03d}/{1:03d}'.format(finished_items, total_items),
+      'task_progress': '{0}/3'.format(finished_items),
       'title': 'Ranking',
       'translations': translations,
     }

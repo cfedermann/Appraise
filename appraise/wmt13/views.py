@@ -313,9 +313,8 @@ def mturk_handler(request):
     LOGGER.info('Rendering MTurk task handler view.')
     
     try:
-        mturk_hitId = request.GET.get('hitId', None)
-        
-        hit = HIT.objects.get(hit_id=mturk_hitId)
+        mturk_appraise_id = request.GET.get('appraise_id', None)
+        hit = HIT.objects.get(hit_id=mturk_appraise_id)
         items = RankingTask.objects.filter(hit=hit)
         assert(len(items) == 3)
     
@@ -323,6 +322,7 @@ def mturk_handler(request):
         LOGGER.debug(msg)
         return HttpResponseForbidden("MTurk access forbidden")
     
+    mturk_hitId = request.GET.get('hitId', None)
     mturk_assignmentId = request.GET.get('assignmentId', None)
     mturk_workerId = request.GET.get('workerId', None)
     
@@ -362,7 +362,8 @@ def mturk_handler(request):
     
     dictionary = {
       'action_url': action_url,
-      'hit_id': hit.hit_id,
+      'appraise_id': mturk_appraise_id,
+      'hit_id': mturk_hitId,
       'assignment_id': mturk_assignmentId,
       'worker_id': mturk_workerId,
       'block_id': hit.block_id,

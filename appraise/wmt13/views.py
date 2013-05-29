@@ -358,8 +358,8 @@ def mturk_handler(request):
     
     # Check referrer to determine action_url value.
     action_url = 'http://www.mturk.com/mturk/externalSubmit'
-    if request.META.has_key('turkSubmitTo'):
-        action_url = unquote(request.META.get('turkSubmitTo'))
+    if request.GET.has_key('turkSubmitTo'):
+        action_url = unquote(request.GET.get('turkSubmitTo'))
     
     dictionary = {
       'action_url': action_url,

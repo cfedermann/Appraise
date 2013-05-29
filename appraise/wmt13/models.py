@@ -6,12 +6,11 @@ Project: Appraise evaluation system
 import logging
 import uuid
 
-from xml.etree.ElementTree import Element, fromstring, ParseError, tostring
+from xml.etree.ElementTree import fromstring, ParseError, tostring
 
 from django.dispatch import receiver
 
-from django.contrib.auth.models import User, Group
-from django.core.exceptions import ValidationError
+from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.template import Context
@@ -104,6 +103,7 @@ class HIT(models.Model):
         verbose_name = "HIT instance"
         verbose_name_plural = "HIT instances"
     
+    # pylint: disable-msg=E1002
     def __init__(self, *args, **kwargs):
         """
         Makes sure that self.hit_attributes are available.
@@ -179,6 +179,7 @@ class HIT(models.Model):
         
         return reduce(lambda x, y: [x[i] + y[i] for i in range(3)], combined)
     
+    # pylint: disable-msg=E1002
     def save(self, *args, **kwargs):
         """
         Makes sure that validation is run before saving an object instance.
@@ -374,6 +375,7 @@ class RankingTask(models.Model):
         verbose_name = "RankingTask instance"
         verbose_name_plural = "RankingTask instances"
     
+    # pylint: disable-msg=E1002
     def __init__(self, *args, **kwargs):
         """
         Makes sure that self.translations are available.
@@ -388,7 +390,8 @@ class RankingTask(models.Model):
         Returns a Unicode String for this RankingTask object.
         """
         return u'<ranking-task id="{0}">'.format(self.id)
-
+    
+    # pylint: disable-msg=E1002
     def save(self, *args, **kwargs):
         """
         Makes sure that validation is run before saving an object instance.
@@ -461,6 +464,7 @@ class RankingResult(models.Model):
         verbose_name = "RankingResult object"
         verbose_name_plural = "RankingResult objects"
     
+    # pylint: disable-msg=E1002
     def __init__(self, *args, **kwargs):
         """
         Makes sure that self.results are available.
@@ -605,11 +609,6 @@ def remove_user_from_hit(sender, instance, **kwargs):
 class UserHITMapping(models.Model):
     """
     Object model mapping users to their current HIT instances.
-    
-    TODO: we _could_ use a post_save hook on RankingResult instances to check
-    automatically a the corresponding HIT instance would be finished for the
-    current user;  if so, it would be trivial to delete their UserHITMapping.
-    
     """
     user = models.ForeignKey(
       User,

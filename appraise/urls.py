@@ -4,8 +4,7 @@ Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 """
 # pylint: disable-msg=W0611
-from django.conf.urls.defaults import patterns, include, handler404, \
-  handler500
+from django.conf.urls import patterns, include, handler404, handler500
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 

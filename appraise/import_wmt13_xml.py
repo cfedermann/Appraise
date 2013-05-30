@@ -78,9 +78,9 @@ if __name__ == "__main__":
             else:
                 # Use get_or_create() to avoid exact duplicates.  We do allow
                 # them for WMT13 to measure intra-annotator agreement...
-                HIT.objects.create(block_id=block_id,
-                  hit_xml=tostring(_child),
+                h = HIT(block_id=block_id, hit_xml=tostring(_child),
                   language_pair=language_pair)
+                h.save()
         
         # pylint: disable-msg=W0703
         except Exception, msg:

@@ -53,7 +53,9 @@ def _compute_next_task_for_user(user, language_pair):
           user))
         
         # Compatible HIT instances need to match the given language pair!
-        hits = HIT.objects.filter(language_pair=language_pair, active=True)
+        # Furthermore, they need to be active and not reserved for MTurk.
+        hits = HIT.objects.filter(language_pair=language_pair, active=True,
+          mturk_only=False)
         
         # Compute list of compatible block ids and randomise its order.
         block_ids = list(hits.values_list('block_id', flat=True))

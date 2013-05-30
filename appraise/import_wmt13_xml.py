@@ -32,6 +32,8 @@ PARSER.add_argument("hits_file", type=file, metavar="hits-file", help="XML " \
   "file containings HITs")
 PARSER.add_argument("--dry-run", action="store_true", default=False,
   dest="dry_run_enabled", help="Enable dry run to simulate import.")
+PARSER.add_argument("--mturk-only", action="store_true", default=False,
+  dest="mturk_only", help="Enable MTurk-only flag for all HITs.")
 
 
 if __name__ == "__main__":
@@ -73,13 +75,13 @@ if __name__ == "__main__":
             
             if args.dry_run_enabled:
                 _ = HIT(block_id=block_id, hit_xml=tostring(_child),
-                  language_pair=language_pair)
+                  language_pair=language_pair, mturk_only=args.mturk_only)
             
             else:
                 # Use get_or_create() to avoid exact duplicates.  We do allow
                 # them for WMT13 to measure intra-annotator agreement...
                 h = HIT(block_id=block_id, hit_xml=tostring(_child),
-                  language_pair=language_pair)
+                  language_pair=language_pair, mturk_only=args.mturk_only)
                 h.save()
         
         # pylint: disable-msg=W0703

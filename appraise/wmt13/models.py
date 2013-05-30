@@ -95,6 +95,13 @@ class HIT(models.Model):
       verbose_name="Active?"
     )
 
+    mturk_only = models.BooleanField(
+      db_index=True,
+      default=False,
+      help_text="Indicates that this HIT instance is ONLY usable via MTurk.",
+      verbose_name="MTurk only?"
+    )
+
     class Meta:
         """
         Metadata options for the HIT object model.

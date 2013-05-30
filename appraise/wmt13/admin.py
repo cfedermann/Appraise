@@ -62,7 +62,7 @@ class HITAdmin(admin.ModelAdmin):
     ModelAdmin class for HIT instances.
     """
     list_display = ('hit_id', 'block_id', 'language_pair')
-    list_filter = ('language_pair', 'active')
+    list_filter = ('language_pair', 'active', 'mturk_only')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id',)
     actions = (export_hit_xml, export_hit_ids_to_csv,)
@@ -71,7 +71,8 @@ class HITAdmin(admin.ModelAdmin):
     fieldsets = (
       ('Overview', {
         'classes': ('wide',),
-        'fields': ('active', 'hit_id', 'block_id', 'language_pair')
+        'fields': ('active', 'mturk_only', 'hit_id', 'block_id',
+          'language_pair')
       }),
       ('Details', {
         'classes': ('wide', 'collapse'),
@@ -116,7 +117,8 @@ class RankingResultAdmin(admin.ModelAdmin):
     ModelAdmin class for RankingResult instances.
     """
     list_display = ('item', 'user', 'readable_duration', 'results')
-    list_filter = ('item__hit__language_pair', 'user')
+    list_filter = ('item__hit__language_pair', 'user',
+      'item__hit__mturk_only')
     actions = (export_results_to_csv,)
 
 

@@ -98,7 +98,9 @@ def export_results_to_csv(modeladmin, request, queryset):
     """
     results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \
       'system1Number,system1Id,system2Number,system2Id,system3Number,' \
-      'system3Id,system4Number,system4Id,system']
+      'system3Id,system4Number,system4Id,system5Number,system5Id,' \
+      'system1rank,system2rank,system3rank,system4rank,system5rank']
+    
     for result in queryset:
         if isinstance(result, RankingResult):
             results.append(result.export_to_csv())

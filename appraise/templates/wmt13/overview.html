@@ -26,6 +26,12 @@
   <td>{{status.2|floatformat:2}} second(s)</td>
 </tr>
 {% endfor %}
+<tr>
+  <td colspan="2"><strong>Total</strong></td>
+  <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{total.0}} HITs</span></td>
+  <td>{{total.1|floatformat:2}} second(s)</td>
+  <td>{{total.2|floatformat:2}} second(s)</td>
+</tr>
 </table>
 {% else %}
 <h2>Not ready yet...</h2>

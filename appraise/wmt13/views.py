@@ -427,9 +427,12 @@ def overview(request):
     language_pairs = request.user.groups.filter(name__in=language_codes)
     
     hit_data = []
+    total = [0, 0, 0]
     for language_pair in language_pairs:
         hit = _compute_next_task_for_user(request.user, language_pair)
         status = HIT.compute_status_for_user(request.user, language_pair)
+        for i in range(3):
+            total[i] = total[i] + status[i]
         
         if hit:
             hit_data.append(
@@ -445,6 +448,7 @@ def overview(request):
       'active_page': "OVERVIEW",
       'commit_tag': COMMIT_TAG,
       'hit_data': hit_data,
+      'total': total,
       'title': 'WMT13 Dashboard',
     }
     

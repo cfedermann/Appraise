@@ -17,6 +17,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from appraise.wmt13.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
+from appraise.utils import seconds_to_datetime
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
@@ -435,10 +436,18 @@ def overview(request):
             total[i] = total[i] + status[i]
         
         if hit:
+            # Convert status seconds back into datetime.time instances.
+            for i in range(2):
+                status[i+1] = seconds_to_datetime(int(status[i+1]))
+            
             hit_data.append(
               (hit.get_language_pair_display(), hit.get_absolute_url(),
                hit.block_id, status)
             )
+    
+    # Convert total seconds back into datetime.time instances.
+    for i in range(2):
+        total[i+1] = seconds_to_datetime(int(total[i+1]))
     
     LOGGER.debug(u'\n\nHIT data for user "{0}":\n\n{1}\n'.format(
       request.user.username or "Anonymous",

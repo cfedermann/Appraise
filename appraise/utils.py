@@ -4,6 +4,7 @@ Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 """
 import logging
+from datetime import time
 from nltk.metrics.agreement import AnnotationTask
 
 log = logging.getLogger(__file__)
@@ -16,6 +17,15 @@ def datetime_to_seconds(value):
       + value.second + (value.microsecond / 1000000.0)
     return seconds
 
+
+def seconds_to_datetime(value):
+    """
+    Converst the given value in secodns to datetime.time.
+    """
+    _hour = value / 3600
+    _mins = (value / 60) % 60
+    _secs = value % 60
+    return time(hour=_hour, minute=_mins, second=_secs)
 
 # pylint: disable-msg=E0102
 class AnnotationTask(AnnotationTask):

@@ -449,6 +449,20 @@ def overview(request):
     for i in range(2):
         total[i+1] = seconds_to_datetime(int(total[i+1]))
     
+    group = None
+    for _group in request.user.groups.all():
+        if _group.name == 'WMT13' \
+          or _group.name.startswith('eng2') \
+          or _group.name.endswith('2eng'):
+            continue
+        
+        group = _group
+        break
+    
+    group_status = HIT.compute_status_for_group(group)
+    for i in range(2):
+        group_status[i+1] = seconds_to_datetime(int(group_status[i+1]))
+    
     LOGGER.debug(u'\n\nHIT data for user "{0}":\n\n{1}\n'.format(
       request.user.username or "Anonymous",
       u'\n'.join([u'{0}\t{1}\t{2}\t{3}'.format(*x) for x in hit_data])))
@@ -458,6 +472,8 @@ def overview(request):
       'commit_tag': COMMIT_TAG,
       'hit_data': hit_data,
       'total': total,
+      'group_name': group.name,
+      'group_status': group_status,
       'title': 'WMT13 Dashboard',
     }
     

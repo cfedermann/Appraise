@@ -334,10 +334,23 @@ def mturk_handler(request):
     item_2 = items[1]
     item_3 = items[2]
     
-    # Compute source and reference texts including context where possible.
-    source_text_1, reference_text_1 = _compute_context_for_item(item_1)
-    source_text_2, reference_text_2 = _compute_context_for_item(item_2)
-    source_text_3, reference_text_3 = _compute_context_for_item(item_3)
+    # Compute source and reference texts without context.  MTurk HITs contain
+    # control sentences which, by definition, are out-of-context.  Hence, we
+    # cannot show context without exposing the control's identity...
+    source_text_1 = item_1.source[0]
+    reference_text_1 = None
+    if item_1.reference:
+        reference_text_1 = item_1.reference[0]
+    
+    source_text_2 = item_2.source[0]
+    reference_text_2 = None
+    if item_2.reference:
+        reference_text_2 = item_2.reference[0]
+    
+    source_text_3 = item_3.source[0]
+    reference_text_3 = None
+    if item_3.reference:
+        reference_text_3 = item_3.reference[0]
     
     # Create list of translation alternatives in randomised order.
     translations_1 = []

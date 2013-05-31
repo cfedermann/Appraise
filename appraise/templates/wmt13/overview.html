@@ -22,21 +22,21 @@
   <td><a href="{{hit_url}}">Block #{{block_id}}</a></td>
   <td>{{language_pair}}</td>
   <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{status.0}} HITs</span></td>
-  <td>{{status.1|time:"H:i:s"}}</td>
-  <td>{{status.2|time:"H:i:s"}}</td>
+  <td>{{status.1}}</td>
+  <td>{{status.2}}</td>
 </tr>
 {% endfor %}
 <tr>
   <td colspan="2"><strong>Total</strong></td>
   <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{total.0}} HITs</span></td>
-  <td>{{total.1|time:"H:i:s"}}</td>
-  <td>{{total.2|time:"H:i:s"}}</td>
+  <td>{{total.1}}</td>
+  <td>{{total.2}}</td>
 </tr>
 <tr>
   <td colspan="2"><strong>{{group_name}} Group Total</strong></td>
   <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{group_status.0}} HITs</span></td>
-  <td>{{group_status.1|time:"H:i:s"}}</td>
-  <td>{{group_status.2|time:"H:i:s"}}</td>
+  <td>{{group_status.1}}</td>
+  <td>{{group_status.2}}</td>
 </tr>
 </table>
 {% else %}

@@ -4,7 +4,7 @@ Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 """
 import logging
-from datetime import time
+from datetime import timedelta
 from nltk.metrics.agreement import AnnotationTask
 
 log = logging.getLogger(__file__)
@@ -18,14 +18,15 @@ def datetime_to_seconds(value):
     return seconds
 
 
-def seconds_to_datetime(value):
+def seconds_to_timedelta(value):
     """
-    Converst the given value in secodns to datetime.time.
+    Converst the given value in secodns to datetime.timedelta.
     """
-    _hour = value / 3600
+    _days =  value / 86400
+    _hours = (value / 3600) % 24
     _mins = (value / 60) % 60
     _secs = value % 60
-    return time(hour=_hour, minute=_mins, second=_secs)
+    return timedelta(days=_days, hours=_hours, minutes=_mins, seconds=_secs)
 
 # pylint: disable-msg=E0102
 class AnnotationTask(AnnotationTask):

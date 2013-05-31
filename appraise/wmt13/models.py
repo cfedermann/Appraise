@@ -191,7 +191,7 @@ class HIT(models.Model):
             if _user_status[0] > 0:
                 users = users + 1
         
-        combined[1] = combined[1] / float(users)
+        combined[1] = combined[1] / float(users or 1)
         return combined
     
     # pylint: disable-msg=E1002

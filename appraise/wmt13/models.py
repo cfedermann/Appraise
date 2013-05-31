@@ -180,11 +180,16 @@ class HIT(models.Model):
         """
         Computes the HIT completion status for users of the given group.
         """
-        combined = []
+        combined = [0, 0, 0]
+        users = group.user_set.count()
         for user in group.user_set.all():
-            combined.append(cls.compute_status_for_user(user, language_pair))
+            _user_status = cls.compute_status_for_user(user, language_pair)
+            combined[0] = combined[0] + _user_status[0]
+            combined[1] = combined[1] + _user_status[1]
+            combined[2] = combined[2] + _user_status[2]
         
-        return reduce(lambda x, y: [x[i] + y[i] for i in range(3)], combined)
+        combined[1] = combined[1] / float(users)
+        return combined
     
     # pylint: disable-msg=E1002
     def save(self, *args, **kwargs):

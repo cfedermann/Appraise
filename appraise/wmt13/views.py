@@ -91,7 +91,8 @@ def _compute_next_task_for_user(user, language_pair):
         
         # Sanity check preventing stale User/HIT mappings to screw up things.
         hit_users = list(current_hitmap.hit.users.all())
-        if user in hit_users or len(hit_users) >= 3 or not hit.active:
+        if user in hit_users or len(hit_users) >= 3 \
+          or not current_hitmap.hit.active:
             LOGGER.debug('Detected stale User/HIT mapping {0}->{1}'.format(
               user, current_hitmap.hit))
             current_hitmap.delete()

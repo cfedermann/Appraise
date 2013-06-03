@@ -72,15 +72,16 @@ if __name__ == "__main__":
         
         try:
             _total = _total + 1
+            _hit_xml = tostring(_child, encoding="utf-8").decode('utf-8')
             
             if args.dry_run_enabled:
-                _ = HIT(block_id=block_id, hit_xml=tostring(_child),
+                _ = HIT(block_id=block_id, hit_xml=_hit_xml,
                   language_pair=language_pair, mturk_only=args.mturk_only)
             
             else:
                 # Use get_or_create() to avoid exact duplicates.  We do allow
                 # them for WMT13 to measure intra-annotator agreement...
-                h = HIT(block_id=block_id, hit_xml=tostring(_child),
+                h = HIT(block_id=block_id, hit_xml=_hit_xml,
                   language_pair=language_pair, mturk_only=args.mturk_only)
                 h.save()
         

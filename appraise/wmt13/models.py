@@ -269,6 +269,16 @@ class HIT(models.Model):
         context = {'hit_id': self.hit_id, 'attributes': attributes,
           'results': list(enumerate(results))}
         return template.render(Context(context))
+    
+    def export_to_apf(self):
+        """
+        Exports this HIT's results to Artstein and Poesio (2007) format.
+        """
+        results = []
+        for item in RankingTask.objects.filter(hit=self):
+            for _result in item.rankingresult_set.all():
+                results.append(_result.export_to_apf())
+        return u"\n".join(results)
 
 
 class RankingTask(models.Model):
@@ -494,6 +504,32 @@ class RankingResult(models.Model):
             values.extend(['-1'] * 5)
         
         return u",".join(values)
+
+    def export_to_apf(self):
+        """
+        Exports this RankingResult to Artstein and Poesio (2007) format.
+        """
+        item = self.item
+        hit = self.item.hit
+        
+        _systems = hit.hit_attributes['systems'].split(',')
+        from itertools import combinations
+        results = []
+        
+        for a, b in combinations(range(5), 2):
+            _c = self.user.username
+            _i = '{0}.{1}.{2}'.format(item.source[1]['id'], a+1, b+1)
+            
+            if not self.results:
+                continue
+            
+            if self.results[a] > self.results[b]:
+                _v = '{0}>{1}'.format(str(_systems[a]), str(_systems[b]))
+            else:
+                _v = '{0}>{1}'.format(str(_systems[b]), str(_systems[a]))
+            
+            results.append('{0},{1},{2}'.format(_c, _i, _v))
+        return u'\n'.join(results)
 
 
 @receiver(models.signals.post_save, sender=RankingResult)

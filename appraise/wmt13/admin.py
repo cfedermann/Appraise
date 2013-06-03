@@ -57,6 +57,22 @@ def export_hit_ids_to_csv(modeladmin, request, queryset):
 export_hit_ids_to_csv.short_description = "Export selected HIT ids to CSV"
 
 
+def export_hit_results_to_apf(modeladmin, request, queryset):
+    """
+    Exports HIT results to Artstein and Poesio (2007) format.
+    """
+    results = []
+    for hit in queryset:
+        if isinstance(hit, HIT):
+            results.append(hit.export_to_apf())
+    
+    export_apf = u"\n".join(results)
+    return HttpResponse(export_apf, mimetype='text/plain')
+
+export_hit_results_to_apf.short_description = "Export HIT results to " \
+  "Artstein and Poesio (2007) format"
+
+
 class HITAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for HIT instances.
@@ -65,7 +81,8 @@ class HITAdmin(admin.ModelAdmin):
     list_filter = ('language_pair', 'active', 'mturk_only')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id',)
-    actions = (export_hit_xml, export_hit_ids_to_csv,)
+    actions = (export_hit_xml, export_hit_ids_to_csv,
+      export_hit_results_to_apf)
     filter_horizontal = ('users',)
     
     fieldsets = (

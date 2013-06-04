@@ -140,6 +140,25 @@ class HIT(models.Model):
         return new_id
     
     @classmethod
+    def compute_remaining_hits(cls, language_pair=None):
+        """
+        Computes the number of remaining HITs in the database.
+        
+        If language_pair is given, it constraints on the HITs' language pair.
+        
+        """
+        hits_qs = cls.objects.filter(active=True, mturk_only=False)
+        if language_pair:
+            hits_qs = hits_qs.filter(language_pair=language_pair)
+        
+        available = 0
+        for hit in hits_qs:
+            if hit.users.count() < 3:
+                available = available + 1
+        
+        return available
+    
+    @classmethod
     def compute_status_for_user(cls, user, language_pair=None):
         """
         Computes the HIT completion status for the given user.

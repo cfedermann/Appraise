@@ -497,7 +497,13 @@ class RankingResult(models.Model):
         
         _src_lang = hit.hit_attributes['source-language']
         _trg_lang = hit.hit_attributes['target-language']
-        _systems = hit.hit_attributes['systems'].split(',')
+        
+        # System ids can be retrieved from HIT or segment level.
+        if 'systems' in hit.hit_attributes.keys():
+            _systems = hit.hit_attributes['systems'].split(',')
+        
+        else:
+            _systems = item.attributes['systems'].split(',')
         
         # Note that srcIndex and segmentId are 1-indexed for compatibility
         # with evaluation scripts from previous editions of the WMT.
@@ -533,7 +539,13 @@ class RankingResult(models.Model):
         item = self.item
         hit = self.item.hit
         
-        _systems = hit.hit_attributes['systems'].split(',')
+        # System ids can be retrieved from HIT or segment level.
+        if 'systems' in hit.hit_attributes.keys():
+            _systems = hit.hit_attributes['systems'].split(',')
+        
+        else:
+            _systems = item.attributes['systems'].split(',')
+        
         from itertools import combinations
         results = []
         

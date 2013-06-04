@@ -32,12 +32,14 @@
   <td>{{total.1}}</td>
   <td>{{total.2}}</td>
 </tr>
+{% if group_name and group_status %}
 <tr>
   <td colspan="2"><strong>{{group_name}} Group Total</strong></td>
   <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{group_status.0}} HITs</span></td>
   <td>{{group_status.1}}</td>
   <td>{{group_status.2}}</td>
 </tr>
+{% endif %}
 </table>
 {% else %}
 <h2>Not ready yet...</h2>

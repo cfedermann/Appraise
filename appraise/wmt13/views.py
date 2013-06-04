@@ -65,10 +65,7 @@ def _compute_next_task_for_user(user, language_pair):
         # Find the next HIT for the current user.
         random_hit = None
         for block_id in block_ids:
-            matching_hits = HIT.objects.filter(block_id=block_id,
-              language_pair=language_pair)
-            
-            for hit in matching_hits:
+            for hit in hits.filter(block_id=block_id):
                 hit_users = list(hit.users.all())
                 if len(hit_users) < 3 and not user in hit_users:
                     random_hit = hit
@@ -303,6 +300,17 @@ def hit_handler(request, hit_id):
       request.user.username or "Anonymous"))
     
     hit = get_object_or_404(HIT, hit_id=hit_id)
+    if not hit.active:
+        LOGGER.debug('Detected inactive User/HIT mapping {0}->{1}'.format(
+          request.user, hit))
+        new_hit = _compute_next_task_for_user(request.user, hit.language_pair)
+        if new_hit:
+            return redirect('appraise.wmt13.views.hit_handler',
+              hit_id=new_hit.hit_id)
+        
+        else:
+            return redirect('appraise.wmt13.views.overview')
+    
     items = RankingTask.objects.filter(hit=hit)
     if not items:
         return redirect('appraise.wmt13.views.overview')
@@ -460,9 +468,15 @@ def overview(request):
         group = _group
         break
     
-    group_status = HIT.compute_status_for_group(group)
-    for i in range(2):
-        group_status[i+1] = seconds_to_timedelta(int(group_status[i+1]))
+    if group is not None:
+        group_name = group.name
+        group_status = HIT.compute_status_for_group(group)
+        for i in range(2):
+            group_status[i+1] = seconds_to_timedelta(int(group_status[i+1]))
+    
+    else:
+        group_status = None
+        group_name = None
     
     LOGGER.debug(u'\n\nHIT data for user "{0}":\n\n{1}\n'.format(
       request.user.username or "Anonymous",
@@ -473,7 +487,7 @@ def overview(request):
       'commit_tag': COMMIT_TAG,
       'hit_data': hit_data,
       'total': total,
-      'group_name': group.name,
+      'group_name': group_name,
       'group_status': group_status,
       'title': 'WMT13 Dashboard',
     }

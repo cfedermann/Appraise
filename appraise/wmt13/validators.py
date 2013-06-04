@@ -18,7 +18,7 @@ LOGGER.addHandler(LOG_HANDLER)
 
 
 HIT_REQUIRED_ATTRIBUTES = (
-  'block-id', 'source-language', 'target-language', 'systems'
+  'block-id', 'source-language', 'target-language'
 )
 
 
@@ -68,6 +68,10 @@ def validate_hit_xml(value):
         # Then, we check that the top-level tag name is <hits>.
         assert(_tree.tag == 'hit'), 'expected <hit> on top-level'
         
+        systems_attribute_set = []
+        if 'systems' in _tree.attrib.keys():
+            systems_attribute_set.append('hit')
+        
         # And that required XML attributes are available.
         for _attr in HIT_REQUIRED_ATTRIBUTES:
             assert(_attr in _tree.attrib.keys()), \
@@ -77,12 +81,19 @@ def validate_hit_xml(value):
         # which are <seg> containers with <source>, <reference> and a
         # total of 5 <translation> elements. The <reference> is mandatory.
         # The <translation> elements require some text value to be valid.
-            _no_of_children = 0
-            for _seg in _tree:
-                validate_segment_xml(_seg)
-                _no_of_children += 1
-            
-            assert(_no_of_children == 3), 'required 3 <seg> children'
+        _no_of_children = 0
+        for _seg in _tree:
+            if 'systems' in _seg.attrib.keys():
+                systems_attribute_set.append('seg')
+            validate_segment_xml(_seg)
+            _no_of_children += 1
+        
+        assert(_no_of_children == 3), 'expected 3 <seg> children'
+        
+        assert(systems_attribute_set.count('hit') == 1 \
+          or systems_attribute_set.count('seg') == 3), \
+          'missing required attribute "systems" on either <hit> or <seg> ' \
+          'level: {0}'.format(systems_attribute_set)
     
     except (AssertionError, ParseError), msg:
         raise ValidationError('Invalid XML: "{0}".'.format(msg))

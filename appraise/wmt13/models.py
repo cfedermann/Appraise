@@ -480,11 +480,13 @@ class RankingResult(models.Model):
         _trg_lang = hit.hit_attributes['target-language']
         _systems = hit.hit_attributes['systems'].split(',')
         
+        # Note that srcIndex and segmentId are 1-indexed for compatibility
+        # with evaluation scripts from previous editions of the WMT.
         values.append(iso639_3_to_name_mapping[_src_lang]) # srclang
         values.append(iso639_3_to_name_mapping[_trg_lang]) # trglang
-        values.append(item.source[1]['id'])                # srcIndex
+        values.append(str(1 + int(item.source[1]['id'])))  # srcIndex
         values.append('-1')                                # documentId
-        values.append(item.source[1]['id'])                # segmentId
+        values.append(str(1 + int(item.source[1]['id'])))  # segmentId
         values.append(self.user.username)                  # judgeId
         values.append('-1')                                # system1Number
         values.append(str(_systems[0]))                    # system1Id
@@ -516,9 +518,11 @@ class RankingResult(models.Model):
         from itertools import combinations
         results = []
         
+        # Note that srcIndex is 1-indexed for compatibility with evaluation
+        # scripts from previous editions of the WMT.
         for a, b in combinations(range(5), 2):
             _c = self.user.username
-            _i = '{0}.{1}.{2}'.format(item.source[1]['id'], a+1, b+1)
+            _i = '{0}.{1}.{2}'.format(1 + int(item.source[1]['id']), a+1, b+1)
             
             if not self.results:
                 continue

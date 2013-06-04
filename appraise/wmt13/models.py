@@ -153,7 +153,7 @@ class HIT(models.Model):
         - total duration in seconds.
         
         """
-        hits_qs = cls.objects.filter(active=True, users=user)
+        hits_qs = cls.objects.filter(users=user)
         if language_pair:
             hits_qs = hits_qs.filter(language_pair=language_pair)
         

@@ -381,6 +381,17 @@ def mturk_handler(request):
     for index in order_3:
         translations_3.append(item_3.translations[index])
     
+    # System ids can be retrieved from HIT or segment level.
+    if 'systems' in hit.hit_attributes.keys():
+        systems_1 = hit.hit_attributes['systems'].split(',')
+        systems_2 = systems_1
+        systems_3 = systems_1
+    
+    else:
+        systems_1 = item_1.attributes['systems'].split(',')
+        systems_2 = item_2.attributes['systems'].split(',')
+        systems_3 = item_3.attributes['systems'].split(',')
+    
     # Check referrer to determine action_url value.
     action_url = 'http://www.mturk.com/mturk/externalSubmit'
     if request.GET.has_key('turkSubmitTo'):
@@ -399,6 +410,9 @@ def mturk_handler(request):
       'order_1': ','.join([str(x) for x in order_1]),
       'order_2': ','.join([str(x) for x in order_2]),
       'order_3': ','.join([str(x) for x in order_3]),
+      'systems_1': systems_1,
+      'systems_2': systems_2,
+      'systems_3': systems_3,
       'reference_text_1': reference_text_1,
       'reference_text_2': reference_text_2,
       'reference_text_3': reference_text_3,

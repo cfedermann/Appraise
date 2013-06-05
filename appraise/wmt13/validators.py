@@ -68,9 +68,8 @@ def validate_hit_xml(value):
         # Then, we check that the top-level tag name is <hits>.
         assert(_tree.tag == 'hit'), 'expected <hit> on top-level'
         
-        systems_attribute_set = []
-        if 'systems' in _tree.attrib.keys():
-            systems_attribute_set.append('hit')
+        # Check if there exists a "systems" XML attribute on <hit> level.
+        systems_available = 'systems' in _tree.attrib.keys()
         
         # And that required XML attributes are available.
         for _attr in HIT_REQUIRED_ATTRIBUTES:
@@ -85,15 +84,10 @@ def validate_hit_xml(value):
         for _seg in _tree:
             if 'systems' in _seg.attrib.keys():
                 systems_attribute_set.append('seg')
-            validate_segment_xml(_seg)
+            validate_segment_xml(_seg, require_systems=not systems_available)
             _no_of_children += 1
         
         assert(_no_of_children == 3), 'expected 3 <seg> children'
-        
-        assert(systems_attribute_set.count('hit') == 1 \
-          or systems_attribute_set.count('seg') == 3), \
-          'missing required attribute "systems" on either <hit> or <seg> ' \
-          'level: {0}'.format(systems_attribute_set)
     
     except (AssertionError, ParseError), msg:
         raise ValidationError('Invalid XML: "{0}".'.format(msg))
@@ -101,7 +95,7 @@ def validate_hit_xml(value):
     return value
 
 
-def validate_segment_xml(value):
+def validate_segment_xml(value, require_systems=False):
     """
     Checks that the given segment XML value contains all required elements.
     
@@ -142,6 +136,9 @@ def validate_segment_xml(value):
         for _translation in _tree.iterfind('translation'):
             assert(_translation.text is not None), \
               'missing required <translation> text value'
+            if require_systems:
+                assert('system' in _translation.attrib.keys()), \
+                  'missing "system" attribute on <seg> level'
     
     except (AssertionError, ParseError), msg:
         raise ValidationError('Invalid XML: "{0}".'.format(msg))

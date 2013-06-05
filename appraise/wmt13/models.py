@@ -498,8 +498,13 @@ class RankingResult(models.Model):
         if 'systems' in hit.hit_attributes.keys():
             _systems = hit.hit_attributes['systems'].split(',')
         
+        # On segment level, we have to extract the individual "system" values
+        # from the <translation> attributes which are stored in the second
+        # position of the translation tuple: (text, attrib).
         else:
-            _systems = item.attributes['systems'].split(',')
+            _systems = []
+            for translation in item.translations:
+                _systems.append(translation[1]['system'])
         
         # Note that srcIndex and segmentId are 1-indexed for compatibility
         # with evaluation scripts from previous editions of the WMT.
@@ -539,8 +544,13 @@ class RankingResult(models.Model):
         if 'systems' in hit.hit_attributes.keys():
             _systems = hit.hit_attributes['systems'].split(',')
         
+        # On segment level, we have to extract the individual "system" values
+        # from the <translation> attributes which are stored in the second
+        # position of the translation tuple: (text, attrib).
         else:
-            _systems = item.attributes['systems'].split(',')
+            _systems = []
+            for translation in item.translations:
+                _systems.append(translation[1]['system'])
         
         from itertools import combinations
         results = []

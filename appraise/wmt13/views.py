@@ -470,7 +470,7 @@ def overview(request):
             )
     
     # Convert total seconds back into datetime.timedelta instances.
-    total[1] = seconds_to_timedelta(int(total[2]) / float(int(total[0])))
+    total[1] = seconds_to_timedelta(int(total[2]) / float(int(total[0]) or 1))
     total[2] = seconds_to_timedelta(int(total[2]))
     
     group = None

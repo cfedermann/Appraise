@@ -469,9 +469,9 @@ def overview(request):
                hit.block_id, status)
             )
     
-    # Convert total seconds back into datetime.time instances.
-    for i in range(2):
-        total[i+1] = seconds_to_timedelta(int(total[i+1]))
+    # Convert total seconds back into datetime.timedelta instances.
+    total[1] = seconds_to_timedelta(int(total[2]) / float(int(total[0])))
+    total[2] = seconds_to_timedelta(int(total[2]))
     
     group = None
     for _group in request.user.groups.all():

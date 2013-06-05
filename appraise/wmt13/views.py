@@ -5,7 +5,7 @@ Project: Appraise evaluation system
 """
 import logging
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from random import seed, shuffle
 from urllib import unquote
 
@@ -483,9 +483,8 @@ def overview(request):
     # Convert total seconds back into datetime.timedelta instances.
     total[1] = seconds_to_timedelta(int(total[2]) / float(int(total[0]) or 1))
     
-    # The following code can be used to shorten timedelta representation...
-    # from datetime import timedelta
-    # total[1] = total[1] - timedelta(microseconds=total[1].microseconds)
+    # Remove microseconds to get a nicer timedelta rendering in templates.
+    total[1] = total[1] - timedelta(microseconds=total[1].microseconds)
     
     total[2] = seconds_to_timedelta(int(total[2]))
     

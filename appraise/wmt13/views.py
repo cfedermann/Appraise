@@ -18,7 +18,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from appraise.wmt13.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
-from appraise.utils import seconds_to_timedelta
+from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
@@ -534,25 +534,20 @@ def status(request):
     # Compute number of results contributed so far.
     ranking_results = RankingResult.objects.all().count()
     
-    # Aggregate information about average/total duration as well as groups.
-    avg_times = []
-    total_times = []
+    # Aggregate information about participating groups.
     groups = set()
-    
     for user in users:
-        _, avg_time, total_time = HIT.compute_status_for_user(user)
-        avg_times.append(avg_time)
-        total_times.append(total_time)
         for group in user.groups.all():
-            if group.name == 'WMT13' \
-              or group.name.startswith('eng2') \
+            if group.name == 'WMT13' or group.name.startswith('eng2') \
               or group.name.endswith('2eng'):
                 continue
             
             groups.add(group)
     
-    avg_time = seconds_to_timedelta(sum(avg_times))
-    total_time = seconds_to_timedelta(sum(total_times))
+    # Compute average/total duration over all results.
+    durations = RankingResult.objects.all().values_list('duration', flat=True)
+    total_time = sum([datetime_to_seconds(x) for x in durations])
+    avg_time = total_time / float(hits_completed or 1)
     
     global_stats.append(('Users', users.count()))
     global_stats.append(('Groups', len(groups)))
@@ -560,8 +555,8 @@ def status(request):
     global_stats.append(('HITs remaining', hits_remaining))
     global_stats.append(('Ranking results', ranking_results))
     global_stats.append(('System comparisons', 10 * ranking_results))
-    global_stats.append(('Average duration', avg_time))
-    global_stats.append(('Total duration', total_time))
+    global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
+    global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     dictionary = {
       'active_page': "STATUS",

@@ -22,9 +22,9 @@ def seconds_to_timedelta(value):
     """
     Converst the given value in secodns to datetime.timedelta.
     """
-    _days =  value / 86400
-    _hours = (value / 3600) % 24
-    _mins = (value / 60) % 60
+    _days =  value // 86400
+    _hours = (value // 3600) % 24
+    _mins = (value // 60) % 60
     _secs = value % 60
     return timedelta(days=_days, hours=_hours, minutes=_mins, seconds=_secs)
 

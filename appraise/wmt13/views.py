@@ -12,7 +12,7 @@ from urllib import unquote
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
-from django.http import HttpResponseForbidden
+from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt13.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
@@ -24,6 +24,9 @@ from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.wmt13.views')
 LOGGER.addHandler(LOG_HANDLER)
+
+# We keep status information available in memory to speed up access.
+STATUS_CACHE = {}
 
 
 def _compute_next_task_for_user(user, language_pair):
@@ -532,6 +535,22 @@ def status(request):
     LOGGER.info('Rendering WMT13 HIT status for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
+    if not STATUS_CACHE.has_key('global_stats'):
+        update_status()
+    
+    dictionary = {
+      'active_page': "STATUS",
+      'global_stats': STATUS_CACHE['global_stats'],
+      'commit_tag': COMMIT_TAG,
+      'title': 'WMT13 Status',
+    }
+    
+    return render(request, 'wmt13/status.html', dictionary)
+
+def update_status(request):
+    """
+    Updates the in memory STATUS_CACHE dictionary.
+    """
     # Compute some global stats.
     global_stats = []
     wmt13 = Group.objects.get(name='WMT13')
@@ -573,11 +592,5 @@ def status(request):
     global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
-    dictionary = {
-      'active_page': "STATUS",
-      'global_stats': global_stats,
-      'commit_tag': COMMIT_TAG,
-      'title': 'WMT13 Status',
-    }
-    
-    return render(request, 'wmt13/status.html', dictionary)
+    STATUS_CACHE['global_stats'] = global_stats
+    return HttpResponse('Status updated successfully')

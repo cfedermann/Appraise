@@ -206,7 +206,7 @@ class HIT(models.Model):
             combined[1] = combined[1] + _user_status[1]
             combined[2] = combined[2] + _user_status[2]
         
-        combined[1] = combined[1] / float(combined[0] or 1)
+        combined[1] = combined[2] / float(combined[0] or 1)
         return combined
     
     # pylint: disable-msg=E1002

@@ -33,22 +33,14 @@ def export_hit_ids_to_csv(modeladmin, request, queryset):
     """
     Exports the HIT ids for the given queryset to CSV format.
     """
-    results = [u'HITId,blockId,srclang,trglang,system1Id,system2Id,' \
-      'system3Id,system4Id,system5Id']
+    results = [u'appraise_id,srclang,trglang']
     for result in queryset:
         if isinstance(result, HIT):
             _attr = result.hit_attributes
-            _systems = _attr['systems'].split(',')
             _values = []
-            _values.append(result.hit_id)            # HITId
-            _values.append(str(result.block_id))     # blockId
+            _values.append(result.hit_id)            # appraise_id
             _values.append(_attr['source-language']) # srclang
             _values.append(_attr['target-language']) # trglang
-            _values.append(str(_systems[0]))         # system1Id
-            _values.append(str(_systems[1]))         # system2Id
-            _values.append(str(_systems[2]))         # system3Id
-            _values.append(str(_systems[3]))         # system4Id
-            _values.append(str(_systems[4]))         # system5Id
             results.append(u",".join(_values))
     
     export_csv = u"\n".join(results)

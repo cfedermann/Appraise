@@ -10,6 +10,7 @@ from random import seed, shuffle
 from urllib import unquote
 
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User, Group
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
@@ -507,3 +508,66 @@ def overview(request):
     }
     
     return render(request, 'wmt13/overview.html', dictionary)
+
+@login_required
+def status(request):
+    """
+    Renders the status overview.
+    """
+    LOGGER.info('Rendering WMT13 HIT status for user "{0}".'.format(
+      request.user.username or "Anonymous"))
+    
+    # Compute some global stats.
+    global_stats = []
+    wmt13 = Group.objects.get(name='WMT13')
+    users = wmt13.user_set.all()
+    
+    # Check how many HITs have been completed.
+    hits_completed = 0
+    for hit in HIT.objects.all():
+        if hit.users.count() >= 3:
+            hits_completed = hits_completed + 1
+    
+    # Compute remaining HITs for all language pairs.
+    hits_remaining = HIT.compute_remaining_hits()
+    
+    # Compute number of results contributed so far.
+    ranking_results = RankingResult.objects.all().count()
+    
+    # Aggregate information about average/total duration as well as groups.
+    avg_times = []
+    total_times = []
+    groups = set()
+    
+    for user in users:
+        _, avg_time, total_time = HIT.compute_status_for_user(user)
+        avg_times.append(avg_time)
+        total_times.append(total_time)
+        for group in user.groups.all():
+            if group.name == 'WMT13' \
+              or group.name.startswith('eng2') \
+              or group.name.endswith('2eng'):
+                continue
+            
+            groups.add(group)
+    
+    avg_time = seconds_to_timedelta(sum(avg_times))
+    total_time = seconds_to_timedelta(sum(total_times))
+    
+    global_stats.append(('Users', users.count()))
+    global_stats.append(('Groups', len(groups)))
+    global_stats.append(('HITs completed', hits_completed))
+    global_stats.append(('HITs remaining', hits_remaining))
+    global_stats.append(('Ranking results', ranking_results))
+    global_stats.append(('System comparisons', 10 * ranking_results))
+    global_stats.append(('Average duration', avg_time))
+    global_stats.append(('Total duration', total_time))
+    
+    dictionary = {
+      'active_page': "STATUS",
+      'global_stats': global_stats,
+      'commit_tag': COMMIT_TAG,
+      'title': 'WMT13 Status',
+    }
+    
+    return render(request, 'wmt13/status.html', dictionary)

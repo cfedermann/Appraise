@@ -47,6 +47,7 @@ urlpatterns += patterns('',
   (r'^appraise/wmt13/(?P<hit_id>[a-f0-9]{8})/',
     'appraise.wmt13.views.hit_handler'),
   (r'^appraise/wmt13/mturk/', 'appraise.wmt13.views.mturk_handler'),
+  (r'^appraise/wmt13/status/$', 'appraise.wmt13.views.status'),
 )
 
 if DEBUG:

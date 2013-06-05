@@ -1,0 +1,24 @@
+{% extends "wmt13/base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="span12">
+
+{% if global_stats %}
+<h3>Global status</h3>
+<table class="table table-striped table-bordered table-condensed">
+{% for item in global_stats %}
+<tr>
+  <th>{{item.0}}</th>
+  <td>{{item.1}}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% else %}
+<h2>Not ready yet...</h2>
+<p>At this moment, no status information is available. Check back soon...</p>
+{% endif %}
+</div>
+</div>
+{% endblock %}

@@ -9,6 +9,7 @@ Exports HIT status for all language pairs.
 usage: export_wmt13_status.py
 
 """
+from datetime import datetime
 import os
 import sys
 
@@ -34,6 +35,7 @@ if __name__ == "__main__":
           language_pair=language_pair)
     
     print
+    print '[{0}]'.format(datetime.now().strftime("%c"))
     for k, v in remaining_hits.items():
         print '{0}: {1}'.format(k, v)
     print

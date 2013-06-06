@@ -547,22 +547,45 @@ def status(request):
       request.user.username or "Anonymous"))
     
     if not STATUS_CACHE.has_key('global_stats'):
-        update_status()
+        update_status(key='global_stats')
+    
+    if not STATUS_CACHE.has_key('language_pair_stats'):
+        update_status(key='language_pair_stats')
     
     dictionary = {
       'active_page': "STATUS",
       'global_stats': STATUS_CACHE['global_stats'],
+      'language_pair_stats': STATUS_CACHE['language_pair_stats'],
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }
     
     return render(request, 'wmt13/status.html', dictionary)
 
-def update_status(request=None):
+def update_status(request=None, key=None):
     """
     Updates the in memory STATUS_CACHE dictionary.
     """
-    # Compute some global stats.
+    status_keys = ('global_stats', 'language_pair_stats')
+    
+    # If a key is given, we only update the requested sub status.
+    if key:
+        status_keys = (key,)
+    
+    for status_key in status_keys:
+        if status_key == 'global_stats':
+            STATUS_CACHE[status_key] = _compute_global_stats()
+        
+        elif status_key == 'language_pair_stats':
+            STATUS_CACHE[status_key] = _compute_language_pair_stats()
+    
+    if request is not None:
+        return HttpResponse('Status updated successfully')
+
+def _compute_global_stats():
+    """
+    Computes some global statistics for the WMT13 evaluation campaign.
+    """
     global_stats = []
     wmt13 = Group.objects.get(name='WMT13')
     users = wmt13.user_set.all()
@@ -603,6 +626,27 @@ def update_status(request=None):
     global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
-    STATUS_CACHE['global_stats'] = global_stats
-    if request is not None:
-        return HttpResponse('Status updated successfully')
+    return global_stats
+
+def _compute_language_pair_stats():
+    """
+    Computes HIT statistics per language pair.
+    """
+    language_pair_stats = []
+    
+    for choice in LANGUAGE_PAIR_CHOICES:
+        _code = choice[0]
+        _name = choice[1]
+        _remaining_hits = HIT.compute_remaining_hits(language_pair=_code)
+        _total_hits = 0
+        _completed_hits = 0
+        
+        for hit in HIT.objects.filter(language_pair=_code, mturk_only=False):
+            _total_hits = _total_hits + 1
+            if hit.users.all().count() >= 3:
+                _completed_hits = _completed_hits + 1
+        
+        _data = (_remaining_hits, _completed_hits, _total_hits)
+        language_pair_stats.append((_name, _data))
+    
+    return language_pair_stats

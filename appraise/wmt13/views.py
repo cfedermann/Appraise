@@ -340,6 +340,9 @@ def mturk_handler(request):
     mturk_assignmentId = request.GET.get('assignmentId', None)
     mturk_workerId = request.GET.get('workerId', None)
     
+    srclang = hit.hit_attributes['source-language']
+    trglang = hit.hit_attributes['target-language']
+    
     # Bind items to item variables.
     item_1 = items[0]
     item_2 = items[1]
@@ -349,16 +352,19 @@ def mturk_handler(request):
     # control sentences which, by definition, are out-of-context.  Hence, we
     # cannot show context without exposing the control's identity...
     source_text_1 = item_1.source[0]
+    srcIndex_1 = item_1.source[1]['id']
     reference_text_1 = None
     if item_1.reference:
         reference_text_1 = item_1.reference[0]
     
     source_text_2 = item_2.source[0]
+    srcIndex_2 = item_2.source[1]['id']
     reference_text_2 = None
     if item_2.reference:
         reference_text_2 = item_2.reference[0]
     
     source_text_3 = item_3.source[0]
+    srcIndex_3 = item_3.source[1]['id']
     reference_text_3 = None
     if item_3.reference:
         reference_text_3 = item_3.reference[0]
@@ -435,6 +441,11 @@ def mturk_handler(request):
       'translations_1': translations_1,
       'translations_2': translations_2,
       'translations_3': translations_3,
+      'srclang': srclang,
+      'trglang': trglang,
+      'srcIndex_1': srcIndex_1,
+      'srcIndex_2': srcIndex_2,
+      'srcIndex_3': srcIndex_3,
     }
     
     LOGGER.debug(u'\n\nMTurk data for HIT "{0}":\n\n{1}\n'.format(

@@ -558,7 +558,7 @@ def status(request):
     
     return render(request, 'wmt13/status.html', dictionary)
 
-def update_status(request):
+def update_status(request=None):
     """
     Updates the in memory STATUS_CACHE dictionary.
     """
@@ -604,4 +604,5 @@ def update_status(request):
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     STATUS_CACHE['global_stats'] = global_stats
-    return HttpResponse('Status updated successfully')
+    if request is not None:
+        return HttpResponse('Status updated successfully')

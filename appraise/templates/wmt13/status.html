@@ -22,9 +22,9 @@
 {% for item in language_pair_stats %}
 <tr>
   <th width="30%">{{item.0}}</th>
-  <td width="23%">{{item.1.0}} remaining</td>
-  <td width="23%">{{item.1.1}} completed</td>
-  <td width="23%">{{item.1.2}} total HITs</td>
+  <td width="23%">{{item.1.0|stringformat:"04d"}} remaining</td>
+  <td width="23%">{{item.1.1|stringformat:"04d"}} completed</td>
+  <td width="23%">{{item.1.2|stringformat:"04d"}} total HITs</td>
 </tr>
 {% endfor %}
 </table>

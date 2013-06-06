@@ -592,7 +592,7 @@ def _compute_global_stats():
     
     # Check how many HITs have been completed.
     hits_completed = 0
-    for hit in HIT.objects.all():
+    for hit in HIT.objects.filter(active=True, mturk_only=False):
         if hit.users.count() >= 3:
             hits_completed = hits_completed + 1
     

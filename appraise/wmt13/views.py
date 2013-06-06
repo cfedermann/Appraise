@@ -641,7 +641,8 @@ def _compute_language_pair_stats():
         _total_hits = 0
         _completed_hits = 0
         
-        for hit in HIT.objects.filter(language_pair=_code, mturk_only=False):
+        for hit in HIT.objects.filter(active=True, mturk_only=False,
+          language_pair=_code):
             _total_hits = _total_hits + 1
             if hit.users.all().count() >= 3:
                 _completed_hits = _completed_hits + 1

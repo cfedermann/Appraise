@@ -22,8 +22,8 @@
 {% for item in language_pair_stats %}
 <tr>
   <th width="30%">{{item.0}}</th>
-  <td width="23%"{% if item.1.0 < 50 %}style="color:red;"{% endif %}>{{item.1.0|stringformat:"04d"}} remaining</td>
-  <td width="23%"{% if item.1.1 < 50 %}style="color:red;"{% endif %}>{{item.1.1|stringformat:"04d"}} completed</td>
+  <td width="23%"{% if item.1.0 < 20 %} style="color:#b94a48;"{% elif item.1.0 < 50 %} style="color:#3a87ad;"{% endif %}>{{item.1.0|stringformat:"04d"}} remaining</td>
+  <td width="23%"{% if item.1.1 < 20 %} style="color:#b94a48;"{% elif item.1.1 < 50 %} style="color:#3a87ad;"{% endif %}>{{item.1.1|stringformat:"04d"}} completed</td>
   <td width="23%">{{item.1.2|stringformat:"04d"}} total HITs</td>
 </tr>
 {% endfor %}

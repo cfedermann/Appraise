@@ -494,7 +494,7 @@ def overview(request):
         if hit:
             # Convert status seconds back into datetime.time instances.
             for i in range(2):
-                user_status[i+1] = seconds_to_timedelta(int(status[i+1]))
+                user_status[i+1] = seconds_to_timedelta(int(user_status[i+1]))
             
             hit_data.append(
               (hit.get_language_pair_display(), hit.get_absolute_url(),

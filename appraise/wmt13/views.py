@@ -358,17 +358,6 @@ def mturk_handler(request):
     item_2 = items[1]
     item_3 = items[2]
     
-    # Find out which is the control sentence.
-    control_id = -1
-    if item_1.attributes.has_key('control'):
-        control_id = 1
-    
-    elif item_2.attributes.has_key('control'):
-        control_id = 2
-    
-    elif item_3.attributes.has_key('control'):
-        control_id = 3
-    
     # Compute source and reference texts without context.  MTurk HITs contain
     # control sentences which, by definition, are out-of-context.  Hence, we
     # cannot show context without exposing the control's identity...
@@ -467,7 +456,6 @@ def mturk_handler(request):
       'srcIndex_1': srcIndex_1,
       'srcIndex_2': srcIndex_2,
       'srcIndex_3': srcIndex_3,
-      'control_id': control_id,
     }
     
     LOGGER.debug(u'\n\nMTurk data for HIT "{0}":\n\n{1}\n'.format(

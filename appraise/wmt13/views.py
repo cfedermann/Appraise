@@ -10,7 +10,7 @@ from random import seed, shuffle
 from urllib import unquote
 
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import Group
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
@@ -487,18 +487,18 @@ def overview(request):
     total = [0, 0, 0]
     for language_pair in language_pairs:
         hit = _compute_next_task_for_user(request.user, language_pair)
-        status = HIT.compute_status_for_user(request.user, language_pair)
+        user_status = HIT.compute_status_for_user(request.user, language_pair)
         for i in range(3):
-            total[i] = total[i] + status[i]
+            total[i] = total[i] + user_status[i]
         
         if hit:
             # Convert status seconds back into datetime.time instances.
             for i in range(2):
-                status[i+1] = seconds_to_timedelta(int(status[i+1]))
+                user_status[i+1] = seconds_to_timedelta(int(status[i+1]))
             
             hit_data.append(
               (hit.get_language_pair_display(), hit.get_absolute_url(),
-               hit.block_id, status)
+               hit.block_id, user_status)
             )
     
     # Convert total seconds back into datetime.timedelta instances.
@@ -623,7 +623,7 @@ def _compute_global_stats():
     durations = RankingResult.objects.all().values_list('duration', flat=True)
     total_time = sum([datetime_to_seconds(x) for x in durations])
     avg_time = total_time / float(hits_completed or 1)
-    avg_user_time = total_time / float(3 *hits_completed or 1)
+    avg_user_time = total_time / float(3 * hits_completed or 1)
     
     global_stats.append(('Users', users.count()))
     global_stats.append(('Groups', len(groups)))

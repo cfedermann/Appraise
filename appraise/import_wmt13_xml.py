@@ -2,20 +2,20 @@
 # -*- coding: utf-8 -*-
 """
 Project: Appraise evaluation system
- Author: Christian Federmann <cfedermann@gmail.com
+ Author: Christian Federmann <cfedermann@gmail.com>
 
-Imports HITs from a given XML file into the Django database.
-Uses appraise.wmt13.validators.validate_hits_xml_file() for validation.
+usage: python import_wmt13_xml.py [-h] [--dry-run] [--mturk-only] hits-file
 
-usage: import_wmt13_xml.py [-h] hits-file
-
-Imports HITs from a given XML file into the Django database.
+Imports HITs from a given XML file into the Django database. Uses
+appraise.wmt13.validators.validate_hits_xml_file() for validation.
 
 positional arguments:
-  hits-file   XML file containings HITs
+  hits-file     XML file containing HITs
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help    show this help message and exit
+  --dry-run     Enable dry run to simulate import.
+  --mturk-only  Enable MTurk-only flag for all HITs.
 
 """
 import argparse
@@ -27,9 +27,10 @@ from xml.etree.ElementTree import fromstring, tostring
 from django.core.management import setup_environ
 
 PARSER = argparse.ArgumentParser(description="Imports HITs from a given " \
-  "XML file into the Django database.")
+  "XML file into the Django database.\nUses appraise.wmt13.validators." \
+  "validate_hits_xml_file() for validation.")
 PARSER.add_argument("hits_file", type=file, metavar="hits-file", help="XML " \
-  "file containings HITs")
+  "file containing HITs")
 PARSER.add_argument("--dry-run", action="store_true", default=False,
   dest="dry_run_enabled", help="Enable dry run to simulate import.")
 PARSER.add_argument("--mturk-only", action="store_true", default=False,

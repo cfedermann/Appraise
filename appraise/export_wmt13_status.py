@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 Project: Appraise evaluation system
- Author: Christian Federmann <cfedermann@gmail.com
-
-Exports HIT status for all language pairs.
+ Author: Christian Federmann <cfedermann@gmail.com>
 
 usage: export_wmt13_status.py
+
+Exports HIT status for all language pairs.
 
 """
 from datetime import datetime

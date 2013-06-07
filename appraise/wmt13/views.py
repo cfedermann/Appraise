@@ -71,6 +71,13 @@ def _compute_next_task_for_user(user, language_pair):
         for block_id in block_ids:
             for hit in hits.filter(block_id=block_id):
                 hit_users = list(hit.users.all())
+                
+                # Check if this HIT is currently mapped to users.  This code
+                # prevents that more than three users complete a given HIT.
+                for hitmap in UserHITMapping.objects.filter(hit=hit):
+                    if not hitmap.user in hit_users:
+                        hit_users.append(hitmap.user)
+                
                 if len(hit_users) < 3 and not user in hit_users:
                     random_hit = hit
                     break

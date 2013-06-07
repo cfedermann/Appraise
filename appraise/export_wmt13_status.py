@@ -37,5 +37,5 @@ if __name__ == "__main__":
     print
     print '[{0}]'.format(datetime.now().strftime("%c"))
     for k, v in remaining_hits.items():
-        print '{0}: {1}'.format(k, v)
+        print '{0}: {1:03d}'.format(k, v)
     print

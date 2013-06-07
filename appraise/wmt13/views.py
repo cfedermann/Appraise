@@ -623,6 +623,7 @@ def _compute_global_stats():
     durations = RankingResult.objects.all().values_list('duration', flat=True)
     total_time = sum([datetime_to_seconds(x) for x in durations])
     avg_time = total_time / float(hits_completed or 1)
+    avg_user_time = total_time / float(3 *hits_completed or 1)
     
     global_stats.append(('Users', users.count()))
     global_stats.append(('Groups', len(groups)))
@@ -631,6 +632,8 @@ def _compute_global_stats():
     global_stats.append(('Ranking results', ranking_results))
     global_stats.append(('System comparisons', 10 * ranking_results))
     global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
+    global_stats.append(('Average duration (single user)',
+      seconds_to_timedelta(avg_user_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     return global_stats

@@ -61,8 +61,8 @@ def convert_mturk_to_csv(mturk_data, mturk_header):
         ranks = [-1] * 5
         for index in range(5):
             _answer_var = 'Answer.rank_{0}_{1}'.format(index, sentence)
-            rank_x_1 = int(mturk_data[mturk_header.get(_answer_var, -1)])
-            ranks[order_x[index]] = rank_x_1
+            rank_x_y = int(mturk_data[mturk_header.get(_answer_var, -1)])
+            ranks[order_x[index]] = rank_x_y
         
         for rank in ranks:
             values.append(str(rank))

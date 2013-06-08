@@ -626,3 +626,10 @@ class UserHITMapping(models.Model):
         """
         verbose_name = "User/HIT mapping instance"
         verbose_name_plural = "User/HIT mapping instances"
+    
+    def __unicode__(self):
+        """
+        Returns a Unicode String for this UserHITMapping object.
+        """
+        return u'<hitmap id="{0}" user="{1}" hit="{2}">'.format(self.id,
+          self.user.username, self.hit.hit_id)

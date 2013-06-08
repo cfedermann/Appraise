@@ -131,7 +131,16 @@ class RankingResultAdmin(admin.ModelAdmin):
     actions = (export_results_to_csv,)
 
 
+class UserHITMappingAdmin(admin.ModelAdmin):
+    """
+    ModelAdmin class for RankingResult instances.
+    """
+    list_display = ('user', 'hit')
+    list_filter = ('hit__language_pair', 'user__groups')
+    search_fields = ('user__username', 'user__first_name', 'user__last_name')
+
+
 admin.site.register(HIT, HITAdmin)
 admin.site.register(RankingTask)
 admin.site.register(RankingResult, RankingResultAdmin)
-admin.site.register(UserHITMapping)
+admin.site.register(UserHITMapping, UserHITMappingAdmin)

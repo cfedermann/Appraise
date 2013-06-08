@@ -23,14 +23,13 @@ PARSER.add_argument("mturk_file", type=file, metavar="mturk-file",
   help="Tab-separated results file exported from MTurk.")
 
 
-def convert_mturk_to_csv(mturk_list, mturk_header):
+def convert_mturk_to_csv(mturk_data, mturk_header):
     _results = []
-
-    mturk_data = {}
-    for index, value in enumerate(mturk_list):
-        mturk_data[index] = value
-    mturk_data[-1] = '-1'
     
+    # Add a default value for non-existing field names.
+    mturk_data.append('-1')
+    
+    # We construct CSV output for three sentences.
     for sentence in (1, 2, 3):
         _answer_var = 'Answer.order_{0}'.format(sentence)
         order_x = mturk_data[mturk_header.get(_answer_var, -1)]
@@ -39,7 +38,7 @@ def convert_mturk_to_csv(mturk_list, mturk_header):
         _answer_var = 'Answer.systems_{0}'.format(sentence)
         systems_x = mturk_data[mturk_header.get(_answer_var, -1)]
         systems_x = systems_x.split(',')
-    
+        
         values = []
         values.append(mturk_data[mturk_header.get('Answer.srclang', -1)])
         values.append(mturk_data[mturk_header.get('Answer.trglang', -1)])
@@ -62,12 +61,16 @@ def convert_mturk_to_csv(mturk_list, mturk_header):
         ranks = [-1] * 5
         for index in range(5):
             _answer_var = 'Answer.rank_{0}_{1}'.format(index, sentence)
-            rank_x_1 = int(mturk_data[mturk_header.get(_answer_var, -1)])
-            ranks[order_x[index]] = rank_x_1
-    
+            rank_x_y = int(mturk_data[mturk_header.get(_answer_var, -1)])
+            ranks[order_x[index]] = rank_x_y
+        
         for rank in ranks:
             values.append(str(rank))
-    
+        
+        # Skip results which do not contain ranks for all candidates?
+        # if -1 in ranks:
+        #     continue
+        
         _results.append(u','.join(values))
     
     return _results

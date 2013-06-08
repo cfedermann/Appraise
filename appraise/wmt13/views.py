@@ -10,7 +10,7 @@ from random import seed, shuffle
 from urllib import unquote
 
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import Group
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
@@ -71,6 +71,13 @@ def _compute_next_task_for_user(user, language_pair):
         for block_id in block_ids:
             for hit in hits.filter(block_id=block_id):
                 hit_users = list(hit.users.all())
+                
+                # Check if this HIT is currently mapped to users.  This code
+                # prevents that more than three users complete a given HIT.
+                for hitmap in UserHITMapping.objects.filter(hit=hit):
+                    if not hitmap.user in hit_users:
+                        hit_users.append(hitmap.user)
+                
                 if len(hit_users) < 3 and not user in hit_users:
                     random_hit = hit
                     break
@@ -480,18 +487,18 @@ def overview(request):
     total = [0, 0, 0]
     for language_pair in language_pairs:
         hit = _compute_next_task_for_user(request.user, language_pair)
-        status = HIT.compute_status_for_user(request.user, language_pair)
+        user_status = HIT.compute_status_for_user(request.user, language_pair)
         for i in range(3):
-            total[i] = total[i] + status[i]
+            total[i] = total[i] + user_status[i]
         
         if hit:
             # Convert status seconds back into datetime.time instances.
             for i in range(2):
-                status[i+1] = seconds_to_timedelta(int(status[i+1]))
+                user_status[i+1] = seconds_to_timedelta(int(user_status[i+1]))
             
             hit_data.append(
               (hit.get_language_pair_display(), hit.get_absolute_url(),
-               hit.block_id, status)
+               hit.block_id, user_status)
             )
     
     # Convert total seconds back into datetime.timedelta instances.
@@ -616,6 +623,7 @@ def _compute_global_stats():
     durations = RankingResult.objects.all().values_list('duration', flat=True)
     total_time = sum([datetime_to_seconds(x) for x in durations])
     avg_time = total_time / float(hits_completed or 1)
+    avg_user_time = total_time / float(3 * hits_completed or 1)
     
     global_stats.append(('Users', users.count()))
     global_stats.append(('Groups', len(groups)))
@@ -624,6 +632,8 @@ def _compute_global_stats():
     global_stats.append(('Ranking results', ranking_results))
     global_stats.append(('System comparisons', 10 * ranking_results))
     global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
+    global_stats.append(('Average duration (single user)',
+      seconds_to_timedelta(avg_user_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     return global_stats

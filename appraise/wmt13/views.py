@@ -702,7 +702,10 @@ def _compute_group_stats():
             continue
         
         _group_stats = HIT.compute_status_for_group(group)
-        _data = (_group_stats[0], group_hit_requirements[_name])
+        _total = _group_stats[0]
+        _required = group_hit_requirements[_name]
+        _delta = _total - _required
+        _data = (_total, _required, _delta)
         
         if _data[0] > 0:
             group_stats.append((_name, _data))

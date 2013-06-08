@@ -36,8 +36,9 @@
 {% for item in group_stats %}
 <tr>
   <th width="30%">{{item.0}}</th>
-  <td width="35%"{% if item.1.0 < item.1.1 %} style="color:#b94a48;"{% endif %}>{{item.1.0|stringformat:"04d"}} completed</td>
-  <td width="35%">{{item.1.1|stringformat:"04d"}} required HITs</td>
+  <td width="23%"{% if item.1.0 < item.1.1 %} style="color:#b94a48;"{% endif %}>{{item.1.0|stringformat:"04d"}} completed</td>
+  <td width="23%">{{item.1.1|stringformat:"04d"}} required</td>
+  <td width="23%"{% if item.1.2 < 0 %} style="color:#b94a48;"{% elif item.1.2 > 0 %} style="color:#468847;"{% endif %}>{% if item.1.2 %}&Delta; {{item.1.2|stringformat:"+05d"}}{% if item.1.2 < 0 %} missing HITs{% elif item.1.2 > 0 %} additional HITs{% endif %}{% else %}<em>all clear!</em>{% endif %}</td>
 </tr>
 {% endfor %}
 </table>

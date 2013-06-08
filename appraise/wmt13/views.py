@@ -691,7 +691,7 @@ def _compute_group_stats():
     # have completed during the WMT13 evaluation campaign.
     group_hit_requirements = {'BALAGUR': 200, 'CMU': 300, 'CU': 1700,
       'DCU': 300, 'DESRT': 100, 'FDA': 1000, 'ITS-LATL': 200, 'JHU': 1000,
-      'KIT': 400, 'LIA': 200, 'LIMSI': 600, 'MES': 1400, 'OMNIFLUENT': 4,
+      'KIT': 400, 'LIA': 200, 'LIMSI': 600, 'MES': 1400, 'OMNIFLUENT': 400,
       'Prompsit': 400, 'PROMT': 500, 'QUAERO': 100, 'RWTH': 400, 'SHEF': 700,
       'STANFORD': 200, 'TALP': 100, 'TUBITAK': 200, 'UCAM': 100,
       'UEDIN': 1700, 'UMD': 200, 'UU': 100}

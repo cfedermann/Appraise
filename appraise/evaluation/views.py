@@ -618,7 +618,7 @@ def overview(request):
       request.user.username or "Anonymous"))
     
     # Check if user is member in WMT13 group.  If so, redirect to wmt13 app.
-    if request.user.groups.filter(name="WMT13") is not None:
+    if request.user.groups.filter(name="WMT13").exists():
         LOGGER.info('Redirecting user "{0}" to WMT13 overview.'.format(
           request.user.username))
         return redirect('appraise.wmt13.views.overview')
@@ -676,7 +676,7 @@ def status_view(request, task_id=None):
       request.user.username))
     
     # Check if user is member in WMT13 group.  If so, redirect to wmt13 app.
-    if request.user.groups.filter(name="WMT13") is not None:
+    if request.user.groups.filter(name="WMT13").exists():
         LOGGER.info('Redirecting user "{0}" to WMT13 overview.'.format(
           request.user.username))
         return redirect('appraise.wmt13.views.overview')

@@ -573,7 +573,7 @@ def update_status(request=None, key=None):
     """
     Updates the in memory STATUS_CACHE dictionary.
     """
-    status_keys = ('global_stats', 'language_pair_stats')
+    status_keys = ('global_stats', 'language_pair_stats', 'group_stats')
     
     # If a key is given, we only update the requested sub status.
     if key:
@@ -693,9 +693,14 @@ def _compute_group_stats():
       'UEDIN': 1700, 'UMD': 200, 'UU': 100}
     
     for group in groups:
-        _group_stats = HIT.compute_status_for_group(group)
         _name = group.name
+        if not _name in group_hit_requirements.keys():
+            continue
+        
+        _group_stats = HIT.compute_status_for_group(group)
         _data = (_group_stats[0], group_hit_requirements[_name])
-        group_stats.append((_name, _data))
+        
+        if _data[0] > 0:
+            group_stats.append((_name, _data))
     
     return group_stats

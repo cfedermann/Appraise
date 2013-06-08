@@ -559,10 +559,14 @@ def status(request):
     if not STATUS_CACHE.has_key('language_pair_stats'):
         update_status(key='language_pair_stats')
     
+    if not STATUS_CACHE.has_key('group_stats'):
+        update_status(key='group_stats')
+    
     dictionary = {
       'active_page': "STATUS",
       'global_stats': STATUS_CACHE['global_stats'],
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
+      'group_stats': STATUS_CACHE['group_stats'],
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }

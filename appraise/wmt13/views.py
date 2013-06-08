@@ -585,6 +585,9 @@ def update_status(request=None, key=None):
         
         elif status_key == 'language_pair_stats':
             STATUS_CACHE[status_key] = _compute_language_pair_stats()
+        
+        elif status_key == 'group_stats':
+            STATUS_CACHE[status_key] = _compute_group_stats()
     
     if request is not None:
         return HttpResponse('Status updated successfully')
@@ -661,3 +664,38 @@ def _compute_language_pair_stats():
         language_pair_stats.append((_name, _data))
     
     return language_pair_stats
+
+def _compute_group_stats():
+    """
+    Computes group statistics for the WMT13 evaluation campaign.
+    """
+    group_stats = []
+    wmt13 = Group.objects.get(name='WMT13')
+    users = wmt13.user_set.all()
+    
+    # Aggregate information about participating groups.
+    groups = set()
+    for user in users:
+        for group in user.groups.all():
+            if group.name == 'WMT13' or group.name.startswith('eng2') \
+              or group.name.endswith('2eng'):
+                continue
+            
+            groups.add(group)
+    
+    # The following dictionary defines the number of HITs each group should
+    # have completed during the WMT13 evaluation campaign.
+    group_hit_requirements = {'BALAGUR': 200, 'CMU': 300, 'CU': 1700,
+      'DCU': 300, 'DESRT': 100, 'FDA': 1000, 'ITS-LATL': 200, 'JHU': 1000,
+      'KIT': 400, 'LIA': 200, 'LIMSI': 600, 'MES': 1400, 'OMNIFLUENT': 4,
+      'Prompsit': 400, 'PROMT': 500, 'QUAERO': 100, 'RWTH': 400, 'SHEF': 700,
+      'STANFORD': 200, 'TALP': 100, 'TUBITAK': 200, 'UCAM': 100,
+      'UEDIN': 1700, 'UMD': 200, 'UU': 100}
+    
+    for group in groups:
+        _group_stats = HIT.compute_status_for_group(group)
+        _name = group.name
+        _data = (_group_stats[0], group_hit_requirements[_name])
+        group_stats.append((_name, _data))
+    
+    return group_stats

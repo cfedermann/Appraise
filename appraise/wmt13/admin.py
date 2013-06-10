@@ -3,6 +3,8 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 """
+import logging
+
 from django.contrib import admin
 from django.http import HttpResponse
 from django.template import Context

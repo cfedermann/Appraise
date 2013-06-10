@@ -11,6 +11,8 @@ from django.template.loader import get_template
 from appraise.wmt13.models import HIT, RankingTask, RankingResult, \
   UserHITMapping
 
+from appraise.utils import AnnotationTask
+
 
 def export_hit_xml(modeladmin, request, queryset):
     """
@@ -73,26 +75,33 @@ def export_hit_results_agreements(modeladmin, request, queryset):
     scores = [0, 0, 0, 0]
     for hit in queryset:
         if isinstance(hit, HIT):
-            _apf_data = [_line.split(',') for _line in hit.export_to_apf()]
-            from nltk.metrics.agreement import AnnotationTask
-            _apf_task = AnnotationTask(data=_apf_data)
-            _apf_scores = (_apf_task.alpha(), _apf_task.kappa(),
-              _apf_task.pi(), _apf_task.S())
-            for i in range(4):
-                scores[i] += _apf_scores[i]
+            _raw = hit.export_to_apf().split('\n')
+            if not _raw:
+                continue
             
-            results.append(','.join(_apf_scores))
+            # Convert raw results data into data triples and create a new
+            # AnnotationTask object for computation of agreement scores.
+            _data = [_line.split(',') for _line in _raw]
+            _data = [(x[0], x[1], x[2]) for x in _data]
+            _task = AnnotationTask(data=_data)
+            
+            # Compute alpha, kappa, pi, and S scores.
+            _scores = (_task.alpha(), _task.kappa(), _task.pi(), _task.S())
+            for i in range(4):
+                scores[i] += _scores[i]
+            
+            results.append(','.join([str(x) for x in _scores]))
     
     for i in range(4):
         scores[i] = scores[i] / (len(results) or 1)
     
-    results.append(','.join(scores))
+    results.append(','.join([str(x) for x in scores]))
     
     export_apf = u"\n".join(results)
     return HttpResponse(export_apf, mimetype='text/plain')
 
 export_hit_results_agreements.short_description = "Exports HIT results' " \
-  "agreement among researchers."
+  "agreement among researchers"
 
 
 class HITAdmin(admin.ModelAdmin):

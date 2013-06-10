@@ -292,7 +292,9 @@ class HIT(models.Model):
         results = []
         for item in RankingTask.objects.filter(hit=self):
             for _result in item.rankingresult_set.all():
-                results.append(_result.export_to_apf())
+                _apf_output = _result.export_to_apf()
+                if _apf_output:
+                    results.append(_apf_output)
         return u"\n".join(results)
 
 

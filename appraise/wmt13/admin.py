@@ -84,7 +84,7 @@ def export_hit_results_agreements(modeladmin, request, queryset):
     for hit in queryset:
         if isinstance(hit, HIT):
             _raw = hit.export_to_apf().split('\n')
-            if not _raw:
+            if not len(_raw):
                 continue
             
             # Convert raw results data into data triples and create a new

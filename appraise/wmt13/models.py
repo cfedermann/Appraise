@@ -564,12 +564,11 @@ class RankingResult(models.Model):
             _i = '{0}.{1}.{2}'.format(1 + int(item.source[1]['id']), a+1, b+1)
             
             if not self.results:
-                continue
-            
-            if self.results[a] > self.results[b]:
+                _v = '{0}?{1}'.format(str(_systems[a]), str(_systems[b]))
+            elif self.results[a] > self.results[b]:
                 _v = '{0}>{1}'.format(str(_systems[a]), str(_systems[b]))
             elif self.results[a] < self.results[b]:
-                _v = '{0}>{1}'.format(str(_systems[b]), str(_systems[a]))
+                _v = '{0}<{1}'.format(str(_systems[a]), str(_systems[b]))
             else:
                 _v = '{0}={1}'.format(str(_systems[a]), str(_systems[b]))
             

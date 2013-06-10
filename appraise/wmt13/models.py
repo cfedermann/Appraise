@@ -568,8 +568,10 @@ class RankingResult(models.Model):
             
             if self.results[a] > self.results[b]:
                 _v = '{0}>{1}'.format(str(_systems[a]), str(_systems[b]))
-            else:
+            elif self.results[a] < self.results[b]:
                 _v = '{0}>{1}'.format(str(_systems[b]), str(_systems[a]))
+            else:
+                _v = '{0}={1}'.format(str(_systems[a]), str(_systems[b]))
             
             results.append('{0},{1},{2}'.format(_c, _i, _v))
         return u'\n'.join(results)

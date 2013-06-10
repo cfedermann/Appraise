@@ -65,6 +65,36 @@ export_hit_results_to_apf.short_description = "Export HIT results to " \
   "Artstein and Poesio (2007) format"
 
 
+def export_hit_results_agreements(modeladmin, request, queryset):
+    """
+    Exports HIT results' agreement among researchers.
+    """
+    results = []
+    scores = [0, 0, 0, 0]
+    for hit in queryset:
+        if isinstance(hit, HIT):
+            _apf_data = [_line.split(',') for _line in hit.export_to_apf()]
+            from nltk.metrics.agreement import AnnotationTask
+            _apf_task = AnnotationTask(data=_apf_data)
+            _apf_scores = (_apf_task.alpha(), _apf_task.kappa(),
+              _apf_task.pi(), _apf_task.S())
+            for i in range(4):
+                scores[i] += _apf_scores[i]
+            
+            results.append(','.join(_apf_scores))
+    
+    for i in range(4):
+        scores[i] = scores[i] / (len(results) or 1)
+    
+    results.append(','.join(scores))
+    
+    export_apf = u"\n".join(results)
+    return HttpResponse(export_apf, mimetype='text/plain')
+
+export_hit_results_agreements.short_description = "Exports HIT results' " \
+  "agreement among researchers."
+
+
 class HITAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for HIT instances.
@@ -74,7 +104,7 @@ class HITAdmin(admin.ModelAdmin):
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id',)
     actions = (export_hit_xml, export_hit_ids_to_csv,
-      export_hit_results_to_apf)
+      export_hit_results_to_apf, export_hit_results_agreements)
     filter_horizontal = ('users',)
     
     fieldsets = (

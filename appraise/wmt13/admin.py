@@ -11,7 +11,13 @@ from django.template.loader import get_template
 from appraise.wmt13.models import HIT, RankingTask, RankingResult, \
   UserHITMapping
 
+from appraise.settings import LOG_LEVEL, LOG_HANDLER
 from appraise.utils import AnnotationTask
+
+# Setup logging support.
+logging.basicConfig(level=LOG_LEVEL)
+LOGGER = logging.getLogger('appraise.wmt13.admin')
+LOGGER.addHandler(LOG_HANDLER)
 
 
 def export_hit_xml(modeladmin, request, queryset):
@@ -82,11 +88,27 @@ def export_hit_results_agreements(modeladmin, request, queryset):
             # Convert raw results data into data triples and create a new
             # AnnotationTask object for computation of agreement scores.
             _data = [_line.split(',') for _line in _raw]
-            _data = [(x[0], x[1], x[2]) for x in _data]
+            try:
+                _data = [(x[0], x[1], x[2]) for x in _data]
+            
+            except IndexError:
+                LOGGER.debug('IndexError for _data: {0}'.format(x))
+                continue
+            
             _task = AnnotationTask(data=_data)
             
             # Compute alpha, kappa, pi, and S scores.
-            _scores = (_task.alpha(), _task.kappa(), _task.pi(), _task.S())
+            try:
+                _alpha = _task.alpha()
+                _kappa = _task.kappa()
+                _pi = _task.pi()
+                _S = _task.S()
+            
+            except ZeroDivisionError, msg:
+                LOGGER.debug(msg)
+                continue
+            
+            _scores = (_alpha, _kappa, _pi, _S)
             for i in range(4):
                 scores[i] += _scores[i]
             

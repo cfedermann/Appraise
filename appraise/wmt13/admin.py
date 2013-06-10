@@ -69,7 +69,7 @@ class HITAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for HIT instances.
     """
-    list_display = ('hit_id', 'block_id', 'language_pair')
+    list_display = ('hit_id', 'block_id', 'language_pair', 'id')
     list_filter = ('language_pair', 'active', 'mturk_only')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id',)

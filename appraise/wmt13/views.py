@@ -615,7 +615,7 @@ def _compute_global_stats():
     
     # Compute number of results contributed so far.
     ranking_results = RankingResult.objects.filter(
-      item__hit__active=True).count()
+      item__hit__active=True, item__hit__mturk_only=False).count()
     
     # Aggregate information about participating groups.
     groups = set()

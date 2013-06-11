@@ -82,8 +82,6 @@ def validate_hit_xml(value):
         # The <translation> elements require some text value to be valid.
         _no_of_children = 0
         for _seg in _tree:
-            if 'systems' in _seg.attrib.keys():
-                systems_attribute_set.append('seg')
             validate_segment_xml(_seg, require_systems=not systems_available)
             _no_of_children += 1
         

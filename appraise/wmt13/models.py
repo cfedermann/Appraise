@@ -526,7 +526,7 @@ class RankingResult(models.Model):
         values.append(str(_systems[3]))                    # system4Id
         values.append('-1')                                # system5Number
         values.append(str(_systems[4]))                    # system5Id
-
+        
         # system1rank,system2rank,system3rank,system4rank,system5rank
         if self.results:
             values.extend([str(x) for x in self.results])
@@ -534,7 +534,9 @@ class RankingResult(models.Model):
             values.extend(['-1'] * 5)
         
         return u",".join(values)
-
+    
+    
+    # pylint: disable-msg=C0103
     def export_to_apf(self):
         """
         Exports this RankingResult to Artstein and Poesio (2007) format.

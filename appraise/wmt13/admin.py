@@ -104,6 +104,7 @@ def export_hit_results_agreements(modeladmin, request, queryset):
                 _alpha = _task.alpha()
                 _kappa = _task.kappa()
                 _pi = _task.pi()
+                # pylint: disable-msg=C0103
                 _S = _task.S()
             
             except ZeroDivisionError, msg:

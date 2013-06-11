@@ -695,7 +695,7 @@ def _compute_group_stats():
       'KIT': 400, 'LIA': 200, 'LIMSI': 600, 'MES': 1400, 'OMNIFLUENT': 400,
       'Prompsit': 400, 'PROMT': 500, 'QUAERO': 100, 'RWTH': 400, 'SHEF': 700,
       'STANFORD': 200, 'TALP': 100, 'TUBITAK': 200, 'UCAM': 100,
-      'UEDIN': 1700, 'UMD': 200, 'UU': 100}
+      'UEDIN': 1700, 'UMD': 200, 'UU': 100, 'DFKI': 0, 'USAAR': 0}
     
     for group in groups:
         _name = group.name

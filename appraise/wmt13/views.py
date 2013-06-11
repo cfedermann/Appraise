@@ -581,7 +581,8 @@ def update_status(request=None, key=None):
     """
     Updates the in memory STATUS_CACHE dictionary.
     """
-    status_keys = ('global_stats', 'language_pair_stats', 'group_stats')
+    status_keys = ('global_stats', 'language_pair_stats', 'group_stats',
+      'user_stats')
     
     # If a key is given, we only update the requested sub status.
     if key:

@@ -614,7 +614,8 @@ def _compute_global_stats():
     hits_remaining = HIT.compute_remaining_hits()
     
     # Compute number of results contributed so far.
-    ranking_results = RankingResult.objects.all().count()
+    ranking_results = RankingResult.objects.filter(
+      item__hit__active=True).count()
     
     # Aggregate information about participating groups.
     groups = set()

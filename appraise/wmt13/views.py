@@ -562,11 +562,15 @@ def status(request):
     if not STATUS_CACHE.has_key('group_stats'):
         update_status(key='group_stats')
     
+    if not STATUS_CACHE.has_key('user_stats'):
+        update_status(key='user_stats')
+    
     dictionary = {
       'active_page': "STATUS",
       'global_stats': STATUS_CACHE['global_stats'],
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
       'group_stats': STATUS_CACHE['group_stats'],
+      'user_stats': STATUS_CACHE['user_stats'],
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }
@@ -592,6 +596,9 @@ def update_status(request=None, key=None):
         
         elif status_key == 'group_stats':
             STATUS_CACHE[status_key] = _compute_group_stats()
+        
+        elif status_key == 'user_stats':
+            STATUS_CACHE[status_key] = _compute_user_stats()
     
     if request is not None:
         return HttpResponse('Status updated successfully')
@@ -712,3 +719,31 @@ def _compute_group_stats():
             group_stats.append((_name, _data))
     
     return group_stats
+
+
+def _compute_user_stats():
+    """
+    Computes user statistics for the WMT13 evaluation campaign.
+    """
+    user_stats = []
+    wmt13 = Group.objects.get(name='WMT13')
+    users = wmt13.user_set.all()
+    
+    for user in users:
+        _user_stats = HIT.compute_status_for_user(user)
+        _name = user.username
+        _avg_time = seconds_to_timedelta(_user_stats[1])
+        _total_time = seconds_to_timedelta(_user_stats[2])
+        _data = (_name, _user_stats[0], _avg_time, _total_time)
+        
+        if _data[0] > 0:
+            user_stats.append(_data)
+    
+    # Sort by total number of completed HITs.
+    user_stats.sort(key=lambda x: x[1])
+    user_stats.reverse()
+    
+    # Only show top 25 contributors.
+    user_stats = user_stats[:25]
+    
+    return user_stats

@@ -25,8 +25,10 @@ logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.wmt13.views')
 LOGGER.addHandler(LOG_HANDLER)
 
-# We keep status information available in memory to speed up access.
+# We keep status and ranking information available in memory to speed up
+# access and avoid lengthy delays caused by computation of this data.
 STATUS_CACHE = {}
+RANKINGS_CACHE = {}
 
 
 def _compute_next_task_for_user(user, language_pair):
@@ -545,6 +547,7 @@ def overview(request):
     
     return render(request, 'wmt13/overview.html', dictionary)
 
+
 @login_required
 def status(request):
     """
@@ -577,9 +580,24 @@ def status(request):
     
     return render(request, 'wmt13/status.html', dictionary)
 
+
+def update_ranking(request=None):
+    """
+    Updates the in-memory RANKING_CACHE dictionary.
+    
+    In order to get things up and running quickly, for WMT13 we will fall back
+    to calling an external Perl script provided by Philipp Koehn;  after the
+    evaluation has ended, we will re-work this into a fully integrated, Python
+    based solution...
+    
+    """
+    if request is not None:
+        return HttpResponse('NOT_IMPLEMENTED_YET:update_ranking()')
+
+
 def update_status(request=None, key=None):
     """
-    Updates the in memory STATUS_CACHE dictionary.
+    Updates the in-memory STATUS_CACHE dictionary.
     """
     status_keys = ('global_stats', 'language_pair_stats', 'group_stats',
       'user_stats')
@@ -603,6 +621,7 @@ def update_status(request=None, key=None):
     
     if request is not None:
         return HttpResponse('Status updated successfully')
+
 
 def _compute_global_stats():
     """
@@ -654,6 +673,7 @@ def _compute_global_stats():
     
     return global_stats
 
+
 def _compute_language_pair_stats():
     """
     Computes HIT statistics per language pair.
@@ -677,6 +697,7 @@ def _compute_language_pair_stats():
         language_pair_stats.append((_name, _data))
     
     return language_pair_stats
+
 
 def _compute_group_stats():
     """

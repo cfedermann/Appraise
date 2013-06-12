@@ -49,6 +49,17 @@ function validate_form()
 This is only a preview version of this HIT.  You cannot complete it before accepting it!
 </div>
 
+<div class="row">
+<h3>Instructions</h3>
+<ul>
+<li>You are shown a source sentence followed by several candidate translations.</li>
+<li>Your task is to rank the translations from best to worst (ties are allowed).</li>
+<li>To help you, we provide an acceptable reference translation.</li>
+<li>Fluency in is not required.</li>
+</ul>
+<p>Note: Please ensure that you have JavaScript enabled in your browser. (It's probably already enabled.)</p>
+</div>
+
 <form action="#" method="post">
 {% else %}
 <form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">

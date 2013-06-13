@@ -4,7 +4,23 @@
 <div class="row">
 <div class="span12">
 
+{% if not global_stats and not language_pair_stats and not group_stats and not user_stats %}
+<h2>Not ready yet...</h2>
+<p>At this moment, no status information is available. Check back soon...</p>
+
+{% else %}
+
+<ul class="nav nav-tabs" id="status_tabs">
+{% if global_stats %}  <li class="active"><a href="#global_stats" data-toggle="tab">Global status</a></li>{% endif %}
+{% if language_pair_stats %}  <li><a href="#language_pair_stats" data-toggle="tab">Language pair status</a></li>{% endif %}
+{% if group_stats %}  <li><a href="#group_stats" data-toggle="tab">Group status</a></li>{% endif %}
+{% if user_stats %}  <li><a href="#user_stats" data-toggle="tab">Top 25 contributors</a></li>{% endif %}
+</ul>
+
+<div class="tab-content">
+
 {% if global_stats %}
+<div class="tab-pane active" id="global_stats">
 <h3>Global status</h3>
 <table class="table table-striped table-bordered table-condensed">
 {% for item in global_stats %}
@@ -14,9 +30,11 @@
 </tr>
 {% endfor %}
 </table>
+</div>
 {% endif %}
 
 {% if language_pair_stats %}
+<div class="tab-pane" id="language_pair_stats">
 <h3>Language pair status</h3>
 <table class="table table-striped table-bordered table-condensed">
 {% for item in language_pair_stats %}
@@ -28,9 +46,11 @@
 </tr>
 {% endfor %}
 </table>
+</div>
 {% endif %}
 
 {% if group_stats %}
+<div class="tab-pane" id="group_stats">
 <h3>Group status</h3>
 <table class="table table-striped table-bordered table-condensed">
 {% for item in group_stats %}
@@ -42,9 +62,11 @@
 </tr>
 {% endfor %}
 </table>
+</div>
 {% endif %}
 
 {% if user_stats %}
+<div class="tab-pane" id="user_stats">
 <h3>Top 25 contributors</h3>
 <table class="table table-striped table-bordered table-condensed">
 {% for item in user_stats %}
@@ -56,11 +78,9 @@
 </tr>
 {% endfor %}
 </table>
+</div>
 {% endif %}
-
-{% if not global_stats and not language_pair_stats and not group_stats %}
-<h2>Not ready yet...</h2>
-<p>At this moment, no status information is available. Check back soon...</p>
+</div>
 {% endif %}
 </div>
 </div>

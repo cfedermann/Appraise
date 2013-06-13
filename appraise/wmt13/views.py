@@ -693,8 +693,15 @@ def _compute_language_pair_stats():
             if hit.users.all().count() >= 3:
                 _completed_hits = _completed_hits + 1
         
-        _data = (_remaining_hits, _completed_hits, _total_hits)
-        language_pair_stats.append((_name, _data))
+        # _data = (_remaining_hits, _completed_hits, _total_hits)
+        
+        _data = (
+          _name,
+          (_remaining_hits, 100 * _remaining_hits/float(_total_hits or 1)),
+          (_completed_hits, 100 * _completed_hits/float(_total_hits or 1))
+        )
+        
+        language_pair_stats.append(_data)
     
     return language_pair_stats
 

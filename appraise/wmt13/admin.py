@@ -83,35 +83,10 @@ def export_hit_results_agreements(modeladmin, request, queryset):
     scores = [0, 0, 0, 0]
     for hit in queryset:
         if isinstance(hit, HIT):
-            _raw = hit.export_to_apf().split('\n')
-            if not len(_raw):
+            _scores = hit.compute_agreement_scores()
+            if not _scores:
                 continue
             
-            # Convert raw results data into data triples and create a new
-            # AnnotationTask object for computation of agreement scores.
-            _data = [_line.split(',') for _line in _raw]
-            try:
-                _data = [(x[0], x[1], x[2]) for x in _data]
-            
-            except IndexError:
-                LOGGER.debug('IndexError for _data: {0}'.format(x))
-                continue
-            
-            _task = AnnotationTask(data=_data)
-            
-            # Compute alpha, kappa, pi, and S scores.
-            try:
-                _alpha = _task.alpha()
-                _kappa = _task.kappa()
-                _pi = _task.pi()
-                # pylint: disable-msg=C0103
-                _S = _task.S()
-            
-            except ZeroDivisionError, msg:
-                LOGGER.debug(msg)
-                continue
-            
-            _scores = (_alpha, _kappa, _pi, _S)
             for i in range(4):
                 scores[i] += _scores[i]
             

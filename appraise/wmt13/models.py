@@ -296,6 +296,39 @@ class HIT(models.Model):
                 if _apf_output:
                     results.append(_apf_output)
         return u"\n".join(results)
+    
+    
+    def compute_agreement_scores(self):
+        """
+        Computes alpha, kappa, pi and Bennett's S agreement scores using NLTK.
+        """
+        _raw = self.export_to_apf().split('\n')
+        if not len(_raw):
+            return None
+        
+        # Convert raw results data into data triples and create a new
+        # AnnotationTask object for computation of agreement scores.
+        _data = [_line.split(',') for _line in _raw]
+        try:
+            _data = [(x[0], x[1], x[2]) for x in _data]
+        
+        except IndexError:
+            return None
+        
+        # Compute alpha, kappa, pi, and S scores.
+        _task = AnnotationTask(data=_data)
+        try:
+            _alpha = _task.alpha()
+            _kappa = _task.kappa()
+            _pi = _task.pi()
+            # pylint: disable-msg=C0103
+            _S = _task.S()
+        
+        except ZeroDivisionError, msg:
+            LOGGER.debug(msg)
+            return None
+        
+        return (_alpha, _kappa, _pi, _S)
 
 
 class RankingTask(models.Model):

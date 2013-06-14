@@ -153,7 +153,8 @@ class HIT(models.Model):
         
         available = 0
         for hit in hits_qs:
-            if hit.users.count() < 3:
+            # Before we checked if `hit.users.count() < 3`.
+            if hit.users.count() < 1:
                 available = available + 1
         
         return available

@@ -118,8 +118,10 @@ def _compute_next_task_for_user(user, language_pair):
         current_hitmap = current_hitmap[0]
         
         # Sanity check preventing stale User/HIT mappings to screw up things.
+        #
+        # Before we checked if `len(hit_users) >= 3`.
         hit_users = list(current_hitmap.hit.users.all())
-        if user in hit_users or len(hit_users) >= 3 \
+        if user in hit_users or len(hit_users) >= 1 \
           or not current_hitmap.hit.active:
             LOGGER.debug('Detected stale User/HIT mapping {0}->{1}'.format(
               user, current_hitmap.hit))
@@ -649,10 +651,13 @@ def _compute_global_stats():
     wmt13 = Group.objects.get(name='WMT13')
     users = wmt13.user_set.all()
     
-    # Check how many HITs have been completed.
+    # Check how many HITs have been completed.  We now consider a HIT to be
+    # completed once it has been annotated by one or more annotators.
+    #
+    # Before we required `hit.users.count() >= 3` for greater overlap.
     hits_completed = 0
     for hit in HIT.objects.filter(active=True, mturk_only=False):
-        if hit.users.count() >= 3:
+        if hit.users.count() >= 1:
             hits_completed = hits_completed + 1
     
     # Compute remaining HITs for all language pairs.
@@ -708,7 +713,11 @@ def _compute_language_pair_stats():
         for hit in HIT.objects.filter(active=True, mturk_only=False,
           language_pair=_code):
             _total_hits = _total_hits + 1
-            if hit.users.all().count() >= 3:
+            # Again: we now consider a HIT to be completed once it has been
+            # annotated by one or more annotators.
+            #
+            # Before we required `hit.users.count() >= 3` for gr
+            if hit.users.all().count() >= 1:
                 _completed_hits = _completed_hits + 1
         
         # _data = (_remaining_hits, _completed_hits, _total_hits)

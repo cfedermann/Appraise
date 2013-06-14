@@ -42,7 +42,7 @@
   <th width="30%">{{item.0}}</th>
   <td>
   <div class="progress" style="margin-bottom: 0px;">
-    <div class="bar {% if item.1.0 < 20 %}bar-error{% elif item.1.0 < 50 %}bar-warning{% endif %}" style="width: {{item.1.1}}%; min-width: 5%; max-width: 95%;">{{item.1.0}} remaining</div>
+    <div class="bar {% if item.1.0 < 20 %}bar-danger{% elif item.1.0 < 50 %}bar-warning{% endif %}" style="width: {{item.1.1}}%; min-width: 5%; max-width: 95%;">{{item.1.0}} remaining</div>
     <div class="bar {% if item.2.0 < 200 %}bar-info{% else %}bar-success{% endif %}" style="width: {{item.2.1}}%; min-width: 5%; max-width: 95%;">{{item.2.0}} completed</div>
   </div>
   </td>

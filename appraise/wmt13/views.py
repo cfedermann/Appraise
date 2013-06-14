@@ -597,7 +597,7 @@ def status(request):
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
-      'clusters': STATUS_CACHE['clusters'],
+      'clusters': None, # STATUS_CACHE['clusters'],
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }

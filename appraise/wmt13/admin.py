@@ -14,7 +14,6 @@ from appraise.wmt13.models import HIT, RankingTask, RankingResult, \
   UserHITMapping
 
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
-from appraise.utils import AnnotationTask
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)

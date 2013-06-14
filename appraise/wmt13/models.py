@@ -18,7 +18,7 @@ from django.template.loader import get_template
 
 from appraise.wmt13.validators import validate_hit_xml, validate_segment_xml
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
-from appraise.utils import datetime_to_seconds
+from appraise.utils import datetime_to_seconds, AnnotationTask
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)

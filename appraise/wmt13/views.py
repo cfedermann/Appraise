@@ -588,12 +588,16 @@ def status(request):
     if not STATUS_CACHE.has_key('user_stats'):
         update_status(key='user_stats')
     
+    if not STATUS_CACHE.has_key('clusters'):
+        update_status(key='clusters')
+    
     dictionary = {
       'active_page': "STATUS",
       'global_stats': STATUS_CACHE['global_stats'],
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
+      'clusters': STATUS_CACHE['clusters'],
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }
@@ -611,6 +615,7 @@ def update_ranking(request=None):
     based solution...
     
     """
+    _compute_rankings_clusters()
     if request is not None:
         return HttpResponse('NOT_IMPLEMENTED_YET:update_ranking()')
 
@@ -620,7 +625,7 @@ def update_status(request=None, key=None):
     Updates the in-memory STATUS_CACHE dictionary.
     """
     status_keys = ('global_stats', 'language_pair_stats', 'group_stats',
-      'user_stats')
+      'user_stats', 'clusters')
     
     # If a key is given, we only update the requested sub status.
     if key:
@@ -638,6 +643,9 @@ def update_status(request=None, key=None):
         
         elif status_key == 'user_stats':
             STATUS_CACHE[status_key] = _compute_user_stats()
+        
+        elif status_key == 'clusters':
+            STATUS_CACHE[status_key] = _compute_ranking_clusters()
     
     if request is not None:
         return HttpResponse('Status updated successfully')
@@ -803,3 +811,176 @@ def _compute_user_stats():
     user_stats = user_stats[:25]
     
     return user_stats
+
+
+def _compute_ranking_clusters():
+    """
+    Computes ranking clusters using Philipp Koehn's Perl code.
+    """
+    # This is a dump from 20130614;  calling the actual Perl script soon ;)
+    PERL_OUTPUT = """
+    Spanish-English,1,0.637,1,uedin-heafield
+    Spanish-English,1,0.594,2-5,online-b
+    Spanish-English,2,0.589,2-4,uedin-wmt13
+    Spanish-English,2,0.585,2-5,mes
+    Spanish-English,2,0.559,4-6,limsi-ncode-soul
+    Spanish-English,2,0.542,5-6,dcu-prompsit-pbsmt
+    Spanish-English,2,0.490,7-8,fda
+    Spanish-English,3,0.478,7-9,dcu-prompsit
+    Spanish-English,3,0.454,8-10,cu-zeman
+    Spanish-English,3,0.432,9-10,jhu
+    Spanish-English,3,0.141,11,shef-wproa
+
+    English-Spanish,1,0.674,1,online-b
+    English-Spanish,1,0.623,2,uedin-wmt13
+    English-Spanish,2,0.582,3-4,mes
+    English-Spanish,3,0.567,3-5,promt
+    English-Spanish,3,0.553,3-5,talp-upc
+    English-Spanish,3,0.515,6-7,limsi-ncode
+    English-Spanish,4,0.470,6-9,fda
+    English-Spanish,4,0.448,7-11,cu-zeman
+    English-Spanish,4,0.441,7-11,dcu-prompsit-pbsmt
+    English-Spanish,4,0.439,8-11,jhu
+    English-Spanish,4,0.417,9-11,dcu-prompsit
+    English-Spanish,4,0.271,12,shef-wproa
+
+    German-English,1,0.674,1-2,online-b
+    German-English,1,0.666,1-2,uedin-syntax
+    German-English,1,0.596,3-5,uedin-wmt13
+    German-English,2,0.588,3-6,kit
+    German-English,2,0.586,3-6,mes
+    German-English,2,0.570,4-7,quaero
+    German-English,2,0.546,6-9,rwth-jane
+    German-English,2,0.534,7-9,limsi-ncode-soul
+    German-English,2,0.520,8-10,mes-szeged-reorder-split
+    German-English,2,0.480,10-12,tubitak
+    German-English,2,0.477,10-12,cngl-dcu
+    German-English,2,0.470,10-12,umd
+    German-English,2,0.381,13-14,jhu
+    German-English,3,0.380,13-14,cu-zeman
+    German-English,3,0.307,15,shef-wproa
+    German-English,4,0.224,16,desrt
+
+    English-German,1,0.673,1-2,promt
+    English-German,1,0.648,2-3,online-b
+    English-German,1,0.646,2-3,uedin-syntax
+    English-German,1,0.580,4-5,uedin-wmt13
+    English-German,2,0.580,4-5,kit
+    English-German,2,0.544,6,stanford
+    English-German,3,0.504,7-8,limsi-ncode-soul
+    English-German,4,0.492,7-9,jhu
+    English-German,4,0.481,7-9,mes-reorder
+    English-German,4,0.450,10-11,tubitak
+    English-German,5,0.449,10-11,cu-zeman
+    English-German,5,0.337,12-13,uu
+    English-German,6,0.314,12-14,shef-wproa
+    English-German,6,0.302,13-14,rwth-jane
+
+    French-English,1,0.636,1-3,uedin-heafield
+    French-English,1,0.619,1-3,uedin-wmt13
+    French-English,1,0.614,1-3,online-b
+    French-English,1,0.580,4-5,limsi-ncode-soul
+    French-English,2,0.573,4-5,kit
+    French-English,2,0.521,6,mes-simplifiedfrench
+    French-English,3,0.473,7,dcu
+    French-English,4,0.434,8-10,rwth
+    French-English,5,0.424,8-10,cu-zeman
+    French-English,5,0.417,8-11,cmu-tree-to-tree
+    French-English,5,0.395,10-11,jhu
+    French-English,5,0.314,12,shef-wproa
+
+    English-French,1,0.633,1-2,uedin-wmt13
+    English-French,1,0.633,1-2,limsi-ncode-soul
+    English-French,1,0.593,2-5,kit
+    English-French,1,0.588,3-7,online-b
+    English-French,1,0.576,3-7,stanford
+    English-French,1,0.560,4-8,mes
+    English-French,1,0.558,5-8,promt
+    English-French,1,0.533,7-9,mes-inflection
+    English-French,1,0.497,8-9,rwth-phrase-based-jane
+    English-French,1,0.460,10,dcu
+    English-French,2,0.389,11-12,jhu
+    English-French,3,0.386,11-12,cu-zeman
+    English-French,3,0.326,13,omnifluent-translate-english-to-french
+    English-French,4,0.269,14,its-latl
+
+    Czech-English,1,0.612,1-2,uedin-heafield
+    Czech-English,1,0.589,1-4,mes
+    Czech-English,1,0.577,2-5,online-b
+    Czech-English,1,0.567,2-5,uedin-syntax
+    Czech-English,1,0.559,3-5,uedin-wmt13
+    Czech-English,1,0.515,6,cu-zeman
+    Czech-English,2,0.479,7-8,cu-tamchyna
+    Czech-English,3,0.454,7-8,fda
+    Czech-English,3,0.344,9,jhu
+    Czech-English,4,0.304,10,shef-wproa
+
+    English-Czech,1,0.660,1,cu-depfix
+    English-Czech,1,0.618,2-3,cu-bojar-2013
+    English-Czech,2,0.615,2-3,online-b
+    English-Czech,2,0.525,4-5,uedin-wmt13
+    English-Czech,3,0.509,4-6,mes
+    English-Czech,3,0.504,5-6,cu-zeman
+    English-Czech,3,0.457,7-9,cu-phrasefix
+    English-Czech,4,0.449,7-9,cu-tectomt
+    English-Czech,4,0.437,8-10,commercial-1
+    English-Czech,4,0.427,9-10,commercial-2
+    English-Czech,4,0.300,11,shef-wproa
+
+    Russian-English,1,0.673,1,online-b
+    Russian-English,1,0.605,2-3,cmu
+    Russian-English,2,0.601,2-4,qcri-mes
+    Russian-English,2,0.563,3-6,mes-qcri
+    Russian-English,2,0.558,3-7,promt
+    Russian-English,2,0.555,4-7,uedin-wmt13
+    Russian-English,2,0.524,6-10,ucam-multifrontend
+    Russian-English,2,0.517,7-11,balagur
+    Russian-English,2,0.515,6-11,lia
+    Russian-English,2,0.499,7-11,cu-karel
+    Russian-English,2,0.480,9-13,omnifluent-translate-russian-to-english-constrained
+    Russian-English,2,0.458,11-15,umd
+    Russian-English,2,0.455,11-14,omnifluent-translate-russian-to-english-unconstrained
+    Russian-English,2,0.434,13-16,commercial-3
+    Russian-English,2,0.431,13-16,uedin-syntax
+    Russian-English,2,0.415,14-16,jhu
+    Russian-English,2,0.217,17,cu-zeman
+
+    English-Russian,1,0.702,1,promt
+    English-Russian,1,0.661,2,online-b
+    English-Russian,2,0.592,3,cmu
+    English-Russian,3,0.538,4-5,uedin-wmt13
+    English-Russian,4,0.534,4-5,qcri-mes
+    English-Russian,4,0.508,5-6,cu-karel
+    English-Russian,4,0.468,7-9,mes-qcri
+    English-Russian,5,0.464,7-9,jhu
+    English-Russian,5,0.443,7-9,commercial-3
+    English-Russian,5,0.399,10-11,balagur
+    English-Russian,6,0.393,10-11,lia
+    English-Russian,6,0.299,12,cu-zeman
+    """
+    
+    CLUSTER_DATA = {}
+    for line in PERL_OUTPUT.split("\n"):
+        _data = line.strip().split(',')
+        if not len(_data) == 5:
+            continue
+        
+        _data[0] = _data[0].replace('-', u' → ')
+        if not CLUSTER_DATA.has_key(_data[0]):
+            CLUSTER_DATA[_data[0]] = {}
+        
+        if not CLUSTER_DATA[_data[0]].has_key(_data[1]):
+            CLUSTER_DATA[_data[0]][_data[1]] = []
+        
+        CLUSTER_DATA[_data[0]][_data[1]].append(_data[2:])
+    
+    _cluster_data = []
+    _sorted_language_pairs = [x[1].decode('utf-8') for x in LANGUAGE_PAIR_CHOICES]
+    for language_pair in _sorted_language_pairs:
+        _language_data = []
+        for cluster_id in sorted(CLUSTER_DATA[language_pair].keys()):
+           _data = CLUSTER_DATA[language_pair][cluster_id]
+           _language_data.append((cluster_id, _data))
+        _cluster_data.append((language_pair, _language_data))
+    
+    return _cluster_data

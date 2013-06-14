@@ -15,6 +15,7 @@
 {% if language_pair_stats %}  <li><a href="#language_pair_stats" data-toggle="tab">Language pair status</a></li>{% endif %}
 {% if group_stats %}  <li><a href="#group_stats" data-toggle="tab">Group status</a></li>{% endif %}
 {% if user_stats %}  <li><a href="#user_stats" data-toggle="tab">Top 25 contributors</a></li>{% endif %}
+{% if clusters %}  <li><a href="#clusters" data-toggle="tab">Ranking clusters</a></li>{% endif %}
 </ul>
 
 <div class="tab-content">
@@ -86,6 +87,38 @@
 </tr>
 {% endfor %}
 </table>
+</div>
+{% endif %}
+
+{% if clusters %}
+<div class="tab-pane" id="clusters">
+{% for language_data in clusters %}
+<h3>{{language_data.0}}</h3>
+
+{% for c_data in language_data.1 %}
+<table class="table table-striped table-bordered table-condensed">
+{% if forloop.first %}
+<tr>
+  <th>Cluster No.</th>
+  <th colspan="2">Expected win ratio/rank range</th>
+  <th>System identifier</th>
+</tr>
+{% endif %}
+{% for c_item in c_data.1 %}
+<tr>
+  <td width="15%" style="text-align:center;">{{c_data.0}}</td>
+  <td width="15%" style="text-align:center;">{{c_item.0|floatformat:3}}</td>
+  <td width="15%" style="text-align:center;">{{c_item.1}}</td>
+  <td width="55%">{{c_item.2}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}
+
+{% if not forloop.last%}
+<hr/>
+{% endif%}
+{% endfor %}
 </div>
 {% endif %}
 </div>

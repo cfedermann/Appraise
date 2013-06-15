@@ -106,7 +106,7 @@ class HIT(models.Model):
         """
         Metadata options for the HIT object model.
         """
-        ordering = ('block_id', 'language_pair', 'hit_id')
+        ordering = ('id', 'hit_id', 'language_pair', 'block_id')
         verbose_name = "HIT instance"
         verbose_name_plural = "HIT instances"
     

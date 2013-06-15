@@ -76,6 +76,15 @@ def validate_hit_xml(value):
             assert(_attr in _tree.attrib.keys()), \
               'missing required <hit> attribute {0}'.format(_attr)
         
+        # Make sure that block-id is an integer value!
+        try:
+            _block_id = _tree.attrib['block-id']
+            _block_id = int(_block_id)
+        
+        except ValueError, msg:
+            raise ValidationError('Invalid block-id: "{0}", {1}.'.format(
+              _block_id, msg))
+        
         # Finally, we check that each <hit> contains exactly 3 children
         # which are <seg> containers with <source>, <reference> and a
         # total of 5 <translation> elements. The <reference> is mandatory.

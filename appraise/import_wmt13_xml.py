@@ -59,6 +59,9 @@ if __name__ == "__main__":
     from appraise.wmt13.validators import validate_hits_xml_file
     
     # Setup Django environment using settings module.
+    # TODO: the use of setup_environ() has been deprecated since Django 1.4;
+    #       It seems this command can safely be removed as we have properly
+    #       setup DJANGO_SETTINGS_MODULE above.  Check and clean up!
     setup_environ(settings)
     
     # We might potentially be dealing with more than a single input file.

@@ -782,6 +782,10 @@ def _compute_group_stats():
         if _data[0] > 0:
             group_stats.append((_name, _data))
     
+    # Sort by number of remaining HITs.
+    group_stats.sort(key=lambda x: x[1][1])
+    group_stats.reverse()
+    
     return group_stats
 
 

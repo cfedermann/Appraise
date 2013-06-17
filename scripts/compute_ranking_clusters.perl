@@ -46,7 +46,7 @@ sub rank_by_expected_wins {
   foreach my $p1 (@SYSTEM) {
     foreach my $p2 (@SYSTEM) {
       next if $p1 eq $p2;
-      $SUM_WINS{$p1} += $$P{$p1}{$p2};
+      $SUM_WINS{$p1} += $$P{$p1}{$p2} if defined $$P{$p1}{$p2}; # HERE
     }
   }
   
@@ -85,7 +85,7 @@ sub bootstrap {
     foreach my $p1 (@SYSTEM) {
       foreach my $p2 (@SYSTEM) {
         next if $p1 eq $p2;
-        $SUM_WINS{$p1} += $P{$task}{$p1}{$p2};
+        $SUM_WINS{$p1} += $P{$task}{$p1}{$p2} if defined $P{$task}{$p1}{$p2}; # HERE
       }
     }
     
@@ -115,19 +115,19 @@ sub bootstrap {
     while($total_prob < $num_resample*.95) {
       if (! defined($RANK{$system}{$start-1})) {
         $end++; 
-        $total_prob += $RANK{$system}{$end};
+        $total_prob += $RANK{$system}{$end} if defined $RANK{$system}{$end}; # HERE
       }
       elsif(! defined($RANK{$system}{$end+1})) {
         $start--;
-        $total_prob += $RANK{$system}{$start};
+        $total_prob += $RANK{$system}{$start} if defined $RANK{$system}{$start}; # HERE
       }
       elsif($RANK{$system}{$start-1} > $RANK{$system}{$end+1}) {
         $start--;
-        $total_prob += $RANK{$system}{$start};          
+        $total_prob += $RANK{$system}{$start} if defined $RANK{$system}{$start}; # HERE
       }
       else {
         $end++; 
-        $total_prob += $RANK{$system}{$end};         
+        $total_prob += $RANK{$system}{$end} if defined $RANK{$system}{$end}; # HERE
       }
     }
     if ($start == $end) {

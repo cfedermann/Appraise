@@ -26,16 +26,14 @@ print "task,cluster_id,exp-win-ratio,exp-rank-range,system_id\n";
 # rank
 foreach my $l ("Spanish","German","French","Czech","Russian") {
   my $task = "$l-English";
+###  print "====\n$task\n====\n";
   die($task) if !defined($TASK_PROB{$task});
   &rank_by_expected_wins($task,$TASK_PROB{$task});
-
-  print "\n";
 
   $task = "English-$l";
+###  print "====\n$task\n====\n";
   die($task) if !defined($TASK_PROB{$task});
   &rank_by_expected_wins($task,$TASK_PROB{$task});
-
-  print "\n";
 }
 
 sub rank_by_expected_wins {
@@ -46,11 +44,9 @@ sub rank_by_expected_wins {
   foreach my $p1 (@SYSTEM) {
     foreach my $p2 (@SYSTEM) {
       next if $p1 eq $p2;
-      $SUM_WINS{$p1} += $$P{$p1}{$p2} if defined $$P{$p1}{$p2}; # HERE
+      $SUM_WINS{$p1} += $$P{$p1}{$p2};
     }
   }
-  
-  my $cluster_id = 0;
 
   my %RANGE;
   &bootstrap($task,\%RANGE);
@@ -61,16 +57,18 @@ sub rank_by_expected_wins {
   my $last_rank = 99;
   my $cluster_count = 1;
   foreach (reverse sort @OUT) {
+#    /^[\d\.]+ \(([\d\-]+)\)/;
     /^([\d\.]+) \(([\d\-]+)\): (.+)/;
     my ($from,$to) = split(/\-/,$2);
-
     if ($from > $last_rank) {
+###      print "      ------------------\n";
       $cluster_count++;
     }
     $last_rank = defined($to) ? $to : $from;
-    
+###    print $_."\n";
     print "$task,$cluster_count,$1,$2,$3\n";
   }
+###  print "number of clusters: $cluster_count (".(scalar(@SYSTEM))." systems)\n";
 }
 
 sub bootstrap {
@@ -78,6 +76,7 @@ sub bootstrap {
   my %RANK;
   
   for(my $i=0;$i<$num_resample;$i++) {
+###    print ".";
     my %P;
     &resample($task,\%P);
     my @SYSTEM = keys %{$P{$task}};
@@ -85,7 +84,7 @@ sub bootstrap {
     foreach my $p1 (@SYSTEM) {
       foreach my $p2 (@SYSTEM) {
         next if $p1 eq $p2;
-        $SUM_WINS{$p1} += $P{$task}{$p1}{$p2} if defined $P{$task}{$p1}{$p2}; # HERE
+        $SUM_WINS{$p1} += $P{$task}{$p1}{$p2};
       }
     }
     
@@ -100,8 +99,11 @@ sub bootstrap {
       $rank++;
     }
   }
+###  print "\n";
   my @SYSTEM = keys %RANK;
+###  print "Bootstrapped ranks:\n";
   foreach my $system (sort @SYSTEM) {
+###    printf "%20s: ",substr($system,0,20);
     my ($max_rank,$max_prob) = (-1,0);
     foreach my $rank (sort { $a <=> $b } keys %{$RANK{$system}}) {
       my $prob = $RANK{$system}{$rank};
@@ -109,25 +111,26 @@ sub bootstrap {
         $max_prob = $prob;
         $max_rank = $rank;
       }
+###      printf(" %d:%.1f%s ",$rank,$RANK{$system}{$rank}/$num_resample*100,'%');
     }
     my $total_prob = $max_prob;
     my ($start,$end) = ($max_rank,$max_rank);
     while($total_prob < $num_resample*.95) {
       if (! defined($RANK{$system}{$start-1})) {
         $end++; 
-        $total_prob += $RANK{$system}{$end} if defined $RANK{$system}{$end}; # HERE
+        $total_prob += $RANK{$system}{$end};
       }
       elsif(! defined($RANK{$system}{$end+1})) {
         $start--;
-        $total_prob += $RANK{$system}{$start} if defined $RANK{$system}{$start}; # HERE
+        $total_prob += $RANK{$system}{$start};
       }
       elsif($RANK{$system}{$start-1} > $RANK{$system}{$end+1}) {
         $start--;
-        $total_prob += $RANK{$system}{$start} if defined $RANK{$system}{$start}; # HERE
+        $total_prob += $RANK{$system}{$start};          
       }
       else {
         $end++; 
-        $total_prob += $RANK{$system}{$end} if defined $RANK{$system}{$end}; # HERE
+        $total_prob += $RANK{$system}{$end};         
       }
     }
     if ($start == $end) {
@@ -136,7 +139,9 @@ sub bootstrap {
     else {
       $$RANGE{$system} = "$start-$end";
     }
+###    print " => $start-$end ($total_prob)\n";
   }
+###  print "\nRanking (with expected win ratio and rank range):\n";
 }
 
 sub compute_probability {
@@ -154,6 +159,7 @@ sub load {
   $index =~ s/[\t\r\n]//g;
   %INDEX = ();
   foreach (split(/,/,$index)) {
+    #print "INDEX{$_} = ".(scalar keys %INDEX)."\n";
     $INDEX{$_} = scalar keys %INDEX;
   }
   
@@ -171,6 +177,7 @@ sub load {
   
   foreach my $task (sort keys %TOTAL) {
     &compute_win_ratio($task,$P,\%WIN,\%TOTAL);
+    &pairwise($task,\%WIN,\%TOTAL);
   }
 }
 
@@ -178,6 +185,7 @@ sub resample {
   my ($task,$P) = @_;
   
   my (%WIN,%TOTAL);
+  #print "resample ".(scalar @{$SENTENCE{$task}})." times.\n";
   for(my $i=0;$i<scalar @{$SENTENCE{$task}};$i++) {
     my @DATA = split(/,/,$SENTENCE{$task}[rand(scalar @{$SENTENCE{$task}})]);
     &process_judgment($task,\@DATA,\%WIN,\%TOTAL);
@@ -195,6 +203,55 @@ sub compute_win_ratio {
       $$P{$task}{$system1}{$system2} = &compute_probability($win,$loss);
     }
   }
+}
+
+sub pairwise {
+  my ($task,$WIN,$TOTAL) = @_;
+  my %DISTINCTION;
+###  print "\n=== $task ===\n";
+###  printf "%10s ","";
+  foreach my $system2 (sort keys %{$$TOTAL{$task}}) {
+###    printf " %7s",substr($system2,0,7);
+  }
+###  print "\n";
+  foreach my $system1 (sort keys %{$$TOTAL{$task}}) {
+    my (%FIRST,%SECOND);
+    foreach my $system2 (sort keys %{$$TOTAL{$task}}) {
+      if ($system1 eq $system2) {
+	$FIRST{$system2} = sprintf("%7s",substr($system2,0,7));
+	$SECOND{$system2} = sprintf("%7s",substr($system2,0,7));
+	next;
+      }
+      my $win = 0;
+      $win = $$WIN{$task}{$system1}{$system2} if defined($$WIN{$task}{$system1}{$system2});
+      my $loss = $$TOTAL{$task}{$system1}{$system2}-$win;
+      my $p_value = &compute_p_value($win,$loss);
+#print "$task $system1 $system2 $p_value\n" if $ratio == 1;
+      my $distinction = "";
+      my $symbol = ($win > $loss) ? "*" : "-";
+      $distinction .= $symbol if $p_value <= 0.1;
+      $distinction .= $symbol if $p_value <= 0.05;
+      $distinction .= $symbol if $p_value <= 0.01;
+      $FIRST{$system2} = sprintf("%3d/%3d",$win,$loss);
+      $SECOND{$system2} = sprintf(".%2d %3s",$win/($win+$loss)*100,$distinction);
+      $DISTINCTION{length($distinction)} += .5;
+    }
+###    printf "%10s:",substr($system1,0,10);
+    foreach my $system2 (sort keys %{$$TOTAL{$task}}) {
+###      print "|".$FIRST{$system2};
+    }
+###    print "\n";
+###    printf "%10s ","";
+    foreach my $system2 (sort keys %{$$TOTAL{$task}}) {
+###      print "|".$SECOND{$system2};
+    }
+###    print "\n";
+  }
+  my $total_distinctions = scalar(keys %{$$TOTAL{$task}}) * (scalar(keys %{$$TOTAL{$task}})-1) / 2;
+###  printf "number of pairwise distinctions at p-level <0.01 (***/---): %3d (%2d%s)\n",$DISTINCTION{3},100*$DISTINCTION{3}/$total_distinctions,"%";
+###  printf "                                   p-level .01-.05 (**/--): %3d (%2d%s)\n",$DISTINCTION{2},100*$DISTINCTION{2}/$total_distinctions,"%";
+###  printf "                                   p-level .05-.1    (*/-): %3d (%2d%s)\n",$DISTINCTION{1},100*$DISTINCTION{1}/$total_distinctions,"%";
+###  printf "                                   p-level >.1     (blank): %3d (%2d%s)\n",$DISTINCTION{0},100*$DISTINCTION{0}/$total_distinctions,"%";
 }
 
 sub get_task {
@@ -244,11 +301,11 @@ sub clean_up_system_name {
 
 sub clean_up_language {
   my ($language) = @_;
-  $language = "German" if $language eq "deu" or $language eq "ger";
+  $language = "German" if $language eq "deu";
   $language = "English" if $language eq "eng";
   $language = "Spanish" if $language eq "spa";
-  $language = "French" if $language eq "fre" or $language eq "fra";
-  $language = "Czech" if $language eq "cze" or $language eq "ces";
+  $language = "French" if $language eq "fre";
+  $language = "Czech" if $language eq "cze";
   $language = "Russian" if $language eq "rus";
   return $language;
 }

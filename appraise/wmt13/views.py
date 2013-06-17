@@ -591,15 +591,13 @@ def status(request):
     if not STATUS_CACHE.has_key('user_stats'):
         update_status(key='user_stats')
     
-    ranking_clusters = RANKING_CACHE.get('clusters', [])
-    
     dictionary = {
       'active_page': "STATUS",
       'global_stats': STATUS_CACHE['global_stats'],
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
-      'clusters': ranking_clusters,
+      'clusters': RANKINGS_CACHE.get('clusters', []),
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }
@@ -609,7 +607,7 @@ def status(request):
 
 def update_ranking(request=None):
     """
-    Updates the in-memory RANKING_CACHE dictionary.
+    Updates the in-memory RANKINGS_CACHE dictionary.
     
     In order to get things up and running quickly, for WMT13 we will fall back
     to calling an external Perl script provided by Philipp Koehn;  after the
@@ -617,7 +615,7 @@ def update_ranking(request=None):
     based solution...
     
     """
-    RANKING_CACHE[status_key] = _compute_ranking_clusters()
+    RANKINGS_CACHE[status_key] = _compute_ranking_clusters()
     
     if request is not None:
         return HttpResponse('Ranking updated successfully')

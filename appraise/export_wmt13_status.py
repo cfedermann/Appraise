@@ -13,8 +13,6 @@ from datetime import datetime
 import os
 import sys
 
-from django.core.management import setup_environ
-
 
 if __name__ == "__main__":
     # Properly set DJANGO_SETTINGS_MODULE environment variable.
@@ -23,11 +21,7 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise import settings
     from appraise.wmt13.models import HIT, LANGUAGE_PAIR_CHOICES
-    
-    # Setup Django environment using settings module.
-    setup_environ(settings)
     
     remaining_hits = {}
     for language_pair in [x[0] for x in LANGUAGE_PAIR_CHOICES]:

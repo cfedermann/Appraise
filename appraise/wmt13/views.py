@@ -851,7 +851,7 @@ def _compute_ranking_clusters(load_file=False):
             outfile.write(export_csv)
         
         # Run Philipp's Perl script to compute ranking clusters.
-        PERL_OUTPUT = check_output(['perl', _script, _wmt13, _mturk])
+        PERL_OUTPUT = check_output(['perl', _script, _wmt13, _mturk], shell=True)
         
         with open(_dump, 'w') as outfile:
             outfile.write(PERL_OUTPUT)

@@ -597,7 +597,7 @@ def status(request):
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
-      'clusters': None, # STATUS_CACHE['clusters'],
+      'clusters': STATUS_CACHE['clusters'],
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }
@@ -822,144 +822,144 @@ def _compute_ranking_clusters():
     """
     # This is a dump from 20130614;  calling the actual Perl script soon ;)
     PERL_OUTPUT = """
-    Spanish-English,1,0.637,1,uedin-heafield
-    Spanish-English,1,0.594,2-5,online-b
-    Spanish-English,2,0.589,2-4,uedin-wmt13
-    Spanish-English,2,0.585,2-5,mes
-    Spanish-English,2,0.559,4-6,limsi-ncode-soul
-    Spanish-English,2,0.542,5-6,dcu-prompsit-pbsmt
-    Spanish-English,2,0.490,7-8,fda
-    Spanish-English,3,0.478,7-9,dcu-prompsit
-    Spanish-English,3,0.454,8-10,cu-zeman
-    Spanish-English,3,0.432,9-10,jhu
-    Spanish-English,3,0.141,11,shef-wproa
+    Spanish-English,1,0.634,1,uedin-heafield
+    Spanish-English,2,0.588,2-4,mes
+    Spanish-English,2,0.587,2-4,uedin-wmt13
+    Spanish-English,2,0.586,2-5,online-b
+    Spanish-English,2,0.555,4-6,limsi-ncode-soul
+    Spanish-English,2,0.540,5-6,dcu-prompsit-pbsmt
+    Spanish-English,3,0.493,7-8,fda
+    Spanish-English,3,0.480,7-9,dcu-prompsit
+    Spanish-English,3,0.460,8-10,cu-zeman
+    Spanish-English,3,0.433,9-10,jhu
+    Spanish-English,4,0.145,11,shef-wproa
 
     English-Spanish,1,0.674,1,online-b
-    English-Spanish,1,0.623,2,uedin-wmt13
-    English-Spanish,2,0.582,3-4,mes
+    English-Spanish,2,0.623,2,uedin-wmt13
+    English-Spanish,3,0.582,3-5,mes
     English-Spanish,3,0.567,3-5,promt
-    English-Spanish,3,0.553,3-5,talp-upc
-    English-Spanish,3,0.515,6-7,limsi-ncode
-    English-Spanish,4,0.470,6-9,fda
-    English-Spanish,4,0.448,7-11,cu-zeman
-    English-Spanish,4,0.441,7-11,dcu-prompsit-pbsmt
-    English-Spanish,4,0.439,8-11,jhu
-    English-Spanish,4,0.417,9-11,dcu-prompsit
-    English-Spanish,4,0.271,12,shef-wproa
+    English-Spanish,3,0.555,3-5,talp-upc
+    English-Spanish,4,0.514,6,limsi-ncode
+    English-Spanish,5,0.470,7-9,fda
+    English-Spanish,5,0.446,7-11,cu-zeman
+    English-Spanish,5,0.441,7-11,dcu-prompsit-pbsmt
+    English-Spanish,5,0.439,8-11,jhu
+    English-Spanish,5,0.417,9-11,dcu-prompsit
+    English-Spanish,6,0.271,12,shef-wproa
 
-    German-English,1,0.674,1-2,online-b
-    German-English,1,0.666,1-2,uedin-syntax
-    German-English,1,0.596,3-5,uedin-wmt13
-    German-English,2,0.588,3-6,kit
-    German-English,2,0.586,3-6,mes
-    German-English,2,0.570,4-7,quaero
-    German-English,2,0.546,6-9,rwth-jane
-    German-English,2,0.534,7-9,limsi-ncode-soul
-    German-English,2,0.520,8-10,mes-szeged-reorder-split
-    German-English,2,0.480,10-12,tubitak
-    German-English,2,0.477,10-12,cngl-dcu
-    German-English,2,0.470,10-12,umd
-    German-English,2,0.381,13-14,jhu
-    German-English,3,0.380,13-14,cu-zeman
-    German-English,3,0.307,15,shef-wproa
-    German-English,4,0.224,16,desrt
+    German-English,1,0.671,1-2,online-b
+    German-English,1,0.659,1-2,uedin-syntax
+    German-English,2,0.597,3-5,uedin-wmt13
+    German-English,2,0.583,3-6,kit
+    German-English,2,0.578,3-7,mes
+    German-English,2,0.573,4-7,quaero
+    German-English,2,0.555,5-8,rwth-jane
+    German-English,2,0.533,7-9,limsi-ncode-soul
+    German-English,2,0.524,8-9,mes-szeged-reorder-split
+    German-English,3,0.480,10-12,cngl-dcu
+    German-English,3,0.479,10-12,tubitak
+    German-English,3,0.468,10-12,umd
+    German-English,4,0.384,13-14,cu-zeman
+    German-English,4,0.382,13-14,jhu
+    German-English,5,0.307,15,shef-wproa
+    German-English,6,0.226,16,desrt
 
-    English-German,1,0.673,1-2,promt
-    English-German,1,0.648,2-3,online-b
-    English-German,1,0.646,2-3,uedin-syntax
-    English-German,1,0.580,4-5,uedin-wmt13
-    English-German,2,0.580,4-5,kit
-    English-German,2,0.544,6,stanford
-    English-German,3,0.504,7-8,limsi-ncode-soul
-    English-German,4,0.492,7-9,jhu
-    English-German,4,0.481,7-9,mes-reorder
-    English-German,4,0.450,10-11,tubitak
-    English-German,5,0.449,10-11,cu-zeman
-    English-German,5,0.337,12-13,uu
-    English-German,6,0.314,12-14,shef-wproa
-    English-German,6,0.302,13-14,rwth-jane
+    English-German,1,0.672,1,promt
+    English-German,2,0.646,2-3,uedin-syntax
+    English-German,2,0.646,2-3,online-b
+    English-German,3,0.582,4-5,uedin-wmt13
+    English-German,3,0.578,4-5,kit
+    English-German,4,0.542,6,stanford
+    English-German,5,0.504,7-9,limsi-ncode-soul
+    English-German,5,0.491,7-9,jhu
+    English-German,5,0.484,7-9,mes-reorder
+    English-German,6,0.451,10-11,tubitak
+    English-German,6,0.449,10-11,cu-zeman
+    English-German,7,0.341,12,uu
+    English-German,8,0.314,13-14,shef-wproa
+    English-German,8,0.301,13-14,rwth-jane
 
-    French-English,1,0.636,1-3,uedin-heafield
-    French-English,1,0.619,1-3,uedin-wmt13
-    French-English,1,0.614,1-3,online-b
-    French-English,1,0.580,4-5,limsi-ncode-soul
-    French-English,2,0.573,4-5,kit
-    French-English,2,0.521,6,mes-simplifiedfrench
-    French-English,3,0.473,7,dcu
-    French-English,4,0.434,8-10,rwth
-    French-English,5,0.424,8-10,cu-zeman
-    French-English,5,0.417,8-11,cmu-tree-to-tree
-    French-English,5,0.395,10-11,jhu
-    French-English,5,0.314,12,shef-wproa
+    French-English,1,0.632,1-2,uedin-heafield
+    French-English,1,0.611,1-3,uedin-wmt13
+    French-English,1,0.609,2-4,online-b
+    French-English,1,0.585,3-5,limsi-ncode-soul
+    French-English,1,0.567,4-5,kit
+    French-English,2,0.520,6,mes-simplifiedfrench
+    French-English,3,0.474,7,dcu
+    French-English,4,0.437,8-10,rwth
+    French-English,4,0.427,8-11,cu-zeman
+    French-English,4,0.420,8-11,cmu-tree-to-tree
+    French-English,4,0.400,10-11,jhu
+    French-English,5,0.319,12,shef-wproa
 
-    English-French,1,0.633,1-2,uedin-wmt13
-    English-French,1,0.633,1-2,limsi-ncode-soul
-    English-French,1,0.593,2-5,kit
-    English-French,1,0.588,3-7,online-b
-    English-French,1,0.576,3-7,stanford
-    English-French,1,0.560,4-8,mes
-    English-French,1,0.558,5-8,promt
-    English-French,1,0.533,7-9,mes-inflection
-    English-French,1,0.497,8-9,rwth-phrase-based-jane
-    English-French,1,0.460,10,dcu
-    English-French,2,0.389,11-12,jhu
-    English-French,3,0.386,11-12,cu-zeman
-    English-French,3,0.326,13,omnifluent-translate-english-to-french
-    English-French,4,0.269,14,its-latl
+    English-French,1,0.635,1-2,limsi-ncode-soul
+    English-French,1,0.634,1-2,uedin-wmt13
+    English-French,2,0.592,3-7,online-b
+    English-French,2,0.589,3-6,kit
+    English-French,2,0.573,3-7,stanford
+    English-French,2,0.561,4-8,mes
+    English-French,2,0.555,5-8,promt
+    English-French,2,0.532,7-9,mes-inflection
+    English-French,2,0.501,8-9,rwth-phrase-based-jane
+    English-French,3,0.456,10,dcu
+    English-French,4,0.388,11-12,cu-zeman
+    English-French,4,0.387,11-12,jhu
+    English-French,5,0.328,13,omnifluent-translate-english-to-french
+    English-French,6,0.268,14,its-latl
 
-    Czech-English,1,0.612,1-2,uedin-heafield
-    Czech-English,1,0.589,1-4,mes
-    Czech-English,1,0.577,2-5,online-b
-    Czech-English,1,0.567,2-5,uedin-syntax
-    Czech-English,1,0.559,3-5,uedin-wmt13
-    Czech-English,1,0.515,6,cu-zeman
-    Czech-English,2,0.479,7-8,cu-tamchyna
-    Czech-English,3,0.454,7-8,fda
-    Czech-English,3,0.344,9,jhu
-    Czech-English,4,0.304,10,shef-wproa
+    Czech-English,1,0.613,1-2,uedin-heafield
+    Czech-English,1,0.592,1-3,mes
+    Czech-English,1,0.576,2-5,online-b
+    Czech-English,1,0.569,2-5,uedin-syntax
+    Czech-English,1,0.560,3-5,uedin-wmt13
+    Czech-English,2,0.518,6,cu-zeman
+    Czech-English,3,0.473,7-8,cu-tamchyna
+    Czech-English,3,0.453,7-8,fda
+    Czech-English,4,0.343,9,jhu
+    Czech-English,5,0.304,10,shef-wproa
 
     English-Czech,1,0.660,1,cu-depfix
-    English-Czech,1,0.618,2-3,cu-bojar-2013
+    English-Czech,2,0.618,2-3,cu-bojar-2013
     English-Czech,2,0.615,2-3,online-b
-    English-Czech,2,0.525,4-5,uedin-wmt13
+    English-Czech,3,0.525,4-5,uedin-wmt13
     English-Czech,3,0.509,4-6,mes
     English-Czech,3,0.504,5-6,cu-zeman
-    English-Czech,3,0.457,7-9,cu-phrasefix
+    English-Czech,4,0.457,7-8,cu-phrasefix
     English-Czech,4,0.449,7-9,cu-tectomt
     English-Czech,4,0.437,8-10,commercial-1
     English-Czech,4,0.427,9-10,commercial-2
-    English-Czech,4,0.300,11,shef-wproa
+    English-Czech,5,0.300,11,shef-wproa
 
-    Russian-English,1,0.673,1,online-b
-    Russian-English,1,0.605,2-3,cmu
-    Russian-English,2,0.601,2-4,qcri-mes
-    Russian-English,2,0.563,3-6,mes-qcri
-    Russian-English,2,0.558,3-7,promt
-    Russian-English,2,0.555,4-7,uedin-wmt13
-    Russian-English,2,0.524,6-10,ucam-multifrontend
-    Russian-English,2,0.517,7-11,balagur
-    Russian-English,2,0.515,6-11,lia
-    Russian-English,2,0.499,7-11,cu-karel
-    Russian-English,2,0.480,9-13,omnifluent-translate-russian-to-english-constrained
-    Russian-English,2,0.458,11-15,umd
-    Russian-English,2,0.455,11-14,omnifluent-translate-russian-to-english-unconstrained
-    Russian-English,2,0.434,13-16,commercial-3
-    Russian-English,2,0.431,13-16,uedin-syntax
-    Russian-English,2,0.415,14-16,jhu
-    Russian-English,2,0.217,17,cu-zeman
+    Russian-English,1,0.669,1,online-b
+    Russian-English,2,0.609,2-3,cmu
+    Russian-English,2,0.603,2-3,qcri-mes
+    Russian-English,3,0.566,4-7,mes-qcri
+    Russian-English,3,0.557,4-8,promt
+    Russian-English,3,0.548,4-9,uedin-wmt13
+    Russian-English,3,0.532,5-9,ucam-multifrontend
+    Russian-English,3,0.520,6-10,balagur
+    Russian-English,3,0.518,6-11,lia
+    Russian-English,3,0.497,7-11,cu-karel
+    Russian-English,3,0.480,9-13,omnifluent-translate-russian-to-english-constrained
+    Russian-English,3,0.459,11-16,umd
+    Russian-English,3,0.453,11-15,omnifluent-translate-russian-to-english-unconstrained
+    Russian-English,3,0.434,13-16,commercial-3
+    Russian-English,3,0.431,13-16,uedin-syntax
+    Russian-English,3,0.419,13-16,jhu
+    Russian-English,4,0.206,17,cu-zeman
 
-    English-Russian,1,0.702,1,promt
-    English-Russian,1,0.661,2,online-b
-    English-Russian,2,0.592,3,cmu
-    English-Russian,3,0.538,4-5,uedin-wmt13
+    English-Russian,1,0.701,1,promt
+    English-Russian,2,0.661,2,online-b
+    English-Russian,3,0.593,3,cmu
+    English-Russian,4,0.538,4-5,uedin-wmt13
     English-Russian,4,0.534,4-5,qcri-mes
     English-Russian,4,0.508,5-6,cu-karel
-    English-Russian,4,0.468,7-9,mes-qcri
-    English-Russian,5,0.464,7-9,jhu
-    English-Russian,5,0.443,7-9,commercial-3
-    English-Russian,5,0.399,10-11,balagur
-    English-Russian,6,0.393,10-11,lia
-    English-Russian,6,0.299,12,cu-zeman
+    English-Russian,5,0.466,7-9,mes-qcri
+    English-Russian,5,0.462,7-8,jhu
+    English-Russian,5,0.445,8-9,commercial-3
+    English-Russian,6,0.402,10-11,balagur
+    English-Russian,6,0.391,10-11,lia
+    English-Russian,7,0.298,12,cu-zeman
     """
     
     CLUSTER_DATA = {}

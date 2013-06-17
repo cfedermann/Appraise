@@ -858,7 +858,7 @@ def _compute_ranking_clusters(load_file=False):
     
     else:
         PERL_OUTPUT = ''
-        with open(_dump, 'w') as infile:
+        with open(_dump, 'r') as infile:
             PERL_OUTPUT = infile.read()
     
     # Compute ranking cluster data for status page.

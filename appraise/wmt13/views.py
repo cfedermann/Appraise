@@ -615,7 +615,7 @@ def update_ranking(request=None):
     based solution...
     
     """
-    if request ist not None:
+    if request is not None:
         RANKINGS_CACHE['clusters'] = _compute_ranking_clusters(load_file=True)
         return HttpResponse('Ranking updated successfully')
     

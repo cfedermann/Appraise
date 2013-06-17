@@ -826,7 +826,7 @@ def _compute_ranking_clusters(load_file=False):
       'compute_ranking_clusters.perl')
     _wmt13 = join(TMP_PATH, 'wmt13-researcher-results.csv')
     _mturk = join(ROOT_PATH, 'wmt13', 'fixtures', 'wmt13-mturk-results.csv')
-    _dump = join(TMP_PATH, 'wmt13-ranking-clusters.txt')
+    _dump = join('/tmp', 'wmt13-ranking-clusters.txt')
     
     # If not loading cluster data from file, re-compute everything.
     if not load_file:

@@ -825,15 +825,20 @@ def _compute_ranking_clusters():
       'system3Id,system4Number,system4Id,system5Number,system5Id,' \
       'system1rank,system2rank,system3rank,system4rank,system5rank']
     
-    # Compute current dump of WMT13 results in CSV format.
-    for result in RankingResult.objects.filter(active=True, mturk_only=False):
-        results.append(result.export_to_csv())
+    # Compute current dump of WMT13 results in CSV format. We ignore any
+    # results which are incomplete, i.e. have been SKIPPED.
+    for result in RankingResult.objects.filter(item__hit__active=True,
+      item__hit__mturk_only=False):
+        _csv_output = result.export_to_csv()
+        if not _csv_output.endswith('-1,-1,-1,-1,-1'):
+            results.append(_csv_output)
     
+    results.append('')
     export_csv = u"\n".join(results)
     
     # Define file names.
     TMP_PATH = gettempdir()
-    _script = join(ROOT_PATH, 'scripts', 'compute_ranking_clusters.perl')
+    _script = join(ROOT_PATH, '..', 'scripts', 'compute_ranking_clusters.perl')
     _wmt13 = join(TMP_PATH, 'wmt13-researcher-results.csv')
     _mturk = join(ROOT_PATH, 'wmt13', 'fixtures', 'wmt13-mturk-results.csv')
     

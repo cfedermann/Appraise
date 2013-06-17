@@ -6,7 +6,10 @@ Project: Appraise evaluation system
 import logging
 
 from datetime import datetime, timedelta
+from os.path import join
 from random import seed, shuffle
+from subprocess import check_output
+from tempfile import gettempdir
 from urllib import unquote
 
 from django.contrib.auth.decorators import login_required
@@ -17,7 +20,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt13.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping
-from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
+from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
 # Setup logging support.
@@ -588,8 +591,7 @@ def status(request):
     if not STATUS_CACHE.has_key('user_stats'):
         update_status(key='user_stats')
     
-    if not STATUS_CACHE.has_key('clusters'):
-        update_status(key='clusters')
+    ranking_clusters = RANKING_CACHE.get('clusters', [])
     
     dictionary = {
       'active_page': "STATUS",
@@ -597,7 +599,7 @@ def status(request):
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
-      'clusters': STATUS_CACHE['clusters'],
+      'clusters': ranking_clusters,
       'commit_tag': COMMIT_TAG,
       'title': 'WMT13 Status',
     }
@@ -615,9 +617,10 @@ def update_ranking(request=None):
     based solution...
     
     """
-    _compute_rankings_clusters()
+    RANKING_CACHE[status_key] = _compute_ranking_clusters()
+    
     if request is not None:
-        return HttpResponse('NOT_IMPLEMENTED_YET:update_ranking()')
+        return HttpResponse('Ranking updated successfully')
 
 
 def update_status(request=None, key=None):
@@ -643,9 +646,6 @@ def update_status(request=None, key=None):
         
         elif status_key == 'user_stats':
             STATUS_CACHE[status_key] = _compute_user_stats()
-        
-        elif status_key == 'clusters':
-            STATUS_CACHE[status_key] = _compute_ranking_clusters()
     
     if request is not None:
         return HttpResponse('Status updated successfully')
@@ -820,152 +820,35 @@ def _compute_ranking_clusters():
     """
     Computes ranking clusters using Philipp Koehn's Perl code.
     """
-    # This is a dump from 20130614;  calling the actual Perl script soon ;)
-    PERL_OUTPUT = """
-    Spanish-English,1,0.634,1,uedin-heafield
-    Spanish-English,2,0.588,2-4,mes
-    Spanish-English,2,0.587,2-4,uedin-wmt13
-    Spanish-English,2,0.586,2-5,online-b
-    Spanish-English,2,0.555,4-6,limsi-ncode-soul
-    Spanish-English,2,0.540,5-6,dcu-prompsit-pbsmt
-    Spanish-English,3,0.493,7-8,fda
-    Spanish-English,3,0.480,7-9,dcu-prompsit
-    Spanish-English,3,0.460,8-10,cu-zeman
-    Spanish-English,3,0.433,9-10,jhu
-    Spanish-English,4,0.145,11,shef-wproa
-
-    English-Spanish,1,0.674,1,online-b
-    English-Spanish,2,0.623,2,uedin-wmt13
-    English-Spanish,3,0.582,3-5,mes
-    English-Spanish,3,0.567,3-5,promt
-    English-Spanish,3,0.555,3-5,talp-upc
-    English-Spanish,4,0.514,6,limsi-ncode
-    English-Spanish,5,0.470,7-9,fda
-    English-Spanish,5,0.446,7-11,cu-zeman
-    English-Spanish,5,0.441,7-11,dcu-prompsit-pbsmt
-    English-Spanish,5,0.439,8-11,jhu
-    English-Spanish,5,0.417,9-11,dcu-prompsit
-    English-Spanish,6,0.271,12,shef-wproa
-
-    German-English,1,0.671,1-2,online-b
-    German-English,1,0.659,1-2,uedin-syntax
-    German-English,2,0.597,3-5,uedin-wmt13
-    German-English,2,0.583,3-6,kit
-    German-English,2,0.578,3-7,mes
-    German-English,2,0.573,4-7,quaero
-    German-English,2,0.555,5-8,rwth-jane
-    German-English,2,0.533,7-9,limsi-ncode-soul
-    German-English,2,0.524,8-9,mes-szeged-reorder-split
-    German-English,3,0.480,10-12,cngl-dcu
-    German-English,3,0.479,10-12,tubitak
-    German-English,3,0.468,10-12,umd
-    German-English,4,0.384,13-14,cu-zeman
-    German-English,4,0.382,13-14,jhu
-    German-English,5,0.307,15,shef-wproa
-    German-English,6,0.226,16,desrt
-
-    English-German,1,0.672,1,promt
-    English-German,2,0.646,2-3,uedin-syntax
-    English-German,2,0.646,2-3,online-b
-    English-German,3,0.582,4-5,uedin-wmt13
-    English-German,3,0.578,4-5,kit
-    English-German,4,0.542,6,stanford
-    English-German,5,0.504,7-9,limsi-ncode-soul
-    English-German,5,0.491,7-9,jhu
-    English-German,5,0.484,7-9,mes-reorder
-    English-German,6,0.451,10-11,tubitak
-    English-German,6,0.449,10-11,cu-zeman
-    English-German,7,0.341,12,uu
-    English-German,8,0.314,13-14,shef-wproa
-    English-German,8,0.301,13-14,rwth-jane
-
-    French-English,1,0.632,1-2,uedin-heafield
-    French-English,1,0.611,1-3,uedin-wmt13
-    French-English,1,0.609,2-4,online-b
-    French-English,1,0.585,3-5,limsi-ncode-soul
-    French-English,1,0.567,4-5,kit
-    French-English,2,0.520,6,mes-simplifiedfrench
-    French-English,3,0.474,7,dcu
-    French-English,4,0.437,8-10,rwth
-    French-English,4,0.427,8-11,cu-zeman
-    French-English,4,0.420,8-11,cmu-tree-to-tree
-    French-English,4,0.400,10-11,jhu
-    French-English,5,0.319,12,shef-wproa
-
-    English-French,1,0.635,1-2,limsi-ncode-soul
-    English-French,1,0.634,1-2,uedin-wmt13
-    English-French,2,0.592,3-7,online-b
-    English-French,2,0.589,3-6,kit
-    English-French,2,0.573,3-7,stanford
-    English-French,2,0.561,4-8,mes
-    English-French,2,0.555,5-8,promt
-    English-French,2,0.532,7-9,mes-inflection
-    English-French,2,0.501,8-9,rwth-phrase-based-jane
-    English-French,3,0.456,10,dcu
-    English-French,4,0.388,11-12,cu-zeman
-    English-French,4,0.387,11-12,jhu
-    English-French,5,0.328,13,omnifluent-translate-english-to-french
-    English-French,6,0.268,14,its-latl
-
-    Czech-English,1,0.613,1-2,uedin-heafield
-    Czech-English,1,0.592,1-3,mes
-    Czech-English,1,0.576,2-5,online-b
-    Czech-English,1,0.569,2-5,uedin-syntax
-    Czech-English,1,0.560,3-5,uedin-wmt13
-    Czech-English,2,0.518,6,cu-zeman
-    Czech-English,3,0.473,7-8,cu-tamchyna
-    Czech-English,3,0.453,7-8,fda
-    Czech-English,4,0.343,9,jhu
-    Czech-English,5,0.304,10,shef-wproa
-
-    English-Czech,1,0.660,1,cu-depfix
-    English-Czech,2,0.618,2-3,cu-bojar-2013
-    English-Czech,2,0.615,2-3,online-b
-    English-Czech,3,0.525,4-5,uedin-wmt13
-    English-Czech,3,0.509,4-6,mes
-    English-Czech,3,0.504,5-6,cu-zeman
-    English-Czech,4,0.457,7-8,cu-phrasefix
-    English-Czech,4,0.449,7-9,cu-tectomt
-    English-Czech,4,0.437,8-10,commercial-1
-    English-Czech,4,0.427,9-10,commercial-2
-    English-Czech,5,0.300,11,shef-wproa
-
-    Russian-English,1,0.669,1,online-b
-    Russian-English,2,0.609,2-3,cmu
-    Russian-English,2,0.603,2-3,qcri-mes
-    Russian-English,3,0.566,4-7,mes-qcri
-    Russian-English,3,0.557,4-8,promt
-    Russian-English,3,0.548,4-9,uedin-wmt13
-    Russian-English,3,0.532,5-9,ucam-multifrontend
-    Russian-English,3,0.520,6-10,balagur
-    Russian-English,3,0.518,6-11,lia
-    Russian-English,3,0.497,7-11,cu-karel
-    Russian-English,3,0.480,9-13,omnifluent-translate-russian-to-english-constrained
-    Russian-English,3,0.459,11-16,umd
-    Russian-English,3,0.453,11-15,omnifluent-translate-russian-to-english-unconstrained
-    Russian-English,3,0.434,13-16,commercial-3
-    Russian-English,3,0.431,13-16,uedin-syntax
-    Russian-English,3,0.419,13-16,jhu
-    Russian-English,4,0.206,17,cu-zeman
-
-    English-Russian,1,0.701,1,promt
-    English-Russian,2,0.661,2,online-b
-    English-Russian,3,0.593,3,cmu
-    English-Russian,4,0.538,4-5,uedin-wmt13
-    English-Russian,4,0.534,4-5,qcri-mes
-    English-Russian,4,0.508,5-6,cu-karel
-    English-Russian,5,0.466,7-9,mes-qcri
-    English-Russian,5,0.462,7-8,jhu
-    English-Russian,5,0.445,8-9,commercial-3
-    English-Russian,6,0.402,10-11,balagur
-    English-Russian,6,0.391,10-11,lia
-    English-Russian,7,0.298,12,cu-zeman
-    """
+    results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \
+      'system1Number,system1Id,system2Number,system2Id,system3Number,' \
+      'system3Id,system4Number,system4Id,system5Number,system5Id,' \
+      'system1rank,system2rank,system3rank,system4rank,system5rank']
     
+    # Compute current dump of WMT13 results in CSV format.
+    for result in RankingResult.objects.filter(active=True, mturk_only=False):
+        results.append(result.export_to_csv())
+    
+    export_csv = u"\n".join(results)
+    
+    # Define file names.
+    TMP_PATH = gettempdir()
+    _script = join(ROOT_PATH, 'scripts', 'compute_ranking_clusters.perl')
+    _wmt13 = join(TMP_PATH, 'wmt13-researcher-results.csv')
+    _mturk = join(ROOT_PATH, 'wmt13', 'fixtures', 'wmt13-mturk-results.csv')
+    
+    # Write current dump of results to file.
+    with open(_wmt13, 'w') as outfile:
+        outfile.write(export_csv)
+    
+    # Run Philipp's Perl script to compute ranking clusters.
+    PERL_OUTPUT = check_output(['perl', _script, _wmt13, _mturk])
+    
+    # Compute ranking cluster data for status page.
     CLUSTER_DATA = {}
     for line in PERL_OUTPUT.split("\n"):
         _data = line.strip().split(',')
-        if not len(_data) == 5:
+        if not len(_data) == 5 or _data[0] == 'task':
             continue
         
         _data[0] = _data[0].replace('-', u' → ')

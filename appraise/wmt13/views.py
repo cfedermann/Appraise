@@ -615,10 +615,12 @@ def update_ranking(request=None):
     based solution...
     
     """
-    RANKINGS_CACHE['clusters'] = _compute_ranking_clusters()
-    
-    if request is not None:
+    if request ist not None:
+        RANKINGS_CACHE['clusters'] = _compute_ranking_clusters(load_file=True)
         return HttpResponse('Ranking updated successfully')
+    
+    else:
+        RANKINGS_CACHE['clusters'] = _compute_ranking_clusters()
 
 
 def update_status(request=None, key=None):
@@ -814,38 +816,50 @@ def _compute_user_stats():
     return user_stats
 
 
-def _compute_ranking_clusters():
+def _compute_ranking_clusters(load_file=False):
     """
     Computes ranking clusters using Philipp Koehn's Perl code.
     """
-    results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \
-      'system1Number,system1Id,system2Number,system2Id,system3Number,' \
-      'system3Id,system4Number,system4Id,system5Number,system5Id,' \
-      'system1rank,system2rank,system3rank,system4rank,system5rank']
-    
-    # Compute current dump of WMT13 results in CSV format. We ignore any
-    # results which are incomplete, i.e. have been SKIPPED.
-    for result in RankingResult.objects.filter(item__hit__active=True,
-      item__hit__mturk_only=False):
-        _csv_output = result.export_to_csv()
-        if not _csv_output.endswith('-1,-1,-1,-1,-1'):
-            results.append(_csv_output)
-    
-    results.append('')
-    export_csv = u"\n".join(results)
-    
     # Define file names.
     TMP_PATH = gettempdir()
-    _script = join(ROOT_PATH, '..', 'scripts', 'compute_ranking_clusters.perl')
+    _script = join(ROOT_PATH, '..', 'scripts',
+      'compute_ranking_clusters.perl')
     _wmt13 = join(TMP_PATH, 'wmt13-researcher-results.csv')
     _mturk = join(ROOT_PATH, 'wmt13', 'fixtures', 'wmt13-mturk-results.csv')
+    _dump = join(TMP_PATH, 'wmt13-ranking-clusters.txt')
     
-    # Write current dump of results to file.
-    with open(_wmt13, 'w') as outfile:
-        outfile.write(export_csv)
+    # If not loading cluster data from file, re-compute everything.
+    if not load_file:
+        results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \
+          'system1Number,system1Id,system2Number,system2Id,system3Number,' \
+          'system3Id,system4Number,system4Id,system5Number,system5Id,' \
+          'system1rank,system2rank,system3rank,system4rank,system5rank']
+        
+        # Compute current dump of WMT13 results in CSV format. We ignore any
+        # results which are incomplete, i.e. have been SKIPPED.
+        for result in RankingResult.objects.filter(item__hit__active=True,
+          item__hit__mturk_only=False):
+            _csv_output = result.export_to_csv()
+            if not _csv_output.endswith('-1,-1,-1,-1,-1'):
+                results.append(_csv_output)
+        
+        results.append('')
+        export_csv = u"\n".join(results)
+        
+        # Write current dump of results to file.
+        with open(_wmt13, 'w') as outfile:
+            outfile.write(export_csv)
+        
+        # Run Philipp's Perl script to compute ranking clusters.
+        PERL_OUTPUT = check_output(['perl', _script, _wmt13, _mturk])
+        
+        with open(_dump, 'w') as outfile:
+            outfile.write(PERL_OUTPUT)
     
-    # Run Philipp's Perl script to compute ranking clusters.
-    PERL_OUTPUT = check_output(['perl', _script, _wmt13, _mturk])
+    else:
+        PERL_OUTPUT = ''
+        with open(_dump, 'w') as infile:
+            PERL_OUTPUT = infile.read()
     
     # Compute ranking cluster data for status page.
     CLUSTER_DATA = {}

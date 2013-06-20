@@ -10,7 +10,7 @@ $|=1;
 die("\n\tusage: $0 <srcfile>\n\n") if scalar @ARGV < 1;
 my $srcfile = "";
 foreach (@ARGV) {
-    $srcfile .= $_ . " ";
+  $srcfile .= $_ . " ";
 }
 
 my @LOG_FACTORIAL = (0,0);
@@ -44,7 +44,9 @@ sub rank_by_expected_wins {
   foreach my $p1 (@SYSTEM) {
     foreach my $p2 (@SYSTEM) {
       next if $p1 eq $p2;
-      $SUM_WINS{$p1} += $$P{$p1}{$p2};
+      if (defined($$P{$p1}) && defined($$P{$p1}{$p2})) {
+        $SUM_WINS{$p1} += $$P{$p1}{$p2};
+      }
     }
   }
 
@@ -57,8 +59,7 @@ sub rank_by_expected_wins {
   my $last_rank = 99;
   my $cluster_count = 1;
   foreach (reverse sort @OUT) {
-#    /^[\d\.]+ \(([\d\-]+)\)/;
-    /^([\d\.]+) \(([\d\-]+)\): (.+)/;
+    /^([\d\.]+) \(([\d\-]+)\): (.+)$/;
     my ($from,$to) = split(/\-/,$2);
     if ($from > $last_rank) {
 ###      print "      ------------------\n";
@@ -84,7 +85,9 @@ sub bootstrap {
     foreach my $p1 (@SYSTEM) {
       foreach my $p2 (@SYSTEM) {
         next if $p1 eq $p2;
-        $SUM_WINS{$p1} += $P{$task}{$p1}{$p2};
+        if (defined($P{$task}) && defined($P{$task}{$p1}) && defined($P{$task}{$p1}{$p2})) {
+          $SUM_WINS{$p1} += $P{$task}{$p1}{$p2};
+        }
       }
     }
     
@@ -207,7 +210,7 @@ sub compute_win_ratio {
 
 sub pairwise {
   my ($task,$WIN,$TOTAL) = @_;
-  my %DISTINCTION;
+  my %DISTINCTION = ( 0 => 0, 1 => 0, 2 => 0, 3 => 0);
 ###  print "\n=== $task ===\n";
 ###  printf "%10s ","";
   foreach my $system2 (sort keys %{$$TOTAL{$task}}) {
@@ -218,13 +221,14 @@ sub pairwise {
     my (%FIRST,%SECOND);
     foreach my $system2 (sort keys %{$$TOTAL{$task}}) {
       if ($system1 eq $system2) {
-	$FIRST{$system2} = sprintf("%7s",substr($system2,0,7));
-	$SECOND{$system2} = sprintf("%7s",substr($system2,0,7));
-	next;
+        $FIRST{$system2} = sprintf("%7s",substr($system2,0,7));
+        $SECOND{$system2} = sprintf("%7s",substr($system2,0,7));
+        next;
       }
       my $win = 0;
       $win = $$WIN{$task}{$system1}{$system2} if defined($$WIN{$task}{$system1}{$system2});
-      my $loss = $$TOTAL{$task}{$system1}{$system2}-$win;
+      my $loss = 0;
+      $loss = $$TOTAL{$task}{$system1}{$system2}-$win if defined($$TOTAL{$task}{$system1}{$system2});
       my $p_value = &compute_p_value($win,$loss);
 #print "$task $system1 $system2 $p_value\n" if $ratio == 1;
       my $distinction = "";
@@ -233,7 +237,7 @@ sub pairwise {
       $distinction .= $symbol if $p_value <= 0.05;
       $distinction .= $symbol if $p_value <= 0.01;
       $FIRST{$system2} = sprintf("%3d/%3d",$win,$loss);
-      $SECOND{$system2} = sprintf(".%2d %3s",$win/($win+$loss)*100,$distinction);
+      $SECOND{$system2} = sprintf(".%2d %3s",$win/($win+$loss+0.000001)*100,$distinction);
       $DISTINCTION{length($distinction)} += .5;
     }
 ###    printf "%10s:",substr($system1,0,10);
@@ -272,10 +276,10 @@ sub process_judgment {
       my $rank2 = $$DATA[$INDEX{"system${j}rank"}];
       next unless $rank1 != $rank2;
       if ($rank1 < $rank2) {
-	$$WIN{$task}{$system1}{$system2}++;
+        $$WIN{$task}{$system1}{$system2}++;
       }
       else {
-	$$WIN{$task}{$system2}{$system1}++;
+        $$WIN{$task}{$system2}{$system1}++;
       }
       $$TOTAL{$task}{$system1}{$system2}++;
       $$TOTAL{$task}{$system2}{$system1}++;
@@ -312,6 +316,7 @@ sub clean_up_language {
 
 sub compute_p_value {
   my ($win,$loss) = @_;
+  return 1 if $win+$loss == 0;
   my $total = $win + $loss;
   my $min = $win < $loss ? $win : $loss;
   my $p = 0;

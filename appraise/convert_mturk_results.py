@@ -43,9 +43,14 @@ def convert_mturk_to_csv(mturk_data, mturk_header):
         values.append(mturk_data[mturk_header.get('Answer.srclang', -1)])
         values.append(mturk_data[mturk_header.get('Answer.trglang', -1)])
         _answer_var = 'Answer.srcIndex_{0}'.format(sentence)
-        values.append(mturk_data[mturk_header.get(_answer_var, -1)])
+        _src_index = mturk_data[mturk_header.get(_answer_var, -1)]
+        # If we could successfully extract the sentence id from the answer
+        # data, we have to increment it by 1 as the WMT format is 1-indexed
+        if _src_index != -1:
+            _src_index += 1
+        values.append(_src_index)
         values.append('-1') # documentId
-        values.append(mturk_data[mturk_header.get(_answer_var, -1)])
+        values.append(_src_index)
         values.append(mturk_data[mturk_header.get('Answer.workerId', -1)])
         values.append('-1') # system1Number
         values.append(systems_x[0])

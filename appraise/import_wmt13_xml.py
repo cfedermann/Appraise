@@ -16,7 +16,7 @@ positional arguments:
                         using patterns such as '*.xml' or similar.
 
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit.
   --wait SLEEP_SECONDS  Amount of seconds to wait between individual files.
   --dry-run             Enable dry run to simulate import.
   --mturk-only          Enable MTurk-only flag for all HITs.

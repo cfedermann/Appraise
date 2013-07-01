@@ -9,10 +9,10 @@ usage: python convert_mturk_results.py [-h] mturk-file
 Converts MTurk results to WMT13 export CSV format.
 
 positional arguments:
-  mturk-file  Tab-separated results file exported from MTurk.
+  mturk-file  Tab-separated results file exported from MTurk
 
 optional arguments:
-  -h, --help  show this help message and exit.
+  -h, --help  Show this help message and exit.
 
 """
 import argparse

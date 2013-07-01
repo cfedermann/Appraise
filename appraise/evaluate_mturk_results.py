@@ -13,7 +13,7 @@ positional arguments:
   appraise-file  Appraise results in WMT13 export CSV format
 
 optional arguments:
-  -h, --help     show this help message and exit
+  -h, --help     Show this help message and exit.
 
 """
 from itertools import combinations

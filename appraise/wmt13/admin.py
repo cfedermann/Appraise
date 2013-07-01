@@ -38,6 +38,18 @@ def export_hit_xml(modeladmin, request, queryset):
 export_hit_xml.short_description = "Export selected HITs to XML"
 
 
+def deactivate_hits(modeladmin, request, queryset):
+    """
+    Deactivates the HIT instances for the given queryset.
+    """
+    for hit in queryset:
+        if isinstance(hit, HIT):
+            hit.active = False
+            hit.save()
+
+deactivate_hits.short_description = "Deactivate selected HITs"
+
+
 def export_hit_ids_to_csv(modeladmin, request, queryset):
     """
     Exports the HIT ids for the given queryset to CSV format.
@@ -111,7 +123,7 @@ class HITAdmin(admin.ModelAdmin):
     list_filter = ('language_pair', 'active', 'mturk_only')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id',)
-    actions = (export_hit_xml, export_hit_ids_to_csv,
+    actions = (export_hit_xml, deactivate_hits, export_hit_ids_to_csv,
       export_hit_results_to_apf, export_hit_results_agreements)
     filter_horizontal = ('users',)
     

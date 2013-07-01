@@ -4,7 +4,7 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: python convert_mturk_results [-h] mturk-file
+usage: python convert_mturk_results.py [-h] mturk-file
 
 Converts MTurk results to WMT13 export CSV format.
 
@@ -12,7 +12,7 @@ positional arguments:
   mturk-file  Tab-separated results file exported from MTurk.
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help  show this help message and exit.
 
 """
 import argparse

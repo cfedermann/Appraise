@@ -45,7 +45,7 @@ def compute_agreement_scores(data):
         return (_alpha, _kappa, _pi, _S)
     
     except ZeroDivisionError, msg:
-        return (0, 0, 0, 0)
+        return (None, None, None, None)
 
 
 if __name__ == "__main__":
@@ -107,11 +107,18 @@ if __name__ == "__main__":
         while any([not x.ready() for x in handles]):
             continue
         
+        # Filter out invalid scores.
+        filtered = []
+        for score in scores:
+            if any([x is None or x > 1 for x in score]):
+                continue
+            filtered.append(score)
+        
         # Compute average scores, ignoring any "empty" results.
         average_scores = []
         for i in range(4):
-            _aggregate_score = sum([x[i] for x in scores if x[i]])
-            _total_scores = float(len([x[i] for x in scores if x[i]]) or 1)
+            _aggregate_score = sum([x[i] for x in filtered if x[i]])
+            _total_scores = float(len([x[i] for x in filtered if x[i]]) or 1)
             average_scores.append(_aggregate_score/_total_scores)
         
         # Print out average agreement scores for current language pair.

@@ -24,9 +24,9 @@ from __future__ import print_function, unicode_literals
 
 import argparse
 from collections import defaultdict
+from csv import DictReader
 from itertools import combinations
 from multiprocessing import Pool, cpu_count
-from appraise.utils import AnnotationTask
 
 PARSER = argparse.ArgumentParser(description="Computes agreement scores " \
   "for the given results file in WMT format.")
@@ -38,85 +38,104 @@ PARSER.add_argument("--inter", action="store_true", default=False,
   dest="inter_annotator_agreement", help="Compute inter-annotator agreement.")
 PARSER.add_argument("--intra", action="store_true", default=False,
   dest="intra_annotator_agreement", help="Compute intra-annotator agreement.")
+PARSER.add_argument("--verbose", action="store_true", default=False,
+  dest="verbose", help="Display additional information on how kappa " \
+  "values are computed.")
+
 
 def compute_agreement_scores(data):
     """
     Computes agreement scores for the given data set.
     """
-    _task = AnnotationTask(data=data)
-    _names = list(set([c[0] for c in data]))
-    
-    # Computer coder "name".  This is either a pair of two coders (cA, cB)
-    # or just a single coder cA in case of intra-annotator agreement scores.
-    if _names[0].split('-')[0] == _names[1].split('-')[0]:
-        _key = _names[0].split('-')[0]
-    else:
-        _key = '{0}-{1}'.format(_names[0], _names[1])
+    # Make triples accessible by item id.
+    _by_items = defaultdict(list)
+    for _unused_coder_name, item, labels in data:
+        _by_items[item].append(labels) # We only need the labels here.
     
     try:
-        _kappa = _task.kappa()
-        # pylint: disable-msg=E1101
-        _multi_kappa = _task.multi_kappa()
-        return (_kappa, _multi_kappa, _key)
+        identical_cnt = 0
+        comparable_cnt = 0
+        ties_cnt = 0
+        ties_total = 0
+        
+        for item_labels in _by_items.values():
+            ties_total += len(item_labels)
+            
+            for individual_label in item_labels:
+                if '=' in individual_label:
+                    ties_cnt += 1
+            
+            # cfedermann: combinations() throws a ValueError if x does not
+            # contain two or more elements when using Python 2.6;  hence we
+            # check length of x before using it ;)
+            if len(item_labels) > 1:
+                for first_label, second_label in combinations(item_labels, 2):
+                    if first_label == second_label:
+                        identical_cnt += 1
+                    comparable_cnt += 1
+        
+        return (identical_cnt, comparable_cnt, ties_cnt, ties_total)
     
-    except (ZeroDivisionError):
-        return (None, None, _key)
+    except:
+        from traceback import print_exc
+        print_exc()
 
 
 if __name__ == "__main__":
     args = PARSER.parse_args()
     
-    # TODO: use proper CSV reader instead...
-    results_data = defaultdict(lambda: defaultdict(list))
-    line_no = 0
+    if not args.inter_annotator_agreement and \
+      not args.intra_annotator_agreement:
+        print("Defaulting to --inter mode.")
+        args.inter_annotator_agreement = True
     
-    for line in args.results_file:
-        line_no = line_no + 1
+    results_data = defaultdict(lambda: defaultdict(list))
+    for i, row in enumerate(DictReader(args.results_file)):
+        language_pair = '{0}-{1}'.format(row.get('srclang'), row.get('trglang'))
+        segment_id = int(row.get('srcIndex'))
+        judge_id = row.get('judgeId')
         
-        # The first line defines the header field names, we simply skip it.
-        if line_no == 1:
+        # Filter out results where a user decided to "skip" ranking.
+        systems = [row.get('system%dId' % (y+1)) for y in range(5)]
+        rankings = [int(x) for x in \
+          [row.get('system%drank' % (y+1)) for y in range(5)]]
+        if all([x == -1 for x in rankings]):
             continue
         
-        else:
-            field_data = line.strip().split(',')
-            language_pair = '{0}-{1}'.format(*field_data[0:2])
-            segment_id = int(field_data[4])
-            judge_id = field_data[5]
+        # Compute individual ranking decisions for this users.
+        for a, b in combinations(range(5), 2):
+            _c = judge_id
+            _i = '{0}.{1}.{2}'.format(segment_id, systems[a], systems[b])
             
-            # Filter out results where a user decided to "skip" ranking.
-            results = [int(x) for x in field_data[16:21]]
-            if all([x == -1 for x in results]):
-                continue
+            if rankings[a] < rankings[b]:
+                _v = '{0}>{1}'.format(systems[a], systems[b])
+            elif rankings[a] > rankings[b]:
+                _v = '{0}<{1}'.format(systems[a], systems[b])
+            else:
+                _v = '{0}={1}'.format(systems[a], systems[b])
             
-            # Compute individual ranking decisions for this users.
-            for a, b in combinations(range(5), 2):
-                _c = judge_id
-                _i = '{0}.{1}.{2}'.format(segment_id, a+1, b+1)
-                
-                if results[a] < results[b]:
-                    _v = '{0}>{1}'.format(chr(65+a), chr(65+b))
-                elif results[a] > results[b]:
-                    _v = '{0}<{1}'.format(chr(65+a), chr(65+b))
-                else:
-                    _v = '{0}={1}'.format(chr(65+a), chr(65+b))
-                
-                # Append ranking decision in Artstein and Poesio format.
-                results_data[language_pair][segment_id].append((_c, _i, _v))
+            # print('Appending', language_pair, segment_id, _c, _i, _v)
+            
+            # Append ranking decision in Artstein and Poesio format.
+            results_data[language_pair][segment_id].append((_c, _i, _v))
     
     # We allow to use multi-processing.
     pool = Pool(processes=args.processes)
-    print('Language pair        kappa   m-kappa c-kappa')
+    print('Language pair        pA     pE     kappa  ',
+      end='' if args.verbose else '\n')
+    if args.verbose:
+        print('(agree, comparable, ties, total)')
     
-    language_pairs = ('English-Czech', 'English-German', 'English-Spanish',
-      'English-French', 'Czech-English', 'German-English', 'Spanish-English',
-      'French-English', 'English-Russian', 'Russian-English')
+    # Use the following order to remain consistent with previous WMTs.
+    language_pairs = ('Czech-English', 'English-Czech', 'German-English',
+      'English-German', 'Spanish-English', 'English-Spanish',
+      'French-English', 'English-French', 'Russian-English',
+      'English-Russian')
     
     for language_pair in language_pairs:
         segments_data = results_data[language_pair]
         scores = []
         handles = []
-        
-        per_coder_data = defaultdict(list)
         
         for segment_id, _judgements in segments_data.items():
             # Collect judgements on a per-coder-level.
@@ -124,26 +143,14 @@ if __name__ == "__main__":
             for _c, _i, _l in _judgements:
                 _coders[_c].append((_c, _i, _l))
             
-            # Inter-annotator agreement is computed for all pairs of coders
-            # (cA, cB).  We collect these in the per_coder_data dictionary,
-            # reducing the number of calls to compute_agreement_scores().
+            # Inter-annotator agreement is computed for all items.
             if args.inter_annotator_agreement:
-                # Skip segments with only a single annotation.
-                if len(_coders.keys()) < 2:
-                    continue
+                # Pool compute_agreement_scores() call and save handle.
+                handle = pool.apply_async(compute_agreement_scores,
+                  args=(_judgements,), callback=scores.append)
+                handles.append(handle)
+                continue
                 
-                # Extract pairwise judgements for all possible coder pairs.
-                _coders_names = list(_coders.keys())
-                _coders_names.sort()
-                for a, b in combinations(range(len(_coders_names)), 2):
-                    _cA = _coders_names[a]
-                    _cB = _coders_names[b]
-                    _coder = '{0}-{1}'.format(_cA, _cB)
-                    
-                    # Update per_coder_data dictionary with judgements.
-                    per_coder_data[_coder].extend(_coders[_cA])
-                    per_coder_data[_coder].extend(_coders[_cB])
-            
             # Intra-annotator agreement is solely computed on items for which
             # an annotator has generated two or more annotations.
             elif args.intra_annotator_agreement:
@@ -158,8 +165,9 @@ if __name__ == "__main__":
                     if all([len(x)<2 for x in _items.values()]):
                         continue
                     
-                    # In order to avoid getting problems with NLTK, we have
-                    # to rename the judgements for the current coder...
+                    # We rename the judgements for the current coder s.t. we
+                    # can compute intra-annotator agreement scores from
+                    # inter-annotator agreement data ;)
                     renamed_judgements = []
                     for _i, _ls in _items.items():
                         for d in range(len(_ls)):
@@ -170,24 +178,6 @@ if __name__ == "__main__":
                     handle = pool.apply_async(compute_agreement_scores,
                       args=(renamed_judgements,), callback=scores.append)
                     handles.append(handle)
-            
-            # Naive implementation calling compute_agreement_scores() on all
-            # judgements which are available for the current item. Very slow.
-            else:
-                handle = pool.apply_async(compute_agreement_scores,
-                  args=(_judgements,), callback=scores.append)
-                handles.append(handle)
-        
-        # For inter-annotator agreement, we pool compute_agreement_scores()
-        # now to minimise the number of AnnotationTask instances used.
-        #
-        # This greatly speeds up processing time.
-        if args.inter_annotator_agreement:
-            for _pairwise_judgements in per_coder_data.values():
-                # Pool compute_agreement_scores() call and save handle.
-                handle = pool.apply_async(compute_agreement_scores,
-                  args=(_pairwise_judgements,), callback=scores.append)
-                handles.append(handle)
         
         # Block until all async computation processes are completed.
         while any([not x.ready() for x in handles]):
@@ -195,24 +185,28 @@ if __name__ == "__main__":
         
         # Compute average scores, normalising on per-item level.
         average_scores = []
-        for i in range(2):
-            _aggregate_score = sum([x[i] for x in scores if x[i] is not None])
-            _total_scores = len([x[i] for x in scores if x[i] is not None])
-            average_scores.append(_aggregate_score/float(_total_scores or 1))
+        for i in range(4):
+            average_scores.append(sum([x[i] for x in scores]))
         
-        # Compute average scores, normalising on per-coder level.
-        per_coder = defaultdict(list)
-        for score in scores:
-            per_coder[score[-1]].append(score[1])
+        _identical = average_scores[0]
+        _comparable = average_scores[1]
+        _ties = average_scores[2]
+        _total = average_scores[3]
         
-        average = []
-        for coder, coder_data in per_coder.items():
-            _aggregate_score = sum([x for x in coder_data if x is not None])
-            _total_scores = len([x for x in coder_data if x is not None])
-            average.append(_aggregate_score/float(_total_scores or 1))
+        # Compute p(A) probability.
+        pA = _identical / float(_comparable or 1)
         
-        average_scores.append(sum(average)/float(len(average) or 1))
+        # Compute p(E) empirically, based on the number of observed ties.
+        pTies = _ties / float(_total or 1)
+        pNoTies = 1.0 - pTies
+        pE = pTies**2 + (pNoTies/2.0)**2 + (pNoTies/2.0)**2
         
-        # Print out average agreement scores for current language pair.
-        print('{0:>20} {1:.5} {2:.5} {3:.5}'.format(language_pair,
-          *average_scores))
+        # Compute kappa score.
+        kappa = (pA - pE) / float(1.0 - pE)
+        
+        # Display results for current language pair.
+        print('{0:>20} {1: 0.3f} {2: 0.3f} {3: 0.3f}'.format(language_pair,
+          pA, pE, kappa), end='' if args.verbose else '\n')
+        
+        if args.verbose:
+            print(' {0:>8} {1:>8} {2:>8} {3:>8}'.format(*average_scores[:4]))

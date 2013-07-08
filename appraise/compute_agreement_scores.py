@@ -4,20 +4,20 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: python compute_agreement_scores.py  [-h] [--processes PROCESSES]
-                                           [--inter] [--intra] results-file
+usage: python compute_agreement_scores.py [-h] [--processes PROCESSES]
+                                          [--inter] [--intra] [--verbose]
+                                          results-file
 
 Computes agreement scores for the given results file in WMT format.
 
 positional arguments:
-  results-file          Comma-separated results file in WMT format.
+  results-file  Comma-separated results file in WMT format.
 
 optional arguments:
-  -h, --help            Show this help message and exit.
-  --processes PROCESSES
-                        Sets the number of parallel processes.
-  --inter               Compute inter-annotator agreement.
-  --intra               Compute intra-annotator agreement.
+  -h, --help    Show this help message and exit.
+  --inter       Compute inter-annotator agreement.
+  --intra       Compute intra-annotator agreement.
+  --verbose     Display additional information on kappa values.
 
 """
 from __future__ import print_function, unicode_literals
@@ -39,8 +39,7 @@ PARSER.add_argument("--inter", action="store_true", default=False,
 PARSER.add_argument("--intra", action="store_true", default=False,
   dest="intra_annotator_agreement", help="Compute intra-annotator agreement.")
 PARSER.add_argument("--verbose", action="store_true", default=False,
-  dest="verbose", help="Display additional information on how kappa " \
-  "values are computed.")
+  dest="verbose", help="Display additional information on kappa values.")
 
 
 def compute_agreement_scores(data):

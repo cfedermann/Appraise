@@ -11,13 +11,15 @@ usage: python compute_agreement_scores.py [-h] [--processes PROCESSES]
 Computes agreement scores for the given results file in WMT format.
 
 positional arguments:
-  results-file  Comma-separated results file in WMT format.
+  results-file          Comma-separated results file in WMT format.
 
 optional arguments:
-  -h, --help    Show this help message and exit.
-  --inter       Compute inter-annotator agreement.
-  --intra       Compute intra-annotator agreement.
-  --verbose     Display additional information on kappa values.
+  -h, --help            Show this help message and exit.
+  --processes PROCESSES
+                        Sets the number of parallel processes.
+  --inter               Compute inter-annotator agreement.
+  --intra               Compute intra-annotator agreement.
+  --verbose             Display additional information on kappa values.
 
 """
 from __future__ import print_function, unicode_literals

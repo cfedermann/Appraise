@@ -71,7 +71,19 @@ def _save_results(item, user, duration, raw_result):
     else:
         _result = EvaluationResult(item=item, user=user)
     
-    _result.duration = duration
+    # Django >1.3 uses django.utils.dateparse.parse_time to prepare TimeField
+    # values for database storage.  This would throw a TypeError as duration
+    # has type datetime.timedelta which cannot be parsed by parse_time.
+    #
+    # To solve this, we convert duration to its String representation.
+    try:
+        from django.utils.dateparse import parse_time
+        _result.duration = str(duration)
+    
+    # For Django 1.3, we can simply leave duration as is.
+    except TypeError:
+        _result.duration = duration
+    
     _result.raw_result = raw_result
     _result.save()
 

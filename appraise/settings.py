@@ -122,7 +122,7 @@ TEMPLATE_DIRS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-  'django.core.context_processors.debug', 
+  'django.core.context_processors.debug',
   'django.core.context_processors.i18n',
   'django.core.context_processors.media',
   'django.core.context_processors.static',
@@ -140,7 +140,7 @@ INSTALLED_APPS = (
   'django.contrib.staticfiles',
   'django.contrib.admin',
   'django.contrib.messages',
-    
+
   'appraise.evaluation',
   'appraise.wmt13',
 )

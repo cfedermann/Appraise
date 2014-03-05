@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Each $paramname is defined as a field in the input file. -->
+<!-- Please note that the text starting with <ExternalURL> and -->
+<!-- ending with </ExternalURL> must remain in a SINGLE LINE.  -->
+<ExternalQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd">
+	<ExternalURL>http://www.dfki.de/appraise/wmt13/mturk/?appraise_id=${helper.urlencode($appraise_id)}</ExternalURL>
+	<FrameHeight>800</FrameHeight>
+</ExternalQuestion>

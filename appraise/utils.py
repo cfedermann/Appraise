@@ -5,7 +5,25 @@ Project: Appraise evaluation system
 """
 import logging
 from datetime import timedelta
-from nltk.metrics.agreement import AnnotationTask
+
+from appraise.settings import LOG_LEVEL, LOG_HANDLER
+
+# Setup logging support.
+logging.basicConfig(level=LOG_LEVEL)
+LOGGER = logging.getLogger('appraise.utils')
+LOGGER.addHandler(LOG_HANDLER)
+
+# cfedermann: This allows to gracefully start up even if NLTK is not
+#   installed;  obviously, NLTK-based features won't work but you can
+#   perform, e.g., syncdb and test other Appraise features.
+try:
+    from nltk.metrics.agreement import AnnotationTask
+
+except ImportError:
+    LOGGER.warning('NLTK is NOT available, using fallback AnnotationTask ' \
+      'class instead. This does NOT implement any NLTK features!')
+    class AnnotationTask(object):
+        pass
 
 log = logging.getLogger(__file__)
 

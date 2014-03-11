@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
 {% block content %}
   {% if form.errors %}
@@ -11,7 +11,7 @@
   <div class="page-header">
     <h1>User Authentication <small>Your username and password, please...</small></h1>
   </div>
-  <form class="form-horizontal" method="post" action="{% url 'appraise.views.login' %}">
+  <form class="form-horizontal" method="post" action="{% url appraise.views.login %}">
   {% csrf_token %}
 
   <fieldset>

@@ -30,7 +30,7 @@
 
   <p>This is Appraise. It supports collaborative collection of human feedback for evaluation tasks such as <em>Translation Quality Checking</em>, <em>Ranking and Error Classification</em>, and <em>Manual Post-Editing</em>.</p>
 
-  <p><a class="btn btn-primary btn-large" href="{% url 'appraise.evaluation.views.overview' %}">Access your evaluation tasks &raquo;</a> <a class="btn btn-inverse btn-large" href="{% url 'appraise.wmt13.views.overview' %}">Access WMT13 evaluation &raquo;</a></p>
+  <p>{% if "evaluation" in installed_apps %}<a class="btn btn-primary btn-large" href="{% url appraise.evaluation.views.overview %}">Access your evaluation tasks &raquo;</a> {% endif %}{% if "wmt13" in installed_apps %}<a class="btn btn-inverse btn-large" href="{% url appraise.wmt13.views.overview %}">Access WMT13 evaluation &raquo;</a> {% endif %}{% if "wmt14" in installed_apps %}<a class="btn btn-inverse btn-large" href="{% url appraise.wmt14.views.overview %}">Access WMT14 evaluation &raquo;</a> {% endif %}</p>
 
   </div>
 </div>

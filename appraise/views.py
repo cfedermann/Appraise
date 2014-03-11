@@ -23,6 +23,7 @@ def frontpage(request):
     dictionary = {
       'commit_tag': COMMIT_TAG,
       'title': 'Appraise evaluation system',
+      'installed_apps': ['wmt14'],
     }
     
     return render(request, 'frontpage.html', dictionary)
@@ -45,7 +46,7 @@ def login(request, template_name):
         
         return render(request, 'frontpage.html', dictionary)
     
-    extra_context = {'commit_tag': COMMIT_TAG}
+    extra_context = {'commit_tag': COMMIT_TAG, 'installed_apps': ['wmt14']}
     return LOGIN(request, template_name, extra_context=extra_context)
 
 

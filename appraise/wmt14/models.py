@@ -29,13 +29,13 @@ LOGGER.addHandler(LOG_HANDLER)
 LANGUAGE_PAIR_CHOICES = (
   ('eng2ces', 'English → Czech'),
   ('eng2deu', 'English → German'),
-  ('eng2spa', 'English → Spanish'),
   ('eng2fra', 'English → French'),
+  ('eng2hin', 'English → Hindi'),
   ('eng2rus', 'English → Russian'),
   ('ces2eng', 'Czech → English'),
   ('deu2eng', 'German → English'),
-  ('spa2eng', 'Spanish → English'),
   ('fra2eng', 'French → English'),
+  ('hin2eng', 'Hindi → English'),
   ('rus2eng', 'Russian → English'),
 )
 

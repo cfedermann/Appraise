@@ -44,17 +44,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="{% url 'appraise.views.frontpage' %}">Appraise</a>
+          <a class="brand" href="{% url appraise.views.frontpage %}">Appraise</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li {% if active_page == "OVERVIEW" %}class="active"{% endif %}><a href="{% url 'appraise.wmt13.views.overview' %}">Overview</a></li>
+              <li {% if active_page == "OVERVIEW" %}class="active"{% endif %}><a href="{% url appraise.wmt13.views.overview %}">Overview</a></li>
 
-              <li {% if active_page == "STATUS" %}class="active"{% endif %}><a href="{% url 'appraise.wmt13.views.status' %}">Status</a></li>
+              <li {% if active_page == "STATUS" %}class="active"{% endif %}><a href="{% url appraise.wmt13.views.status %}">Status</a></li>
 
 {% if user.username %}
-              <li><a href="{% url 'appraise.views.logout' %}">Logout "{{user.username}}"</a></li>
+              <li><a href="{% url appraise.views.logout %}">Logout "{{user.username}}"</a></li>
 {% else %}
-              <li><a href="{% url 'appraise.views.login' %}">Login</a></li>
+              <li><a href="{% url appraise.views.login %}">Login</a></li>
 {% endif %}
 
             </ul>

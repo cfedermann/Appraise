@@ -52,15 +52,6 @@
 
               {% if user.is_staff %}<li {% if active_page == "STATUS" %}class="active"{% endif %}><a href="{% url appraise.evaluation.views.status_view %}">Status</a></li>{% endif %}
 
-{% elif "wmt13" in installed_apps %}
-              <li {% if active_page == "OVERVIEW" %}class="active"{% endif %}><a href="{% url appraise.wmt13.views.overview %}">Overview</a></li>
-
-              {% if user.is_staff %}<li {% if active_page == "STATUS" %}class="active"{% endif %}><a href="{% url appraise.wmt13.views.status_view %}">Status</a></li>{% endif %}
-
-{% elif "wmt14" in installed_apps %}
-              <li {% if active_page == "OVERVIEW" %}class="active"{% endif %}><a href="{% url appraise.wmt14.views.overview %}">Overview</a></li>
-
-              {% if user.is_staff %}<li {% if active_page == "STATUS" %}class="active"{% endif %}><a href="{% url appraise.wmt14.views.status_view %}">Status</a></li>{% endif %}
 {% endif %}
 
 {% if user.username %}

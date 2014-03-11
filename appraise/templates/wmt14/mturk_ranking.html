@@ -1,4 +1,4 @@
-{% extends "wmt13/mturk_base.html" %}
+{% extends "wmt14/mturk_base.html" %}
 
 {% block head %}
 <script src="{{STATIC_URL}}js/jquery-1.7.1.min.js"></script>
@@ -124,7 +124,7 @@ This is only a preview version of this HIT.  You cannot complete it before accep
 <div class="span11">
 <blockquote>
 {% with rank_id=forloop.counter0 translation_id=1 translations=translations_1 %}
-{% include 'wmt13/mturk_rank_selector.html' %}
+{% include 'wmt14/mturk_rank_selector.html' %}
 {% endwith %}
 <p><strong>{{translation.0}}</strong></p>
 <small>Translation {{forloop.counter}}</small>
@@ -167,7 +167,7 @@ This is only a preview version of this HIT.  You cannot complete it before accep
 <div class="span11">
 <blockquote>
 {% with rank_id=forloop.counter0 translation_id=2 translations=translations_2 %}
-{% include 'wmt13/mturk_rank_selector.html' %}
+{% include 'wmt14/mturk_rank_selector.html' %}
 {% endwith %}
 <p><strong>{{translation.0}}</strong></p>
 <small>Translation {{forloop.counter}}</small>
@@ -210,7 +210,7 @@ This is only a preview version of this HIT.  You cannot complete it before accep
 <div class="span11">
 <blockquote>
 {% with rank_id=forloop.counter0 translation_id=3 translations=translations_3 %}
-{% include 'wmt13/mturk_rank_selector.html' %}
+{% include 'wmt14/mturk_rank_selector.html' %}
 {% endwith %}
 <p><strong>{{translation.0}}</strong></p>
 <small>Translation {{forloop.counter}}</small>

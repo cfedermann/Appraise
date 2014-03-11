@@ -1,4 +1,4 @@
-{% extends "wmt13/base.html" %}
+{% extends "wmt14/base.html" %}
 
 {% block head %}
 <script src="{{STATIC_URL}}js/jquery-1.7.1.min.js"></script>
@@ -90,7 +90,7 @@ function validate_form()
 <div class="span11">
 <blockquote>
 {% with forloop.counter0 as rank_id %}
-{% include 'wmt13/rank_selector.html' %}
+{% include 'wmt14/rank_selector.html' %}
 {% endwith %}
 <p><strong>{{translation.0}}</strong></p>
 <small>Translation {{forloop.counter}}</small>

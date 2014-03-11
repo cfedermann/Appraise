@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-{% if tasks %}<WMT13-results>
+{% if tasks %}<WMT14-results>
 
 {% for task in tasks %}{{task}}
-{% endfor %}</WMT13-results>
-{% else %}<WMT13-results />
+{% endfor %}</WMT14-results>
+{% else %}<WMT14-results />
 {% endif %}

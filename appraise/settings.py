@@ -9,10 +9,11 @@ import os
 
 # Try to load ROOT_PATH from local settings, otherwise use default.
 try:
-    from local_settings import ROOT_PATH
+    from local_settings import ROOT_PATH, DEPLOYMENT_PREFIX
 
 except ImportError:
     ROOT_PATH = os.getcwd()
+    DEPLOYMENT_PREFIX = 'appraise'
 
 # Import local settings, this allows to set git binary and secret key.
 try:
@@ -51,9 +52,9 @@ LOG_HANDLER = RotatingFileHandler(filename=LOG_FILENAME, mode="a",
 LOG_HANDLER.setLevel(level=LOG_LEVEL)
 LOG_HANDLER.setFormatter(LOG_FORMATTER)
 
-LOGIN_URL = '/appraise/login/'
-LOGIN_REDIRECT_URL = '/appraise/'
-LOGOUT_URL = '/appraise/logout/'
+LOGIN_URL = '/{0}/login/'.format(DEPLOYMENT_PREFIX)
+LOGIN_REDIRECT_URL = '/{0}/'.format(DEPLOYMENT_PREFIX)
+LOGOUT_URL = '/{0}/logout/'.format(DEPLOYMENT_PREFIX)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -95,18 +96,18 @@ MEDIA_ROOT = '{0}/media/'.format(ROOT_PATH)
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/appraise/media/'
+MEDIA_URL = '/{0}/media/'.format(DEPLOYMENT_PREFIX)
 
 # For Django versions before 1.4, we additionally set ADMIN_MEDIA_PREFIX.
 if DJANGO_VERSION[1] < 4:
-    ADMIN_MEDIA_PREFIX = '/appraise/files/admin/'
+    ADMIN_MEDIA_PREFIX = '/{0}/files/admin/'.format(DEPLOYMENT_PREFIX)
 
 # The absolute path to the directory where collectstatic will collect static
 # files for deployment.
 STATIC_ROOT = os.path.join(ROOT_PATH, '/static-files/')
 
 # URL to use when referring to static files located in STATIC_ROOT.
-STATIC_URL = '/appraise/files/'
+STATIC_URL = '/{0}/files/'.format(DEPLOYMENT_PREFIX)
 
 STATICFILES_DIRS = (
   os.path.join(ROOT_PATH, 'static'),

@@ -8,9 +8,12 @@ from django import VERSION as DJANGO_VERSION
 import os
 ROOT_PATH = os.getcwd()
 
+# Impo
+
 from subprocess import check_output
 try:
-    commit_log = check_output(['git', 'log', '--pretty=oneline'])
+    GIT_BINARY = 'git'
+    commit_log = check_output([GIT_BINARY, 'log', '--pretty=oneline'])
     # pylint: disable-msg=E1103
     COMMIT_TAG = commit_log.split('\n')[0].split()[0]
 
@@ -25,7 +28,7 @@ from logging.handlers import RotatingFileHandler
 
 # Logging settings for this Django project.
 LOG_LEVEL = logging.DEBUG
-LOG_FILENAME = '/tmp/appraise.log'
+LOG_FILENAME = os.path.join(ROOT_PATH, 'appraise.log')
 LOG_FORMAT = "[%(asctime)s] %(name)s::%(levelname)s %(message)s"
 LOG_DATE = "%m/%d/%Y @ %H:%M:%S"
 LOG_FORMATTER = logging.Formatter(LOG_FORMAT, LOG_DATE)
@@ -51,7 +54,7 @@ MANAGERS = ADMINS
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': '{0}/development.db'.format(ROOT_PATH),
+    'NAME': os.path.join(ROOT_PATH, 'development.db'),
   }
 }
 
@@ -87,13 +90,13 @@ if DJANGO_VERSION[1] < 4:
 
 # The absolute path to the directory where collectstatic will collect static
 # files for deployment.
-STATIC_ROOT = '{0}/static-files/'.format(ROOT_PATH)
+STATIC_ROOT = os.path.join(ROOT_PATH, '/static-files/')
 
 # URL to use when referring to static files located in STATIC_ROOT.
 STATIC_URL = '/appraise/files/'
 
 STATICFILES_DIRS = (
-  '{0}/static'.format(ROOT_PATH),
+  os.path.join(ROOT_PATH, 'static'),
 )
 
 # Make this unique, and don't share it with anybody.
@@ -118,7 +121,7 @@ TEMPLATE_DIRS = (
   # Put strings here, like "/home/html/django_templates".
   # Always use forward slashes, even on Windows.
   # Don't forget to use absolute paths, not relative paths.
-  '{0}/templates'.format(ROOT_PATH),
+  os.path.join(ROOT_PATH, 'templates'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

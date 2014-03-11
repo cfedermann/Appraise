@@ -8,11 +8,17 @@ from django import VERSION as DJANGO_VERSION
 import os
 ROOT_PATH = os.getcwd()
 
-# Impo
-
-from subprocess import check_output
+# Import local settings, this allows
 try:
+    from random import choice
+    from local_settings import GIT_BINARY, SECRET_KEY
+
+except ImportError:
     GIT_BINARY = 'git'
+    SECRET_KEY = ''.join([chr(choice(range(128))) for _ in range(50)])
+
+try:
+    from subprocess import check_output
     commit_log = check_output([GIT_BINARY, 'log', '--pretty=oneline'])
     # pylint: disable-msg=E1103
     COMMIT_TAG = commit_log.split('\n')[0].split()[0]
@@ -98,9 +104,6 @@ STATIC_URL = '/appraise/files/'
 STATICFILES_DIRS = (
   os.path.join(ROOT_PATH, 'static'),
 )
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '7h$+o^h4f%q#d$u7d^1!3s#a-+u5p*+p*lpz++z^q^9^+a5p--'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

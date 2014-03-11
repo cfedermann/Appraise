@@ -3,3 +3,5 @@ lighttpd.pid
 start-server.sh
 media
 static-files
+appraise.log
+local_settings.py

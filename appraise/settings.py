@@ -6,9 +6,15 @@ Project: Appraise evaluation system
 from django import VERSION as DJANGO_VERSION
 
 import os
-ROOT_PATH = os.getcwd()
 
-# Import local settings, this allows
+# Try to load ROOT_PATH from local settings, otherwise use default.
+try:
+    from local_settings import ROOT_PATH
+
+except ImportError:
+    ROOT_PATH = os.getcwd()
+
+# Import local settings, this allows to set git binary and secret key.
 try:
     from random import choice
     from local_settings import GIT_BINARY, SECRET_KEY
@@ -148,6 +154,5 @@ INSTALLED_APPS = (
   'django.contrib.admin',
   'django.contrib.messages',
 
-  'appraise.evaluation',
   'appraise.wmt14',
 )

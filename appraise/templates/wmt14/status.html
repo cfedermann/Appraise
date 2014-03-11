@@ -1,0 +1,142 @@
+{% extends "wmt13/base.html" %}
+
+{% block head %}
+<script src="{{STATIC_URL}}js/jquery-1.7.1.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="span12">
+
+{% if not global_stats and not language_pair_stats and not group_stats and not user_stats %}
+<h2>Not ready yet...</h2>
+<p>At this moment, no status information is available. Check back soon...</p>
+
+{% else %}
+
+<ul class="nav nav-tabs" id="status_tabs">
+{% if global_stats %}  <li class="active"><a href="#global_stats" data-toggle="tab">Global status</a></li>{% endif %}
+{% if language_pair_stats %}  <li><a href="#language_pair_stats" data-toggle="tab">Language pair status</a></li>{% endif %}
+{% if group_stats %}  <li><a href="#group_stats" data-toggle="tab">Group status</a></li>{% endif %}
+{% if user_stats %}  <li><a href="#user_stats" data-toggle="tab">Top 25 contributors</a></li>{% endif %}
+{% if clusters %}  <li><a href="#clusters" data-toggle="tab">Ranking clusters</a></li>{% endif %}
+</ul>
+
+<div class="tab-content">
+
+{% if global_stats %}
+<div class="tab-pane active" id="global_stats">
+<h3>Global status</h3>
+<table class="table table-striped table-bordered table-condensed">
+{% for item in global_stats %}
+<tr>
+  <th width="30%">{{item.0}}</th>
+  <td>{{item.1}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endif %}
+
+{% if language_pair_stats %}
+<div class="tab-pane" id="language_pair_stats">
+<h3>Language pair status</h3>
+<table class="table table-striped table-bordered table-condensed">
+{% for item in language_pair_stats %}
+<tr>
+  <th width="30%">{{item.0}}</th>
+  <td>
+  <div class="progress" style="margin-bottom: 0px;">
+    <div class="bar {% if item.1.0 < 20 %}bar-danger{% elif item.1.0 < 50 %}bar-warning{% endif %}" style="width: {{item.1.1}}%; min-width: 5%; max-width: 95%;">{{item.1.0}} remaining</div>
+    <div class="bar {% if item.2.0 < 200 %}bar-info{% else %}bar-success{% endif %}" style="width: {{item.2.1}}%; min-width: 5%; max-width: 95%;">{{item.2.0}} completed</div>
+  </div>
+  </td>
+<!--
+  <td width="23%"{% if item.1.0 < 20 %} style="color:#b94a48;"{% elif item.1.0 < 50 %} style="color:#3a87ad;"{% elif item.1.0 > 200 %} style="color:#468847;"{% endif %}>{{item.1.0|stringformat:"04d"}} remaining</td>
+  <td width="23%"{% if item.1.1 < 20 %} style="color:#b94a48;"{% elif item.1.1 < 50 %} style="color:#3a87ad;"{% elif item.1.1 > 200 %} style="color:#468847;"{% endif %}>{{item.1.1|stringformat:"04d"}} completed</td>
+  <td width="23%">{{item.1.2|stringformat:"04d"}} total HITs</td>
+-->
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endif %}
+
+{% if group_stats %}
+<div class="tab-pane" id="group_stats">
+<h3>Group status</h3>
+<table class="table table-striped table-bordered table-condensed">
+{% for item in group_stats %}
+<tr>
+  <th width="30%">{{item.0}}</th>
+  <td width="23%"{% if item.1.0 < item.1.1 %} style="color:#b94a48;"{% endif %}>{{item.1.0|stringformat:"04d"}} completed</td>
+  <td width="23%">{{item.1.1|stringformat:"04d"}} required</td>
+  <td width="23%"{% if item.1.2 < 0 %} style="color:#b94a48;"{% elif item.1.2 > 0 %} style="color:#468847;"{% endif %}>{% if item.1.2 %}&Delta; {{item.1.2|stringformat:"+05d"}}{% if item.1.2 < 0 %} missing HITs{% elif item.1.2 > 0 %} additional HITs{% endif %}{% else %}<em>all clear!</em>{% endif %}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endif %}
+
+{% if user_stats %}
+<div class="tab-pane" id="user_stats">
+<h3>Top 25 contributors</h3>
+<table class="table table-striped table-bordered table-condensed">
+{% for item in user_stats %}
+<tr>
+  <th width="30%">{{item.0}}</th>
+  <td width="23%">{{item.1}}</td>
+  <td width="23%">{{item.2}}</td>
+  <td width="23%">{{item.3}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endif %}
+
+{% if clusters %}
+<div class="tab-pane" id="clusters">
+{% for language_data in clusters %}
+<h3>{{language_data.0}}</h3>
+
+{% for c_data in language_data.1 %}
+<table class="table table-striped table-bordered table-condensed">
+{% if forloop.first %}
+<tr>
+  <th>Cluster No.</th>
+  <th colspan="2">Expected win ratio/rank range</th>
+  <th>System identifier</th>
+</tr>
+{% endif %}
+{% for c_item in c_data.1 %}
+<tr>
+  <td width="15%" style="text-align:center;">{{c_data.0}}</td>
+  <td width="15%" style="text-align:center;">{{c_item.0|floatformat:3}}</td>
+  <td width="15%" style="text-align:center;">{{c_item.1}}</td>
+  <td width="55%">{{c_item.2}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}
+
+{% if not forloop.last%}
+<hr/>
+{% endif%}
+{% endfor %}
+</div>
+{% endif %}
+</div>
+{% endif %}
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+  // Javascript to enable link to tab
+  var url = document.location.toString();
+  if (url.match('#')) {
+    $('#status_tabs a[href="#'+url.split("#")[1]+'"]').tab('show');
+  }
+});
+</script>
+{% endblock %}

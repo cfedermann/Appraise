@@ -1,0 +1,122 @@
+{% extends "wmt13/base.html" %}
+
+{% block head %}
+<script src="{{STATIC_URL}}js/jquery-1.7.1.min.js"></script>
+<script>
+<!--
+$(document).ready(function() {
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+});
+
+function add_end_timestamp()
+{
+  $('input[name="end_timestamp"]').val(Date.now()/1000.0);
+}
+
+function reset_form()
+{
+  $('#translations input[type="radio"]').removeAttr('checked');
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+}
+
+function validate_form()
+{
+  var checked = $('#translations input[type="radio"]:checked').length;
+
+  if (checked != {{translations|length}}) {
+    alert('Please assign ranks to all translations...');
+    return false;
+  }
+
+  return true;
+}
+-->
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-info">
+  <table style="width:100%">
+  <tr>
+    <td style="width:33%;text-align:left;">
+      <strong id="task_progress">{{task_progress}}</strong>
+    </td>
+    <td style="width:33%;text-align:center;">
+      <strong>Block #{{block_id}}</strong>
+    </td>
+    <td style="width:33%;text-align:right;">
+      <strong>{{language_pair}}</strong>
+    </td>
+  </tr>
+  </table>
+</div>
+
+<div class="container">
+<div class="row">
+{% if reference_text.1 %}
+<div class="span5">
+<blockquote>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
+<small>Source</small>
+</blockquote>
+</div>
+<div class="span5 offset1">
+<blockquote>
+<p>{% if reference_text.0 %}{{reference_text.0}} {% endif %}<strong>{{reference_text.1}}</strong>{% if reference_text.2 %} {{reference_text.2}}{% endif %}</p>
+<small>Reference</small>
+</blockquote>
+</div>
+{% else %}
+<div class="span12">
+<blockquote>
+<p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
+<small>Source</small>
+</blockquote>
+</div>
+{% endif %}
+</div>
+
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
+
+<input name="end_timestamp" type="hidden" value="" />
+<input name="item_id" type="hidden" value="{{item_id}}" />
+<input name="start_timestamp" type="hidden" value="" />
+<input name="order" type="hidden" value="{{order}}" />
+
+<span id="translations">
+{% for translation in translations %}
+<div class="row">
+<div class="span11">
+<blockquote>
+{% with forloop.counter0 as rank_id %}
+{% include 'wmt13/rank_selector.html' %}
+{% endwith %}
+<p><strong>{{translation.0}}</strong></p>
+<small>Translation {{forloop.counter}}</small>
+</blockquote>
+</div>
+</div>
+{% endfor %}
+</span>
+
+<div class="actions">
+  <table style="width:100%">
+  <tr>
+    <td style="width:50%;text-align:left;">
+      <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
+    </td>
+    <td style="width:50%;text-align:right;">
+      <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>
+      &nbsp;
+      <button name="submit_button" accesskey="3" type="submit" class="btn btn-danger" value="FLAG_ERROR"><i class="icon-white icon-exclamation-sign"></i> Skip Item</button>
+    </td>
+  </tr>
+  <table>
+</div>
+
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "wmt13/base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="span12">
+
+{% if hit_data %}
+<h3>Dashboard</h3>
+<table class="table table-striped table-bordered">
+<tr>
+  <th style="width: 20%;">Task name</th>
+  <th style="width: 20%;">Language pair</th>
+  <th style="width: 20%;">Completion</th>
+  <th style="width: 20%;">Average</th>
+  <th style="width: 20%;">Duration</th>
+</tr>
+{% for language_pair, hit_url, block_id, status in hit_data %}
+<tr>
+  <td><a href="{{hit_url}}">Block #{{block_id}}</a></td>
+  <td>{{language_pair}}</td>
+  <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{status.0}} HITs</span></td>
+  <td>{{status.1}}</td>
+  <td>{{status.2}}</td>
+</tr>
+{% endfor %}
+<tr>
+  <td colspan="2"><strong>Total</strong></td>
+  <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{total.0}} HITs</span></td>
+  <td>{{total.1}}</td>
+  <td>{{total.2}}</td>
+</tr>
+{% if group_name and group_status %}
+<tr>
+  <td colspan="2"><strong>{{group_name}} Group Total</strong></td>
+  <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{group_status.0}} HITs</span></td>
+  <td>{{group_status.1}}</td>
+  <td>{{group_status.2}}</td>
+</tr>
+{% endif %}
+</table>
+{% else %}
+<h2>Not ready yet...</h2>
+<p>At this moment, there are no HITs available to work on. Check back soon...</p>
+{% endif %}
+</div>
+</div>
+{% endblock %}

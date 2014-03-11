@@ -1,0 +1,4 @@
+<HIT hit-id="{{hit_id}}"{% if attributes%} {{attributes|safe}}{% endif %}>
+{% for item_id, item_results in results %}<ranking-task id="{{item_id}}">
+{% for result in item_results %}{{result}}{% endfor %}</ranking-task>
+{% endfor %}</HIT>

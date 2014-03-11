@@ -1,0 +1,244 @@
+{% extends "wmt13/mturk_base.html" %}
+
+{% block head %}
+<script src="{{STATIC_URL}}js/jquery-1.7.1.min.js"></script>
+<script>
+<!--
+$(document).ready(function() {
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+});
+
+function add_end_timestamp()
+{
+  $('input[name="end_timestamp"]').val(Date.now()/1000.0);
+}
+
+function reset_form()
+{
+  $('#translations_1 input[type="radio"]').removeAttr('checked');
+  $('#translations_2 input[type="radio"]').removeAttr('checked');
+  $('#translations_3 input[type="radio"]').removeAttr('checked');
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+}
+
+function validate_form()
+{
+  var checked_1 = $('#translations_1 input[type="radio"]:checked').length;
+  var checked_2 = $('#translations_2 input[type="radio"]:checked').length;
+  var checked_3 = $('#translations_2 input[type="radio"]:checked').length;
+
+  if ( (checked_1 != {{translations_1|length}})
+    || (checked_2 != {{translations_2|length}})
+    || (checked_3 != {{translations_3|length}}) ) {
+    alert('Please assign ranks to all translations...');
+    return false;
+  }
+
+  return true;
+}
+-->
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+{% if assignment_id == "ASSIGNMENT_ID_NOT_AVAILABLE" %}
+<div class="alert alert-error">
+This is only a preview version of this HIT.  You cannot complete it before accepting it!
+</div>
+
+<form action="#" method="post">
+{% else %}
+<div class="row">
+<div class="span12">
+<h3>Instructions</h3>
+<ul>
+<li>You are shown a source sentence followed by several candidate translations.</li>
+<li>Your task is to rank the translations from best to worst (ties are allowed).</li>
+<li>To help you, we provide an acceptable reference translation.</li>
+<li>Fluency in the source language is not required.</li>
+</ul>
+<p><strong>Note:</strong> Please ensure that you have JavaScript enabled in your browser. (It's probably already enabled.)</p>
+</div>
+</div>
+
+<hr/>
+
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
+{% endif %}
+
+<input name="appraise_id" type="hidden" value="{{appraise_id}}" />
+<input name="hitId" type="hidden" value="{{hit_id}}" />
+<input name="assignmentId" type="hidden" value="{{assignment_id}}" />
+<input name="workerId" type="hidden" value="{{worker_id}}" />
+
+<input name="start_timestamp" type="hidden" value="" />
+<input name="end_timestamp" type="hidden" value="" />
+
+<input name="order_1" type="hidden" value="{{order_1}}" />
+<input name="order_2" type="hidden" value="{{order_2}}" />
+<input name="order_3" type="hidden" value="{{order_3}}" />
+
+<input name="systems_1" type="hidden" value="{{systems_1}}" />
+<input name="systems_2" type="hidden" value="{{systems_2}}" />
+<input name="systems_3" type="hidden" value="{{systems_3}}" />
+
+<input name="srclang" type="hidden" value="{{srclang}}" />
+<input name="trglang" type="hidden" value="{{trglang}}" />
+
+<input name="srcIndex_1" type="hidden" value="{{srcIndex_1}}" />
+<input name="srcIndex_2" type="hidden" value="{{srcIndex_2}}" />
+<input name="srcIndex_3" type="hidden" value="{{srcIndex_3}}" />
+
+
+<!-- RankingTask #1 //-->
+<div class="row">
+{% if reference_text_1 %}
+<div class="span5">
+<blockquote>
+<p><strong>{{source_text_1}}</strong></p>
+<small>Source</small>
+</blockquote>
+</div>
+<div class="span5 offset1">
+<blockquote>
+<p><strong>{{reference_text_1}}</strong></p>
+<small>Reference</small>
+</blockquote>
+</div>
+{% else %}
+<div class="span12">
+<blockquote>
+<p><strong>{{source_text_1}}</strong></p>
+<small>Source</small>
+</blockquote>
+</div>
+{% endif %}
+</div>
+
+<span id="translations_1">
+{% for translation in translations_1 %}
+<div class="row">
+<div class="span11">
+<blockquote>
+{% with rank_id=forloop.counter0 translation_id=1 translations=translations_1 %}
+{% include 'wmt13/mturk_rank_selector.html' %}
+{% endwith %}
+<p><strong>{{translation.0}}</strong></p>
+<small>Translation {{forloop.counter}}</small>
+</blockquote>
+</div>
+</div>
+{% endfor %}
+</span>
+
+<hr/>
+
+<!-- RankingTask #2 //-->
+<div class="row">
+{% if reference_text_2 %}
+<div class="span5">
+<blockquote>
+<p><strong>{{source_text_2}}</strong></p>
+<small>Source</small>
+</blockquote>
+</div>
+<div class="span5 offset1">
+<blockquote>
+<p><strong>{{reference_text_2}}</strong></p>
+<small>Reference</small>
+</blockquote>
+</div>
+{% else %}
+<div class="span12">
+<blockquote>
+<p><strong>{{source_text_2}}</strong></p>
+<small>Source</small>
+</blockquote>
+</div>
+{% endif %}
+</div>
+
+<span id="translations_2">
+{% for translation in translations_2 %}
+<div class="row">
+<div class="span11">
+<blockquote>
+{% with rank_id=forloop.counter0 translation_id=2 translations=translations_2 %}
+{% include 'wmt13/mturk_rank_selector.html' %}
+{% endwith %}
+<p><strong>{{translation.0}}</strong></p>
+<small>Translation {{forloop.counter}}</small>
+</blockquote>
+</div>
+</div>
+{% endfor %}
+</span>
+
+<hr/>
+
+<!-- RankingTask #3 //-->
+<div class="row">
+{% if reference_text_3 %}
+<div class="span5">
+<blockquote>
+<p><strong>{{source_text_3}}</strong></p>
+<small>Source</small>
+</blockquote>
+</div>
+<div class="span5 offset1">
+<blockquote>
+<p><strong>{{reference_text_3}}</strong></p>
+<small>Reference</small>
+</blockquote>
+</div>
+{% else %}
+<div class="span12">
+<blockquote>
+<p><strong>{{source_text_3}}</strong></p>
+<small>Source</small>
+</blockquote>
+</div>
+{% endif %}
+</div>
+
+<span id="translations_3">
+{% for translation in translations_3 %}
+<div class="row">
+<div class="span11">
+<blockquote>
+{% with rank_id=forloop.counter0 translation_id=3 translations=translations_3 %}
+{% include 'wmt13/mturk_rank_selector.html' %}
+{% endwith %}
+<p><strong>{{translation.0}}</strong></p>
+<small>Translation {{forloop.counter}}</small>
+</blockquote>
+</div>
+</div>
+{% endfor %}
+</span>
+
+{% if assignment_id == "ASSIGNMENT_ID_NOT_AVAILABLE" %}
+<div class="actions">
+  <button class="btn btn-primary disabled" name="submit_button" accesskey="1" type="button" value="SUBMIT"><i class="icon-ok-sign icon-white"></i> Submit</button>
+  &nbsp;
+  
+  <button accesskey="2" type="button" class="btn disabled"><i class="icon-repeat"></i> Reset</button>
+</div>
+
+{% else %}
+<div class="actions">
+  <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
+  &nbsp;
+  
+  <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>
+</div>
+{% endif %}
+
+</form>
+
+</div>
+
+{% endblock %}

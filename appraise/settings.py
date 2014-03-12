@@ -9,11 +9,14 @@ import os
 
 # Try to load ROOT_PATH from local settings, otherwise use default.
 try:
-    from local_settings import ROOT_PATH, DEPLOYMENT_PREFIX
+    from local_settings import ROOT_PATH, DEPLOYMENT_PREFIX, DEBUG
 
 except ImportError:
     ROOT_PATH = os.getcwd()
     DEPLOYMENT_PREFIX = 'appraise'
+    DEBUG = True
+
+TEMPLATE_DEBUG = DEBUG
 
 # Import local settings, this allows to set git binary and secret key.
 try:
@@ -55,9 +58,6 @@ LOG_HANDLER.setFormatter(LOG_FORMATTER)
 LOGIN_URL = '/{0}/login/'.format(DEPLOYMENT_PREFIX)
 LOGIN_REDIRECT_URL = '/{0}/'.format(DEPLOYMENT_PREFIX)
 LOGOUT_URL = '/{0}/logout/'.format(DEPLOYMENT_PREFIX)
-
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
   # ('Your Name', 'your_email@domain.com'),

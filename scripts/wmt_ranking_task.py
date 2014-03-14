@@ -108,17 +108,14 @@ if __name__ == "__main__":
 
     system_hashes = [hashlib.sha1(x).hexdigest() for x in system_names]
 
-    # Remove sentences that are too long.
-    i = 0
-    while i < len(source):
-        if len(source[i].split()) > args.maxlen:
-            for system in [source,reference] + systems:
-                system.pop(i)
-        else:
-            i += 1
+    # Make a list of all eligible sentences
+    eligible = []
+    for i in range(len(source)):
+        if len(source[i].split()) <= args.maxlen:
+            eligible.append(i)
 
     def dump_system(system_file, lines):
-        outfile = os.path.join(args.saveDir, os.path.basename(system_file.name))
+        outfile = os.path.join(args.saveDir, os.path.basename(system_file))
         if not os.path.exists(outfile):
             sys.stderr.write('DUMPING TO %s\n' % (outfile))
             out = open(outfile, 'w')
@@ -130,12 +127,13 @@ if __name__ == "__main__":
     if args.saveDir is not None:
         if not os.path.exists(args.saveDir):
             os.makedirs(args.saveDir)
-        dump_system(args.source, source)
-        dump_system(args.reference, reference)
+        dump_system(args.source.name, source)
+        dump_system(args.reference.name, reference)
         for i,system in enumerate(args.system):
-            dump_system(system, systems[i])
+            dump_system(system.name, systems[i])
+        dump_system('line_numbers', [x + 1 for x in eligible])
 
-    random_blocks = random_from_range(len(source), args.numhits - args.redundancy, tuple_size = args.tasksperhit, sequential = args.sequential)
+    random_blocks = random_from_range(len(eligible), args.numhits - args.redundancy, tuple_size = args.tasksperhit, sequential = args.sequential)
     hits = []
     for sentnos_tuple in random_blocks:
 
@@ -144,7 +142,7 @@ if __name__ == "__main__":
         random.shuffle(system_indexes)
         system_indexes = system_indexes[:args.systemspertask]
 
-        tasks = [RankingTask(id, source[id], reference[id], [system_names[sysid] for sysid in system_indexes], [systems[sysid][id] for sysid in system_indexes]) for id in sentnos_tuple]
+        tasks = [RankingTask(eligible[id] + 1, source[eligible[id]], reference[eligible[id]], [system_names[sysid] for sysid in system_indexes], [systems[sysid][eligible[id]] for sysid in system_indexes]) for id in sentnos_tuple]
 
         # Randomly decided whether to randomly replace one of the tasks with a random control.  That
         # is, we roll a dice to see whether to insert a control (determined by

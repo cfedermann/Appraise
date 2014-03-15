@@ -10,7 +10,7 @@ from xml.etree.ElementTree import fromstring, ParseError, tostring
 
 from django.dispatch import receiver
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.template import Context
@@ -654,6 +654,7 @@ class UserHITMapping(models.Model):
       User,
       db_index=True
     )
+
     hit = models.ForeignKey(
       HIT,
       db_index=True
@@ -672,3 +673,63 @@ class UserHITMapping(models.Model):
         """
         return u'<hitmap id="{0}" user="{1}" hit="{2}">'.format(self.id,
           self.user.username, self.hit.hit_id)
+
+
+# pylint: disable-msg=E1101
+class UserInviteToken(models.Model):
+    """
+    User invite tokens allowing to register an account.
+    """
+    group = models.ForeignKey(
+      Group,
+      db_index=True
+    )
+
+    token = models.CharField(
+      max_length=8,
+      db_index=True,
+      default=lambda: UserInviteToken._create_token(),
+      unique=True,
+      help_text="Unique invite token",
+      verbose_name="Invite token"
+    )
+
+    active = models.BooleanField(
+      db_index=True,
+      default=True,
+      help_text="Indicates that this invite can still be used.",
+      verbose_name="Active?"
+    )
+
+    class Meta:
+        """
+        Metadata options for the UserInviteToken object model.
+        """
+        verbose_name = "User invite token"
+        verbose_name_plural = "User invite tokens"
+
+    # pylint: disable-msg=E1002
+    def __init__(self, *args, **kwargs):
+        """
+        Makes sure that self.token is properly set up.
+        """
+        super(UserInviteToken, self).__init__(*args, **kwargs)
+        
+        if not self.token:
+            self.token = self.__class__._create_token()
+
+    def __unicode__(self):
+        """
+        Returns a Unicode String for this UserInviteToken object.
+        """
+        return u'<user-invite id="{0}" token="{1}" active="{2}">'.format(
+          self.id, self.token, self.active)
+
+    @classmethod
+    def _create_token(cls):
+        """Creates a random UUID-4 8-digit hex number for use as a token."""
+        new_token = uuid.uuid4().hex[:8]
+        while cls.objects.filter(token=new_token):
+            new_token = uuid.uuid4().hex[:8]
+        
+        return new_token

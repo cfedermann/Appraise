@@ -13,7 +13,7 @@ try:
 
 except ImportError:
     ROOT_PATH = os.getcwd()
-    DEPLOYMENT_PREFIX = 'appraise'
+    DEPLOYMENT_PREFIX = 'appraise/'
     DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG

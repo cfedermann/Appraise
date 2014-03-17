@@ -313,7 +313,7 @@ def _handle_ranking(request, task, items):
       'action_url': request.path,
       'commit_tag': COMMIT_TAG,
       'item_id': item.id,
-      'block_id': item.hit.block_id,
+      'sentence_id': item.source[1]['id'],
       'language_pair': item.hit.get_language_pair_display(),
       'order': ','.join([str(x) for x in order]),
       'reference_text': reference_text,

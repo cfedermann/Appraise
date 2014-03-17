@@ -525,7 +525,7 @@ def overview(request):
             
             hit_data.append(
               (hit.get_language_pair_display(), hit.get_absolute_url(),
-               hit.block_id, user_status)
+               hit.hit_id, user_status)
             )
     
     # Convert total seconds back into datetime.timedelta instances.

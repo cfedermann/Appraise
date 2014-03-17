@@ -14,9 +14,9 @@
   <th style="width: 20%;">Average</th>
   <th style="width: 20%;">Duration</th>
 </tr>
-{% for language_pair, hit_url, block_id, status in hit_data %}
+{% for language_pair, hit_url, hit_id, status in hit_data %}
 <tr>
-  <td><a href="{{hit_url}}">Block #{{block_id}}</a></td>
+  <td><a href="{{hit_url}}">Block #{{hit_id}}</a></td>
   <td>{{language_pair}}</td>
   <td><span class="badge badge-inverse"><div class="bar" style="width: 66%;">{{status.0}} HITs</span></td>
   <td>{{status.1}}</td>

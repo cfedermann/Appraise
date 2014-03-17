@@ -54,7 +54,7 @@
 {% if admin_url and user.is_superuser %}
               <li><a href="{{admin_url}}">Admin</a></li>
 
-{% endif %
+{% endif %}
 
 {% if user.username %}
               <li><a href="{% url appraise.views.logout %}">Logout "{{user.username}}"</a></li>

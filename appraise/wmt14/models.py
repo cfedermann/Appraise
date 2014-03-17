@@ -525,7 +525,7 @@ class RankingResult(models.Model):
         iso639_3_to_name_mapping = {'ces': 'Czech', 'cze': 'Czech',
           'deu': 'German', 'ger': 'German', 'eng': 'English',
           'spa': 'Spanish', 'fra': 'French', 'fre': 'French',
-          'rus': 'Russian'}
+          'hin': 'Hindi', 'rus': 'Russian'}
         
         _src_lang = hit.hit_attributes['source-language']
         _trg_lang = hit.hit_attributes['target-language']
@@ -546,9 +546,9 @@ class RankingResult(models.Model):
         # with evaluation scripts from previous editions of the WMT.
         values.append(iso639_3_to_name_mapping[_src_lang]) # srclang
         values.append(iso639_3_to_name_mapping[_trg_lang]) # trglang
-        values.append(str(1 + int(item.source[1]['id'])))  # srcIndex
+        values.append(item.source[1]['id'])                # srcIndex
         values.append('-1')                                # documentId
-        values.append(str(1 + int(item.source[1]['id'])))  # segmentId
+        values.append(item.source[1]['id'])                # segmentId (= srcIndex)
         values.append(self.user.username)                  # judgeId
         values.append('-1')                                # system1Number
         values.append(str(_systems[0]))                    # system1Id
@@ -597,7 +597,7 @@ class RankingResult(models.Model):
         # scripts from previous editions of the WMT.
         for a, b in combinations(range(5), 2):
             _c = self.user.username
-            _i = '{0}.{1}.{2}'.format(1 + int(item.source[1]['id']), a+1, b+1)
+            _i = '{0}.{1}.{2}'.format(item.source[1]['id'], a+1, b+1)
             
             if not self.results:
                 _v = '{0}?{1}'.format(str(_systems[a]), str(_systems[b]))

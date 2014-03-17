@@ -6,20 +6,22 @@ Project: Appraise evaluation system
 import logging
 
 from datetime import datetime, timedelta
+from hashlib import md5
 from os.path import join
 from random import seed, shuffle
 from subprocess import check_output
 from tempfile import gettempdir
 from urllib import unquote
 
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt14.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
-  HIT, RankingTask, RankingResult, UserHITMapping
+  HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
@@ -887,3 +889,56 @@ def _compute_ranking_clusters(load_file=False):
         _cluster_data.append((language_pair, _language_data))
     
     return _cluster_data
+
+
+def signup(request):
+    """
+    Renders the signup view.
+    """
+    LOGGER.info('Rendering WMT14 signup view.')
+    errors = None
+    username = None
+    email = None
+    token = None
+    
+    if request.method == "POST":
+        username = request.POST.get('username', None)
+        email = request.POST.get('email', None)
+        token = request.POST.get('token', None)
+        
+        if username and email and token:
+            try:
+                invite = UserInviteToken.objects.get(token=token)
+                assert(invite.active)
+                
+                # Create new user account and add to group.
+                password = md5(invite.group.name).hexdigest()[:8]
+                user = User.objects.create_user(username, email, password)
+                user.groups.add(invite.group)
+                user.save()
+                
+                # Disable invite token.
+                invite.active = False
+                invite.save()
+                
+                # Login user and redirect to WMT14 overview page.
+                user = authenticate(username=username, password=password)
+                login(request, user)
+                return redirect('appraise.wmt14.views.overview')
+            
+            except:
+                from traceback import format_exc
+                print format_exc()
+                errors = ['invalid_token']
+    
+    dictionary = {
+      'active_page': "OVERVIEW",
+      'commit_tag': COMMIT_TAG,
+      'errors': errors,
+      'username': username,
+      'email': email,
+      'token': token,
+      'title': 'WMT14 Sign up',
+    }
+    
+    return render(request, 'wmt14/signup.html', dictionary)

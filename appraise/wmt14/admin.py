@@ -11,7 +11,7 @@ from django.template import Context
 from django.template.loader import get_template
 
 from appraise.wmt14.models import HIT, RankingTask, RankingResult, \
-  UserHITMapping
+  UserHITMapping, UserInviteToken
 
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
 
@@ -183,14 +183,25 @@ class RankingResultAdmin(admin.ModelAdmin):
 
 class UserHITMappingAdmin(admin.ModelAdmin):
     """
-    ModelAdmin class for RankingResult instances.
+    ModelAdmin class for UserHITMapping instances.
     """
     list_display = ('user', 'hit')
     list_filter = ('hit__language_pair', 'user__groups')
     search_fields = ('user__username', 'user__first_name', 'user__last_name')
 
 
+
+class UserInviteTokenAdmin(admin.ModelAdmin):
+    """
+    ModelAdmin class for UserInviteToken instances.
+    """
+    list_display = ('group', 'token', 'active')
+    list_filter = ('group__name', 'active')
+    search_fields = ('group__name', 'token')
+
+
 admin.site.register(HIT, HITAdmin)
 admin.site.register(RankingTask)
 admin.site.register(RankingResult, RankingResultAdmin)
 admin.site.register(UserHITMapping, UserHITMappingAdmin)
+admin.site.register(UserInviteToken, UserInviteTokenAdmin)

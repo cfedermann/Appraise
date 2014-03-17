@@ -49,6 +49,7 @@ urlpatterns += patterns('appraise.wmt14.views',
   (r'^{0}wmt14/status/$'.format(DEPLOYMENT_PREFIX), 'status'),
   (r'^{0}wmt14/update-status/$'.format(DEPLOYMENT_PREFIX), 'update_status'),
   (r'^{0}wmt14/update-ranking/$'.format(DEPLOYMENT_PREFIX), 'update_ranking'),
+  (r'^{0}wmt14/signup/$'.format(DEPLOYMENT_PREFIX), 'signup'),
 )
 
 if DEBUG:

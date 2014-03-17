@@ -5,3 +5,4 @@ media
 static-files
 appraise.log
 local_settings.py
+deployment.py

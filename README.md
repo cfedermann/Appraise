@@ -23,7 +23,7 @@
 
 <h2 id="how_does_it_look_like">How does it look like?</h2>
 
-<p>You can see <a href="http://www.dfki.de/appraise/">a deployed version of Appraise here</a>. If you want to play around with it, you will need an account in order to login to the system. I&#8217;ll be happy to create an account for you, just drop me an email <code>cfedermann [at] gmail [dot] com</code>.</p>
+<p>You can see <a href="http://www.appraise.cf/">a deployed version of Appraise here</a>. If you want to play around with it, you will need an account in order to login to the system. I&#8217;ll be happy to create an account for you, just drop me an email <code>cfedermann [at] gmail [dot] com</code>.</p>
 
 <h2 id="system_requirements">System Requirements</h2>
 

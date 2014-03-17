@@ -51,6 +51,11 @@
 
               <li {% if active_page == "STATUS" %}class="active"{% endif %}><a href="{% url appraise.wmt14.views.status %}">Status</a></li>
 
+{% if user.is_superuser %}
+              <li><a href="{{admin_url}}">Admin</a></li>
+
+{% endif %
+
 {% if user.username %}
               <li><a href="{% url appraise.views.logout %}">Logout "{{user.username}}"</a></li>
 {% else %}

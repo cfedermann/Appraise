@@ -16,6 +16,7 @@ from urllib import unquote
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group, User
+rom django.core import urlresolvers
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
@@ -559,6 +560,11 @@ def overview(request):
     LOGGER.debug(u'\n\nHIT data for user "{0}":\n\n{1}\n'.format(
       request.user.username or "Anonymous",
       u'\n'.join([u'{0}\t{1}\t{2}\t{3}'.format(*x) for x in hit_data])))
+
+    # Compute admin URL for super users.
+    admin_url = None
+    if request.user.is_superuser:
+        admin_url = urlresolvers.reverse('admin:index')
     
     dictionary = {
       'active_page': "OVERVIEW",
@@ -567,6 +573,7 @@ def overview(request):
       'total': total,
       'group_name': group_name,
       'group_status': group_status,
+      'admin_url': admin_url,
       'title': 'WMT14 Dashboard',
     }
     

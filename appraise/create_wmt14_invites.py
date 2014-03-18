@@ -45,6 +45,9 @@ if __name__ == "__main__":
     if not group.exists():
         print 'ERROR: unknown group name "{0}"...'.format(args.group_name)
         sys.exit(-1)
+
+    else:
+        group = group[0]
     
     # Check if the requested number of tokens is sane.
     try:

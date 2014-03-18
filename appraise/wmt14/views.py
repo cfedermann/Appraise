@@ -912,16 +912,35 @@ def signup(request):
         username = request.POST.get('username', None)
         email = request.POST.get('email', None)
         token = request.POST.get('token', None)
+        languages = request.POST.get('languages', None)
         
-        if username and email and token:
+        if username and email and token and languages:
             try:
                 invite = UserInviteToken.objects.get(token=token)
                 assert(invite.active)
+
+                # Compute set of evaluation languages for this user.
+                eval_groups = []
+                for eval_language in ('2ces', '2deu', '2eng', '2fra', '2hin', '2rus'):
+                    if eval_languge in languages:
+                        eng2xyz = Group.objects.filter(name__endswith=eval_language)
+                        if eng2xyz.exists():
+                            eval_groups.extend(eng2xyz)
+
+                # Also, add user to WMT14 group.
+                wmt14_group = Group.objects.filter(name='WMT14')
+                if wmt14_group.exists():
+                    eval_groups.append(wmt14_group[0])
                 
                 # Create new user account and add to group.
                 password = md5(invite.group.name).hexdigest()[:8]
                 user = User.objects.create_user(username, email, password)
+                
+                # Update group settings for the new user account.
                 user.groups.add(invite.group)
+                for eval_group in eval_groups:
+                    user.groups.add(eval_group)
+                
                 user.save()
                 
                 # Disable invite token.

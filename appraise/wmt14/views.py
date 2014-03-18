@@ -912,7 +912,7 @@ def signup(request):
         username = request.POST.get('username', None)
         email = request.POST.get('email', None)
         token = request.POST.get('token', None)
-        languages = request.POST.get('languages', None)
+        languages = request.POST.getlist('languages', None)
         
         if username and email and token and languages:
             try:
@@ -931,6 +931,8 @@ def signup(request):
                 wmt14_group = Group.objects.filter(name='WMT14')
                 if wmt14_group.exists():
                     eval_groups.append(wmt14_group[0])
+
+                LOGGER.debug('Evaluation languages: {0}'.format(eval_groups))
                 
                 # Create new user account and add to group.
                 password = md5(invite.group.name).hexdigest()[:8]

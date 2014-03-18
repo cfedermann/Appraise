@@ -922,7 +922,7 @@ def signup(request):
                 # Compute set of evaluation languages for this user.
                 eval_groups = []
                 for eval_language in ('2ces', '2deu', '2eng', '2fra', '2hin', '2rus'):
-                    if eval_languge in languages:
+                    if eval_language in languages:
                         eng2xyz = Group.objects.filter(name__endswith=eval_language)
                         if eng2xyz.exists():
                             eval_groups.extend(eng2xyz)
@@ -954,7 +954,7 @@ def signup(request):
             
             except:
                 from traceback import format_exc
-                print format_exc()
+                LOGGER.debug(format_exc())
                 errors = ['invalid_token']
     
     dictionary = {

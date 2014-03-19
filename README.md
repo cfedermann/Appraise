@@ -1,10 +1,12 @@
 <h1 id="appraise_evaluation_system">Appraise Evaluation System</h1>
 
-<p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt13/">Eighth Workshop on Statistical Machine Translation 2013</a>. Second release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software became available in summer 2008...</p>
+<p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt14/">Ninth Workshop on Statistical Machine Translation 2014</a>. It has also been used for WMT 2013. Second major release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software appeared in summer 2008...</p>
 
 <h2 id="update">Update</h2>
 
-<p>There's a new release of Appraise for use in the WMT '13; see the new Django app inside <code>appraise.wmt13</code> for more details.  The new version also integrates with <a href="http://www.mturk.com/">Amazon's Mechanical Turk</a>, allowing to collect even more manual annotations.</p>
+<p><strong>WMT 2014</strong>: follow <code>#WMT14</code> on <a href="https://twitter.com/cfedermann/">https://twitter.com/cfedermann/</a> &mdash; Evaluation campaign running at <a href="http://www.appraise.cf/">http://appraise.cf/</a></p>
+
+<p>There's a new release of Appraise for use in the WMT '14; see the new Django app inside <code>appraise.wmt14</code> for more details.  This version also integrates with <a href="http://www.mturk.com/">Amazon's Mechanical Turk</a>, allowing to collect even more manual annotations.</p>
 
 <h2 id="overview">Overview</h2>
 

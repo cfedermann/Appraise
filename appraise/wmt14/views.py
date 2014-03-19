@@ -770,12 +770,13 @@ def _compute_group_stats():
     
     # The following dictionary defines the number of HITs each group should
     # have completed during the WMT14 evaluation campaign.
-    group_hit_requirements = {'BALAGUR': 200, 'CMU': 300, 'CU': 1700,
-      'DCU': 300, 'DESRT': 100, 'FDA': 300, 'ITS-LATL': 200, 'JHU': 900,
-      'KIT': 400, 'LIA': 200, 'LIMSI': 600, 'MES': 1400, 'OMNIFLUENT': 400,
-      'Prompsit': 400, 'PROMT': 500, 'QUAERO': 100, 'RWTH': 400, 'SHEF': 700,
-      'STANFORD': 200, 'TALP': 100, 'TUBITAK': 200, 'UCAM': 100,
-      'UEDIN': 1700, 'UMD': 200, 'UU': 100, 'DFKI': 0, 'USAAR': 0}
+    group_hit_requirements = {
+      'MSR': 0, 'JHU': 0, 'PROMT': 800, 'KIT': 500, 'UM': 100,
+      'DCU-Prompsit-UA': 200, 'RWTH': 100, 'CIS/IMS': 100, 'Eu-Bridge': 200,
+      'IIT-Bombay': 300, 'YSDA': 100, 'UU': 300, 'UA-Prompsit': 100,
+      'IMS-TTT': 100, 'UFAL': 600, 'AFRL': 300, 'UEDIN': 1900,
+      'Stanford': 300, 'UB-Grial': 100
+    }
     
     for group in groups:
         _name = group.name
@@ -912,16 +913,37 @@ def signup(request):
         username = request.POST.get('username', None)
         email = request.POST.get('email', None)
         token = request.POST.get('token', None)
+        languages = request.POST.getlist('languages', None)
         
-        if username and email and token:
+        if username and email and token and languages:
             try:
                 invite = UserInviteToken.objects.get(token=token)
                 assert(invite.active)
+
+                # Compute set of evaluation languages for this user.
+                eval_groups = []
+                for eval_language in ('2ces', '2deu', '2eng', '2fra', '2hin', '2rus'):
+                    if eval_language in languages:
+                        eng2xyz = Group.objects.filter(name__endswith=eval_language)
+                        if eng2xyz.exists():
+                            eval_groups.extend(eng2xyz)
+
+                # Also, add user to WMT14 group.
+                wmt14_group = Group.objects.filter(name='WMT14')
+                if wmt14_group.exists():
+                    eval_groups.append(wmt14_group[0])
+
+                LOGGER.debug('Evaluation languages: {0}'.format(eval_groups))
                 
                 # Create new user account and add to group.
                 password = md5(invite.group.name).hexdigest()[:8]
                 user = User.objects.create_user(username, email, password)
+                
+                # Update group settings for the new user account.
                 user.groups.add(invite.group)
+                for eval_group in eval_groups:
+                    user.groups.add(eval_group)
+                
                 user.save()
                 
                 # Disable invite token.
@@ -935,7 +957,7 @@ def signup(request):
             
             except:
                 from traceback import format_exc
-                print format_exc()
+                LOGGER.debug(format_exc())
                 errors = ['invalid_token']
     
     dictionary = {

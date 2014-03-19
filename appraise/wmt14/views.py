@@ -16,7 +16,7 @@ from urllib import unquote
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group, User
-from django.core import urlresolvers
+from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
@@ -547,7 +547,7 @@ def overview(request):
     # Compute admin URL for super users.
     admin_url = None
     if request.user.is_superuser:
-        admin_url = urlresolvers.reverse('admin:index')
+        admin_url = reverse('admin:index')
     
     dictionary = {
       'active_page': "OVERVIEW",

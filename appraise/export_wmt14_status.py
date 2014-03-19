@@ -4,7 +4,7 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: export_wmt13_status.py
+usage: export_wmt14_status.py
 
 Exports HIT status for all language pairs.
 
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt13.models import HIT, LANGUAGE_PAIR_CHOICES
+    from appraise.wmt14.models import HIT, LANGUAGE_PAIR_CHOICES
     
     remaining_hits = {}
     for language_pair in [x[0] for x in LANGUAGE_PAIR_CHOICES]:

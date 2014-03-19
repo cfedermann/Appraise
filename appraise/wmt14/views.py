@@ -74,10 +74,7 @@ def _compute_next_task_for_user(user, language_pair):
         block_ids = list(hits.values_list('block_id', flat=True))
         shuffle(block_ids)
         
-        # Find the next HIT for the current user.  Keep track of compatible
-        # HITs with one or two rankings in case there is no pristine HIT left.
-        hit_with_one_ranking = None
-        hit_with_two_rankings = None
+        # Find the next HIT for the current user.
         random_hit = None
         for block_id in block_ids:
             for hit in hits.filter(block_id=block_id):
@@ -93,22 +90,8 @@ def _compute_next_task_for_user(user, language_pair):
                     if len(hit_users) < 1:
                         random_hit = hit
                         break
-                    
-                    elif len(hit_users) < 2 and not hit_with_one_ranking:
-                        hit_with_one_ranking = hit
-                    
-                    elif len(hit_users) < 3 and not hit_with_two_rankings:
-                        hit_with_two_rankings = hit
             
             if random_hit:
-                break
-            
-            elif hit_with_one_ranking:
-                random_hit = hit_with_one_ranking
-                break
-            
-            elif hit_with_two_rankings:
-                random_hit = hit_with_two_rankings
                 break
         
         # If we still haven't found a next HIT, there simply is none...

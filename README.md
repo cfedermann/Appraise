@@ -2,9 +2,13 @@
 
 <p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt14/">Ninth Workshop on Statistical Machine Translation 2014</a>. It has also been used for WMT 2013. Second major release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software appeared in summer 2008...</p>
 
-<h2 id="update">Update</h2>
+<h2 id="wmt14">WMT14</h2>
 
-<p><strong>WMT 2014</strong>: follow <code>#WMT14</code> on <a href="https://twitter.com/cfedermann/">https://twitter.com/cfedermann/</a> &mdash; Evaluation campaign at <a href="http://www.appraise.cf/">http://appraise.cf/</a></p>
+<p>Follow <code>#WMT14</code> on <a href="https://twitter.com/cfedermann/">https://twitter.com/cfedermann/</a> &mdash; Evaluation campaign at <a href="http://www.appraise.cf/">http://appraise.cf/</a></p>
+
+<p>For research group registration details or problems drop me a note via email: <code>cfedermann [at] gmail [dot] com</code></p>
+
+<h2 id="update">Update</h2>
 
 <p><strong>2014-03-19</strong> User changeable passwords and new action menu in navigation bar; go to <a href="http://www.appraise.cf/password/">http://www.appraise.cf/password/</a> when logged in to change the password for your Appraise account. You can also use the lovely new user action menu on the top right of the navigation bar ("Admin", of course, only visible to some):</p>
 

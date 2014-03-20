@@ -4,7 +4,11 @@
 
 <h2 id="update">Update</h2>
 
-<p><strong>WMT 2014</strong>: follow <code>#WMT14</code> on <a href="https://twitter.com/cfedermann/">https://twitter.com/cfedermann/</a> &mdash; Evaluation campaign running at <a href="http://www.appraise.cf/">http://appraise.cf/</a></p>
+<p><strong>WMT 2014</strong>: follow <code>#WMT14</code> on <a href="https://twitter.com/cfedermann/">https://twitter.com/cfedermann/</a> &mdash; Evaluation campaign at <a href="http://www.appraise.cf/">http://appraise.cf/</a></p>
+
+<p><strong>2014-03-19</strong> User changeable passwords and new action menu in navigation bar; go to <a href="http://www.appraise.cf/password/">http://www.appraise.cf/password/</a> when logged in to change the password for your Appraise account. You can also use the lovely new user action menu on the top right of the navigation bar ("Admin", of course, only visible to some):</p>
+
+<p><img src="https://github.com/cfedermann/Appraise/raw/master/images/Appraise-User-Menu-Navbar.png" /></p>
 
 <p>There's a new release of Appraise for use in the WMT '14; see the new Django app inside <code>appraise.wmt14</code> for more details.  This version also integrates with <a href="http://www.mturk.com/">Amazon's Mechanical Turk</a>, allowing to collect even more manual annotations.</p>
 

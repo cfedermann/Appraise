@@ -14,6 +14,8 @@
 
 <p><img src="https://github.com/cfedermann/Appraise/raw/master/images/Appraise-User-Menu-Navbar.png" /></p>
 
+<p><strong>2014-03-18</strong><blockquote class="twitter-tweet" lang="en"><p>Finally! <a href="https://twitter.com/search?q=%23WMT14&amp;src=hash">#WMT14</a> evaluation campaign is live! <a href="http://t.co/XaZ1Cfkqsk">http://t.co/XaZ1Cfkqsk</a> -- <a href="http://t.co/DrzOY2w8KG">http://t.co/DrzOY2w8KG</a></p>&mdash; Christian Federmann (@cfedermann) <a href="https://twitter.com/cfedermann/statuses/446001314485399552">March 18, 2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
 <p>There's a new release of Appraise for use in the WMT '14; see the new Django app inside <code>appraise.wmt14</code> for more details.  This version also integrates with <a href="http://www.mturk.com/">Amazon's Mechanical Turk</a>, allowing to collect even more manual annotations.</p>
 
 <h2 id="overview">Overview</h2>

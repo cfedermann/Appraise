@@ -756,9 +756,9 @@ def _compute_group_stats():
     # The following dictionary defines the number of HITs each group should
     # have completed during the WMT14 evaluation campaign.
     group_hit_requirements = {
-      'MSR': 0, 'JHU': 0, 'PROMT': 800, 'KIT': 500, 'UM': 100,
+      'MSR': 0, 'JHU': 0, 'PROMT': 800, 'KIT': 400, 'UM': 0,
       'DCU-Prompsit-UA': 200, 'RWTH': 100, 'CIS/IMS': 100, 'Eu-Bridge': 200,
-      'IIT-Bombay': 300, 'YSDA': 100, 'UU': 300, 'UA-Prompsit': 100,
+      'IIT-Bombay': 300, 'YSDA': 300, 'UU': 300, 'UA-Prompsit': 100,
       'IMS-TTT': 100, 'UFAL': 600, 'AFRL': 300, 'UEDIN': 1900,
       'Stanford': 300, 'UB-Grial': 100, 'QCRI': 200, 'LIMSI': 100,
       'USAAR': 300, 'IPN-UPV': 200, 'CMU': 200,

@@ -663,7 +663,7 @@ def _compute_global_stats():
     # completed once it has been annotated by one or more annotators.
     #
     # Before we required `hit.users.count() >= 3` for greater overlap.
-    hits_completed = HIT.objects.filter(mturk_only=False, completed=True)
+    hits_completed = HIT.objects.filter(mturk_only=False, completed=True).count()
     
     # Check any remaining active HITs which are not yet marked complete.
     for hit in HIT.objects.filter(active=True, mturk_only=False, completed=False):

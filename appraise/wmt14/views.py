@@ -68,7 +68,7 @@ def _compute_next_task_for_user(user, language_pair):
         # Compatible HIT instances need to match the given language pair!
         # Furthermore, they need to be active and not reserved for MTurk.
         hits = HIT.objects.filter(language_pair=language_pair, active=True,
-          mturk_only=False)
+          mturk_only=False, completed=False)
         
         # Compute list of compatible block ids and randomise its order.
         #
@@ -663,17 +663,21 @@ def _compute_global_stats():
     # completed once it has been annotated by one or more annotators.
     #
     # Before we required `hit.users.count() >= 3` for greater overlap.
-    hits_completed = 0
-    for hit in HIT.objects.filter(active=True, mturk_only=False):
+    hits_completed = HIT.objects.filter(mturk_only=False, completed=True)
+    
+    # Check any remaining active HITs which are not yet marked complete.
+    for hit in HIT.objects.filter(active=True, mturk_only=False, completed=False):
         if hit.users.count() >= 1:
             hits_completed = hits_completed + 1
+            hit.completed = True
+            hit.save()
     
     # Compute remaining HITs for all language pairs.
     hits_remaining = HIT.compute_remaining_hits()
     
     # Compute number of results contributed so far.
     ranking_results = RankingResult.objects.filter(
-      item__hit__active=True, item__hit__mturk_only=False).count()
+      item__hit__completed=True, item__hit__mturk_only=False).count()
     
     # Aggregate information about participating groups.
     groups = set()
@@ -711,25 +715,15 @@ def _compute_language_pair_stats():
     """
     language_pair_stats = []
     
+    # Running compute_remaining_hits() will also update completion status for HITs.
     for choice in LANGUAGE_PAIR_CHOICES:
         _code = choice[0]
         _name = choice[1]
         _remaining_hits = HIT.compute_remaining_hits(language_pair=_code)
-        _total_hits = 0
-        _completed_hits = 0
-        
-        for hit in HIT.objects.filter(active=True, mturk_only=False,
-          language_pair=_code):
-            _total_hits = _total_hits + 1
-            # Again: we now consider a HIT to be completed once it has been
-            # annotated by one or more annotators.
-            #
-            # Before we required `hit.users.count() >= 3` for gr
-            if hit.users.all().count() >= 1:
-                _completed_hits = _completed_hits + 1
-        
-        # _data = (_remaining_hits, _completed_hits, _total_hits)
-        
+        _completed_hits = HIT.objects.filter(completed=True, mturk_only=False,
+          language_pair=_code).count()
+        _total_hits = _remaining_hits + _completed_hits
+                
         _data = (
           _name,
           (_remaining_hits, 100 * _remaining_hits/float(_total_hits or 1)),
@@ -839,7 +833,7 @@ def _compute_ranking_clusters(load_file=False):
         
         # Compute current dump of WMT14 results in CSV format. We ignore any
         # results which are incomplete, i.e. have been SKIPPED.
-        for result in RankingResult.objects.filter(item__hit__active=True,
+        for result in RankingResult.objects.filter(item__hit__completed=True,
           item__hit__mturk_only=False):
             _csv_output = result.export_to_csv()
             if not _csv_output.endswith('-1,-1,-1,-1,-1'):

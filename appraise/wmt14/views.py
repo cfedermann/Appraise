@@ -71,13 +71,21 @@ def _compute_next_task_for_user(user, language_pair):
           mturk_only=False)
         
         # Compute list of compatible block ids and randomise its order.
-        block_ids = list(hits.values_list('block_id', flat=True))
-        shuffle(block_ids)
+        #
+        # cfedermann: for WMT14 Matt does not provide block ids anymore.
+        #   This meant that our shuffled list of block ids only contained
+        #   [-1, ..., -1] entries;  using these to filter and check for
+        #   respective HIT status is a quadratic increase of redundant work
+        #   which will take prohibitively long when there is no next HIT.
+        #
+        #   Converting to unique HIT ids will speed up things drastically.
+        hit_ids = list(set(hits.values_list('hit_id', flat=True)))
+        shuffle(hit_ids)
         
         # Find the next HIT for the current user.
         random_hit = None
-        for block_id in block_ids:
-            for hit in hits.filter(block_id=block_id):
+        for hit_id in hit_ids:
+            for hit in hits.filter(hit_id=hit_id):
                 hit_users = list(hit.users.all())
                 
                 # Check if this HIT is currently mapped to users.  This code

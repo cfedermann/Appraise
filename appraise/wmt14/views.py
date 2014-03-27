@@ -761,7 +761,7 @@ def _compute_group_stats():
       'IIT-Bombay': 300, 'YSDA': 300, 'UU': 300, 'UA-Prompsit': 100,
       'IMS-TTT': 100, 'UFAL': 600, 'AFRL': 300, 'UEDIN': 1900,
       'Stanford': 300, 'UB-Grial': 100, 'QCRI': 200, 'LIMSI': 100,
-      'USAAR': 300, 'IPN-UPV': 200, 'CMU': 200,
+      'USAAR': 300, 'IPN-UPV': 200, 'CMU': 200, 'TALP-UPC': 200,
     }
     
     for group in groups:

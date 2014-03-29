@@ -781,6 +781,13 @@ def _compute_group_stats():
     # Sort by number of remaining HITs.
     group_stats.sort(key=lambda x: x[1][2])
     
+    # Add totals at the bottom.
+    global_total = sum([x[1][0] for x in group_stats])
+    global_required = sum([x[1][1] for x in group_stats])
+    global_delta = global_total - global_required
+    global_data = (global_total, global_required, global_delta)
+    group_stats.append(("Totals", global_data))
+    
     return group_stats
 
 

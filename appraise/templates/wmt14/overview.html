@@ -4,7 +4,6 @@
 <div class="row">
 <div class="span12">
 
-{% if hit_data %}
 <h3>Dashboard</h3>
 <table class="table table-striped table-bordered">
 <tr>
@@ -38,9 +37,11 @@
 </tr>
 {% endif %}
 </table>
-{% else %}
-<h2>Not ready yet...</h2>
-<p>At this moment, there are no HITs available to work on. Check back soon...</p>
+
+{% if not hit_data %}
+
+<h3>No HITs available...</h3>
+<p>At this moment, there are no HITs available to work on: either all HITs have been completed or the remaining HITs for your language pairs are all assigned to other users.</p>
 {% endif %}
 </div>
 </div>

@@ -9,7 +9,8 @@
   {% endif %}
 
   <div class="page-header">
-    <h1>User Authentication <small>Your username and password, please...</small></h1>
+    <h1>User authentication</h1>
+    <p>Please enter your username and password so we can verify your credentials.</p>
   </div>
   <form class="form-horizontal" method="post" action="{% url appraise.views.login %}">
   {% csrf_token %}

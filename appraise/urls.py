@@ -18,6 +18,7 @@ urlpatterns = patterns('appraise.views',
   (r'^{0}$'.format(DEPLOYMENT_PREFIX), 'frontpage'),
   (r'^{0}login/$'.format(DEPLOYMENT_PREFIX), 'login', {'template_name': 'login.html'}),
   (r'^{0}logout/$'.format(DEPLOYMENT_PREFIX), 'logout', {'next_page': '/{0}'.format(DEPLOYMENT_PREFIX)}),
+  (r'^{0}password/$'.format(DEPLOYMENT_PREFIX), 'password_change', {'template_name': 'password_change.html'}),
   (r'^{0}admin/'.format(DEPLOYMENT_PREFIX), include(admin.site.urls)),
 )
 

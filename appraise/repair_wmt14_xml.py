@@ -40,9 +40,18 @@ PARSER.add_argument("--dry-run", action="store_true", default=False,
 
 
 XML_REPAIR_PATTERNS = [
-  ('& ', u'&amp; '),
+  (u'& ', u'&amp; '),
   (u'&amp ', u'&amp; '),
   (u'&quot ', u'&quot; '),
+  (u'R&D', u'R&amp;D'),
+  (u'R & D', u'R &amp; D'),
+  (u'A&E', u'A&amp;E'),
+  (u'CD&V', u'CD&amp;V'),
+  (u'CD & V', u'CD &amp; V'),
+  (u'>Grub<', u'&gt;Grub&lt;'),
+  (u'S&P', u'S&amp;P'),
+  (u'S & P', u'S &amp; P'),
+
 ]
 
 

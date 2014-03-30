@@ -102,6 +102,13 @@ class HIT(models.Model):
       verbose_name="MTurk only?"
     )
 
+    completed = models.BooleanField(
+      db_index=True,
+      default=False,
+      help_text="Indicates that this HIT instance is completed.",
+      verbose_name="Completed?"
+    )
+
     class Meta:
         """
         Metadata options for the HIT object model.
@@ -147,7 +154,7 @@ class HIT(models.Model):
         If language_pair is given, it constraints on the HITs' language pair.
         
         """
-        hits_qs = cls.objects.filter(active=True, mturk_only=False)
+        hits_qs = cls.objects.filter(active=True, mturk_only=False, completed=False)
         if language_pair:
             hits_qs = hits_qs.filter(language_pair=language_pair)
         
@@ -156,6 +163,11 @@ class HIT(models.Model):
             # Before we checked if `hit.users.count() < 3`.
             if hit.users.count() < 1:
                 available = available + 1
+            
+            # Set active HITs to completed if there exists at least one result.
+            else:
+                hit.completed = True
+                hit.save()
         
         return available
     

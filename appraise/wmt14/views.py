@@ -16,7 +16,7 @@ from urllib import unquote
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group, User
-from django.core import urlresolvers
+from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
@@ -68,19 +68,24 @@ def _compute_next_task_for_user(user, language_pair):
         # Compatible HIT instances need to match the given language pair!
         # Furthermore, they need to be active and not reserved for MTurk.
         hits = HIT.objects.filter(language_pair=language_pair, active=True,
-          mturk_only=False)
+          mturk_only=False, completed=False)
         
         # Compute list of compatible block ids and randomise its order.
-        block_ids = list(hits.values_list('block_id', flat=True))
-        shuffle(block_ids)
+        #
+        # cfedermann: for WMT14 Matt does not provide block ids anymore.
+        #   This meant that our shuffled list of block ids only contained
+        #   [-1, ..., -1] entries;  using these to filter and check for
+        #   respective HIT status is a quadratic increase of redundant work
+        #   which will take prohibitively long when there is no next HIT.
+        #
+        #   Converting to unique HIT ids will speed up things drastically.
+        hit_ids = list(set(hits.values_list('hit_id', flat=True)))
+        shuffle(hit_ids)
         
-        # Find the next HIT for the current user.  Keep track of compatible
-        # HITs with one or two rankings in case there is no pristine HIT left.
-        hit_with_one_ranking = None
-        hit_with_two_rankings = None
+        # Find the next HIT for the current user.
         random_hit = None
-        for block_id in block_ids:
-            for hit in hits.filter(block_id=block_id):
+        for hit_id in hit_ids:
+            for hit in hits.filter(hit_id=hit_id):
                 hit_users = list(hit.users.all())
                 
                 # Check if this HIT is currently mapped to users.  This code
@@ -93,22 +98,8 @@ def _compute_next_task_for_user(user, language_pair):
                     if len(hit_users) < 1:
                         random_hit = hit
                         break
-                    
-                    elif len(hit_users) < 2 and not hit_with_one_ranking:
-                        hit_with_one_ranking = hit
-                    
-                    elif len(hit_users) < 3 and not hit_with_two_rankings:
-                        hit_with_two_rankings = hit
             
             if random_hit:
-                break
-            
-            elif hit_with_one_ranking:
-                random_hit = hit_with_one_ranking
-                break
-            
-            elif hit_with_two_rankings:
-                random_hit = hit_with_two_rankings
                 break
         
         # If we still haven't found a next HIT, there simply is none...
@@ -564,7 +555,7 @@ def overview(request):
     # Compute admin URL for super users.
     admin_url = None
     if request.user.is_superuser:
-        admin_url = urlresolvers.reverse('admin:index')
+        admin_url = reverse('admin:index')
     
     dictionary = {
       'active_page': "OVERVIEW",
@@ -672,17 +663,21 @@ def _compute_global_stats():
     # completed once it has been annotated by one or more annotators.
     #
     # Before we required `hit.users.count() >= 3` for greater overlap.
-    hits_completed = 0
-    for hit in HIT.objects.filter(active=True, mturk_only=False):
+    hits_completed = HIT.objects.filter(mturk_only=False, completed=True).count()
+    
+    # Check any remaining active HITs which are not yet marked complete.
+    for hit in HIT.objects.filter(active=True, mturk_only=False, completed=False):
         if hit.users.count() >= 1:
             hits_completed = hits_completed + 1
+            hit.completed = True
+            hit.save()
     
     # Compute remaining HITs for all language pairs.
     hits_remaining = HIT.compute_remaining_hits()
     
     # Compute number of results contributed so far.
     ranking_results = RankingResult.objects.filter(
-      item__hit__active=True, item__hit__mturk_only=False).count()
+      item__hit__completed=True, item__hit__mturk_only=False).count()
     
     # Aggregate information about participating groups.
     groups = set()
@@ -720,25 +715,15 @@ def _compute_language_pair_stats():
     """
     language_pair_stats = []
     
+    # Running compute_remaining_hits() will also update completion status for HITs.
     for choice in LANGUAGE_PAIR_CHOICES:
         _code = choice[0]
         _name = choice[1]
         _remaining_hits = HIT.compute_remaining_hits(language_pair=_code)
-        _total_hits = 0
-        _completed_hits = 0
-        
-        for hit in HIT.objects.filter(active=True, mturk_only=False,
-          language_pair=_code):
-            _total_hits = _total_hits + 1
-            # Again: we now consider a HIT to be completed once it has been
-            # annotated by one or more annotators.
-            #
-            # Before we required `hit.users.count() >= 3` for gr
-            if hit.users.all().count() >= 1:
-                _completed_hits = _completed_hits + 1
-        
-        # _data = (_remaining_hits, _completed_hits, _total_hits)
-        
+        _completed_hits = HIT.objects.filter(completed=True, mturk_only=False,
+          language_pair=_code).count()
+        _total_hits = _remaining_hits + _completed_hits
+                
         _data = (
           _name,
           (_remaining_hits, 100 * _remaining_hits/float(_total_hits or 1)),
@@ -771,11 +756,12 @@ def _compute_group_stats():
     # The following dictionary defines the number of HITs each group should
     # have completed during the WMT14 evaluation campaign.
     group_hit_requirements = {
-      'MSR': 0, 'JHU': 0, 'PROMT': 800, 'KIT': 500, 'UM': 100,
+      'MSR': 0, 'JHU': 0, 'PROMT': 800, 'KIT': 400, 'UM': 0,
       'DCU-Prompsit-UA': 200, 'RWTH': 100, 'CIS/IMS': 100, 'Eu-Bridge': 200,
-      'IIT-Bombay': 300, 'YSDA': 100, 'UU': 300, 'UA-Prompsit': 100,
+      'IIT-Bombay': 300, 'YSDA': 300, 'UU': 300, 'UA-Prompsit': 100,
       'IMS-TTT': 100, 'UFAL': 600, 'AFRL': 300, 'UEDIN': 1900,
-      'Stanford': 300, 'UB-Grial': 100
+      'Stanford': 300, 'UB-Grial': 100, 'QCRI': 300, 'LIMSI': 100,
+      'USAAR': 300, 'IPN-UPV': 200, 'CMU': 200, 'TALP-UPC': 200,
     }
     
     for group in groups:
@@ -794,6 +780,13 @@ def _compute_group_stats():
     
     # Sort by number of remaining HITs.
     group_stats.sort(key=lambda x: x[1][2])
+    
+    # Add totals at the bottom.
+    global_total = sum([x[1][0] for x in group_stats])
+    global_required = sum([x[1][1] for x in group_stats])
+    global_delta = global_total - global_required
+    global_data = (global_total, global_required, global_delta)
+    group_stats.append(("Totals", global_data))
     
     return group_stats
 
@@ -847,7 +840,7 @@ def _compute_ranking_clusters(load_file=False):
         
         # Compute current dump of WMT14 results in CSV format. We ignore any
         # results which are incomplete, i.e. have been SKIPPED.
-        for result in RankingResult.objects.filter(item__hit__active=True,
+        for result in RankingResult.objects.filter(item__hit__completed=True,
           item__hit__mturk_only=False):
             _csv_output = result.export_to_csv()
             if not _csv_output.endswith('-1,-1,-1,-1,-1'):

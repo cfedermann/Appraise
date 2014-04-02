@@ -762,6 +762,7 @@ def _compute_group_stats():
       'IMS-TTT': 100, 'UFAL': 600, 'AFRL': 300, 'UEDIN': 1900,
       'Stanford': 300, 'UB-Grial': 100, 'QCRI': 300, 'LIMSI': 100,
       'USAAR': 300, 'IPN-UPV': 200, 'CMU': 200, 'TALP-UPC': 200,
+      'SFU': 0,
     }
     
     for group in groups:

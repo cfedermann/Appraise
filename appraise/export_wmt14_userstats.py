@@ -15,8 +15,6 @@ Exports user statistics for all users.  This lists:
 - total annotation time
 
 """
-from django.contrib.auth.models import User, Group
-
 from datetime import datetime
 import os
 import sys
@@ -29,7 +27,8 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt14.views import _compute_user_stats
+    from django.contrib.auth.models import User, Group
+    from appraise.wmt14.models import HIT
     
     # Compute user statistics for all users.
     user_stats = []
@@ -41,7 +40,7 @@ if __name__ == "__main__":
         _name = user.username
         _email = user.email
         
-        _group = None
+        _group = "UNDEFINED"
         for _g in user.groups.all():
             if _g.name.startswith("eng2") \
               or _g.name.endswith("2eng") \
@@ -59,4 +58,4 @@ if __name__ == "__main__":
     
     # Print out CSV list.
     for user_data in user_stats:
-        print u",".join(user_data)
+        print u",".join([unicode(x) for x in user_data])

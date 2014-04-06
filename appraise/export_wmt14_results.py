@@ -29,5 +29,5 @@ if __name__ == "__main__":
       'system3Id,system4Number,system4Id,system5Number,system5Id,' \
       'system1rank,system2rank,system3rank,system4rank,system5rank']
     print u",".join(headers)
-    for result in RankingResult.object.all():
+    for result in RankingResult.objects.all():
         print result.export_to_csv()

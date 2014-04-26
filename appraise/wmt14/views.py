@@ -645,7 +645,9 @@ def update_status(request=None, key=None):
             STATUS_CACHE[status_key] = _compute_group_stats()
         
         elif status_key == 'user_stats':
-            STATUS_CACHE[status_key] = _compute_user_stats()
+            # Only show top 25 contributors.
+            user_stats = _compute_user_stats()
+            STATUS_CACHE[status_key] = user_stats[:25]
     
     if request is not None:
         return HttpResponse('Status updated successfully')
@@ -762,6 +764,7 @@ def _compute_group_stats():
       'IMS-TTT': 100, 'UFAL': 600, 'AFRL': 300, 'UEDIN': 1900,
       'Stanford': 300, 'UB-Grial': 100, 'QCRI': 300, 'LIMSI': 100,
       'USAAR': 300, 'IPN-UPV': 200, 'CMU': 200, 'TALP-UPC': 200,
+      'SFU': 0,
     }
     
     for group in groups:
@@ -812,9 +815,6 @@ def _compute_user_stats():
     # Sort by total number of completed HITs.
     user_stats.sort(key=lambda x: x[1])
     user_stats.reverse()
-    
-    # Only show top 25 contributors.
-    user_stats = user_stats[:25]
     
     return user_stats
 

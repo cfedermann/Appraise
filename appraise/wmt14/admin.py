@@ -65,6 +65,7 @@ def export_hit_ids_to_csv(modeladmin, request, queryset):
             results.append(u",".join(_values))
     
     export_csv = u"\n".join(results)
+    export_csv = export_csv + u"\n"
     return HttpResponse(export_csv, mimetype='text/plain')
 
 export_hit_ids_to_csv.short_description = "Export selected HIT ids to CSV"
@@ -166,6 +167,7 @@ def export_results_to_csv(modeladmin, request, queryset):
             results.append(result.export_to_csv())
     
     export_csv = u"\n".join(results)
+    export_csv = export_csv + u"\n"
     return HttpResponse(export_csv, mimetype='text/plain')
 
 export_results_to_csv.short_description = "Export selected results to CSV"

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Project: Appraise evaluation system
@@ -51,7 +51,11 @@ XML_REPAIR_PATTERNS = [
   (u'>Grub<', u'&gt;Grub&lt;'),
   (u'S&P', u'S&amp;P'),
   (u'S & P', u'S &amp; P'),
-
+  (u'&Poor ', u'&amp;Poor '),
+  (u'&.', u'&amp;.'),
+  (u'<службе', u'&lt;службе'),
+  (u'<security', u'&lt;security'),
+  (u'< ', u'&lt; '),
 ]
 
 
@@ -82,7 +86,7 @@ if __name__ == "__main__":
             except ValidationError, msg:
                 print msg
                 for key, value in XML_REPAIR_PATTERNS:
-                    print key, "-->", value
+                    print repr(key), "-->", repr(value)
                     patched_hits_xml_string = unicode.replace(hits_xml_string, key, value)
                     hits_xml_string = patched_hits_xml_string
                     

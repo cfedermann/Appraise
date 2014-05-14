@@ -42,6 +42,8 @@ PARSER.add_argument("--intra", action="store_true", default=False,
   dest="intra_annotator_agreement", help="Compute intra-annotator agreement.")
 PARSER.add_argument("--verbose", action="store_true", default=False,
   dest="verbose", help="Display additional information on kappa values.")
+PARSER.add_argument("--points", action="store_true", default=False,
+  dest="points", help="Display total number of data points in output table.")
 
 
 def compute_agreement_scores(data):
@@ -123,7 +125,9 @@ if __name__ == "__main__":
     # We allow to use multi-processing.
     pool = Pool(processes=args.processes)
     print('Language pair        pA     pE     kappa  ',
-      end='' if args.verbose else '\n')
+      end='' if args.verbose or args.points else '\n')
+    if args.points:
+        print('Points   ', end='' if args.verbose else '\n')
     if args.verbose:
         print('(agree, comparable, ties, total)')
     
@@ -131,7 +135,7 @@ if __name__ == "__main__":
     language_pairs = ('Czech-English', 'English-Czech', 'German-English',
       'English-German', 'Spanish-English', 'English-Spanish',
       'French-English', 'English-French', 'Russian-English',
-      'English-Russian')
+      'English-Russian', 'English-Hindi', 'Hindi-English')
     
     for language_pair in language_pairs:
         segments_data = results_data[language_pair]
@@ -192,13 +196,13 @@ if __name__ == "__main__":
         _identical = average_scores[0]
         _comparable = average_scores[1]
         _ties = average_scores[2]
-        _total = average_scores[3]
+        _ties_total = average_scores[3]
         
         # Compute p(A) probability.
         pA = _identical / float(_comparable or 1)
         
         # Compute p(E) empirically, based on the number of observed ties.
-        pTies = _ties / float(_total or 1)
+        pTies = _ties / float(_ties_total or 1)
         pNoTies = 1.0 - pTies
         pE = pTies**2 + (pNoTies/2.0)**2 + (pNoTies/2.0)**2
         
@@ -207,7 +211,10 @@ if __name__ == "__main__":
         
         # Display results for current language pair.
         print('{0:>20} {1: 0.3f} {2: 0.3f} {3: 0.3f}'.format(language_pair,
-          pA, pE, kappa), end='' if args.verbose else '\n')
+          pA, pE, kappa), end='' if args.verbose or args.points else '\n')
+        
+        if args.points:
+            print(' {0:>8}'.format(_comparable), end='' if args.verbose else '\n')
         
         if args.verbose:
             print(' {0:>8} {1:>8} {2:>8} {3:>8}'.format(*average_scores[:4]))

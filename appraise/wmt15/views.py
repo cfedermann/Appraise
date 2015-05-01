@@ -21,7 +21,7 @@ from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 
-from appraise.wmt14.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
+from appraise.wmt15.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
@@ -659,7 +659,7 @@ def _compute_global_stats():
     """
     global_stats = []
     wmt15 = Group.objects.get(name='WMT15')
-    users = wmt14.user_set.all()
+    users = wmt15.user_set.all()
     
     # Check how many HITs have been completed.  We now consider a HIT to be
     # completed once it has been annotated by one or more annotators.

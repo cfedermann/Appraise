@@ -31,7 +31,7 @@ def frontpage(request):
     dictionary = {
       'commit_tag': COMMIT_TAG,
       'title': 'Appraise evaluation system',
-      'installed_apps': ['wmt14'],
+      'installed_apps': ['wmt15'],
       'admin_url': admin_url,
     }
     
@@ -51,12 +51,12 @@ def login(request, template_name):
           'message': 'You are already logged in as "{0}".'.format(
             request.user.username),
           'title': 'Appraise evaluation system',
-          'installed_apps': ['wmt14'],
+          'installed_apps': ['wmt15'],
         }
         
         return render(request, 'frontpage.html', dictionary)
     
-    extra_context = {'commit_tag': COMMIT_TAG, 'installed_apps': ['wmt14']}
+    extra_context = {'commit_tag': COMMIT_TAG, 'installed_apps': ['wmt15']}
     return LOGIN(request, template_name, extra_context=extra_context)
 
 
@@ -82,7 +82,7 @@ def password_change(request, template_name):
           'commit_tag': COMMIT_TAG,
           'message': 'You are not logged in and hence cannot change your password!',
           'title': 'Appraise evaluation system',
-          'installed_apps': ['wmt14'],
+          'installed_apps': ['wmt15'],
         }
         
         return render(request, 'frontpage.html', dictionary)
@@ -92,10 +92,10 @@ def password_change(request, template_name):
     if request.user.is_superuser:
         admin_url = reverse('admin:index')
     
-    post_change_redirect = reverse('appraise.wmt14.views.overview')
+    post_change_redirect = reverse('appraise.wmt15.views.overview')
     extra_context = {
       'commit_tag': COMMIT_TAG,
-      'installed_apps': ['wmt14'],
+      'installed_apps': ['wmt15'],
       'admin_url': admin_url,
     }
     return PASSWORD_CHANGE(request, template_name,

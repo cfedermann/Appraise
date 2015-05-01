@@ -155,5 +155,5 @@ INSTALLED_APPS = (
   'django.contrib.admin',
   'django.contrib.messages',
 
-  'appraise.wmt14',
+  'appraise.wmt15',
 )

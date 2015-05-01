@@ -1,0 +1,77 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+  {% if errors %}
+  <div class="alert alert-error">
+    <a class="close" onclick="javascript:$(this).parent().fadeOut('slow');">×</a>
+    <strong>Warning!</strong> Invalid or inactive invite token. Please try again.
+  </div>
+  {% endif %}
+
+  <div class="page-header">
+    <h1>Sign up <small>Your invite token, please...</small></h1>
+  </div>
+  <form class="form-horizontal" method="post" action="{% url appraise.wmt15.views.signup %}">
+  {% csrf_token %}
+
+  <fieldset>
+
+    <div class="control-group">
+      <label class="control-label" for="id_username">Username</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on">required</span>
+          <input class="span2" name="username" id="id_username" type="text" size="30" value="{% if username %}{{username}}{% endif %}" />
+        </div>
+        <p class="help-block">Please enter your desired username</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="id_email">Email</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on">required</span>
+          <input class="span2" name="email" id="id_email" type="text" size="100" value="{% if email %}{{email}}{% endif %}" />
+        </div>
+        <p class="help-block">Please enter your email address</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="id_token">Token</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on">required</span>
+          <input class="span2" name="token" id="id_token" type="text" size="8" value="{% if token %}{{token}}{% endif %}" />
+        </div>
+        <p class="help-block">And also provide your invite token</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="id_languages">Languages</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on">required</span>
+          <select name="languages" id="id_languages" multiple="multiple">
+            <option value="2ces">Czech</option>
+            <option value="2deu">German</option>
+            <option value="2eng">English</option>
+            <option value="2fra">French</option>
+            <option value="2hin">Hindi</option>
+            <option value="2rus">Russian</option>
+          </select>
+        </div>
+        <p class="help-block">Which languages will you evaluate?</p>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Sign up</button>
+    </div>
+
+  </fieldset>
+    
+  </form>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% if skipped %}  <ranking-result{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}" skipped="true" />
+{% else %}  <ranking-result{% if attributes%} {{attributes|safe}}{% endif %} duration="{{duration}}" user="{{user}}">
+{% for attrs, rank in translations %}    <translation{% if attrs %} {{attrs|safe}}{% endif %} rank="{{rank}}" />
+{% endfor %}  </ranking-result>
+{% endif %}

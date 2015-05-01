@@ -43,14 +43,25 @@ urlpatterns = patterns('appraise.views',
 #)
 
 # Patterns for "WMT14" app.
-urlpatterns += patterns('appraise.wmt14.views',
-  (r'^{0}wmt14/$'.format(DEPLOYMENT_PREFIX), 'overview'),
-  (r'^{0}wmt14/(?P<hit_id>[a-f0-9]{{8}})/'.format(DEPLOYMENT_PREFIX), 'hit_handler'),
-  (r'^{0}wmt14/mturk/'.format(DEPLOYMENT_PREFIX), 'mturk_handler'),
-  (r'^{0}wmt14/status/$'.format(DEPLOYMENT_PREFIX), 'status'),
-  (r'^{0}wmt14/update-status/(?P<key>(global_stats|language_pair_stats|group_stats|user_stats|clusters))?/?$'.format(DEPLOYMENT_PREFIX), 'update_status'),
-  (r'^{0}wmt14/update-ranking/$'.format(DEPLOYMENT_PREFIX), 'update_ranking'),
-  (r'^{0}wmt14/signup/$'.format(DEPLOYMENT_PREFIX), 'signup'),
+#urlpatterns += patterns('appraise.wmt14.views',
+#  (r'^{0}wmt14/$'.format(DEPLOYMENT_PREFIX), 'overview'),
+#  (r'^{0}wmt14/(?P<hit_id>[a-f0-9]{{8}})/'.format(DEPLOYMENT_PREFIX), 'hit_handler'),
+#  (r'^{0}wmt14/mturk/'.format(DEPLOYMENT_PREFIX), 'mturk_handler'),
+#  (r'^{0}wmt14/status/$'.format(DEPLOYMENT_PREFIX), 'status'),
+#  (r'^{0}wmt14/update-status/(?P<key>(global_stats|language_pair_stats|group_stats|user_stats|clusters))?/?$'.format(DEPLOYMENT_PREFIX), 'update_status'),
+#  (r'^{0}wmt14/update-ranking/$'.format(DEPLOYMENT_PREFIX), 'update_ranking'),
+#  (r'^{0}wmt14/signup/$'.format(DEPLOYMENT_PREFIX), 'signup'),
+#)
+
+# Patterns for "WMT15" app.
+urlpatterns += patterns('appraise.wmt15.views',
+  (r'^{0}wmt15/$'.format(DEPLOYMENT_PREFIX), 'overview'),
+  (r'^{0}wmt15/(?P<hit_id>[a-f0-9]{{8}})/'.format(DEPLOYMENT_PREFIX), 'hit_handler'),
+  (r'^{0}wmt15/mturk/'.format(DEPLOYMENT_PREFIX), 'mturk_handler'),
+  (r'^{0}wmt15/status/$'.format(DEPLOYMENT_PREFIX), 'status'),
+  (r'^{0}wmt15/update-status/(?P<key>(global_stats|language_pair_stats|group_stats|user_stats|clusters))?/?$'.format(DEPLOYMENT_PREFIX), 'update_status'),
+  (r'^{0}wmt15/update-ranking/$'.format(DEPLOYMENT_PREFIX), 'update_ranking'),
+  (r'^{0}wmt15/signup/$'.format(DEPLOYMENT_PREFIX), 'signup'),
 )
 
 if DEBUG:

@@ -4,7 +4,7 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: create_wmt14_invites.py [-h] group-name number-of-tokens
+usage: create_wmt15_invites.py [-h] group-name number-of-tokens
 
 Creates the requested number of invite tokens for the given group.
 
@@ -32,12 +32,12 @@ if __name__ == "__main__":
     args = PARSER.parse_args()
     
     # Properly set DJANGO_SETTINGS_MODULE environment variable.
-    os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'appraise.settings'
     PROJECT_HOME = os.path.normpath(os.getcwd() + "/..")
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt14.models import UserInviteToken
+    from appraise.wmt15.models import UserInviteToken
     from django.contrib.auth.models import Group
     
     # Check if the given group name is valid.

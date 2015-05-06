@@ -1,5 +1,3 @@
-{% with bootstrap_url="/appraise/files" %}
-<!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/assets -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,9 +11,9 @@
     <meta name="author" content="Christian Federmann">
 
     <!-- Bootstrap core CSS -->
-    <link href="{{bootstrap_url}}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{static_url}}css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="{{bootstrap_url}}/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="{{static_url}}css/bootstrap-theme.min.css" rel="stylesheet">
 
     <style type="text/css">
       body {
@@ -93,9 +91,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{bootstrap_url}}/js/bootstrap.min.js"></script>
+    <script src="{{static_url}}js/bootstrap.min.js"></script>
     
     {% block actions %}{% endblock %}
   </body>
 </html>
-{% endwith %}

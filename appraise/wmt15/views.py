@@ -23,13 +23,21 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt15.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken
-from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH
+from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH, STATIC_URL
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.wmt15.views')
 LOGGER.addHandler(LOG_HANDLER)
+
+# Base context for all views.
+BASE_CONTEXT = {
+  'commit_tag': COMMIT_TAG,
+  'title': 'Appraise evaluation system',
+  'installed_apps': ['wmt15'],
+  'static_url': STATIC_URL,
+}
 
 # We keep status and ranking information available in memory to speed up
 # access and avoid lengthy delays caused by computation of this data.
@@ -303,7 +311,6 @@ def _handle_ranking(request, task, items):
     
     dictionary = {
       'action_url': request.path,
-      'commit_tag': COMMIT_TAG,
       'item_id': item.id,
       'sentence_id': item.source[1]['id'],
       'language_pair': item.hit.get_language_pair_display(),
@@ -314,6 +321,7 @@ def _handle_ranking(request, task, items):
       'title': 'Ranking',
       'translations': translations,
     }
+    dictionary.update(BASE_CONTEXT)
     
     return render(request, 'wmt15/ranking.html', dictionary)
 
@@ -476,6 +484,7 @@ def mturk_handler(request):
       'srcIndex_2': srcIndex_2,
       'srcIndex_3': srcIndex_3,
     }
+    dictionary.update(BASE_CONTEXT)
     
     LOGGER.debug(u'\n\nMTurk data for HIT "{0}":\n\n{1}\n'.format(
       hit.hit_id,
@@ -559,7 +568,6 @@ def overview(request):
     
     dictionary = {
       'active_page': "OVERVIEW",
-      'commit_tag': COMMIT_TAG,
       'hit_data': hit_data,
       'total': total,
       'group_name': group_name,
@@ -567,6 +575,9 @@ def overview(request):
       'admin_url': admin_url,
       'title': 'WMT15 Dashboard',
     }
+    dictionary.update(BASE_CONTEXT)
+    
+    LOGGER.info(dictionary.values())
     
     return render(request, 'wmt15/overview.html', dictionary)
 
@@ -591,6 +602,11 @@ def status(request):
     if not STATUS_CACHE.has_key('user_stats'):
         update_status(key='user_stats')
     
+    # Compute admin URL for super users.
+    admin_url = None
+    if request.user.is_superuser:
+        admin_url = reverse('admin:index')
+    
     dictionary = {
       'active_page': "STATUS",
       'global_stats': STATUS_CACHE['global_stats'],
@@ -598,9 +614,10 @@ def status(request):
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
       'clusters': RANKINGS_CACHE.get('clusters', []),
-      'commit_tag': COMMIT_TAG,
       'title': 'WMT15 Status',
+      'admin_url': admin_url,
     }
+    dictionary.update(BASE_CONTEXT)
     
     return render(request, 'wmt15/status.html', dictionary)
 
@@ -1023,7 +1040,6 @@ def signup(request):
     
     context = {
       'active_page': "OVERVIEW",
-      'commit_tag': COMMIT_TAG,
       'errors': errors,
       'focus_input': focus_input,
       'username': username,
@@ -1032,5 +1048,6 @@ def signup(request):
       'languages': languages,
       'title': 'WMT15 Sign up',
     }
+    dictionary.update(BASE_CONTEXT)
     
     return render(request, 'wmt15/signup.html', context)

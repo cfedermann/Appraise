@@ -29,14 +29,18 @@ LOGGER.addHandler(LOG_HANDLER)
 LANGUAGE_PAIR_CHOICES = (
   ('eng2ces', 'English → Czech'),
   ('eng2deu', 'English → German'),
+  ('eng2fin', 'English → Finnish'),
   ('eng2fra', 'English → French'),
-  ('eng2hin', 'English → Hindi'),
   ('eng2rus', 'English → Russian'),
   ('ces2eng', 'Czech → English'),
   ('deu2eng', 'German → English'),
-  ('fra2eng', 'French → English'),
-  ('hin2eng', 'Hindi → English'),
+  ('fin2eng', 'Finnish → English'),
+  ('fra2eng', 'French → English'),  
   ('rus2eng', 'Russian → English'),
+
+  # WMT14 languages
+  # ('eng2hin', 'English → Hindi'),
+  # ('hin2eng', 'Hindi → English'),
 )
 
 

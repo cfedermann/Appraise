@@ -1,10 +1,29 @@
 {% extends "wmt15/base.html" %}
 
 {% block content %}
-<div class="row">
-<div class="span12">
+  {% if message %}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <p><strong>Please note:</strong> {{message}}</p>
+  </div>
+  {% endif %}
 
-<h3>Dashboard</h3>
+  <div class="page-header">
+    <h1>Dashboard</h1>
+    <p>This page lists available HIT tasks for your evaluation languages and gives a summary of your group's and your personal task completion status.</p>
+  </div>
+  <div class="container col-sm-12">
+    {% if not hit_data %}
+    <div class="panel panel-primary" style="margin-top: 20px;">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>Note</strong></h3>
+      </div>
+      <div class="panel-body">
+        <p><strong>No HITs available...</strong> At this moment, there are no active HITs available for you to work on: either all HITs have been completed or the remaining HITs for your language pairs are all assigned to other users already. We are constantly adding new data so the wait should be short. None of your previous annotations has been lost. Take a break and relax a little... there will be more data soon!</p>
+      </div>
+    </div>
+{% endif %}
+
 <table class="table table-striped table-bordered">
 <tr>
   <th style="width: 20%;">Task name</th>
@@ -38,11 +57,5 @@
 {% endif %}
 </table>
 
-{% if not hit_data %}
-
-<h3>No HITs available...</h3>
-<p>At this moment, there are no HITs available to work on: either all HITs have been completed or the remaining HITs for your language pairs are all assigned to other users.</p>
-{% endif %}
-</div>
 </div>
 {% endblock %}

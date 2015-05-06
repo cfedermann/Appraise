@@ -658,9 +658,12 @@ def _compute_global_stats():
     Computes some global statistics for the WMT15 evaluation campaign.
     """
     global_stats = []
-    wmt15 = Group.objects.get(name='WMT15')
-    users = wmt15.user_set.all()
     
+    wmt15_group = Group.objects.filter(name='WMT15')
+    wmt15_users = []
+    if wmt15_group.exists():
+        wmt15_users = wmt15_group[0].user_set.all()
+      
     # Check how many HITs have been completed.  We now consider a HIT to be
     # completed once it has been annotated by one or more annotators.
     #
@@ -683,7 +686,7 @@ def _compute_global_stats():
     
     # Aggregate information about participating groups.
     groups = set()
-    for user in users:
+    for user in wmt15_users:
         for group in user.groups.all():
             if group.name == 'WMT15' or group.name.startswith('eng2') \
               or group.name.endswith('2eng'):
@@ -697,7 +700,7 @@ def _compute_global_stats():
     avg_time = total_time / float(hits_completed or 1)
     avg_user_time = total_time / float(3 * hits_completed or 1)
     
-    global_stats.append(('Users', users.count()))
+    global_stats.append(('Users', len(wmt15_users)))
     global_stats.append(('Groups', len(groups)))
     global_stats.append(('HITs completed', hits_completed))
     global_stats.append(('HITs remaining', hits_remaining))
@@ -717,6 +720,8 @@ def _compute_language_pair_stats():
     """
     language_pair_stats = []
     
+    # TODO: update LANGUAGE_PAIR_CHOICES to include Finnish and move to better place.
+    #
     # Running compute_remaining_hits() will also update completion status for HITs.
     for choice in LANGUAGE_PAIR_CHOICES:
         _code = choice[0]
@@ -742,19 +747,27 @@ def _compute_group_stats():
     Computes group statistics for the WMT15 evaluation campaign.
     """
     group_stats = []
-    wmt15 = Group.objects.get(name='WMT15')
-    users = wmt15.user_set.all()
+    
+    wmt15_group = Group.objects.filter(name='WMT15')
+    wmt15_users = []
+    if wmt15_group.exists():
+        wmt15_users = wmt15_group[0].user_set.all()
     
     # Aggregate information about participating groups.
     groups = set()
-    for user in users:
+    for user in wmt15_users:
         for group in user.groups.all():
             if group.name == 'WMT15' or group.name.startswith('eng2') \
               or group.name.endswith('2eng'):
                 continue
             
             groups.add(group)
-    
+            
+    # TODO: move this to property of evaluation group or add dedicated data model.
+    # GOAL: should be configurable from within the Django admin backend.
+    #
+    # MINIMAL: move to local_settings.py?
+    #
     # The following dictionary defines the number of HITs each group should
     # have completed during the WMT15 evaluation campaign.
     group_hit_requirements = {
@@ -799,10 +812,13 @@ def _compute_user_stats():
     Computes user statistics for the WMT15 evaluation campaign.
     """
     user_stats = []
-    wmt15 = Group.objects.get(name='WMT15')
-    users = wmt15.user_set.all()
     
-    for user in users:
+    wmt15_group = Group.objects.filter(name='WMT15')
+    wmt15_users = []
+    if wmt15_group.exists():
+        wmt15_users = wmt15_group[0].user_set.all()
+    
+    for user in wmt15_users:
         _user_stats = HIT.compute_status_for_user(user)
         _name = user.username
         _avg_time = seconds_to_timedelta(_user_stats[1])
@@ -902,6 +918,8 @@ def signup(request):
     email = None
     token = None
     
+    focus_input = 'id_username'
+    
     if request.method == "POST":
         username = request.POST.get('username', None)
         email = request.POST.get('email', None)
@@ -912,10 +930,16 @@ def signup(request):
             try:
                 invite = UserInviteToken.objects.get(token=token)
                 assert(invite.active)
+                
+                # Check if username is already in use.
+                # ==> 'invalid_username'
+                #
+                # invalid token will be caught
+                # email does not matter!
 
                 # Compute set of evaluation languages for this user.
                 eval_groups = []
-                for eval_language in ('2ces', '2deu', '2eng', '2fra', '2hin', '2rus'):
+                for eval_language in ('2ces', '2deu', '2eng', '2fin', '2fra', '2hin', '2rus'):
                     if eval_language in languages:
                         eng2xyz = Group.objects.filter(name__endswith=eval_language)
                         if eng2xyz.exists():
@@ -952,11 +976,25 @@ def signup(request):
                 from traceback import format_exc
                 LOGGER.debug(format_exc())
                 errors = ['invalid_token']
+        
+        if not username:
+            focus_input = 'id_username'
+            errors = ['invalid_username']
+        elif not email:
+            focus_input = 'id_email'
+            errors = ['invalid_email']
+        elif not token:
+            focus_input = 'id_token'
+            errors = ['invalid_token']
+        elif not languages:
+            focus_input = 'id_languages'
+            errors = ['invalid_languages']
     
     dictionary = {
       'active_page': "OVERVIEW",
       'commit_tag': COMMIT_TAG,
       'errors': errors,
+      'focus_input': focus_input,
       'username': username,
       'email': email,
       'token': token,

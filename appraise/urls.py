@@ -10,8 +10,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from appraise.settings import MEDIA_ROOT, DEBUG, DEPLOYMENT_PREFIX
 
-
 admin.autodiscover()
+
+# HTTP error handlers supporting COMMIT_TAG.
+handler404 = 'appraise.views._page_not_found'  
+handler500 = 'appraise.views._server_error'
 
 # Basis URL patterns for Appraise project.
 urlpatterns = patterns('appraise.views',

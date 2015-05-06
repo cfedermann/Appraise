@@ -7,14 +7,27 @@ from django import VERSION as DJANGO_VERSION
 
 import os
 
-# Try to load ROOT_PATH from local settings, otherwise use default.
+# Try to load ROOT_PATH, etc. from local settings, otherwise use defaults.
 try:
-    from local_settings import ROOT_PATH, DEPLOYMENT_PREFIX, DEBUG
+    from local_settings import ROOT_PATH, DEPLOYMENT_PREFIX, DEBUG, \
+      ADMINS, MANAGERS, DATABASES
 
 except ImportError:
     ROOT_PATH = os.getcwd()
     DEPLOYMENT_PREFIX = 'appraise/'
     DEBUG = True
+    
+    ADMINS = (
+      # ('Your Name', 'your_email@domain.com'),
+    )
+    MANAGERS = ADMINS
+
+    DATABASES = {
+      'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': os.path.join(ROOT_PATH, 'development.db'),
+    }
+}
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -58,19 +71,6 @@ LOG_HANDLER.setFormatter(LOG_FORMATTER)
 LOGIN_URL = '/{0}login/'.format(DEPLOYMENT_PREFIX)
 LOGIN_REDIRECT_URL = '/{0}'.format(DEPLOYMENT_PREFIX)
 LOGOUT_URL = '/{0}logout/'.format(DEPLOYMENT_PREFIX)
-
-ADMINS = (
-  # ('Your Name', 'your_email@domain.com'),
-)
-
-MANAGERS = ADMINS
-
-DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': os.path.join(ROOT_PATH, 'development.db'),
-  }
-}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

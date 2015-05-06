@@ -1048,6 +1048,6 @@ def signup(request):
       'languages': languages,
       'title': 'WMT15 Sign up',
     }
-    dictionary.update(BASE_CONTEXT)
+    context.update(BASE_CONTEXT)
     
     return render(request, 'wmt15/signup.html', context)

@@ -917,6 +917,7 @@ def signup(request):
     username = None
     email = None
     token = None
+    languages = []
     
     focus_input = 'id_username'
     
@@ -928,15 +929,22 @@ def signup(request):
         
         if username and email and token and languages:
             try:
-                invite = UserInviteToken.objects.get(token=token)
-                assert(invite.active)
+                # Check if given invite token is still active.
+                invite = UserInviteToken.objects.filter(token=token)
+                if not invite.exists() or not invite[0].active:
+                    LOGGER.warning('Trying to create user "{0}" with ' \
+                      'invalid invite token "{1}"'.format(username, token))
+                    
+                    raise ValueError('invalid_token') 
                 
-                # Check if username is already in use.
-                # ==> 'invalid_username'
-                #
-                # invalid token will be caught
-                # email does not matter!
-
+                # Check if desired username is already in use.
+                current_user = User.objects.filter(username=username)
+                if current_user.exists():
+                    LOGGER.warning('Trying to re-create user "{0}" with ' \
+                      'invite token "{1}"'.format(current_user[0], token))
+                    
+                    raise ValueError('invalid_username')
+                
                 # Compute set of evaluation languages for this user.
                 eval_groups = []
                 for eval_language in ('2ces', '2deu', '2eng', '2fin', '2fra', '2hin', '2rus'):
@@ -972,11 +980,34 @@ def signup(request):
                 login(request, user)
                 return redirect('appraise.wmt15.views.overview')
             
+            # For validation errors, invalidate the respective value.
+            except ValueError as issue:
+                if issue.message == 'invalid_username':
+                    username = None
+                
+                elif issue.message == 'invalid_token':
+                    token = None
+                
+                else:
+                    from traceback import format_exc
+                    LOGGER.debug(format_exc())
+                    
+                    username = None
+                    email = None
+                    token = None
+                    languages = None
+            
+            # For any other exception, clean up and ask user to retry.
             except:
                 from traceback import format_exc
                 LOGGER.debug(format_exc())
-                errors = ['invalid_token']
+                
+                username = None
+                email = None
+                token = None
+                languages = None
         
+        # Detect which input should get focus for next page rendering.
         if not username:
             focus_input = 'id_username'
             errors = ['invalid_username']
@@ -990,7 +1021,7 @@ def signup(request):
             focus_input = 'id_languages'
             errors = ['invalid_languages']
     
-    dictionary = {
+    context = {
       'active_page': "OVERVIEW",
       'commit_tag': COMMIT_TAG,
       'errors': errors,
@@ -998,7 +1029,8 @@ def signup(request):
       'username': username,
       'email': email,
       'token': token,
+      'languages': languages,
       'title': 'WMT15 Sign up',
     }
     
-    return render(request, 'wmt15/signup.html', dictionary)
+    return render(request, 'wmt15/signup.html', context)

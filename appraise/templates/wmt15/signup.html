@@ -73,13 +73,13 @@
         <div class="input-group">
           <div class="input-group-addon">required</div>
           <select class="form-control" name="languages" id="id_languages" multiple="multiple">
-            <option value="2ces">Czech (český jazyk)</option>
-            <option value="2deu">German (Deutsch)</option>
-            <option value="2eng">English</option>
-            <option value="2fin">Finnish (Suomen kieli)</option>
-            <option value="2fra">French (Français)</option>
-            <option value="2hin">Hindi (हिन्दी)</option>
-            <option value="2rus">Russian (Русский язык)</option>
+            <option {% if '2ces' in languages %}selected="selected"{% endif %}value="2ces">Czech (český jazyk)</option>
+            <option {% if '2deu' in languages %}selected="selected"{% endif %}value="2deu">German (Deutsch)</option>
+            <option {% if '2eng' in languages %}selected="selected"{% endif %}value="2eng">English</option>
+            <option {% if '2fin' in languages %}selected="selected"{% endif %}value="2fin">Finnish (Suomen kieli)</option>
+            <option {% if '2fra' in languages %}selected="selected"{% endif %}value="2fra">French (Français)</option>
+            <!-- <option {% if '2hin' in languages %}selected="selected"{% endif %}value="2hin">Hindi (हिन्दी)</option> -->
+            <option {% if '2rus' in languages %}selected="selected"{% endif %}value="2rus">Russian (Русский язык)</option>
           </select>
         </div>
         <span id="helpLanguages" class="help-block">Which languages will you evaluate?</span>

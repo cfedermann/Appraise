@@ -9,26 +9,28 @@ from django.contrib.auth.views import login as LOGIN, logout as LOGOUT
 from django.contrib.auth.views import password_change as PASSWORD_CHANGE
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, render_to_response
-from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG
+from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, STATIC_URL
 
 # Setup logging support.
 logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.views')
 LOGGER.addHandler(LOG_HANDLER)
 
+# Base context for all views.
+BASE_CONTEXT = {
+  'commit_tag': COMMIT_TAG,
+  'title': 'Appraise evaluation system',
+  'installed_apps': ['wmt15'],
+  'static_url': STATIC_URL,
+}
+
 # HTTP error handlers supporting COMMIT_TAG.
 def _page_not_found(request, template_name='404.html'):  
     """Custom HTTP 404 handler that preserves URL_PREFIX."""  
     LOGGER.info('Rendering HTTP 404 view for user "{0}".'.format(
       request.user.username or "Anonymous"))
-
-    context = {
-      'commit_tag': COMMIT_TAG,
-      'title': 'Appraise evaluation system',
-      'installed_apps': ['wmt15'],
-    }
     
-    return render_to_response('404.html', context)
+    return render_to_response('404.html', BASE_CONTEXT)
 
   
 def _server_error(request, template_name='500.html'):  
@@ -36,13 +38,7 @@ def _server_error(request, template_name='500.html'):
     LOGGER.info('Rendering HTTP 500 view for user "{0}".'.format(
       request.user.username or "Anonymous"))
 
-    context = {
-      'commit_tag': COMMIT_TAG,
-      'title': 'Appraise evaluation system',
-      'installed_apps': ['wmt15'],
-    }
-    
-    return render_to_response('500.html', context)
+    return render_to_response('500.html', BASE_CONTEXT)
 
 
 def frontpage(request):
@@ -58,11 +54,9 @@ def frontpage(request):
         admin_url = reverse('admin:index')
     
     context = {
-      'commit_tag': COMMIT_TAG,
-      'title': 'Appraise evaluation system',
-      'installed_apps': ['wmt15'],
       'admin_url': admin_url,
     }
+    context.update(BASE_CONTEXT)
     
     return render(request, 'frontpage.html', context)
 
@@ -76,12 +70,10 @@ def login(request, template_name):
     
     if request.user.username:
         context = {
-          'commit_tag': COMMIT_TAG,
           'message': 'You are already logged in as "{0}".'.format(
             request.user.username),
-          'title': 'Appraise evaluation system',
-          'installed_apps': ['wmt15'],
         }
+        context.update(BASE_CONTEXT)
         
         return render(request, 'frontpage.html', context)
     
@@ -89,14 +81,12 @@ def login(request, template_name):
     if request.POST.has_key('username'): 
         postedUsername = request.POST['username']
     
-    extra_context = {
-      'commit_tag': COMMIT_TAG,
-      'title': 'Appraise evaluation system',
-      'installed_apps': ['wmt15'],
+    context = {
       'username': postedUsername,
     }
+    context.update(BASE_CONTEXT)
     
-    return LOGIN(request, template_name, extra_context=extra_context)
+    return LOGIN(request, template_name, extra_context=context)
 
 
 def logout(request, next_page):
@@ -115,27 +105,25 @@ def password_change(request, template_name):
     """
     LOGGER.info('Rendering password change view for user "{0}".'.format(
       request.user.username or "Anonymous"))
-    
-    context = {
-      'commit_tag': COMMIT_TAG,
-      'title': 'Appraise evaluation system',
-      'installed_apps': ['wmt15'],
-    }
-    
+        
     # Verify that user session is active.  Otherwise, redirect to front page.
     if not request.user.username:
-        context.update({
+        context = {
           'message': 'You are not logged in and hence cannot change your password!',
-        })
+        }
+        context.update(BASE_CONTEXT)
+        
         return render(request, 'frontpage.html', context)
     
     # For increased security Verify that old password was correct.
     if request.method == 'POST':
         old_password = request.POST.get('old_password', None)
         if not request.user.check_password(old_password):
-            context.update({
+            context = {
               'message': 'Authentication failed so your password has not been changed!',
-            })
+            }
+            context.update(BASE_CONTEXT)
+            
             return render(request, 'frontpage.html', context)
         
         password1 = request.POST.get('password1', None)
@@ -153,9 +141,11 @@ def password_change(request, template_name):
         admin_url = reverse('admin:index')
     
     post_change_redirect = reverse('appraise.wmt15.views.overview')
-    context.update({
+    context = {
       'admin_url': admin_url,
-    })
+    }
+    context.update(BASE_CONTEXT)
+    
     return PASSWORD_CHANGE(request, template_name,
       post_change_redirect=post_change_redirect,
       password_change_form=AdminPasswordChangeForm, extra_context=context)

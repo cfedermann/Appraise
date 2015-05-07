@@ -137,7 +137,7 @@ def validate_segment_xml(value, require_systems=False):
         assert(_tree.find('reference').text is not None), \
           'missing required <reference> text value'
         
-        assert(len(_tree.findall('translation')) == 5), \
+        assert(len(_tree.findall('translation')) > 0), \
           'one or more <translation> elements expected'
         
         for _translation in _tree.iterfind('translation'):

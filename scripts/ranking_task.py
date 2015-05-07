@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 class RankingTask:
-
+    # Patched to work with unicode strings which are produced upstream.
     def __init__(self):
         self.id = None
         self.source = None
@@ -17,17 +17,17 @@ class RankingTask:
         self.system_outputs = outputs
 
     def attr(self):
-        return ''
+        return u''
 
     def xml(self, indent=4):
-        str  = '\n    <seg%s>' % (self.attr())
-        str += '\n      <source id="%d">%s</source>' % (self.id, self.source)
-        str += '\n      <reference>%s</reference>' % (self.reference)
+        _str  = u'\n    <seg{0}>'.format(self.attr())
+        _str += u'\n      <source id="{0}">{1}</source>'.format(self.id, self.source)
+        _str += u'\n      <reference>{0}</reference>'.format(self.reference)
         for i in range(len(self.system_names)):
-            str += '\n      <translation system="%s">%s</translation>' % (self.system_names[i], self.system_outputs[i])
-        str += '\n    </seg>'
+            _str += u'\n      <translation system="{0}">{1}</translation>'.format(self.system_names[i], self.system_outputs[i])
+        _str += u'\n    </seg>'
 
-        return str
+        return _str
 
 class Control(RankingTask):
     """A Control is a RankingTask that happens to have been filled out."""

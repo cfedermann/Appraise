@@ -37,6 +37,19 @@ PARSER.add_argument('-controls', type=str, default=None, dest="controlFile", hel
 PARSER.add_argument('-control_prob', type=float, default=1.0, dest="control_prob", help='probability of inserting a control into a HIT')
 PARSER.add_argument('-save', type=str, default=None, dest="saveDir", help='directory to save reduced corpora to')
 
+def cleanup_translation(input_str):
+    """Cleans a translation for identity comparison.
+    
+    Removes punctuation, superfluous whitespace and ignores case.
+    
+    """
+    import re
+    punctuation = re.compile('[.,;:!?\'"\-«»<>&()\[\]]+', re.I)
+    whitespace = re.compile('\s{2,}')
+    cleaned_str = punctuation.sub(' ', input_str)
+    cleaned_str = whitespace.sub(' ', cleaned_str)
+    return cleaned_str.lower()
+
 def random_from_range(range_max, num_draws, tuple_size = 3, sequential = True):
     """Returns a set of tuples (of size `size') of numbers, representing sentences to use in constructing a HIT. `range_max' is the number of sentences, `num_draws' is the number of HITs to create, `tuple_size' is the number of sentences in each HIT, and `sequential' indicates that we should draw sentences in block groups."""
     
@@ -81,12 +94,12 @@ if __name__ == "__main__":
 
     source = []
     for line in args.source:
-        source.append(line.strip())
+        source.append(line.decode("utf8").strip())
     
     reference = []
     if args.reference:
         for line in args.reference:
-            reference.append(line.strip())
+            reference.append(line.decode("utf8").strip())
 
     if len(reference) != len(source):
         sys.stderr.write('* FATAL: reference length (%d) != source length (%d)\n' % (len(source), len(reference)))
@@ -100,7 +113,7 @@ if __name__ == "__main__":
             system_name = os.path.basename(system.name)
             system_names.append(system_name)
             for line in system:
-                systems[i].append(line.strip())
+                systems[i].append(line.decode("utf8").strip())
 
             if len(systems[i]) != len(source):
                 sys.stderr.write('* FATAL: system %s length (%d) != source length (%d)\n' % (system_name, len(source), len(reference)))
@@ -120,7 +133,7 @@ if __name__ == "__main__":
             sys.stderr.write('DUMPING TO %s\n' % (outfile))
             out = open(outfile, 'w')
             for line in lines:
-                out.write('%s\n' % (line))
+                out.write(u'{0}\n'.format(line).encode('utf-8'))
             out.close()
 
     # Save corpora if requested and not already existing
@@ -137,12 +150,59 @@ if __name__ == "__main__":
     hits = []
     for sentnos_tuple in random_blocks:
 
-        # Randomize the selection of systems
-        system_indexes = range(len(systems))
-        random.shuffle(system_indexes)
-        system_indexes = system_indexes[:args.systemspertask]
+        # We need to avoid duplicate candidate translations.  To do so, we have to check
+        # which systems have identical translations -- this may be different across tasks.
+        # Hence, our random selection of system IDs might be different inside a HIT.
+        #
+        # To implement this, we loop over all sentence IDs.
+        tasks = []
+        
+        
+        
+        #if False:
+        for current_id in sentnos_tuple:
+            from collections import defaultdict
+            unique_translations_to_system_ids_map = defaultdict(list)
+            
+            # Then we iterate over all systems and map unique translations to system IDs. 
+            for system_id in range(len(systems)):
+                current_translation = cleanup_translation(systems[system_id][eligible[current_id]])
+                unique_translations_to_system_ids_map[current_translation].append(system_id)
+            
+            # To randomize the selection of systems, we have to generate the list of unique translations.
+            # Note that this may result in less than five translation candidates... 
+            deduped_system_ids = [x for x in unique_translations_to_system_ids_map.values()]
+            deduped_system_indexes = range(len(deduped_system_ids))
+            random.shuffle(deduped_system_indexes)
+            deduped_system_indexes = deduped_system_indexes[:args.systemspertask]
+            
+            deduped_system_names = []
+            deduped_system_output = []
+            for deduped_id in deduped_system_indexes:
+                deduped_system_names.append(u','.join([system_names[system_id] for system_id in deduped_system_ids[deduped_id]]))
+                system_id = deduped_system_ids[deduped_id][0] 
+                deduped_system_output.append(systems[system_id][eligible[current_id]])
+            
+            tasks.append(
+              RankingTask(
+                eligible[current_id] + 1,
+                source[eligible[current_id]],
+                reference[eligible[current_id]],
+                deduped_system_names,
+                deduped_system_output,
+              )
+            )
 
-        tasks = [RankingTask(eligible[id] + 1, source[eligible[id]], reference[eligible[id]], [system_names[sysid] for sysid in system_indexes], [systems[sysid][eligible[id]] for sysid in system_indexes]) for id in sentnos_tuple]
+# Matt's old code
+#
+#        # Randomize the selection of systems
+#        system_indexes = range(len(systems))
+#        random.shuffle(system_indexes)
+#        system_indexes = system_indexes[:args.systemspertask]
+#
+#        tasks = [RankingTask(eligible[id] + 1, source[eligible[id]], reference[eligible[id]], [system_names[sysid] for sysid in system_indexes], [systems[sysid][eligible[id]] for sysid in system_indexes]) for id in sentnos_tuple]
+#
+# end of Matt's old code
 
         # Randomly decided whether to randomly replace one of the tasks with a random control.  That
         # is, we roll a dice to see whether to insert a control (determined by
@@ -153,11 +213,10 @@ if __name__ == "__main__":
                 tasks[random.randint(0, len(tasks)-1)] = controls.pop(random.randint(0,len(controls)-1))
 
         # sentnos_str = ",".join([`x.id` for x in tasks])
-        sentnos_str = "-1"
-        hit = '  <hit block-id="%s" source-language="%s" target-language="%s">' % (sentnos_str, args.sourceLang, args.targetLang)
-        for task in tasks:
-            hit += task.xml()
-        hit += '\n  </hit>'
+        sentnos_str = u"-1"
+        hit  = u'  <hit block-id="{0}" source-language="{1}" target-language="{2}">'.format(sentnos_str, args.sourceLang, args.targetLang)
+        hit += u''.join([task.xml() for task in tasks])
+        hit += u'\n  </hit>'
 
         hits.append(hit)
 
@@ -167,7 +226,8 @@ if __name__ == "__main__":
 
         hits += [hits[x[0]] for x in numbers]
 
-    print '<hits>'
-    for hit in hits:
-        print hit
-    print '</hits>'
+    result_xml = u'<hits>\n{0}\n</hits>'.format(u'\n'.join([hit for hit in hits]))
+    
+    out = open("test-outfile.txt", 'w')
+    out.write(result_xml.encode('utf-8'))
+    out.close()

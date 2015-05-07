@@ -52,8 +52,8 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt14.models import HIT
-    from appraise.wmt14.validators import validate_hits_xml_file
+    from appraise.wmt15.models import HIT
+    from appraise.wmt15.validators import validate_hits_xml_file
     
     # We might potentially be dealing with more than a single input file.
     first_run = True

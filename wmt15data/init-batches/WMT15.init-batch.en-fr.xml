@@ -1,0 +1,709 @@
+<hits>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1079">Primary and populist reaction</source>
+      <reference>Réaction primaire et populiste</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Primaire et une réaction populiste</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Réaction primaire et populiste</translation>
+    </seg>
+    <seg>
+      <source id="626">In the case of American Horror Story I preferred to watch it all in one go to watching 13 episodes spread over 3 to 4 months.</source>
+      <reference>Dans le cas d’American Horror Story je préféré avoir tout d’un coup que regarder 13 épisodes étalés sur 3 à 4 mois.</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Dans le cas d'American Horror Story, j'ai préféré regarder tout cela en une seule fois pour regarder 13 épisodes répartis sur 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Dans le cas d'American Horror Story je préférais regarder tout en une seule fois à regarder 13 épisodes répartis sur 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Dans le cas d'American Horror Story, je préfère regarder tous en un aller à regarder 13 épisodes répartis sur 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Dans le cas de l'histoire américaine d'horreur que j'ai préféré l'observer toute dans une aller à observer 13 épisodes répartissez 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Dans le cas d'American Horror Story, que j'ai préféré pour le regarder, tout en une seule fois à regarder 13 épisodes s'étendant sur 3 à 4 mois.</translation>
+    </seg>
+    <seg>
+      <source id="1296">The the Green party is opposed to it and trying to alert people to the incredible devastation it will wreak on our lives.</source>
+      <reference>Les Verts sont contre ce projet et tentent d'alerter les gens quant aux dégâts inimaginables que cet accord aura sur nos vies.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le parti vert s'y oppose et pour tenter d'alerter les gens à la dévastation incroyable qu'elle va engendrer sur nos vies.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le le Parti Vert est opposé à lui et essayant d'alerter des personnes à la dévastation incroyable qu'il assouvira nos vies.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Le Parti vert s'oppose à lui et essayant d'alerte people à la dévastation incroyable il va assouvir sur nos vies.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Les Verts sont opposés et tentent d'alerter les gens à l'incroyable dévastation qu'il va engendrer sur nos vies.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Le Parti vert est opposé et tentent d'alerter la population aux incroyables ravages il va semer sur nos vies.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="685">El Pais reports 7400 were turned down for visas becuase of nation of origin or previous travel.</source>
+      <reference>El Pais rapporte que 7 400 ont vu leur demande de visa refusée à cause de leur pays d'origine ou de leurs voyages récents.</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Les rapports 7400 d'EL Pais ont été déclinés pour des visas en raison de la nation d'origine ou du voyage précédent.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">El Pais 7400 rapports ont été refusés pour les visas à cause de la nation d'origine ou de voyages précédents.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Pais d'el rapporte 7400 ont été refusé pour les visas becuase de nation d'origine ou de voyage précédent.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">El Pais rapports 7400 ont été rejetées de visa en raison de la nation d'origine ou voyage précédent.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">El Pais rapporte 7400 ont refusé des visas pour le petit-déjeuner gargantuesque de la nation d'origine ou des voyages précédents.</translation>
+    </seg>
+    <seg>
+      <source id="1180">Is it the topic that offends you, or that people have a laugh with it?</source>
+      <reference>Est-ce le sujet qui vous choque, ou le fait que les gens en rigolent ?</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">C'est le sujet qui vous offense, ou que les gens ont un éclat de rire avec lui?</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Est-ce le sujet qui vous offense, ou qui les gens ont un rire avec lui ?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Est-ce le sujet qui commet une infraction vous, ou que les gens ont un éclat de rire avec elle ?</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Est-ce le sujet qui vous offusque, ou que les gens ont un moment avec elle ?</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Est-ce le sujet qui vous offense, ou que les gens ont un rire avec cela ?</translation>
+    </seg>
+    <seg>
+      <source id="1033">A unique situation in the world, an unacceptable situation for anyone who has a heart and moral sense.</source>
+      <reference>Situation unique au monde, situation inacceptable pour toute personne qui a un cœur et le sens moral.</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Une situation unique au monde, une situation inacceptable pour quiconque a un coeur et un sens moral.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Une situation unique au monde, une situation inacceptable pour quiconque a un coeur et le sens moral.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Une situation unique au monde, une situation inacceptable pour quiconque a un cœur et un sens moral.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Une situation unique dans le monde, une situation inacceptable pour n'importe qui qui a un coeur et un sens moral.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Une situation unique dans le monde, une situation inacceptable pour toute personne qui a un cœur et le sens moral.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="299">It's not simply a change of ownership ScotRail needs but some new ideas.</source>
+      <reference>Ce dont ScotRail a besoin, ce n'est pas simplement un changement de propriétaire mais surtout des idées nouvelles.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Ce n'est pas un simple changement de propriétaire ScotRail besoins mais certaines nouvelles idées.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Ce n'est pas simplement un changement de propriété ScotRail besoins mais certaines des idées nouvelles.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Ce n'est pas simplement un changement de ScotRail de possession a besoin de mais quelques nouvelles idées.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il n'est pas simplement un changement de propriété que ScotRail a besoin, mais de nouvelles idées.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Il est pas simplement un changement de propriété de besoins ScotRail mais quelques nouvelles idées.</translation>
+    </seg>
+    <seg>
+      <source id="541">Would a genuine territorial policy not be better to clear Paris and dynamize the rest of France?</source>
+      <reference>Ce ne serait pas mieux une vraie politique territoriale pour désengorger Paris et dynamiser le reste de la France ?</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Est-ce qu'politique territoriale véritable ne serait pas meilleure de dégager Paris et de dynamize le reste de Frances ?</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Une véritable politique territoriale ne sera pas mieux à pari et dynamiser le reste de la France?</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Une véritable politique territoriale ne serait pas préférable à Paris et dynamiser le reste de la France ?</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Une politique territoriale authentique ne serait-elle pas meilleure éclaircir Paris et dynamise le reste de France ?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Une véritable politique territoriale ne serait pas mieux pour effacer de Paris et dynamiser le reste de la France ?</translation>
+    </seg>
+    <seg>
+      <source id="8">So no one would be affected by UKIP's policies against health tourism so no problem.</source>
+      <reference>Alors personne ne serait affecté par les mesures de UKIP contre le tourisme de santé, donc il n'y a aucun problème.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Alors personne ne seraient touchés par les politiques de l'UKIP contre le tourisme de santé si aucun problème.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Donc, personne ne serait touché par les politiques d'UKIP contre le tourisme de santé donc pas de problème.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Si personne serait affecté par les politiques d'UKIP contre le tourisme de santé si aucun problème.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Donc, personne ne serait affectée par les politiques de l'UKIP contre le tourisme de santé, donc aucun problème.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Donc personne ne serait n'affecté par les politiques de l'UKIP contre le tourisme de santé donc aucun problème.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="771">Last weekend I went to the Nottingham Beer and Cider festival.</source>
+      <reference>Le week-end dernier je suis allé à la fête de la bière et du cidre de Nottingham.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le week-end dernier, je suis allé au festival de la bière et le cidre de Nottingham.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Le dernier weekend je suis allé à la Bière de Nottingham et au festival de Cidre.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Week-end dernier, je suis allé à la Nottingham bière et le festival de cidre.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le week-end passé je suis allé au festival de bière et de cidre de Nottingham.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Le week-end dernier je suis allé au Festival de la bière de Nottingham et le cidre.</translation>
+    </seg>
+    <seg>
+      <source id="598">The notion of the gap between rich and poor is subsidiary.</source>
+      <reference>La notion d'écart entre riches et pauvres est subsidiaire.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">La notion de l'écart entre riche et les pauvres sont subsidiaires.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">La notion du fossé entre riches et pauvres est subsidiaire.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">La notion de l'écart entre riches et pauvres est filiale.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">La notion de l'écart entre les riches et les pauvres est la filiale.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">L'idée de l'écart entre les riches et les pauvres est filiale.</translation>
+    </seg>
+    <seg>
+      <source id="653">Your first £10,000 is tax free.</source>
+      <reference>Vos premiers 10 000 £ ne sont pas imposables.</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Votre premier £10,000 est exempt d'impôt.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Votre premier £ est libre d'impôt.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Votre première 10.000 £ est libre d'impôt.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Your first 10 000 £est libre d'impôt.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Votre première taxe de 10 000 £est libre.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1028">The references are there to support an argument or a fact.</source>
+      <reference>Les références sont là pour appuyer une argumentation ou un fait.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Les références sont là pour prendre en charge un argument ou un fait.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Les références sont là pour appuyer un argument ou un fait.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Les références sont là pour appuyer un argument ou une réalité.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">Les références sont là pour soutenir un argument ou un fait.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Les références sont là de soutenir un argument ou un fait.</translation>
+    </seg>
+    <seg>
+      <source id="443">Every one gets ill, too.</source>
+      <reference>En plus, tout le monde tombe malade.</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Chacun devient malade, aussi.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Chaque l'un obtient malade, aussi.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Chacun tombe malade, trop.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Toute l'une tombe malades, trop.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Chacun tombe malade, aussi.</translation>
+    </seg>
+    <seg>
+      <source id="155">@ Jean, have you read that le Monde published an article on the necessity of theology?</source>
+      <reference>@ Avez-vous lu ,Jean ,que le Monde a publié un article sur la nécessité de la théologie ?</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">@ Jean, avez-vous lu que Le Monde a édité un article sur la nécessité de la théologie ?</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt">@ Jean, avez-vous lu que le Monde a publié un article sur la nécessité de la théologie ?</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">@ Jean, avez-vous lu que le Monde a publié un article sur la nécessité de théologie?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">@ Jean, avez vous lu que le Monde publiait un article sur la nécessité de la théologie ?</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="125">I tested all those phones and decided on the LG G3.</source>
+      <reference>J'ai testé tous ces téléphones et me suis décidé pour le LG G3.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">J'ai testé tous les téléphones portables et décidés sur le LG G3.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">J'ai examiné tous ces téléphones et ai décidé de l'atterrisseur G3.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">J'ai testé tous ces téléphones et décidé sur le LG G3.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">J'ai testé tous ces téléphones et a décidé sur le G3 de LG.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Je l'ai testé tous ces téléphones et a décidé sur le G3 LG.</translation>
+    </seg>
+    <seg>
+      <source id="362">He has over reached himself as London Major.</source>
+      <reference>Il en a trop fait en tant que maire de Londres.</reference>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Il a sur lui-même atteint que Londres Major.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Il a atteint sur lui-même comme Londres Major.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Il a atteint lui-même comme London Major.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Il a au-dessus d'atteindre comme commandant de Londres.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il a plus d'atteint lui-même comme Major de Londres.</translation>
+    </seg>
+    <seg>
+      <source id="292">There's nothing stopping people in the UK creating a company with ethics and bidding for contracts.</source>
+      <reference>Rien n'empêche les gens au Royaume-Uni de créer une entreprise plus morale et de prendre part aux appels d'offres.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Il n'y a rien d'arrêter les gens au Royaume-Uni pour créer une société avec l "éthique et l'attribution des marchés publics.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Il n'y a rien d'arrêter des gens au Royaume-Uni en créant une société avec l'éthique et l'attribution des marchés publics.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Il n'y a rien empêcher les gens au Royaume-Uni créant une entreprise avec l'éthique et soumissionnant pour des contrats.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il n'y a rien n'empêche les citoyens britanniques créant une entreprise avec éthique et appel d'offres pour les marchés.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Il y a rien n'arrêtant de gens dans le Royaume-Uni qui crée une entreprise avec l'éthique et les enchères pour les contrats.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1356">As proof: all tanned people do not necessarily have melanomas.</source>
+      <reference>Pour preuve : toutes les personnes bronzées n’ont pas forcément de mélanomes.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Comme preuve : tanné de tous les gens n'ont pas nécessairement les mélanomes.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Pour preuve : Tous les gens tannés n'ont pas nécessairement mélanomes.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Comme preuve : toutes les personnes bronzées n'ont pas nécessairement des mélanomes.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Pour preuve: tout tanné des gens n'ont pas nécessairement les mélanomes.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Comme la preuve : tous les gens bronzés n'ont pas nécessairement des mélanomes.</translation>
+    </seg>
+    <seg>
+      <source id="419">Thankfully, there were no significant casualties (that I know of).</source>
+      <reference>Heureusement, il n'y a pas eu trop de dégât (que je sache).</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Heureusement, il n'y a pas eu de blessés (que je connais).</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Heureusement, il n'y avait pas de lourdes pertes (que je connais).</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Heureusement, il n'y a pas eu de pertes importantes (que je connais).</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Heureusement, il n'y a pas eu de pertes importantes (que je sache).</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Heureusement, il n'y avait pas des pertes importantes (que je sache).</translation>
+    </seg>
+    <seg>
+      <source id="908">The Israeli representative got up in anger and shouted: "What are you talking about?</source>
+      <reference>Le représentant israélien se leva en colère et vociféra : "De quoi parlez-vous ?</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le représentant israélien s'est levé en colère et a crié : "Quoi parlez-vous ?</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le représentant israélien s'est levé dans la colère et a crié : De « que parlez-vous ?</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Le représentant israélien a en colère et a crié: "Qu'est-ce que tu racontes?</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Le représentant israélien s'est levé en colère et a crié : « de quoi parlez-vous ?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Le représentant d'Israël se leva en colère et a crié: "ce que tu racontes ?</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="124">Apple’s introduction of the larger-screened iPhone 6 and 6 Plus in mid-September may have lured some would-be Galaxy buyers away</source>
+      <reference>L'introduction mi-septembre par Apple™ d'écrans plus grand pour l'iPhone 6 et 6 Plus a peut-être séduit des acheteurs qui sinon auraient acheté un Galaxy</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Apple introduction du grand-testées iPhone 6 et 6 Plus à la mi-septembre ont peut-être incité certains acheteurs potentiels Galaxy away</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">L'introduction d'Apple de l'iPhone grand-examiné 6 et 6 plus mi-septembre a pu avoir leurré quelques acheteurs potentiels de galaxie loin</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">L'introduction de la pomme de l'iPhone grand-trié 6 et plus de 6 pourraient avoir attiré à la mi-septembre quelques-uns seraient les acheteurs de Galaxie loin</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Apple à l'introduction de l'iPhone 6 et 6 Plus larger-screened à la mi-septembre peut avoir attiré certains candidats au Galaxy buyers away</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">L'introduction d'Apple larger-screened iPhone 6 et 6 Plus mi-septembre peut avoir attiré certains acheteurs se serait Galaxy</translation>
+    </seg>
+    <seg>
+      <source id="276">Remind me, what have you created in terms of jobs, in added value, to be so harsh?</source>
+      <reference>Rappelez-moi, qu'avez vous créé comme emploi, comme valeur ajoutée, pour être aussi sévère ?</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Rappelez-moi, qu'est-ce que vous avez créé en termes d'emplois, en valeur ajoutée, pour être si sévère ?</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Rappelez-moi, qu'as-tu créé en termes d'emplois, de valeur ajoutée, d'être si dur?</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Rappelez-moi ce que vous avez créé en termes d'emplois, de la valeur ajoutée, d'être si dur?</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Me rappelle, que vous avez créé sur le plan des emplois, dans la valeur supplémentaire, être si dur ?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Rappelez-moi, ce que vous avez créé en termes d'emplois, valeur ajoutée, d'être si dure ?</translation>
+    </seg>
+    <seg>
+      <source id="611">You are, yourself, a horrible deviant.</source>
+      <reference>Vous êtes, vous-même, un horrible pervers.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Vous êtes, vous, un déviant horrible.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Vous êtes, vous-même, une horrible déviants.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">Vous êtes, vous-même, un déviant horrible.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Vous êtes vous-même un horrible déviant.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Vous êtes, vous-même, une horrible déviance.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1482">Pakistan won the last football series against Hindustan.</source>
+      <reference>La dernière fois, le Pakistan a gagné contre l'Hindustan.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Pakistan a remporté la dernière série de football contre l'Hindustan.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Le Pakistan a gagné la dernière collection de football contre Hindustan.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Le Pakistan a gagné la dernière série de football contre l'Hindoustan.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le Pakistan a gagné la dernière série du football contre Hindustan.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le Pakistan a remporté la dernière série de football contre Hindustan.</translation>
+    </seg>
+    <seg>
+      <source id="1153">Because what holds for archeology also holds for the interpretations that other disciplines give.</source>
+      <reference>Parce que ce qui vaut pour l’archéologie vaut aussi pour les interprétations que donnent les autres disciplines.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Parce que ce qui vaut pour l'archéologie vaut aussi pour les interprétations que les autres disciplines donner.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Car ce qui est vrai pour l'archéologie vaut aussi pour les interprétations que d'autres disciplines donner.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Parce que ce que tient pour l'archéologie aussi prises pour les interprétations que les autres disciplines donnent.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Parce que ce qui vaut pour l'archéologie est aussi valable pour les interprétations que les autres disciplines donnent.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Puisque quelles prises pour l'archéologie soutient également pour les interprétations que d'autres disciplines donnent.</translation>
+    </seg>
+    <seg>
+      <source id="510">It is never the moment to strengthen education, as we are still at war.</source>
+      <reference>Ce n’est jamais le moment de renforcer l’éducation, car nous sommes toujours en guerre.</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Ce n'est jamais le moment pour renforcer l'éducation, car nous sommes toujours à la guerre.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Ce n'est jamais le moment pour renforcer l'éducation, car nous sommes encore en guerre.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Ce n'est jamais le moment de renforcer l'éducation, car nous sommes encore en guerre.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il n'est jamais le moment de renforcer l'éducation, car nous sommes toujours en guerre.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Il est jamais le moment de renforcer l'éducation, que nous sommes toujours en guerre.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="191">Nevertheless, it seems that these are the examples to follow.</source>
+      <reference>Pourtant ce sont parait il les exemples à suivre.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Néanmoins, il semble que ce sont des exemples à suivre.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">Néanmoins, il semble que ce sont les exemples à suivre.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Néanmoins, il semble que ceux-ci sont les exemples pour suivre.</translation>
+    </seg>
+    <seg>
+      <source id="773">I managed to sample 19 different ales, with Wobbly Weasel being a personal favourite.</source>
+      <reference>J'ai réussi à déguster 19 bières différentes, Wobbly Weasel étant une de mes préférées.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">J'ai géré pour essayer 19 bières différentes, avec Trembler l'être de Belette un préféré personnel.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">J'ai réussi à déguster 19 bières différentes, avec Wobbly Weasel étant une favorite.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Je suis parvenu à prélever 19 bières anglaises différentes, avec la belette bancale étant un favori personnel.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">J'ai réussi à échantillonner 19 bières différentes, avec Weasel Public Health Medicine étant un favori.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Je suis parvenu à déguster 19 bières différentes, avec Wobbly Weasel étant un favori personnel.</translation>
+    </seg>
+    <seg>
+      <source id="1133">But that happens to most stars who go the non-talent show route anyway.</source>
+      <reference>Mais c'est ce qui arrive de toute façon à la plupart des stars qui ne participent pas aux concours.</reference>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Mais ce qui arrive à la plupart des étoiles qui vont le spectacle voie non de talent de toute façon.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Mais qu'advient-il de la plupart des stars qui vont la route non talent show de toute façon.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Mais ce qui se passe pour la plupart des étoiles qui vont non-talent montrent la voie de toute façon.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Mais cela arrive à la plupart des étoiles qui vont la route de spectacle non-talent de toute façon.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Mais qu'arrive-t-il à la plupart des étoiles qui vont montrer la voie non-talent.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="923">This shows you don't understand what Russell Brand is saying, or what Noam Chomsky is saying.</source>
+      <reference>Voilà qui prouve que vous ne comprenez pas ce que Russell Brand dit, ou ce que Noam Chomsky dit.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Cela montre que vous ne comprenez pas ce que dit Russell Brand, ou ce que dit Noam Chomsky.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Cela montre que vous ne comprenez pas ce que Russell Brand se disant, ou quel Noam Chomsky, c'est dire.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Ceci ne montre pas vous comprend que Russell Marque dit, ou que Noam Chomsky dit.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Ceci vous montre que ne comprenez pas quel Russell Brand dit, ou quel Noam Chomsky dit.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Cela prouve que vous ne comprenez pas ce que Russell Brand est dire, ou ce que Noam Chomsky dit.</translation>
+    </seg>
+    <seg>
+      <source id="108">There is also the lessor who lives off the revenue from his properties.</source>
+      <reference>Il y a aussi le bailleur qui vit des revenus de ses propriétés.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Il y a aussi le bailleur qui vit les recettes de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Il y a également le bailleur qui vit outre du revenu de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Il y a aussi le bailleur qui vit des revenus provenant de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Il y a aussi le bailleur qui vit des revenus de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il y a aussi le bailleur qui vit les revenus tirés de ses propriétés.</translation>
+    </seg>
+    <seg>
+      <source id="492">"it’s very dangerous and high risk" No it's not.</source>
+      <reference>« C'est très dangereux et hautement risqué » Non ce n'est pas vrai.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">"C'est très dangereux et à haut risque" Non c'est non.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">« C'est très dangereux et très haut risque » non, ce n'est pas.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">« il est très dangereux et » aucun à haut risque il n'est pas.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">« C'est très dangereux et à haut risque » n'est pas un.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">"Il est très dangereux et à risque élevé» Non, il est pas.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="963">And where in Russia was that, that a Russian can meet a Chinese and have a personal opinion?</source>
+      <reference>Et où était-ce en Russie, qu'un Russe puisse rencontrer un Chinois et avoir une opinion personnelle ?</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Et où en Russie était celle, qu'un russe peut rencontrer un chinois et avoir une opinion personnelle ?</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Et où était en Russie cela, qu'un Russe peut rencontrer un Chinois et a une opinion personnelle ?</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Et où en Russie était que, qu'un Russe peut répondre à un Chinois et d'avoir une opinion personnelle?</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Et où en Russie était ce, cela un Russe pouvez rassemblement un Chinois et ayez une opinion personnelle ?</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Et où en Russie, c'est qu'un Russe peut rencontrer un Chinois et avoir une opinion personnelle ?</translation>
+    </seg>
+    <seg>
+      <source id="379">In many ways, I think he's modelled himself on one R Branson</source>
+      <reference>À bien des égards, je pense qu'il essaye de copier R Branson</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">De plusieurs manières, je pense qu'il s'est modelé sur un R Branson</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">À bien des égards, je pense qu'il est lui-même calqué sur un R Branson</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Dans beaucoup de façons, je pense qu'il s'est modelé sur un R Branson</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">À bien des égards, je pense qu'il a lui-même calqué sur un R Branson</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">À bien des égards, je crois qu'il est calqué sur un R Branson</translation>
+    </seg>
+    <seg>
+      <source id="1410">That's FART</source>
+      <reference>Non, c'est du cochon.</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">C'est PET</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Voilà FART</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">That's pet</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Cela est le PET</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">C'est FART</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1488">As for the ISL, today's opening match was a surprisingly entertaining affair with Athletico de Kolkata winning 3-0 against Mumbai.</source>
+      <reference>Quant à l'ISL, le match d'ouverture d'aujourd'hui a été étonnamment intéressant, l'Athletico de Kolkata s'imposant 3-0 contre Mumbai.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Quant à l'ISL, le match d'aujourd'hui premier était une affaire étonnamment amusante avec Athletico de gagner de Kolkata 3-0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Quant à l'ISL, le match d'aujourd'hui était une affaire étonnamment divertissants avec l'Atletico de Kolkata victoire 3-0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Quant à l'ISL, le match d'ouverture d'aujourd'hui était une affaire étonnant amusante avec Athletico de Kolkata gagnant 3-0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Quant à l'ISL, aujourd'hui le match d'ouverture était une affaire étonnamment divertissant avec Athletico de Calcutta gagner 3 - 0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Quant à l'ISL, le match d'ouverture d'aujourd'hui était une affaire étonnamment divertissant avec Athletico de Kolkata gagner 3-0 contre Mumbai.</translation>
+    </seg>
+    <seg>
+      <source id="596">I have not read it and I will not read it.</source>
+      <reference>Je n'ai pas lu et ne le lirai pas.</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Je n'ai pas lu et je ne vais pas le lire.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">Je ne l'ai pas lu et je ne le lirai pas.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Je l'ai pas lu et je ne le lirai pas.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Je n'ai pas lu, et je ne vais pas lire.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Je le n'ai pas lu et je le lirai pas.</translation>
+    </seg>
+    <seg>
+      <source id="604">I hope that this prize will not be a burden for the girl and that she will find her way to lead a lucky life.</source>
+      <reference>J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle trouvera son chemin pour mener une vie heureuse.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle va trouver sa façon de mener une vie heureuse.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle va trouver sa façon de mener une vie chanceux.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle trouvera sa façon de mener une vie de chance.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">J'espère que ce prix ne soit pas un fardeau pour la fille et qu'elle trouvera sa façon pour mener une vie heureuse.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Je souhaite que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle trouvera son chemin pour mener une vie la chance.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1354">Without saying that I know melanomas well, UV rays only ACCELERATE their development.</source>
+      <reference>Sans dire que je suis un habitué du mélanome, les UV ne font qu’ ACCELER son développement.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Sans dire que je connais bien des mélanomes, les rayons UV seulement ACCÉLÉRER leur développement.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Sans dire que je connais bien les mélanomes, UV rayons seulement accélérer leur développement.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Sans dire que je connais des mélanomes bien, les rayons UV ACCÉLÈRENT seulement leur développement.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Sans dire que je connais bien les mélanomes, les rayons UV qu'accélérer leur développement.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Sans dire que je connais bien les mélanomes, les rayons UV ne accélérer leur développement.</translation>
+    </seg>
+    <seg>
+      <source id="1147">Nothing more.</source>
+      <reference>Rien de plus.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Rien plus.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt">Rien de plus.</translation>
+    </seg>
+    <seg>
+      <source id="1494">It is perhaps not a flaw in the design, but in the implementation...</source>
+      <reference>On n'est donc peut-être pas dans un défaut de conception, mais de mise en oeuvre...</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Il n'est peut-être pas une faille dans la conception, mais dans la mise en oeuvre...</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Il est peut-être pas un défaut dans la conception, mais dans la mise en œuvre ...</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">C'est peut-être pas un défaut dans la conception, mais dans l'implémentation...</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">C'est peut-être pas une faille dans la conception, mais dans l'exécution…</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.online-A.0.en-fr.txt">Il n'est peut-être pas une faille dans la conception, mais dans la mise en œuvre...</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1295">That sounds unbelievable but it is exactly what the Investor-State Dispute Settlement (ISDS) part of the deal is intended for.</source>
+      <reference>Ça paraît incroyable, mais c'est exactement ce à quoi sert le mécanisme de règlement des différends entre investisseurs et États (ISDS) proposé par l'accord.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Cela semble incroyable, mais c'est exactement ce que le règlement des différends entre investisseurs et États (ISDS) partie de la transaction est prévue.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Cela semble incroyable mais c'est exactement ce que le Règlement de Dispute d'Investisseur-Etat (ISDS) la partie de l'affaire est voulue pour.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Cela semble incroyable, mais c'est exactement ce qui est destinée à la partie de règlement de différends entre investisseurs et États (ISDS) de l'accord.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Cela semble incroyable, mais il est exactement ce que la partie investisseur-État de règlement des différends (ISDS) de l'accord est destiné.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Cela paraît incroyable mais c'est exactement ce que le règlement des différends entre (ISDS) faisait partie de l'accord est destiné.</translation>
+    </seg>
+    <seg>
+      <source id="481">Did two AirBnB's in Norway recently.</source>
+      <reference>J'ai fait deux AirBnB en Norvège récemment.</reference>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Avez-deux Airbnb de Norvège récemment.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">A deux de Airbnb en Norvège.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">A fait deux AirBnB en Norvège récemment.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Il y a deux AirBnB s en Norvège récemment.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Récemment effectué deux AirBnB en Norvège.</translation>
+    </seg>
+    <seg>
+      <source id="1335">Roll on GBBO15!</source>
+      <reference>En avant pour GBBO 2015 !</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Roll on GBBO15!</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Petit pain sur GBBO15 !</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Rouler sur GBBO15 !</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1079">Primary and populist reaction</source>
+      <reference>Réaction primaire et populiste</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Primaire et une réaction populiste</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Réaction primaire et populiste</translation>
+    </seg>
+    <seg>
+      <source id="626">In the case of American Horror Story I preferred to watch it all in one go to watching 13 episodes spread over 3 to 4 months.</source>
+      <reference>Dans le cas d’American Horror Story je préféré avoir tout d’un coup que regarder 13 épisodes étalés sur 3 à 4 mois.</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Dans le cas d'American Horror Story, j'ai préféré regarder tout cela en une seule fois pour regarder 13 épisodes répartis sur 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Dans le cas d'American Horror Story je préférais regarder tout en une seule fois à regarder 13 épisodes répartis sur 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Dans le cas d'American Horror Story, je préfère regarder tous en un aller à regarder 13 épisodes répartis sur 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Dans le cas de l'histoire américaine d'horreur que j'ai préféré l'observer toute dans une aller à observer 13 épisodes répartissez 3 à 4 mois.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Dans le cas d'American Horror Story, que j'ai préféré pour le regarder, tout en une seule fois à regarder 13 épisodes s'étendant sur 3 à 4 mois.</translation>
+    </seg>
+    <seg>
+      <source id="1296">The the Green party is opposed to it and trying to alert people to the incredible devastation it will wreak on our lives.</source>
+      <reference>Les Verts sont contre ce projet et tentent d'alerter les gens quant aux dégâts inimaginables que cet accord aura sur nos vies.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le parti vert s'y oppose et pour tenter d'alerter les gens à la dévastation incroyable qu'elle va engendrer sur nos vies.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le le Parti Vert est opposé à lui et essayant d'alerter des personnes à la dévastation incroyable qu'il assouvira nos vies.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Le Parti vert s'oppose à lui et essayant d'alerte people à la dévastation incroyable il va assouvir sur nos vies.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Les Verts sont opposés et tentent d'alerter les gens à l'incroyable dévastation qu'il va engendrer sur nos vies.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Le Parti vert est opposé et tentent d'alerter la population aux incroyables ravages il va semer sur nos vies.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="299">It's not simply a change of ownership ScotRail needs but some new ideas.</source>
+      <reference>Ce dont ScotRail a besoin, ce n'est pas simplement un changement de propriétaire mais surtout des idées nouvelles.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Ce n'est pas un simple changement de propriétaire ScotRail besoins mais certaines nouvelles idées.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Ce n'est pas simplement un changement de propriété ScotRail besoins mais certaines des idées nouvelles.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Ce n'est pas simplement un changement de ScotRail de possession a besoin de mais quelques nouvelles idées.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il n'est pas simplement un changement de propriété que ScotRail a besoin, mais de nouvelles idées.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Il est pas simplement un changement de propriété de besoins ScotRail mais quelques nouvelles idées.</translation>
+    </seg>
+    <seg>
+      <source id="541">Would a genuine territorial policy not be better to clear Paris and dynamize the rest of France?</source>
+      <reference>Ce ne serait pas mieux une vraie politique territoriale pour désengorger Paris et dynamiser le reste de la France ?</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Est-ce qu'politique territoriale véritable ne serait pas meilleure de dégager Paris et de dynamize le reste de Frances ?</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Une véritable politique territoriale ne sera pas mieux à pari et dynamiser le reste de la France?</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Une véritable politique territoriale ne serait pas préférable à Paris et dynamiser le reste de la France ?</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Une politique territoriale authentique ne serait-elle pas meilleure éclaircir Paris et dynamise le reste de France ?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Une véritable politique territoriale ne serait pas mieux pour effacer de Paris et dynamiser le reste de la France ?</translation>
+    </seg>
+    <seg>
+      <source id="8">So no one would be affected by UKIP's policies against health tourism so no problem.</source>
+      <reference>Alors personne ne serait affecté par les mesures de UKIP contre le tourisme de santé, donc il n'y a aucun problème.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Alors personne ne seraient touchés par les politiques de l'UKIP contre le tourisme de santé si aucun problème.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Donc, personne ne serait touché par les politiques d'UKIP contre le tourisme de santé donc pas de problème.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Si personne serait affecté par les politiques d'UKIP contre le tourisme de santé si aucun problème.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Donc, personne ne serait affectée par les politiques de l'UKIP contre le tourisme de santé, donc aucun problème.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Donc personne ne serait n'affecté par les politiques de l'UKIP contre le tourisme de santé donc aucun problème.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1295">That sounds unbelievable but it is exactly what the Investor-State Dispute Settlement (ISDS) part of the deal is intended for.</source>
+      <reference>Ça paraît incroyable, mais c'est exactement ce à quoi sert le mécanisme de règlement des différends entre investisseurs et États (ISDS) proposé par l'accord.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Cela semble incroyable, mais c'est exactement ce que le règlement des différends entre investisseurs et États (ISDS) partie de la transaction est prévue.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Cela semble incroyable mais c'est exactement ce que le Règlement de Dispute d'Investisseur-Etat (ISDS) la partie de l'affaire est voulue pour.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Cela semble incroyable, mais c'est exactement ce qui est destinée à la partie de règlement de différends entre investisseurs et États (ISDS) de l'accord.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Cela semble incroyable, mais il est exactement ce que la partie investisseur-État de règlement des différends (ISDS) de l'accord est destiné.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Cela paraît incroyable mais c'est exactement ce que le règlement des différends entre (ISDS) faisait partie de l'accord est destiné.</translation>
+    </seg>
+    <seg>
+      <source id="481">Did two AirBnB's in Norway recently.</source>
+      <reference>J'ai fait deux AirBnB en Norvège récemment.</reference>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Avez-deux Airbnb de Norvège récemment.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">A deux de Airbnb en Norvège.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">A fait deux AirBnB en Norvège récemment.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Il y a deux AirBnB s en Norvège récemment.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Récemment effectué deux AirBnB en Norvège.</translation>
+    </seg>
+    <seg>
+      <source id="1335">Roll on GBBO15!</source>
+      <reference>En avant pour GBBO 2015 !</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Roll on GBBO15!</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Petit pain sur GBBO15 !</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Rouler sur GBBO15 !</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="771">Last weekend I went to the Nottingham Beer and Cider festival.</source>
+      <reference>Le week-end dernier je suis allé à la fête de la bière et du cidre de Nottingham.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le week-end dernier, je suis allé au festival de la bière et le cidre de Nottingham.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Le dernier weekend je suis allé à la Bière de Nottingham et au festival de Cidre.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Week-end dernier, je suis allé à la Nottingham bière et le festival de cidre.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le week-end passé je suis allé au festival de bière et de cidre de Nottingham.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Le week-end dernier je suis allé au Festival de la bière de Nottingham et le cidre.</translation>
+    </seg>
+    <seg>
+      <source id="598">The notion of the gap between rich and poor is subsidiary.</source>
+      <reference>La notion d'écart entre riches et pauvres est subsidiaire.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">La notion de l'écart entre riche et les pauvres sont subsidiaires.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">La notion du fossé entre riches et pauvres est subsidiaire.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">La notion de l'écart entre riches et pauvres est filiale.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">La notion de l'écart entre les riches et les pauvres est la filiale.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">L'idée de l'écart entre les riches et les pauvres est filiale.</translation>
+    </seg>
+    <seg>
+      <source id="653">Your first £10,000 is tax free.</source>
+      <reference>Vos premiers 10 000 £ ne sont pas imposables.</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Votre premier £10,000 est exempt d'impôt.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Votre premier £ est libre d'impôt.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Votre première 10.000 £ est libre d'impôt.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Your first 10 000 £est libre d'impôt.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Votre première taxe de 10 000 £est libre.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1482">Pakistan won the last football series against Hindustan.</source>
+      <reference>La dernière fois, le Pakistan a gagné contre l'Hindustan.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Pakistan a remporté la dernière série de football contre l'Hindustan.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Le Pakistan a gagné la dernière collection de football contre Hindustan.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Le Pakistan a gagné la dernière série de football contre l'Hindoustan.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le Pakistan a gagné la dernière série du football contre Hindustan.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le Pakistan a remporté la dernière série de football contre Hindustan.</translation>
+    </seg>
+    <seg>
+      <source id="1153">Because what holds for archeology also holds for the interpretations that other disciplines give.</source>
+      <reference>Parce que ce qui vaut pour l’archéologie vaut aussi pour les interprétations que donnent les autres disciplines.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Parce que ce qui vaut pour l'archéologie vaut aussi pour les interprétations que les autres disciplines donner.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Car ce qui est vrai pour l'archéologie vaut aussi pour les interprétations que d'autres disciplines donner.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Parce que ce que tient pour l'archéologie aussi prises pour les interprétations que les autres disciplines donnent.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Parce que ce qui vaut pour l'archéologie est aussi valable pour les interprétations que les autres disciplines donnent.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Puisque quelles prises pour l'archéologie soutient également pour les interprétations que d'autres disciplines donnent.</translation>
+    </seg>
+    <seg>
+      <source id="510">It is never the moment to strengthen education, as we are still at war.</source>
+      <reference>Ce n’est jamais le moment de renforcer l’éducation, car nous sommes toujours en guerre.</reference>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Ce n'est jamais le moment pour renforcer l'éducation, car nous sommes toujours à la guerre.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Ce n'est jamais le moment pour renforcer l'éducation, car nous sommes encore en guerre.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Ce n'est jamais le moment de renforcer l'éducation, car nous sommes encore en guerre.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il n'est jamais le moment de renforcer l'éducation, car nous sommes toujours en guerre.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Il est jamais le moment de renforcer l'éducation, que nous sommes toujours en guerre.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="124">Apple’s introduction of the larger-screened iPhone 6 and 6 Plus in mid-September may have lured some would-be Galaxy buyers away</source>
+      <reference>L'introduction mi-septembre par Apple™ d'écrans plus grand pour l'iPhone 6 et 6 Plus a peut-être séduit des acheteurs qui sinon auraient acheté un Galaxy</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Apple introduction du grand-testées iPhone 6 et 6 Plus à la mi-septembre ont peut-être incité certains acheteurs potentiels Galaxy away</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">L'introduction d'Apple de l'iPhone grand-examiné 6 et 6 plus mi-septembre a pu avoir leurré quelques acheteurs potentiels de galaxie loin</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">L'introduction de la pomme de l'iPhone grand-trié 6 et plus de 6 pourraient avoir attiré à la mi-septembre quelques-uns seraient les acheteurs de Galaxie loin</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Apple à l'introduction de l'iPhone 6 et 6 Plus larger-screened à la mi-septembre peut avoir attiré certains candidats au Galaxy buyers away</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">L'introduction d'Apple larger-screened iPhone 6 et 6 Plus mi-septembre peut avoir attiré certains acheteurs se serait Galaxy</translation>
+    </seg>
+    <seg>
+      <source id="276">Remind me, what have you created in terms of jobs, in added value, to be so harsh?</source>
+      <reference>Rappelez-moi, qu'avez vous créé comme emploi, comme valeur ajoutée, pour être aussi sévère ?</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Rappelez-moi, qu'est-ce que vous avez créé en termes d'emplois, en valeur ajoutée, pour être si sévère ?</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Rappelez-moi, qu'as-tu créé en termes d'emplois, de valeur ajoutée, d'être si dur?</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Rappelez-moi ce que vous avez créé en termes d'emplois, de la valeur ajoutée, d'être si dur?</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Me rappelle, que vous avez créé sur le plan des emplois, dans la valeur supplémentaire, être si dur ?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Rappelez-moi, ce que vous avez créé en termes d'emplois, valeur ajoutée, d'être si dure ?</translation>
+    </seg>
+    <seg>
+      <source id="611">You are, yourself, a horrible deviant.</source>
+      <reference>Vous êtes, vous-même, un horrible pervers.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Vous êtes, vous, un déviant horrible.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Vous êtes, vous-même, une horrible déviants.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">Vous êtes, vous-même, un déviant horrible.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Vous êtes vous-même un horrible déviant.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Vous êtes, vous-même, une horrible déviance.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="191">Nevertheless, it seems that these are the examples to follow.</source>
+      <reference>Pourtant ce sont parait il les exemples à suivre.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt,newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Néanmoins, il semble que ce sont des exemples à suivre.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt,newsdiscusstest2015.online-B.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">Néanmoins, il semble que ce sont les exemples à suivre.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Néanmoins, il semble que ceux-ci sont les exemples pour suivre.</translation>
+    </seg>
+    <seg>
+      <source id="773">I managed to sample 19 different ales, with Wobbly Weasel being a personal favourite.</source>
+      <reference>J'ai réussi à déguster 19 bières différentes, Wobbly Weasel étant une de mes préférées.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">J'ai géré pour essayer 19 bières différentes, avec Trembler l'être de Belette un préféré personnel.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">J'ai réussi à déguster 19 bières différentes, avec Wobbly Weasel étant une favorite.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Je suis parvenu à prélever 19 bières anglaises différentes, avec la belette bancale étant un favori personnel.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">J'ai réussi à échantillonner 19 bières différentes, avec Weasel Public Health Medicine étant un favori.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Je suis parvenu à déguster 19 bières différentes, avec Wobbly Weasel étant un favori personnel.</translation>
+    </seg>
+    <seg>
+      <source id="1133">But that happens to most stars who go the non-talent show route anyway.</source>
+      <reference>Mais c'est ce qui arrive de toute façon à la plupart des stars qui ne participent pas aux concours.</reference>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Mais ce qui arrive à la plupart des étoiles qui vont le spectacle voie non de talent de toute façon.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Mais qu'advient-il de la plupart des stars qui vont la route non talent show de toute façon.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Mais ce qui se passe pour la plupart des étoiles qui vont non-talent montrent la voie de toute façon.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Mais cela arrive à la plupart des étoiles qui vont la route de spectacle non-talent de toute façon.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Mais qu'arrive-t-il à la plupart des étoiles qui vont montrer la voie non-talent.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1356">As proof: all tanned people do not necessarily have melanomas.</source>
+      <reference>Pour preuve : toutes les personnes bronzées n’ont pas forcément de mélanomes.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Comme preuve : tanné de tous les gens n'ont pas nécessairement les mélanomes.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Pour preuve : Tous les gens tannés n'ont pas nécessairement mélanomes.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Comme preuve : toutes les personnes bronzées n'ont pas nécessairement des mélanomes.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Pour preuve: tout tanné des gens n'ont pas nécessairement les mélanomes.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Comme la preuve : tous les gens bronzés n'ont pas nécessairement des mélanomes.</translation>
+    </seg>
+    <seg>
+      <source id="419">Thankfully, there were no significant casualties (that I know of).</source>
+      <reference>Heureusement, il n'y a pas eu trop de dégât (que je sache).</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Heureusement, il n'y a pas eu de blessés (que je connais).</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Heureusement, il n'y avait pas de lourdes pertes (que je connais).</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Heureusement, il n'y a pas eu de pertes importantes (que je connais).</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Heureusement, il n'y a pas eu de pertes importantes (que je sache).</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Heureusement, il n'y avait pas des pertes importantes (que je sache).</translation>
+    </seg>
+    <seg>
+      <source id="908">The Israeli representative got up in anger and shouted: "What are you talking about?</source>
+      <reference>Le représentant israélien se leva en colère et vociféra : "De quoi parlez-vous ?</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Le représentant israélien s'est levé en colère et a crié : "Quoi parlez-vous ?</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Le représentant israélien s'est levé dans la colère et a crié : De « que parlez-vous ?</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Le représentant israélien a en colère et a crié: "Qu'est-ce que tu racontes?</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Le représentant israélien s'est levé en colère et a crié : « de quoi parlez-vous ?</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Le représentant d'Israël se leva en colère et a crié: "ce que tu racontes ?</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="923">This shows you don't understand what Russell Brand is saying, or what Noam Chomsky is saying.</source>
+      <reference>Voilà qui prouve que vous ne comprenez pas ce que Russell Brand dit, ou ce que Noam Chomsky dit.</reference>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Cela montre que vous ne comprenez pas ce que dit Russell Brand, ou ce que dit Noam Chomsky.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Cela montre que vous ne comprenez pas ce que Russell Brand se disant, ou quel Noam Chomsky, c'est dire.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Ceci ne montre pas vous comprend que Russell Marque dit, ou que Noam Chomsky dit.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Ceci vous montre que ne comprenez pas quel Russell Brand dit, ou quel Noam Chomsky dit.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Cela prouve que vous ne comprenez pas ce que Russell Brand est dire, ou ce que Noam Chomsky dit.</translation>
+    </seg>
+    <seg>
+      <source id="108">There is also the lessor who lives off the revenue from his properties.</source>
+      <reference>Il y a aussi le bailleur qui vit des revenus de ses propriétés.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Il y a aussi le bailleur qui vit les recettes de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Il y a également le bailleur qui vit outre du revenu de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Il y a aussi le bailleur qui vit des revenus provenant de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Il y a aussi le bailleur qui vit des revenus de ses propriétés.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Il y a aussi le bailleur qui vit les revenus tirés de ses propriétés.</translation>
+    </seg>
+    <seg>
+      <source id="492">"it’s very dangerous and high risk" No it's not.</source>
+      <reference>« C'est très dangereux et hautement risqué » Non ce n'est pas vrai.</reference>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">"C'est très dangereux et à haut risque" Non c'est non.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">« C'est très dangereux et très haut risque » non, ce n'est pas.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">« il est très dangereux et » aucun à haut risque il n'est pas.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">« C'est très dangereux et à haut risque » n'est pas un.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">"Il est très dangereux et à risque élevé» Non, il est pas.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fre">
+    <seg>
+      <source id="1488">As for the ISL, today's opening match was a surprisingly entertaining affair with Athletico de Kolkata winning 3-0 against Mumbai.</source>
+      <reference>Quant à l'ISL, le match d'ouverture d'aujourd'hui a été étonnamment intéressant, l'Athletico de Kolkata s'imposant 3-0 contre Mumbai.</reference>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">Quant à l'ISL, le match d'aujourd'hui premier était une affaire étonnamment amusante avec Athletico de gagner de Kolkata 3-0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Quant à l'ISL, le match d'aujourd'hui était une affaire étonnamment divertissants avec l'Atletico de Kolkata victoire 3-0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.online-F.0.en-fr.txt">Quant à l'ISL, le match d'ouverture d'aujourd'hui était une affaire étonnant amusante avec Athletico de Kolkata gagnant 3-0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt">Quant à l'ISL, aujourd'hui le match d'ouverture était une affaire étonnamment divertissant avec Athletico de Calcutta gagner 3 - 0 contre Mumbai.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Quant à l'ISL, le match d'ouverture d'aujourd'hui était une affaire étonnamment divertissant avec Athletico de Kolkata gagner 3-0 contre Mumbai.</translation>
+    </seg>
+    <seg>
+      <source id="596">I have not read it and I will not read it.</source>
+      <reference>Je n'ai pas lu et ne le lirai pas.</reference>
+      <translation system="newsdiscusstest2015.LIMSI-CNRS-mosesSoulMoreFeatures.4000.en-fr.txt,newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">Je n'ai pas lu et je ne vais pas le lire.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt,newsdiscusstest2015.online-F.0.en-fr.txt">Je ne l'ai pas lu et je ne le lirai pas.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Je l'ai pas lu et je ne le lirai pas.</translation>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">Je n'ai pas lu, et je ne vais pas lire.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">Je le n'ai pas lu et je le lirai pas.</translation>
+    </seg>
+    <seg>
+      <source id="604">I hope that this prize will not be a burden for the girl and that she will find her way to lead a lucky life.</source>
+      <reference>J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle trouvera son chemin pour mener une vie heureuse.</reference>
+      <translation system="newsdiscusstest2015.CIMS-FR.4056.en-fr.txt">J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle va trouver sa façon de mener une vie heureuse.</translation>
+      <translation system="newsdiscusstest2015.uedin-jhu-phrase.4104.en-fr.txt">J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle va trouver sa façon de mener une vie chanceux.</translation>
+      <translation system="newsdiscusstest2015.online-A.0.en-fr.txt">J'espère que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle trouvera sa façon de mener une vie de chance.</translation>
+      <translation system="newsdiscusstest2015.online-E.0.en-fr.txt">J'espère que ce prix ne soit pas un fardeau pour la fille et qu'elle trouvera sa façon pour mener une vie heureuse.</translation>
+      <translation system="newsdiscusstest2015.online-B.0.en-fr.txt">Je souhaite que ce prix ne sera pas un fardeau pour la jeune fille et qu'elle trouvera son chemin pour mener une vie la chance.</translation>
+    </seg>
+  </hit>
+</hits>

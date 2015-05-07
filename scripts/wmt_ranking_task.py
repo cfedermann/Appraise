@@ -17,9 +17,10 @@ import math
 import random
 import hashlib
 import argparse
-from ranking_task import RankingTask,Control
+from ranking_task import RankingTask, Control
 
 PARSER = argparse.ArgumentParser(description="Build evaluation task input file.")
+PARSER.add_argument("output", type=str, help="output file")
 PARSER.add_argument("source", type=file, help="source language file")
 PARSER.add_argument("reference", type=file, nargs="?", help="reference language file")
 PARSER.add_argument("system", metavar="system", nargs="*", type=file, help="parallel files to compare")
@@ -78,7 +79,7 @@ if __name__ == "__main__":
         random.seed(args.seed)
 
     num_unique_hits = args.numhits - args.redundancy
-
+    
     controls = []
     if args.controlFile is not None:
         args.sequential = False
@@ -226,6 +227,6 @@ if __name__ == "__main__":
 
     result_xml = u'<hits>\n{0}\n</hits>'.format(u'\n'.join(hits))
     
-    out = open("test-outfile.txt", 'w')
+    out = open(args.output, 'w')
     out.write(result_xml.encode('utf-8'))
     out.close()

@@ -1,0 +1,726 @@
+<hits>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1247">Näin arvioi Jyri Rajamäki Jyväskylän yliopistolle tekemässään tietotekniikan väitöstyössä.</source>
+      <reference>This is the estimation of Jyri Rajamäki in an information technology thesis he has made for the University of Jyväskylä.</reference>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Evaluating the border trying to fuel violence in the village of University in information technology, and a good job.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">It assesses the Jyri Rajamäki Jyväskylä by university for a PhD in information technology.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran.3931.fi-en.txt">This will assess Jyri Rajamäki Jyväskylän University väitöstyössä in its information technology.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">I saw the estimates the University of Jyväskylä Jyri Rajamäki väitöstyössä its information technology.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Accordingly estimates Jyri Rajamäki the University of Jyväskylä In its information technology doctoral thesis.</translation>
+    </seg>
+    <seg>
+      <source id="886">”Kiitos jatkuvasta rakkaudestanne ja tuestanne”, Melissa Rivers kirjoitti tänään.</source>
+      <reference>"Thank you for your continued love and support," Melissa Rivers said in a statement today.</reference>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">"Thank you for your continued love and support", your Melissa Rivers wrote today.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">"Thank you for your continued love and your support in the river," wrote today.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">'Thank you for your continued love and support', Canoeing River wrote today.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The constant &quot; Thank you for your love and your support &quot;, Melissa Rivers wrote today.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">"Thank you for your constant rakkaudestanne and for your support", Melissa Rivers wrote today.</translation>
+    </seg>
+    <seg>
+      <source id="214">Pari epäiltyä varasta poliisi ehti jo saada kiinnikin.</source>
+      <reference>The police have already managed to catch couple of suspects.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">A couple of suspects steal police already had a chance to catch up with.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">A couple of suspects steal the police had to get important.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">A couple of suspect steals police had to obtain kiinnikin.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">A couple suspected of stealing police had caught.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Two of the suspects had already stolen police eht saad kiinni points, too.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="667">Kun tämä yhdistetään moniin VIF-ominaisuuksiin (VIP-ystävät), olemme valmiita tarjoamaan tämän päivän opiskelijoille mahdollisimman helpon ja korkealuokkaisen kuljetuksen yliopistoon.</source>
+      <reference>Paired with our new VIF options, we're looking forward to ensuring this year students reach university with minimum fuss and maximum luxury.</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt">When this is combined with a number of VIF properties (VIP friends), we are ready to provide today's students with the university as an easy and high-quality transport.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">When this is combined with the many VIF - characteristics (), we are prepared to provide hospitality friends as easy as possible for the today's students to universities and high - quality Transport.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">When this is combined with a number of IF characteristics (hospitality), we are ready to offer today's students as easy and high quality transport as possible.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">When you combine that with the many -ominaisuuksiin (we are friends), we are ready to provide today's students as easy and high-quality of the university.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">When this is combined with the characteristics of many VIF VIP (Friends), we are prepared to offer this as easy as possible for today's students to high-quality Transportation University.</translation>
+    </seg>
+    <seg>
+      <source id="269">Se on hyvin vaikeaa –</source>
+      <reference>It's very hard.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">It is very difficult to</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.uedin-jhu-phrase.4106.fi-en.txt,newstest2015.UU-unconstrained.3977.fi-en.txt">It is a very difficult -</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">It will be very difficult.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt,newstest2015.LIMSI.4021.fi-en.txt,newstest2015.Neural-MT.4062.fi-en.txt,newstest2015.online-B.0.fi-en.txt,newstest2015.PROMT-SMT.3989.fi-en.txt,newstest2015.uedin-syntax.4006.fi-en.txt,newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">It is very difficult -</translation>
+    </seg>
+    <seg>
+      <source id="438">Ehdokkuudet julkaistaan ensi viikolla</source>
+      <reference>The shortlist is announced next week</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Nominations shall be published in the next week</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The candidacy will be published next week.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">6 The Sixth will be published next week</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">'s candidacy will be published next week</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Ehdokkuudet will be published next week</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="134">Aiempi raportti Saksan päätiedustelupalvelun Ankaraan kohdistamasta vakoilusta aikaansai vihaisemman reaktion Turkin hallituksessa.</source>
+      <reference>An earlier report that Germany's main intelligence agency had also targeted Ankara drew a more angry response from the Turkish government.</reference>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">An earlier report by the German Intelligence Agency of the head to Ankara from spying on countries having vihaisemma reaction in the Turkish government.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Previous reports of violations against the German päätiedustelupalvelun Ankara espionage resulted in a angrily reaction of the Turkish government.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">An earlier report by the German Intelligence Agency head to Ankara from spying on countries having vihaisemma reaction in the Turkish Government.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">An earlier report from the head of the German secret service for espionage in Ankara by the angry reaction in Turkey to the government.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">The German päätiedustelupalvelu Ankara Spying on previous reports aikaansai vihaisemman reaction in the Turkish government.</translation>
+    </seg>
+    <seg>
+      <source id="1321">Poroshenko puhui lauantaina Brysselissä Euroopan unionin johtajille anoen lisätoimia, joilla estetään Venäjän tulevat loukkaukset Ukrainassa, Neuvostoliiton entisessä tasavallassa, joka on ollut itsenäinen 23 vuoden ajan.</source>
+      <reference>Poroshenko on Saturday addressed a meeting of European Union leaders in Brussels to urge action to prevent further Russian aggression against Ukraine, a former Soviet republic that has been independent for 23 years.</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Poroshenko spoke on Saturday at Brussels, European Union leaders pleading for additional measures to prevent future violations of Russian in Ukraine, a former republic of the Soviet Union, which has been independent for 23 years.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Poroshenko spoke on Saturday, the leaders of the European Union in Brussels, begging for further steps to prevent future violations of Russia in Ukraine, a former Soviet republic, which has been independent for 23 years.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">On Saturday, the leaders of the European Union in Brussels, spoke of Poroshenko begging for more action to prevent violations of the Ukraine, Russia, the former Soviet Union will come to the Republic, which has been independent for 23 years.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Poroshenko was speaking on Saturday in Brussels, the European Union's leaders begging for further action to prevent future violations of Russian in Ukraine, the former Soviet Union, Central African Republic, which has been self-employed for 23 years.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">Poroshenko said on Saturday in Brussels for the European Union's leaders begging for additional measures to prevent future violations of Russia in Ukraine, a former Soviet republic that has been independent for 23 years.</translation>
+    </seg>
+    <seg>
+      <source id="1170">Lapsille tulisi myös kertoa, mitä sähkölaitteita he saavat käyttää ollessaan yksin kotona.</source>
+      <reference>The children should also be instructed about what electric devices they can use while they’re at home alone.</reference>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Children should also tell US what they electrical equipment used when alone at home.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Children should also tell us what equipment they had used when he was alone at home.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Children should also tell us what they can use electrical appliances in his home alone.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Children should also be told what electrical equipment they will use when alone at home.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Children should also tell you what they are allowed to use electronic devices while he was home alone.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1066">Palataanpa vuoteen 1995.</source>
+      <reference>Let’s go back to year 1995.</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Let us go, until 1995.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.abumatran.3931.fi-en.txt">Just look back to 1995.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Let us come back to 1995.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">Let us return to 1995.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">I will come back to the year of 1995.</translation>
+    </seg>
+    <seg>
+      <source id="692">Kagawan tuore sopimus on nelivuotinen.</source>
+      <reference>Kagawa’s fresh contract is four years long.</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Kagawa's latest is a four-year contract.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The recent agreement on Kagan is a four-year agreement.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Recent kagawan agreement is a four - year.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Kagawa fresh contract is for four years.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Kagawa fresh agreement is the four-year.</translation>
+    </seg>
+    <seg>
+      <source id="298">Henry lausui 20 säettä Othellon viimeisestä puheesta dokumenttia varten ja hän oli myyty.</source>
+      <reference>Henry delivered 20 lines of Othello's last speech for the documentary and he was hooked.</reference>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Henry said 20 lines Othello 's last speech for documentary and he was sold.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Henry said that total 20 Othello's last speech for the documentary, and she had been sold.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Henry said the 20 lines of Othello's final speech for the document, and he was sold.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Henry 20 Line othellon said last speech for the documentary and he was sold.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">Henry Othellon said 20 lines of the last speech for the documentary, and he had been sold.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1007">Yhtiö kasvatti myös tulostaan.</source>
+      <reference>The company also increased its profits.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Company home-grown also arrived.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">The company also boosted profits.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">The company also increased the revenue too.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Companies also their home - grown players.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The company also raised its revenue.</translation>
+    </seg>
+    <seg>
+      <source id="4">Kuntaliitoksen selvittämisessä oli mukana myös Tuusniemen kunta, mutta sen valtuusto päätti, että Tuusniemi jatkaa itsenäisenä.</source>
+      <reference>Also the municipality of Tuusniemi carried out an examination regarding a municipal annexation, but its council decided that Tuusniemi will continue as an independent municipality.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The municipality join deciphering was also involved in the Council of the municipality, but its Tuusniemen decided to continue as an independent, that the 2000s.</translation>
+      <translation system="newstest2015.UoS.4059.fi-en.txt">In clarifying amalgamation Tuusniemi municipalities, but it was also involved, the council decided that Tuusniemi continue as an independent.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">In the joint of the tackling was also involved, but the governors tuusniemen decided that tuusniemi will continue as an independent.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Elderships liitoksen Tuus metro was also involved in an investigation, but the council decided that Tuusniemi go independent.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">The race, was also involved in the new Cape Corps, but the council decided that the new Peninsula to continue as an independent.</translation>
+    </seg>
+    <seg>
+      <source id="394">Päästyään viidennelle sijalle Iowan vaalikokouksessa vuoden 2012 presidentinvaalikampanjansa aikana Perry uhosi lopettavansa tasapeliin julkaisemalla Twitterissä kuvan itsestään lenkkeilemässä järvellä tekstin ”Täältä tullaan, South-Carolina!” kera.</source>
+      <reference>After finishing in fifth place in the Iowa caucuses during his 2012 presidential campaign, Perry addressed speculation that he might call it quits with a tweet of a photo of himself jogging near a lake, and the words, "Here we come South Carolina!"</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">After his fifth place in the Iowa legislature meeting during his 2012 presidential campaign, Perry uhosi quitting their tasapeliin by publishing a picture on Twitter of themselves getting lenkkeile lake text" to come here, with the South Carolina!'.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">After reaching the fifth place in the Iowa election meeting during the 2012 presidential campaign Perry boasted that it draw with the publication of on Twitter picture of the text of the Lake jogging "from here will be, South-Carolina!" with them.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">To reach fifth place in Iowa during an election meeting in the 2012 presidential campaign that it was stopping a game during Perry's sabre rattling by Twitter by publishing the text of a lake lenkkeillä picture 'from here will be, -Carolina!' As well.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">To get to the fifth election meeting in Iowa in the 2012 presidential election campaign, Perry bluster to stop the game in the balance with the publication of a picture on Twitter of himself jogging around the lakes of the text "Here We Come, South Carolina! '.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Once the fifth place Iowa in cologno monzese, the 2012 during the presidential election campaign Perry uhosi publishing Twitter to end a draw a picture of the text itself lenkkeilemässä lakes' will be here, with the South Carolina! '.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="893">Arevan tiedotteen mukaan projektin viimeaikaiset viivästymiset ovat johtuneet pääosin siitä, että reaktorin automaatiojärjestelmille on haettu hyväksyntää.</source>
+      <reference>In a statement, Areva says the latest delays in the project are mainly due to the fact that an acceptance for the reactor’s automation systems has been applied for.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The recent delays in the project, according to Areva in the bulletin are due mainly to the fact that the reactor automation is applied for approval.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Areva, according to a press release of the project's recent delays are mainly due to the fact that the reactor's automation systems submitted for approval.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">According to the Bulletin of Areva's recent delays in the project are largely due to the fact that the reactor automaatiojärjestelmille has been applied for approval.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Areva, according to a recent project delays have been due largely to the fact that the reactor automation system have applied for the approval.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Areva, according to the press release, the project that recent delays have resulted in the main reactor automation systems has applied for approval.</translation>
+    </seg>
+    <seg>
+      <source id="975">Mutta kaikkeen pitää sopeutua", Viitala sanoi 1-2-tappioon päättyneen kamppailun jälkeen.</source>
+      <reference>But you have to adapt yourself to everything,” Viitala said after the 1-2 defeat.</reference>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">But everything must be adapted, 'Viitala said one or two - after the defeat struggle which ended.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">But I have to adapt to everything, "Viitala said 1-2 defeat ended after the struggle.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">But we all have to adapt, "Viitala said 1 to 2 2-tappioon closed after a struggle.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">But all must adapt, "Viitala said after ending 1-2 loss struggle.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">However, everything must be adapted ', in the light of the fight against 1 to 2, which has been brought to an end.</translation>
+    </seg>
+    <seg>
+      <source id="166">Monet Gazan rintaman läheisyydessä sijaitsevan Nahal Ozin yhteisön asukkaista ovat epäileväisiä paluun suhteen palestiinalaisten kranaatin tapettua 4-vuotiaan pojan yhteisössä.</source>
+      <reference>Many residents of Nahal Oz, a community close to the Gaza frontier where a 4-year-old boy was killed by a Palestinian mortar shell, are hesitant about coming back.</reference>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Many of the Gaza front, located in the vicinity of Iberia - through a community residents are sceptical about the return of Palestinian rocket killed a 4 year-old boy in the community.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">Many of the inhabitants of Oz Oz, who are close to the Gaza Front, are sceptical about the return of the 4 son of a 4 boy in the Community.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Many of the Gaza Strip near the front of the Nahal Oz community residents are sceptical about the return of Palestinian Grenade 4 years of age boy killed in the community.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Many of the Gaza Strip near the front of the Nahal Oz 'Community residents are sceptical about the return of the Palestinian grenade killed 4-year-old boy by a policeman in the Community.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The Gaza mone are located near the front of the Nahal Oz community residents are sceptical about the return of Palestinians to the kingdom kranaati 4-vuotiaa boy in the community.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="285">Vaikka asemani oli outo ja paheksuttava, sain tehdä töitä valtavissa tapahtumissa ja opin, kuinka yleisöä käsitellään.</source>
+      <reference>Although it was a weird, reprehensible position to be in, I was working in huge venues and learning how to work a crowd.</reference>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Although my position was a bizarre and objectionable, I got to work in a huge event, and I learned how to deal with the public.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Although the mine was a strange and deplorable, I had the opportunity to work the big events and I learned how the public will be dealt with.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Even though my position was strange and unacceptable, I got to work on the huge events, and I learned how to deal with the public.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">Although it was strange and regrettable, I was able to work in huge events and I learned how to deal with the public.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Although the position was a strange and objectionable, I've got to work for big events and I learned how to deal with the audience.</translation>
+    </seg>
+    <seg>
+      <source id="1356">Neljännessä erässä Suomi teki ihmenousun kuuden pisteen takaa.</source>
+      <reference>At the fourth set, Finland made a miraculous rise behind six points.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Finland took a surprise rise in the the fourth-phase of the six-point guarantee.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The fourth installment of Finland made a miracle rise six-point guarantee.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">In the fourth round, Finland made a miracle of rising six points behind.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">The fourth one in miracle workers rises by six points.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">In a quarter of a quarter, Finland made a miracle, at the end of the six points.</translation>
+    </seg>
+    <seg>
+      <source id="639">On selvää, että toimimme itsevaltaisen hallinnon kanssa.</source>
+      <reference>And it's clear we are dealing with an authoritarian regime.</reference>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">It is clear that we are working with the authoritarian regime.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">It is clear that we act with the autocratic regime.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">It is clear that we are working with an autocratic regime.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">It is clear that we operate with the autocratic regime.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">It is clear that we deal with the autocratic regime.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1255">Kasvisdieettiin koululounaalla kuuluvat kala- ja kanaruoat.</source>
+      <reference>At the school lunch, the vegetarian diet includes fish and chicken meals.</reference>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The school lunch lunch is the fish and chicken chicken.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Vegetarian dieettiin school lunch consists of fish and chicken dishes.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">In a school lunch vegetable dieetti are fish and chicken kanaruoat.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Vegetarian diet foods in the school lunch of fish and chicken.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">A vegetarian diet school at lunch include fish and chicken dishes.</translation>
+    </seg>
+    <seg>
+      <source id="649">Verkossa julkaisemassa tiedotteessaan järjestäjät sanoivat, että liike ”pitää Occupy Central -tempausta viimeisenä keinona, joka otetaan käyttöön vasta, jos ei ole mitään toivoa vuoropuhelusta eikä ole mitään muuta tietä”.</source>
+      <reference>In an online statement, organizers said the movement "has considered occupying Central only as the last resort, an action to be taken only if all chances of dialogue have been exhausted and there is no other choice.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Network in his newsletter published by the organisers said that the movement should be Occupy Central '' as a last resort, which will be released only if there is no hope for dialogue and there is no other way '.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">In a press release, published by the online organizers said that the move "to keep the Occupy Central -tempausta as a last resort, which will be used only if there's no hope for dialogue and there is no other way."</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Online publishing in the country. In its statement, the organisers said that the Occupy Central movement -tempausta &quot; to be the last resort, which will be introduced only if there is no hope of a dialogue and there is no other path &quot;.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Online in its communiqué published by the organisers have said that the movement "is to Occupy Central - the rapture as a last resort, which will be released only if there is no hope for dialogue and not have any other way."</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Online in his newsletter published by the organizers said that the movement in its statement, the Occupy Central -tempausta " to be the last resort, which will be released only if there is any hope of dialogue, and not any other way ".</translation>
+    </seg>
+    <seg>
+      <source id="683">Torresin lähtö varmistui, Kagawa palaa ManU:sta Dortmundiin</source>
+      <reference>Torres’s exit confirmed, Kagawa returns from ManU to Dortmund</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Torres' departure was confirmed, Kagawa returns to Manchester United to Dortmund</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Torres's departure was confirmed, Kagawa returns to ManU Dortmundiin II</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Torres c5-0162/1999 confirmed Kagawa will return to the ManU Dortmund</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">In Torres' departure was confirmed, the return of Kagawa manu:sta dortmundiin</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Towers in the Minervois, confirmed by a returning from Tokyo: the Blessed in Derby</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="899">Soraääniä ei kuulunut kokouksessa kun tontista päätettiin, kertoo kunnanjohtaja Pauli Syyrakki.</source>
+      <reference>There were no notes of discord at the meeting when the lot decision was being made, tells mayor Pauli Syyrakki.</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Dissenting voices could not be heard at the time decided tontista, says mayor Pauli reason rakki.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Gravel tones was not part of the meeting, it was decided that the head of the plot, says Lasantha.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Dissenting voices at the meeting was not one of the land when it was decided, "says the mayor Paul grain structure.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Discordant note was not part of the property when it was decided at the meeting, says the mayor Paul Syyrakki.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">votes votes were not at the meeting of the patch, the leader of the municipality, Paul The.</translation>
+    </seg>
+    <seg>
+      <source id="1345">Palmer, Chuck-sarjan tähti Strahovski ja Sucker Punch -näyttelijä Browning eivät kommentoineet hakkeroituja kuvia eilen.</source>
+      <reference>Palmer, Chuck star Strahovski and Sucker Punch actress Browning yesterday had no comment on the hacked pictures.</reference>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">Chuck Palmer, the star of Sucker Punch actress, Browning and Strahovski did not comment yesterday to break into pictures.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Palmer, Chuck series star Strahovski and Sucker Punch actress Browning did not comment on hacked pictures yesterday.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Palmer, Chuck star Strahovski and sucker Punch -näyttelijä Browning not comment on pictures of Hacked ones yesterday.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">A tree frog, Wangchuck Series Star Station he and Baranovsky Corporation Punch - actors b Alaska Awakening are not commentators are hacked pictures yesterday.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Palmer, Strahovski Chuck series star and Sucker Punch -näyttelijä Browning nee did not comment on the pictures hakkeroitu yesterday.</translation>
+    </seg>
+    <seg>
+      <source id="775">Lajilegenda Reino Kosonen oli maajoukkueen kakkosvalmentajana Argentiinassa.</source>
+      <reference>In Argentina, Reino Kosonen, the legend of the sport, was the secondary coach for the national team.</reference>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">It was Mr Kosonen species legend Johan Cruyff in the national team as a in Argentina.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Lajilegenda Reino Kosonen kakkonenvalmentaja of National team, was in Argentina.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">It was Mr Kosonen species legend Johan Cruyff in the national team as a coach in Argentina.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Identification of legend Reino Kosonen was the national team coach in Argentina.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Type the legend of kakkosvalmentajana, the national team of Argentina was Reino Kosonen.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1174">Sunnuntaina noin 150 ihmistä kokoontui Cardiffin kaupungintalolle ns. vastahuippukokoukseen.</source>
+      <reference>And on Sunday in Cardiff, around 150 people came together at Cardiff's county hall for what was described as a counter-summit.</reference>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">On Sunday, around 150 people met the Cardiff Town Hall to so - called vastahuippukokous.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">On Sunday, about 150 people gathered for the town house, known only to the Cardiff summit.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">On Sunday, about 150 people gathered at the Cardiff City Hall, the so-called vastahuippukokoukseen.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">On Sunday, about 150 people met on the Cardiff City Hall to the so-called counter-summits.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">On Sunday, some 150 people gathered in the NHP différence Town Hall for the only summit.</translation>
+    </seg>
+    <seg>
+      <source id="113">Alueen päästöt on kuitenkin tutkittu, eikä selvityksissä ole tullut esille ohjearvoja ylittäviä havaintoja.</source>
+      <reference>However, the emissions of the area have been checked and the investigations haven’t brought up any findings that would exceed the guideline values.</reference>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">The region 's emissions, however, has been examined, and studies that have come out of the findings exceed the guidelines.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Emissions in the region, however, have been investigated, and reports have emerged in the cross-border guidance values sightings.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The emissions in the region, however, has been examined, and no reports have come up in the guide values in excess of sightings.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Regional emissions has, however, been investigated, and studies have not been guidelines over the findings.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">Emissions in the region, however, is not in the report, the guidelines are observed.</translation>
+    </seg>
+    <seg>
+      <source id="627">Jos mahdollista, pysyttele lähellä pintaa kuvatessasi uima-altaassa, järvessä tai meressä.</source>
+      <reference>If possible, stay close to the surface when you shoot in a pool, a lake or the ocean.</reference>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt">If possible, stop at or near the surface would describe it as in the pool, lake or ocean.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">If possible, keep the pictures become reality swimming basin near the surface of a lake or a sea.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">If possible, keep close to the surface when you're swimming in the pool, Lake or ocean.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">If possible, stay close to the surface of the swimming pool when describing the lake, or in the ocean.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">If possible, stay close to the surface when describing the swimming pool, lake or ocean.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1025">Isabelle Roberts hetkeä ennen onnettomuutta</source>
+      <reference>Isabelle Roberts moments before the accident</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt,newstest2015.uedin-syntax.4006.fi-en.txt">Isabelle Roberts moments before the accident</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">Isabeile Roberts just moments before the accident</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Isabelle Roberts moments before the crash</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.abumatran.3931.fi-en.txt">Ms Roberts, a moment before the accident</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">So for the moment Mr. Toyama No before the accident</translation>
+    </seg>
+    <seg>
+      <source id="303">Näytelmä oli lopulta menestys.</source>
+      <reference>And it was a success.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt,newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Spectacle was ultimately a success.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">The play was ultimately a success.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">The play ended up being a success.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">In the end, the play was a success.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The drama was ultimately a success.</translation>
+    </seg>
+    <seg>
+      <source id="714">Osa heistä on siis iltatilaisuudessa ja ISTV:n suorassa lähetyksessä paikalla.</source>
+      <reference>Some of them will thus be present at the evening event and at the ISTV live broadcast.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Some of them are therefore iltatilaisuudessa and ISTV: Live here.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">So, some of them in the evening session and the ISTV 's direct broadcast here.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">Some of them are therefore iltatilaisuudessa and ISTV 's on screen here.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">Some of them are, therefore, in the evening and in the directly programme.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Some of them is, therefore, the evening event and ISTV screen here.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="354">Laiva on käännettävä strategian mukaiseen tavoitteeseen, toteaa kaupunginhallituksen puheenjohtaja Kimmo Heinonen.</source>
+      <reference>The ship must be steered towards a goal which is in conformity with the strategy, notes Kimmo Heinonen, chairman of the city board.</reference>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The ship must be translated into a strategy for the goal, says the municipal government chairman Kimmo Heinonen.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The ship is to be translated into objective strategy, says Chairman of the Board of the city of David H.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">The ship is to reverse the objective of the strategy, says the city government spokesman Kimmo Heinonen.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">The ship is translated into an objective of the strategy, the president of the Municipal Council says Kimmo Ruoho.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">The ship must be translated into objective in the strategy, says the Chairman of the City Board, Kimmo Heinonen.</translation>
+    </seg>
+    <seg>
+      <source id="1204">Kovat sateet pääsivät yllättämään ruotsalaisviranomaiset, eikä sateista annettu etukäteen säävaroitusta.</source>
+      <reference>The heavy rain managed to take the Swedish authorities by surprise, and in beforehand there was no weather alert concerning the rain.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Heavy rains were able to sneak up on ruotsalaisviranomaiset, rather than a rain of säävaroitusta in advance.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">Heavy rainfall reached ruotsalaisviranomaiset by surprise, and not a wet säävaroitusta issued in advance.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Heavy rain came to the Swedish authorities, not the rain provided advance notice of a warning.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Heavy rainfall suddenly came to the long-standing Swedish authorities, nor etukäteen given rain weather warning.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Heavy rainfall reached a surprise one of the Swedish authorities, and wet weather warnings issued in advance.</translation>
+    </seg>
+    <seg>
+      <source id="1343">Hakkerilla uskotaan olevan 30 kuvaa Palmerista tämän edellisen poikaystävän Scott Speedmanin kanssa, joukossa myös kaksi otosta Palmerista yläosattomissa altaan reunalla.</source>
+      <reference>The hacker is believed to have 30 images of Palmer with ex-boyfriend Scott Speedman, including two frames where she is lounging topless in a pool.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Hakkerilla is believed to be 30 pictures of Palmer this with the previous boyfriend Scott Speedman, including two sample Palmer topless at the edge of the pool.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">The hackers believed to be 30 images palmerista this with the previous boyfriend Scott speedmanin, including two otto palmerista yläosaton in on the periphery of the basin.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The hacker is believed to be under 30 Palmerista illustrates this previous boyfriend Scott Speedmanin, including two sample Palmerista dance on the edge of the basin.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The Hacker is believed to be 30 examples of Palmer McMillan-Scott McMillan-Scott, including two introduction, on the periphery of the Palmer.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The hacker is believed to be the image of the last 30 on Palmer this boy friends with Scott Speedman, including two shots of Palmer in topless by the pool.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="55">Helsingin kaupunginorkesteri on ollut keskeisessä roolissa maamme musiikkielämässä jo yli sadan vuoden ajan, mm. kantaesittämällä suuren määrän Sibeliuksen musiikkia.</source>
+      <reference>Helsinki Philharmonic Orchestra has had a key role in the music life of our country for over hundred years now, for example by premiering a great amount of Sibelius’s music.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The Helsinki Philharmonic Orchestra has played a central role in the role of our country in the music scene for over one hundred years, including the kantaesittämällä to the large number of Sibelius ' music.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Helsinki Philharmonic Orchestra played a key role in our country's musical life for more than 100 years, including the position by a large number of Sibelius Music.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">The Helsinki kaupunginorkesteri has been a key role to play in our country musiikkielämä more than a hundred years, including kantaesittämällä a large number of Sibelius music.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The Helsinki City Orchestra has played a central role in our country 's musical life for more than 100 years, including kantaesittä reason, a large number of Sibelius 's music.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The city of Helsinki, the orchestra has been at the core of our country's role in the musical life for more than a century, including a large number of kantaesittämällä Sibelius's music.</translation>
+    </seg>
+    <seg>
+      <source id="915">Valioliigaseura Hull sijoitti seuran ennätyssumman Uruguayn maajoukkuemiehen Abel Hernandezin hankintaan.</source>
+      <reference>Premier League club Hull invested a record sum in signing Abel Hernandez, a Uruguay’s national team player.</reference>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Premier League club Hull invested a record sum club in the Uruguay men's football team Abel Hernandez of the acquisition.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">In the case of the committee, a record amount for the procurement of the Uruguay national team, followed by the committee, has invested a record.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Hull Valioliiga club, the club has invested a record amount of the national team Abel Hernandez.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The Premier League club Hull invested a club record sum for the Uruguay national team man Abel Hernandez acquisition.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Premier League club have followed the script, invested a record amount, the head of the Uruguayan national team, and attracted by acquisition.</translation>
+    </seg>
+    <seg>
+      <source id="832">Brooke ei pidä siitä, että mies käy siellä yrittämässä häntä takaisin.</source>
+      <reference>Brooke doesn’t like the man to visit her, in order to try to get her back.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Brooke doesn't like the fact that the man goes out there trying to get him back.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Brooke should not be the fact that the man is going there to try him back.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">It should not be the case that the man is trying to get him back.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Brooke did not like the fact that the man is out there trying to her back.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">Brooke does not like the fact that the man is going there to try to get him back.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="674">Ipswichin ”sikatalo” myynnissä</source>
+      <reference>Ipswich 'pig in residence' house for sale</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt,newstest2015.uedin-syntax.4006.fi-en.txt">Ipswich "pig house" for sale</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Ips GMT 'pig' house for sale</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">In ipswichin 'sikatalo' sales</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">The house of " Mexican Ipswichi " sale</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Ipswich "a house in the pig" on sale</translation>
+    </seg>
+    <seg>
+      <source id="634">Päätös antaa todennäköisesti kipinän Hongkongin liikemaailman korttelin kauan odotetuille protesteille aktivistien alettua suunnitella ja panna täytäntöön mielenilmauksia vain tunteja päätöksen julkaisemisen jälkeen.</source>
+      <reference>The move is likely to spark long-promised protests in Hong Kong's business district, as activists began planning and mobilizing within hours of the announcement.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The decision to give the business world in Hong Kong is likely to spark a block for a long time after the beginning of the user to design and implement Council (SLORC) was created after activists protests just hours after the publication of the decision.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Probably decision gives the spark of long odotetuille protests of the Hong Kong Business activists have begun to devise and implement the just hours after the publication of Decisions.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Decision to Hong Kong's business district is likely to spark protests by activists since the beginning of the long-awaited plan and implement protests just hours after the publication of the decision.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The decision is likely to spark Hong Kong business world to block opposition activists since the beginning of the long wait to plan and implement the protests just hours after the publication of the decision.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">The decision is likely to provide a spark for Hong Kong's business blocks long protesteille activists began to plan and implement the clamour just hours after the publication of the decision.</translation>
+    </seg>
+    <seg>
+      <source id="956">Hanno Möttölä lupasi, että Suomi pelaa paremmin kuin eilisessä tappiossaan Yhdysvalloille.</source>
+      <reference>Hanno Möttölä promised that Finland will play better than during its defeat against US yesterday.</reference>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">Hanno möttölä promised that Finland is playing better than yesterday's loss to the United States.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Hanno Möttölä promised that Finland plays better than yesterday's tappiossaan to the United States.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Hanno Möttölä promised that Finland is playing better than yesterday's Tapio to the United States.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Hanno Möttölä tappiossa yesterday promised that Finland is playing better than in the United States.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.Illinois.3955.fi-en.txt">Hanno Möttölä promised that Finland is playing better than in yesterday's loss to the United States.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="43">Pelaajan jo suosikikseen ottaneet Pool-kannattajat odottavat jatkossa parempaa.</source>
+      <reference>The Pool supporters, who already had picked the player as their favourite, are expecting something better in the future.</reference>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The Pool in favour of the Pool are waiting for better.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Already have their favorite player Pool fans are waiting for a better future.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">A player already in the future, waiting to be taken, the supporters of the Pool as favorite better.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">When a player already favorite taken pool fans are waiting in the future will be the better.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">His favorite player has already taken the Pool-supporters are waiting for a better future.</translation>
+    </seg>
+    <seg>
+      <source id="459">Laulun alkaessa ihmiset halusivat tietää täsmälleen, missä se päättyisi.</source>
+      <reference>People wanted to be sure, when a tune began, exactly where it was going to end.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt,newstest2015.LIMSI.4021.fi-en.txt">At the beginning of the song, people wanted to know exactly where it would come to an end.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">At the beginning of the song people wanted to know exactly where it will end.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.Neural-MT.4062.fi-en.txt,newstest2015.UU-unconstrained.3977.fi-en.txt">At the beginning of the song, people wanted to know exactly where it would end.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.uedin-jhu-phrase.4106.fi-en.txt">At the start of the song, people wanted to know exactly where it would end.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">At the beginning of the song that people wanted to know exactly where it would come to an end.</translation>
+    </seg>
+    <seg>
+      <source id="587">Lesothon armeijan virkamiesten mukaan sotilaat palaavat kasarmeilleen sunnuntaina, ja pääkaupungissa oli rauhallinen tunnelma.</source>
+      <reference>Lesotho military officials said soldiers returned to their barracks Sunday and there was calm in the capital.</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Lesotho army officials said the soldiers will return to the barracks on Sunday, and the capital was peaceful atmosphere.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">According to officials of the Lesotho army soldiers kasarmeilleen will return on Sunday, and the mood in the capital was peaceful.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">According to the officials of the army soldiers return to their barracks in Lesotho, and on Sunday in the capital, was a peaceful atmosphere.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">According to officials of the Lesotho army soldiers returning kasarmeilleen Sunday, and the capital was in a peaceful atmosphere.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.uedin-syntax.4006.fi-en.txt">According to officials of the Lesotho army soldiers returning to their barracks on Sunday, and the mood in the capital was calm.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1007">Yhtiö kasvatti myös tulostaan.</source>
+      <reference>The company also increased its profits.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Company home-grown also arrived.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">The company also boosted profits.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">The company also increased the revenue too.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Companies also their home - grown players.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The company also raised its revenue.</translation>
+    </seg>
+    <seg>
+      <source id="4">Kuntaliitoksen selvittämisessä oli mukana myös Tuusniemen kunta, mutta sen valtuusto päätti, että Tuusniemi jatkaa itsenäisenä.</source>
+      <reference>Also the municipality of Tuusniemi carried out an examination regarding a municipal annexation, but its council decided that Tuusniemi will continue as an independent municipality.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The municipality join deciphering was also involved in the Council of the municipality, but its Tuusniemen decided to continue as an independent, that the 2000s.</translation>
+      <translation system="newstest2015.UoS.4059.fi-en.txt">In clarifying amalgamation Tuusniemi municipalities, but it was also involved, the council decided that Tuusniemi continue as an independent.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">In the joint of the tackling was also involved, but the governors tuusniemen decided that tuusniemi will continue as an independent.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Elderships liitoksen Tuus metro was also involved in an investigation, but the council decided that Tuusniemi go independent.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">The race, was also involved in the new Cape Corps, but the council decided that the new Peninsula to continue as an independent.</translation>
+    </seg>
+    <seg>
+      <source id="394">Päästyään viidennelle sijalle Iowan vaalikokouksessa vuoden 2012 presidentinvaalikampanjansa aikana Perry uhosi lopettavansa tasapeliin julkaisemalla Twitterissä kuvan itsestään lenkkeilemässä järvellä tekstin ”Täältä tullaan, South-Carolina!” kera.</source>
+      <reference>After finishing in fifth place in the Iowa caucuses during his 2012 presidential campaign, Perry addressed speculation that he might call it quits with a tweet of a photo of himself jogging near a lake, and the words, "Here we come South Carolina!"</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">After his fifth place in the Iowa legislature meeting during his 2012 presidential campaign, Perry uhosi quitting their tasapeliin by publishing a picture on Twitter of themselves getting lenkkeile lake text" to come here, with the South Carolina!'.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">After reaching the fifth place in the Iowa election meeting during the 2012 presidential campaign Perry boasted that it draw with the publication of on Twitter picture of the text of the Lake jogging "from here will be, South-Carolina!" with them.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">To reach fifth place in Iowa during an election meeting in the 2012 presidential campaign that it was stopping a game during Perry's sabre rattling by Twitter by publishing the text of a lake lenkkeillä picture 'from here will be, -Carolina!' As well.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">To get to the fifth election meeting in Iowa in the 2012 presidential election campaign, Perry bluster to stop the game in the balance with the publication of a picture on Twitter of himself jogging around the lakes of the text "Here We Come, South Carolina! '.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Once the fifth place Iowa in cologno monzese, the 2012 during the presidential election campaign Perry uhosi publishing Twitter to end a draw a picture of the text itself lenkkeilemässä lakes' will be here, with the South Carolina! '.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="893">Arevan tiedotteen mukaan projektin viimeaikaiset viivästymiset ovat johtuneet pääosin siitä, että reaktorin automaatiojärjestelmille on haettu hyväksyntää.</source>
+      <reference>In a statement, Areva says the latest delays in the project are mainly due to the fact that an acceptance for the reactor’s automation systems has been applied for.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The recent delays in the project, according to Areva in the bulletin are due mainly to the fact that the reactor automation is applied for approval.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Areva, according to a press release of the project's recent delays are mainly due to the fact that the reactor's automation systems submitted for approval.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">According to the Bulletin of Areva's recent delays in the project are largely due to the fact that the reactor automaatiojärjestelmille has been applied for approval.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Areva, according to a recent project delays have been due largely to the fact that the reactor automation system have applied for the approval.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Areva, according to the press release, the project that recent delays have resulted in the main reactor automation systems has applied for approval.</translation>
+    </seg>
+    <seg>
+      <source id="975">Mutta kaikkeen pitää sopeutua", Viitala sanoi 1-2-tappioon päättyneen kamppailun jälkeen.</source>
+      <reference>But you have to adapt yourself to everything,” Viitala said after the 1-2 defeat.</reference>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">But everything must be adapted, 'Viitala said one or two - after the defeat struggle which ended.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">But I have to adapt to everything, "Viitala said 1-2 defeat ended after the struggle.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">But we all have to adapt, "Viitala said 1 to 2 2-tappioon closed after a struggle.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">But all must adapt, "Viitala said after ending 1-2 loss struggle.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">However, everything must be adapted ', in the light of the fight against 1 to 2, which has been brought to an end.</translation>
+    </seg>
+    <seg>
+      <source id="166">Monet Gazan rintaman läheisyydessä sijaitsevan Nahal Ozin yhteisön asukkaista ovat epäileväisiä paluun suhteen palestiinalaisten kranaatin tapettua 4-vuotiaan pojan yhteisössä.</source>
+      <reference>Many residents of Nahal Oz, a community close to the Gaza frontier where a 4-year-old boy was killed by a Palestinian mortar shell, are hesitant about coming back.</reference>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Many of the Gaza front, located in the vicinity of Iberia - through a community residents are sceptical about the return of Palestinian rocket killed a 4 year-old boy in the community.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">Many of the inhabitants of Oz Oz, who are close to the Gaza Front, are sceptical about the return of the 4 son of a 4 boy in the Community.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Many of the Gaza Strip near the front of the Nahal Oz community residents are sceptical about the return of Palestinian Grenade 4 years of age boy killed in the community.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Many of the Gaza Strip near the front of the Nahal Oz 'Community residents are sceptical about the return of the Palestinian grenade killed 4-year-old boy by a policeman in the Community.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The Gaza mone are located near the front of the Nahal Oz community residents are sceptical about the return of Palestinians to the kingdom kranaati 4-vuotiaa boy in the community.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="43">Pelaajan jo suosikikseen ottaneet Pool-kannattajat odottavat jatkossa parempaa.</source>
+      <reference>The Pool supporters, who already had picked the player as their favourite, are expecting something better in the future.</reference>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The Pool in favour of the Pool are waiting for better.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Already have their favorite player Pool fans are waiting for a better future.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">A player already in the future, waiting to be taken, the supporters of the Pool as favorite better.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">When a player already favorite taken pool fans are waiting in the future will be the better.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">His favorite player has already taken the Pool-supporters are waiting for a better future.</translation>
+    </seg>
+    <seg>
+      <source id="459">Laulun alkaessa ihmiset halusivat tietää täsmälleen, missä se päättyisi.</source>
+      <reference>People wanted to be sure, when a tune began, exactly where it was going to end.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt,newstest2015.LIMSI.4021.fi-en.txt">At the beginning of the song, people wanted to know exactly where it would come to an end.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">At the beginning of the song people wanted to know exactly where it will end.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.Neural-MT.4062.fi-en.txt,newstest2015.UU-unconstrained.3977.fi-en.txt">At the beginning of the song, people wanted to know exactly where it would end.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.uedin-jhu-phrase.4106.fi-en.txt">At the start of the song, people wanted to know exactly where it would end.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">At the beginning of the song that people wanted to know exactly where it would come to an end.</translation>
+    </seg>
+    <seg>
+      <source id="587">Lesothon armeijan virkamiesten mukaan sotilaat palaavat kasarmeilleen sunnuntaina, ja pääkaupungissa oli rauhallinen tunnelma.</source>
+      <reference>Lesotho military officials said soldiers returned to their barracks Sunday and there was calm in the capital.</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Lesotho army officials said the soldiers will return to the barracks on Sunday, and the capital was peaceful atmosphere.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">According to officials of the Lesotho army soldiers kasarmeilleen will return on Sunday, and the mood in the capital was peaceful.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">According to the officials of the army soldiers return to their barracks in Lesotho, and on Sunday in the capital, was a peaceful atmosphere.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">According to officials of the Lesotho army soldiers returning kasarmeilleen Sunday, and the capital was in a peaceful atmosphere.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.uedin-syntax.4006.fi-en.txt">According to officials of the Lesotho army soldiers returning to their barracks on Sunday, and the mood in the capital was calm.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="899">Soraääniä ei kuulunut kokouksessa kun tontista päätettiin, kertoo kunnanjohtaja Pauli Syyrakki.</source>
+      <reference>There were no notes of discord at the meeting when the lot decision was being made, tells mayor Pauli Syyrakki.</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Dissenting voices could not be heard at the time decided tontista, says mayor Pauli reason rakki.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Gravel tones was not part of the meeting, it was decided that the head of the plot, says Lasantha.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Dissenting voices at the meeting was not one of the land when it was decided, "says the mayor Paul grain structure.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Discordant note was not part of the property when it was decided at the meeting, says the mayor Paul Syyrakki.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">votes votes were not at the meeting of the patch, the leader of the municipality, Paul The.</translation>
+    </seg>
+    <seg>
+      <source id="1345">Palmer, Chuck-sarjan tähti Strahovski ja Sucker Punch -näyttelijä Browning eivät kommentoineet hakkeroituja kuvia eilen.</source>
+      <reference>Palmer, Chuck star Strahovski and Sucker Punch actress Browning yesterday had no comment on the hacked pictures.</reference>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">Chuck Palmer, the star of Sucker Punch actress, Browning and Strahovski did not comment yesterday to break into pictures.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Palmer, Chuck series star Strahovski and Sucker Punch actress Browning did not comment on hacked pictures yesterday.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Palmer, Chuck star Strahovski and sucker Punch -näyttelijä Browning not comment on pictures of Hacked ones yesterday.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">A tree frog, Wangchuck Series Star Station he and Baranovsky Corporation Punch - actors b Alaska Awakening are not commentators are hacked pictures yesterday.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Palmer, Strahovski Chuck series star and Sucker Punch -näyttelijä Browning nee did not comment on the pictures hakkeroitu yesterday.</translation>
+    </seg>
+    <seg>
+      <source id="775">Lajilegenda Reino Kosonen oli maajoukkueen kakkosvalmentajana Argentiinassa.</source>
+      <reference>In Argentina, Reino Kosonen, the legend of the sport, was the secondary coach for the national team.</reference>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">It was Mr Kosonen species legend Johan Cruyff in the national team as a in Argentina.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Lajilegenda Reino Kosonen kakkonenvalmentaja of National team, was in Argentina.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">It was Mr Kosonen species legend Johan Cruyff in the national team as a coach in Argentina.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Identification of legend Reino Kosonen was the national team coach in Argentina.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Type the legend of kakkosvalmentajana, the national team of Argentina was Reino Kosonen.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1066">Palataanpa vuoteen 1995.</source>
+      <reference>Let’s go back to year 1995.</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Let us go, until 1995.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.abumatran.3931.fi-en.txt">Just look back to 1995.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Let us come back to 1995.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">Let us return to 1995.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">I will come back to the year of 1995.</translation>
+    </seg>
+    <seg>
+      <source id="692">Kagawan tuore sopimus on nelivuotinen.</source>
+      <reference>Kagawa’s fresh contract is four years long.</reference>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Kagawa's latest is a four-year contract.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The recent agreement on Kagan is a four-year agreement.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Recent kagawan agreement is a four - year.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Kagawa fresh contract is for four years.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Kagawa fresh agreement is the four-year.</translation>
+    </seg>
+    <seg>
+      <source id="298">Henry lausui 20 säettä Othellon viimeisestä puheesta dokumenttia varten ja hän oli myyty.</source>
+      <reference>Henry delivered 20 lines of Othello's last speech for the documentary and he was hooked.</reference>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Henry said 20 lines Othello 's last speech for documentary and he was sold.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Henry said that total 20 Othello's last speech for the documentary, and she had been sold.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Henry said the 20 lines of Othello's final speech for the document, and he was sold.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Henry 20 Line othellon said last speech for the documentary and he was sold.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">Henry Othellon said 20 lines of the last speech for the documentary, and he had been sold.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="674">Ipswichin ”sikatalo” myynnissä</source>
+      <reference>Ipswich 'pig in residence' house for sale</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt,newstest2015.uedin-syntax.4006.fi-en.txt">Ipswich "pig house" for sale</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Ips GMT 'pig' house for sale</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">In ipswichin 'sikatalo' sales</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">The house of " Mexican Ipswichi " sale</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Ipswich "a house in the pig" on sale</translation>
+    </seg>
+    <seg>
+      <source id="634">Päätös antaa todennäköisesti kipinän Hongkongin liikemaailman korttelin kauan odotetuille protesteille aktivistien alettua suunnitella ja panna täytäntöön mielenilmauksia vain tunteja päätöksen julkaisemisen jälkeen.</source>
+      <reference>The move is likely to spark long-promised protests in Hong Kong's business district, as activists began planning and mobilizing within hours of the announcement.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The decision to give the business world in Hong Kong is likely to spark a block for a long time after the beginning of the user to design and implement Council (SLORC) was created after activists protests just hours after the publication of the decision.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">Probably decision gives the spark of long odotetuille protests of the Hong Kong Business activists have begun to devise and implement the just hours after the publication of Decisions.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Decision to Hong Kong's business district is likely to spark protests by activists since the beginning of the long-awaited plan and implement protests just hours after the publication of the decision.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The decision is likely to spark Hong Kong business world to block opposition activists since the beginning of the long wait to plan and implement the protests just hours after the publication of the decision.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">The decision is likely to provide a spark for Hong Kong's business blocks long protesteille activists began to plan and implement the clamour just hours after the publication of the decision.</translation>
+    </seg>
+    <seg>
+      <source id="956">Hanno Möttölä lupasi, että Suomi pelaa paremmin kuin eilisessä tappiossaan Yhdysvalloille.</source>
+      <reference>Hanno Möttölä promised that Finland will play better than during its defeat against US yesterday.</reference>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">Hanno möttölä promised that Finland is playing better than yesterday's loss to the United States.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Hanno Möttölä promised that Finland plays better than yesterday's tappiossaan to the United States.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Hanno Möttölä promised that Finland is playing better than yesterday's Tapio to the United States.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Hanno Möttölä tappiossa yesterday promised that Finland is playing better than in the United States.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt,newstest2015.Illinois.3955.fi-en.txt">Hanno Möttölä promised that Finland is playing better than in yesterday's loss to the United States.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="285">Vaikka asemani oli outo ja paheksuttava, sain tehdä töitä valtavissa tapahtumissa ja opin, kuinka yleisöä käsitellään.</source>
+      <reference>Although it was a weird, reprehensible position to be in, I was working in huge venues and learning how to work a crowd.</reference>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Although my position was a bizarre and objectionable, I got to work in a huge event, and I learned how to deal with the public.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Although the mine was a strange and deplorable, I had the opportunity to work the big events and I learned how the public will be dealt with.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Even though my position was strange and unacceptable, I got to work on the huge events, and I learned how to deal with the public.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">Although it was strange and regrettable, I was able to work in huge events and I learned how to deal with the public.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Although the position was a strange and objectionable, I've got to work for big events and I learned how to deal with the audience.</translation>
+    </seg>
+    <seg>
+      <source id="1356">Neljännessä erässä Suomi teki ihmenousun kuuden pisteen takaa.</source>
+      <reference>At the fourth set, Finland made a miraculous rise behind six points.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Finland took a surprise rise in the the fourth-phase of the six-point guarantee.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The fourth installment of Finland made a miracle rise six-point guarantee.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">In the fourth round, Finland made a miracle of rising six points behind.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">The fourth one in miracle workers rises by six points.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">In a quarter of a quarter, Finland made a miracle, at the end of the six points.</translation>
+    </seg>
+    <seg>
+      <source id="639">On selvää, että toimimme itsevaltaisen hallinnon kanssa.</source>
+      <reference>And it's clear we are dealing with an authoritarian regime.</reference>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">It is clear that we are working with the authoritarian regime.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">It is clear that we act with the autocratic regime.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">It is clear that we are working with an autocratic regime.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">It is clear that we operate with the autocratic regime.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">It is clear that we deal with the autocratic regime.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="1255">Kasvisdieettiin koululounaalla kuuluvat kala- ja kanaruoat.</source>
+      <reference>At the school lunch, the vegetarian diet includes fish and chicken meals.</reference>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The school lunch lunch is the fish and chicken chicken.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Vegetarian dieettiin school lunch consists of fish and chicken dishes.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">In a school lunch vegetable dieetti are fish and chicken kanaruoat.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Vegetarian diet foods in the school lunch of fish and chicken.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">A vegetarian diet school at lunch include fish and chicken dishes.</translation>
+    </seg>
+    <seg>
+      <source id="649">Verkossa julkaisemassa tiedotteessaan järjestäjät sanoivat, että liike ”pitää Occupy Central -tempausta viimeisenä keinona, joka otetaan käyttöön vasta, jos ei ole mitään toivoa vuoropuhelusta eikä ole mitään muuta tietä”.</source>
+      <reference>In an online statement, organizers said the movement "has considered occupying Central only as the last resort, an action to be taken only if all chances of dialogue have been exhausted and there is no other choice.</reference>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Network in his newsletter published by the organisers said that the movement should be Occupy Central '' as a last resort, which will be released only if there is no hope for dialogue and there is no other way '.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">In a press release, published by the online organizers said that the move "to keep the Occupy Central -tempausta as a last resort, which will be used only if there's no hope for dialogue and there is no other way."</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Online publishing in the country. In its statement, the organisers said that the Occupy Central movement -tempausta &quot; to be the last resort, which will be introduced only if there is no hope of a dialogue and there is no other path &quot;.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Online in its communiqué published by the organisers have said that the movement "is to Occupy Central - the rapture as a last resort, which will be released only if there is no hope for dialogue and not have any other way."</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Online in his newsletter published by the organizers said that the movement in its statement, the Occupy Central -tempausta " to be the last resort, which will be released only if there is any hope of dialogue, and not any other way ".</translation>
+    </seg>
+    <seg>
+      <source id="683">Torresin lähtö varmistui, Kagawa palaa ManU:sta Dortmundiin</source>
+      <reference>Torres’s exit confirmed, Kagawa returns from ManU to Dortmund</reference>
+      <translation system="newstest2015.online-B.0.fi-en.txt">Torres' departure was confirmed, Kagawa returns to Manchester United to Dortmund</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Torres's departure was confirmed, Kagawa returns to ManU Dortmundiin II</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Torres c5-0162/1999 confirmed Kagawa will return to the ManU Dortmund</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">In Torres' departure was confirmed, the return of Kagawa manu:sta dortmundiin</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Towers in the Minervois, confirmed by a returning from Tokyo: the Blessed in Derby</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="354">Laiva on käännettävä strategian mukaiseen tavoitteeseen, toteaa kaupunginhallituksen puheenjohtaja Kimmo Heinonen.</source>
+      <reference>The ship must be steered towards a goal which is in conformity with the strategy, notes Kimmo Heinonen, chairman of the city board.</reference>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The ship must be translated into a strategy for the goal, says the municipal government chairman Kimmo Heinonen.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The ship is to be translated into objective strategy, says Chairman of the Board of the city of David H.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">The ship is to reverse the objective of the strategy, says the city government spokesman Kimmo Heinonen.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">The ship is translated into an objective of the strategy, the president of the Municipal Council says Kimmo Ruoho.</translation>
+      <translation system="newstest2015.online-B.0.fi-en.txt">The ship must be translated into objective in the strategy, says the Chairman of the City Board, Kimmo Heinonen.</translation>
+    </seg>
+    <seg>
+      <source id="1204">Kovat sateet pääsivät yllättämään ruotsalaisviranomaiset, eikä sateista annettu etukäteen säävaroitusta.</source>
+      <reference>The heavy rain managed to take the Swedish authorities by surprise, and in beforehand there was no weather alert concerning the rain.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Heavy rains were able to sneak up on ruotsalaisviranomaiset, rather than a rain of säävaroitusta in advance.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">Heavy rainfall reached ruotsalaisviranomaiset by surprise, and not a wet säävaroitusta issued in advance.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Heavy rain came to the Swedish authorities, not the rain provided advance notice of a warning.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">Heavy rainfall suddenly came to the long-standing Swedish authorities, nor etukäteen given rain weather warning.</translation>
+      <translation system="newstest2015.Illinois.3955.fi-en.txt">Heavy rainfall reached a surprise one of the Swedish authorities, and wet weather warnings issued in advance.</translation>
+    </seg>
+    <seg>
+      <source id="1343">Hakkerilla uskotaan olevan 30 kuvaa Palmerista tämän edellisen poikaystävän Scott Speedmanin kanssa, joukossa myös kaksi otosta Palmerista yläosattomissa altaan reunalla.</source>
+      <reference>The hacker is believed to have 30 images of Palmer with ex-boyfriend Scott Speedman, including two frames where she is lounging topless in a pool.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Hakkerilla is believed to be 30 pictures of Palmer this with the previous boyfriend Scott Speedman, including two sample Palmer topless at the edge of the pool.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">The hackers believed to be 30 images palmerista this with the previous boyfriend Scott speedmanin, including two otto palmerista yläosaton in on the periphery of the basin.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt,newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The hacker is believed to be under 30 Palmerista illustrates this previous boyfriend Scott Speedmanin, including two sample Palmerista dance on the edge of the basin.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">The Hacker is believed to be 30 examples of Palmer McMillan-Scott McMillan-Scott, including two introduction, on the periphery of the Palmer.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The hacker is believed to be the image of the last 30 on Palmer this boy friends with Scott Speedman, including two shots of Palmer in topless by the pool.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="fin" target-language="eng">
+    <seg>
+      <source id="55">Helsingin kaupunginorkesteri on ollut keskeisessä roolissa maamme musiikkielämässä jo yli sadan vuoden ajan, mm. kantaesittämällä suuren määrän Sibeliuksen musiikkia.</source>
+      <reference>Helsinki Philharmonic Orchestra has had a key role in the music life of our country for over hundred years now, for example by premiering a great amount of Sibelius’s music.</reference>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The Helsinki Philharmonic Orchestra has played a central role in the role of our country in the music scene for over one hundred years, including the kantaesittämällä to the large number of Sibelius ' music.</translation>
+      <translation system="newstest2015.uedin-syntax.4006.fi-en.txt">Helsinki Philharmonic Orchestra played a key role in our country's musical life for more than 100 years, including the position by a large number of Sibelius Music.</translation>
+      <translation system="newstest2015.UoS-stemmed.4135.fi-en.txt,newstest2015.UoS.4059.fi-en.txt">The Helsinki kaupunginorkesteri has been a key role to play in our country musiikkielämä more than a hundred years, including kantaesittämällä a large number of Sibelius music.</translation>
+      <translation system="newstest2015.abumatran-hfstmorph.4007.fi-en.txt">The Helsinki City Orchestra has played a central role in our country 's musical life for more than 100 years, including kantaesittä reason, a large number of Sibelius 's music.</translation>
+      <translation system="newstest2015.UU-unconstrained.3977.fi-en.txt">The city of Helsinki, the orchestra has been at the core of our country's role in the musical life for more than a century, including a large number of kantaesittämällä Sibelius's music.</translation>
+    </seg>
+    <seg>
+      <source id="915">Valioliigaseura Hull sijoitti seuran ennätyssumman Uruguayn maajoukkuemiehen Abel Hernandezin hankintaan.</source>
+      <reference>Premier League club Hull invested a record sum in signing Abel Hernandez, a Uruguay’s national team player.</reference>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Premier League club Hull invested a record sum club in the Uruguay men's football team Abel Hernandez of the acquisition.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">In the case of the committee, a record amount for the procurement of the Uruguay national team, followed by the committee, has invested a record.</translation>
+      <translation system="newstest2015.abumatran-combo.4010.fi-en.txt">Hull Valioliiga club, the club has invested a record amount of the national team Abel Hernandez.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">The Premier League club Hull invested a club record sum for the Uruguay national team man Abel Hernandez acquisition.</translation>
+      <translation system="newstest2015.LIMSI.4021.fi-en.txt">Premier League club have followed the script, invested a record amount, the head of the Uruguayan national team, and attracted by acquisition.</translation>
+    </seg>
+    <seg>
+      <source id="832">Brooke ei pidä siitä, että mies käy siellä yrittämässä häntä takaisin.</source>
+      <reference>Brooke doesn’t like the man to visit her, in order to try to get her back.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4106.fi-en.txt">Brooke doesn't like the fact that the man goes out there trying to get him back.</translation>
+      <translation system="newstest2015.PROMT-SMT.3989.fi-en.txt">Brooke should not be the fact that the man is going there to try him back.</translation>
+      <translation system="newstest2015.Neural-MT.4062.fi-en.txt">It should not be the case that the man is trying to get him back.</translation>
+      <translation system="newstest2015.online-A.0.fi-en.txt">Brooke did not like the fact that the man is out there trying to her back.</translation>
+      <translation system="newstest2015.abumatran.3931.fi-en.txt">Brooke does not like the fact that the man is going there to try to get him back.</translation>
+    </seg>
+  </hit>
+</hits>

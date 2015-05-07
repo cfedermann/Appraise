@@ -1,0 +1,725 @@
+<hits>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2162">По словам собеседника агентства, украинская сторона при артиллерийском обстреле луганского аэропорта применила запрещенные международными конвенциями кассетные боеприпасы.</source>
+      <reference>According to an agency informant, the Ukrainian side used cluster munitions, which are banned under international conventions, during the bombardment of Luhansk airport.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">According to the agency, the Ukrainian side with artillery goals Vorkapic airport used by international conventions on Cluster Munitions.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">According to the interlocutor of the agency, the Ukrainian side when attack Lugansk airport used cluster munitions forbidden by international conventions.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">According to the collocutor of agency, Ukrainian side with the bombardment of luganskogo airport used those forbidden by international conventions cluster bombs.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">According to the agency, the Ukrainian side with some артиллерийском луганского airport used cluster munitions forbidden by international conventions.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">According to the source, the Ukrainian side in the shelling of the Lugansk airport adopted international conventions prohibited cluster munitions.</translation>
+    </seg>
+    <seg>
+      <source id="1557">"В феминизме, я не думаю, что есть много людей, которые говорят о белом цвете коже и привилегиях на таком высоком уровне", сказала она.</source>
+      <reference>"In feminism, I don't think you get a lot of people talking about whiteness and privilege in such a high level way," she said.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">"in feminism, I don't think there are a lot of people who talk about the white color of the skin and the privileges at such a high level," she said.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">"As a feminist, I do not think there are many people who talk about the white skin and Privileges at this level," she said.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">"In feminism, I don't think that there are a lot of people who talk about white skin and privileges at such a high level," she said.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">"feminism, I don't think that there are a lot of people who talk about white skin and privileges at such a high level," she said.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">"In feminism, I don't think there are many people who are talking about the white color of the skin and privileges at such a high level," she said.</translation>
+    </seg>
+    <seg>
+      <source id="582">Мой отец залезал в ванну и просто лежал там, и ты слышал, как он медленно начинает петь про себя, потому что он хотел отмыться от литейной мастерской.</source>
+      <reference>My dad used to get in the bath and just lie there and you'd hear him slowly start to sing to himself because he would wash the foundry off him.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">My father zalezal in the bathtub and just lay there, and you have heard, as he slowly begins to sing about himself, because he wanted otmytsya from a foundry workshop.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">My father climbed up in the bathtub and just lay there, and you've heard of, as he slowly begins to sing to myself, because he wanted to from foundry workshop.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">My father залезал in a bathtub and just lay there, and you have heard, as he slowly begins to sing about himself, because he wanted the отмыться mould workshop.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">My father climbed up into the bath and simply he lay there, and you heard, as he slowly begins to sing about himself, because he wanted to be washed clean from the foundry workshop.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">My father climbed into the tub and just lay there, and you heard as he slowly begins to sing to himself, because he wanted to wash away the foundry.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="537">Не могу отвечать за действия чиновников 70-х годов, только знаю, что в то время существовал план по сносу всех старых домов, несмотря на историческую значимость.</source>
+      <reference>I can’t answer for the actions of bureaucrats in the 1970s, I only know that back then there was a plan to demolish all the old houses, regardless of their historical importance.</reference>
+      <translation system="newstest2015.online-F.0.ru-en.txt">I cannot answer for the actions of the officials of the 70's, I only know that at that time there was a plan with respect to the removal of all old houses, in spite of the historical significance.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">I cannot be responsible for the actions of officials from the 1970s, only know that at the time there was a plan for the demolition of the old houses, despite the historical significance.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">I cannot be responsible for the actions of officials of the 1970s, just know that at the time there was a plan for demolishing all the old houses, despite the historical significance.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">I can't answer for the actions of the officials of the 1970s, only know that at the time there was a plan for the demolition of all the old homes, despite the historical significance.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">I can't answer for the actions of officials of the 70s, only know that at that time there was a plan for the demolition of old buildings, despite the historical significance.</translation>
+    </seg>
+    <seg>
+      <source id="2743">Из-за уязвимости, пользователи не получили никаких сообщений о попытке подобрать пароль к их аккаунту.</source>
+      <reference>As a result of a vulnerability, the users didn’t receive any messages about the attempt to match the password to their account.</reference>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Because of the vulnerability of users who have not received any reports of an attempt to find the password for their account.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">Because of the vulnerability, users do not receive any messages about trying to find the password to the account.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Because of the vulnerability, users have not received any reports of an attempt to find the password to their account.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Because of the vulnerabilities, users have not received any reports of an attempt to pick up a password to their account.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Because of the vulnerability, users have not received any reports of trying to pick up the password to their account.</translation>
+    </seg>
+    <seg>
+      <source id="2006">Турнир в Челябинске стартовал в понедельник, и первый же день принес российской команде серебряную медаль.</source>
+      <reference>The tournament in Chelyabinsk started on Monday, with the first day already bringing the Russian team a silver medal.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The tournament in Chelyabinsk started on Monday, and the first day brought to a Russian team a silver medal.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Tournament in Chelyabinsk was started on Monday, and the first day brought the Russian team to the silver medal.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The tournament in Chelyabinsk was launched on Monday, and the first day brought the Russian team to a silver medal.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">Tournament in Chelyabinsk was launched on Monday, the first day of the Russian team to the silver medal.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">Tournament in Chelyabinsk started on Monday, and the first day brought the Russian team to a silver medal.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="993">"Это произошло со мной, и нельзя изменить этот факт.</source>
+      <reference>'It happened to me and you can't change this fact.</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">"It happened to me, and you can not change this fact.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">"it happened to me, and you can't change this fact.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">"This happened to me, and you cannot change this fact.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">"It happened to me, and it is impossible to change this fact.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">“This occurred with me, and it is not possible to change this fact.</translation>
+    </seg>
+    <seg>
+      <source id="2158">В "Армии Новороссии" утверждают, что сбили украинский Су-27, и обвиняют противника в нарушении договоренности о прекращении огня</source>
+      <reference>The Army of Novorossiya confirms that they have shot down a Ukrainian Su-27, and fault the enemy for violating the ceasefire agreement</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">The "Army of New Russia" claim that downed Ukrainian Su-27, and the enemy is accused of violating the cease-fire agreement</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">In the "Army" Novorossia argue that shot down a Ukrainian Su-27, and accuse the opponent in violation of the ceasefire agreement</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">In "The Army Novorossiysk" argue that downed a Ukrainian Su-27, and accuse the enemy in violation of the ceasefire agreement</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The "army of Novorossiya" argue that the downed Ukrainian Su-27, and accuse the enemy in violation of an agreement on ceasefire</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The Army of Novorissiya claims that brought down the Ukrainian SU-27, and accuse the opponent of violation of the ceasefire agreement</translation>
+    </seg>
+    <seg>
+      <source id="712">Было бы это не так сложно, многие люди будут рады увидеть, как BBC сократится в размере, - после пересмотра ее полномочий, финансов и статуса.</source>
+      <reference>If that weren't tough enough, plenty of people are keen to see the BBC cut down in size - its power, its finances and its status overhauled.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">It would be not so difficult, many people will be glad to see how BBC will be reduced in a size, - after revision of its powers, finance and the status.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">It was not so difficult, many people will be glad to see the BBC reduced in size, "after a review of its powers and status.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">It is not so difficult, many people will be happy to see how the BBC will be reduced in size, following a review of its mandate, finance and status.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Would it not so difficult, many people will be pleased to see how the BBC will be reduced in size - after the revision of its powers, finance and status.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">It would be it is not so difficult, many people will be glad to see how the BBC will shrink in size, after revising its powers, finances and status.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2493">Его последствия - и в первую очередь взаимные санкции Запада и России - дают Минску, который пока сам испытывает санкционное давление, долгожданное поле для маневра.</source>
+      <reference>Its consequences – first and foremost the reciprocal sanctions between the West and Russia – have provided Minsk, which is still feeling the pressure of sanctions itself, with long-awaited room to manoeuvre.</reference>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Its impact is first and foremost mutual sanctions of the West and Russia - to give the Minsk, who until he feels pressure, the long-awaited room for maneuver.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">Its consequences-especially mutual sanctions of the West and Russia to give Minsk, which itself is sankcionnoe pressure, a welcome room for manoeuvre.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Its consequences - first and foremost, mutual sanctions of the West and Russia - give Minsk, which, while itself experiencing sanctions pressure, the long-awaited room to maneuver.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Its consequences - and primarily mutual sanctions from the West and Russia - give Minsk, which is itself experiencing pressure, the long-awaited margin for maneuver.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Its consequences - and above all reciprocal sanctions from the West and Russia - give Minsk, who until he feels санкционное pressure, with room for maneuver.</translation>
+    </seg>
+    <seg>
+      <source id="2381">В подтверждение в шатре Галкина мне готовят порцию "Филадельфии" с кетой.</source>
+      <reference>To vouch for his wares, Galkin prepares a Philadelphia roll with chum salmon for me to sample at his stall.</reference>
+      <translation system="newstest2015.online-A.0.ru-en.txt">In the confirmation in the Tabernacle Galkina I cooked portion of Philadelphia with Ed missile.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The confirmation in the tent, I cook a portion of "Philadelphia" with salmon.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">In support of the tent Galkina I prepared a portion of the "Philadelphia" with Ketoi.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">In confirmation in Galkin's tent prepare for me a portion of "Philadelphia" with a Siberian salmon.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">In an acknowledgement in the tent I cook Galkin portion of "Philadelphia" with Ketoy.</translation>
+    </seg>
+    <seg>
+      <source id="661">Радость сидеть в помещении с режиссером, который помогает придать форму началу, середине и концу пути - я не думаю, что когда-нибудь захочу от этого отказаться.</source>
+      <reference>The joy of sitting in a room with a director who is helping to shape a beginning, middle and end of a journey - I don't think I'll ever want to give that up.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">The joy of sitting in a room with a producer who helps shape the beginning, middle and end of the road - I don't think I ever want to refuse.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The pleasure to sit indoors with the director who helps to give the form to the beginning to the middle and the end of a way - I do not think that I will sometime want to refuse it.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">The joy of sitting in a room with the director, which helps to shape the beginning, middle and end of the road - I do not think I ever want to give it up.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The joy of sitting in a room with the director, which helps shape the early, middle and end of the road - I don't think that ever wanted from it.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">The joy of sitting in a room with the director, who is helping to shape the beginning, the middle and the end of the road - I don't think that will ever willingly relinquish it.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2423">Некоторые вкладчики, не обладая достаточной финансовой грамотностью и покупая сберегательные сертификаты на предъявителя, могут предположить, что их вложения застрахованы.</source>
+      <reference>Some investors don’t have a sufficient level of financial understanding and, when purchasing bearer savings certificates, may assume that their investments are insured.</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Some investors, lacking sufficient financial literacy and purchasing savings certificates to bearer may assume that their investments are insured.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Some investors do not have sufficient financial literacy and buying savings certificates in bearer form, may assume that their investments are insured.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">Some depositors, lacking sufficient financial literacy and buying savings certificates to bearer, may assume that their investments are insured.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">Some investors, not having sufficient financial literacy and buying the bearer savings certificates, one can assume that their investment is insured.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt,newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Some depositors, not having sufficient financial literacy and buying savings certificates bearer, may assume that their investments are insured.</translation>
+    </seg>
+    <seg>
+      <source id="489">Говорят, раствор был замешан на яйцах, поэтому так долго держится.</source>
+      <reference>They say that the mixture was made with eggs and that’s why it has been standing for so long.</reference>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">Say, the solution was involved in eggs, so long rests.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">Speak, solution was based on eggs therefore so long keeps.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">They say that the solution was implicated in the eggs, however lasts so long.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Say, the solution was implicated on eggs, however so long rests.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">They say the solution was mixed on the eggs, so long does.</translation>
+    </seg>
+    <seg>
+      <source id="2792">Александр - младший брат более известного бойца Федора Емельяненко.</source>
+      <reference>Aleksandr is the younger brother of the better well-known fighter, Fedor Yemelyanenko.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.uedin-jhu-phrase.4065.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt">Alexander is the younger brother of the more famous fighter Fedor Emelianenko.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">Alexander is the younger brother of the better known fighter Fedor Yemelyanenko.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Alexander - younger brother of the more famous fighter Fedor Emelianenko.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Alexander - the younger brother of the more famous fighter Defeated Fedor.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Alexandre is the younger brother of the more famous fighter Fedor Emelianenko.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2565">Впрочем, чаще всего это не снег, а кровавые ошметки, но по большому счету какая разница?</source>
+      <reference>However, more often than not, it’s not snow at all, but bloody scraps, however, in the grand scheme of things, what’s the difference?</reference>
+      <translation system="newstest2015.online-A.0.ru-en.txt">However, more often it doesn't snow and bloody clumps, but by and large what's the difference?</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">However, most often it is not snowing, and the bloody bits and pieces, but by and large what's the difference?</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">However, more often than not, it's not the snow, and bloody, but by and large, what's the difference?</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">However, more often than not it's not the snow, and bloody ошметки but by and large, what's the difference?</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">However, often it is not the snow, and bloody, but fundamentally what's the difference?</translation>
+    </seg>
+    <seg>
+      <source id="314">По словам Дун Цэ, который возглавит новую компанию, благодаря объединению Wanda сможет увеличить число пользователей своих услуг e-commerce с нынешних 40 млн человек до 100 млн уже к следующему году.</source>
+      <reference>According to Dun Tse, who heads the new company, as a result of the merger, Wanda will be able to increase the number of users for its e-commerce services from the current 40 mln. individuals to already 100 mln. by next year.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">According to TSE Tung, who will head the new company, by combining Wanda will be able to increase the number of users of its services e-commerce from the current 40 million to 100 million by next year.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">According to Dong Tse, who will head the new company, thanks to the merger will increase the number of users of its services to e-commerce with the current 40 million people up to 100 million by next year.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">According to Dong Ce, who will lead the new company, thanks to the unification of the Wanda will be able to increase the number of users of its e-commerce services from the current 40 million to 100 million by next year.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">According to Donga Tse, which will head new company, because of the association of Wanda will be able to increase the number of users of its services e-commerce from the current 40 million people to 100 million already to the following year.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">According to Dong Tse, who will lead the new company, thanks to the Wanda e-commerce can increase the number of users of its services from the current 40 million to 100 million by next year.</translation>
+    </seg>
+    <seg>
+      <source id="2351">Сейчас и так очень нежелательно поднимать цены, - говорит Рак.</source>
+      <reference>Right now is not a very desirable time to raise prices, Rak says.</reference>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.online-G.0.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">Now and so very undesirable to raise prices, "says cancer.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Now and so very undesirable to raise prices, "says the cancer.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt,newstest2015.online-B.0.ru-en.txt">Now, and so very desirable to raise prices, "says Cancer.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Now, and so very undesirable to raise prices, "says Rak.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">It is now very undesirable to raise prices," said Raka.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="173">Это увеличит доходы бюджета, создаст новые рабочие места, какие-то отрасли начнут расширяться, какие-то быстрее осваиваться, будет внесен вклад в рост ВВП.</source>
+      <reference>This will increase fiscal revenues and create new jobs, certain industries will start to expand, some will find their feet faster than others, and it will contribute to GDP growth.</reference>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">It will increase budget revenues, create new jobs, some industry will begin to expand, free faster accustomed, will be included in GDP growth.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">This will increase the incomes of budget, it will create new jobs, some branches will begin to be enlarged, some more rapidly to be mastered, will be introduced the contribution to the increase the GDP [Gross Domestic Product].</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">It will increase revenue, create new jobs, any industry will grow any faster would be brought in, the contribution to GDP growth.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">It will increase budget revenues, will create new jobs, any industry will begin to expand any faster than becoming accustomed, will be introduced to contribute to GDP growth.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">This will increase budget revenues, will create new jobs, any industry will expand, any faster or passing through, we will be introducing a contribution to GDP growth.</translation>
+    </seg>
+    <seg>
+      <source id="2029">В утешительном финале он одержал чистую победу над бразильцем Давидом Моурой.</source>
+      <reference>He achieved a clean win in the repechage final against the Brazilian, David Moura.</reference>
+      <translation system="newstest2015.online-F.0.ru-en.txt">In the consoling finale it gained the clean victory above the Brazilian by David Mouroy.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">In the consolation final, he won a clear victory over the Brazilian David Moura.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">In the final, he won a clean утешительном victory over David бразильцем Моурой.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">In the finale uteshitelnom he won a clean victory over David Moura Braziliam.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">In the consolatory final he won a flawless victory over Brazilian David Moura.</translation>
+    </seg>
+    <seg>
+      <source id="2052">Семья Джоан Риверз надеется на лучшее</source>
+      <reference>Joan Rivers' Family Keeping 'Our Fingers Crossed'</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">The family of Joan rivers hoped for the best</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">Joan Риверз family is hoping for the best</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">Joan Rivers's family hopes for the best</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The family of Joan Riverz is hoping for the best</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">The family of Joan Riverz hopes for the best</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="1854">В ходе мирной демонстрации они повторили свои требования вернуть прежние условия труда, которые недавно были изменены.</source>
+      <reference>In a peaceful demonstration, they have reiterated their calls for the old working conditions, which were recently changed, to be restored.</reference>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">In the course of peaceful demonstrations, they repeated their demands to return to the previous conditions, which were recently amended.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">During peaceful demonstration they repeated the requirements to return former working conditions which were changed recently.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">In the course of a peaceful demonstration they repeated their demands to return earlier working conditions that have recently been changed.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">In the course of peaceful demonstration they repeated their requirements to return the previous working conditions, which were recently changed.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">During the peaceful demonstration, they repeated their demands to return to the old labour conditions, which were recently changed.</translation>
+    </seg>
+    <seg>
+      <source id="649">Выучить текст для "Заборов" было трудно.</source>
+      <reference>Learning his lines for Fences was challenging.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Learning text for "fences" was difficult.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">To learn text for “the fences” was difficult.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Learn the text for "Заборов" was difficult.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt">Learn the text for "Fences" was difficult.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Learn the lyrics for "Fences" it was difficult.</translation>
+    </seg>
+    <seg>
+      <source id="1563">"Почему женщинам безопасно публично говорить об отношениях, но не о безопасности в общественной сфере?", спрашивает она.</source>
+      <reference>"How is it safe for women to speak publicly about relationships but not about safety in the public sphere?" she asked.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.uedin-jhu-phrase.4065.ru-en.txt">"why do women safely to speak publicly about the relationship, but not about security in the public sphere?," she asks.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">"Why do women safely publicly talk about relationships, but about security in the public sector?" She asks.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">"Why women safely to speak publicly about the relationship, but not about the safety of the public sphere?", she asks.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">“Why women it is safe to publicly tell about the relations, but not about the safety in the public sphere? ”, she asks.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">"Why it is safe to women to speak publicly about the relations, but not about safety in the public sphere?", she asks.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="1021">"Я не боюсь возвращаться в тот спортивный зал, но я не думаю о себе.</source>
+      <reference>'I'm not scared to go back in the gym but I don't think about myself.</reference>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">"I am not afraid to return to the gym, but I didn't think about herself.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">"I am not afraid to return in the gym, but I don't think about yourself.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">"I'm not afraid to go back in the gym, but I don't think of myself.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">"I'm not afraid to go back to the gym, but I do not think of myself.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">"I am not afraid of returning to the gym, but I don't think about yourself.</translation>
+    </seg>
+    <seg>
+      <source id="611">Его карьера на телевидении началась в середине семидесятых: "Довольно долгое время я был единственным чернокожим пародистом/комиком на телевидении".</source>
+      <reference>His TV career was launched in the mid-Seventies: "For quite a long time I was the only black impressionist/comedian on telly."</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">His career on television began in the mid-seventies: "Quite long time I was the only black parodist / comedian on television".</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">His career in television began in the mid-seventies: "Quite a long time I was the only black parodist / comic on television."</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">His career in television began in the mid seventies: "for quite a while I was the only black parodist/comic on television."</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">His career in television began in the middle of the Seventies: "Quite a long time I was the only black / Comedian on television."</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">His career in television began in the mid Seventies: "for quite a while I was the only black / comic on television."</translation>
+    </seg>
+    <seg>
+      <source id="1030">Я хочу служить в полиции когда-нибудь и надеюсь, что меня зачислят в учебную академию в следующем году.</source>
+      <reference>I want to serve in the police one day and hope they enrol me to the training academy next year.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">I want to serve in the police and I hope one day that I included in the training academy the following year.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">I want to serve in the police ever and I hope that I will be admitted to the Training Academy the following year.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">I want to serve in the police ever and I hope that I was included in the training academy in the following year.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">I want to serve in the police, and I hope someday I included in training academy in the next year.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">I want to serve in the police ever and I hope to the training academy in the next year.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2481">Сколь успешным окажется движение Лукашенко к политической диверсификации, будет видно по тому, как часто в ближайшее время Минску доведется принимать встречи в формате ЕС+ТС.</source>
+      <reference>Just how successful Lukashenko’s move towards political diversification turns out to be, will be seen by how often, in the near future, Minsk has the occasion to host meetings in the EU-CU format.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">How successful will the movement Lukashenko to political diversification, will be evident by the fact that often in the near future Minsk will have to take meetings in EU+CU.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">How successful will be by Lukashenko to political diversification, will be seen by how often in the near future from Tuscany to meet in the format of the EU + CU.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">How successful will the movement of Lukashenko to political diversification, will be seen by how often composed in the near future can have the opportunity to take the format in meeting EU + ts.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">How successful will the movement for political diversification Lukashenko, will be seen by how often in the near future Minsk happen to take a meeting in the format of EU + TC.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">How successful is the movement of Lukashenko to political diversification will be seen by how often in the near future can have the opportunity to meet in Minsk EU format + ts.</translation>
+    </seg>
+    <seg>
+      <source id="883">Эсме Нуссбаум опустила голову.</source>
+      <reference>Esme Nussbaum lowered her head.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Denters Nussbaum lowered her head.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Esme cantered Нуссбаум lowered his head.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt,newstest2015.online-B.0.ru-en.txt,newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Esme Nussbaum lowered her head.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Esme cantered Nussbaum lowered her head.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Nussbaum lowered her head.</translation>
+    </seg>
+    <seg>
+      <source id="2610">Нынешняя администрация решила по-другому", - заявлял он.</source>
+      <reference>The current administration decided differently”, he stated.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The present administration solved in a different way", - he declared.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt,newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt,newstest2015.online-A.0.ru-en.txt,newstest2015.online-G.0.ru-en.txt">The current administration decided differently," he said.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt,newstest2015.uedin-jhu-phrase.4065.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">The current administration has decided differently, "- he said.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">Current administration solved differently”, it declared.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="474">Но с потолка регулярно течет: водопроводная система никуда не годится.</source>
+      <reference>But the ceilings often leak – the plumbing is in a sore state.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">But with a ceiling regularly flows: plumbing system isn't good.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">But regularly it flows from the ceiling: water-conducting system anywhere does not befit.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">But from the ceiling regularly flows: the water system is no good.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">But with ceiling regularly flowing: water supply system is no good.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">But the ceiling is regularly flows: Tap system doesn't work.</translation>
+    </seg>
+    <seg>
+      <source id="2516">Говорить о том, что по этому поводу приняты какие-то решения, пока рано", - рассказал Ликсутов.</source>
+      <reference>It is too early to say whether any decisions have been made in this regard”, Liksutov said.</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">To say that on this occasion made any decisions, it is too early, "- said Liksutov.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">To speak, that are in regard to this accepted some solutions, until early”, it describes Liksutov.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">To say that on this occasion made any decisions yet, "said Liksutov.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">To say that on this occasion, free decisions taken too soon," said Liksutov.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">To say that some decisions, until early are about it made", - Liksutov told.</translation>
+    </seg>
+    <seg>
+      <source id="1163">Ее отец Руслан с тех пор женился снова, и у них с его новой женой Светланой есть маленькая дочь, которую он назвал Кристиной в память о дочери, которую он потерял.</source>
+      <reference>Her father Ruslan has since remarried and with his new wife Svetlana he has a baby girl, who he named Kristina after the daughter he lost.</reference>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">Her father Ruslan has since married again, and they have a young daughter with his new wife Svetlana, which he called Christine in memory of her daughter, which he lost.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">Its father Ruslan from those times was married again, and they with his new wife by Svetlana have the small daughter, whom it named Kristinoy into the memory about the daughter, whom it lost.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Her father has since married again, and with his new wife, Svetlana has a young daughter, which he called Amphlett in memory of her daughter, which he lost.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Her father Ruslan has since remarried, and he and his new wife Svetlana has a little girl, named Christine, in memory of the daughter he lost.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">Her father, Ruslan has since married again, and with his new wife future Slavic wife have a young daughter, which he called "in memory of her daughter, which he lost.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="1245">Среди тех, кто обращался к нему, вспоминает его жена, был офицер МИ-6, которому приходилось жить с разрушительными последствиями пыток.</source>
+      <reference>Among those who sought him out, his wife remembers, was an MI6 officer who had to live with the crippling after-effects of torture.</reference>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">Among those who spoke to him, "recalled his wife, MI-6 officer who had to live with devastating effects of torture.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">Among those, who turned to it, its wife recalls, there was the officer MI-6, for whom it was necessary to live with the destructive consequences of tortures.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Among those who spoke to him, recalls his wife, was an officer in the M16, who had to live with devastating effects of torture.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">Among those who addressed it, remember it the wife, there was an officer of MI6 who had to live with destructive consequences of tortures.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Among those who spoke to him, recalled his wife, the MI5 officer, who had to live with the devastating effects of torture.</translation>
+    </seg>
+    <seg>
+      <source id="916">Но зачем прошлое, если не для того, чтобы учиться -</source>
+      <reference>But what is the past for if not to learn from it -</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">But why should past, if not in order to learn is</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">But why the past, if not to learn</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">But why the past, if not to study -</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">But why, if not to learn "</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">But why the past, if not in order to learn -</translation>
+    </seg>
+    <seg>
+      <source id="2297">У ресторанов началась чехарда с поставщиками: цены на продукты выросли, нужно срочно искать аналоги из других стран.</source>
+      <reference>A game of leapfrog has begun between restaurants and suppliers: prices for food products have risen, and they must urgently look for comparable products from other countries.</reference>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Restaurants have begun jockeying seems with suppliers: food prices have risen, we need to urgently seek counterparts from other countries.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">The restaurants started Leapfrog with suppliers: food prices have increased, we need to urgently seek counterparts from other countries.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">At restaurants the leapfrog with suppliers began: food prices grew, it is necessary to look for urgently analogs from other countries.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">The restaurants started to mess with suppliers: the prices of food rose, you need to urgently seek counterparts from other countries.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">The restaurants began Leapfrog with suppliers: food prices have risen, needs to urgently look for the counterparts of other countries.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="117">Конгрессмены Кит Эллисон и Джон Льюис предложили законопроект, по которому организация профсоюзов охраняется как гражданское право.</source>
+      <reference>Congressmen Keith Ellison and John Lewis have proposed legislation to protect union organizing as a civil right.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Congressmen Keith Ellison and John Lewis has proposed a bill by which the organization of trade unions is protected as a civil right.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">Congressmen Keith Ellison and John Lewis have offered the bill, on which organization is protected by unions as a civil right.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Keith Ellison and John Lewis have proposed a bill, under which the organization of trade unions is protected by civil law.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Congressmen Keith Ellison and John Lewis have offered legislation that the organization of trade unions is protected as a civil right.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">Congressmen Keith Ellison and John Lewis suggested the Bill, on which the Organization of trade unions is protected by civil law.</translation>
+    </seg>
+    <seg>
+      <source id="830">В целом мире не было ничего, кроме копны ее иссиня-черных волос.</source>
+      <reference>Nothing to see in the whole wide world but her haystack of crow-black hair.</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">In the whole world there was nothing but mop her jet-black hair.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">There was nothing in the whole world except her hair.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">In the whole world there was nothing but her hair.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">In the whole world was nothing but stacks of her blue-black hair.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">In the whole world there was nothing, except a shock of her bluish-black hair.</translation>
+    </seg>
+    <seg>
+      <source id="2664">Apollo стала основным акционером компании после $850-миллионной сделки в 2007 году.</source>
+      <reference>Apollo has been the company's majority shareholder following an $850 million deal in 2007.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Apollo became a major shareholder after a $850 million deal in 2007.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Apollo was the main shareholder of the company after the $deal in 2007.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Apollo has become the main shareholder of the company after a $850 million deal in 2007.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Apollo has become a major shareholder in the company after the $ 850 million deal in 2007.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">Apollo become a major shareholder in the company after the $850-миллионной deal in 2007.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2216">Вы можете сэкономить более 80% от стоимости новой книги.</source>
+      <reference>You can save more than 80 per cent of the cost of buying a book new.</reference>
+      <translation system="newstest2015.online-A.0.ru-en.txt">You can save over 80% of the new book.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.online-B.0.ru-en.txt,newstest2015.online-G.0.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">You can save more than 80% of the cost of a new book.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">You can save more than 80% of the value of a new book.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">You can save more than 80% of the price of a new book.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt,newstest2015.PROMT-Rule-based.3993.ru-en.txt">You can save more than 80% of the cost of the new book.</translation>
+    </seg>
+    <seg>
+      <source id="429">С израильской стороны погибло 66 солдат и шесть мирных жителей, в том числе один тайский работник.</source>
+      <reference>On the Israeli side, 66 soldiers and six civilians, including a Thai worker, were killed.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">On the Israeli side killed 66 soldiers and six civilians, including one Thai worker.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">On the Israeli side, 66 soldiers and six civilians were killed, including one Thai worker.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">On the Israeli side, 66 soldiers and six civilians, including one Thai worker.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">On the Israeli side, 66 soldiers and six civilians, including one Thai worker were killed.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">From the Israeli side 66 soldiers and six civilians, including one Thai worker died.</translation>
+    </seg>
+    <seg>
+      <source id="1528">Приток жителей с материка усиливает конкуренцию в сфере товаров и услуг.</source>
+      <reference>An influx of mainlanders is fueling competition for products and services.</reference>
+      <translation system="newstest2015.online-F.0.ru-en.txt">The inflow of inhabitants from the continent strengthens competition in the sphere of goods and services.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">The influx of people from the mainland is intensifying competition in the field of goods and services.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The influx of residents from the mainland is intensifying competition in the field of goods and services.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">The influx of residents from the mainland strengthens competition in the field of goods and services.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt">The influx of residents from mainland increases competition in the field of goods and services.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="1581">Хотя Стайнем ручается за более пересекающийся феминизм, который включает в себя и проблемы расовой принадлежности, и гендера, ее комментарии о расе в Америке до сих пор удивляют некоторых.</source>
+      <reference>Although Steinem has vouched for a more intersectional feminism that includes issues of race as well as gender, her comments on race in America still puzzle some.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Although Steinem responsible for more persectives feminism that includes and problems of race and gender, her comments about race in America still has some surprises.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Although Staynem is responsible for more feminism, which includes and issues of race and gender, her comments about race in America that still surprise some.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Although Стайнем she vouched for more пересекающийся feminism, which includes and issues of race and gender, her comments about race in America still are surprised by some.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">Though Steinem warrants for more crossed feminism which includes both problems of race, and a gender, her comments on race in America still surprise some.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">Although Steinem for more resemble feminism, which includes the issues of race, gender, and her comments about race in America still has some surprising.</translation>
+    </seg>
+    <seg>
+      <source id="2167">В то же время ночью армия ДНР, по данным "Армии Новороссии", "пресекла попытку нацгвардейцев в нарушение ранее достигнутых договоренностей вывести из района окружения тяжелую технику".</source>
+      <reference>At the same time that night, according to information from the Army of Novorossiya, the army of the DPR “thwarted an attempt by members of the National Guard, in violation of previously reached agreements, to remove heavy equipment from the encircled area”.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">At the same time at night DNR army, according to the "army of Novorossiya", "stopped attempt of national guardsmen in violation of earlier agreements to withdraw from the area of the environment heavy equipment".</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">At the same time the army DNI night, according to the "Army of New Russia," "thwarted attempt natsgvardeytsev in violation of earlier agreements to withdraw from the area of ​​environment heavy equipment."</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">At the same time at night army DNR, according to the data “the armies of Novorossii”, “suppressed the attempt of natsgvardeytsev into the disturbance of previously the agreed terms to derive from the region of environment heavy technology”.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">At the same time, the army DNR at night, according to the Army's "Novorossia" slapped down "attempt to natgvardeycev in violation of previously reached agreements to withdraw from the area surrounding the heavy machinery."</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">At the same time, the night the army, according to the "Novorossiya Army," " slapped natsgvardeytsy attempt in violation of earlier agreements to withdraw from the area surrounded by heavy machinery.</translation>
+    </seg>
+    <seg>
+      <source id="2704">На черноморском полуострове, присоединенном пять месяцев назад, находится основной российский военный флот, а также коммерческие морские учреждения и исторические морские курорты.</source>
+      <reference>The Black Sea peninsula annexed five months ago is home to Russia's main naval fleet as well as commercial maritime facilities and historic coastal resorts.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">On the Black Sea peninsula attached five months ago there is the main Russian military fleet, and also commercial sea facilities and historical sea resorts.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">On the Black Sea peninsula, five months ago, is the main Russian military fleet, as well as commercial marine institutions and historical sea resorts.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">On the Black Sea peninsula, prisoedinennom five months ago, is the main Russian military fleet, as well as commercial maritime institutions and historical sea resorts.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">In the Black Sea peninsula, connected of five months ago, is located basic Russian military fleet, and also commercial sea establishments and historical sea health resorts.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">On the Black Sea peninsula, attached five months ago, is the main Russian navy and commercial maritime institutions and historic seaside resorts.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="1854">В ходе мирной демонстрации они повторили свои требования вернуть прежние условия труда, которые недавно были изменены.</source>
+      <reference>In a peaceful demonstration, they have reiterated their calls for the old working conditions, which were recently changed, to be restored.</reference>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">In the course of peaceful demonstrations, they repeated their demands to return to the previous conditions, which were recently amended.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">During peaceful demonstration they repeated the requirements to return former working conditions which were changed recently.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">In the course of a peaceful demonstration they repeated their demands to return earlier working conditions that have recently been changed.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">In the course of peaceful demonstration they repeated their requirements to return the previous working conditions, which were recently changed.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">During the peaceful demonstration, they repeated their demands to return to the old labour conditions, which were recently changed.</translation>
+    </seg>
+    <seg>
+      <source id="649">Выучить текст для "Заборов" было трудно.</source>
+      <reference>Learning his lines for Fences was challenging.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Learning text for "fences" was difficult.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">To learn text for “the fences” was difficult.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Learn the text for "Заборов" was difficult.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt">Learn the text for "Fences" was difficult.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Learn the lyrics for "Fences" it was difficult.</translation>
+    </seg>
+    <seg>
+      <source id="1563">"Почему женщинам безопасно публично говорить об отношениях, но не о безопасности в общественной сфере?", спрашивает она.</source>
+      <reference>"How is it safe for women to speak publicly about relationships but not about safety in the public sphere?" she asked.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.uedin-jhu-phrase.4065.ru-en.txt">"why do women safely to speak publicly about the relationship, but not about security in the public sphere?," she asks.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">"Why do women safely publicly talk about relationships, but about security in the public sector?" She asks.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">"Why women safely to speak publicly about the relationship, but not about the safety of the public sphere?", she asks.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">“Why women it is safe to publicly tell about the relations, but not about the safety in the public sphere? ”, she asks.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">"Why it is safe to women to speak publicly about the relations, but not about safety in the public sphere?", she asks.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2565">Впрочем, чаще всего это не снег, а кровавые ошметки, но по большому счету какая разница?</source>
+      <reference>However, more often than not, it’s not snow at all, but bloody scraps, however, in the grand scheme of things, what’s the difference?</reference>
+      <translation system="newstest2015.online-A.0.ru-en.txt">However, more often it doesn't snow and bloody clumps, but by and large what's the difference?</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">However, most often it is not snowing, and the bloody bits and pieces, but by and large what's the difference?</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">However, more often than not, it's not the snow, and bloody, but by and large, what's the difference?</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">However, more often than not it's not the snow, and bloody ошметки but by and large, what's the difference?</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">However, often it is not the snow, and bloody, but fundamentally what's the difference?</translation>
+    </seg>
+    <seg>
+      <source id="314">По словам Дун Цэ, который возглавит новую компанию, благодаря объединению Wanda сможет увеличить число пользователей своих услуг e-commerce с нынешних 40 млн человек до 100 млн уже к следующему году.</source>
+      <reference>According to Dun Tse, who heads the new company, as a result of the merger, Wanda will be able to increase the number of users for its e-commerce services from the current 40 mln. individuals to already 100 mln. by next year.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">According to TSE Tung, who will head the new company, by combining Wanda will be able to increase the number of users of its services e-commerce from the current 40 million to 100 million by next year.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">According to Dong Tse, who will head the new company, thanks to the merger will increase the number of users of its services to e-commerce with the current 40 million people up to 100 million by next year.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">According to Dong Ce, who will lead the new company, thanks to the unification of the Wanda will be able to increase the number of users of its e-commerce services from the current 40 million to 100 million by next year.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">According to Donga Tse, which will head new company, because of the association of Wanda will be able to increase the number of users of its services e-commerce from the current 40 million people to 100 million already to the following year.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">According to Dong Tse, who will lead the new company, thanks to the Wanda e-commerce can increase the number of users of its services from the current 40 million to 100 million by next year.</translation>
+    </seg>
+    <seg>
+      <source id="2351">Сейчас и так очень нежелательно поднимать цены, - говорит Рак.</source>
+      <reference>Right now is not a very desirable time to raise prices, Rak says.</reference>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.online-G.0.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">Now and so very undesirable to raise prices, "says cancer.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Now and so very undesirable to raise prices, "says the cancer.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt,newstest2015.online-B.0.ru-en.txt">Now, and so very desirable to raise prices, "says Cancer.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Now, and so very undesirable to raise prices, "says Rak.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">It is now very undesirable to raise prices," said Raka.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="993">"Это произошло со мной, и нельзя изменить этот факт.</source>
+      <reference>'It happened to me and you can't change this fact.</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">"It happened to me, and you can not change this fact.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">"it happened to me, and you can't change this fact.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">"This happened to me, and you cannot change this fact.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">"It happened to me, and it is impossible to change this fact.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">“This occurred with me, and it is not possible to change this fact.</translation>
+    </seg>
+    <seg>
+      <source id="2158">В "Армии Новороссии" утверждают, что сбили украинский Су-27, и обвиняют противника в нарушении договоренности о прекращении огня</source>
+      <reference>The Army of Novorossiya confirms that they have shot down a Ukrainian Su-27, and fault the enemy for violating the ceasefire agreement</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">The "Army of New Russia" claim that downed Ukrainian Su-27, and the enemy is accused of violating the cease-fire agreement</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">In the "Army" Novorossia argue that shot down a Ukrainian Su-27, and accuse the opponent in violation of the ceasefire agreement</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">In "The Army Novorossiysk" argue that downed a Ukrainian Su-27, and accuse the enemy in violation of the ceasefire agreement</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The "army of Novorossiya" argue that the downed Ukrainian Su-27, and accuse the enemy in violation of an agreement on ceasefire</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The Army of Novorissiya claims that brought down the Ukrainian SU-27, and accuse the opponent of violation of the ceasefire agreement</translation>
+    </seg>
+    <seg>
+      <source id="712">Было бы это не так сложно, многие люди будут рады увидеть, как BBC сократится в размере, - после пересмотра ее полномочий, финансов и статуса.</source>
+      <reference>If that weren't tough enough, plenty of people are keen to see the BBC cut down in size - its power, its finances and its status overhauled.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">It would be not so difficult, many people will be glad to see how BBC will be reduced in a size, - after revision of its powers, finance and the status.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">It was not so difficult, many people will be glad to see the BBC reduced in size, "after a review of its powers and status.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">It is not so difficult, many people will be happy to see how the BBC will be reduced in size, following a review of its mandate, finance and status.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Would it not so difficult, many people will be pleased to see how the BBC will be reduced in size - after the revision of its powers, finance and status.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">It would be it is not so difficult, many people will be glad to see how the BBC will shrink in size, after revising its powers, finances and status.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="537">Не могу отвечать за действия чиновников 70-х годов, только знаю, что в то время существовал план по сносу всех старых домов, несмотря на историческую значимость.</source>
+      <reference>I can’t answer for the actions of bureaucrats in the 1970s, I only know that back then there was a plan to demolish all the old houses, regardless of their historical importance.</reference>
+      <translation system="newstest2015.online-F.0.ru-en.txt">I cannot answer for the actions of the officials of the 70's, I only know that at that time there was a plan with respect to the removal of all old houses, in spite of the historical significance.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">I cannot be responsible for the actions of officials from the 1970s, only know that at the time there was a plan for the demolition of the old houses, despite the historical significance.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">I cannot be responsible for the actions of officials of the 1970s, just know that at the time there was a plan for demolishing all the old houses, despite the historical significance.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">I can't answer for the actions of the officials of the 1970s, only know that at the time there was a plan for the demolition of all the old homes, despite the historical significance.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">I can't answer for the actions of officials of the 70s, only know that at that time there was a plan for the demolition of old buildings, despite the historical significance.</translation>
+    </seg>
+    <seg>
+      <source id="2743">Из-за уязвимости, пользователи не получили никаких сообщений о попытке подобрать пароль к их аккаунту.</source>
+      <reference>As a result of a vulnerability, the users didn’t receive any messages about the attempt to match the password to their account.</reference>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Because of the vulnerability of users who have not received any reports of an attempt to find the password for their account.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">Because of the vulnerability, users do not receive any messages about trying to find the password to the account.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Because of the vulnerability, users have not received any reports of an attempt to find the password to their account.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Because of the vulnerabilities, users have not received any reports of an attempt to pick up a password to their account.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Because of the vulnerability, users have not received any reports of trying to pick up the password to their account.</translation>
+    </seg>
+    <seg>
+      <source id="2006">Турнир в Челябинске стартовал в понедельник, и первый же день принес российской команде серебряную медаль.</source>
+      <reference>The tournament in Chelyabinsk started on Monday, with the first day already bringing the Russian team a silver medal.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The tournament in Chelyabinsk started on Monday, and the first day brought to a Russian team a silver medal.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Tournament in Chelyabinsk was started on Monday, and the first day brought the Russian team to the silver medal.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The tournament in Chelyabinsk was launched on Monday, and the first day brought the Russian team to a silver medal.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">Tournament in Chelyabinsk was launched on Monday, the first day of the Russian team to the silver medal.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">Tournament in Chelyabinsk started on Monday, and the first day brought the Russian team to a silver medal.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="173">Это увеличит доходы бюджета, создаст новые рабочие места, какие-то отрасли начнут расширяться, какие-то быстрее осваиваться, будет внесен вклад в рост ВВП.</source>
+      <reference>This will increase fiscal revenues and create new jobs, certain industries will start to expand, some will find their feet faster than others, and it will contribute to GDP growth.</reference>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">It will increase budget revenues, create new jobs, some industry will begin to expand, free faster accustomed, will be included in GDP growth.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">This will increase the incomes of budget, it will create new jobs, some branches will begin to be enlarged, some more rapidly to be mastered, will be introduced the contribution to the increase the GDP [Gross Domestic Product].</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">It will increase revenue, create new jobs, any industry will grow any faster would be brought in, the contribution to GDP growth.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">It will increase budget revenues, will create new jobs, any industry will begin to expand any faster than becoming accustomed, will be introduced to contribute to GDP growth.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">This will increase budget revenues, will create new jobs, any industry will expand, any faster or passing through, we will be introducing a contribution to GDP growth.</translation>
+    </seg>
+    <seg>
+      <source id="2029">В утешительном финале он одержал чистую победу над бразильцем Давидом Моурой.</source>
+      <reference>He achieved a clean win in the repechage final against the Brazilian, David Moura.</reference>
+      <translation system="newstest2015.online-F.0.ru-en.txt">In the consoling finale it gained the clean victory above the Brazilian by David Mouroy.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">In the consolation final, he won a clear victory over the Brazilian David Moura.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">In the final, he won a clean утешительном victory over David бразильцем Моурой.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">In the finale uteshitelnom he won a clean victory over David Moura Braziliam.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">In the consolatory final he won a flawless victory over Brazilian David Moura.</translation>
+    </seg>
+    <seg>
+      <source id="2052">Семья Джоан Риверз надеется на лучшее</source>
+      <reference>Joan Rivers' Family Keeping 'Our Fingers Crossed'</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">The family of Joan rivers hoped for the best</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">Joan Риверз family is hoping for the best</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">Joan Rivers's family hopes for the best</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The family of Joan Riverz is hoping for the best</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">The family of Joan Riverz hopes for the best</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2162">По словам собеседника агентства, украинская сторона при артиллерийском обстреле луганского аэропорта применила запрещенные международными конвенциями кассетные боеприпасы.</source>
+      <reference>According to an agency informant, the Ukrainian side used cluster munitions, which are banned under international conventions, during the bombardment of Luhansk airport.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">According to the agency, the Ukrainian side with artillery goals Vorkapic airport used by international conventions on Cluster Munitions.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">According to the interlocutor of the agency, the Ukrainian side when attack Lugansk airport used cluster munitions forbidden by international conventions.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">According to the collocutor of agency, Ukrainian side with the bombardment of luganskogo airport used those forbidden by international conventions cluster bombs.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">According to the agency, the Ukrainian side with some артиллерийском луганского airport used cluster munitions forbidden by international conventions.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">According to the source, the Ukrainian side in the shelling of the Lugansk airport adopted international conventions prohibited cluster munitions.</translation>
+    </seg>
+    <seg>
+      <source id="1557">"В феминизме, я не думаю, что есть много людей, которые говорят о белом цвете коже и привилегиях на таком высоком уровне", сказала она.</source>
+      <reference>"In feminism, I don't think you get a lot of people talking about whiteness and privilege in such a high level way," she said.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">"in feminism, I don't think there are a lot of people who talk about the white color of the skin and the privileges at such a high level," she said.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">"As a feminist, I do not think there are many people who talk about the white skin and Privileges at this level," she said.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">"In feminism, I don't think that there are a lot of people who talk about white skin and privileges at such a high level," she said.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">"feminism, I don't think that there are a lot of people who talk about white skin and privileges at such a high level," she said.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">"In feminism, I don't think there are many people who are talking about the white color of the skin and privileges at such a high level," she said.</translation>
+    </seg>
+    <seg>
+      <source id="582">Мой отец залезал в ванну и просто лежал там, и ты слышал, как он медленно начинает петь про себя, потому что он хотел отмыться от литейной мастерской.</source>
+      <reference>My dad used to get in the bath and just lie there and you'd hear him slowly start to sing to himself because he would wash the foundry off him.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">My father zalezal in the bathtub and just lay there, and you have heard, as he slowly begins to sing about himself, because he wanted otmytsya from a foundry workshop.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">My father climbed up in the bathtub and just lay there, and you've heard of, as he slowly begins to sing to myself, because he wanted to from foundry workshop.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">My father залезал in a bathtub and just lay there, and you have heard, as he slowly begins to sing about himself, because he wanted the отмыться mould workshop.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">My father climbed up into the bath and simply he lay there, and you heard, as he slowly begins to sing about himself, because he wanted to be washed clean from the foundry workshop.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">My father climbed into the tub and just lay there, and you heard as he slowly begins to sing to himself, because he wanted to wash away the foundry.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="474">Но с потолка регулярно течет: водопроводная система никуда не годится.</source>
+      <reference>But the ceilings often leak – the plumbing is in a sore state.</reference>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">But with a ceiling regularly flows: plumbing system isn't good.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">But regularly it flows from the ceiling: water-conducting system anywhere does not befit.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">But from the ceiling regularly flows: the water system is no good.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">But with ceiling regularly flowing: water supply system is no good.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">But the ceiling is regularly flows: Tap system doesn't work.</translation>
+    </seg>
+    <seg>
+      <source id="2516">Говорить о том, что по этому поводу приняты какие-то решения, пока рано", - рассказал Ликсутов.</source>
+      <reference>It is too early to say whether any decisions have been made in this regard”, Liksutov said.</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">To say that on this occasion made any decisions, it is too early, "- said Liksutov.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">To speak, that are in regard to this accepted some solutions, until early”, it describes Liksutov.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">To say that on this occasion made any decisions yet, "said Liksutov.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">To say that on this occasion, free decisions taken too soon," said Liksutov.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">To say that some decisions, until early are about it made", - Liksutov told.</translation>
+    </seg>
+    <seg>
+      <source id="1163">Ее отец Руслан с тех пор женился снова, и у них с его новой женой Светланой есть маленькая дочь, которую он назвал Кристиной в память о дочери, которую он потерял.</source>
+      <reference>Her father Ruslan has since remarried and with his new wife Svetlana he has a baby girl, who he named Kristina after the daughter he lost.</reference>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">Her father Ruslan has since married again, and they have a young daughter with his new wife Svetlana, which he called Christine in memory of her daughter, which he lost.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">Its father Ruslan from those times was married again, and they with his new wife by Svetlana have the small daughter, whom it named Kristinoy into the memory about the daughter, whom it lost.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Her father has since married again, and with his new wife, Svetlana has a young daughter, which he called Amphlett in memory of her daughter, which he lost.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Her father Ruslan has since remarried, and he and his new wife Svetlana has a little girl, named Christine, in memory of the daughter he lost.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">Her father, Ruslan has since married again, and with his new wife future Slavic wife have a young daughter, which he called "in memory of her daughter, which he lost.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2493">Его последствия - и в первую очередь взаимные санкции Запада и России - дают Минску, который пока сам испытывает санкционное давление, долгожданное поле для маневра.</source>
+      <reference>Its consequences – first and foremost the reciprocal sanctions between the West and Russia – have provided Minsk, which is still feeling the pressure of sanctions itself, with long-awaited room to manoeuvre.</reference>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Its impact is first and foremost mutual sanctions of the West and Russia - to give the Minsk, who until he feels pressure, the long-awaited room for maneuver.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">Its consequences-especially mutual sanctions of the West and Russia to give Minsk, which itself is sankcionnoe pressure, a welcome room for manoeuvre.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Its consequences - first and foremost, mutual sanctions of the West and Russia - give Minsk, which, while itself experiencing sanctions pressure, the long-awaited room to maneuver.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Its consequences - and primarily mutual sanctions from the West and Russia - give Minsk, which is itself experiencing pressure, the long-awaited margin for maneuver.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Its consequences - and above all reciprocal sanctions from the West and Russia - give Minsk, who until he feels санкционное pressure, with room for maneuver.</translation>
+    </seg>
+    <seg>
+      <source id="2381">В подтверждение в шатре Галкина мне готовят порцию "Филадельфии" с кетой.</source>
+      <reference>To vouch for his wares, Galkin prepares a Philadelphia roll with chum salmon for me to sample at his stall.</reference>
+      <translation system="newstest2015.online-A.0.ru-en.txt">In the confirmation in the Tabernacle Galkina I cooked portion of Philadelphia with Ed missile.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The confirmation in the tent, I cook a portion of "Philadelphia" with salmon.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">In support of the tent Galkina I prepared a portion of the "Philadelphia" with Ketoi.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">In confirmation in Galkin's tent prepare for me a portion of "Philadelphia" with a Siberian salmon.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">In an acknowledgement in the tent I cook Galkin portion of "Philadelphia" with Ketoy.</translation>
+    </seg>
+    <seg>
+      <source id="661">Радость сидеть в помещении с режиссером, который помогает придать форму началу, середине и концу пути - я не думаю, что когда-нибудь захочу от этого отказаться.</source>
+      <reference>The joy of sitting in a room with a director who is helping to shape a beginning, middle and end of a journey - I don't think I'll ever want to give that up.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">The joy of sitting in a room with a producer who helps shape the beginning, middle and end of the road - I don't think I ever want to refuse.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The pleasure to sit indoors with the director who helps to give the form to the beginning to the middle and the end of a way - I do not think that I will sometime want to refuse it.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">The joy of sitting in a room with the director, which helps to shape the beginning, middle and end of the road - I do not think I ever want to give it up.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">The joy of sitting in a room with the director, which helps shape the early, middle and end of the road - I don't think that ever wanted from it.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">The joy of sitting in a room with the director, who is helping to shape the beginning, the middle and the end of the road - I don't think that will ever willingly relinquish it.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="117">Конгрессмены Кит Эллисон и Джон Льюис предложили законопроект, по которому организация профсоюзов охраняется как гражданское право.</source>
+      <reference>Congressmen Keith Ellison and John Lewis have proposed legislation to protect union organizing as a civil right.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Congressmen Keith Ellison and John Lewis has proposed a bill by which the organization of trade unions is protected as a civil right.</translation>
+      <translation system="newstest2015.USAAR-gacha.3986.ru-en.txt">Congressmen Keith Ellison and John Lewis have offered the bill, on which organization is protected by unions as a civil right.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Keith Ellison and John Lewis have proposed a bill, under which the organization of trade unions is protected by civil law.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Congressmen Keith Ellison and John Lewis have offered legislation that the organization of trade unions is protected as a civil right.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt">Congressmen Keith Ellison and John Lewis suggested the Bill, on which the Organization of trade unions is protected by civil law.</translation>
+    </seg>
+    <seg>
+      <source id="830">В целом мире не было ничего, кроме копны ее иссиня-черных волос.</source>
+      <reference>Nothing to see in the whole wide world but her haystack of crow-black hair.</reference>
+      <translation system="newstest2015.online-B.0.ru-en.txt">In the whole world there was nothing but mop her jet-black hair.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">There was nothing in the whole world except her hair.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">In the whole world there was nothing but her hair.</translation>
+      <translation system="newstest2015.online-G.0.ru-en.txt">In the whole world was nothing but stacks of her blue-black hair.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">In the whole world there was nothing, except a shock of her bluish-black hair.</translation>
+    </seg>
+    <seg>
+      <source id="2664">Apollo стала основным акционером компании после $850-миллионной сделки в 2007 году.</source>
+      <reference>Apollo has been the company's majority shareholder following an $850 million deal in 2007.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">Apollo became a major shareholder after a $850 million deal in 2007.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Apollo was the main shareholder of the company after the $deal in 2007.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Apollo has become the main shareholder of the company after a $850 million deal in 2007.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">Apollo has become a major shareholder in the company after the $ 850 million deal in 2007.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">Apollo become a major shareholder in the company after the $850-миллионной deal in 2007.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="rus" target-language="eng">
+    <seg>
+      <source id="2481">Сколь успешным окажется движение Лукашенко к политической диверсификации, будет видно по тому, как часто в ближайшее время Минску доведется принимать встречи в формате ЕС+ТС.</source>
+      <reference>Just how successful Lukashenko’s move towards political diversification turns out to be, will be seen by how often, in the near future, Minsk has the occasion to host meetings in the EU-CU format.</reference>
+      <translation system="newstest2015.online-G.0.ru-en.txt">How successful will the movement Lukashenko to political diversification, will be evident by the fact that often in the near future Minsk will have to take meetings in EU+CU.</translation>
+      <translation system="newstest2015.uedin-syntax.4005.ru-en.txt">How successful will be by Lukashenko to political diversification, will be seen by how often in the near future from Tuscany to meet in the format of the EU + CU.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">How successful will the movement of Lukashenko to political diversification, will be seen by how often composed in the near future can have the opportunity to take the format in meeting EU + ts.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt">How successful will the movement for political diversification Lukashenko, will be seen by how often in the near future Minsk happen to take a meeting in the format of EU + TC.</translation>
+      <translation system="newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt">How successful is the movement of Lukashenko to political diversification will be seen by how often in the near future can have the opportunity to meet in Minsk EU format + ts.</translation>
+    </seg>
+    <seg>
+      <source id="883">Эсме Нуссбаум опустила голову.</source>
+      <reference>Esme Nussbaum lowered her head.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt">Denters Nussbaum lowered her head.</translation>
+      <translation system="newstest2015.USAAR-gacha.4052.ru-en.txt">Esme cantered Нуссбаум lowered his head.</translation>
+      <translation system="newstest2015.online-A.0.ru-en.txt,newstest2015.online-B.0.ru-en.txt,newstest2015.uedin-jhu-phrase.4065.ru-en.txt">Esme Nussbaum lowered her head.</translation>
+      <translation system="newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt">Esme cantered Nussbaum lowered her head.</translation>
+      <translation system="newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt">Nussbaum lowered her head.</translation>
+    </seg>
+    <seg>
+      <source id="2610">Нынешняя администрация решила по-другому", - заявлял он.</source>
+      <reference>The current administration decided differently”, he stated.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3993.ru-en.txt">The present administration solved in a different way", - he declared.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3998.ru-en.txt,newstest2015.MITLL-AFRL-hiero.4090.ru-en.txt,newstest2015.MITLL-AFRL-pbfac.4077.ru-en.txt,newstest2015.MITLL-AFRL-phrase-based.4089.ru-en.txt,newstest2015.online-A.0.ru-en.txt,newstest2015.online-G.0.ru-en.txt">The current administration decided differently," he said.</translation>
+      <translation system="newstest2015.online-B.0.ru-en.txt,newstest2015.uedin-jhu-phrase.4065.ru-en.txt,newstest2015.uedin-syntax.4005.ru-en.txt,newstest2015.USAAR-gacha.3986.ru-en.txt,newstest2015.USAAR-gacha.4052.ru-en.txt">The current administration has decided differently, "- he said.</translation>
+      <translation system="newstest2015.online-F.0.ru-en.txt">Current administration solved differently”, it declared.</translation>
+    </seg>
+  </hit>
+</hits>

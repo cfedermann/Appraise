@@ -1,0 +1,727 @@
+<hits>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="581">Die Analysten schätzen übereinstimmend das jährliche Vorsteuerergebnis auf 450 Mio. £.</source>
+      <reference>Analyst consensus is for full-year pre-tax profit of £450m.</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">The analysts estimate concurring the annual pre-tax result to be 450 millions£.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">The analysts estimate Euros annual Board to 450 million.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">The analysts estimate consistent annual pre-tax earnings to £ 450 million.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">The analysts estimate in the annual Vorsteuerergebnis to 450 million.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Analysts estimate consistently the annual pre-tax profit to 450 million pounds.</translation>
+    </seg>
+    <seg>
+      <source id="1286">Hinter der prodemokratischen Kampagne in Hongkong steht die Bewegung Occupy Central With Love and Peace, deren Organisatoren damit gedroht haben, den Finanzbezirk abzuschotten, wenn Peking kein echtes allgemeines Wahlrecht zulässt.</source>
+      <reference>Behind much of the pro-democracy campaign in Hong Kong is the Occupy Central With Love and Peace movement, whose organizers have threatened to shut down the financial district if Beijing does not grant authentic universal suffrage.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Behind the pro-democracy campaign in Hong Kong, the movement, Occupy Central With Love and Peace, whose organizers have threatened to seal off the financial district unless Beijing allows no genuine universal suffrage.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Behind the per-democratic campaign in Hong Kong the movement Occupy cent ral With Love stands and for Peace, whose organizers threatened to bulkhead the financial district if Peking does not permit genuine general right to vote.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">Behind the per democratic campaign in Hong Kong, the movement Occupy Central With Love and Peace whose organizers threatened therewith stands to seal off the finance district if Beijing allows no real general right to vote.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">Behind the pro-democracy campaign in Hong Kong, the movement stands occupy Central with love and peace, whose Organisatoren have threatened to seal off the financial district, if Beijing allows no real universal suffrage.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">The movement is behind the pro-democracy campaign in Hong Kong Occupy Central With Love and Peace, whose organizers have threatened to insulate the financial district if Beijing does not allow a genuine universal suffrage.</translation>
+    </seg>
+    <seg>
+      <source id="1925">Die rund 1000 Demonstranten seien von Soldaten aus dem PTV-Gebäude gedrängt worden, sagte Informationsminister Pervaiz Rashid.</source>
+      <reference>Around 1000 protesters have been forced out of the PTV buildings by soldiers, according to the Minister of Information, Pervaiz Rashid.</reference>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">The roughly 1,000 protesters had been pushed by soldiers from the PTV building, Information Minister Pervaiz Rashid said.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Those approximately 1000 demonstrators were pushed by soldiers from the PTV building, said Minister of Information Pervaiz Rashid.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">The 1,000 protesters were pushed by soldiers from the PTV building, information Minister Pervaiz Rashid said.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">The around 1000 demonstrators were pressured by soldiers from the PTV-Gebäude, said Information Pervaiz Rashid.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">The approximately 1000 demonstrators had been pressed by soldiers out of the PTV building, said information minister Pervaiz Rashid.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="1766">Und das bei schlechtem Wetter.</source>
+      <reference>And that was with bad weather.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt,newstest2015.online-E.0.de-en.txt">And that in bad weather.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">And the in bad weather.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">And that with the case of bad weather.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">And the bad weather.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.KIT.4017.de-en.txt,newstest2015.online-B.0.de-en.txt,newstest2015.online-F.0.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">And in bad weather.</translation>
+    </seg>
+    <seg>
+      <source id="40">Wie Pastor Martin Luther King Jr. vor fünfzig Jahren sagte:</source>
+      <reference>As the Reverend Martin Luther King Jr. said fifty years ago:</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">How pastor Martin Luther King Jr. fifty years ago said:</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">As pastor, Martin Luther King Jr., 50 years ago said:</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">As pastor, Martin Luther King Jr. said 50 years ago:</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">As Pastor Martin Luther King Jr., fifty years ago:</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">As minister said Martin Luther King Jr. before fifty years:</translation>
+    </seg>
+    <seg>
+      <source id="1832">Da die Kosten für Uni-Lehrbücher für viele Studenten mehr als 1.000 $ pro Jahr betragen, überlegte sich der Fast-Zweitsemesterstudent Matt Schroeder eine clevere Sparidee.</source>
+      <reference>With the cost of college textbooks surpassing $1,000 a year for many students, soon-to-be sophomore Matt Schroeder came up with a smart way to trim costs.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">As the cost of Uni-Lehrbücher for many students more than $1,000 per year, contemplated the Fast-Zweitsemesterstudent Matt Schroeder, a clever Sparidee.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">Since the costs are for uni-textbooks for many students more than 1,000 $ per annum, the Fast-Zweitsemesterstudent considered check mate Schroeder a clever saving-idea.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">As the cost of college textbooks for many students be more than 1,000 dollars per year, the fast second semester student Matt Schroeder considered a clever saving idea.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Since the cost of uni-textbooks for many students more than $1,000 per year will be considered a fast second semester student Matt Schroeder, a clever idea of austerity.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">Since the costs for university textbooks for many students are more than 1, 000 dollars per year, considered the fast-Zweitsemesterstudent little Schroeder a smart Sparidee.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="1769">"Sorry, aber für zwölf Euro hat man einfach mehr erwartet", äußert sich Melanie Meier auf der Veranstaltungsseite.</source>
+      <reference>"Sorry, but for twelve euros, I really expected more", Melanie Meier commented on the event's page.</reference>
+      <translation system="newstest2015.online-B.0.de-en.txt">"Sorry, but for twelve euros you expected more," said Melanie Meier expresses at the event page.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">"Sorry, but for 12 euros you expected just more" reflected Melanie Meier on the event page.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">'Sorry, but for twelve euros simply "expected' more 'Melanie Mary is expressed in the event.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">"Sorry, but for twelve Euro you just want to be expected more," Melanie Meier will say on the events page.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">“Sorry, but for twelve euros one expected, expresses themselves simply more” Melanie Meier on the event side.</translation>
+    </seg>
+    <seg>
+      <source id="764">Eine Angabe über 50 gibt eine Expansion an.</source>
+      <reference>A figure above 50 indicates expansion.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">An indication of 50 indicates an expansion.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">A specification over 50 indicates an expansion.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">An indication over 50 indicates an expansion.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">A figure over 50 indicates an expansion.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">A claim over 50 there is an expansion.</translation>
+    </seg>
+    <seg>
+      <source id="1154">Mesotheliom ist besonders heimtückisch, weil es unser Lebenserhaltungsmechanismus - das Atmen selbst - ist, dass den tödlichen Krebs verursacht.</source>
+      <reference>Mesothelioma is particularly pernicious, because it is the mechanics of how we stay alive - the very act of breathing - that causes the cancer that kills.</reference>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">Mesothelioma is particularly insidious because it is our life support mechanism - the breathing itself - that caused the deadly cancer.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Mesothelioma is particularly insidious, because it our life support mechanism - which breathing - it is that causes the deadly cancer.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">Teambuilding is particularly insidious, because it our lives conservation mechanism - the breathe itself - is that caused the fatal cancer.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">Mesothelioma is a particularly insidious because it is our life-support mechanism - breathing itself - that is causing the deadly cancer.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Mesothelioma is particularly insidious because it is our life-support mechanism - the breathing itself - is that caused the deadly cancer.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="471">Dieser bewegte den parteilosen Richter nach dessen Pensionierung dazu, 1996 zumindest als letzter auf der CSU-Liste für den Gemeinderat zu kandidieren.</source>
+      <reference>Following his retirement, Richter, who had no political allegiances, was encouraged by the Mayor to run for election onto the local council as a candidate for the CSU in 1996.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">This was the side judge after his retirement, at least, the last in 1996 at the CSU list for the local council to stand.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">This was the partyless judge after his retirement in 1996 to stand at least as last on the CSU list for the council.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">This moved the non-party judges after retirement to 1996 to stand at least the last on the CSU list for the local council.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">This led to the non-party judge after his retirement, to stand as the last of the CSU list for the local council, at least in 1996.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">This moved the French judges after his retirement to last at least 1996 candidates on the CSU list for the municipal council.</translation>
+    </seg>
+    <seg>
+      <source id="1526">In der friedlichen Demonstration wiederholten sie ihre Forderungen nach Wiederherstellung ihrer alten Arbeitsbedingungen, die kürzlich geändert wurden.</source>
+      <reference>In a peaceful demonstration, they have reiterated their calls for the old working conditions, which were recently changed, to be restored.</reference>
+      <translation system="newstest2015.online-C.4166.de-en.txt">In the peaceful demonstration they repeated their demands for restoration of their old working conditions which recently were changed.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt">In the peaceful demonstration, they repeated their demands to restore their old working conditions that have been recently changed.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">In the peaceful demonstration of repeated it its demand for restoration of its old work conditions that were changed recently.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">In the peaceful demonstration, they repeated their calls for the restoration of their old conditions that have recently been changed.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">In the peaceful demonstration, they repeated their demands for restoration of their old working conditions, which have recently been changed.</translation>
+    </seg>
+    <seg>
+      <source id="589">Es ist nicht sicher, wie viele der Bilder echt sind, obwohl Winstead, Star aus "Scott Pilgrim gegen den Rest der Welt" auf Twitter ebenfalls den Hack verurteilte.</source>
+      <reference>It is not clear how many of the images are authentic, though "Scott Pilgrim vs. the World" star Winstead took to Twitter to denounce the hack as well.</reference>
+      <translation system="newstest2015.KIT.4017.de-en.txt">It is not certain how many of the pictures are genuine, though Winstead, star of "Scott Pilgrim against the rest of the world" on Twitter, also condemned the hack.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">It is not certain how many of the images are real, even though Winstead, Star of "Scott Pilgrim against the rest of the world" on Twitter also condemned the hack.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">It is not sure how many of the pictures are real, though Winstead, star of "Scott Pilgrim against the rest of the world" on Twitter also condemned the hack.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">It is not sure how many of the images are real, although Winstead, star of "Scott Pilgrim vs. the world" on Twitter also condemned the hack.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">It is not certain how many of the pictures really are, although Winstead, star convicted out of "Scott Pilgrim against the remainder of the world" on Twitter also the hack.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="2069">Seine Einnahmen lagen 2013 bei 2,57 Milliarden $, ein Anstieg von 13 Prozent im Vergleich zu 2012.</source>
+      <reference>It had revenues of $2.57 billion in 2013, up 13 percent from 2012.</reference>
+      <translation system="newstest2015.online-F.0.de-en.txt">Its incomes were 2013 with 2.57 billion $, a rise of 13 percent compared with 2012.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Its revenue was $ 2.57 billion in 2013, an increase of 13 percent compared to 2012 Design.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">His gains were in 2013 near 2.57 billion $, a rise of 13 percent in comparison with 2012.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">Its revenue amounted to 2013 2.57 billion $, an increase of 13 percent compared to 2012.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">Its revenues were 2013 in 2,57 billion dollars to 2012 compared with an increase of 13%.</translation>
+    </seg>
+    <seg>
+      <source id="953">Diese schreckliche Erfahrung wird uns immer verfolgen.</source>
+      <reference>This horrible experience will stay with us.</reference>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">This terrible experience will follow.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">This horrible experience will always haunt us.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt">This terrible experience will haunt us forever.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.Neural-MT.4097.de-en.txt,newstest2015.online-C.4166.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt,newstest2015.UM-nDA.4137.de-en.txt">This terrible experience will always follow us.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">This terrible experience always will pursue us.</translation>
+    </seg>
+    <seg>
+      <source id="1021">Erst vor zwei Wochen war er in den französischen Alpen zum Skifahren gewesen.</source>
+      <reference>Just two weeks earlier he had been skiing in the French Alps.</reference>
+      <translation system="newstest2015.online-F.0.de-en.txt">Only two weeks ago it in the French alps to the skiing had been.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">Only two weeks ago it had been in the French Alps for the skiing.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Just two weeks earlier, he was skiing in the French Alps.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Just two weeks ago, he had been skiing in the French Alps.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">Just two weeks ago, he was in the French Alps for skiing.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="911">Ich werde Herzchirurg werden.</source>
+      <reference>I will learn to be a heart surgeon.</reference>
+      <translation system="newstest2015.online-F.0.de-en.txt">I will become a heart surgeon.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">I will be Herzchirurg.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt">I am going to be a heart surgeon.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">I shall be Herzchirurg.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">I'll be a heart surgeon.</translation>
+    </seg>
+    <seg>
+      <source id="653">"Es erschien ihm lustig," sagte er stattdessen.</source>
+      <reference>"It struck him as funny," he said instead.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">"It appeared funny," he said instead.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">"It was fun," he said to him instead.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">"It appeared merry to him", he said instead of this.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt">"It was funny," he said instead.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">"It appeared it funny," he said instead.</translation>
+    </seg>
+    <seg>
+      <source id="2005">Weitere Wege sind ausgeschildert, die Richtung Hochrhön hinaufsteigen und zu einer ausgedehnten Wanderung einladen.</source>
+      <reference>Further trails are signposted, which lead up towards Hochrhön and offer an extensive hike.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">Further directions are signposted, the direction of Hochrhön and an extended hike.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">Other routes are signposted, the direction high Rhön climb and to invite a long hike.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Other routes are signposted, direction Hochrhön ascend and to invite you to a long hike.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">Other ways are indicated, the direction high Rhön reach and an extended hike.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Further ways are signposted, the direction Hochrhön climb and to an expanded migration invite.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="592">Wehren wir doch mal gleich den Anfängen. *Wortspiel beabsichtigt*.</source>
+      <reference>Let me nip this in the bud right now. *pun intended*.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Let's do the same to the kopš pun intended. * * * * * *.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">Nevertheless let's fight once now the beginnings. *Wortspiel beabsichtigt*.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">We are just at the beginning. * * pun intended.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">We look at the beginning. Pun intended.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">But every time we take the beginning. * * word game.</translation>
+    </seg>
+    <seg>
+      <source id="2137">In einem waren sich jedoch alle einig: Es hat Spaß gemacht.</source>
+      <reference>However, everyone agreed on one thing: It was a lot of fun.</reference>
+      <translation system="newstest2015.KIT.4017.de-en.txt">In one, but all agreed: it was fun.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">In one, but all agree that it was fun.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">In one they all agreed agreed to themselves, however: It did fun.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">In one were itself however all united: It has joke made.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">In one, all were themselves however united: It was fun.</translation>
+    </seg>
+    <seg>
+      <source id="1276">Die Entscheidung des chinesischen Volkskongresses erlaubt es den kommunistischen Führern grundsätzlich, alle nicht pekingtreuen Kandidaten abzuweisen.</source>
+      <reference>The decision by China's National People's Congress essentially allows Communist leaders to weed out any candidates not loyal to Beijing.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">The decision of the Chinese People's Congress allows the communist leaders, do not, in principle, all pekingtreuen candidates rejected.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">The decision of the Chinese People's Congress basically allows the Communist leaders did not reject all candidates loyal to Beijing.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">The decision of the Chinese People's Congress allows basically Communist leaders reject all candidates loyal to Beijing.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">The decision of the Chinese people congress permits it the communist leaders basically not to reject everyone of Beijing faithful candidate.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">The decision of the Chinese congress of people makes it possible to the communist leaders in principle to reject all not Peking-faithful candidates.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="1029">Asbest ist schließlich ein Produkt der Vergangenheit.</source>
+      <reference>Asbestos, after all, is a product of the past.</reference>
+      <translation system="newstest2015.online-F.0.de-en.txt">Asbestos is finally a product of the past.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Asbestos is ultimately a product of the past.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.Neural-MT.4097.de-en.txt,newstest2015.UM-nDA.4137.de-en.txt">Asbestos is, after all, a product of the past.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">Asbestos is in the end a product of the past.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">Finally asbestos is a product of the past.</translation>
+    </seg>
+    <seg>
+      <source id="627">Es war nur Platz für ein einziges "wenn" im Leben.</source>
+      <reference>There was room for only one "if" in life.</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">It was only place for an only "if" in life.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.online-A.0.de-en.txt,newstest2015.online-B.0.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt,newstest2015.UM-nDA.4137.de-en.txt">There was only room for one "if" in life.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">It was only place for only one “if” in the life.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">It was the only place for a single "if" in life.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">It was only place for an only "when" in the life.</translation>
+    </seg>
+    <seg>
+      <source id="452">1951 machte er das erste und 1954 nach drei Jahren Lehramtsanwärter das zweite Staatsexamen.</source>
+      <reference>In 1951, he took his first state exam, and his second in 1954, after spending three further years as a teaching candidate.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">In 1951, he made the first, and after three years moment-followed Lehramtsanwärter the second exam.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">In 1951, he was the first in 1954 and, after three years of teaching candidates the second state exam.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">In 1951 it did teaching position candidate the first and in 1954 after three years the second state examination.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">It made 1951 the first and 1954 after three years scholar office applicant the second country examination.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">In 1951 he made the first and in 1954 after three years Lehramtsanwärter the second Staatsexamen.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="691">Ailinn Solomons gab ihm durch ihren Körper ein Zeichen zu gehen.</source>
+      <reference>Ailinn Solomons made a sign with her body for him to leave.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">Ailinn where gave him a sign through her body.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Ailinn acquisition gave him through her body, a sign to go.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">Ailinn Solomons admitted a sign to him through their body go.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">Ailinn solo Mons gave him to go through her body a sign.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Ailinn Solomons gave to go to it through its body an indication.</translation>
+    </seg>
+    <seg>
+      <source id="179">Premierminister Benjamin Netanjahu besuchte eine Schule in Sderot, einer Grenzstadt zu Gaza, die schwer vom palästinensischen Beschuss gezeichnet ist.</source>
+      <reference>Prime Minister Benjamin Netanyahu visited a school in Sderot, a Gaza border town that has been hard hit by Palestinian fire.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">Prime Minister Benjamin Netanjahu visited a school in Sderot, a border town to Gaza, which is heavily drawn from the Palestinian fire.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Prime Minister Benjamin Netanyahu visited a school in Sderot, a border town with Gaza, which is ravaged by Palestinian fire.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Prime minister Benjamin Netanjahu visited a school in Sderot, a border town to Gaza, which is heavily drawn by the Palestinian bombardment.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Prime Minister Benjamin Netanyahu visited a school in Sderot, a town in Gaza, the hard by Palestinian EoPSD is drawn.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">Prime Minister Benjamin Netanyahu, visited a school in Sderot, the Palestinian attack on Gaza, a border town.</translation>
+    </seg>
+    <seg>
+      <source id="1960">Mannschaft zeigt Charakter Schrammel lieferte auch die Flanke zum 2:0 durch Hofmann nach gut einer Stunde, das schließlich die Entscheidung brachte.</source>
+      <reference>The team shows character. Schrammel also crossed the ball over to Hofmann after the first hour, which led to the decisive 2:0 victory.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">Team shows character worked also supplied the flank to the 2: 0 by Hofmann after an hour, which finally brought the decision.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Crew points a character Schrammel supplied also the flank to the 2:0 by Hofmann after well one hour, which finally brought the decision.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">Team shows character Schrammel also supplied the flank of 2:0 by Hofmann after a hour, which finally made the decision.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">Team shows character Schrammel supplied also the flank to 2-0 by Hofmann after over an hour, that finally brought the decision.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Team shows character Schrammel also supplied the cross for the 2: 0 by Hofmann after an hour, that, in the end, the decision.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="2169">Für nächstes Jahr hoffe er, dass es gelingt, die Strecke zum Feldberg hinauf zur Sicherheit der Teilnehmer zu sperren.</source>
+      <reference>Next year, he hopes to have safety barriers on the course for the benefit of those taking part on the Feldberg.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">For next year, he hopes that it is able to block the route to the peak up to the safety of the participants.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">For next year, he hope that it will be possible to block the route to Feldberg up on the safety of the participants.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">For the next year he hope that it will be possible to block the route to Feldberg up to the security of the participants.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">For next year, it hopes that it succeeds to block the stretch to the field mountain up to the security of the participants.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">For the next year, hope that it will be possible to block the route to the Feldberg up to the safety of the participants.</translation>
+    </seg>
+    <seg>
+      <source id="1086">2009 berichtete Goddard, dass die Serviceschächte und Rohrleitungen hinter den Ausschussräumen des Parlaments mit Asbest verseucht waren, dessen tödliche Fasern durch etwas so harmloses wie "starke Luftbewegungen" aufgewirbelt werden konnten.</source>
+      <reference>In 2009 Goddard reported that service shafts and piping ducts behind Parliamentary committee rooms were contaminated with asbestos, whose lethal fibres could be disturbed by something as innocuous as "strong currents of air."</reference>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">2009 reported that the Goddard Serviceschächte and pipelines contaminated with asbestos behind the Ausschussräumen of Parliament, whose deadly fibres are caused by something as harmless, such as ``strong Luftbewegungen.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">In 2009, Goddard reported that the Serviceschächte and pipelines were contaminated with asbestos, whose lethal fibers could be caused by something as harmless as "strong meta-pattern."</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">In 2009, reported that the Serviceschächte and pipes behind the Ausschussräumen of Parliament were contaminated with asbestos, whose deadly fibres by something as harmless as "strong air movements" could be an outcry.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">2009 Goddard reported that the service shafts and pipes were contaminated after the committee rooms of Parliament with asbestos, whose fatal fibers could be stirred up by something as harmless as "strong air movements".</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Goddard in 2009 reported that the service shafts and pipes behind the committee rooms of the House were contaminated with asbestos, the lethal fibers could be created by something as harmless as "strong air movements."</translation>
+    </seg>
+    <seg>
+      <source id="2081">Pro-Hongkong-Aktivisten verurteilen China am Tag nach der Wahlentscheidung.</source>
+      <reference>Hong Kong pro-democracy activists heckle China official day after vote ruling</reference>
+      <translation system="newstest2015.online-B.0.de-en.txt">Pro-Hong Kong activists condemn China on the day after the election decision.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">Pro-Hong Kong-China activists condemn the day after the vote.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Hong Kong pro-democracy activists condemn China, the day after the vote.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">Pro-Hong Kong-activists condemn China on the day after the election.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Pro-Hong Kong activists condemn China the day after the election.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="904">Darum gehe ich immer in die Sporthalle, wenn der 1. September näher rückt.</source>
+      <reference>This is why I keep going to the gym as each 1 September approaches.</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">Therefore I go always into the sports hall if the 1st of September more closely moves.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">That is why I always go into the sports hall when 1 September is approaching.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">That is why I always go to the gym when the moves closer to 1 September.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">That is why I am always in the sports hall when the 1 September gets closer.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">That is why I always go to the gym when September 1st is approaching.</translation>
+    </seg>
+    <seg>
+      <source id="959">Ich werde nie vergessen, wie mein Herz in mir sprang, als ich ihn im Krankenhaus sah.</source>
+      <reference>I will never forget my heart jumping out of my chest at the moment I saw him in hospital.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">I shall never forget how my heart jumped on me when I saw him in the hospital.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">I would like my heart jumped in me when I saw him in hospital.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">I will never forget how, in me, my heart jumped when I saw him in the hospital.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">I never am forgotten how my heart burst in me, when I saw it in the hospital.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">I am never forgotten, how my heart jumped in me, when I saw it in the hospital.</translation>
+    </seg>
+    <seg>
+      <source id="1765">Die Premiere des Amula-Open-Airs war von den Besucherzahlen mehr als gelungen.</source>
+      <reference>The premier of the Amula-Open-Airs was more than a success in terms of the number of visitors.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">The premiere of Dr. open airs succeeded more than by the number of visitors.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">The premiere of Amula-Open-Air was more of the visitor numbers as successful.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">The premiere of Amula Open Air was visits more than succeeded.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">The premiere of the of the scandalization Amula-Open-Airs was more than successful.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">The premiere of the Amula-Open-Air was the visitor numbers more than succeeded.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="270">Deutsche Wirtschaft im Frühjahr um 0,2 Prozent geschrumpft</source>
+      <reference>German economy as shrunk by 0.2 percent in spring</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">German economy shrank by 0.2% in the spring.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">Germany's economy shrank by 0.2 percent in the spring</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">German economy shrank by 0.2 percent in the spring</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Shrunk German economy in spring by 0.2 percentage</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">In the spring of German economy has shrunk by 0.2%</translation>
+    </seg>
+    <seg>
+      <source id="1285">Die Entscheidung folgt einem Sommer, in dem einige der größten und publikumswirksamsten Proteste in Hongkong seit etlichen Jahren stattfanden.</source>
+      <reference>The ruling comes after a summer that has featured some of the largest and most high-profile protests in Hong Kong in years.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">The decision follows a summer in which some of the largest and most violent protests in Hong Kong have been taking place for a number of years.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">The decision follows a summer in which some of the greatest and most public-effective protests were occurring in Hong Kong for many years.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">The decision follows a summer in which some of the biggest protests in Hong Kong and publikumswirksamsten took place for many years.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">The decision follows a summer in which some of the largest and audience most effective protests have taken place in Hong Kong for some years.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">The decision follows a summer in which some of the largest protests in Hong Kong and publikumswirksamsten held for several years.</translation>
+    </seg>
+    <seg>
+      <source id="1278">Das ist nicht das, was Peking versprochen hatte.</source>
+      <reference>This is not what Beijing promised.</reference>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.KIT.4017.de-en.txt,newstest2015.Neural-MT.4097.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt,newstest2015.UM-nDA.4137.de-en.txt">That is not what Beijing had promised.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">That is not that what had promised Beijing.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">This is not what Beijing had promised.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt,newstest2015.online-B.0.de-en.txt">That's not what Beijing had promised.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">That is not what had promised Peking.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="544">Sie braucht einen beachtlichen Vorsitzenden - ich hoffe, sie hat ihn gefunden.</source>
+      <reference>It needs a formidable chairman - I hope it has found one.</reference>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.online-A.0.de-en.txt">She needs a considerable chairman - I hope she has found him.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">It needs a leader - I hope she has found him.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.Illinois.4085.de-en.txt">It needs a considerable chairman - I hope it has found it.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">It needs a considerable chairman - I hope she has found him.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">It needs a great leader - I hope she has found him.</translation>
+    </seg>
+    <seg>
+      <source id="217">Die Zahlen von RP Data belegen, dass die Hauspreise in Sydney im vergangenen Jahr um 16,1 Prozent anstiegen, in Melbourne dagegen um 11,7 Prozent.</source>
+      <reference>The RP Data figures show Sydney home prices rose by 16.1 per cent in the past year, while Melbourne's were up by 11.7 per cent.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">The figures from RP Data show that house prices in Sydney last year to 16.1 per cent in Melbourne, on the other hand, increased to 11.7 per cent.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">The figures from RP Data show that house prices in Sydney last year rose by 16.1 percent, in contrast, Melbourne 11.7 percent.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">The RP data figures, that house prices in Sydney rose to 16.1 percent last year, in Melbourne, however, by 11.7 percent.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">The numbers of RP dates cover that the house prices in Sydney in the past year increased around 16.1 percent, in Melbourne on the other hand around 11.7 percent.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">The numbers of RP Data prove that the house prices went up into Sydney in the last year around 16.1 percent in Melbourne on the other hand around 11.7 percent.</translation>
+    </seg>
+    <seg>
+      <source id="1437">Die größte Gefahr sei, dass internationale Firmen die Gegend grundsätzlich über lange Zeit meiden, sagt Philippe Hugon vom französischen Think Tank Iris.</source>
+      <reference>The biggest danger is that international companies are avoiding the region for what is essentially a long time, Phillippe Hugon, from the French Think Tank, Iris, said.</reference>
+      <translation system="newstest2015.online-B.0.de-en.txt">The greatest danger is that international companies generally avoid the area for a long time, says Philippe Hugon of the French think tank Iris.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">The greatest danger was that international companies generally avoid the area for a long time, says Philippe Hugon of the French think tank IRIS.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">The greatest danger is that international companies in the area over a long period of time, says Philippe Hugon, from the French think tank Iris.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">The biggest danger is that international companies shun the area for a long time, says Philippe Bibliografia of the French Think Tank Iris.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">The greatest danger is that international firms avoid the area in principle for a long time, Philippe to Hugon of the French think Tank iris.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="359">Es war eine sonderbare, unangenehme Position für mich, aber ich arbeitete an Riesenprojekten mit und lernte, wie man mit einem großen Publikum umgeht.</source>
+      <reference>Although it was a weird, reprehensible position to be in, I was working in huge venues and learning how to work a crowd.</reference>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">It was a strange, uncomfortable position for me, but I worked on Riesenprojekten and knew how to deal with a large audience.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">It was a strange, awkward position for me, but I worked on big projects and learned how to deal with a large audience.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">It was a strange, awkward position for me, but I was working on giant projects and learned how to deal with a large audience.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">It was a strange, unpleasant position for me, but I cooperated in giant projects and learned how one deals with a large public.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">It was a strange, uncomfortable position for me, but I worked on big projects and learned how to deal with a large audience.</translation>
+    </seg>
+    <seg>
+      <source id="616">"Das war ein bekanntes Lied eines Jazzpianisten namens Fats Waller," erklärte er ihr und legte automatisch zwei Finger an seine Lippen.</source>
+      <reference>"It was a popular song by a jazz pianist called Fats Waller," he told her, automatically putting two fingers to his lips.</reference>
+      <translation system="newstest2015.online-C.4166.de-en.txt">"That was a known song of a jazz pianist by the name of Fats Waller", it declared her and laid automatically two fingers onto his lips.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">"This was a well-known song of a jazz pianist named Fats Waller," he said, and automatically presented two fingers to his lips.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">"That was a well known song of a jazz pianist by the name of Fats ramparts," declared it its and put automatically two fingers at its lips.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">That was a well-known song of a jazz pianist called fats Waller, "he declared them and laid automatically two fingers on his lips.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">"This was a well-known song of a jazz pianist named Fats Waller," he told her and automatically put two fingers to his lips.</translation>
+    </seg>
+    <seg>
+      <source id="949">Es ist schwer, das zu akzeptieren, wenn einem etwas so Unfaires zustößt.</source>
+      <reference>It is hard to accept it when something so terribly unfair happens to you.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">It is hard to accept that, if a Unfaires something so bad.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">It is difficult to accept that if something is to.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">It's hard to accept that, if a bit so happens Unfair.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">It is hard to accept that if something happened to be business-friendly.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">It is heavily, to accept that if one somewhat so unfair strikes.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="116">Regionale Schwerpunkte gebe es nicht.</source>
+      <reference>We are not targeting any regions.</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">There are not regional focal points.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.online-A.0.de-en.txt,newstest2015.RWTH.4023.de-en.txt">There is no regional priorities.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">There is not regional priorities.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">Regional priorities there.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">There are not regional emphases.</translation>
+    </seg>
+    <seg>
+      <source id="502">Am zweiten Tag standen für die Radfahrer die Stationen Birstein, Wächtersbach und Bad Orb - inklusive eines Konzerts mit den Trenkwaldern - auf dem Programm.</source>
+      <reference>On the second day of the tour program, the riders would call at the stopping points of Birstein; Wächtersbach; and Bad Orb - including a concert with the Trenkwaldern.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">On the second day, the stations of Birstein, Wächtersbach and bad ORB - including a concert with the Trenkwaldern - for the cyclists were on the agenda.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">On the second day for cyclists the stations Birstein, Wächtersbach and Bad Orb - including a concert with the Trenkwaldern - were on the program.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">On the second day, the cyclists were on the wards Birstein, guards and Cairney - including a concert with the Trenkwaldern - on the program.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">On the second day the stations Birstein, guardian creek and Bad Orb - including a concert with the Trenkwaldern - stood for the cyclists on the program.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">On the second day, the stations Birstein, Guardian Bach and bath orb - including a concert with the Trenkwaldern - for the cyclists were on the program.</translation>
+    </seg>
+    <seg>
+      <source id="1549">Neben Vertretern der Ukraine, Russlands und der OSZE sollte daran auch ein Gesandter der Separatisten aus der Ostukraine teilnehmen.</source>
+      <reference>Representatives from Ukraine, Russia and the OSCE, as well as an ambassador for the separatists from East Ukraine should take part.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE, also an Envoy of separatists from the East Ukraine should participate.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE should also attend a messenger of the separatists in eastern Ukraine.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Beside representatives of Ukraine, Russia and the OSCE in it also an envoy of the separatists from east Ukraine should participate.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE should also participate in a messenger of the separatists in eastern Ukraine.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE should also a messenger of the separatists from eastern Ukraine to take part in it.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="592">Wehren wir doch mal gleich den Anfängen. *Wortspiel beabsichtigt*.</source>
+      <reference>Let me nip this in the bud right now. *pun intended*.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Let's do the same to the kopš pun intended. * * * * * *.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">Nevertheless let's fight once now the beginnings. *Wortspiel beabsichtigt*.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">We are just at the beginning. * * pun intended.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">We look at the beginning. Pun intended.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">But every time we take the beginning. * * word game.</translation>
+    </seg>
+    <seg>
+      <source id="2137">In einem waren sich jedoch alle einig: Es hat Spaß gemacht.</source>
+      <reference>However, everyone agreed on one thing: It was a lot of fun.</reference>
+      <translation system="newstest2015.KIT.4017.de-en.txt">In one, but all agreed: it was fun.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">In one, but all agree that it was fun.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">In one they all agreed agreed to themselves, however: It did fun.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">In one were itself however all united: It has joke made.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">In one, all were themselves however united: It was fun.</translation>
+    </seg>
+    <seg>
+      <source id="1276">Die Entscheidung des chinesischen Volkskongresses erlaubt es den kommunistischen Führern grundsätzlich, alle nicht pekingtreuen Kandidaten abzuweisen.</source>
+      <reference>The decision by China's National People's Congress essentially allows Communist leaders to weed out any candidates not loyal to Beijing.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">The decision of the Chinese People's Congress allows the communist leaders, do not, in principle, all pekingtreuen candidates rejected.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">The decision of the Chinese People's Congress basically allows the Communist leaders did not reject all candidates loyal to Beijing.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">The decision of the Chinese People's Congress allows basically Communist leaders reject all candidates loyal to Beijing.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">The decision of the Chinese people congress permits it the communist leaders basically not to reject everyone of Beijing faithful candidate.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">The decision of the Chinese congress of people makes it possible to the communist leaders in principle to reject all not Peking-faithful candidates.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="471">Dieser bewegte den parteilosen Richter nach dessen Pensionierung dazu, 1996 zumindest als letzter auf der CSU-Liste für den Gemeinderat zu kandidieren.</source>
+      <reference>Following his retirement, Richter, who had no political allegiances, was encouraged by the Mayor to run for election onto the local council as a candidate for the CSU in 1996.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">This was the side judge after his retirement, at least, the last in 1996 at the CSU list for the local council to stand.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">This was the partyless judge after his retirement in 1996 to stand at least as last on the CSU list for the council.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">This moved the non-party judges after retirement to 1996 to stand at least the last on the CSU list for the local council.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">This led to the non-party judge after his retirement, to stand as the last of the CSU list for the local council, at least in 1996.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">This moved the French judges after his retirement to last at least 1996 candidates on the CSU list for the municipal council.</translation>
+    </seg>
+    <seg>
+      <source id="1526">In der friedlichen Demonstration wiederholten sie ihre Forderungen nach Wiederherstellung ihrer alten Arbeitsbedingungen, die kürzlich geändert wurden.</source>
+      <reference>In a peaceful demonstration, they have reiterated their calls for the old working conditions, which were recently changed, to be restored.</reference>
+      <translation system="newstest2015.online-C.4166.de-en.txt">In the peaceful demonstration they repeated their demands for restoration of their old working conditions which recently were changed.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt">In the peaceful demonstration, they repeated their demands to restore their old working conditions that have been recently changed.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">In the peaceful demonstration of repeated it its demand for restoration of its old work conditions that were changed recently.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">In the peaceful demonstration, they repeated their calls for the restoration of their old conditions that have recently been changed.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">In the peaceful demonstration, they repeated their demands for restoration of their old working conditions, which have recently been changed.</translation>
+    </seg>
+    <seg>
+      <source id="589">Es ist nicht sicher, wie viele der Bilder echt sind, obwohl Winstead, Star aus "Scott Pilgrim gegen den Rest der Welt" auf Twitter ebenfalls den Hack verurteilte.</source>
+      <reference>It is not clear how many of the images are authentic, though "Scott Pilgrim vs. the World" star Winstead took to Twitter to denounce the hack as well.</reference>
+      <translation system="newstest2015.KIT.4017.de-en.txt">It is not certain how many of the pictures are genuine, though Winstead, star of "Scott Pilgrim against the rest of the world" on Twitter, also condemned the hack.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">It is not certain how many of the images are real, even though Winstead, Star of "Scott Pilgrim against the rest of the world" on Twitter also condemned the hack.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">It is not sure how many of the pictures are real, though Winstead, star of "Scott Pilgrim against the rest of the world" on Twitter also condemned the hack.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">It is not sure how many of the images are real, although Winstead, star of "Scott Pilgrim vs. the world" on Twitter also condemned the hack.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">It is not certain how many of the pictures really are, although Winstead, star convicted out of "Scott Pilgrim against the remainder of the world" on Twitter also the hack.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="116">Regionale Schwerpunkte gebe es nicht.</source>
+      <reference>We are not targeting any regions.</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">There are not regional focal points.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.online-A.0.de-en.txt,newstest2015.RWTH.4023.de-en.txt">There is no regional priorities.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">There is not regional priorities.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">Regional priorities there.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">There are not regional emphases.</translation>
+    </seg>
+    <seg>
+      <source id="502">Am zweiten Tag standen für die Radfahrer die Stationen Birstein, Wächtersbach und Bad Orb - inklusive eines Konzerts mit den Trenkwaldern - auf dem Programm.</source>
+      <reference>On the second day of the tour program, the riders would call at the stopping points of Birstein; Wächtersbach; and Bad Orb - including a concert with the Trenkwaldern.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">On the second day, the stations of Birstein, Wächtersbach and bad ORB - including a concert with the Trenkwaldern - for the cyclists were on the agenda.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">On the second day for cyclists the stations Birstein, Wächtersbach and Bad Orb - including a concert with the Trenkwaldern - were on the program.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">On the second day, the cyclists were on the wards Birstein, guards and Cairney - including a concert with the Trenkwaldern - on the program.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">On the second day the stations Birstein, guardian creek and Bad Orb - including a concert with the Trenkwaldern - stood for the cyclists on the program.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">On the second day, the stations Birstein, Guardian Bach and bath orb - including a concert with the Trenkwaldern - for the cyclists were on the program.</translation>
+    </seg>
+    <seg>
+      <source id="1549">Neben Vertretern der Ukraine, Russlands und der OSZE sollte daran auch ein Gesandter der Separatisten aus der Ostukraine teilnehmen.</source>
+      <reference>Representatives from Ukraine, Russia and the OSCE, as well as an ambassador for the separatists from East Ukraine should take part.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE, also an Envoy of separatists from the East Ukraine should participate.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE should also attend a messenger of the separatists in eastern Ukraine.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Beside representatives of Ukraine, Russia and the OSCE in it also an envoy of the separatists from east Ukraine should participate.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE should also participate in a messenger of the separatists in eastern Ukraine.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">In addition to representatives of Ukraine, Russia and the OSCE should also a messenger of the separatists from eastern Ukraine to take part in it.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="2169">Für nächstes Jahr hoffe er, dass es gelingt, die Strecke zum Feldberg hinauf zur Sicherheit der Teilnehmer zu sperren.</source>
+      <reference>Next year, he hopes to have safety barriers on the course for the benefit of those taking part on the Feldberg.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">For next year, he hopes that it is able to block the route to the peak up to the safety of the participants.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">For next year, he hope that it will be possible to block the route to Feldberg up on the safety of the participants.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">For the next year he hope that it will be possible to block the route to Feldberg up to the security of the participants.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">For next year, it hopes that it succeeds to block the stretch to the field mountain up to the security of the participants.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">For the next year, hope that it will be possible to block the route to the Feldberg up to the safety of the participants.</translation>
+    </seg>
+    <seg>
+      <source id="1086">2009 berichtete Goddard, dass die Serviceschächte und Rohrleitungen hinter den Ausschussräumen des Parlaments mit Asbest verseucht waren, dessen tödliche Fasern durch etwas so harmloses wie "starke Luftbewegungen" aufgewirbelt werden konnten.</source>
+      <reference>In 2009 Goddard reported that service shafts and piping ducts behind Parliamentary committee rooms were contaminated with asbestos, whose lethal fibres could be disturbed by something as innocuous as "strong currents of air."</reference>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">2009 reported that the Goddard Serviceschächte and pipelines contaminated with asbestos behind the Ausschussräumen of Parliament, whose deadly fibres are caused by something as harmless, such as ``strong Luftbewegungen.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">In 2009, Goddard reported that the Serviceschächte and pipelines were contaminated with asbestos, whose lethal fibers could be caused by something as harmless as "strong meta-pattern."</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">In 2009, reported that the Serviceschächte and pipes behind the Ausschussräumen of Parliament were contaminated with asbestos, whose deadly fibres by something as harmless as "strong air movements" could be an outcry.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">2009 Goddard reported that the service shafts and pipes were contaminated after the committee rooms of Parliament with asbestos, whose fatal fibers could be stirred up by something as harmless as "strong air movements".</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Goddard in 2009 reported that the service shafts and pipes behind the committee rooms of the House were contaminated with asbestos, the lethal fibers could be created by something as harmless as "strong air movements."</translation>
+    </seg>
+    <seg>
+      <source id="2081">Pro-Hongkong-Aktivisten verurteilen China am Tag nach der Wahlentscheidung.</source>
+      <reference>Hong Kong pro-democracy activists heckle China official day after vote ruling</reference>
+      <translation system="newstest2015.online-B.0.de-en.txt">Pro-Hong Kong activists condemn China on the day after the election decision.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">Pro-Hong Kong-China activists condemn the day after the vote.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Hong Kong pro-democracy activists condemn China, the day after the vote.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">Pro-Hong Kong-activists condemn China on the day after the election.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Pro-Hong Kong activists condemn China the day after the election.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="270">Deutsche Wirtschaft im Frühjahr um 0,2 Prozent geschrumpft</source>
+      <reference>German economy as shrunk by 0.2 percent in spring</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">German economy shrank by 0.2% in the spring.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">Germany's economy shrank by 0.2 percent in the spring</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">German economy shrank by 0.2 percent in the spring</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Shrunk German economy in spring by 0.2 percentage</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">In the spring of German economy has shrunk by 0.2%</translation>
+    </seg>
+    <seg>
+      <source id="1285">Die Entscheidung folgt einem Sommer, in dem einige der größten und publikumswirksamsten Proteste in Hongkong seit etlichen Jahren stattfanden.</source>
+      <reference>The ruling comes after a summer that has featured some of the largest and most high-profile protests in Hong Kong in years.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">The decision follows a summer in which some of the largest and most violent protests in Hong Kong have been taking place for a number of years.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">The decision follows a summer in which some of the greatest and most public-effective protests were occurring in Hong Kong for many years.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">The decision follows a summer in which some of the biggest protests in Hong Kong and publikumswirksamsten took place for many years.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">The decision follows a summer in which some of the largest and audience most effective protests have taken place in Hong Kong for some years.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">The decision follows a summer in which some of the largest protests in Hong Kong and publikumswirksamsten held for several years.</translation>
+    </seg>
+    <seg>
+      <source id="1278">Das ist nicht das, was Peking versprochen hatte.</source>
+      <reference>This is not what Beijing promised.</reference>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.KIT.4017.de-en.txt,newstest2015.Neural-MT.4097.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt,newstest2015.UM-nDA.4137.de-en.txt">That is not what Beijing had promised.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">That is not that what had promised Beijing.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">This is not what Beijing had promised.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt,newstest2015.online-B.0.de-en.txt">That's not what Beijing had promised.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">That is not what had promised Peking.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="691">Ailinn Solomons gab ihm durch ihren Körper ein Zeichen zu gehen.</source>
+      <reference>Ailinn Solomons made a sign with her body for him to leave.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">Ailinn where gave him a sign through her body.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Ailinn acquisition gave him through her body, a sign to go.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">Ailinn Solomons admitted a sign to him through their body go.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">Ailinn solo Mons gave him to go through her body a sign.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Ailinn Solomons gave to go to it through its body an indication.</translation>
+    </seg>
+    <seg>
+      <source id="179">Premierminister Benjamin Netanjahu besuchte eine Schule in Sderot, einer Grenzstadt zu Gaza, die schwer vom palästinensischen Beschuss gezeichnet ist.</source>
+      <reference>Prime Minister Benjamin Netanyahu visited a school in Sderot, a Gaza border town that has been hard hit by Palestinian fire.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">Prime Minister Benjamin Netanjahu visited a school in Sderot, a border town to Gaza, which is heavily drawn from the Palestinian fire.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Prime Minister Benjamin Netanyahu visited a school in Sderot, a border town with Gaza, which is ravaged by Palestinian fire.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Prime minister Benjamin Netanjahu visited a school in Sderot, a border town to Gaza, which is heavily drawn by the Palestinian bombardment.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Prime Minister Benjamin Netanyahu visited a school in Sderot, a town in Gaza, the hard by Palestinian EoPSD is drawn.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">Prime Minister Benjamin Netanyahu, visited a school in Sderot, the Palestinian attack on Gaza, a border town.</translation>
+    </seg>
+    <seg>
+      <source id="1960">Mannschaft zeigt Charakter Schrammel lieferte auch die Flanke zum 2:0 durch Hofmann nach gut einer Stunde, das schließlich die Entscheidung brachte.</source>
+      <reference>The team shows character. Schrammel also crossed the ball over to Hofmann after the first hour, which led to the decisive 2:0 victory.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">Team shows character worked also supplied the flank to the 2: 0 by Hofmann after an hour, which finally brought the decision.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Crew points a character Schrammel supplied also the flank to the 2:0 by Hofmann after well one hour, which finally brought the decision.</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">Team shows character Schrammel also supplied the flank of 2:0 by Hofmann after a hour, which finally made the decision.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">Team shows character Schrammel supplied also the flank to 2-0 by Hofmann after over an hour, that finally brought the decision.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">Team shows character Schrammel also supplied the cross for the 2: 0 by Hofmann after an hour, that, in the end, the decision.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="911">Ich werde Herzchirurg werden.</source>
+      <reference>I will learn to be a heart surgeon.</reference>
+      <translation system="newstest2015.online-F.0.de-en.txt">I will become a heart surgeon.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">I will be Herzchirurg.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt">I am going to be a heart surgeon.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">I shall be Herzchirurg.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">I'll be a heart surgeon.</translation>
+    </seg>
+    <seg>
+      <source id="653">"Es erschien ihm lustig," sagte er stattdessen.</source>
+      <reference>"It struck him as funny," he said instead.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">"It appeared funny," he said instead.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">"It was fun," he said to him instead.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">"It appeared merry to him", he said instead of this.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt">"It was funny," he said instead.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">"It appeared it funny," he said instead.</translation>
+    </seg>
+    <seg>
+      <source id="2005">Weitere Wege sind ausgeschildert, die Richtung Hochrhön hinaufsteigen und zu einer ausgedehnten Wanderung einladen.</source>
+      <reference>Further trails are signposted, which lead up towards Hochrhön and offer an extensive hike.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">Further directions are signposted, the direction of Hochrhön and an extended hike.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">Other routes are signposted, the direction high Rhön climb and to invite a long hike.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Other routes are signposted, direction Hochrhön ascend and to invite you to a long hike.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">Other ways are indicated, the direction high Rhön reach and an extended hike.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Further ways are signposted, the direction Hochrhön climb and to an expanded migration invite.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="1766">Und das bei schlechtem Wetter.</source>
+      <reference>And that was with bad weather.</reference>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt,newstest2015.online-E.0.de-en.txt">And that in bad weather.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">And the in bad weather.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">And that with the case of bad weather.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">And the bad weather.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt,newstest2015.KIT.4017.de-en.txt,newstest2015.online-B.0.de-en.txt,newstest2015.online-F.0.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt,newstest2015.uedin-syntax.4027.de-en.txt">And in bad weather.</translation>
+    </seg>
+    <seg>
+      <source id="40">Wie Pastor Martin Luther King Jr. vor fünfzig Jahren sagte:</source>
+      <reference>As the Reverend Martin Luther King Jr. said fifty years ago:</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">How pastor Martin Luther King Jr. fifty years ago said:</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">As pastor, Martin Luther King Jr., 50 years ago said:</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">As pastor, Martin Luther King Jr. said 50 years ago:</translation>
+      <translation system="newstest2015.RWTH.4023.de-en.txt">As Pastor Martin Luther King Jr., fifty years ago:</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">As minister said Martin Luther King Jr. before fifty years:</translation>
+    </seg>
+    <seg>
+      <source id="1832">Da die Kosten für Uni-Lehrbücher für viele Studenten mehr als 1.000 $ pro Jahr betragen, überlegte sich der Fast-Zweitsemesterstudent Matt Schroeder eine clevere Sparidee.</source>
+      <reference>With the cost of college textbooks surpassing $1,000 a year for many students, soon-to-be sophomore Matt Schroeder came up with a smart way to trim costs.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">As the cost of Uni-Lehrbücher for many students more than $1,000 per year, contemplated the Fast-Zweitsemesterstudent Matt Schroeder, a clever Sparidee.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">Since the costs are for uni-textbooks for many students more than 1,000 $ per annum, the Fast-Zweitsemesterstudent considered check mate Schroeder a clever saving-idea.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">As the cost of college textbooks for many students be more than 1,000 dollars per year, the fast second semester student Matt Schroeder considered a clever saving idea.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4102.de-en.txt">Since the cost of uni-textbooks for many students more than $1,000 per year will be considered a fast second semester student Matt Schroeder, a clever idea of austerity.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">Since the costs for university textbooks for many students are more than 1, 000 dollars per year, considered the fast-Zweitsemesterstudent little Schroeder a smart Sparidee.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="1769">"Sorry, aber für zwölf Euro hat man einfach mehr erwartet", äußert sich Melanie Meier auf der Veranstaltungsseite.</source>
+      <reference>"Sorry, but for twelve euros, I really expected more", Melanie Meier commented on the event's page.</reference>
+      <translation system="newstest2015.online-B.0.de-en.txt">"Sorry, but for twelve euros you expected more," said Melanie Meier expresses at the event page.</translation>
+      <translation system="newstest2015.online-A.0.de-en.txt">"Sorry, but for 12 euros you expected just more" reflected Melanie Meier on the event page.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">'Sorry, but for twelve euros simply "expected' more 'Melanie Mary is expressed in the event.</translation>
+      <translation system="newstest2015.Neural-MT.4097.de-en.txt">"Sorry, but for twelve Euro you just want to be expected more," Melanie Meier will say on the events page.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">“Sorry, but for twelve euros one expected, expresses themselves simply more” Melanie Meier on the event side.</translation>
+    </seg>
+    <seg>
+      <source id="764">Eine Angabe über 50 gibt eine Expansion an.</source>
+      <reference>A figure above 50 indicates expansion.</reference>
+      <translation system="newstest2015.online-A.0.de-en.txt">An indication of 50 indicates an expansion.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">A specification over 50 indicates an expansion.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">An indication over 50 indicates an expansion.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">A figure over 50 indicates an expansion.</translation>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">A claim over 50 there is an expansion.</translation>
+    </seg>
+    <seg>
+      <source id="1154">Mesotheliom ist besonders heimtückisch, weil es unser Lebenserhaltungsmechanismus - das Atmen selbst - ist, dass den tödlichen Krebs verursacht.</source>
+      <reference>Mesothelioma is particularly pernicious, because it is the mechanics of how we stay alive - the very act of breathing - that causes the cancer that kills.</reference>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">Mesothelioma is particularly insidious because it is our life support mechanism - the breathing itself - that caused the deadly cancer.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">Mesothelioma is particularly insidious, because it our life support mechanism - which breathing - it is that causes the deadly cancer.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt">Teambuilding is particularly insidious, because it our lives conservation mechanism - the breathe itself - is that caused the fatal cancer.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">Mesothelioma is a particularly insidious because it is our life-support mechanism - breathing itself - that is causing the deadly cancer.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Mesothelioma is particularly insidious because it is our life-support mechanism - the breathing itself - is that caused the deadly cancer.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="deu" target-language="eng">
+    <seg>
+      <source id="1029">Asbest ist schließlich ein Produkt der Vergangenheit.</source>
+      <reference>Asbestos, after all, is a product of the past.</reference>
+      <translation system="newstest2015.online-F.0.de-en.txt">Asbestos is finally a product of the past.</translation>
+      <translation system="newstest2015.online-B.0.de-en.txt">Asbestos is ultimately a product of the past.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.Neural-MT.4097.de-en.txt,newstest2015.UM-nDA.4137.de-en.txt">Asbestos is, after all, a product of the past.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">Asbestos is in the end a product of the past.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">Finally asbestos is a product of the past.</translation>
+    </seg>
+    <seg>
+      <source id="627">Es war nur Platz für ein einziges "wenn" im Leben.</source>
+      <reference>There was room for only one "if" in life.</reference>
+      <translation system="newstest2015.online-E.0.de-en.txt">It was only place for an only "if" in life.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt,newstest2015.online-A.0.de-en.txt,newstest2015.online-B.0.de-en.txt,newstest2015.RWTH.4023.de-en.txt,newstest2015.uedin-jhu-phrase.4102.de-en.txt,newstest2015.UM-nDA.4137.de-en.txt">There was only room for one "if" in life.</translation>
+      <translation system="newstest2015.online-F.0.de-en.txt">It was only place for only one “if” in the life.</translation>
+      <translation system="newstest2015.uedin-syntax.4027.de-en.txt">It was the only place for a single "if" in life.</translation>
+      <translation system="newstest2015.online-C.4166.de-en.txt">It was only place for an only "when" in the life.</translation>
+    </seg>
+    <seg>
+      <source id="452">1951 machte er das erste und 1954 nach drei Jahren Lehramtsanwärter das zweite Staatsexamen.</source>
+      <reference>In 1951, he took his first state exam, and his second in 1954, after spending three further years as a teaching candidate.</reference>
+      <translation system="newstest2015.UM-nDA.4137.de-en.txt">In 1951, he made the first, and after three years moment-followed Lehramtsanwärter the second exam.</translation>
+      <translation system="newstest2015.KIT.4017.de-en.txt">In 1951, he was the first in 1954 and, after three years of teaching candidates the second state exam.</translation>
+      <translation system="newstest2015.dfki-experimental.4060.de-en.txt,newstest2015.online-C.4166.de-en.txt">In 1951 it did teaching position candidate the first and in 1954 after three years the second state examination.</translation>
+      <translation system="newstest2015.online-E.0.de-en.txt">It made 1951 the first and 1954 after three years scholar office applicant the second country examination.</translation>
+      <translation system="newstest2015.Illinois.4085.de-en.txt">In 1951 he made the first and in 1954 after three years Lehramtsanwärter the second Staatsexamen.</translation>
+    </seg>
+  </hit>
+</hits>

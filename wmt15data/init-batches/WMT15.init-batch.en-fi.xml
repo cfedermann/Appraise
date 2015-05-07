@@ -1,0 +1,727 @@
+<hits>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="358">Tens of Turkish Policemen Arrested over 'Plotting' against Gov't</source>
+      <reference>Kymmenet turkkilaispoliisit pidätetty epäiltyinä ”juonista” hallitusta vastaan</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Kymmeniä Turkin Policemen Arrested "Plotting Gov't vastaan"</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Kymmenet Turkin Poliisien pidätettiin yli "piirtäminen" vastaan ​​Gov't</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Kymmeniä Turkin poliisia pidätettiin yli kuvaaja vastaan Kiinteistölaitos</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kymmenet Turkin Policemen Arrested "ei" Plotting Gov vastaan</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kymmenet Turkin poliisia pidätettiin "juoni" julkisyhteisöt</translation>
+    </seg>
+    <seg>
+      <source id="317">Panic's quite good, it stiffens the sinews.</source>
+      <reference>Paniikki on hyvä asia, se tekee ihmisen kestävämmäksi.</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Paniikki on aika hyvä, se jäykistyy varoja.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Paniikki on varsin hyvä, se stiffens varoja.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Paniikki on aika hyvä, se jäykistyy jänteitä.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Paniikki on melko hyvä, stiffens varoja.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Panic on melko hyvä, se jäykistää jänteitä.</translation>
+    </seg>
+    <seg>
+      <source id="379">A tweet just went out from my account that was unauthorized.</source>
+      <reference>Tweetti lähetettiin luvattomasti tililtäni.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Tweet vain lähtivät huomioni, joka oli luvaton.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">A:in piipitys juuri sammui minun selvitykse joka oli luvatonni luota.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Titityy on vain tililtäni oli ilman lupaa.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Twiitti vain lähtivät tililtäni oli luvaton.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Tweet vain meni ulos tililtäni joka oli luvaton.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="1238">I understood immediately that this time I made it.</source>
+      <reference>Heti ymmärsin, että tällä kertaa onnistuin.</reference>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Minä ymmärsin välittömästi , että tämä kerta minä teki sen.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Ymmärsin heti, että tällä kertaa tein sen.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Ymmärsin heti, että tällä kertaa onnistuin.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Ymmärsin heti, että tällä kertaa tein</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Ymmärsin heti, että tällä kertaa.</translation>
+    </seg>
+    <seg>
+      <source id="954">Jeter scored 16 points against Dominican Republic.</source>
+      <reference>Dominikaanista tasavaltaa vastaan Jeter heitti 16 pistettä.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Jeter teki 16 pistettä Dominikaanista tasavaltaa vastaan.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Sitäpaitsi Jeter 16 kohtaa vastaan Dominikaanisessa tasavallassa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Jeter maali 16 kohtaa Dominikaanista tasavaltaa vastaan.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Jeteristä sai 16 pistettä Dominikaanista tasavaltaa vastaan.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Jeter keräsivät 16 pisteistä, Dominikaanisessa tasavallassa.</translation>
+    </seg>
+    <seg>
+      <source id="1310">It's not a matter to be negotiated between Ukraine and Russia, Peskov said, "because it's not a conflict between Russia and Ukraine, but an internal Ukrainian conflict."</source>
+      <reference>Tästä asiasta ei voida käydä keskusteluja Ukrainan ja Venäjän välillä, Peskov sanoo, ”koska kyseessä ei ole Venäjän ja Ukrainan välinen konflikti, vaan Ukrainan sisäinen konflikti”.</reference>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">It ei ole ongelma neuvotellakseen Ukrainan ja Venäjän välissä, Peskov sanoi , " koska se ei ole konflikti Venäjän ja Ukrainan , Ukrainianin konfliktin välissä.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Se ei ole sellainen asia, josta voidaan neuvotella Ukrainan ja Venäjän välillä, Peskov sanoi, ", koska se ei ole ristiriidassa Venäjän ja Ukrainan välillä, mutta Ukrainan sisäinen konflikti.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Kysymys ei ole neuvoteltava Ukrainan ja Venäjän välillä, Peskov sanoi, "sillä se ei ole Venäjän ja Ukrainan välinen konflikti, mutta Ukrainan sisäinen konflikti".</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Se ei ole neuvoteltava Ukrainan ja Venäjän välillä, Peskov sanoi ", koska se ei ole Venäjän ja Ukrainan välinen konflikti, mutta Ukrainan sisäinen konflikti.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Se ei ole asia neuvotellaan Ukrainan ja Venäjän välillä, Peskov sanoi, "koska se ei ole konflikti Venäjän ja Ukrainan, mutta sisäinen Ukrainan konflikti."</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="175">The war killed more than 2,100 Palestinians, three-quarters of whom were civilians and at least 494 children, according to Palestinian and U.N. estimates.</source>
+      <reference>Palestiinan ja YK:n arvioiden mukaan sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja vähintään 494 lapsia.</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja lapsia ainakin 494, Palestiinan ja YK arvioi.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja lapsia ainakin 494, Palestiinan ja YK:n arvioiden mukaan</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja lapsia ainakin 494, Palestiinan ja YK:n arvioiden mukaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Sodan tappoi yli 2100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja ainakin 494 lapsia, mukaan Palestiinan ja YK: n arvioiden mukaan.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Sodassa kuoli yli 2,100 palestiinalaista, joista kolme neljästä oli siviilejä ja ainakin 494 lapsia, Palestiinan ja U.N. arvioiden mukaan</translation>
+    </seg>
+    <seg>
+      <source id="922">On Monday, Hull told they also had signed Mohamed Diame, the captain of Senegal’s national team, from West Ham.</source>
+      <reference>Maanantaina Hull kertoi hankkineensa myös Senegalin maajoukkuekapteenin Mohamed Diamen West Hamista.</reference>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Maanantaina Hull kertoi he olivat allekirjoittaneet Mohamed dostoja kohteesta West Ham Senegalin maajoukkueen kapteeni.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Hull kertoi maanantaina, että he olivat allekirjoittaneet Mohamed Diame, Senegalin maajoukkueen kapteeni, West Ham.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Maanantaina Hull kertoi AIIekirjoitus oli myös Mohamed Diame, Senegalin maajoukkueen kapteeni, West Ham.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Maanantaina Hull kertoi, että he olivat allekirjoittaneet Mohamed Diame, Senegalin maajoukkueen kapteeni, West Ham.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Maanantaina, Hull kertoi hekin olivat allekirjoittaneet Mohamed läpimit-, kapteeni Senegalin maajoukkue, West Ham.</translation>
+    </seg>
+    <seg>
+      <source id="646">On Sunday night, within hours of the announcement, hundreds of Occupy Central supporters had assembled in the rain outside the Hong Kong government's headquarters.</source>
+      <reference>Sunnuntaiyönä, vain tunteja päätöksen julkaisemisen jälkeen, sadat Occupy Central -liikkeen kannattajista kokoontui sateeseen Hongkongin päähallintorakennusten eteen.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Sunnuntai-iltana, tunteja, satoja WC taustavaikuttajia.http Lodge-67-N-majoitus-Yllaes-aekaeslompolo.html Sateessako olivat kerääntyneet Hongkongin hallituksen ulkopuolella.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Sunnuntaina illalla, ja sadat Occupy Keski-kannattajia oli koottu sateessa Hongkongin hallituksen päämajan ulkopuolelle.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">O S n , w h o t yksi , h o o c s h yksi i t r o t H K g h.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Sunnuntai-iltana, muutaman tunnin kuluessa ilmoituksesta, sadat Miehittää Keski kannattajia oli koottu sateen ulkopuolella Hongkongin hallituksen päämajaan.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Sunnuntai-iltana, muutaman tunnin sisällä, satojen Occupy Central kannattajia oli koottu sateessa Hongkongin hallituksen ulkopuolella.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="659">China's state-run media also has run stories in recent days painting Hong Kong's democracy activists as agents of subversion directed by Western powers.</source>
+      <reference>Kiinan valtion mediassa on myös esitetty tarinoita, joiden mukaan Hongkongin demokratia-aktivistit ovat vallankumousta lietsovien läntisten valtojen kätyreitä”.</reference>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Posliinin tilajuoksumedialla on suoritetut tarinat myös viimeaikaisissa päivissä Hong Kongin maalaaminen on demokratiaaktivistit hevosoopperatehojen toteuttaman valtionvastainen toiminnan agentteina.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Kiinan valtiojohtoinen media on viime päivinä -Juoskaa Tarinoitako taulunsakin Hongkongin demokratiaa aktivistien -agenteillemme varhaisvaiheita Westernista johdolla.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Kiinan tiedotusvälineet on myös suorittaa tarinoita viime päivinä maalaus Hong Kong Demokratia-aktivisteja kuin aineiden Subversionin ohjannut länsivallat.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Kiinan valtiojohtoisten tiedotusvälineiden on myös ajaa tarinoita viime päivinä maalauksen Hongkongin demokratia-aktivistien agentteina kumoukselliseen ohjannut länsivallat.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kiinan valtion media on myös tarinoita viime päivinä maalaus Hongkongin demokratia-aktivisteja edustajina syytteenäsi ohjannut länsivallat.</translation>
+    </seg>
+    <seg>
+      <source id="570">No more needs to be said - on this we agree.</source>
+      <reference>Siitä ei tarvitse puhua enempää – tästä olemme yhtä mieltä.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Enää on sanottava - tästä olemme yhtä mieltä.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Enää pitää sanoa - tästä olemme yhtä mieltä.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Ei minkään lisän ei tarvitse sanoa - tämän päällä me olemme samaa mieltä.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Ei enää olisi sanottava - tästä olemme samaa mieltä.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Enää pitää sanoa - tästä olemme samaa mieltä.</translation>
+    </seg>
+    <seg>
+      <source id="354">The ship must be steered towards a goal which is in conformity with the strategy, notes Kimmo Heinonen, chairman of the city board.</source>
+      <reference>Laiva on käännettävä strategian mukaiseen tavoitteeseen, toteaa kaupunginhallituksen puheenjohtaja Kimmo Heinonen.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Alus on ohjailtava kohti päämäärää, joka on yhtäpitävä strategiaa, toteaa Kimmo Heinonen kaupunginhallituksen puheenjohtaja.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Alus on johtanut kohti päämäärää, joka on sopusoinnussa strategian kanssa, toteaa kaupungin puheenjohtaja Kimmo Heinonen.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Laivan täytyy ohjailla maalia joka on Kimmo Heinonenin , kaupungin puheenjohtajan taulu strategian , nuottien kanssa mukautuvuudessa kohti.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Alus on ajettava kohti päämäärää, joka on strategia, Kimmo Heinonen, kaupunki.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Alus on ohjailtava kohti päämäärää, joka on sopusoinnussa sen strategian kanssa, toteaa Kimmo Heinonen kaupunginhallituksen puheenjohtaja</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="1254">Vegetarians!</source>
+      <reference>Kasvisruokailijat!</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kasvissyöjiä!</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">!</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Kasvinsyöjiä.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Kasvissyöjän.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Vegetarians!</translation>
+    </seg>
+    <seg>
+      <source id="924">The five geckos, which were sent by Russia to the space for reproduction, have died, Roscosmos, the Russian Federal Space Agency, tells in its statement.</source>
+      <reference>Venäjän avaruuteen lisääntymään lähettämät viisi pikku gekkoa ovat kuolleet, kertoo Venäjän federaation avaruusjärjestö Roscosmos tiedotteessaan.</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Viisi geckos, joka lähetettiin Venäjän avaruuslisääntymistarkoituksessa, on kuollut, Roscosmos Venäjän avaruusjärjestö sanoo lausunnossaan.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Viisi geckos, joka lähetettiin Venäjän lisääntymistarkoituksessa, on kuollut, Roscosmos, Venäjän avaruusjärjestö kertoo lausunnossaan.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Vuodet, jotka Venäjä on lähettänyt tilaa, on kuollut, Venäjän avaruusjärjestö Roscosmos, kertoo lausunnossaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Viisi geckos, joka lähetettiin Venäjän tilaa lisääntymiselle, on kuollut, Roscosmos, Venäjän avaruusjärjestö kertoo julkilausumassaan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Viiden gekkoja, joka lähetettiin Venäjän tilaa lisääntymiselle, on kuollut, Roscosmoksen, Venäjän avaruusjärjestö, kertoo lausunnossaan.</translation>
+    </seg>
+    <seg>
+      <source id="451">Begin a word with a j without remembering to put two fingers across your mouth and it cost you a penny.</source>
+      <reference>Jos päästit suustasi j:llä alkavan sanan, etkä muistanut nostaa kahta sormea suusi eteen, jouduit maksamaan pennin.</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Aloitamme sen muistamatta kaksi sormea esiintyi, ja se maksaa penniäkään.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Aluksi muutama sana on j muistamatta esittää kaksi sormin koko suu ja se maksoi teille penniäkään.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Alkaa sana j muistamatta käsittelemään kahta sormea suussa ja se hinnoittaa te killinki.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Aloittakaa sana aj muistamatta laittaa kaksi sormea ​​poikki suusi ja se maksaa sinulle penniäkään.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Sana lamkos-back-hell alkaa ja muistaa laittaa kaksi sormea -Suut puolella ja se maksaa penniäkään.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="1023">"The water was so cold so I screamed, but as I did it my jaw just started to stick," she told The Mirror.</source>
+      <reference>”Vesi oli niin kylmää, että vain karjuin, mutta karjuessani tunsin, että leukani alkoi jäykistyä”, hän kertoo The Mirror -lehdelle.</reference>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">"Vesi oli niin kylmä, joten äänestin kovaäänisesti, mutta kuten tein sen jaw alkoi kiinni", hän kertoi The Mirror.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Vesi oli niin kylmä niin että minä kiruin, vain, kun minä teen sen , että minun kiinnitysleukani juuri alkoi pistää , " hän erotti peilin.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">"Vesi oli niin kylmä, joten miehet, mutta tein sen oma puoli juuri aloittanut kiinni", hän kertoi The Mirrorissa.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">"Vesi oli niin kylmä, joten en huusi, mutta tein sen minun leuan juuri alkanut pitää kiinni", hän kertoi Mirror.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">"vesi oli niin kylmää niin, että kirkaisin, mutta tein sen leukani alkoi pysyä", hän sanoi.</translation>
+    </seg>
+    <seg>
+      <source id="466">Again, no laws or duress.</source>
+      <reference>Tässäkään ei tarvittu lakeja eikä pakottamista.</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Vielä ei ole lakia tai pakkoa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Jälleen lakeja tai pakkoa ei ole.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Tässäkin lait tai pakkoa.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Taas , ei mitkään oikeustieteet tai pakko.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Jälleen, ei lakia tai pakkoa.</translation>
+    </seg>
+    <seg>
+      <source id="644">The ruling comes after a summer that has featured some of the largest and most high-profile protests in Hong Kong in years.</source>
+      <reference>Päätöstä edeltäneenä kesänä Hongkongissa järjestettiin joitain alueen suurimmista ja eniten huomiota herättäneistä protesteista vuosiin.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Päätös kesän jälkeen se on ollut osa ja suurin suurrikosten mielenosoitukset Hongkongissa vuosiin.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Tuomion jälkeen kesää on osa suurinta ja kohtaioa mielenosoituksiin Hong Kongissa.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Päätöksen jälkeen kesä on ollut joitakin suurimpiin ja näkyvät mielenosoitukset Hongkongissa.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Tuomio tuli kesän jälkeen, joka on ollut suurimpia ja kaikkein korkean profiilin mielenosoitukset Hongkongissa vuosiin.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Päätös on kesän jälkeen, että on ollut joitakin suurimpia ja korkean profiilin protestit Hongkongissa tulevina vuosina.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="250">When I walked round it, I realised that he had done that for years and years to put food on the table, and my estimation of him went up.</source>
+      <reference>Sulattamon ympäri kävellessäni ymmärsin, että hän oli tehnyt sitä työtä vuosikausia hankkiakseen meille ruoan pöytään, ja aloin arvostaa häntä enemmän.</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kun kävelin sen ympärille, tajusin, että hän oli tehnyt sitä jo vuosia ja vuosia saadakseen ruokaa pöytään, ja arvioni hänestä.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Kun minä kävelytin kierrosta sen, minä älysin että hän oli tehnyt että vuosille ja vuosille pannuksi ruoaksi pöydän päällä, arvio hänen meni ylös.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Kun kävelin sen ympärille, tajusin, että hän oli tehnyt jo vuosia ja vuosia laittaa ruokaa pöytään, ja arvioni hänestä nousi.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kun kävelin, tajusin, että hän oli tehnyt vuosia ja vuosia saadakseen ruokaa pöytään, ja minun arvioni</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Kun tulin, huomasin, että hän oli tehnyt vuosia ja vuosia saadakseen ruokaa pöytään, ja arvioni hänestä kasvoi.</translation>
+    </seg>
+    <seg>
+      <source id="873">At the same time British stars such as Paul McCartney and David Bowie have called on Scottish people to choose to remain part of United Kingdom.</source>
+      <reference>Sen sijaan esimerkiksi brittitähdet Paul McCartney ja David Bowie ovat vedonneet skotlantilaisiin, jotta nämä pysyisivät osana Britanniaa.</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähtiä kuten Paul McCartneyn ja David Bowie ovat Skotlannin kansa päättää pysyä osana Britanniaa.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Samaan aikaan brittiläinen tähtiä kuten Paul McCartney ja David Bowie ovat kehottaneet Skottejako ihmiset haluavat pysyä osana Yhdistynyttä kuningaskuntaa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähtiä, kuten Paul McCartneyn ja David Bowie vaatineet skotit päättivät pysyä osana Yhdistynyttä kuningaskuntaa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähtiä kuten Paul McCartneyn ja David Bowie on kehottanut Skotlannin ihmiset haluavat pysyä osana Yhdistynyttä kuningaskuntaa.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähdet kuten Paul McCartney ja David Bowie pyytänyt Skotlannin ihmiset päättävät jäädä Yhdistyneen kuningaskunnan osassa.</translation>
+    </seg>
+    <seg>
+      <source id="1346">A representative for Lawrence told TMZ: "This is a flagrant violation of privacy."</source>
+      <reference>Lawrencen edustaja sanoi TMZ-lehdelle, että ”kyseessä on röyhkeä yksityisyyden loukkaaminen”.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Edustajan Lawrence kertoi TMZ: "Tämä on vakava yksityisyyden loukkaaminen".</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Edustajana Lawrence kertoi TMZ: "Tämä on räikeää rikkomista."</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Lawrence edustaja kertoi TMZ: "Tämä on räikeästi yksityisyyden."</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Edustaja Lawrence kertoi TMZ: "Tämä on räikeä yksityisyyden."</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">A:in edustaja Lawrencelle kertoi TMZ:in : " tämä on vakava yksityisyyden rikkomus.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="288">The first series of The Lenny Henry Show aired in 1984, and in the Nineties he was known as, among other things, chef Gareth Blacklock in the comedy series Chef!.</source>
+      <reference>The Lenny Henry Show’n ensimmäinen jakso näytettiin vuonna 1984, ja 90-luvulla Henry tunnettiin mm. hahmostaan kokki Gareth Blacklockina komediasarjassa Chef!</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Ensimmäinen sarja: Lenny Henry Show 1990 esiin vuonna 1984, ja hän oli tiedossa, muiden muassa kokki Gareth Blacklock in Chef!.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Ensimmäinen sarja The Lenny Henry julkisuuteen vuonna 1984, ja 90-luvulla hänet tunnettiin muun muassa Gareth Blacklock komediasarjan Chef!.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Ensimmäinen The Lenny Henry show esitettiin vuonna 1984, ja 90-luvulla hänet tunnettiin muun muassa Gareth Blacklock komediasarjan Chef Blacklockia</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Ensimmäistä lennyn Joseph Henryn sarjaa, näytös tuuletti vuonna 1984 , ja jossakin se Nineties hän tunnettiin jonakin , toisten asioiden , kokin joukossa Gareth Blacklockin komediassa sarjakokki.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Ensimmäiset Travanti esitettiin vuonna 1984 ja 1990-luvulla hänet tunnettiin, muun muassa kokki Gareth Blacklock komediasarja Chef!.</translation>
+    </seg>
+    <seg>
+      <source id="540">I must also enquire: are you an atheist?</source>
+      <reference>Lisäksi minun on kysyttävä: oletko sinä ateisti?</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Haluan myös kysyn: Oletteko ateisti?</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Haluan myös kysyä: Oletko ateisti?</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Minun täytyy tiedustella myös : oletko sinä ateisti.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.CMU.4075.en-fi.txt">Haluan myös kysyä: Oletteko ateisti?</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Minun täytyy myös kysyä: Oletteko ateistiksi?</translation>
+    </seg>
+    <seg>
+      <source id="903">We’re flattered that he has been enjoying his time in his birth parish and wants to be here also in the future.</source>
+      <reference>Olemme otettuja, että hän on viihtynyt synnyinpitäjässään ja haluaa olla myös vastaisuudessakin täällä.</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Olemme imarreltu, että hän on nauttinut ajastaan Parishilla ja hänen kuoriuduit haluaa olla täällä myös tulevaisuudessa.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">We 're imartelee, että hän on nauttinut hänen syntymänsä seurakunta ja haluaa olla läsnä myös jatkossa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Tuemme sitä, että hän on estänyt hänestä ja haluaa olla läsnä myös tulevaisuudessa.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Olemme imarreitu, että hän on nauttinut hänen säätyns ja haluaa olla myös tulevaisuudessa.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Me 're nuoleskeli seurakunnan hänen syntymässänsä että hän on ollut nauttimassa hänen aikaansa ja tahtoo olla myös tulevaisuudessa täällä.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="378">The tweet was later deleted, followed by another from Perry's account that disavowed the post.</source>
+      <reference>Tweetti poistettiin myöhemmin, ja sitä seurasi uusi tweetti, jossa Perry vannoi, ettei hänellä ole mitään tekemistä kuvan kanssa.</reference>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Tweet myöhemmin poistettiin, jota seurasi toinen Perry tililtä että disavowed virkaan.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Tweet seurasi myöhemmin pois, toinen Perryn huomioon, että ne.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Tweet poistettiin myöhemmin, jota seurasi toinen Perryn että kieltänyt.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Tweet poistettiin myöhemmin, jota seurasi toinen Perryn huomioon, että kieltänyt.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Tweet poistettiin myöhemmin toinen Perry huomioon, heidät kielletään virkaan.</translation>
+    </seg>
+    <seg>
+      <source id="448">This his father had always done to stifle the letter j before it left his lips.</source>
+      <reference>Näin hänen isänsä oli aina tehnyt, ennen kuin ”j”-kirjain ehti karata hänen huuliltaan.</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa kirjaimellisesti j ennen kuin se poistunut.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa ja ennen kuin se jäi hänen huulensa.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa Puitepöytäkirja j, ennen kuin se lähti hänen huuliaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Tämä hänen isänsä oli aina tehnyt tukahduttaa kirjain j, ennen kuin se lähti hänen huulensa.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa kirjaimellisesti j ennen kuin se lähti hänen huuliaan.</translation>
+    </seg>
+    <seg>
+      <source id="941">The airline company didn’t believe girl’s explanation that she was on her way to Istanbul to see her grandmother, and called the authorities instead.</source>
+      <reference>Lentoyhtiö ei uskonut tytön selitystä, jonka mukaan hän oli menossa vierailemaan Istanbulissa asuvan isoäitinsä luona, vaan hälytti viranomaiset.</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Lentoyhtiö ei usko selityksen siitä, että hän oli matkalla Istanbuliin nähdä lounastelivat ja viranomaiset.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Lentoyhtiö ei usko, että tyttö selityksen, jonka mukaan hän oli hänen Istanbulin tapa nähdä hänen isoäitinsä ja kutsui viranomaiset sen sijaan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Lentoyhtiö ei uskonut tytön selitystä, että hän oli matkalla Istanbuliin nähdä hänen isoäitinsä, ja kutsui viranomaisten sijaan.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Lentoyhtiö ei uskonut tytön selitystä, että hän oli matkalla Istanbuliin tapaamaan lounastelivat ja viranomaiset.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Lentoyhtiö ei usko häntä, että hän oli matkalla Istanbuliin, hänen isoäitinsä, ja viranomaiset näkevät sen sijaan.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="776">Jukka Savio, Mauri Leppänen and Kari Körkkö cheered in the game against Tunis.</source>
+      <reference>Jukka Savio, Mauri Leppänen ja Kari Körkkö tuulettivat Tunisia-ottelussa.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö hurrasivat Tunisiaa vastaan pelissä.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö hurrasivat Tunisiaa vastaan ottelussa</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Jukka Savion, Mauri Leppänen ja Kari Körkkö hurrasivat riistassa Tunisia vastaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö piristi pelin vastaan Tunis.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö - in the Tunisiaa vastaan.</translation>
+    </seg>
+    <seg>
+      <source id="196">The new Gösta Museum was opened in June, and it has displayed for example classic pop art works from Andy Warhol and Roy Lichtenstein.</source>
+      <reference>Uusi Gösta-museo avattiin kesäkuussa ja esillä siellä on ollut muun muassa pop-taiteen klassikkoteoksia Andy Warholilta ja Roy Lichtensteinilta.</reference>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa ja se on esillä esimerkiksi klassinen pop-taiteen teoksia Andy Warhol ja Roy Lichtenstein.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa, ja se on osoittanut esimerkiksi klassisia pop-taideteoksia Andy Warholin ja Roy Lichtensteinin.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Uusi Göstan museo avattiin kesäkuussa , ja se on ut display esimerkiksi , että klassinen pop- taide työskentelee Andy Warholin ja Roy Lichtensteinin luota.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa, ja se on esillä esimerkiksi klassinen pop Art teoksia Andy Warhol ja Roy lichtenstein.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa, ja se on esimerkiksi klassinen pop-taideteoksista Andy Warhol ja Roy Lichtenstein.</translation>
+    </seg>
+    <seg>
+      <source id="1245">Thesis: the Aarnio investigation has already cost over five million euros</source>
+      <reference>Väitös: Aarnio-tutkinta maksanut jo yli viisi miljoonaa euroa</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Väite: Aarnio on jo yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Väitös: Aarnio on jo yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Väite: Aarnio tutkinta on jo maksanut yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Väite: Aarnio-tutkinta on jo yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Tutkielma: Aarnio on jo yli viisi miljoonaa euroa</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="794">As the evening got darker, the situation started to look threatening.</source>
+      <reference>Illan pimetessä tilanne alkoi jo näyttää uhkaavalta.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kun ilta sai hankalia, tilanne alkoi näyttää uhkaavan.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Kun ilta on pimeä, tilanne alkoi näyttää uhkaavalta.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Kuten illalla pääsi tummaakin tummempi, tilanne alkoi näyttää uhkaavan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Illalla sai tummempi, tilanne alkoi näyttää uhkaavan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Illan sai tummempi, tilanne alkoi näyttää uhkaavasti.</translation>
+    </seg>
+    <seg>
+      <source id="1018">Ice Bucket Challenge participant dislocates her jaw</source>
+      <reference>Ice Bucket -haasteeseen osallistujalta leuka sijoiltaan</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Bucket Challenge dislocates hänen leukansa Engelsmannitkin</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Jääsankohaasteosallistuja siirtää hänen kiinnitysleukansa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Jäävesihaaste na</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Jäävesihaaste osallistuja dislocates häntä leuka</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Jäällä Bucket Challenge osallistuja dislocates häntä jaw</translation>
+    </seg>
+    <seg>
+      <source id="871">In their statement, Mogwai said the referendum is a “once in a lifetime opportunity” for Scottish people.</source>
+      <reference>Tiedotteessaan Mogwai sanoi, että äänestys on skoteille tilaisuus, joka sattuu kohdalle vain kerran elämässä.</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Julkilausumassaan, sanoi Mogwai kansanäänestys on "kerran elämässä" tilaisuus skottejako varten.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Lausumassa, mogwai sanoi, että kansanäänestys "kerran elämässä" Skotlannin.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Heidän lausunto Mogwai sanoi kansanäänestys on "kerran elinaikana mahdollisuus" skotit.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Julkilausumassaan, sanoi Mogwai kansanäänestys on "kerran elämässä" Skotlannin kansalle mahdollisuuden</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Antamassaan lausunnossa, että Mogwai on "kerran elämässä" tilaisuus Skottejako varten.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="233">Henry was one of seven children born to Jamaican immigrants in Dudley in the Midlands in 1958.</source>
+      <reference>Henry syntyi seitsenlapsiseen Jamaikasta lähtöisin olevaan siirtolaisperheeseen Dudleyssa Britannian Midlandsin alueella vuonna 1958.</reference>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Henrik oli yksi Jamaikan maahanmuuttajien Dudleyn Midlandsin vuonna 1958 syntynyt seitsemän lasta.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Henry oli yksi seitsemän Jamaikan maahanmuuttajien lasten Dudley-Midlandsin vuonna 1958.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Joseph Henry oli yksi seitsemästä jamaikalaisiin siirtolaisiin kannetusta lapsesta Dudleyssä sisämaissa vuonna 1958.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Henry oli yksi seitsemästä syntyneiden lasten Jamaican maahanmuuttajia Dudley Midlandsin vuonna 1958.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Henrik oli syntynyt seitsemän lasta Jamaikalaiselta in West -Dudley H3-tunnelissa vuonna 1958.</translation>
+    </seg>
+    <seg>
+      <source id="240">You never saw his face, you just heard his voice: 'Stop the noise.</source>
+      <reference>Hänen kasvojaan ei koskaan näkynyt, vain ääni sanoi: Lopeta meteli.</reference>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Sinä pidit huolta ei koskaan , että hänen kasvonsa , sinä juuri kuuli hänen ääninsä : ` pysähdys hälyn.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Et koskaan nähnyt hänen kasvojaan, juuri kuulin hänen äänensä: "Älä melu.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Sinä et koskaan nähnyt hänen kasvojaan, kuulitte juuri hänen äänensä: "Lopettakaa melu</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Hän ei koskaan nähnyt, kuulitte juuri hänen äänen: "Lopettakaa melua.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Sinä et koskaan nähnyt hänen kasvojaan, kuulitte äänen: "Seis.</translation>
+    </seg>
+    <seg>
+      <source id="1127">"Calculus" is selling for $93.49 used on Chegg.com.</source>
+      <reference>Esimerkiksi ”Calculus”-kirjan saa käytettynä Chegg.com-verkkokaupasta 93,49 dollarilla.</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">"Myy" analyysin dollaria käytetään Chegg.com. 93.49</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">"Kalkyyli" on käytetty 93.49 Chegg.com dollaria.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">"matikkaa" myydään doiiaria 93.49 käytetään chegg.com.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">"Calculus" myy $93.49, käyttää Chegg.com.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">"" Myy edustajia calculus 93.49 Chegg.com.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="973">The comments from the goalkeeper Walter Viitala after the Sunday match against VPS describe well club’s current confusional state.</source>
+      <reference>Maalivahti Walter Viitalan kommentit sunnuntain VPS-ottelun jälkeen kuvaavat hyvin seuran sekavaa nykytilannetta.</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Maalivahti Walter Viitala kommenteista sunnuntain ottelun jälkeen VPS kuvaa hyvin vastaan seura confusional nykytilanteessa.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Kommentteja maalivahti Walter Viitala sunnuntain ottelun jälkeen vastaan VPS kuvaavat hyvin seuran nykyinen confusional</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kommentit maalivahti Walter Viitala, kun sunnuntaina vastaan VPS kuvaa hyvin seuran nykyinen sekavuustila.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kommenteista maalivahti Walter Viitala sunnuntaisen ottelun jälkeen VPS kuvaavat hyvin vastaan seuran nykyinen confusional</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Kommenteista maalivahti Walter Viitala Sunnuntaiksiko jälkeen vastaan laulutyyppiä kerjo on nyt hyvin confusional pyritäänymmärtämään tilaa.</translation>
+    </seg>
+    <seg>
+      <source id="1064">The threshold for going to sports games is lower than that for going to Berlin to see some art.</source>
+      <reference>On alhaisempi kynnys lähteä urheilukisoihin kuin Berliiniin katsomaan taidetta.</reference>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Kynnys menemisen urheiluihin leikeille on matalampi kuin tuo nähdä jonkin taiteen aikomiselle limusiiniin.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Menossa Urheilupelit on pienempi kuin menee Berliiniin tapaamaan joitakin taidetta.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Kynnys mennä urheilupelejä on pienempi kuin menossa Berliiniin katsomaan taidetta.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kynnys lähteä urheilupelejä on pienempi kuin Berliiniä nähdä taidetta.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Pelejä on alhaisempi kuin Berliinissä nähdä taidetta.</translation>
+    </seg>
+    <seg>
+      <source id="730">In a peaceful demonstration, they have reiterated their calls for the old working conditions, which were recently changed, to be restored.</source>
+      <reference>Rauhanomaisessa mielenosoituksessa he julistivat haluavansa takaisin vanhat työskentelysäännökset, joita muutettiin hiljattain.</reference>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Rauhanomaiseen mielenosoitukseen, he toistivat vaatii vanhan työoloja, joista hiljattain muuttanut, voidaan palauttaa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Rauhanomaisen mielenosoituksen, he toistivat vaaditaan vanhoihin työoloihin, jotka olivat viime aikoina muuttuneet, palautetaan.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Rauhanomaiseen mielenosoitukseen, he toistivat olevansa vaatii vanhat työolot, jotka ovat muuttuneet viime aikoina, palautetaan.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">He ovat rauhanomainen mielenosoitus toisti vanhan työolot, jotka olivat äskettäin muuttanut, heidän palauttamiseksi.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Rauhanomainen mielenosoitus, he ovat toistuvasti vaatineet vanhojen työolot, jotka olivat muuttuneet viime aikoina, on palautettava.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="648">However, they did not give details, apparently looking to avoid problems with authorities.</source>
+      <reference>He eivät kuitenkaan kertoneet yksityiskohtia ilmeisesti peläten, että se johtaisi ongelmiin viranomaisten kanssa.</reference>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Kuitenkin, he eivät anna yksityiskohtia, ilmeisesti haluavat välttää ongelmia viranomaisten kanssa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">He eivät kuitenkaan anna tietoja, ja välttää ongelmia viranomaisten kanssa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Ne kuitenkin ei antanut yksityiskohtia, ilmeisesti yrittää välttää ongelmat viranomaisten kanssa.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">He eivät anna tiedot, ilmeisesti välttää ongelmia viranomaisten kanssa.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Kuitenkin , he eivät antaneet yksityiskohdille, ilmeisesti, katsomista viranomaisten kanssa välttääkseen ongelmia.</translation>
+    </seg>
+    <seg>
+      <source id="371">We must fight for a peaceful sky.</source>
+      <reference>Meidän on taisteltava rauhan puolesta.</reference>
+      <translation system="newstest2015.online-A.0.en-fi.txt,newstest2015.online-B.0.en-fi.txt">Meidän on taisteltava rauhallinen taivas.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Meidän on taisteltava iltapäiväajelulla.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Meidän on taisteltava rauhallista.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Meidän täytyy taistella rauhalliselle taivaalle.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Meidän on taisteltava rauhanomaista ilmatilaa.</translation>
+    </seg>
+    <seg>
+      <source id="1273">It had revenues of $2.57 billion in 2013, up 13 percent from 2012.</source>
+      <reference>Sen liikevaihto kasvoi 13 prosenttia vuodesta 2012 vuoteen 2013, jolloin liikevaihto oli 2,57 miljardia dollaria.</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Se oli 2,57 miljardia dollaria vuonna 2013, ja 13 prosenttia vuodesta 2012 alkaen.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Se oli 2,57 miljardia dollaria vuonna 2013, 13 prosenttia vuodesta 2012.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Se oli 2.57 miljardin dollarin tulot vuonna 2013, jopa 13 prosenttia vuodesta 2012 alkaen.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Se oli 1,5-kertainen doiiaria 2,57 miljardiin euroon vuonna 2013, 13 prosenttia vuodesta 2012.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Se oli tuloja 2.57 miljardiin dollariin vuonna 2013, 13 prosenttia vuodesta 2012.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="21">Seinäjoki Hiphop Festival was organised for the third time.</source>
+      <reference>Seinäjoki Hiphop Festival järjestettiin kolmannen kerran.</reference>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Seinäjoen Hiphop Festival järjestettiin kolmatta kertaa.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Seinäjoki Hiphop järjestettiin jo kolmatta kertaa.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Seinäjoki Hiphop juhla järjestettiin jo kolmatta kertaa.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Seinäjoen Hiphop juhlat järjestettiin jo kolmatta kertaa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt,newstest2015.uedin-syntax.3940.en-fi.txt">Seinäjoen Hiphop Festival järjestettiin nyt kolmatta kertaa.</translation>
+    </seg>
+    <seg>
+      <source id="370">There is not a peaceful sky over every part of Ukraine.</source>
+      <reference>Koko Ukrainassa ei vallitse rauha.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Ei ole rauhanomainen taivas jokainen osa Ukrainaa.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Ei ole rauhanomainen ilmatilan, joka osa Ukrainaa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Ei ole Ukrainan ilmatilan rauhanomaisesti.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Ei taivas iltapäiväajelulla jokainen osa Ukrainaa.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Jokaisen Ukrainan osan yli ei ole rauhallinen taivas.</translation>
+    </seg>
+    <seg>
+      <source id="531">Alone again, Ailinn Solomons looked at her feet.</source>
+      <reference>Kun Ailinn Solomons oli taas yksin, hän katsoi jalkojaan.</reference>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Yksinäisen taas , Ailinnin solomont katsoivat hänen jaloissansa.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">59,998, ailinn iähtöisin soiomonsista katsoi hänen jalkojaan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Jälleen yksin, Ailinn Solomons katsoin hänen jalkojensa juuressa.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Yksin kerran Ailinn Solomons tarkastellut hänen jalkojensa alta.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Yksin jälleen Ailinn Solomons näytti hänen jalkojensa juuressa.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="776">Jukka Savio, Mauri Leppänen and Kari Körkkö cheered in the game against Tunis.</source>
+      <reference>Jukka Savio, Mauri Leppänen ja Kari Körkkö tuulettivat Tunisia-ottelussa.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö hurrasivat Tunisiaa vastaan pelissä.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö hurrasivat Tunisiaa vastaan ottelussa</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Jukka Savion, Mauri Leppänen ja Kari Körkkö hurrasivat riistassa Tunisia vastaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö piristi pelin vastaan Tunis.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Jukka Savio, Mauri Leppänen ja Kari Körkkö - in the Tunisiaa vastaan.</translation>
+    </seg>
+    <seg>
+      <source id="196">The new Gösta Museum was opened in June, and it has displayed for example classic pop art works from Andy Warhol and Roy Lichtenstein.</source>
+      <reference>Uusi Gösta-museo avattiin kesäkuussa ja esillä siellä on ollut muun muassa pop-taiteen klassikkoteoksia Andy Warholilta ja Roy Lichtensteinilta.</reference>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa ja se on esillä esimerkiksi klassinen pop-taiteen teoksia Andy Warhol ja Roy Lichtenstein.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa, ja se on osoittanut esimerkiksi klassisia pop-taideteoksia Andy Warholin ja Roy Lichtensteinin.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Uusi Göstan museo avattiin kesäkuussa , ja se on ut display esimerkiksi , että klassinen pop- taide työskentelee Andy Warholin ja Roy Lichtensteinin luota.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa, ja se on esillä esimerkiksi klassinen pop Art teoksia Andy Warhol ja Roy lichtenstein.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Uusi Gösta museo avattiin kesäkuussa, ja se on esimerkiksi klassinen pop-taideteoksista Andy Warhol ja Roy Lichtenstein.</translation>
+    </seg>
+    <seg>
+      <source id="1245">Thesis: the Aarnio investigation has already cost over five million euros</source>
+      <reference>Väitös: Aarnio-tutkinta maksanut jo yli viisi miljoonaa euroa</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Väite: Aarnio on jo yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Väitös: Aarnio on jo yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Väite: Aarnio tutkinta on jo maksanut yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Väite: Aarnio-tutkinta on jo yli viisi miljoonaa euroa</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Tutkielma: Aarnio on jo yli viisi miljoonaa euroa</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="21">Seinäjoki Hiphop Festival was organised for the third time.</source>
+      <reference>Seinäjoki Hiphop Festival järjestettiin kolmannen kerran.</reference>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Seinäjoen Hiphop Festival järjestettiin kolmatta kertaa.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Seinäjoki Hiphop järjestettiin jo kolmatta kertaa.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Seinäjoki Hiphop juhla järjestettiin jo kolmatta kertaa.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Seinäjoen Hiphop juhlat järjestettiin jo kolmatta kertaa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt,newstest2015.uedin-syntax.3940.en-fi.txt">Seinäjoen Hiphop Festival järjestettiin nyt kolmatta kertaa.</translation>
+    </seg>
+    <seg>
+      <source id="370">There is not a peaceful sky over every part of Ukraine.</source>
+      <reference>Koko Ukrainassa ei vallitse rauha.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Ei ole rauhanomainen taivas jokainen osa Ukrainaa.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Ei ole rauhanomainen ilmatilan, joka osa Ukrainaa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Ei ole Ukrainan ilmatilan rauhanomaisesti.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Ei taivas iltapäiväajelulla jokainen osa Ukrainaa.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Jokaisen Ukrainan osan yli ei ole rauhallinen taivas.</translation>
+    </seg>
+    <seg>
+      <source id="531">Alone again, Ailinn Solomons looked at her feet.</source>
+      <reference>Kun Ailinn Solomons oli taas yksin, hän katsoi jalkojaan.</reference>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Yksinäisen taas , Ailinnin solomont katsoivat hänen jaloissansa.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">59,998, ailinn iähtöisin soiomonsista katsoi hänen jalkojaan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Jälleen yksin, Ailinn Solomons katsoin hänen jalkojensa juuressa.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Yksin kerran Ailinn Solomons tarkastellut hänen jalkojensa alta.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Yksin jälleen Ailinn Solomons näytti hänen jalkojensa juuressa.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="1023">"The water was so cold so I screamed, but as I did it my jaw just started to stick," she told The Mirror.</source>
+      <reference>”Vesi oli niin kylmää, että vain karjuin, mutta karjuessani tunsin, että leukani alkoi jäykistyä”, hän kertoo The Mirror -lehdelle.</reference>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">"Vesi oli niin kylmä, joten äänestin kovaäänisesti, mutta kuten tein sen jaw alkoi kiinni", hän kertoi The Mirror.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Vesi oli niin kylmä niin että minä kiruin, vain, kun minä teen sen , että minun kiinnitysleukani juuri alkoi pistää , " hän erotti peilin.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">"Vesi oli niin kylmä, joten miehet, mutta tein sen oma puoli juuri aloittanut kiinni", hän kertoi The Mirrorissa.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">"Vesi oli niin kylmä, joten en huusi, mutta tein sen minun leuan juuri alkanut pitää kiinni", hän kertoi Mirror.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">"vesi oli niin kylmää niin, että kirkaisin, mutta tein sen leukani alkoi pysyä", hän sanoi.</translation>
+    </seg>
+    <seg>
+      <source id="466">Again, no laws or duress.</source>
+      <reference>Tässäkään ei tarvittu lakeja eikä pakottamista.</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Vielä ei ole lakia tai pakkoa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Jälleen lakeja tai pakkoa ei ole.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Tässäkin lait tai pakkoa.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Taas , ei mitkään oikeustieteet tai pakko.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Jälleen, ei lakia tai pakkoa.</translation>
+    </seg>
+    <seg>
+      <source id="644">The ruling comes after a summer that has featured some of the largest and most high-profile protests in Hong Kong in years.</source>
+      <reference>Päätöstä edeltäneenä kesänä Hongkongissa järjestettiin joitain alueen suurimmista ja eniten huomiota herättäneistä protesteista vuosiin.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Päätös kesän jälkeen se on ollut osa ja suurin suurrikosten mielenosoitukset Hongkongissa vuosiin.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Tuomion jälkeen kesää on osa suurinta ja kohtaioa mielenosoituksiin Hong Kongissa.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Päätöksen jälkeen kesä on ollut joitakin suurimpiin ja näkyvät mielenosoitukset Hongkongissa.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Tuomio tuli kesän jälkeen, joka on ollut suurimpia ja kaikkein korkean profiilin mielenosoitukset Hongkongissa vuosiin.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Päätös on kesän jälkeen, että on ollut joitakin suurimpia ja korkean profiilin protestit Hongkongissa tulevina vuosina.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="794">As the evening got darker, the situation started to look threatening.</source>
+      <reference>Illan pimetessä tilanne alkoi jo näyttää uhkaavalta.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kun ilta sai hankalia, tilanne alkoi näyttää uhkaavan.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Kun ilta on pimeä, tilanne alkoi näyttää uhkaavalta.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Kuten illalla pääsi tummaakin tummempi, tilanne alkoi näyttää uhkaavan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Illalla sai tummempi, tilanne alkoi näyttää uhkaavan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Illan sai tummempi, tilanne alkoi näyttää uhkaavasti.</translation>
+    </seg>
+    <seg>
+      <source id="1018">Ice Bucket Challenge participant dislocates her jaw</source>
+      <reference>Ice Bucket -haasteeseen osallistujalta leuka sijoiltaan</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Bucket Challenge dislocates hänen leukansa Engelsmannitkin</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Jääsankohaasteosallistuja siirtää hänen kiinnitysleukansa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Jäävesihaaste na</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Jäävesihaaste osallistuja dislocates häntä leuka</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Jäällä Bucket Challenge osallistuja dislocates häntä jaw</translation>
+    </seg>
+    <seg>
+      <source id="871">In their statement, Mogwai said the referendum is a “once in a lifetime opportunity” for Scottish people.</source>
+      <reference>Tiedotteessaan Mogwai sanoi, että äänestys on skoteille tilaisuus, joka sattuu kohdalle vain kerran elämässä.</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Julkilausumassaan, sanoi Mogwai kansanäänestys on "kerran elämässä" tilaisuus skottejako varten.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Lausumassa, mogwai sanoi, että kansanäänestys "kerran elämässä" Skotlannin.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Heidän lausunto Mogwai sanoi kansanäänestys on "kerran elinaikana mahdollisuus" skotit.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Julkilausumassaan, sanoi Mogwai kansanäänestys on "kerran elämässä" Skotlannin kansalle mahdollisuuden</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Antamassaan lausunnossa, että Mogwai on "kerran elämässä" tilaisuus Skottejako varten.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="1254">Vegetarians!</source>
+      <reference>Kasvisruokailijat!</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kasvissyöjiä!</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">!</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Kasvinsyöjiä.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Kasvissyöjän.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Vegetarians!</translation>
+    </seg>
+    <seg>
+      <source id="924">The five geckos, which were sent by Russia to the space for reproduction, have died, Roscosmos, the Russian Federal Space Agency, tells in its statement.</source>
+      <reference>Venäjän avaruuteen lisääntymään lähettämät viisi pikku gekkoa ovat kuolleet, kertoo Venäjän federaation avaruusjärjestö Roscosmos tiedotteessaan.</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Viisi geckos, joka lähetettiin Venäjän avaruuslisääntymistarkoituksessa, on kuollut, Roscosmos Venäjän avaruusjärjestö sanoo lausunnossaan.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Viisi geckos, joka lähetettiin Venäjän lisääntymistarkoituksessa, on kuollut, Roscosmos, Venäjän avaruusjärjestö kertoo lausunnossaan.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Vuodet, jotka Venäjä on lähettänyt tilaa, on kuollut, Venäjän avaruusjärjestö Roscosmos, kertoo lausunnossaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Viisi geckos, joka lähetettiin Venäjän tilaa lisääntymiselle, on kuollut, Roscosmos, Venäjän avaruusjärjestö kertoo julkilausumassaan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Viiden gekkoja, joka lähetettiin Venäjän tilaa lisääntymiselle, on kuollut, Roscosmoksen, Venäjän avaruusjärjestö, kertoo lausunnossaan.</translation>
+    </seg>
+    <seg>
+      <source id="451">Begin a word with a j without remembering to put two fingers across your mouth and it cost you a penny.</source>
+      <reference>Jos päästit suustasi j:llä alkavan sanan, etkä muistanut nostaa kahta sormea suusi eteen, jouduit maksamaan pennin.</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Aloitamme sen muistamatta kaksi sormea esiintyi, ja se maksaa penniäkään.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Aluksi muutama sana on j muistamatta esittää kaksi sormin koko suu ja se maksoi teille penniäkään.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Alkaa sana j muistamatta käsittelemään kahta sormea suussa ja se hinnoittaa te killinki.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Aloittakaa sana aj muistamatta laittaa kaksi sormea ​​poikki suusi ja se maksaa sinulle penniäkään.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Sana lamkos-back-hell alkaa ja muistaa laittaa kaksi sormea -Suut puolella ja se maksaa penniäkään.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="378">The tweet was later deleted, followed by another from Perry's account that disavowed the post.</source>
+      <reference>Tweetti poistettiin myöhemmin, ja sitä seurasi uusi tweetti, jossa Perry vannoi, ettei hänellä ole mitään tekemistä kuvan kanssa.</reference>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Tweet myöhemmin poistettiin, jota seurasi toinen Perry tililtä että disavowed virkaan.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Tweet seurasi myöhemmin pois, toinen Perryn huomioon, että ne.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Tweet poistettiin myöhemmin, jota seurasi toinen Perryn että kieltänyt.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Tweet poistettiin myöhemmin, jota seurasi toinen Perryn huomioon, että kieltänyt.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Tweet poistettiin myöhemmin toinen Perry huomioon, heidät kielletään virkaan.</translation>
+    </seg>
+    <seg>
+      <source id="448">This his father had always done to stifle the letter j before it left his lips.</source>
+      <reference>Näin hänen isänsä oli aina tehnyt, ennen kuin ”j”-kirjain ehti karata hänen huuliltaan.</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa kirjaimellisesti j ennen kuin se poistunut.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa ja ennen kuin se jäi hänen huulensa.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa Puitepöytäkirja j, ennen kuin se lähti hänen huuliaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Tämä hänen isänsä oli aina tehnyt tukahduttaa kirjain j, ennen kuin se lähti hänen huulensa.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Hänen isänsä oli aina tehnyt tukahduttaa kirjaimellisesti j ennen kuin se lähti hänen huuliaan.</translation>
+    </seg>
+    <seg>
+      <source id="941">The airline company didn’t believe girl’s explanation that she was on her way to Istanbul to see her grandmother, and called the authorities instead.</source>
+      <reference>Lentoyhtiö ei uskonut tytön selitystä, jonka mukaan hän oli menossa vierailemaan Istanbulissa asuvan isoäitinsä luona, vaan hälytti viranomaiset.</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Lentoyhtiö ei usko selityksen siitä, että hän oli matkalla Istanbuliin nähdä lounastelivat ja viranomaiset.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Lentoyhtiö ei usko, että tyttö selityksen, jonka mukaan hän oli hänen Istanbulin tapa nähdä hänen isoäitinsä ja kutsui viranomaiset sen sijaan.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Lentoyhtiö ei uskonut tytön selitystä, että hän oli matkalla Istanbuliin nähdä hänen isoäitinsä, ja kutsui viranomaisten sijaan.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Lentoyhtiö ei uskonut tytön selitystä, että hän oli matkalla Istanbuliin tapaamaan lounastelivat ja viranomaiset.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Lentoyhtiö ei usko häntä, että hän oli matkalla Istanbuliin, hänen isoäitinsä, ja viranomaiset näkevät sen sijaan.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="358">Tens of Turkish Policemen Arrested over 'Plotting' against Gov't</source>
+      <reference>Kymmenet turkkilaispoliisit pidätetty epäiltyinä ”juonista” hallitusta vastaan</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Kymmeniä Turkin Policemen Arrested "Plotting Gov't vastaan"</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Kymmenet Turkin Poliisien pidätettiin yli "piirtäminen" vastaan ​​Gov't</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Kymmeniä Turkin poliisia pidätettiin yli kuvaaja vastaan Kiinteistölaitos</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kymmenet Turkin Policemen Arrested "ei" Plotting Gov vastaan</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kymmenet Turkin poliisia pidätettiin "juoni" julkisyhteisöt</translation>
+    </seg>
+    <seg>
+      <source id="317">Panic's quite good, it stiffens the sinews.</source>
+      <reference>Paniikki on hyvä asia, se tekee ihmisen kestävämmäksi.</reference>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Paniikki on aika hyvä, se jäykistyy varoja.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Paniikki on varsin hyvä, se stiffens varoja.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Paniikki on aika hyvä, se jäykistyy jänteitä.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Paniikki on melko hyvä, stiffens varoja.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Panic on melko hyvä, se jäykistää jänteitä.</translation>
+    </seg>
+    <seg>
+      <source id="379">A tweet just went out from my account that was unauthorized.</source>
+      <reference>Tweetti lähetettiin luvattomasti tililtäni.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Tweet vain lähtivät huomioni, joka oli luvaton.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">A:in piipitys juuri sammui minun selvitykse joka oli luvatonni luota.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Titityy on vain tililtäni oli ilman lupaa.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Twiitti vain lähtivät tililtäni oli luvaton.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Tweet vain meni ulos tililtäni joka oli luvaton.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="648">However, they did not give details, apparently looking to avoid problems with authorities.</source>
+      <reference>He eivät kuitenkaan kertoneet yksityiskohtia ilmeisesti peläten, että se johtaisi ongelmiin viranomaisten kanssa.</reference>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Kuitenkin, he eivät anna yksityiskohtia, ilmeisesti haluavat välttää ongelmia viranomaisten kanssa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">He eivät kuitenkaan anna tietoja, ja välttää ongelmia viranomaisten kanssa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Ne kuitenkin ei antanut yksityiskohtia, ilmeisesti yrittää välttää ongelmat viranomaisten kanssa.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">He eivät anna tiedot, ilmeisesti välttää ongelmia viranomaisten kanssa.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Kuitenkin , he eivät antaneet yksityiskohdille, ilmeisesti, katsomista viranomaisten kanssa välttääkseen ongelmia.</translation>
+    </seg>
+    <seg>
+      <source id="371">We must fight for a peaceful sky.</source>
+      <reference>Meidän on taisteltava rauhan puolesta.</reference>
+      <translation system="newstest2015.online-A.0.en-fi.txt,newstest2015.online-B.0.en-fi.txt">Meidän on taisteltava rauhallinen taivas.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt,newstest2015.abumatran-uncons.4116.en-fi.txt">Meidän on taisteltava iltapäiväajelulla.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Meidän on taisteltava rauhallista.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Meidän täytyy taistella rauhalliselle taivaalle.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Meidän on taisteltava rauhanomaista ilmatilaa.</translation>
+    </seg>
+    <seg>
+      <source id="1273">It had revenues of $2.57 billion in 2013, up 13 percent from 2012.</source>
+      <reference>Sen liikevaihto kasvoi 13 prosenttia vuodesta 2012 vuoteen 2013, jolloin liikevaihto oli 2,57 miljardia dollaria.</reference>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Se oli 2,57 miljardia dollaria vuonna 2013, ja 13 prosenttia vuodesta 2012 alkaen.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Se oli 2,57 miljardia dollaria vuonna 2013, 13 prosenttia vuodesta 2012.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Se oli 2.57 miljardin dollarin tulot vuonna 2013, jopa 13 prosenttia vuodesta 2012 alkaen.</translation>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Se oli 1,5-kertainen doiiaria 2,57 miljardiin euroon vuonna 2013, 13 prosenttia vuodesta 2012.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Se oli tuloja 2.57 miljardiin dollariin vuonna 2013, 13 prosenttia vuodesta 2012.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="250">When I walked round it, I realised that he had done that for years and years to put food on the table, and my estimation of him went up.</source>
+      <reference>Sulattamon ympäri kävellessäni ymmärsin, että hän oli tehnyt sitä työtä vuosikausia hankkiakseen meille ruoan pöytään, ja aloin arvostaa häntä enemmän.</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Kun kävelin sen ympärille, tajusin, että hän oli tehnyt sitä jo vuosia ja vuosia saadakseen ruokaa pöytään, ja arvioni hänestä.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">Kun minä kävelytin kierrosta sen, minä älysin että hän oli tehnyt että vuosille ja vuosille pannuksi ruoaksi pöydän päällä, arvio hänen meni ylös.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Kun kävelin sen ympärille, tajusin, että hän oli tehnyt jo vuosia ja vuosia laittaa ruokaa pöytään, ja arvioni hänestä nousi.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Kun kävelin, tajusin, että hän oli tehnyt vuosia ja vuosia saadakseen ruokaa pöytään, ja minun arvioni</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Kun tulin, huomasin, että hän oli tehnyt vuosia ja vuosia saadakseen ruokaa pöytään, ja arvioni hänestä kasvoi.</translation>
+    </seg>
+    <seg>
+      <source id="873">At the same time British stars such as Paul McCartney and David Bowie have called on Scottish people to choose to remain part of United Kingdom.</source>
+      <reference>Sen sijaan esimerkiksi brittitähdet Paul McCartney ja David Bowie ovat vedonneet skotlantilaisiin, jotta nämä pysyisivät osana Britanniaa.</reference>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähtiä kuten Paul McCartneyn ja David Bowie ovat Skotlannin kansa päättää pysyä osana Britanniaa.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Samaan aikaan brittiläinen tähtiä kuten Paul McCartney ja David Bowie ovat kehottaneet Skottejako ihmiset haluavat pysyä osana Yhdistynyttä kuningaskuntaa.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähtiä, kuten Paul McCartneyn ja David Bowie vaatineet skotit päättivät pysyä osana Yhdistynyttä kuningaskuntaa.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähtiä kuten Paul McCartneyn ja David Bowie on kehottanut Skotlannin ihmiset haluavat pysyä osana Yhdistynyttä kuningaskuntaa.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Samalla Yhdistyneen kuningaskunnan tähdet kuten Paul McCartney ja David Bowie pyytänyt Skotlannin ihmiset päättävät jäädä Yhdistyneen kuningaskunnan osassa.</translation>
+    </seg>
+    <seg>
+      <source id="1346">A representative for Lawrence told TMZ: "This is a flagrant violation of privacy."</source>
+      <reference>Lawrencen edustaja sanoi TMZ-lehdelle, että ”kyseessä on röyhkeä yksityisyyden loukkaaminen”.</reference>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt,newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Edustajan Lawrence kertoi TMZ: "Tämä on vakava yksityisyyden loukkaaminen".</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Edustajana Lawrence kertoi TMZ: "Tämä on räikeää rikkomista."</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Lawrence edustaja kertoi TMZ: "Tämä on räikeästi yksityisyyden."</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Edustaja Lawrence kertoi TMZ: "Tämä on räikeä yksityisyyden."</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">A:in edustaja Lawrencelle kertoi TMZ:in : " tämä on vakava yksityisyyden rikkomus.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="fin">
+    <seg>
+      <source id="175">The war killed more than 2,100 Palestinians, three-quarters of whom were civilians and at least 494 children, according to Palestinian and U.N. estimates.</source>
+      <reference>Palestiinan ja YK:n arvioiden mukaan sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja vähintään 494 lapsia.</reference>
+      <translation system="newstest2015.UU-unconstrained.3946.en-fi.txt">Sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja lapsia ainakin 494, Palestiinan ja YK arvioi.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja lapsia ainakin 494, Palestiinan ja YK:n arvioiden mukaan</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Sodassa kuoli yli 2 100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja lapsia ainakin 494, Palestiinan ja YK:n arvioiden mukaan.</translation>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Sodan tappoi yli 2100 palestiinalaista, joista kolme neljäsosaa oli siviilejä ja ainakin 494 lapsia, mukaan Palestiinan ja YK: n arvioiden mukaan.</translation>
+      <translation system="newstest2015.abumatran-combo.4018.en-fi.txt">Sodassa kuoli yli 2,100 palestiinalaista, joista kolme neljästä oli siviilejä ja ainakin 494 lapsia, Palestiinan ja U.N. arvioiden mukaan</translation>
+    </seg>
+    <seg>
+      <source id="922">On Monday, Hull told they also had signed Mohamed Diame, the captain of Senegal’s national team, from West Ham.</source>
+      <reference>Maanantaina Hull kertoi hankkineensa myös Senegalin maajoukkuekapteenin Mohamed Diamen West Hamista.</reference>
+      <translation system="newstest2015.online-A.0.en-fi.txt">Maanantaina Hull kertoi he olivat allekirjoittaneet Mohamed dostoja kohteesta West Ham Senegalin maajoukkueen kapteeni.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Hull kertoi maanantaina, että he olivat allekirjoittaneet Mohamed Diame, Senegalin maajoukkueen kapteeni, West Ham.</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Maanantaina Hull kertoi AIIekirjoitus oli myös Mohamed Diame, Senegalin maajoukkueen kapteeni, West Ham.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Maanantaina Hull kertoi, että he olivat allekirjoittaneet Mohamed Diame, Senegalin maajoukkueen kapteeni, West Ham.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Maanantaina, Hull kertoi hekin olivat allekirjoittaneet Mohamed läpimit-, kapteeni Senegalin maajoukkue, West Ham.</translation>
+    </seg>
+    <seg>
+      <source id="646">On Sunday night, within hours of the announcement, hundreds of Occupy Central supporters had assembled in the rain outside the Hong Kong government's headquarters.</source>
+      <reference>Sunnuntaiyönä, vain tunteja päätöksen julkaisemisen jälkeen, sadat Occupy Central -liikkeen kannattajista kokoontui sateeseen Hongkongin päähallintorakennusten eteen.</reference>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Sunnuntai-iltana, tunteja, satoja WC taustavaikuttajia.http Lodge-67-N-majoitus-Yllaes-aekaeslompolo.html Sateessako olivat kerääntyneet Hongkongin hallituksen ulkopuolella.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Sunnuntaina illalla, ja sadat Occupy Keski-kannattajia oli koottu sateessa Hongkongin hallituksen päämajan ulkopuolelle.</translation>
+      <translation system="newstest2015.GF-Wide-coverage-system.4129.en-fi.txt">O S n , w h o t yksi , h o o c s h yksi i t r o t H K g h.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Sunnuntai-iltana, muutaman tunnin kuluessa ilmoituksesta, sadat Miehittää Keski kannattajia oli koottu sateen ulkopuolella Hongkongin hallituksen päämajaan.</translation>
+      <translation system="newstest2015.abumatran-uncons-combo.4121.en-fi.txt">Sunnuntai-iltana, muutaman tunnin sisällä, satojen Occupy Central kannattajia oli koottu sateessa Hongkongin hallituksen ulkopuolella.</translation>
+    </seg>
+  </hit>
+</hits>

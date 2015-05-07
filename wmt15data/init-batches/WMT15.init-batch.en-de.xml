@@ -1,0 +1,723 @@
+<hits>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1178">"He was very positive," says Abbott.</source>
+      <reference>"Er war sehr positiv," sagt Abbott.</reference>
+      <translation system="newstest2015.online-E.0.en-de.txt,newstest2015.online-F.0.en-de.txt">„Er war sehr positiv,“ sagt Abbott.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">"Er wurde positiv", sagt der partner Abbott.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">"Er war sehr positiv", sagte Abbott.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">„Er war sehr positiv“, sagt Abbott.</translation>
+      <translation system="newstest2015.Illinois.4084.en-de.txt">``er war sehr positiv, ''sagt Abbott.</translation>
+    </seg>
+    <seg>
+      <source id="1855">Besides Chegg and Amazon, eBay Inc's Half.com is a popular alternative for used books.</source>
+      <reference>Außer Chegg und Amazon ist auch Half.com von eBay Inc eine beliebte Alternative für gebrauchte Bücher.</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Neben Chegg und Amazon, eBay Inc. ist das Gegenteil eine beliebte Alternative für gebrauchte Bücher.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt,newstest2015.uedin-syntax.3866.en-de.txt">Neben Chegg und Amazon, eBay Inc 's Half.com ist eine beliebte Alternative für gebrauchte Bücher.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Neben Chegg und Amazon ist der Half.com von Ebay Inc beliebte Alternative für gebrauchte Bücher.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Außer Chegg und Amazon ist das Half.com von eBay Inc eine beliebte Alternative für benutzte Bücher.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">neben Chegg und Amazon , eBay Inc ' s gebrauchte ist eine beliebte Alternative für gebrauchte Bücher .</translation>
+    </seg>
+    <seg>
+      <source id="1267">Import and use of Blue and Brown asbestos banned by law in Britain.</source>
+      <reference>Der Import und die Verwendung von blauem und braunem Asbest werden gesetzlich in Großbritannien verboten.</reference>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Import und Verwendung von Blue und Brown, die in Großbritannien gesetzlich verboten sind.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Einfuhr und Verwendung von asbesthaltigen Blue und Brown in Großbritannien per Gesetz verboten.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Import und die Verwendung von Asbest Blue und Brown in Großbritannien per Gesetz verboten.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Einfuhr und Verwendung von Blau und Brown-Asbest gesetzlich in Großbritannien verboten.</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Import und Verwendung von Blauem und Braunem Asbest, von Gesetz in Großbritannien verboten.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="541">What's more, apparently the Beeb's popularity is rising: 53 per cent support today as against 31 per cent 10 years ago.</source>
+      <reference>Und anscheinend steigt die BBC auf der Beliebtheitsskala wieder nach oben: 53 Prozent unterstützen sie heute, im Vergleich zu 31 Prozent vor 10 Jahren.</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Was mehr ist, offenbar ist die Beeb Popularität: 53 Prozent unterstützen, die heute als gegen 31 Prozent vor zehn Jahren.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Darüber hinaus ist die Beeb Popularität wächst offenbar: 53 Prozent Unterstützung heute vor 10 Jahren gegen 31 Prozent.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Was mehr ist, anscheinend erhebt sich die Beliebtheit der BBC: 53-Prozent-Unterstützung heute im Vergleich mit 31 Prozent vor 10 Jahren.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Was mehr ist, offenbar der Beeb Popularität steigt: 53 Prozent Unterstützung heute gegenüber 31 Prozent vor 10 Jahren.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Darüber hinaus ist die Beeb Popularität offenbar steigt: 53 Prozent unterstützen heute als vor zehn Jahren gegen 31 Prozent.</translation>
+    </seg>
+    <seg>
+      <source id="1013">One day in 2007, however, he was the one who began to suffer.</source>
+      <reference>Eines Tages im Jahr 2007 war er jedoch derjenige, dessen Leidensweg begann.</reference>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Eines Tages 2007, aber er war derjenige, der zu leiden begann.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Eines Tages im Jahr 2007 jedoch war er derjenige, der zu leiden hatte.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Eines Tages im Jahr 2007 war er jedoch diejenige, die zu leiden begann.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt">Eines Tages im Jahr 2007, aber er war derjenige, der zu leiden begann.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Einen Tag im Jahr 2007 war er aber derjenige, der begann zu leiden.</translation>
+    </seg>
+    <seg>
+      <source id="2030">When Renzi became Premier in February 2014, he appointed Mogherini as his Foreign Minister.</source>
+      <reference>Als Renzi im Februar 2014 Premier wurde, berief er Mogherini zu seiner Außenministerin.</reference>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Als Renzi im Februar 2014 Premierminister wurde, ernannte er Mogherini zu seinem Außenminister.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">wenn Renzi Premier wurde im Februar 2014 , ernannte er Mogherini Als seinen außenminister .</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Als Renzi Premier im Februar 2014 geworden ist, hat er Mogherini zu seinem Außenminister ernannt.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Als Premier Renzi im Februar 2014 wurde, ernannte er seine Außenministerin Mogherini.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Wenn Renzi Premier im Februar 2014 bekam, hat er Mogherini in seinem Außenminister ernannt.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="137">The latest rain came courtesy of a couple of short, blustery showers, including a burst that started just before 8pm that dumped almost 4mm in about 10 minutes.</source>
+      <reference>Der letzte Niederschlag war das Ergebnis einer Reihe kurzer, stürmischer Schauer, einschließlich eines Gusses, der kurz vor 20 Uhr begann und für fast 4mm Niederschlag in etwa 10 Minuten sorgte.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Der späteste Regen kam Höflichkeit ein paar kurzer, böig Duschen, einschließlich eine Explosion, die kurz vor 8pm begann, das fast 4mm in ungefähr 10 Minuten entleerte.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Der späteste Regen ist Höflichkeit von ein paar kurzen, stürmischen Duschen, einschließlich eines Ausbruchs gekommen, der nur vor 8 Pm angefangen hat, die fast 4 Mm in ungefähr 10 Minuten abgeladen haben.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Die jüngsten Regen kam von ein paar kurzen, blustery Duschen, darunter ein Aufbäumen begann kurz vor 20.00 Uhr, dass in circa 10 Minuten fast 4mm gekippt.</translation>
+      <translation system="newstest2015.Illinois.4084.en-de.txt">Die Freundlichkeit der Regen kam ein paar kurze, blustery Duschen, darunter eine platzen, begann vor 8pm, fast 4mm in etwa 10 Minuten.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Der letzte Regen kam mit freundlicher Genehmigung von ein paar kurze, stürmischen Duschen, einschließlich eine Explosion, die kurz vor 20:00 gestartet, die fast 4 mm in ca. 10 Minuten zu verlassen.</translation>
+    </seg>
+    <seg>
+      <source id="515">The first of September ceremony was not held in every school.</source>
+      <reference>Die Septemberfeiern wurden nicht in jeder Schule abgehalten.</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Die erste von der Zeremonie wurde in jeder Schule nicht statt.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Die erste September-Zeremonie wurde nicht in jeder Schule abgehalten.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Die Zeremonie am 1. September wurde in jeder Schule nicht gehalten.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Die ersten September Zeremonie nicht in jeder Schule ausgetragen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Die Septemberfeiern wurden nicht in jeder Schule abgehalten .</translation>
+    </seg>
+    <seg>
+      <source id="359">Although it was a weird, reprehensible position to be in, I was working in huge venues and learning how to work a crowd.</source>
+      <reference>Es war eine sonderbare, unangenehme Position für mich, aber ich arbeitete an Riesenprojekten mit und lernte, wie man mit einem großen Publikum umgeht.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Obwohl es eine unheimliche, tadelnswerte Position war, darin zu sein, arbeitete ich in riesigen Treffpunkten und erfuhr, wie man eine Menge arbeitet.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Obwohl es sich um eine seltsame, verwerfliche Position handelte, arbeitete ich in riesigen Spielstätten und lerne, wie man eine Menge Arbeit machen kann.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Es war eine seltsame , verwerflich Position , mich war im großen spielstätten und lernen , wie an eine menge arbeit .</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Es war zwar eine seltsame, verwerfliche Haltung, ich war in großen Häusern zu arbeiten und lernen, wie eine Menge zu arbeiten.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Obwohl es eine seltsam verwerfliche Position in The Heart Of war, arbeitete ich in riesigen Spielstätten und lernen, wie man eine Menschenmenge funktioniert.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="527">Her pay-off is said to be close to £1 million.</source>
+      <reference>Ihre Abfindung betrug angeblich fast 1 Million £.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Ihr Profit wird gesagt, um zu £1 Million nah zu sein.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Ihre Vorteile, sagte in der Nähe von 1 Million Pfund zu sein.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Man sagt, dass man fast 1 Million Pfund ist.</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Man sagt, dass man nahe 1 Mio. £ ist.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Ihr Pay-off soll in der Nähe von 1 Million Pfund.</translation>
+    </seg>
+    <seg>
+      <source id="1941">Qadri made similar comments:</source>
+      <reference>Qadri äußerte sich ähnlich.</reference>
+      <translation system="newstest2015.online-A.0.en-de.txt">Qadri ähnliche Bemerkungen:</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Qadri Ähnlich äußerte:</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt,newstest2015.online-F.0.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt,newstest2015.uedin-syntax.3866.en-de.txt">Qadri machte ähnliche Kommentare:</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Qadri habe ähnliche Anmerkungen gemacht:</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Qadri hat ähnliche Kommentare:</translation>
+    </seg>
+    <seg>
+      <source id="1749">And then the rain came.</source>
+      <reference>Bis der große Regen kam.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt,newstest2015.online-E.0.en-de.txt,newstest2015.PROMT-Rule-based.3990.en-de.txt">Und dann ist der Regen gekommen.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.Illinois.4084.en-de.txt,newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt,newstest2015.Neural-MT.4079.en-de.txt,newstest2015.online-A.0.en-de.txt,newstest2015.online-B.0.en-de.txt,newstest2015.online-C.4165.en-de.txt,newstest2015.online-F.0.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt,newstest2015.uedin-syntax.3866.en-de.txt">Und dann kam der Regen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Bis der große Regen kam .</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="803">'This tragedy changed my life but it surely did not break it,' she said defiantly.</source>
+      <reference>"Diese Tragödie veränderte mein Leben, aber es hat mich nicht zerbrochen," sagt sie kampflustig.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">'Diese Tragödie hat mein Leben geändert, aber es hat es sicher nicht gebrochen', hat sie aufsässig gesagt.</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">'Diese Tragödie veränderte mein Leben aber es brach es sicherlich nicht, sie sagte trotzig'.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">"diese Tragödie hat mein Leben verändert, aber es hat ihn nicht brechen", sagte sie trotzig.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">‚Diese Tragödie hat mein Leben aber es sicherlich hat nicht gebrochen es geändert,‘ hat sie trotzig gesagt.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">"Diese Tragödie hat mein Leben verändert, aber es ist sicher nicht zerbrechen", sagte sie.</translation>
+    </seg>
+    <seg>
+      <source id="908">I will not forget it but I do not feel sorry for myself.</source>
+      <reference>Ich werde es nicht vergessen, aber ich bemitleide mich nicht.</reference>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Ich werde nicht vergessen, aber ich bin es leid, nicht für mich selbst.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Ich werde es nicht vergessen aber ich fühle nicht traurig für mich selbst.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Ich werde nicht vergessen , es tut mir leid , aber Ich habe nicht das gefühl für Ich .</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Ich werde ihn nicht vergessen, aber ich bin nicht leid für mich.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Ich werde es nicht vergessen, aber ich bedauere mich nicht.</translation>
+    </seg>
+    <seg>
+      <source id="1902">SC Weende sends a girl into the small regional league.</source>
+      <reference>Der SC Weende schickt seine Mädchen in die kleine Bezirksliga.</reference>
+      <translation system="newstest2015.online-A.0.en-de.txt">SC Weende sendet ein Mädchen in der kleinen Regionalliga.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.Neural-MT.4079.en-de.txt,newstest2015.online-C.4165.en-de.txt,newstest2015.online-E.0.en-de.txt">SC Weende schickt ein Mädchen in die kleine regionale Liga.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt,newstest2015.uedin-syntax.3866.en-de.txt">SC Weende schickt ein Mädchen in die kleine Regionalliga.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt,newstest2015.online-F.0.en-de.txt,newstest2015.PROMT-Rule-based.3990.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt">SC Weende sendet ein Mädchen in die kleine Regionalliga.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">SC Weende sendet ein Mädchen in die kleine regionale Liga.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1118">But Rachel, my wife, was worrying.</source>
+      <reference>Aber Rachel, meine Frau, war besorgt.</reference>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt,newstest2015.online-B.0.en-de.txt,newstest2015.uedin-syntax.3866.en-de.txt">Aber Rachel, meine Frau, war besorgniserregend.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt,newstest2015.PROMT-Rule-based.3990.en-de.txt">Aber Rachel, meine Frau war beunruhigend.</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Aber Rachel, meine Ehefrau, machte sich Sorgen.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Aber meine Ehefrau Rachel, war besorgniserregend.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Aber Rachel , meine Frau , war besorgt .</translation>
+    </seg>
+    <seg>
+      <source id="1832">With the cost of college textbooks surpassing $1,000 a year for many students, soon-to-be sophomore Matt Schroeder came up with a smart way to trim costs.</source>
+      <reference>Da die Kosten für Uni-Lehrbücher für viele Studenten mehr als 1.000 $ pro Jahr betragen, überlegte sich der Fast-Zweitsemesterstudent Matt Schroeder eine clevere Sparidee.</reference>
+      <translation system="newstest2015.online-A.0.en-de.txt">Mit den Kosten für College-Lehrbücher über $1.000 pro Jahr für viele Studierende kam bald-zusein Sophomore Matt Schroeder auf kluge Art, Kosten zu schneiden.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Mit den Kosten der Hochschullehrbüchern übertraf 1000 $ pro Jahr für viele Schüler, bald-zu-sein, kam sophomore Matt Schroeder mit einem intelligenten Weg, um Kosten zu trimmen.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Mit den Kosten von Universitätslehrbüchern hervorragende 1.000 $ pro Jahr für viele Studenten hat zukünftiger College-Student Matt Schroeder eine kluge Weise präsentiert, Kosten zurechtzumachen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">mit den Kosten der college lehrbüchern über $ 1.000 pro Jahr für viele Studenten , schüler soon-to-be Matt Schroeder kam mit eine intelligenten art und weise zu trimmen .</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Mit den Kosten für das Kollegium Lehrbücher über 1.000 Dollar pro Jahr für viele Studenten, kam bald Schüler Matt Schröder mit einem guten Weg, um Kosten einzusparen.</translation>
+    </seg>
+    <seg>
+      <source id="1081">Janice Allen may not have thought of herself as a typical victim of mesothelioma, but Julian Peto's work suggests that her story is far from uncommon.</source>
+      <reference>Janice Allen hat sich vielleicht nicht als typisches Mesotheliomopfer gesehen, aber die Arbeit von Julian Peto deutet darauf hin, dass ihre Geschichte keinesfalls ungewöhnlich ist.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Janice Allen nicht gedacht an als typisches Opfer der Mesothelioms, aber Julian Petos Arbeit schlägt vor, dass ihre Geschichte weit von seltenes ist.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Janice Allen darf an sich als kein typisches Opfer von mesothelioma gedacht haben, aber Julian Petos Arbeit deutet an, dass ihre Geschichte weit ist, von ungewöhnlich.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Janice Allen nicht gedacht haben, der sich selbst als typische Opfer von Mesotheliom, aber Julian Peto legt nahe, dass ihre Geschichte ist bei weitem nicht ungewöhnlich.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Janice Allen kann selbst nicht gedacht haben, als ein typisches Opfer Mesotheliom, aber die Arbeit von Julian Peto weist darauf hin, dass ihre Geschichte ist alles andere als ungewöhnlich.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Janice Allen kann nicht von sich selbst gedacht haben, als typische Opfer von Mesotheliom, aber Julian Peto's Arbeit legt nahe, dass ihre Geschichte bei weitem nicht ungewöhnlich ist.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1301">This summer, activists organized an unofficial referendum on voting rights that drew 780,000 participants - more than a fifth of Hong Kong voters.</source>
+      <reference>In diesem Sommer organisierten Aktivisten ein inoffizielles Referendum zu den Wahlrechten, an denen 780.000 Menschen teilnahmen - mehr als ein Fünftel der Wähler in Hongkong.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Im vergangenen Sommer haben Aktivisten eine inoffizielle Volksabstimmung über Stimmrechte organisiert, die 780.000 Teilnehmer über ein Fünftel der Wähler Hongkongs lenkte.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Diesen Sommer organisierten Aktivisten ein inoffizielles Referendum über Abstimmungsrechte, die 780.000 Teilnehmer zeichneten - mehr als ein Fünftel von Hongkong-Wählern.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">In diesem Sommer , organisierten aktivistinnen einen inoffiziellen Referendum über stimmrechte zogen die notierungen der teilnehmer - mehr als In Fünftel der Hongkong .</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">In diesem Sommer organisierten Aktivisten, die ein inoffizielles Referendum über die Stimmrechte zog 780000 Teilnehmer - mehr als ein Fünftel der Wähler in Hongkong.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Dieser Sommer, Aktivisten organisierte ein nicht offizielles Referendum auf Wahlrechten, die 780.000 Teilnehmer - mehr als ein Fünftel von Hong Kong-Wählern zeichneten.</translation>
+    </seg>
+    <seg>
+      <source id="1341">The group came nearly 40 years after black women originally asked for assistance, said Mitchell.</source>
+      <reference>Die Gruppe entstand fast 40 Jahre nach der ursprünglichen Bitte um Hilfe von Seiten schwarzer Frauen, sagt Mitchell.</reference>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Die Gruppe kam nach fast 40 Jahren schwarze Frauen ursprünglich um Hilfe gebeten, sagte Mitchell.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Die Gruppe kam fast 40 Jahre nach der schwarzen Frauen ursprünglich um Hilfe gebeten, sagte Mitchell.</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Die Gruppe kam beinah 40 Jahre, nachdem Negerinnen ursprünglich um Hilfe gebeten hatten, Mitchell sagte.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Die Gruppe kam fast 40 Jahre nachdem schwarze Frauen ursprünglich um Hilfe gebeten, sagte Mitchell.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Die Gruppe kam fast 40 Jahre nach dem schwarzer Frauen ursprünglich bat um Hilfe , sagt Mitchell .</translation>
+    </seg>
+    <seg>
+      <source id="1082">He has produced a study of sufferers which suggests that "a substantial proportion of mesotheliomas with no known occupational or domestic exposure were probably caused by environmental asbestos exposure."</source>
+      <reference>Er hat eine Studie der Betroffenen vorgelegt, in der dargestellt wird, dass "ein wesentlicher Anteil der Mesotheliome ohne bekannte Aussetzung durch Arbeit oder im Hause vermutlich durch Asbestkontakt in der Umwelt verursacht wurde."</reference>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Er hat eine Studie der Erkrankten erstellt, die besagt, dass "ein erheblicher Teil der mesotheliomas ohne bekannten betrieblichen oder häuslichen Exposition wahrscheinlich durch Umwelt verursacht wurde".</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Er hat eine Untersuchung von Patienten, die suggeriert, dass "ein erheblicher Anteil der mesotheliomas ohne bekannte betriebliche oder häusliche Belastung wurden wahrscheinlich durch die Asbestbelastung ausgelöst".</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Er hat eine Studie der Kranken produziert, was darauf hindeutet, dass "ein wesentlicher Teil der Mesotheliome mit keinen bekannten Exposition am Arbeitsplatz oder im Inland wurden vermutlich durch Umwelt durch Asbest verursacht."</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Er hat eine Studie vorgelegt, die den Betroffenen legt nahe, dass "einen erheblichen Anteil der mesotheliomas mit keiner betrieblichen oder häuslichen Belastung wahrscheinlich durch die Asbestbelastung" verursacht wurden.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Er hat eine Studie von Erkrankten, die suggeriert, dass "ein erheblicher Teil mesotheliomas ohne betriebliche oder häusliche Belastung wahrscheinlich verursacht durch ökologische Asbestbelastung bekannt."</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="460">In order to avoid a deranking of position in the now smaller school, the then dean, Georg Sigl decided to move to Karlsfeld - and Manfred Richter became his successor.</source>
+      <reference>Um einer Rückstufung in der nun kleineren Schule zu entgehen, wechselte der damalige Rektor Georg Sigl nach Karlsfeld - und Manfred Richter wurde sein Nachfolger.</reference>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Um zu vermeiden , dass einer deranking von position in der nun kleineren Schule , die dann dean , Georg Sigl beschlossen , sich zu bewegen , Um Karlsfeld - und Manfred Richter wurde sein Nachfolger .</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Um ein deranking von Position zu vermeiden, in der jetzt kleinere Schule, der dann Dekan, entschied sich Georg Sigl, bis Karl Bereich zu verlagern - und Manfred Richter wurde seinen Nachfolger.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Um eine Deranking Position auf die jetzt kleinere Schule zu vermeiden, hat der damalige Dekan Georg Sigl beschlossen, Karlsfeld zu bewegen - und Manfred Richter wurde seine Nachfolgerin.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Um eine deranking der Position in der nun kleineren Schule zu vermeiden, beschloss der damalige Dekan Georg Sigl zu Karlsfeld zu bewegen - und Manfred Richter wurde sein Nachfolger.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Um eine deranking in der jetzt kleineren Schule zu vermeiden, beschloss der damalige Dekan Georg Sigl, sich nach Karlsfeld zu bewegen - und Manfred Richter wurde sein Nachfolger.</translation>
+    </seg>
+    <seg>
+      <source id="1702">Environmentally friendly vacuum cleaners and increasing wages</source>
+      <reference>Umweltfreundliche Staubsauger und steigende Löhne</reference>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Ökologisch Environmentally und steigende Löhne</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt,newstest2015.online-F.0.en-de.txt,newstest2015.PROMT-Rule-based.3990.en-de.txt">Umweltfreundliche Staubsauger und zunehmende Löhne</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Umweltfreundliche Staubsauger und wachsende Löhne</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Umweltfreundliche Staubsauger und eine Erhöhung der Löhne</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Umweltverträglicher Staubsauger und höhere Löhne</translation>
+    </seg>
+    <seg>
+      <source id="198">On Sunday, the NPD narrowly missed achieving the five percent barrier, which would have seen it enter parliament.</source>
+      <reference>Die NPD war bei der Abstimmung am Sonntag ganz knapp an der Fünf-Prozent-Hürde gescheitert.</reference>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">am Sonntag , Die NPD nur knapp fünf prozent der barriere , Die hätten sie gesehen .</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Am Sonntag, dem NPD knapp verfehlt Erreichung der fünf Prozent-Schranke, die gesehen, wäre es das Parlament betreten haben.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Am Sonntag hat die NPD knapp verpassten Erreichen der Fünf-Prozent-Hürde, die es gesehen hätte.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Am Sonntag verfehlt die NPD knapp erreichen die fünf Prozent-Barriere, die es Parlament gesehen hätte.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Am Sonntag hatte die Ndp nur knapp verpasst, die Barriere von fünf Prozent zu erzielen, die es gesehen, das Parlament betreten hätten.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="929">My pain is enormous and I carry it with me every day.</source>
+      <reference>Mein Schmerz ist ungeheuer und ich trage ihn jeden Tag mit mir.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Mein Schmerz ist enorm, und ich möchte mit Mir Tag für Tag durchführen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Mein Schmerz ist enorm und ich es mit mir jeden Tag .</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Mein Schmerz ist enorm, und ich trage ihn mit mir jeden Tag.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Meine Schmerz ist enorm und ich tragen es mit mir jeden Tag.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Mein Schmerz ist riesengroß und ich jeden Tag mit mir.</translation>
+    </seg>
+    <seg>
+      <source id="1302">And in July, tens of thousands turned out for one of the largest pro-democracy demonstrations in the region's history.</source>
+      <reference>Im Juli nahmen Zehntausende an einer der größten Demokratiedemonstrationen in der Geschichte der Region teil.</reference>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Und im Juli wandten sich Zehntausende für eine der größten prodemokratischen Demonstrationen in der Geschichte der Region.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Und im Juli Zehntausende erwies sich für eine der größten prodemokratischen Demonstrationen in der Geschichte der Region.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Und im Juli haben sich Zehntausende für eine der größten pro-demokratischen Demonstrationen in der Geschichte der Region entwickelt.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">und Im Juli , Zehntausende entpuppte sich für eines der größten demonstrationen militärputsch in der Geschichte dieser Region .</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Und im Juli kamen Zehner von Tausenden für eine der größten Pro-Demokratie-Demonstrationen in der Geschichte der Region.</translation>
+    </seg>
+    <seg>
+      <source id="189">The Israeli military, meanwhile, carried out more than 5,000 airstrikes and other attacks.</source>
+      <reference>Währenddessen führte das israelische Militär mehr als 5.000 Luft- und andere Angriffe durch.</reference>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">das israelische Militär , inzwischen mehr als 5000 durchgeführten nod und andere Angriffe .</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Die israelischen Streitkräfte mittlerweile haben mehr als 5.000 airstrikes und Andere Angriffe ausgeführt.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Das israelische Militär inzwischen mehr als 5000 Luftangriffe und andere Angriffe durchgeführt.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Das israelische Militär führte inzwischen mehr als 5.000 Luftangriffe und andere Angriffe durch.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Das israelische Militär unterdessen durchgeführt mehr als 5.000 Luftangriffe und andere Angriffe.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1753">As such, nothing is going to stop them from repeating the big party next year.</source>
+      <reference>Deshalb stehe einer Wiederholung der großen Party im kommenden Jahr nichts entgegen.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Als solche ist sie daran hindern, nichts von der großen Feier im nächsten Jahr zu wiederholen.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Als solcher ist nichts dabei, sie zu verhindern, die große Partei im nächsten Jahr zu wiederholen.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Als solche nichts daran hindern, von den großen Parteien im nächsten Jahr zu wiederholen.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Als solches wird nichts sie von die große Partei nächstes Jahr wiederholen stoppen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">wie jedoch aus der großen Party im nächsten Jahr .</translation>
+    </seg>
+    <seg>
+      <source id="677">Ailinn Solomons flushed and rose from her deckchair, knocking over the console and spilling the wine they'd been drinking.</source>
+      <reference>Ailinn Solomons wurde rot und erhob sich aus ihrem Liegestuhl, warf die Konsole um und verschüttete den Wein, den sie getrunken hatten.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Ailinn absolut bündig und stieg aus ihrem Liegestuhl, klopft auf die Konsole und kann sie den Wein getrunken hatte.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Ailinn Solomons werden und stieg von ihrem Liegestuhl, klopfen über die Konsole und gießt den Wein, den sie getrunken hatten.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Ailinn Solomons gespült und stieg von ihrem Liegestuhl, hatte über die Konsole klopfen und verschütten den Wein sie getrunken.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Ailinn Salomonen überfielen und stiegen aus ihrem Liegestuhl, klopft über die Konsole und verwandelt den Wein, den sie getrunken hatte.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Ailinn Salomonen durchgespült und von ihrem Liegestuhl, über die Konsole und der Wein getrunken.</translation>
+    </seg>
+    <seg>
+      <source id="514">While there, he told waiting journalists that not all schools had reopened, but that he was committed to defending the country for future generations:</source>
+      <reference>Dort teilte er wartenden Journalisten mit, dass nicht alle Schulen wieder geöffnet hatten, dass er jedoch entschlossen sei, das Land für zukünftige Generationen zu verteidigen:</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Während es, erzählte er den wartenden Journalisten, dass nicht alle Schulen wieder geöffnet hatte, sondern auch, dass er verpflichtet, war das Land für künftige Generationen zu verteidigen:</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Er sagte Journalisten, die warten nicht alle Schulen wieder geöffnet hatte, sondern dass er verpflichtet war, das Land für die kommenden Generationen zu schützen:</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Er sagte wartenden Journalisten zwar, dass nicht alle Schulen wieder geöffnet hatten, aber er war entschlossen, das Land für zukünftige Generationen zu verteidigen.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Zwar sagte er den Journalisten zu warten, dass nicht alle Schulen geöffnet hatten, sondern dass er sich für die Verteidigung des Landes für künftige Generationen.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Während dort, er Wartejournalisten sagte, dass nicht alle Schulen wieder geöffnet hatten, aber dass er an der Verteidigung des Landes für zukünftige Generationen festgelegt wurde:</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="844">She vividly recalls her trip with Damir to London.</source>
+      <reference>Sie erinnert sich lebhaft an ihre Reise nach London mit Damir.</reference>
+      <translation system="newstest2015.online-A.0.en-de.txt">Sie erinnert sich lebhaft an ihrer London-Reise mit Damir.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Sie erinnert sich lebhaft ihre Reise mit Damir nach London.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt,newstest2015.KIT.4019.en-de.txt,newstest2015.udsSant.4051.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt">Lebhaft erinnert sie ihre Reise mit Damir nach London.</translation>
+      <translation system="newstest2015.Illinois.4084.en-de.txt">Sie erinnern uns an ihrer Reise mit Damir nach London.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Sie erinnert sich noch lebhaft an ihre Reise mit Damir nach London.</translation>
+    </seg>
+    <seg>
+      <source id="1890">The consequence: Any team that has not been promoted, has been demoted.</source>
+      <reference>Die Folge: Wer nicht aufgestiegen ist, ist abgestiegen.</reference>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Die Konsequenz: Jedes Team, das nicht befördert wurde, wurde zurückgestuft.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt,newstest2015.online-B.0.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt">Die Folge: Jedes Team, das nicht gefördert wurde, wurde degradiert.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Die Konsequenz: Eine Mannschaft, die nicht angepriesen worden ist, ist degradiert worden.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Die Folge: Jede Mannschaft, die nicht gefördert worden ist, wurde zurückgestuft.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Die Folge: Jede Mannschaft, die nicht gefördert worden ist, ist degradiert worden.</translation>
+    </seg>
+    <seg>
+      <source id="849">I remember when Damir wanted to eat borsch soup, they called all the local Russian restaurants.</source>
+      <reference>Ich erinnere mich noch, wie Damir gerne Borschtsch essen wollte und sie alle örtlichen russischen Restaurants anriefen.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Ich erinnere mich, als Damir Borschtsch Suppe essen wollten, nannten sie alle lokalen russischen Restaurants.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Ich erinnere mich daran, wann Damir Borsch-Suppe essen wollte, sie riefen alle lokalen russischen Restaurants.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Ich erinnere mich daran, als Damir borsch Suppe essen wollte, haben sie alle örtlichen russischen Restaurants gerufen.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Ich erinnere mich, als Damir Borschtsch essen wollte, nannten sie alle lokalen russischen Restaurants.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Ich erinnere Ich , als Damir essen Borschtsch suppe , nannten sie alle lokalen russischen Restaurants .</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1106">Yet the condition went undiagnosed.</source>
+      <reference>Seine Beschwerden blieben jedoch ohne Diagnose.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Dennoch ist die Lage noch unerkannt.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">doch der zustand diagnostiziert wurde .</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Doch die Krankheit diagnostiziert wurde.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Dennoch wurde die Bedingung undiagnostiziert.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Dennoch ging die Bedingung undiagnosed.</translation>
+    </seg>
+    <seg>
+      <source id="201">The German government and Bundestag did not take part in the banning submission.</source>
+      <reference>Bundesregierung und Bundestag schlossen sich nicht an.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Die deutsche Regierung und der Bundestag nahmen nicht an der verbietenden Unterordnung teil.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Die deutsche Regierung und der Bundestag haben an der verbietenden Einreichung nicht teilgenommen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Bundesregierung und Bundestag schlossen sich nicht an .</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Die deutsche Regierung und Bundestag nahm nicht teils in der Verbotsvorlage.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Die deutsche Regierung und Bundestag hat nicht an der Verbot vor Lage.</translation>
+    </seg>
+    <seg>
+      <source id="692">He heaved himself out of the deckchair like an old man.</source>
+      <reference>Er erhob sich aus dem Liegestuhl wie ein alter Mann.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Er hob sich aus dem deckchair wie einem alten Mann heraus.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">im namen des schattenberichterstatters meiner fraktion Er sich selbst aus dem Liegestuhl wie ein alter Mann .</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Er stemmte sich aus dem Liegestuhl wie ein alter Mann.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Er hob sich aus dem Liegestuhl wie ein alter Mann hoch.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Er hat sich selbst aus dem Liegestuhl wie ein alter Mann hochgehoben.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="796">My legs were covered in blood.</source>
+      <reference>Meine Beine waren blutüberströmt.</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Meine Beine waren im Blut.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Meine Beine wurden im Blut umfasst.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">My legs covered in blood.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Meine Beine wurden in Blut bedeckt.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Meine Beine waren blutüberströmt .</translation>
+    </seg>
+    <seg>
+      <source id="1519">If Jazz is not your thing, then you can also come along and try out one of the other groups offered by TV Jahn.</source>
+      <reference>Wem Jazztanz nicht so liegt, der kann auch in eines der anderen Angebote des TV Jahn hineinschnuppern.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Wenn Jazz nicht Ihr Ding ist, dann können Sie auch kommen und versuchen, eine der anderen Gruppen des TV Jahn.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Wenn Jazz ist nicht Ihr Ding, dann können Sie auch kommen und probieren Sie eine der anderen Gruppen von TV Jahn angeboten.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Wenn Jazz nicht Ihr Ding ist, dann können Sie auch eine der anderen Gruppen mitkommen und können ausprobieren, die von Fernsehapparat Jahn angeboten werden.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Wenn Jazz nicht ihre Sache ist, können sie kommen und eines anderen Gruppen, die von Tv Jahn angeboten werden ausprobieren.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Wenn Jazz nicht Ihr Ding ist, dann können Sie auch zusammen kommen und eine der anderen Gruppen von TV Jahn ausprobieren.</translation>
+    </seg>
+    <seg>
+      <source id="721">Esme Nussbaum looked around her while Rabinowitz spoke.</source>
+      <reference>Esme Nussbaum sah sich um, während Rabinowitz sprach.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Um sich herum sah Esme Nussbaum, während Rabinowitz gesprochen hat.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Esme Nussbaum schaute sich um ihre während Rabinowitz sprach.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Esme Nussbaum herum während Rabinowitz sprach.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Esme Nussbaum hat sich sie während Rabinowitz hat gesprochen umgeschaut.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Esme Nussbaum kümmerte sich um sie, während Rabinowitz sprach.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="915">Georgy Farniyev, 20</source>
+      <reference>Georgij Fanijew, 20</reference>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.ExEx.4124.en-de.txt,newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Georgi Farniyev, 20</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Georgy Farniyev, 20 Jahre alt</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Georgy Farniyev,</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Georgij Fanijew , 20</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Georgy Farniyev, 20.</translation>
+    </seg>
+    <seg>
+      <source id="343">It's very hard.</source>
+      <reference>Es ist sehr schwer.</reference>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Es ist sehr hart</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.ExEx.4124.en-de.txt,newstest2015.Illinois.4084.en-de.txt,newstest2015.Neural-MT.4079.en-de.txt,newstest2015.online-A.0.en-de.txt,newstest2015.online-B.0.en-de.txt,newstest2015.udsSant.4051.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt,newstest2015.uedin-syntax.3866.en-de.txt">Es ist sehr schwer.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Es ist sehr schwierig.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt,newstest2015.online-F.0.en-de.txt,newstest2015.PROMT-Rule-based.3990.en-de.txt">Es ist sehr hart.</translation>
+    </seg>
+    <seg>
+      <source id="1461">In 1937 the Nazi regime closed the club down.</source>
+      <reference>Das NS-Regime hatte 1937 die Auflösung des Vereins veranlasst.</reference>
+      <translation system="newstest2015.online-A.0.en-de.txt">1937 geschlossen das NS-Regime im Club.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Im Jahr 1937 schloss das NS-Regime den Klub.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">1937 hat das nazistische Regime den Klub geschlossen.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Im Jahr 1937 schloss das NS-Regime den Club nach unten.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Im NS-Regime 1937 der Club geschlossen.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="966">If we could only grab all the rebels and throw them away - as far away as possible.</source>
+      <reference>Wenn wir nur alle diese Rebellen greifen und hinauswerfen könnten - so weit weg wie nur möglich.</reference>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Wenn wir nur alle Rebellen und werfen sie sie weg - so weit wie möglich .</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Wenn wir nur alle Rebellen greifen und sie beiseite schieben könnten - so weit wie möglich.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Wenn wir nur alle Rebellen schnappen konnten und werfen sie weg - so weit wie möglich.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Wenn wir nur alle Rebellen und werfen sie weg - so weit weg wie möglich.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Wenn wir nur die Rebellen greifen und werfen sie Weg - so weit weg wie möglich.</translation>
+    </seg>
+    <seg>
+      <source id="384">Instead, the stage manager announced the performance would resume as soon as the problem was resolved.</source>
+      <reference>Stattdessen verkündete der Bühnenleiter, dass die Vorstellung weiterginge, sobald das Problem gelöst sei.</reference>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Stattdessen kündigte die Bühne die Performance Manager aufnehmen, sobald das Problem gelöst wurde.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Der Inspizient verkündete stattdessen die Leistung wieder aufnehmen werde, sobald das Problem behoben wurde.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Stattdessen hat der Bühnenmanager angekündigt, die Leistung wieder aufgenommen werden würde, sobald das Problem gelöst wurde.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Stattdessen die bühne manager kündigte die leistung lebenslauf , sobald dass Problem behoben wurde .</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Statt dessen kündigte der Inspizient an, dass die Leistung weitermachen würde, sobald das Problem gelöst wurde.</translation>
+    </seg>
+    <seg>
+      <source id="1041">As a result, mesothelioma is no respecter of class, wealth, occupation, or age.</source>
+      <reference>Und daher kennt Mesotheliom keine Klassenschranken, finanzielle Grenzen, Berufe oder Alter.</reference>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Infolgedessen Mesotheliom ist keine Klasse, Vermögen, Beruf oder Alter.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">als ergebnis , Mesotheliom ist keine gesunden oder klasse , reichtum , Berufe , gesundheit oder Alter .</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Infolgedessen nimmt Mesotheliom auf Klasse, Reichtum, Beruf oder Alter keine Rücksicht.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Infolgedessen ist Mesotheliom keine Rücksicht auf Klasse, Vermögen, Beruf oder Alter.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Mesotheliom ist folglich kein ansehen der Klasse, Reichtum, Beruf oder Alter.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="929">My pain is enormous and I carry it with me every day.</source>
+      <reference>Mein Schmerz ist ungeheuer und ich trage ihn jeden Tag mit mir.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Mein Schmerz ist enorm, und ich möchte mit Mir Tag für Tag durchführen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Mein Schmerz ist enorm und ich es mit mir jeden Tag .</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Mein Schmerz ist enorm, und ich trage ihn mit mir jeden Tag.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Meine Schmerz ist enorm und ich tragen es mit mir jeden Tag.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Mein Schmerz ist riesengroß und ich jeden Tag mit mir.</translation>
+    </seg>
+    <seg>
+      <source id="1302">And in July, tens of thousands turned out for one of the largest pro-democracy demonstrations in the region's history.</source>
+      <reference>Im Juli nahmen Zehntausende an einer der größten Demokratiedemonstrationen in der Geschichte der Region teil.</reference>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Und im Juli wandten sich Zehntausende für eine der größten prodemokratischen Demonstrationen in der Geschichte der Region.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Und im Juli Zehntausende erwies sich für eine der größten prodemokratischen Demonstrationen in der Geschichte der Region.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Und im Juli haben sich Zehntausende für eine der größten pro-demokratischen Demonstrationen in der Geschichte der Region entwickelt.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">und Im Juli , Zehntausende entpuppte sich für eines der größten demonstrationen militärputsch in der Geschichte dieser Region .</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Und im Juli kamen Zehner von Tausenden für eine der größten Pro-Demokratie-Demonstrationen in der Geschichte der Region.</translation>
+    </seg>
+    <seg>
+      <source id="189">The Israeli military, meanwhile, carried out more than 5,000 airstrikes and other attacks.</source>
+      <reference>Währenddessen führte das israelische Militär mehr als 5.000 Luft- und andere Angriffe durch.</reference>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">das israelische Militär , inzwischen mehr als 5000 durchgeführten nod und andere Angriffe .</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Die israelischen Streitkräfte mittlerweile haben mehr als 5.000 airstrikes und Andere Angriffe ausgeführt.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Das israelische Militär inzwischen mehr als 5000 Luftangriffe und andere Angriffe durchgeführt.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Das israelische Militär führte inzwischen mehr als 5.000 Luftangriffe und andere Angriffe durch.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Das israelische Militär unterdessen durchgeführt mehr als 5.000 Luftangriffe und andere Angriffe.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1753">As such, nothing is going to stop them from repeating the big party next year.</source>
+      <reference>Deshalb stehe einer Wiederholung der großen Party im kommenden Jahr nichts entgegen.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Als solche ist sie daran hindern, nichts von der großen Feier im nächsten Jahr zu wiederholen.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Als solcher ist nichts dabei, sie zu verhindern, die große Partei im nächsten Jahr zu wiederholen.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Als solche nichts daran hindern, von den großen Parteien im nächsten Jahr zu wiederholen.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Als solches wird nichts sie von die große Partei nächstes Jahr wiederholen stoppen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">wie jedoch aus der großen Party im nächsten Jahr .</translation>
+    </seg>
+    <seg>
+      <source id="677">Ailinn Solomons flushed and rose from her deckchair, knocking over the console and spilling the wine they'd been drinking.</source>
+      <reference>Ailinn Solomons wurde rot und erhob sich aus ihrem Liegestuhl, warf die Konsole um und verschüttete den Wein, den sie getrunken hatten.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Ailinn absolut bündig und stieg aus ihrem Liegestuhl, klopft auf die Konsole und kann sie den Wein getrunken hatte.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Ailinn Solomons werden und stieg von ihrem Liegestuhl, klopfen über die Konsole und gießt den Wein, den sie getrunken hatten.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Ailinn Solomons gespült und stieg von ihrem Liegestuhl, hatte über die Konsole klopfen und verschütten den Wein sie getrunken.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Ailinn Salomonen überfielen und stiegen aus ihrem Liegestuhl, klopft über die Konsole und verwandelt den Wein, den sie getrunken hatte.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Ailinn Salomonen durchgespült und von ihrem Liegestuhl, über die Konsole und der Wein getrunken.</translation>
+    </seg>
+    <seg>
+      <source id="514">While there, he told waiting journalists that not all schools had reopened, but that he was committed to defending the country for future generations:</source>
+      <reference>Dort teilte er wartenden Journalisten mit, dass nicht alle Schulen wieder geöffnet hatten, dass er jedoch entschlossen sei, das Land für zukünftige Generationen zu verteidigen:</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Während es, erzählte er den wartenden Journalisten, dass nicht alle Schulen wieder geöffnet hatte, sondern auch, dass er verpflichtet, war das Land für künftige Generationen zu verteidigen:</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Er sagte Journalisten, die warten nicht alle Schulen wieder geöffnet hatte, sondern dass er verpflichtet war, das Land für die kommenden Generationen zu schützen:</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Er sagte wartenden Journalisten zwar, dass nicht alle Schulen wieder geöffnet hatten, aber er war entschlossen, das Land für zukünftige Generationen zu verteidigen.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Zwar sagte er den Journalisten zu warten, dass nicht alle Schulen geöffnet hatten, sondern dass er sich für die Verteidigung des Landes für künftige Generationen.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Während dort, er Wartejournalisten sagte, dass nicht alle Schulen wieder geöffnet hatten, aber dass er an der Verteidigung des Landes für zukünftige Generationen festgelegt wurde:</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="844">She vividly recalls her trip with Damir to London.</source>
+      <reference>Sie erinnert sich lebhaft an ihre Reise nach London mit Damir.</reference>
+      <translation system="newstest2015.online-A.0.en-de.txt">Sie erinnert sich lebhaft an ihrer London-Reise mit Damir.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Sie erinnert sich lebhaft ihre Reise mit Damir nach London.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt,newstest2015.KIT.4019.en-de.txt,newstest2015.udsSant.4051.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt">Lebhaft erinnert sie ihre Reise mit Damir nach London.</translation>
+      <translation system="newstest2015.Illinois.4084.en-de.txt">Sie erinnern uns an ihrer Reise mit Damir nach London.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Sie erinnert sich noch lebhaft an ihre Reise mit Damir nach London.</translation>
+    </seg>
+    <seg>
+      <source id="1890">The consequence: Any team that has not been promoted, has been demoted.</source>
+      <reference>Die Folge: Wer nicht aufgestiegen ist, ist abgestiegen.</reference>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Die Konsequenz: Jedes Team, das nicht befördert wurde, wurde zurückgestuft.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt,newstest2015.online-B.0.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt">Die Folge: Jedes Team, das nicht gefördert wurde, wurde degradiert.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Die Konsequenz: Eine Mannschaft, die nicht angepriesen worden ist, ist degradiert worden.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Die Folge: Jede Mannschaft, die nicht gefördert worden ist, wurde zurückgestuft.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Die Folge: Jede Mannschaft, die nicht gefördert worden ist, ist degradiert worden.</translation>
+    </seg>
+    <seg>
+      <source id="849">I remember when Damir wanted to eat borsch soup, they called all the local Russian restaurants.</source>
+      <reference>Ich erinnere mich noch, wie Damir gerne Borschtsch essen wollte und sie alle örtlichen russischen Restaurants anriefen.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Ich erinnere mich, als Damir Borschtsch Suppe essen wollten, nannten sie alle lokalen russischen Restaurants.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Ich erinnere mich daran, wann Damir Borsch-Suppe essen wollte, sie riefen alle lokalen russischen Restaurants.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Ich erinnere mich daran, als Damir borsch Suppe essen wollte, haben sie alle örtlichen russischen Restaurants gerufen.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Ich erinnere mich, als Damir Borschtsch essen wollte, nannten sie alle lokalen russischen Restaurants.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Ich erinnere Ich , als Damir essen Borschtsch suppe , nannten sie alle lokalen russischen Restaurants .</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="966">If we could only grab all the rebels and throw them away - as far away as possible.</source>
+      <reference>Wenn wir nur alle diese Rebellen greifen und hinauswerfen könnten - so weit weg wie nur möglich.</reference>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Wenn wir nur alle Rebellen und werfen sie sie weg - so weit wie möglich .</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Wenn wir nur alle Rebellen greifen und sie beiseite schieben könnten - so weit wie möglich.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Wenn wir nur alle Rebellen schnappen konnten und werfen sie weg - so weit wie möglich.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Wenn wir nur alle Rebellen und werfen sie weg - so weit weg wie möglich.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Wenn wir nur die Rebellen greifen und werfen sie Weg - so weit weg wie möglich.</translation>
+    </seg>
+    <seg>
+      <source id="384">Instead, the stage manager announced the performance would resume as soon as the problem was resolved.</source>
+      <reference>Stattdessen verkündete der Bühnenleiter, dass die Vorstellung weiterginge, sobald das Problem gelöst sei.</reference>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Stattdessen kündigte die Bühne die Performance Manager aufnehmen, sobald das Problem gelöst wurde.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Der Inspizient verkündete stattdessen die Leistung wieder aufnehmen werde, sobald das Problem behoben wurde.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Stattdessen hat der Bühnenmanager angekündigt, die Leistung wieder aufgenommen werden würde, sobald das Problem gelöst wurde.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Stattdessen die bühne manager kündigte die leistung lebenslauf , sobald dass Problem behoben wurde .</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Statt dessen kündigte der Inspizient an, dass die Leistung weitermachen würde, sobald das Problem gelöst wurde.</translation>
+    </seg>
+    <seg>
+      <source id="1041">As a result, mesothelioma is no respecter of class, wealth, occupation, or age.</source>
+      <reference>Und daher kennt Mesotheliom keine Klassenschranken, finanzielle Grenzen, Berufe oder Alter.</reference>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Infolgedessen Mesotheliom ist keine Klasse, Vermögen, Beruf oder Alter.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">als ergebnis , Mesotheliom ist keine gesunden oder klasse , reichtum , Berufe , gesundheit oder Alter .</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Infolgedessen nimmt Mesotheliom auf Klasse, Reichtum, Beruf oder Alter keine Rücksicht.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Infolgedessen ist Mesotheliom keine Rücksicht auf Klasse, Vermögen, Beruf oder Alter.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Mesotheliom ist folglich kein ansehen der Klasse, Reichtum, Beruf oder Alter.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="541">What's more, apparently the Beeb's popularity is rising: 53 per cent support today as against 31 per cent 10 years ago.</source>
+      <reference>Und anscheinend steigt die BBC auf der Beliebtheitsskala wieder nach oben: 53 Prozent unterstützen sie heute, im Vergleich zu 31 Prozent vor 10 Jahren.</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Was mehr ist, offenbar ist die Beeb Popularität: 53 Prozent unterstützen, die heute als gegen 31 Prozent vor zehn Jahren.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Darüber hinaus ist die Beeb Popularität wächst offenbar: 53 Prozent Unterstützung heute vor 10 Jahren gegen 31 Prozent.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Was mehr ist, anscheinend erhebt sich die Beliebtheit der BBC: 53-Prozent-Unterstützung heute im Vergleich mit 31 Prozent vor 10 Jahren.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Was mehr ist, offenbar der Beeb Popularität steigt: 53 Prozent Unterstützung heute gegenüber 31 Prozent vor 10 Jahren.</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Darüber hinaus ist die Beeb Popularität offenbar steigt: 53 Prozent unterstützen heute als vor zehn Jahren gegen 31 Prozent.</translation>
+    </seg>
+    <seg>
+      <source id="1013">One day in 2007, however, he was the one who began to suffer.</source>
+      <reference>Eines Tages im Jahr 2007 war er jedoch derjenige, dessen Leidensweg begann.</reference>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Eines Tages 2007, aber er war derjenige, der zu leiden begann.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Eines Tages im Jahr 2007 jedoch war er derjenige, der zu leiden hatte.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Eines Tages im Jahr 2007 war er jedoch diejenige, die zu leiden begann.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt">Eines Tages im Jahr 2007, aber er war derjenige, der zu leiden begann.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Einen Tag im Jahr 2007 war er aber derjenige, der begann zu leiden.</translation>
+    </seg>
+    <seg>
+      <source id="2030">When Renzi became Premier in February 2014, he appointed Mogherini as his Foreign Minister.</source>
+      <reference>Als Renzi im Februar 2014 Premier wurde, berief er Mogherini zu seiner Außenministerin.</reference>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Als Renzi im Februar 2014 Premierminister wurde, ernannte er Mogherini zu seinem Außenminister.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">wenn Renzi Premier wurde im Februar 2014 , ernannte er Mogherini Als seinen außenminister .</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Als Renzi Premier im Februar 2014 geworden ist, hat er Mogherini zu seinem Außenminister ernannt.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Als Premier Renzi im Februar 2014 wurde, ernannte er seine Außenministerin Mogherini.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Wenn Renzi Premier im Februar 2014 bekam, hat er Mogherini in seinem Außenminister ernannt.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="137">The latest rain came courtesy of a couple of short, blustery showers, including a burst that started just before 8pm that dumped almost 4mm in about 10 minutes.</source>
+      <reference>Der letzte Niederschlag war das Ergebnis einer Reihe kurzer, stürmischer Schauer, einschließlich eines Gusses, der kurz vor 20 Uhr begann und für fast 4mm Niederschlag in etwa 10 Minuten sorgte.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Der späteste Regen kam Höflichkeit ein paar kurzer, böig Duschen, einschließlich eine Explosion, die kurz vor 8pm begann, das fast 4mm in ungefähr 10 Minuten entleerte.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Der späteste Regen ist Höflichkeit von ein paar kurzen, stürmischen Duschen, einschließlich eines Ausbruchs gekommen, der nur vor 8 Pm angefangen hat, die fast 4 Mm in ungefähr 10 Minuten abgeladen haben.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Die jüngsten Regen kam von ein paar kurzen, blustery Duschen, darunter ein Aufbäumen begann kurz vor 20.00 Uhr, dass in circa 10 Minuten fast 4mm gekippt.</translation>
+      <translation system="newstest2015.Illinois.4084.en-de.txt">Die Freundlichkeit der Regen kam ein paar kurze, blustery Duschen, darunter eine platzen, begann vor 8pm, fast 4mm in etwa 10 Minuten.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Der letzte Regen kam mit freundlicher Genehmigung von ein paar kurze, stürmischen Duschen, einschließlich eine Explosion, die kurz vor 20:00 gestartet, die fast 4 mm in ca. 10 Minuten zu verlassen.</translation>
+    </seg>
+    <seg>
+      <source id="515">The first of September ceremony was not held in every school.</source>
+      <reference>Die Septemberfeiern wurden nicht in jeder Schule abgehalten.</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Die erste von der Zeremonie wurde in jeder Schule nicht statt.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Die erste September-Zeremonie wurde nicht in jeder Schule abgehalten.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Die Zeremonie am 1. September wurde in jeder Schule nicht gehalten.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Die ersten September Zeremonie nicht in jeder Schule ausgetragen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Die Septemberfeiern wurden nicht in jeder Schule abgehalten .</translation>
+    </seg>
+    <seg>
+      <source id="359">Although it was a weird, reprehensible position to be in, I was working in huge venues and learning how to work a crowd.</source>
+      <reference>Es war eine sonderbare, unangenehme Position für mich, aber ich arbeitete an Riesenprojekten mit und lernte, wie man mit einem großen Publikum umgeht.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Obwohl es eine unheimliche, tadelnswerte Position war, darin zu sein, arbeitete ich in riesigen Treffpunkten und erfuhr, wie man eine Menge arbeitet.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Obwohl es sich um eine seltsame, verwerfliche Position handelte, arbeitete ich in riesigen Spielstätten und lerne, wie man eine Menge Arbeit machen kann.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Es war eine seltsame , verwerflich Position , mich war im großen spielstätten und lernen , wie an eine menge arbeit .</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Es war zwar eine seltsame, verwerfliche Haltung, ich war in großen Häusern zu arbeiten und lernen, wie eine Menge zu arbeiten.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Obwohl es eine seltsam verwerfliche Position in The Heart Of war, arbeitete ich in riesigen Spielstätten und lernen, wie man eine Menschenmenge funktioniert.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="915">Georgy Farniyev, 20</source>
+      <reference>Georgij Fanijew, 20</reference>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.ExEx.4124.en-de.txt,newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Georgi Farniyev, 20</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">Georgy Farniyev, 20 Jahre alt</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Georgy Farniyev,</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Georgij Fanijew , 20</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Georgy Farniyev, 20.</translation>
+    </seg>
+    <seg>
+      <source id="343">It's very hard.</source>
+      <reference>Es ist sehr schwer.</reference>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Es ist sehr hart</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.ExEx.4124.en-de.txt,newstest2015.Illinois.4084.en-de.txt,newstest2015.Neural-MT.4079.en-de.txt,newstest2015.online-A.0.en-de.txt,newstest2015.online-B.0.en-de.txt,newstest2015.udsSant.4051.en-de.txt,newstest2015.uedin-jhu-phrase.4072.en-de.txt,newstest2015.uedin-syntax.3866.en-de.txt">Es ist sehr schwer.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt,newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Es ist sehr schwierig.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt,newstest2015.online-F.0.en-de.txt,newstest2015.PROMT-Rule-based.3990.en-de.txt">Es ist sehr hart.</translation>
+    </seg>
+    <seg>
+      <source id="1461">In 1937 the Nazi regime closed the club down.</source>
+      <reference>Das NS-Regime hatte 1937 die Auflösung des Vereins veranlasst.</reference>
+      <translation system="newstest2015.online-A.0.en-de.txt">1937 geschlossen das NS-Regime im Club.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Im Jahr 1937 schloss das NS-Regime den Klub.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3990.en-de.txt">1937 hat das nazistische Regime den Klub geschlossen.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Im Jahr 1937 schloss das NS-Regime den Club nach unten.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Im NS-Regime 1937 der Club geschlossen.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1106">Yet the condition went undiagnosed.</source>
+      <reference>Seine Beschwerden blieben jedoch ohne Diagnose.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Dennoch ist die Lage noch unerkannt.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">doch der zustand diagnostiziert wurde .</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Doch die Krankheit diagnostiziert wurde.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Dennoch wurde die Bedingung undiagnostiziert.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Dennoch ging die Bedingung undiagnosed.</translation>
+    </seg>
+    <seg>
+      <source id="201">The German government and Bundestag did not take part in the banning submission.</source>
+      <reference>Bundesregierung und Bundestag schlossen sich nicht an.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Die deutsche Regierung und der Bundestag nahmen nicht an der verbietenden Unterordnung teil.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Die deutsche Regierung und der Bundestag haben an der verbietenden Einreichung nicht teilgenommen.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Bundesregierung und Bundestag schlossen sich nicht an .</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Die deutsche Regierung und Bundestag nahm nicht teils in der Verbotsvorlage.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt">Die deutsche Regierung und Bundestag hat nicht an der Verbot vor Lage.</translation>
+    </seg>
+    <seg>
+      <source id="692">He heaved himself out of the deckchair like an old man.</source>
+      <reference>Er erhob sich aus dem Liegestuhl wie ein alter Mann.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Er hob sich aus dem deckchair wie einem alten Mann heraus.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">im namen des schattenberichterstatters meiner fraktion Er sich selbst aus dem Liegestuhl wie ein alter Mann .</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Er stemmte sich aus dem Liegestuhl wie ein alter Mann.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Er hob sich aus dem Liegestuhl wie ein alter Mann hoch.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Er hat sich selbst aus dem Liegestuhl wie ein alter Mann hochgehoben.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="1301">This summer, activists organized an unofficial referendum on voting rights that drew 780,000 participants - more than a fifth of Hong Kong voters.</source>
+      <reference>In diesem Sommer organisierten Aktivisten ein inoffizielles Referendum zu den Wahlrechten, an denen 780.000 Menschen teilnahmen - mehr als ein Fünftel der Wähler in Hongkong.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Im vergangenen Sommer haben Aktivisten eine inoffizielle Volksabstimmung über Stimmrechte organisiert, die 780.000 Teilnehmer über ein Fünftel der Wähler Hongkongs lenkte.</translation>
+      <translation system="newstest2015.dfki-experimental.4061.en-de.txt,newstest2015.online-C.4165.en-de.txt">Diesen Sommer organisierten Aktivisten ein inoffizielles Referendum über Abstimmungsrechte, die 780.000 Teilnehmer zeichneten - mehr als ein Fünftel von Hongkong-Wählern.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">In diesem Sommer , organisierten aktivistinnen einen inoffiziellen Referendum über stimmrechte zogen die notierungen der teilnehmer - mehr als In Fünftel der Hongkong .</translation>
+      <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">In diesem Sommer organisierten Aktivisten, die ein inoffizielles Referendum über die Stimmrechte zog 780000 Teilnehmer - mehr als ein Fünftel der Wähler in Hongkong.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Dieser Sommer, Aktivisten organisierte ein nicht offizielles Referendum auf Wahlrechten, die 780.000 Teilnehmer - mehr als ein Fünftel von Hong Kong-Wählern zeichneten.</translation>
+    </seg>
+    <seg>
+      <source id="1341">The group came nearly 40 years after black women originally asked for assistance, said Mitchell.</source>
+      <reference>Die Gruppe entstand fast 40 Jahre nach der ursprünglichen Bitte um Hilfe von Seiten schwarzer Frauen, sagt Mitchell.</reference>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Die Gruppe kam nach fast 40 Jahren schwarze Frauen ursprünglich um Hilfe gebeten, sagte Mitchell.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Die Gruppe kam fast 40 Jahre nach der schwarzen Frauen ursprünglich um Hilfe gebeten, sagte Mitchell.</translation>
+      <translation system="newstest2015.online-C.4165.en-de.txt">Die Gruppe kam beinah 40 Jahre, nachdem Negerinnen ursprünglich um Hilfe gebeten hatten, Mitchell sagte.</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Die Gruppe kam fast 40 Jahre nachdem schwarze Frauen ursprünglich um Hilfe gebeten, sagte Mitchell.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Die Gruppe kam fast 40 Jahre nach dem schwarzer Frauen ursprünglich bat um Hilfe , sagt Mitchell .</translation>
+    </seg>
+    <seg>
+      <source id="1082">He has produced a study of sufferers which suggests that "a substantial proportion of mesotheliomas with no known occupational or domestic exposure were probably caused by environmental asbestos exposure."</source>
+      <reference>Er hat eine Studie der Betroffenen vorgelegt, in der dargestellt wird, dass "ein wesentlicher Anteil der Mesotheliome ohne bekannte Aussetzung durch Arbeit oder im Hause vermutlich durch Asbestkontakt in der Umwelt verursacht wurde."</reference>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Er hat eine Studie der Erkrankten erstellt, die besagt, dass "ein erheblicher Teil der mesotheliomas ohne bekannten betrieblichen oder häuslichen Exposition wahrscheinlich durch Umwelt verursacht wurde".</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Er hat eine Untersuchung von Patienten, die suggeriert, dass "ein erheblicher Anteil der mesotheliomas ohne bekannte betriebliche oder häusliche Belastung wurden wahrscheinlich durch die Asbestbelastung ausgelöst".</translation>
+      <translation system="newstest2015.online-A.0.en-de.txt">Er hat eine Studie der Kranken produziert, was darauf hindeutet, dass "ein wesentlicher Teil der Mesotheliome mit keinen bekannten Exposition am Arbeitsplatz oder im Inland wurden vermutlich durch Umwelt durch Asbest verursacht."</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Er hat eine Studie vorgelegt, die den Betroffenen legt nahe, dass "einen erheblichen Anteil der mesotheliomas mit keiner betrieblichen oder häuslichen Belastung wahrscheinlich durch die Asbestbelastung" verursacht wurden.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Er hat eine Studie von Erkrankten, die suggeriert, dass "ein erheblicher Teil mesotheliomas ohne betriebliche oder häusliche Belastung wahrscheinlich verursacht durch ökologische Asbestbelastung bekannt."</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="deu">
+    <seg>
+      <source id="796">My legs were covered in blood.</source>
+      <reference>Meine Beine waren blutüberströmt.</reference>
+      <translation system="newstest2015.CIMS.4117.en-de.txt">Meine Beine waren im Blut.</translation>
+      <translation system="newstest2015.online-F.0.en-de.txt">Meine Beine wurden im Blut umfasst.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">My legs covered in blood.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Meine Beine wurden in Blut bedeckt.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">Meine Beine waren blutüberströmt .</translation>
+    </seg>
+    <seg>
+      <source id="1519">If Jazz is not your thing, then you can also come along and try out one of the other groups offered by TV Jahn.</source>
+      <reference>Wem Jazztanz nicht so liegt, der kann auch in eines der anderen Angebote des TV Jahn hineinschnuppern.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Wenn Jazz nicht Ihr Ding ist, dann können Sie auch kommen und versuchen, eine der anderen Gruppen des TV Jahn.</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Wenn Jazz ist nicht Ihr Ding, dann können Sie auch kommen und probieren Sie eine der anderen Gruppen von TV Jahn angeboten.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Wenn Jazz nicht Ihr Ding ist, dann können Sie auch eine der anderen Gruppen mitkommen und können ausprobieren, die von Fernsehapparat Jahn angeboten werden.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Wenn Jazz nicht ihre Sache ist, können sie kommen und eines anderen Gruppen, die von Tv Jahn angeboten werden ausprobieren.</translation>
+      <translation system="newstest2015.uedin-syntax.3866.en-de.txt">Wenn Jazz nicht Ihr Ding ist, dann können Sie auch zusammen kommen und eine der anderen Gruppen von TV Jahn ausprobieren.</translation>
+    </seg>
+    <seg>
+      <source id="721">Esme Nussbaum looked around her while Rabinowitz spoke.</source>
+      <reference>Esme Nussbaum sah sich um, während Rabinowitz sprach.</reference>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Um sich herum sah Esme Nussbaum, während Rabinowitz gesprochen hat.</translation>
+      <translation system="newstest2015.CIMS.4117.en-de.txt,newstest2015.Illinois.4084.en-de.txt">Esme Nussbaum schaute sich um ihre während Rabinowitz sprach.</translation>
+      <translation system="newstest2015.KIT.4019.en-de.txt">Esme Nussbaum herum während Rabinowitz sprach.</translation>
+      <translation system="newstest2015.online-E.0.en-de.txt">Esme Nussbaum hat sich sie während Rabinowitz hat gesprochen umgeschaut.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Esme Nussbaum kümmerte sich um sie, während Rabinowitz sprach.</translation>
+    </seg>
+  </hit>
+</hits>

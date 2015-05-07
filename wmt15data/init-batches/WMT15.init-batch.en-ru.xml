@@ -1,0 +1,727 @@
+<hits>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="2656">Norwegian Cruise and Prestige Cruises representatives did not respond to requests for comment, while an Apollo spokesman declined to comment.</source>
+      <reference>Представители Norwegian Cruise и Prestige Cruises не откликнулись на просьбы дать комментарии, тогда как представитель Apollo отказался прокомментировать информацию.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Норвежский Круза и престиж Cruises представители не реагируют на просьбы о комментариях, представитель "" от комментариев отказался.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Норвежский Круиз и престиж круизы представители не ответили на просьбы о комментариях, а Аполлон пресс-секретарь отказался от комментариев.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Norwegian Cruise и престиж Круизы представители не ответили на просьбы о комментариях, в то время как пресс-секретарь Аполлон отказался комментировать.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Norwegian Cruise Prestige представители Cruises и не отвечать на запросы на комментарии, в то время как представитель "Аполлон" отказались от комментариев.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Представители норвежских круизных и престиж круиз не ответили на просьбы о комментариях, хотя Аполлон представитель отказался от комментариев.</translation>
+    </seg>
+    <seg>
+      <source id="2239">To recap, it was reported earlier that the priority development area might replace the SEZ.</source>
+      <reference>Напомним, ранее сообщалось, что территория опережающего развития может заменить ОЭЗ.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Чтобы резюмировать, сообщалось ранее, что территория опережающего развития могла бы заменить ОЭЗ.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Напомним, ранее сообщалось, что площадь приоритетное развитие может заменить ОЭЗ.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Подытожим, ранее сообщалось, что приоритетным направлением развития может заменить ОЭЗ.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Чтобы описать, ранее сообщалось о том, что приоритетом развития может заменить ОЭЗ.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Чтобы описать, ранее сообщалось, что приоритетной областью развития может заменить ОЭЗ.</translation>
+    </seg>
+    <seg>
+      <source id="789">Carried away by the day, Kevern began to play at an imaginary piano and in a rudely comic voice serenade Ailinn's big feet.</source>
+      <reference>Увлекшись этим днем, Кеверн принялся играть на воображаемом фортепиано и грубым комическим голосом воспевать большие ноги Эйлинн.</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Уносится день, Kevern начал играть на воображаемом фортепиано и в грубой форме комиксов голос серенада Ailinn большой ноги.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">С каждым днем, Кеверн начал играть на фортепиано и грубо комиксов голос серенада Айлин большие ступни.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">На этот день Kevern начал играть на воображаемой пианино и грубо комическим голосом serenade Ailinn большие ступни ".</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Карриед в день, Кеверн начал играть на воображаемой пианино и грубо комический голос серенад Айлин крупных ног.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">В этот день Kevern начал играть на фортепиано и на воображаемой грубо комическим голосом Ailinn болезнь "большие ступни.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="274">The HTA and Royal Horticultural Society said that renting property or a lack of garden space did not mean people could not grow plants.</source>
+      <reference>HTA и Королевское садоводческое общество сообщили, что аренда жилья и отсутствие пространства для сада не означают, что люди не могут выращивать растения.</reference>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Песня HTA Royal садоводческое общество и заявил, что аренда имущества или недостаточного пространства сад не означает, что люди не могли выращивать растения.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">НТА и Королевское садоводческое общество сказал, что сдача в аренду имущества или отсутствие пространства сада не означает, что люди не могли выращивать растения.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">HTA и Королевское садоводческое общество считает, что аренда имущества или отсутствие места в саду не означает, что люди не могли выращивать растения.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">HTA и королевское садовническое общество сказали что то арендовать свойство или недостаток космоса сада не значил люди не смогло вырасти заводы.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Простая и Королевский Гаарлема заявил, что аренда имущества или отсутствие места в саду, не означает, что люди не могли выращивать растения.</translation>
+    </seg>
+    <seg>
+      <source id="2202">Buying online</source>
+      <reference>Покупка в интернет-магазине</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Покупки в интернете</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Покупать онлайн</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt,newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt,newstest2015.PROMT-Rule-based.3991.en-ru.txt,newstest2015.uedin-syntax.3938.en-ru.txt">Покупка онлайн</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Покупка через Интернет</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Покупка в онлайн</translation>
+    </seg>
+    <seg>
+      <source id="893">But certain kinds of hypersensitivity, while entirely acceptable and laudable in themselves, may sometimes distort findings such as you have presented to me.</source>
+      <reference>Но некоторые виды гиперчувствительности, абсолютно приемлемые и похвальные сами по себе, могут иногда искажать результаты, как, например, те, что Вы мне показали.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Но определенные виды аллергии, в то время как совершенно приемлемый и похвальный в себе, могут иногда искажать результаты, такие как, Вы представили мне.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Но некоторые виды гиперчувствительности, пока полностью приемлемый и похвальный в себе, могут иногда передергивать заключения как вы представляли к мне.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Но определенные виды гиперчувствительность, в то время как вполне приемлемой и похвальной в себя, иногда может исказить выводы, такие, как вы представили для меня.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Но некоторые виды Гиперчувствительность, хотя полностью приемлемым и похвалы сами по себе, иногда может исказить результаты такие, как вы представили мне.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Но некоторые виды гиперчувствительность, хотя вполне приемлемым и похвальные в себя, иногда может исказить результаты, таким, каким ты ко мне.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="416">President Reuven Rivlin visited the kibbutz, which is located close to the Gaza border, to offer his support.</source>
+      <reference>Президент Реувен Ривлин посетил кибуц, который расположен неподалеку от границы с Газа, чтобы выразить свою поддержку.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Президент Рувен Ривлин посетил кибуце, который расположен недалеко от границы с сектором Газа, чтобы предложить свою поддержку.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Президент Реувен Ривлин посетил кибуц, который расположен близко к границе сектора Газа, чтобы предложить его поддержку.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Реувен Ривлин президент посетил кибуц, который расположен недалеко от границы с Газой, предложить свою поддержку.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Президент Реувен Ривлин побывал в кибуце, который расположен недалеко от границы с Газой, чтобы предлагать свою поддержку.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt">Президент Реувен Ривлин посетил кибуц, который находится недалеко от границы с Газой, чтобы предложить свою поддержку.</translation>
+    </seg>
+    <seg>
+      <source id="1990">The District's rate of growth was level with the national average, at 4.3 percent, while Maryland's growth was substantially faster at 4.9 percent.</source>
+      <reference>Уровень роста в Округе Колумбия был на том же уровне, что и средний по стране, 4,3 процента, тогда как рост в Мэриленде был существенно быстрее, 4,9 процента.</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">"Районный уровень роста был на уровне в среднем по стране на 4,3%, в то время как в Мэриленде" рост был существенно быстрее на 4,9%.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Районный уровень роста был на уровне в среднем по стране, на 4,3 процента, в то время как Мэрилендская рост был значительно быстрее на 4,9 процента.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Район темп роста был уровень с среднем на 4,3%, в то время как рост Мэриленд был существенно быстрее на 4,9%.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">"Районный уровень роста был на уровне в среднем по стране на 4,3%, в то время как Мэриленд значительно быстрее - рост на 4,9%.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Процент прироста района был ровн с национальным средним, на 4,3 процентах, пока рост Мэриленда был существенно быстре на 4,9 процентах.</translation>
+    </seg>
+    <seg>
+      <source id="926">The premier took his family to neighboring South Africa after saying he received an assassination threat.</source>
+      <reference>Премьер увез свою семью в соседнюю Южную Африку, заявив что получил угрозу покушения на свою жизнь.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Премьер взял свою семью в соседней ЮАР после того, как говорят, что он получил угрозу убийства.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Премьер-министр взял свою семью в соседнюю Южную Африку после высказывания, что он получил угрозу убийства.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Премьер взял его семьи к соседней ЮАР за то, что он получил угрозы убийства.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Премьер взял свою семью в соседней Южной Африке после сказав, что он получил угрозы убийства.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Премьер взял свою семью в соседней ЮАР после того, как говорят, он получил угрозы убийства.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="2086">Instead, it quickly became a platform for gamers to broadcast their in-game feats; a "YouTube for live gaming," in Business Insider's words.</source>
+      <reference>Вместо этого он быстро превратился в платформу, где геймеры транслировали свои внутриигровые моменты; "YouTube для игр в реальном времени", по словам Business Insider.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Вместо этого, она быстро стала платформой для геймеров, чтобы транслировать свои подвиги в игре; "YouTube для живых игр," Бизнес Insider's слов.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Вместо этого он быстро стал платформой для геймеров для трансляции их подвиги в игре; «YouTube для живой игры, «в Business Insider слова.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Вместо этого, он быстро стал площадкой для трансляции своих игроков на подвиги, в игре "YouTube для игр", в "о словах.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Вместо этого, он быстро стал платформой для геймеров транслировать свои в игре подвиги; "YouTube для живого игр", по словам Business Insider в.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Вместо этого, быстро стало платформой для gamers для того чтобы передать их подвиги в-игры; «YouTube для игры в реальном маштабе времени,» в словах человека внутри дела.</translation>
+    </seg>
+    <seg>
+      <source id="1968">Charity CMT UK has launched CMT awareness month to try to draw attention to the condition.</source>
+      <reference>Благотворительная организация ШМТ Великобритании объявила месяц информации о ШМТ, чтобы попытаться привлечь внимание к этому заболеванию.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Великобритания запустила благотворительный CMT CMT сознания месяц и попытаться обратить внимание на состояние.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Призрение CMT Великобритания запускало месяц осведомленности CMT для того чтобы попробовать нарисовать внимание к условию.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Благотворительность CMT Великобритания запустила CMT осведомленности месяц чтобы попытаться обратить внимание на состояние.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Благотворительность CMT Великобритания запустила CMT сознания месяц попытаться обратить внимание на состояние.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Благотворительный СМТ Великобритании запустила СМТ осведомленности месяц, чтобы попробовать обратить внимание на состояние.</translation>
+    </seg>
+    <seg>
+      <source id="1390">Asbestos is made up of tiny fibres.</source>
+      <reference>Асбест состоит из крохотных волокон.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Комплекс состоит из крошечных нитей.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Азбест составлен крошечных волокон.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Асбест состоит из крошечных клетчаткой.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Асбест состоит из маленьких волокон.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Асбест составлен из крошечных волокон.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="2575">France's Socialists should 'shut up and sort France out', Francois Hollande's key ally says</source>
+      <reference>Социалисты Франции должны "заткнуться и привести Францию в порядок", говорит ключевой союзник Фрасуа Олланда</reference>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Социалисты Франции должен "заткнуться и сортировать Францию ​​из 'ключевым союзником Франсуа Олланда говорит</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Французские социалисты должны "заткнуться и сортировать Франции", - говорит Франсуа Олланда ключевого союзника</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Социалисты Франции должны 'замолчать и уладить Францию', говорит ключевой союзник Франсуа Олланда</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Французские социалисты должны заткнуться и разобраться во Франции Франсуа Олланда, ключевого союзника", - говорит</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Социалисты 'закрытый вверх и вид Франция вне', союзник Франции Francois Hollande ключевой говорят</translation>
+    </seg>
+    <seg>
+      <source id="2192">"My calculus book that usually costs $180, I got for the semester for $10 and a Chick-fil-A biscuit," says Schroeder, 19, who attends Covenant College in Georgia.</source>
+      <reference>"Мой учебник по математическому анализу, который обычно стоит $180, я получил на семестр за $10 и печенье "Chick-fil-A"", говорит Шрёдер, 19 лет, который учится в Ковенант Колледже в Джорджии.</reference>
+      <translation system="newstest2015.online-B.0.en-ru.txt">"Моя книга, исчисление, как правило, стоит $ 180, я получил за семестр за $ 10 и Чик-фил-печенье," говорит Шредер, 19, который посещает колледж Завет в Грузии.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">"Мои книги, что исчисление обычно обходится в $180 за семестр, я приобрел за 10 долларов и Chick-fil-A поможет", - говорит Шредер, 19, кто посещает пакт колледжа в Грузии.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">"Моя книга Сухорукова, который обычно стоит 180 долларов, я получил за семестр за $10 и печенье", - говорит Шредер, 19, который посещает заключенных в Грузии.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">"Мои книги, что исчисление обычно обходится в $180, я получил за семестр за $10 и Chick-fil-A современную экономику", - говорит Шредер, 19, кто посещает Пакта колледжа в Грузии.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">«Моя книга исчисления, которая обычно стоит 180$, я добрался в течение семестра за 10$ и булочки Чика-фил-А», говорит Шредер, 19 лет, кто учится в Колледже Соглашения в Джорджии.</translation>
+    </seg>
+    <seg>
+      <source id="859">She hadn't spoken to him about life on the chill northern archipelago where she had grown up, but he didn't doubt it was in all essentials similar to here.</source>
+      <reference>Она не говорила с ним о жизни на холодном северном архипелаге, где она выросла, но он не сомневался в том, что в основных чертах она была похожа на здешнюю.</reference>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Она не говорил ему о жизни на холод Северного архипелага, где она выросла, но он не сомневаюсь, что это было в аналогичных здесь все необходимое.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Она не говорила ему о жизни на охлаждение северного архипелага, где она выросла, но он не сомневается, что это было все необходимое, похожими на здесь.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Она не говорила с ним о жизни на холод северного архипелага, где она выросла, но он не сомневается в необходимости все же здесь.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Она не поговорила к нему о жизни на chill северном архипелаге где она выросла вверх, но он не усомнился что он находилось во всех предметах первой необходимости подобных к здесь.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Она не разговаривала с ним о жизни на холодном севере архипелага, где она выросла, но он не сомневаюсь, что это было во всем существенном похожи на здесь.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1067">'I left two minutes before the terrorists rushed into the yard, so my little boy was left there alone for three days of horror,' she recalled.</source>
+      <reference>"Я ушла за две минуты до того, как террористы вбежали во двор, так что мой маленький мальчик остался один на три дня кошмара", вспоминала она.</reference>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">"Я оставил двух минут до того, как террористы бросилась во двор, так что мой мальчик остался там только за три дня ужаса", - вспоминает она.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Она напомнила, что «Я оставил две минуты, прежде чем террористы ворвались во двор, так что мой маленький мальчик был оставлен там только три дня ужаса,».</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">'Я вышел 2 минуты прежде чем вышли террористы спешенные в двор, поэтому моего мальчик туда один на 3 дня ужаса,' она вспомнил.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">"Я оставил две минуты до того, как террористы ворвались во двор, так что мой маленький мальчик остался в одиночестве в течение трех дней ужаса", вспоминает она.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">"Я оставил две минуты до того, как террористы поспешили во двор, чтобы мой мальчик был оставлен в одиночестве в течение трех дней ужаса", - вспоминает она.</translation>
+    </seg>
+    <seg>
+      <source id="940">Eurozone manufacturing at 13-month low</source>
+      <reference>Производство в еврозоне на самом низком показателе за 13 месяцев</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Обрабатывающей промышленности еврозоны 13-month на низком уровне</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Еврозона производства на 13-месячного минимума</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Промышленность еврозоны в 13-месячного минимума</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Производство еврозоны на 13 месяцах низких</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Производство еврозоны в 13-месячном низко</translation>
+    </seg>
+    <seg>
+      <source id="856">Except that I'm not.</source>
+      <reference>Хотя и не нравишься.</reference>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Кроме того, я не собираюсь.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Кроме того, что я не.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">За исключением того, что я нет.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt,newstest2015.PROMT-Rule-based.3991.en-ru.txt">За исключением того, что я не.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Кроме того, что я не брезгую.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="35">He is due to appear in Karratha Magistrates Court on September 23.</source>
+      <reference>Он должен предстать перед мировым судом Карраты 23 сентября.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Он обусловлен Karratha судьи в суде 23 сентября.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Он должен появиться в суде магистратов Karratha 23 сентября.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Он обязан появиться в Karratha Магистратского суда 23 сентября.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Он должен появиться в Мировом суде Карраты 23 сентября.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Он появляется в карата Магистратского суда 23 сентября.</translation>
+    </seg>
+    <seg>
+      <source id="1541">The service is an ideal alternative for students who would usually have to haul their belongings across the country in a dangerously overloaded car.</source>
+      <reference>Этот сервис - идеальная альтернатива для студентов, которым обычно приходится везти свои вещи через всю страну в опасно перегруженной машине.</reference>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Услуга идеальная альтернатива для студентов, которые, как правило, должны тащить свои вещи по всей стране в опасной перегруженной машине.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Услуга - это идеальный вариант для студентов, которые обычно имеют оттащить свои вещи по всей стране в угрожающе перегруженный автомобиль.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Услуга - идеальный вариант для студентов, которые обычно придется оттащить свои вещи по всей стране опасно перегружен автомобиль.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Служба является идеальной альтернативой для студентов, которые обычно придется тащить свои вещи по всей стране в автомобиль угрожающе перегруженными.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Служба - это идеальный вариант для студентов, которые, как правило, придется затаскивать их имущество по всей стране на автомобиле опасно перегруженным.</translation>
+    </seg>
+    <seg>
+      <source id="2295">On August 6, Vladimir Putin signed a decree on the application of certain economic measures to ensure the security of Russia, which principally refer to food sanctions.</source>
+      <reference>6 августа президент Владимир Путин подписал указ о применении отдельных экономических мер для обеспечения безопасности России, которые называют в основном продуктовыми санкциями.</reference>
+      <translation system="newstest2015.online-B.0.en-ru.txt">6 августа Владимир Путин подписал указ о применении определенных экономических мер по обеспечению безопасности России, которые в основном относятся к пищевым санкций.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">6 августа Владимир Путин подписал указ о применении отдельных экономических мер для обеспечения безопасности России, которая принципиально относятся к продовольственных санкций.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">6 августа Vladimir Путин подписал указ о применении определенных экономических мер для обеспечения безопасности России, которые главным образом касаются продовольствия санкций.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">6 августа Владимир Путин подписал указ о применении отдельных экономических мер в целях обеспечения безопасности России, которые в основном относятся к продовольственных санкций.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">6 Августа Владимир Путин подписал указ о применении отдельных экономических мер в целях обеспечения безопасности России, которые в основном относятся к продовольственным санкциям.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1074">Haunting: The image of Georgy (left) was one of the most shocking of the attack and has been immortalised in a statue (right)</source>
+      <reference>Западает в душу: фотография Георгия (слева) была одним из самых шокирующих снимков нападения и была увековечена в скульптуре (справа)</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Навязчивый: изображение Георгия (слева) был одним из самых шокирующих атаки и была увековечена в статуе (справа)</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Призраки: изображение Георгия (слева) был одним из самых шокирующих нападения и был увековечен в статуе (справа)</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Преследовать: Изображение (выведенного) Georgy было одно из shocking нападения и было увековечивано в статуе (правой)</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Обволакивают: Образ Георгия (слева) был одним из самых шокирующих нападения и только в статуе (справа)</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Покров: образ Георгия (слева) был одним из самых шокирующих атаки и возвращающая статую (справа)</translation>
+    </seg>
+    <seg>
+      <source id="328">But he doubts that the new company will be able to seriously compete with Alibaba immediately following its creation: “Rome wasn’t built in a day”.</source>
+      <reference>Но он считает, что новая компания вряд ли сможет всерьез конкурировать с Alibaba сразу после создания: "Рим нельзя построить за один день".</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Но он сомневается, что новая компания будет в состоянии серьезно конкурировать с Alibaba сразу после ее создания: Москва не сразу строилась.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Но он сомневается, что новая компания сможет конкурировать с серьезно изучать сразу после его создания: “Рим не был построен за один день ».</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Однако он сомневается, что новая компания будет иметь возможность серьезно конкурировать с Alibaba сразу же после его создания: «Рим был построен не за один день».</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Но он сомневается что новая компания будет серьезно состязаться с Alibaba немедленно после своего творения: «Рим не был построен в дне».</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Но он сомневается, что новая компания сможет серьезно конкурировать с Alibaba сразу после его создания: "Рим был построен не за один день".</translation>
+    </seg>
+    <seg>
+      <source id="2620">The iPhone will be turned into a wallet</source>
+      <reference>iPhone превратят в кошелек</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Айфон превращается в кошелек</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">IPhone будет превращен в бумажнике</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt,newstest2015.PROMT-Rule-based.3991.en-ru.txt">IPhone будет превращен в бумажник</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt,newstest2015.uedin-jhu-phrase.4144.en-ru.txt">IPhone будет превращена в кошелек</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">IPhone будет превратить в кошелек</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1493">Kershaw's employers, Turner Bros Asbestos, do not admit liability.</source>
+      <reference>Наниматели Кершоу, Turner Bros Asbestos, не признают ответственности.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Кершоу (April работодателей, Тернер, сомнению не признают ответственности.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Кершоу работодателей, Тернер Bros асбеста, не признают ответственности.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Работодатели Kershaw, азбест Bros тернера, не впускают пассив.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Кершоу, Тёрнеры Bros Asbestos, не признают ответственности.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Работодатели Кершоу, Тернер Bros Asbestos, не признает ответственности.</translation>
+    </seg>
+    <seg>
+      <source id="2753">In Russia, the Twitter account of the Prime Minister of the Russian Federation, Dmitry Medvedev, was also previously hacked.</source>
+      <reference>В России также ранее был взломан твиттер премьер-министра РФ Дмитрия Медведева.</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">В России Twitter-аккаунт премьер-министра РФ, Дмитрий Медведев, также был ранее взломан.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">В России, учет Twitter премьер-министра Российской Федерации, Dmitry Medvedev, также ранее был прорублен.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">В России, Twitter-аккаунт премьер-министр РФ Дмитрий Медведев, ранее также был взломан.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">В России, аккаунт в Twitter премьер-министр Российской Федерации Дмитрий Медведев также был ранее взломан.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">В России, на счет Twitter премьер-министра Российской Федерации Дмитрия Медведева, был также ранее взломаны.</translation>
+    </seg>
+    <seg>
+      <source id="1728">Right now, investors are preemptively betting on a deterioration of the geopolitical situation and the possibility of new sanctions against Russia.</source>
+      <reference>Сейчас инвесторы уже заранее отыгрывают ухудшение геополитической обстановки и возможные новые санкции к России.</reference>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Сейчас инвесторы превентивно ставку на ухудшение геополитической ситуации и возможности новых санкций против России.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Сейчас, инвесторы будут превентивно ставить на ухудшение геополитической ситуации и возможности введения новых санкций против России.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Прямо сейчас, инвесторы preemptively держат пари на ухудшении качества геополитической ситуации и возможности новых санкций против России.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Сейчас инвесторы делают ставку на ухудшение геополитической ситуации и возможность новых санкций против России.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Сейчас инвесторы превентивно делают ставку на ухудшение геополитической ситуации и возможности новых санкций против России.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1562">When I post something about how people of color are under siege in their own country, the silence is deafening.</source>
+      <reference>Когда я пишу что-нибудь о том, как цветные люди подвергаются нападкам в своей собственной стране, молчание оглушает.</reference>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Когда я что-то о том, как люди цвета находятся в осаде в своей собственной стране, молчание будет оглушительным.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Когда я вывешиваю что-то о как цветной человек под осадой в их собственной стране, безмолвие оглушающе.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Когда я опубликовать что-нибудь о том, как люди цвета находятся в осаде в своей собственной стране, молчание выстреливал.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Когда я что-то пост о том, как люди цвета находятся в осаде в собственной стране, молчание является оглушительным.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Когда я выкладываю что-то о том, как людей с другим цветом кожи живут на осадном положении в своей собственной стране, оглушающая тишина.</translation>
+    </seg>
+    <seg>
+      <source id="2221">Getting e-books instead of traditional texts is another option.</source>
+      <reference>Электронные книги вместо традиционных учебников - еще один вариант.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Получение электронных книг вместо традиционных текстов является другим выбором.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Получение электронных книг вместо традиционных текстов-это другой вариант.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Другим вариантом является получение e книги вместо традиционных текстов.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Получение электронных книг вместо традиционных текстов и другой вариант.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Получать e-книги вместо традиционных текстов другой вариант.</translation>
+    </seg>
+    <seg>
+      <source id="193">The law is intended to require retailers to reckon with domestic producers when placing orders with suppliers.</source>
+      <reference>Закон призван обязать ритейлеров при формировании заказов поставщикам считаться с отечественными производителями.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Закон направлен на требуют от ритейлеров, с которой придется считаться, когда размещение заказов отечественных производителей с поставщиками.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Закон предназначен для розничной торговли, чтобы считаться с отечественными производителями при размещении заказов с поставщиками требуется.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Закон призван требуют ритейлеров считаться с отечественными производителями при размещении заказов с поставщиками.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Закон призван заставить ритейлеров считаться с отечественным товаропроизводителям при размещении заказов с поставщиками.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Закон предназначен для ритейлеров, с которой придется считаться, когда размещение заказов отечественных производителей с поставщиками.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1015">He ran in and hugged me.</source>
+      <reference>Он вбежал и обнял меня.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Он подбежал ко мне и обнял.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Он побежал и обнял меня.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt,newstest2015.uedin-jhu-phrase.4144.en-ru.txt,newstest2015.uedin-syntax.3938.en-ru.txt">Он бежал в и обнял меня.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Он подбежал и обнял меня.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Он бежал и обнял меня.</translation>
+    </seg>
+    <seg>
+      <source id="1597">In the particulars for the property, Connells described the former meeting house as a "unique one bedroom detached house."</source>
+      <reference>В подробном описании дома, Connells описывала бывший дом собраний как "уникальный отдельный дом с одной спальней".</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">В подробных сведениях о собственности Коннеллс описал прежний молитвенный дом как «уникальный особняк с одной спальней».</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">В данные для свойства Connells описал бывший молитвенный дом как «уникальный одна спальня отдельностоящий дом».</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">В особенности для имущества, Коннелл назвал прежний молитвенный дом как "уникальный спальный отдельностоящий дом."</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">В сведения о собственности, DJ Clue Back To Life 2001 описал бывший встречи дома как "уникальный одной комнате частного дома".</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">За сведения о собственности, DJ Clue Back To Life описал бывший дом уникального собрания "из дома".</translation>
+    </seg>
+    <seg>
+      <source id="2367">Norwegian salmon are actually an aquaculture product.</source>
+      <reference>Норвежский лосось - это же аквакультура.</reference>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Норвежский лосось являются на самом деле является продуктом аквакультуры.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Норвежские семги фактически продукт аквакультуры.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Норвежская семга на самом деле аквакультурной продукции.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Норвежский лосось на самом деле продукт аквакультуры.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Норвежский лосось на самом деле такой продукции аквакультуры.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="383">The Ministry of Construction is in agreement with the AMS.</source>
+      <reference>В минстрое с ФАС согласны.</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Министерство строительства по согласованию с АМС.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Министерство строительства находится в соглашении с АМН.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Министерство конструкции в соответствии с AMS.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">В Министерстве строительства в согласии с AMS.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Министерство Строительства в согласии с ФАС.</translation>
+    </seg>
+    <seg>
+      <source id="1172">I am full of positive emotions and can’t wait to return to the pitch wearing the Borussia uniform.</source>
+      <reference>Полон положительных эмоций и с нетерпением жду, когда снова смогу выйти на поле в форме "Боруссии".</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Я полон положительных эмоций и не могу дождаться, чтобы вернуться на поле в форме Borussia.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Я полон положительных эмоций и не могу дождаться, чтобы вернуться на поле, облаченный в форму Боруссия.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Я полный положительных эмоций и не может ждать, чтобы вернуться на поле в форме «Боруссия».</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Я испытываю положительные эмоции и не могу дождаться, чтобы вернуться на поле в форме "Боруссия.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Я полон положительных эмоций и не может ждать, чтобы вернуться на поле в форме "Боруссия".</translation>
+    </seg>
+    <seg>
+      <source id="716">What's more, apparently the Beeb's popularity is rising: 53 per cent support today as against 31 per cent 10 years ago.</source>
+      <reference>Более того, очевидно, что популярность Beeb растет: 53 процента поддерживают ее сегодня против 31 процента 10 лет назад.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">"Очевидно, что больше, чем у" Beeb популярность растет: Сегодня, как поддерживают 53% против 31% 10 лет назад.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Что больше, по-видимому Beeb популярность растет: 53 процента поддержки сегодня по сравнению с 31% 10 лет назад.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Более того, судя по всему, Beeb's популярность растет: 53% поддержки, как сегодня против 31% 10 лет назад.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Более того, популярность по всей видимости Биб растет: На 53% сегодня против 31% 10 лет назад.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">К тому же, по-видимому популярность Beeb повышается: 53-процентная поддержка сегодня по сравнению с 31 процентом 10 лет назад.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1162">Makhar, then three, escaped, but Alyona's mother and sister died in the murderous carnage.</source>
+      <reference>Махар, которому было тогда три года, спасся, но Алёнины мать и сестра погибли в смертельной бойне.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Makhar, затем три, убежал, но Alyona's мать и сестра погибли в кровавой бойне.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Макар, затем три, убежал, но Алена мать и сестра умерли в кровавой бойни.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Макар, тогда трое, удалось избежать, но мать и сестра Алена - погибли в кровавой бойни.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Makhar, затем три, бежал, но Алена - мама и сестра погибли в кровавой бойне.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Махара, потом три, сбежал, но Алена мать и сестра погибли в кровавые побоища.</translation>
+    </seg>
+    <seg>
+      <source id="1009">Fearing she was dead, he fled and on his way he saw a crying toddler, grabbed the child by the hand, and fled through a hail of bullets.</source>
+      <reference>Боясь, что она мертва, он побежал и по дороге увидел плачущего малыша, схватил ребенка за руку и побежал через град пуль.</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Опасаясь она умерла, он сбежал, по пути он видел, как плачет ребенок, схватил ребенка за руку, и побежали через град пуль.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Опасаясь, что она мертва, он скрылся и на своем пути он увидел плачущего малыша, схватила ребенка за руку, и бежали сквозь град пуль.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Опасаясь, что она умерла, он бежал и на его пути он увидел плачущего ребенка, схватил ребенка за руку и бежал через град пуль.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Опасающся она была мертва, он исчезла и на его пути он увидел плача малыша, схваченный ребенку рукой, и исчезанный через оклик пуль.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Опасаясь, что она умерла, он бежали и на его пути, он увидел плачущего малыша, схватил ребенка за руку и бежал через градом пуль.</translation>
+    </seg>
+    <seg>
+      <source id="1083">Now they are investigating this Boeing crash in Ukraine.</source>
+      <reference>Теперь они расследуют это крушение Боинга на Украине.</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Сейчас они ведут расследование этого "Боинга" в Украине.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Теперь они расследуют это крушение Boeing в Украине.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Теперь они расследуют этот крах Boeing в Украине.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Сейчас они в расследования крушения Boeing на Украине.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Сейчас они находятся в расследовании крушения Boeing на Украине.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1776">The inventor of Coming Out Simulator will release a game about modern journalism</source>
+      <reference>Создатель Coming Out Simulator выпустит игру о современной журналистике</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Изобретатель пришествие Out Simulator выйдет игра про современную журналистику</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Изобретатель Coming Out Simulator выпустит новую игру про современную журналистику</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Изобретатель приходить вне имитатор выпустит игру о современной публицистике</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Изобретатель Coming Out Simulator выпустит игру о современной журналистики</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Изобретатель Coming Out Simulator выпустит игру о современной журналистики.</translation>
+    </seg>
+    <seg>
+      <source id="1085">This world is moving to something very bad.</source>
+      <reference>Этот мир идет к чему-то очень плохому.</reference>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Этот мир движется к что-то очень плохое.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Этот мир идет к чему-то очень плохому.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Этот мир двигает к что-то очень плохому.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt,newstest2015.uedin-jhu-phrase.4144.en-ru.txt,newstest2015.uedin-syntax.3938.en-ru.txt,newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Этот мир движется к чему-то очень плохо.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt">Этот мир движется к чему-то очень плохое.</translation>
+    </seg>
+    <seg>
+      <source id="554">Vasily Medvedev, Deputy Head of the airbase:</source>
+      <reference>Василий Медведев, заместитель начальника авиабазы:</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Василий Медведев, заместитель начальника в Киргизии:</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt,newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt">Василий Медведев, заместитель начальника авиабазы:</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Василий Медведев, заместитель главы авиабазы:</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Василий Медведев, заместитель главы авиабазе:</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Василий Медведев, заместитель начальника:</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1006">Then seven he said: 'Mummy told me to lie down if there was an explosion and hold her hand.'</source>
+      <reference>Тогда ему было семь, и он говорил: "Мама сказала мне лечь, если будет взрыв, и держать ее за руку".</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Затем семь он сказал: "Мама сказала мне, чтобы лечь, если произошел взрыв и удерживать ее hand.'</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Затем семь он сказал: «Мама сказал мне, чтобы лечь, если был взрыв и держать ее за руку.»</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Затем семь он сказал: 'мамочка велела мне лежать, если произошел взрыв и держать ее за руку.'</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Затем семь, он сказал: "Мамочка, мне сказали, чтобы лечь, если там был взрыв, и держит ее за руку.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Затем семь, он сказал: "Мама сказала мне, чтобы лежать, если произошел взрыв и держать ее за руку".</translation>
+    </seg>
+    <seg>
+      <source id="1964">He just stood up and hugged me and said 'my dear I don't think you have it, as you would be in a wheelchair now.'</source>
+      <reference>Он просто встал, обнял меня и сказал: "Моя дорогая, я не думаю, что у тебя эта болезнь, потому что ты бы уже была в инвалидном кресле".</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Он просто встал, обнял меня и сказал: "Дорогая, я вообще не считаю, что у вас, как бы вы сейчас в инвалидном кресле.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Он просто стоял вверх и обнял меня и сказал: "Этот я не думаю, что у вас это, как вы бы сейчас в инвалидном кресле".</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Он просто встал, обнял меня и сказал: "Дорогая, я не думаю, что у вас есть, то вы бы сейчас в инвалидном кресле.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Он как раз стоял вверх и обнимал я и говорил что 'мои дорогие я не думают вы имеет его, по мере того как вы находились бы в кресло-коляске теперь.'</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Он просто встал и обнял меня и сказал «дорогие мои я не думаю, что у вас есть, как вы бы сейчас в инвалидном кресле.»</translation>
+    </seg>
+    <seg>
+      <source id="1849">To recall, Sobchak recently boasted about how delicious the very first dinner that Maksim Vitorgan ever prepared in his life for her was.</source>
+      <reference>Напомним, недавно Собчак похвасталась тем, какой вкусный ужин первый раз в жизни приготовил ей Максим Виторган.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Чтобы напомнить, Собчак недавно хвастался о том, как вкусно самый первый ужин, что Максим Виторган никогда в своей жизни для нее было.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Для того чтобы вспомнить, Sobchak недавно похвалялось о как очень вкусный очень первый обедающий который Maksim Vitorgan всегда подготавливаемое в его жизни для ее было.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Напомним, Собчак недавно хвастался о том, насколько вкусный ужин, что Максим Виторган никогда и не подготовили в жизни для нее была.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Напомним, недавно Собчак хвастался о том, как вкусно самый первый ужин, что Максим Виторган-либо подготовлена ​​в своей жизни для нее было.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Вспомнить, Собчак недавно хвастался, как вкусный самый первый ужин, что Максим Vitorgan никогда в жизни для нее была.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1006">Then seven he said: 'Mummy told me to lie down if there was an explosion and hold her hand.'</source>
+      <reference>Тогда ему было семь, и он говорил: "Мама сказала мне лечь, если будет взрыв, и держать ее за руку".</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Затем семь он сказал: "Мама сказала мне, чтобы лечь, если произошел взрыв и удерживать ее hand.'</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Затем семь он сказал: «Мама сказал мне, чтобы лечь, если был взрыв и держать ее за руку.»</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Затем семь он сказал: 'мамочка велела мне лежать, если произошел взрыв и держать ее за руку.'</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Затем семь, он сказал: "Мамочка, мне сказали, чтобы лечь, если там был взрыв, и держит ее за руку.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Затем семь, он сказал: "Мама сказала мне, чтобы лежать, если произошел взрыв и держать ее за руку".</translation>
+    </seg>
+    <seg>
+      <source id="1964">He just stood up and hugged me and said 'my dear I don't think you have it, as you would be in a wheelchair now.'</source>
+      <reference>Он просто встал, обнял меня и сказал: "Моя дорогая, я не думаю, что у тебя эта болезнь, потому что ты бы уже была в инвалидном кресле".</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Он просто встал, обнял меня и сказал: "Дорогая, я вообще не считаю, что у вас, как бы вы сейчас в инвалидном кресле.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Он просто стоял вверх и обнял меня и сказал: "Этот я не думаю, что у вас это, как вы бы сейчас в инвалидном кресле".</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Он просто встал, обнял меня и сказал: "Дорогая, я не думаю, что у вас есть, то вы бы сейчас в инвалидном кресле.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Он как раз стоял вверх и обнимал я и говорил что 'мои дорогие я не думают вы имеет его, по мере того как вы находились бы в кресло-коляске теперь.'</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Он просто встал и обнял меня и сказал «дорогие мои я не думаю, что у вас есть, как вы бы сейчас в инвалидном кресле.»</translation>
+    </seg>
+    <seg>
+      <source id="1849">To recall, Sobchak recently boasted about how delicious the very first dinner that Maksim Vitorgan ever prepared in his life for her was.</source>
+      <reference>Напомним, недавно Собчак похвасталась тем, какой вкусный ужин первый раз в жизни приготовил ей Максим Виторган.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Чтобы напомнить, Собчак недавно хвастался о том, как вкусно самый первый ужин, что Максим Виторган никогда в своей жизни для нее было.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Для того чтобы вспомнить, Sobchak недавно похвалялось о как очень вкусный очень первый обедающий который Maksim Vitorgan всегда подготавливаемое в его жизни для ее было.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Напомним, Собчак недавно хвастался о том, насколько вкусный ужин, что Максим Виторган никогда и не подготовили в жизни для нее была.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Напомним, недавно Собчак хвастался о том, как вкусно самый первый ужин, что Максим Виторган-либо подготовлена ​​в своей жизни для нее было.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Вспомнить, Собчак недавно хвастался, как вкусный самый первый ужин, что Максим Vitorgan никогда в жизни для нее была.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="2656">Norwegian Cruise and Prestige Cruises representatives did not respond to requests for comment, while an Apollo spokesman declined to comment.</source>
+      <reference>Представители Norwegian Cruise и Prestige Cruises не откликнулись на просьбы дать комментарии, тогда как представитель Apollo отказался прокомментировать информацию.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Норвежский Круза и престиж Cruises представители не реагируют на просьбы о комментариях, представитель "" от комментариев отказался.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Норвежский Круиз и престиж круизы представители не ответили на просьбы о комментариях, а Аполлон пресс-секретарь отказался от комментариев.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Norwegian Cruise и престиж Круизы представители не ответили на просьбы о комментариях, в то время как пресс-секретарь Аполлон отказался комментировать.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Norwegian Cruise Prestige представители Cruises и не отвечать на запросы на комментарии, в то время как представитель "Аполлон" отказались от комментариев.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Представители норвежских круизных и престиж круиз не ответили на просьбы о комментариях, хотя Аполлон представитель отказался от комментариев.</translation>
+    </seg>
+    <seg>
+      <source id="2239">To recap, it was reported earlier that the priority development area might replace the SEZ.</source>
+      <reference>Напомним, ранее сообщалось, что территория опережающего развития может заменить ОЭЗ.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Чтобы резюмировать, сообщалось ранее, что территория опережающего развития могла бы заменить ОЭЗ.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Напомним, ранее сообщалось, что площадь приоритетное развитие может заменить ОЭЗ.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Подытожим, ранее сообщалось, что приоритетным направлением развития может заменить ОЭЗ.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Чтобы описать, ранее сообщалось о том, что приоритетом развития может заменить ОЭЗ.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Чтобы описать, ранее сообщалось, что приоритетной областью развития может заменить ОЭЗ.</translation>
+    </seg>
+    <seg>
+      <source id="789">Carried away by the day, Kevern began to play at an imaginary piano and in a rudely comic voice serenade Ailinn's big feet.</source>
+      <reference>Увлекшись этим днем, Кеверн принялся играть на воображаемом фортепиано и грубым комическим голосом воспевать большие ноги Эйлинн.</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Уносится день, Kevern начал играть на воображаемом фортепиано и в грубой форме комиксов голос серенада Ailinn большой ноги.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">С каждым днем, Кеверн начал играть на фортепиано и грубо комиксов голос серенада Айлин большие ступни.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">На этот день Kevern начал играть на воображаемой пианино и грубо комическим голосом serenade Ailinn большие ступни ".</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Карриед в день, Кеверн начал играть на воображаемой пианино и грубо комический голос серенад Айлин крупных ног.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">В этот день Kevern начал играть на фортепиано и на воображаемой грубо комическим голосом Ailinn болезнь "большие ступни.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="274">The HTA and Royal Horticultural Society said that renting property or a lack of garden space did not mean people could not grow plants.</source>
+      <reference>HTA и Королевское садоводческое общество сообщили, что аренда жилья и отсутствие пространства для сада не означают, что люди не могут выращивать растения.</reference>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Песня HTA Royal садоводческое общество и заявил, что аренда имущества или недостаточного пространства сад не означает, что люди не могли выращивать растения.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">НТА и Королевское садоводческое общество сказал, что сдача в аренду имущества или отсутствие пространства сада не означает, что люди не могли выращивать растения.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">HTA и Королевское садоводческое общество считает, что аренда имущества или отсутствие места в саду не означает, что люди не могли выращивать растения.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">HTA и королевское садовническое общество сказали что то арендовать свойство или недостаток космоса сада не значил люди не смогло вырасти заводы.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Простая и Королевский Гаарлема заявил, что аренда имущества или отсутствие места в саду, не означает, что люди не могли выращивать растения.</translation>
+    </seg>
+    <seg>
+      <source id="2202">Buying online</source>
+      <reference>Покупка в интернет-магазине</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Покупки в интернете</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Покупать онлайн</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt,newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt,newstest2015.PROMT-Rule-based.3991.en-ru.txt,newstest2015.uedin-syntax.3938.en-ru.txt">Покупка онлайн</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Покупка через Интернет</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Покупка в онлайн</translation>
+    </seg>
+    <seg>
+      <source id="893">But certain kinds of hypersensitivity, while entirely acceptable and laudable in themselves, may sometimes distort findings such as you have presented to me.</source>
+      <reference>Но некоторые виды гиперчувствительности, абсолютно приемлемые и похвальные сами по себе, могут иногда искажать результаты, как, например, те, что Вы мне показали.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Но определенные виды аллергии, в то время как совершенно приемлемый и похвальный в себе, могут иногда искажать результаты, такие как, Вы представили мне.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Но некоторые виды гиперчувствительности, пока полностью приемлемый и похвальный в себе, могут иногда передергивать заключения как вы представляли к мне.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Но определенные виды гиперчувствительность, в то время как вполне приемлемой и похвальной в себя, иногда может исказить выводы, такие, как вы представили для меня.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Но некоторые виды Гиперчувствительность, хотя полностью приемлемым и похвалы сами по себе, иногда может исказить результаты такие, как вы представили мне.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Но некоторые виды гиперчувствительность, хотя вполне приемлемым и похвальные в себя, иногда может исказить результаты, таким, каким ты ко мне.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1162">Makhar, then three, escaped, but Alyona's mother and sister died in the murderous carnage.</source>
+      <reference>Махар, которому было тогда три года, спасся, но Алёнины мать и сестра погибли в смертельной бойне.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Makhar, затем три, убежал, но Alyona's мать и сестра погибли в кровавой бойне.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Макар, затем три, убежал, но Алена мать и сестра умерли в кровавой бойни.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Макар, тогда трое, удалось избежать, но мать и сестра Алена - погибли в кровавой бойни.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Makhar, затем три, бежал, но Алена - мама и сестра погибли в кровавой бойне.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Махара, потом три, сбежал, но Алена мать и сестра погибли в кровавые побоища.</translation>
+    </seg>
+    <seg>
+      <source id="1009">Fearing she was dead, he fled and on his way he saw a crying toddler, grabbed the child by the hand, and fled through a hail of bullets.</source>
+      <reference>Боясь, что она мертва, он побежал и по дороге увидел плачущего малыша, схватил ребенка за руку и побежал через град пуль.</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Опасаясь она умерла, он сбежал, по пути он видел, как плачет ребенок, схватил ребенка за руку, и побежали через град пуль.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Опасаясь, что она мертва, он скрылся и на своем пути он увидел плачущего малыша, схватила ребенка за руку, и бежали сквозь град пуль.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Опасаясь, что она умерла, он бежал и на его пути он увидел плачущего ребенка, схватил ребенка за руку и бежал через град пуль.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Опасающся она была мертва, он исчезла и на его пути он увидел плача малыша, схваченный ребенку рукой, и исчезанный через оклик пуль.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Опасаясь, что она умерла, он бежали и на его пути, он увидел плачущего малыша, схватил ребенка за руку и бежал через градом пуль.</translation>
+    </seg>
+    <seg>
+      <source id="1083">Now they are investigating this Boeing crash in Ukraine.</source>
+      <reference>Теперь они расследуют это крушение Боинга на Украине.</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Сейчас они ведут расследование этого "Боинга" в Украине.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Теперь они расследуют это крушение Boeing в Украине.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Теперь они расследуют этот крах Boeing в Украине.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Сейчас они в расследования крушения Boeing на Украине.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Сейчас они находятся в расследовании крушения Boeing на Украине.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1562">When I post something about how people of color are under siege in their own country, the silence is deafening.</source>
+      <reference>Когда я пишу что-нибудь о том, как цветные люди подвергаются нападкам в своей собственной стране, молчание оглушает.</reference>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Когда я что-то о том, как люди цвета находятся в осаде в своей собственной стране, молчание будет оглушительным.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Когда я вывешиваю что-то о как цветной человек под осадой в их собственной стране, безмолвие оглушающе.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Когда я опубликовать что-нибудь о том, как люди цвета находятся в осаде в своей собственной стране, молчание выстреливал.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Когда я что-то пост о том, как люди цвета находятся в осаде в собственной стране, молчание является оглушительным.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Когда я выкладываю что-то о том, как людей с другим цветом кожи живут на осадном положении в своей собственной стране, оглушающая тишина.</translation>
+    </seg>
+    <seg>
+      <source id="2221">Getting e-books instead of traditional texts is another option.</source>
+      <reference>Электронные книги вместо традиционных учебников - еще один вариант.</reference>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Получение электронных книг вместо традиционных текстов является другим выбором.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Получение электронных книг вместо традиционных текстов-это другой вариант.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Другим вариантом является получение e книги вместо традиционных текстов.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Получение электронных книг вместо традиционных текстов и другой вариант.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Получать e-книги вместо традиционных текстов другой вариант.</translation>
+    </seg>
+    <seg>
+      <source id="193">The law is intended to require retailers to reckon with domestic producers when placing orders with suppliers.</source>
+      <reference>Закон призван обязать ритейлеров при формировании заказов поставщикам считаться с отечественными производителями.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Закон направлен на требуют от ритейлеров, с которой придется считаться, когда размещение заказов отечественных производителей с поставщиками.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Закон предназначен для розничной торговли, чтобы считаться с отечественными производителями при размещении заказов с поставщиками требуется.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Закон призван требуют ритейлеров считаться с отечественными производителями при размещении заказов с поставщиками.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Закон призван заставить ритейлеров считаться с отечественным товаропроизводителям при размещении заказов с поставщиками.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Закон предназначен для ритейлеров, с которой придется считаться, когда размещение заказов отечественных производителей с поставщиками.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="2086">Instead, it quickly became a platform for gamers to broadcast their in-game feats; a "YouTube for live gaming," in Business Insider's words.</source>
+      <reference>Вместо этого он быстро превратился в платформу, где геймеры транслировали свои внутриигровые моменты; "YouTube для игр в реальном времени", по словам Business Insider.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Вместо этого, она быстро стала платформой для геймеров, чтобы транслировать свои подвиги в игре; "YouTube для живых игр," Бизнес Insider's слов.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Вместо этого он быстро стал платформой для геймеров для трансляции их подвиги в игре; «YouTube для живой игры, «в Business Insider слова.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Вместо этого, он быстро стал площадкой для трансляции своих игроков на подвиги, в игре "YouTube для игр", в "о словах.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Вместо этого, он быстро стал платформой для геймеров транслировать свои в игре подвиги; "YouTube для живого игр", по словам Business Insider в.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Вместо этого, быстро стало платформой для gamers для того чтобы передать их подвиги в-игры; «YouTube для игры в реальном маштабе времени,» в словах человека внутри дела.</translation>
+    </seg>
+    <seg>
+      <source id="1968">Charity CMT UK has launched CMT awareness month to try to draw attention to the condition.</source>
+      <reference>Благотворительная организация ШМТ Великобритании объявила месяц информации о ШМТ, чтобы попытаться привлечь внимание к этому заболеванию.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Великобритания запустила благотворительный CMT CMT сознания месяц и попытаться обратить внимание на состояние.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Призрение CMT Великобритания запускало месяц осведомленности CMT для того чтобы попробовать нарисовать внимание к условию.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Благотворительность CMT Великобритания запустила CMT осведомленности месяц чтобы попытаться обратить внимание на состояние.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Благотворительность CMT Великобритания запустила CMT сознания месяц попытаться обратить внимание на состояние.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Благотворительный СМТ Великобритании запустила СМТ осведомленности месяц, чтобы попробовать обратить внимание на состояние.</translation>
+    </seg>
+    <seg>
+      <source id="1390">Asbestos is made up of tiny fibres.</source>
+      <reference>Асбест состоит из крохотных волокон.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Комплекс состоит из крошечных нитей.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Азбест составлен крошечных волокон.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Асбест состоит из крошечных клетчаткой.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Асбест состоит из маленьких волокон.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Асбест составлен из крошечных волокон.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="35">He is due to appear in Karratha Magistrates Court on September 23.</source>
+      <reference>Он должен предстать перед мировым судом Карраты 23 сентября.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">Он обусловлен Karratha судьи в суде 23 сентября.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Он должен появиться в суде магистратов Karratha 23 сентября.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Он обязан появиться в Karratha Магистратского суда 23 сентября.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Он должен появиться в Мировом суде Карраты 23 сентября.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Он появляется в карата Магистратского суда 23 сентября.</translation>
+    </seg>
+    <seg>
+      <source id="1541">The service is an ideal alternative for students who would usually have to haul their belongings across the country in a dangerously overloaded car.</source>
+      <reference>Этот сервис - идеальная альтернатива для студентов, которым обычно приходится везти свои вещи через всю страну в опасно перегруженной машине.</reference>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Услуга идеальная альтернатива для студентов, которые, как правило, должны тащить свои вещи по всей стране в опасной перегруженной машине.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Услуга - это идеальный вариант для студентов, которые обычно имеют оттащить свои вещи по всей стране в угрожающе перегруженный автомобиль.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Услуга - идеальный вариант для студентов, которые обычно придется оттащить свои вещи по всей стране опасно перегружен автомобиль.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Служба является идеальной альтернативой для студентов, которые обычно придется тащить свои вещи по всей стране в автомобиль угрожающе перегруженными.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Служба - это идеальный вариант для студентов, которые, как правило, придется затаскивать их имущество по всей стране на автомобиле опасно перегруженным.</translation>
+    </seg>
+    <seg>
+      <source id="2295">On August 6, Vladimir Putin signed a decree on the application of certain economic measures to ensure the security of Russia, which principally refer to food sanctions.</source>
+      <reference>6 августа президент Владимир Путин подписал указ о применении отдельных экономических мер для обеспечения безопасности России, которые называют в основном продуктовыми санкциями.</reference>
+      <translation system="newstest2015.online-B.0.en-ru.txt">6 августа Владимир Путин подписал указ о применении определенных экономических мер по обеспечению безопасности России, которые в основном относятся к пищевым санкций.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">6 августа Владимир Путин подписал указ о применении отдельных экономических мер для обеспечения безопасности России, которая принципиально относятся к продовольственных санкций.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">6 августа Vladimir Путин подписал указ о применении определенных экономических мер для обеспечения безопасности России, которые главным образом касаются продовольствия санкций.</translation>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">6 августа Владимир Путин подписал указ о применении отдельных экономических мер в целях обеспечения безопасности России, которые в основном относятся к продовольственных санкций.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">6 Августа Владимир Путин подписал указ о применении отдельных экономических мер в целях обеспечения безопасности России, которые в основном относятся к продовольственным санкциям.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="383">The Ministry of Construction is in agreement with the AMS.</source>
+      <reference>В минстрое с ФАС согласны.</reference>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Министерство строительства по согласованию с АМС.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Министерство строительства находится в соглашении с АМН.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Министерство конструкции в соответствии с AMS.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">В Министерстве строительства в согласии с AMS.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Министерство Строительства в согласии с ФАС.</translation>
+    </seg>
+    <seg>
+      <source id="1172">I am full of positive emotions and can’t wait to return to the pitch wearing the Borussia uniform.</source>
+      <reference>Полон положительных эмоций и с нетерпением жду, когда снова смогу выйти на поле в форме "Боруссии".</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Я полон положительных эмоций и не могу дождаться, чтобы вернуться на поле в форме Borussia.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Я полон положительных эмоций и не могу дождаться, чтобы вернуться на поле, облаченный в форму Боруссия.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Я полный положительных эмоций и не может ждать, чтобы вернуться на поле в форме «Боруссия».</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Я испытываю положительные эмоции и не могу дождаться, чтобы вернуться на поле в форме "Боруссия.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Я полон положительных эмоций и не может ждать, чтобы вернуться на поле в форме "Боруссия".</translation>
+    </seg>
+    <seg>
+      <source id="716">What's more, apparently the Beeb's popularity is rising: 53 per cent support today as against 31 per cent 10 years ago.</source>
+      <reference>Более того, очевидно, что популярность Beeb растет: 53 процента поддерживают ее сегодня против 31 процента 10 лет назад.</reference>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">"Очевидно, что больше, чем у" Beeb популярность растет: Сегодня, как поддерживают 53% против 31% 10 лет назад.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Что больше, по-видимому Beeb популярность растет: 53 процента поддержки сегодня по сравнению с 31% 10 лет назад.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Более того, судя по всему, Beeb's популярность растет: 53% поддержки, как сегодня против 31% 10 лет назад.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Более того, популярность по всей видимости Биб растет: На 53% сегодня против 31% 10 лет назад.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">К тому же, по-видимому популярность Beeb повышается: 53-процентная поддержка сегодня по сравнению с 31 процентом 10 лет назад.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="416">President Reuven Rivlin visited the kibbutz, which is located close to the Gaza border, to offer his support.</source>
+      <reference>Президент Реувен Ривлин посетил кибуц, который расположен неподалеку от границы с Газа, чтобы выразить свою поддержку.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Президент Рувен Ривлин посетил кибуце, который расположен недалеко от границы с сектором Газа, чтобы предложить свою поддержку.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Президент Реувен Ривлин посетил кибуц, который расположен близко к границе сектора Газа, чтобы предложить его поддержку.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Реувен Ривлин президент посетил кибуц, который расположен недалеко от границы с Газой, предложить свою поддержку.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Президент Реувен Ривлин побывал в кибуце, который расположен недалеко от границы с Газой, чтобы предлагать свою поддержку.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt">Президент Реувен Ривлин посетил кибуц, который находится недалеко от границы с Газой, чтобы предложить свою поддержку.</translation>
+    </seg>
+    <seg>
+      <source id="1990">The District's rate of growth was level with the national average, at 4.3 percent, while Maryland's growth was substantially faster at 4.9 percent.</source>
+      <reference>Уровень роста в Округе Колумбия был на том же уровне, что и средний по стране, 4,3 процента, тогда как рост в Мэриленде был существенно быстрее, 4,9 процента.</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">"Районный уровень роста был на уровне в среднем по стране на 4,3%, в то время как в Мэриленде" рост был существенно быстрее на 4,9%.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Районный уровень роста был на уровне в среднем по стране, на 4,3 процента, в то время как Мэрилендская рост был значительно быстрее на 4,9 процента.</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Район темп роста был уровень с среднем на 4,3%, в то время как рост Мэриленд был существенно быстрее на 4,9%.</translation>
+      <translation system="newstest2015.USAAR-gacha.3962.en-ru.txt">"Районный уровень роста был на уровне в среднем по стране на 4,3%, в то время как Мэриленд значительно быстрее - рост на 4,9%.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Процент прироста района был ровн с национальным средним, на 4,3 процентах, пока рост Мэриленда был существенно быстре на 4,9 процентах.</translation>
+    </seg>
+    <seg>
+      <source id="926">The premier took his family to neighboring South Africa after saying he received an assassination threat.</source>
+      <reference>Премьер увез свою семью в соседнюю Южную Африку, заявив что получил угрозу покушения на свою жизнь.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Премьер взял свою семью в соседней ЮАР после того, как говорят, что он получил угрозу убийства.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Премьер-министр взял свою семью в соседнюю Южную Африку после высказывания, что он получил угрозу убийства.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Премьер взял его семьи к соседней ЮАР за то, что он получил угрозы убийства.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Премьер взял свою семью в соседней Южной Африке после сказав, что он получил угрозы убийства.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Премьер взял свою семью в соседней ЮАР после того, как говорят, он получил угрозы убийства.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="rus">
+    <seg>
+      <source id="1776">The inventor of Coming Out Simulator will release a game about modern journalism</source>
+      <reference>Создатель Coming Out Simulator выпустит игру о современной журналистике</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Изобретатель пришествие Out Simulator выйдет игра про современную журналистику</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Изобретатель Coming Out Simulator выпустит новую игру про современную журналистику</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Изобретатель приходить вне имитатор выпустит игру о современной публицистике</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Изобретатель Coming Out Simulator выпустит игру о современной журналистики</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Изобретатель Coming Out Simulator выпустит игру о современной журналистики.</translation>
+    </seg>
+    <seg>
+      <source id="1085">This world is moving to something very bad.</source>
+      <reference>Этот мир идет к чему-то очень плохому.</reference>
+      <translation system="newstest2015.online-A.0.en-ru.txt">Этот мир движется к что-то очень плохое.</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Этот мир идет к чему-то очень плохому.</translation>
+      <translation system="newstest2015.online-F.0.en-ru.txt">Этот мир двигает к что-то очень плохому.</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt,newstest2015.uedin-jhu-phrase.4144.en-ru.txt,newstest2015.uedin-syntax.3938.en-ru.txt,newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Этот мир движется к чему-то очень плохо.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt">Этот мир движется к чему-то очень плохое.</translation>
+    </seg>
+    <seg>
+      <source id="554">Vasily Medvedev, Deputy Head of the airbase:</source>
+      <reference>Василий Медведев, заместитель начальника авиабазы:</reference>
+      <translation system="newstest2015.USAAR-gacha.4108.en-ru.txt">Василий Медведев, заместитель начальника в Киргизии:</translation>
+      <translation system="newstest2015.online-A.0.en-ru.txt,newstest2015.online-B.0.en-ru.txt,newstest2015.online-G.0.en-ru.txt">Василий Медведев, заместитель начальника авиабазы:</translation>
+      <translation system="newstest2015.PROMT-Rule-based.3991.en-ru.txt">Василий Медведев, заместитель главы авиабазы:</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Василий Медведев, заместитель главы авиабазе:</translation>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Василий Медведев, заместитель начальника:</translation>
+    </seg>
+  </hit>
+</hits>

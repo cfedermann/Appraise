@@ -148,6 +148,7 @@ if __name__ == "__main__":
 
     random_blocks = random_from_range(len(eligible), args.numhits - args.redundancy, tuple_size = args.tasksperhit, sequential = args.sequential)
     hits = []
+    
     for sentnos_tuple in random_blocks:
 
         # We need to avoid duplicate candidate translations.  To do so, we have to check
@@ -157,9 +158,6 @@ if __name__ == "__main__":
         # To implement this, we loop over all sentence IDs.
         tasks = []
         
-        
-        
-        #if False:
         for current_id in sentnos_tuple:
             from collections import defaultdict
             unique_translations_to_system_ids_map = defaultdict(list)
@@ -226,7 +224,7 @@ if __name__ == "__main__":
 
         hits += [hits[x[0]] for x in numbers]
 
-    result_xml = u'<hits>\n{0}\n</hits>'.format(u'\n'.join([hit for hit in hits]))
+    result_xml = u'<hits>\n{0}\n</hits>'.format(u'\n'.join(hits))
     
     out = open("test-outfile.txt", 'w')
     out.write(result_xml.encode('utf-8'))

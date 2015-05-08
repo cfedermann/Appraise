@@ -541,7 +541,7 @@ class RankingResult(models.Model):
         iso639_3_to_name_mapping = {'ces': 'Czech', 'cze': 'Czech',
           'deu': 'German', 'ger': 'German', 'eng': 'English',
           'spa': 'Spanish', 'fra': 'French', 'fre': 'French',
-          'hin': 'Hindi', 'rus': 'Russian'}
+          'hin': 'Hindi', 'rus': 'Russian', 'fin': 'Finnish'}
         
         _src_lang = hit.hit_attributes['source-language']
         _trg_lang = hit.hit_attributes['target-language']
@@ -551,18 +551,19 @@ class RankingResult(models.Model):
         #   on the HIT attribute and instead process the translations.
         #
         # System ids can be retrieved from HIT or segment level.
-        if 'systems' in hit.hit_attributes.keys():
-            _systems = hit.hit_attributes['systems'].split(',')
+        #
+        # We cannot do this anymore as we might have multi-systems.
+        #if 'systems' in hit.hit_attributes.keys():
+        #    _systems = hit.hit_attributes['systems'].split(',')
         
         # See below for a potential implementation to address multi-systems.
         #
         # On segment level, we have to extract the individual "system" values
         # from the <translation> attributes which are stored in the second
         # position of the translation tuple: (text, attrib).
-        else:
-            _systems = []
-            for translation in item.translations:
-                _systems.append(translation[1]['system'])
+        _systems = []
+        for translation in item.translations:
+            _systems.append(translation[1]['system'])
         
         # Note that srcIndex and segmentId are 1-indexed for compatibility
         # with evaluation scripts from previous editions of the WMT.
@@ -572,16 +573,47 @@ class RankingResult(models.Model):
         values.append('-1')                                # documentId
         values.append(item.source[1]['id'])                # segmentId (= srcIndex)
         values.append(self.user.username)                  # judgeId
-        values.append('-1')                                # system1Number
-        values.append(str(_systems[0]))                    # system1Id
-        values.append('-1')                                # system2Number
-        values.append(str(_systems[1]))                    # system2Id
-        values.append('-1')                                # system3Number
-        values.append(str(_systems[2]))                    # system3Id
-        values.append('-1')                                # system4Number
-        values.append(str(_systems[3]))                    # system4Id
-        values.append('-1')                                # system5Number
-        values.append(str(_systems[4]))                    # system5Id
+        
+        # Save current data values as we might have to write them out
+        # several times when multi-systems trigger multiple results...
+        base_values = values
+        
+        _system_names = []
+        _system_ranks = []
+        for _result_index, _system in enumerate(_systems):
+            _local_systems = _system.split(',')
+            _local_results = [str(self.results[_result_index])] * len(_local_systems)
+            _system_names.extend(_local_systems)
+            _system_ranks.extend(_local_results)
+        
+        _missing_systems = 5 - len(_system_names) % 5
+        for x in range(_missing_systems):
+            _system_names.append('PLACEHOLDER')
+            _system_ranks.append('-1')
+        
+        all_values = []
+        for _base_index in range(len(_system_names))[::5]:
+            current_values = list(base_values)
+            current_ranks = []
+            for _current_index in range(len(_system_names))[_base_index:_base_index+5]:
+                current_values.append('-1')
+                current_values.append(str(_system_names[_current_index]))
+                current_ranks.append(_system_ranks[_current_index])
+            current_values.extend(current_ranks)
+            all_values.append(u",".join(current_values))
+        
+        # This does not work anymore as we face multi-systems.
+        #
+        #values.append('-1')                                # system1Number
+        #values.append(str(_systems[0]))                    # system1Id
+        #values.append('-1')                                # system2Number
+        #values.append(str(_systems[1]))                    # system2Id
+        #values.append('-1')                                # system3Number
+        #values.append(str(_systems[2]))                    # system3Id
+        #values.append('-1')                                # system4Number
+        #values.append(str(_systems[3]))                    # system4Id
+        #values.append('-1')                                # system5Number
+        #values.append(str(_systems[4]))                    # system5Id
         #
         # TODO: decide what happens in case of k>5 systems due to
         #   multi-systems.  Can we simply add annother CSV line and
@@ -589,14 +621,14 @@ class RankingResult(models.Model):
         #   a "dummy" system to make sure we don't break CSV format.
         #
         #   Specifying a value of -1 for system rank should work...
-        
+        #
         # system1rank,system2rank,system3rank,system4rank,system5rank
-        if self.results:
-            values.extend([str(x) for x in self.results])
-        else:
-            values.extend(['-1'] * 5)
+        #if self.results:
+        #    values.extend([str(x) for x in self.results])
+        #else:
+        #    values.extend(['-1'] * 5)
         
-        return u",".join(values)
+        return u"\n".join(all_values)
     
     
     # pylint: disable-msg=C0103
@@ -609,6 +641,7 @@ class RankingResult(models.Model):
         
         _systems = []
         # System ids can be retrieved from HIT or segment level.
+        #
         # We cannot do this anymore as we might have multi-systems.
         # if 'systems' in hit.hit_attributes.keys():
         #    _systems = hit.hit_attributes['systems'].split(',')

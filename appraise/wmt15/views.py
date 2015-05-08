@@ -722,6 +722,12 @@ def _compute_global_stats():
     global_stats.append(('HITs completed', hits_completed))
     global_stats.append(('HITs remaining', hits_remaining))
     global_stats.append(('Ranking results', ranking_results))
+    
+    # TODO: It is not safe to assume 10 comparisons per HIT anymore.
+    #   We have to compute the number of systems compared for each of
+    #   the individual RankingTask instances in each HIT and check if
+    #   there are any multi-systems included...
+    #
     global_stats.append(('System comparisons', 10 * ranking_results))
     global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
     global_stats.append(('Average duration (single user)',

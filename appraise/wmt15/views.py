@@ -997,7 +997,10 @@ def signup(request):
                     LOGGER.warning('Trying to create user "{0}" with ' \
                       'invalid invite token "{1}"'.format(username, token))
                     
-                    raise ValueError('invalid_token') 
+                    raise ValueError('invalid_token')
+                
+                # We now have a valid invite token... 
+                invite = invite[0]
                 
                 # Check if desired username is already in use.
                 current_user = User.objects.filter(username=username)

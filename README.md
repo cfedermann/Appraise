@@ -4,7 +4,11 @@
 
 <h2 id="wmt15">WMT15</h2>
 
-<p>Rolling out things for this year's WMT15... Stay tuned for updates &mdash; Evaluation campaign at <a href="http://www.appraise.cf/">http://appraise.cf/</a></p>
+<p>Appraise has been updated for WMT15 &mdash; Evaluation campaign at <a href="http://www.appraise.cf/">http://appraise.cf/</a> &mdash; Follow <code>#WMT15</code> on <a href="https://twitter.com/cfedermann/">https://twitter.com/cfedermann/</a> for updates. Invite tokens have been sent out to participants. For research group registration details or problems drop me an email: <code>cfedermann [at] gmail [dot] com</code></p>
+
+<h2 id="updates2015">Updates 2015</h2>
+
+<p><strong>2015-05-08</strong><blockquote class="twitter-tweet" lang="en"><p>Here we go again! <a href="https://twitter.com/search?q=%23WMT15&amp;src=hash">#WMT15</a> evaluation campaign is running!<br/> Happy annotating! <a href="http://t.co/an6M1WElar">appraise.cf</a> -- <a href="http://t.co/tuIEbUAIdS">statmt.org/wmt15/</a> <a href="https://twitter.com/search?q=%23WMT&amp;src=hash">#WMT</a> <a href="https://twitter.com/search?q=%23Appraise&amp;src=hash">#Appraise</a></p>&mdash; Christian Federmann (@cfedermann) <a href="https://twitter.com/cfedermann/status/596581479422922754">May 8, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
 <h2 id="wmt14">WMT14</h2>
 
@@ -12,7 +16,7 @@
 
 <p>For research group registration details or problems drop me a note via email: <code>cfedermann [at] gmail [dot] com</code></p>
 
-<h2 id="update">Update</h2>
+<h2 id="updates2014">Updates 2014</h2>
 
 <p><strong>2014-03-19</strong> User changeable passwords and new action menu in navigation bar; go to <a href="http://www.appraise.cf/password/">http://www.appraise.cf/password/</a> when logged in to change the password for your Appraise account. You can also use the lovely new user action menu on the top right of the navigation bar ("Admin", of course, only visible to some):</p>
 

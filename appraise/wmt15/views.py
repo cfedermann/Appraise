@@ -729,16 +729,9 @@ def _compute_global_stats():
     global_stats.append(('HITs completed', hits_completed))
     global_stats.append(('HITs remaining', hits_remaining))
     global_stats.append(('Ranking results', ranking_results.count()))
-    
-    # TODO: It is not safe to assume 10 comparisons per HIT anymore.
-    #   We have to compute the number of systems compared for each of
-    #   the individual RankingTask instances in each HIT and check if
-    #   there are any multi-systems included...
-    #
     global_stats.append(('System comparisons', system_comparisons))
-    global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
-    global_stats.append(('Average duration (single user)',
-      seconds_to_timedelta(avg_user_time)))
+    global_stats.append(('Average duration (per HIT)', seconds_to_timedelta(avg_time)))
+    global_stats.append(('Average duration (per task)', seconds_to_timedelta(avg_user_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     return global_stats
@@ -750,7 +743,7 @@ def _compute_language_pair_stats():
     """
     language_pair_stats = []
     
-    # TODO: update LANGUAGE_PAIR_CHOICES to include Finnish and move to better place.
+    # TODO: move LANGUAGE_PAIR_CHOICES better place.
     #
     # Running compute_remaining_hits() will also update completion status for HITs.
     for choice in LANGUAGE_PAIR_CHOICES:

@@ -758,11 +758,21 @@ def _compute_language_pair_stats():
         _name = choice[1]
         _remaining_hits = HIT.compute_remaining_hits(language_pair=_code)
         _completed_hits = HIT.objects.filter(completed=True, mturk_only=False,
-          language_pair=_code).count()
+          language_pair=_code)
+        
+        _unique_systems_for_language_pair = set()
+        for _hit in _completed_hits:
+            for _result in RankingResult.objects.filter(item__hit=_hit):
+                for _translation in _result.item.translations:
+                    for _system in set(_translation[1]['system'].split(',')):
+                         _unique_systems_for_language_pair.add(_system)
+        
+        _completed_hits = _completed_hits.count()
         _total_hits = _remaining_hits + _completed_hits
                 
         _data = (
           _name,
+          len(_unique_systems_for_language_pair),
           (_remaining_hits, 100 * _remaining_hits/float(_total_hits or 1)),
           (_completed_hits, 100 * _completed_hits/float(_total_hits or 1))
         )

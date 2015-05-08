@@ -37,10 +37,6 @@ LANGUAGE_PAIR_CHOICES = (
   ('fin2eng', 'Finnish → English'),
   ('fra2eng', 'French → English'),  
   ('rus2eng', 'Russian → English'),
-
-  # WMT14 languages
-  # ('eng2hin', 'English → Hindi'),
-  # ('hin2eng', 'Hindi → English'),
 )
 
 
@@ -458,6 +454,8 @@ class RankingResult(models.Model):
     
     results = None
     
+    systems = 0
+    
     class Meta:
         """
         Metadata options for the RankingResult object model.
@@ -490,6 +488,8 @@ class RankingResult(models.Model):
             try:
                 self.results = self.raw_result.split(',')
                 self.results = [int(x) for x in self.results]
+
+                self.systems = sum([len(x[1]['system'].split(',')) for x in self.item.translations])
             
             # pylint: disable-msg=W0703
             except Exception, msg:
@@ -541,7 +541,7 @@ class RankingResult(models.Model):
         iso639_3_to_name_mapping = {'ces': 'Czech', 'cze': 'Czech',
           'deu': 'German', 'ger': 'German', 'eng': 'English',
           'spa': 'Spanish', 'fra': 'French', 'fre': 'French',
-          'hin': 'Hindi', 'rus': 'Russian', 'fin': 'Finnish'}
+          'rus': 'Russian', 'fin': 'Finnish'}
         
         _src_lang = hit.hit_attributes['source-language']
         _trg_lang = hit.hit_attributes['target-language']

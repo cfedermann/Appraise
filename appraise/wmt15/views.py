@@ -699,7 +699,14 @@ def _compute_global_stats():
     
     # Compute number of results contributed so far.
     ranking_results = RankingResult.objects.filter(
-      item__hit__completed=True, item__hit__mturk_only=False).count()
+      item__hit__completed=True, item__hit__mturk_only=False)
+    
+    from math import factorial
+    system_comparisons = 0
+    for result in ranking_results:
+        result.reload_dynamic_fields()
+        combinations = factorial(result.systems)/(factorial(result.systems-2) * 2)
+        system_comparisons = system_comparisons + combinations
     
     # Aggregate information about participating groups.
     groups = set()
@@ -721,14 +728,14 @@ def _compute_global_stats():
     global_stats.append(('Groups', len(groups)))
     global_stats.append(('HITs completed', hits_completed))
     global_stats.append(('HITs remaining', hits_remaining))
-    global_stats.append(('Ranking results', ranking_results))
+    global_stats.append(('Ranking results', ranking_results.count()))
     
     # TODO: It is not safe to assume 10 comparisons per HIT anymore.
     #   We have to compute the number of systems compared for each of
     #   the individual RankingTask instances in each HIT and check if
     #   there are any multi-systems included...
     #
-    global_stats.append(('System comparisons', 10 * ranking_results))
+    global_stats.append(('System comparisons', system_comparisons))
     global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
     global_stats.append(('Average duration (single user)',
       seconds_to_timedelta(avg_user_time)))

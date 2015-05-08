@@ -1,0 +1,721 @@
+<hits>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1605">Svoje radikální tvrzení Kaluza odůvodňoval tím, že dodatečná dimenze poskytuje elegantní a přesvědčivý rámec, v němž lze Einsteinovu obecnou relativitu a Maxwellovu elektromagnetickou teorii vetkat do jediné, sjednocené pojmové struktury.</source>
+      <reference>Kaluza explained his radical claim by pointing out that an additional dimension provides an elegant and convincing framework, in which Einstein's general relativity and Maxwell's electromagnetic theory could be combined into one unified concept.</reference>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Their radical claims kaluza odůvodňoval by that additional dimension of the provides an elegant and convincing framework, in which can be einsteinovu general relativitu and maxwellovu elektromagnetickou theory vetkat into a single, united pojmové structures.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">You claim justifying justifying tím, že additional dimenze provides elegant a convincing framework, v které lze Einstein general relativity a Maxwellovu electromagnetic teorii surreal do only, united conceptual struktury.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">His radical claim Kaluza justified by the fact that the additional dimension offers elegant and persuasive framework within which to Einstein's theory of general relativity and Maxwell electromagnetic use into a single, unified conceptual structure.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Their radical claim kaluza odůvodňoval by an additional dimension gives an elegant and clinching framework, in which can be einsteinovu general relativitu and maxwellovu elektromagnetickou theory vetkat into a single, united pojmové structures.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Its radical kaluza ’ s claim that the additional dimension offers elegant and convincing framework in which can be einsteinovu general relativitu and maxwellovu elektromagnetickou theory vetkat into a single , united pojmové structures .</translation>
+    </seg>
+    <seg>
+      <source id="1110">Jejich reakce byla odlišná.</source>
+      <reference>They reacted very differently.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Their response was different.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The response was different .</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt,newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.online-A.0.cs-en.txt,newstest2015.online-B.0.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">Their reaction was different.</translation>
+    </seg>
+    <seg>
+      <source id="2545">A to i příteli.</source>
+      <reference>She even told this to her boyfriend.</reference>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt">And my friend.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Even friend .</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt">Even a friend.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">And it's also my friend.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Even my friend.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1387">18 dostalo mimo kontrolu, vyjelo ze druhé zatáčky a narazilo do Stewartova, čímž oba vozy poslalo do hrazení.</source>
+      <reference>18 machine got loose coming out of turn 2 and banged into Stewart, sending both cars against the wall.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">Received outside the control of 18, vyjelo from the second zatáčky and flown into stewartova, thus both lorries sent to bear.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt">Received outside the control of 18, vyjelo from the second zatáčky and flown into stewartova, thus both lorries sent into reimbursement.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Received outside the control of 18, vyjelo from the second zatáčky and flown into stewartova, thereby both lorries sent into reimbursement.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">18 got out of control, out of the second bend and hit Stewart, which sent both cars into the fence.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">18 it got out of a control, it came from the second curve, and it crashed Stewart's thereby it sent the both cars to a payment.</translation>
+    </seg>
+    <seg>
+      <source id="2061">Mezi odmítnutými položkami najdeme spisy jak apoštolů, tak proroků.</source>
+      <reference>Among the rejected items were the writings of both apostles and prophets.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Between odmítnutými items we find the writings of both the apostles and prophets.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Among the items we find odmítnutými writings as apostles and prophets.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Among the rejected items we find the writings of the Apostles, the prophets, as well.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Between odmítnutými headings find writings as apostles and prophets.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Declined items can be found among the writings of both apostles and prophets.</translation>
+    </seg>
+    <seg>
+      <source id="1397">V současnosti rozhoduje výše nabídky.</source>
+      <reference>The amount of the offer is currently decisive.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">At present, decides the amount of supply.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Currently decides the menu above.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">At the moment is decided by the supply.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">At present is the supply.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">At the moment is the supply .</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="272">Nech sestru na pokoji.</source>
+      <reference>Leave your sister alone.</reference>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Leave a sister on a room.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Let in-room sister.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Let sister .</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt,newstest2015.online-B.0.cs-en.txt">Leave my sister alone.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Let sister in-room.</translation>
+    </seg>
+    <seg>
+      <source id="2175">Pokud ano, mohou se starší vydání prodávat za zlomek ceny poslední verze.</source>
+      <reference>If so, old editions can often be found for a tiny fraction of the cost of the latest version.</reference>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">If so, the older issue may be sold at a fraction of the last version.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">If so, can the older editions sell for a fraction of the final version.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">If so, can the older extradition to sell at a fraction of the final version.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">If so, they can sell for a fraction of the price of the older edition of the latest version.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">If so, an older edition may sell for a fraction of the price of the last version.</translation>
+    </seg>
+    <seg>
+      <source id="1981">Twitch, který teprve před třemi lety založila Justin.tv, měl našlápnuto k tomu, aby se stal všeobecně používanou video streamingovou službou - živá verze YouTube.</source>
+      <reference>Twitch, founded only three years ago as Justin.tv, set out to be a general streaming service - a live version of YouTube.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Twitch, who only three years ago, Justin.tv, he was primed to become widely used video streamingovou service - a live version of YouTube.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Twitch, that has only just three years ago, established justin.tv, had the projected to has become widely much-used video streamingovou service - lively version of the YouTube.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">The twitch, which only three years ago, established justin.tv, had the projected to become widely much-used video streamingovou service - animated version of gehorig.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Twitch, which only three years ago, established justin.tv, should projected to become widely much-used video streamingovou service - lively version of YouTube.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Twitch which ago only three years she established Justin.tv, he had being našlápnouted to this to become the generally use video streamingový service a - live version YouTube.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1580">Přesto je konkrétní a zcela přijatelný.</source>
+      <reference>Nonetheless, it is specific and entirely acceptable.</reference>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Yet it is specific and perfectly acceptable.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.online-A.0.cs-en.txt">Yet it is specific and completely acceptable .</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">Nevertheless, it is concrete and quite acceptable.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Yet it is concrete and completely acceptable.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">Yet it is concrete and entirely acceptable.</translation>
+    </seg>
+    <seg>
+      <source id="223">Z třiadvacetičlenného kádru má problémy sparťanský útočník David Lafata, kterého trápí teplota.</source>
+      <reference>One of the team's 23 members, Sparta's offensive player David Lafata, has a fever.</reference>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">From třiadvacetičlenný cadre, the sparťanský assailant David Lafata which the temperature plagues has problems.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">From třiadvacetičlenného reshuffle has sparťanský attacker David lafata problems that have plagued the temperature.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Třiadvacetičlenného cadre has problems of Sparta striker David Lafata, who worried about the temperature.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">From třiadvacetičlenného cadre has problems Sparta striker David Lafata, which worries the temperature.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Of třiadvacetičlenného squad has problems Sparta striker David Lafata, who bothers temperature.</translation>
+    </seg>
+    <seg>
+      <source id="1761">Tak když tak přiletím...</source>
+      <reference>Then I'll fly in...</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">So when I arrive...</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">So when I arrive to ...</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">So that when I arrive ...</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">So when so přiletím ...</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">So I will come so.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="714">Jednou chci pracovat u policie a doufám, že mě příští rok přijmou na akademii.</source>
+      <reference>I want to serve in the police one day and hope they enrol me to the training academy next year.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Once I want to work with police and I hope that me next year will take on the academy.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Once I want to work with the police, and I hope that next year would take me at the academy.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Once I want to work with police and I hope that I next year will take on janeway.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">I want to work at the police once, and I hope they'll take me at the academy next year.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Once I want to work in the police force, and I hope that the next year will take me to janeway.</translation>
+    </seg>
+    <seg>
+      <source id="1546">Po chvíli ji pomalu odvádím ven z prostoru cíle.</source>
+      <reference>After a while, I gradually take her out from the space of the finish line.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">After a while, I'm doing it slowly out of the area.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">After the moment it slowly odvádím out of area objectives.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">After a while it slowly odvádím out of area objectives.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">After a while it slowly odvádím out of the area objectives.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">After a while I dispose of it slowly out of the target area.</translation>
+    </seg>
+    <seg>
+      <source id="922">„Je možné, že hodně azbestu bylo v suterénních chodbách Guy's Hospital, kde jsem strávil šest let na praxi,“ napsal.</source>
+      <reference>"It seems that there may have been a lot of asbestos in the tunnels at Guy's Hospital where I spent six years training," he wrote.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">"It is possible that a lot of asbestos was in the basement corridors of Guy's Hospital, where I spent six years in practice," he wrote.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">"It's possible that there was a lot of asbestos in the basement corridors of Guy's Hospital, where I spent six years in practice," he wrote.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">“it is possible that a lot of asbestos was in suterénních hallways guy 'with hospital, where I spent six years in practice, ” wrote.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">“it is possible that a lot of asbestos was in suterénních hallways guy 'with hospital where I spent six years to the practice, ” he wrote.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">"it is possible that a lot of asbestos was in the basement corridors, Guy's Hospital, where I spent six years of practice," he wrote.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="2200">Podle mých informací se takové pušky vyráběly až ke konci války.</source>
+      <reference>"According to information available to me, these types of rifles were not manufactured until near the end of the war.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">According to my information, such guns produced up towards the end of the war.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">According to my information, such guns produced by the end of the war.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">According to my information, these rifles produced until the end of the war.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">According to my information with such guns produce up to the end of the war.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">According to my information, such guns were produced at the end of the war.</translation>
+    </seg>
+    <seg>
+      <source id="627">Mluvčí jihoafrické vlády Clayson Monyela řekl, že vojenské akce vypadaly jako pokus o svržení vlády.</source>
+      <reference>South African government spokesman Clayson Monyela said the military's actions had the appearance at an overthrow.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">South African government spokesman Clayson Monyela said that military action look like an attempt to overthrow the government.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The South African governments clayson monyela said that military action look like an attempt to overthrow the government .</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">The South African governments clayson monyela said that military action look as an attempt to overthrow the government.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">South African Government spokesman Clayson Monyela said that the military action as an attempt to overthrow the Government.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">The speaker of the South African governments clayson monyela said, that military action look as an attempt to overthrow the government.</translation>
+    </seg>
+    <seg>
+      <source id="2107">Čchen se posléze zabil skokem z výšky, uvedla Nová Čína s odkazem na regionální vládu.</source>
+      <reference>Chen eventually killed himself by jumping from a height, New China reported, citing regional government officials.</reference>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Chen, eventually killed leap from a height, said the new China with reference to the regional government.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Chen later killed himself by jumping from a height, said new China with reference to the regional government.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Chen was eventually killed jump from a height, the New China with reference to the regional government.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Čchen subsequently killed leap from above , said the new čína with reference to the regional government .</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Chen then killed leap from a height, new China stated with a reference to a regional government.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1329">Ale i Mira potvrdil, že auto jsme nachystali dobře.</source>
+      <reference>Even Mira confirmed to me that we had prepared the car well.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">But i Mira confirmed that the car we have prepared well.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">But also Mira confirmed that the car we nachystali well .</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">But Mira has confirmed that the car we have prepared well.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">But even mira confirmed that car we nachystali well.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">But even Mira confirmed that the car had been arranged well.</translation>
+    </seg>
+    <seg>
+      <source id="1843">Charitativní organizace CMT UK zahájila měsíc informovanosti o CMT, aby na tuto nemoc upozornila.</source>
+      <reference>Charity CMT UK has launched CMT awareness month to try to draw attention to the condition.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Charities cmt UK launched month awareness of cmt, to the disease to the attention.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt">The charities cmt the UK has launched a month awareness of cmt to the disease to the attention.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Charities cmt UK launched month awareness about cmt to this disease attention.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">The charity organisation of the UK has launched a month of information on the CMT to draw attention to this disease.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">CMT UK charity has launched awareness of CMT month to draw attention to this disease.</translation>
+    </seg>
+    <seg>
+      <source id="401">Její politické portfolio je také rozsáhlé.</source>
+      <reference>Her political rating is sturdy, too.</reference>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Its political portfolio is too large.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Its political portfolio is also widespread.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Her political portfolio is too large.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Its political portfolio is also a large @-@ scale .</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Its political portfolio is also extensive.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1667">Další gól bez čekání?</source>
+      <reference>Another goal without waiting?</reference>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">An another goal without Wait?</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Another goal without waiting for?</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Next goal without waiting?</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.online-B.0.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">Another goal without waiting ?</translation>
+    </seg>
+    <seg>
+      <source id="399">Sedm let byla výkonnou ředitelkou Financial Times. Na funkci rezignovala, když nejvyšší funkci v mateřské společnosti Pearson's obsadil její mladší kolega.</source>
+      <reference>She was chief executive of the Financial Times for seven years, resigning when the top job at its parent company Pearson's went to a junior male colleague.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">For seven years, was the executive director of the Financial Times. The office resigned as the highest office in the parent company Pearson's took her younger colleague.</translation>
+      <translation system="newstest2015.tuning-task-ILLC-UvA.cs-en.txt">Seven years was the executive director of the financial times for the post resigned, when the highest office in the parent company Pearson's occupied its younger colleague.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Seven years was executive director of the Financial Times. He resigned when the highest office in the parent company Pearson's cast her younger colleague.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Seven years was the Executive Director of financial times . To resign , when the highest office in the parent company Pearson occupied with its younger fellow Member .</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Seven years was the executive director of the Financial Times. For the post of resigned, when the highest office in the parent company Pearson 'with occupied its younger colleague.</translation>
+    </seg>
+    <seg>
+      <source id="551">Bezinkové víno, takže pití za to nemohlo.</source>
+      <reference>Elderflower wine, so drink wasn't his excuse.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt">Bezinkové wine, so the drink for this might not.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Elder wine, so it could drink.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Elderberry wine, so drink as it could.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Elderberry wine, so it could not drink.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Bezinkové wine, so drinking for this might not.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="368">Keňa začala s biometrickou registrací všech svých státních úředníků, aby se pokusila odstranit z výplatní listiny vlády neexistující zaměstnance.</source>
+      <reference>Kenya has started biometrically registering all civil servants in an attempt to remove "ghost workers" from the government's payroll.</reference>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">Kenya began with biometric the registration of all their civil servants to try to remove from the payroll of a government that did not exist.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Kenya began with biometric authorisation all their state officials, to try to remove from the Charter of governments non-existent employees.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Keňa began with biometric registration of all its civil servants to try to eliminate the pay of governments , non @-@ existent employees .</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">Kenya started with biometric registration of all their national officials to try to remove from the Charter of government non-existent employees.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt">Kenya started with biometric registration of all its state officials to try to remove from the Charter of governments non-existent employees.</translation>
+    </seg>
+    <seg>
+      <source id="1967">Hamás svými střelami útočí i na své arabské bratry.</source>
+      <reference>Hamas is also attacking its Arab brothers with its rockets.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Hamas its missiles attack on its Arab brothers.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Hamas for its missile attacks on its Arab brothers.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Hamas its missiles attacks to their Arab brothers.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Hamas its shells attacks to their Arab brothers.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Hamas also its missiles attacks on its Arab brothers.</translation>
+    </seg>
+    <seg>
+      <source id="2030">Žádná z nich nemá důkazní oporu a žádná se nedá historicky potvrdit.</source>
+      <reference>None of them have any evidentiary support, and none of them are historically verifiable.</reference>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">None of them have of proof of backing and no cannot be historically confirm.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">None of them has the backing and no cannot be historically confirm .</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">None of them does not have the burden of support and no is not historically confirmed.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">None of them has the support and no cannot be historically confirmed.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">None of them has any evidentiary support and are not historically confirmed.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1333">V této chvíli určitě ne.</source>
+      <reference>Certainly not at this time.</reference>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.online-A.0.cs-en.txt,newstest2015.online-B.0.cs-en.txt">At this moment , certainly not .</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt">At this point, certainly not.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Certainly not at this moment.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Certainly not in this moment.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Not at this moment.</translation>
+    </seg>
+    <seg>
+      <source id="1691">Láva vyletující na povrch v oblasti Holuhraun nedaleko ledovce Vatnajökull, přitéká podzemním tunelem z kilometry vzdáleného kráteru.</source>
+      <reference>Lava bubbling to the surface in the Holuhraun region, near the Vatnajökull glacier, is flowing through an underground tunnel from a crater kilometers away.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Láva vyletující to the surface in the area of holuhraun near the icebergs vatnajökull, flow in the underground tunnel of kilometres remote kráteru.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">The lava to the surface in the area of Goring Holuhraun near Vatnajökull glacier, flows through an underground tunnel from the miles of the crater.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Láva vyletující on the surface in holuhraun near the iceberg vatnajökull underground tunnel , wisdom of kilometres away kráteru .</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Lava vyletující to the surface in the area holuhrauns near glacier Vatnajökull přitékats by an underground tunnel from by kilometers remote crater.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Lava flying particles on the surface of Holuhraun near a glacier Vatnajökull, flows underground tunnel kilometers away from the crater.</translation>
+    </seg>
+    <seg>
+      <source id="2539">Druhé dítě se podle jejího tvrzení navíc narodilo mrtvé.</source>
+      <reference>She said furthermore that the second child had been born dead.</reference>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">In addition, the second child was born dead.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The second child , according to its claims , moreover , were born dead .</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Second child, according to her allegations addition stillborn.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">The second child according to her claim bore moreover dead.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">In its statement, moreover, the second child was stillborn.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1883">Podpora, kterou Západu poskytuje válčení ukrajinské armády na východě Ukrajiny, podle něj odporuje demokratickým hodnotám.</source>
+      <reference>He says the support provided by the West to the Ukrainian army in eastern Ukraine conflicts with democratic values.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">The support that the West is fighting the Ukrainian army in the east of Ukraine, according to him, is contrary to the democratic values.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt">The support that the West provides soldiering Ukrainian army in eastern Ukraine, according to this runs counter to the democratic values.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">The support that the West ’ s provides soldiering Ukraine ’ s army in eastern Ukraine, according to this runs counter to the democratic values.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">The support that the West provides soldiering Ukrainian army in eastern Ukraine, according to it runs counter to the democratic values.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">The support that the West provides soldiering Ukrainian army in eastern Ukraine, according to it contradicts democratic values.</translation>
+    </seg>
+    <seg>
+      <source id="991">Ale Rachel, moje žena, si starosti dělala.</source>
+      <reference>But Rachel, my wife, was worrying.</reference>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">But Rachel , my wife , worry .</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">But Rachel, my wife, worry has done.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">But Rachel, my wife, do not worry.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">But my wife, Rachel, do not worry.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">But Rachel, my wife, she's worried.</translation>
+    </seg>
+    <seg>
+      <source id="1245">I poté, co ženy v roce 1920 získaly volební právo, trvalo deset let, než se začaly organizovat proti lynčování v Asociaci jižanských žen pro předcházení lynčování.</source>
+      <reference>Even after women won the right to vote in 1920, it took a decade for white women to organize against lynching as the Association of Southern Woman for the Prevention of Lynching.</reference>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Even after women won the right to vote in 1920, it took ten years before women began to organize against the lynching in the Southern Association for the Prevention of lynching.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Even after women in 1920 received the right to vote, it took ten years before they began to organize against lynching in the Association of Southern Women for the Prevention of Lynching.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Even after women in 1920, gained electoral law, it took ten years before began to organize against lynching in the Association of Southern women for the prevention of lynching.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">And then, the ten years took after women in a year 1920 acquired the electoral right before they began to organise against the lynčování in Association of southern women to prevent of lynčování.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Even then, what women in 1920 získaly electoral right, it took ten years, than began to organize against the lynching of in association jižanských women for prevention lynching.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="799">Omdlel jsem.</source>
+      <reference>I lost consciousness.</reference>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">I am omdlel.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt,newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.online-B.0.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">I fainted.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Omdlel I .</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Omdlel I am.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt">I blacked out.</translation>
+    </seg>
+    <seg>
+      <source id="168">Ředitel policie v Magalufu obviněn z korupce</source>
+      <reference>Magaluf police chief charged over corruption</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">The director of the police in magalufu accused of corruption</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Chief of police in Magaluf accused of corruption</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The Director of the police in magalufu accused of corruption .</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">Ředitel police v Magalufu charged z corruption</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Director, Police in Magaluf, being accused from corruption.</translation>
+    </seg>
+    <seg>
+      <source id="874">Pokud má fotoaparát bracketingový režim, který dělá série snímků s mírně odlišným rozptylem expozice, využijte toho.</source>
+      <reference>Also, if your camera has a bracket mode, which shoots a burst of shots at slightly different exposure settings, take advantage of it.</reference>
+      <translation system="newstest2015.online-A.0.cs-en.txt">If the camera bracketingový mode, which makes a series of images with slightly different exposure variance, take advantage of it.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt">If it is camera bracketingový regime that is doing a series of images with slightly different very expositions, take advantage of.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">If has camera bracketingový regime, which makes a series of images with slightly different very exposure, take advantage of.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">If has the camera the bracketingový mode which series of pictures with slightly different scatter of exposure does take it.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">If has camera bracketingový regime, which makes a series of images with slightly different very expositions, take advantage of this.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="2100">Zkoušela jsem zavřít pusu, ale nešlo to, byl zaseknutá, a uvědomila jsem si, že se něco děje.</source>
+      <reference>I tried to close my mouth but it would not close, it was locked, and then I came to the realisation that something was up.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">I tried to shut up, but he could not, he was stuck, and I realized that something was happening.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">I tried to close my mouth, but it didn't work, was stuck, and I realized that something was going on.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Has tried to I close pusu, but that it has been stuck, and I realised that something is happening.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">I tried to close my mouth, but I couldn't, and I realized that something was happening.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">I tried to close a mouth but did not go it, he was stick, and I realized that something happens.</translation>
+    </seg>
+    <seg>
+      <source id="2005">Druhou základní lží kreacionismu je víra, že posvátné texty byly sepsány bohem a nikoliv skutečnými lidskými autory.</source>
+      <reference>The 2nd foundational falsehood of creationism is the belief that sacred scriptures were written by a god rather than by the actual human authors.</reference>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The second basic lies Christianity is the belief that the sacred texts have been written by God and not the actual human authors .</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">The other basic lies Christianity is the belief that sacred texts are written God and not real human authors.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">The other basic lies Christianity, is the belief that the sacred texts are written by God and not the actual human authors.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Faith is the second basic lie of kreacionizmus that sacred texts were written by God and by not real human authors.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">The second lies creationism is the belief that the sacred texts were written by God and not the actual human authors.</translation>
+    </seg>
+    <seg>
+      <source id="792">Je to opravdový zázrak, že přežil.</source>
+      <reference>It is truly a miracle he was not killed.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">It's a real miracle that he survived.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">It's a real miracle he survived.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">It is a miracle that survived .</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">The real miracle he survived, it is.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">This is a real miracle that survived.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1434">Stěny i podlaha je jenom udusaný písek, pouze strop je podbitý.</source>
+      <reference>The walls and the floor are only compacted sand, and only the ceiling is wooden.</reference>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The walls and floor is only udusaný sand , only the ceiling is podbitý .</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">The walls and floors are only sand sand, only the ceiling is podbitý.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">The walls and the floor is only udusaný písek, only the ceiling is podbitý.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Walls and a floor only a packed sand the only ceiling is podbitý are.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Even the floor of the wall is only udusaný písek, only the ceiling is podbitý.</translation>
+    </seg>
+    <seg>
+      <source id="1905">Poslanec za ČSSD Stanislav Huml má jasno v tom, kdo sestřelil malajsijské letadlo nad Ukrajinou.</source>
+      <reference>Czech Social Democratic MP Stanislav Huml is clearly convinced of who shot down the Malaysian plane over Ukraine.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">The Member for ČSSD Stanislav Huml is clear about who shot down the Malaysian airliner over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">A member of a CSSD Stanislav huml is clear on this, who is shot down the Malay plane over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">A member of a CSSD Stanislav huml is clear about who shot down the Malay plane over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Member for CSSD Stanislav huml is clear in this, who shot down the Malay plane over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">A member of a CSSD Stanislav huml clear about who has shot down the Malay plane over Ukraine.</translation>
+    </seg>
+    <seg>
+      <source id="174">Španělský celostátní deník ABC citoval nespokojené majitele nočních podniků, podle kterých má zvýhodňování ze strany veřejných činitelů vážné dopady na jejich podnikání.</source>
+      <reference>Spanish national daily ABC reported the disgruntled nightclub owners as saying favouritism by authorities was having a serious effect on their businesses.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">The Spanish national newspaper vorschläge quoted disaffected owners night-time businesses, according to which it is benefiting from the public officials serious effects on their business.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The Spanish national newspaper ABC quoted upset the nightlife , according to which is benefiting from the public officials serious effects on their business .</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Spanish national newspaper ABC quoted a disgruntled owner of nightclubs, according to which preferential treatment by public officials a serious impact on their business.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Spanish national newspaper vorschläge quoted disaffected owners night-time enterprises, according to which is benefiting from the public officials serious effects on their business.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">The Spanish national daily ABC quoted disgruntled owners of nightspots, which has preferential treatment on the part of public officials serious impacts on their business.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="372">Audit provedený v tomto roce ukázal, že stát měsíčně přichází při nejmenším o jeden milion dolarů (700 000 liber) na výplatách neexistujících zaměstnanců a pří dalším zneužití úřední moci.</source>
+      <reference>An audit earlier this year found that at least $1m (£700,000) a month was lost in payments to "ghost workers" and other financial malpractice.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Audit conducted in this year showed that the state per month comes at the slightest about one million dollars (700 000 gbp) on payouts non-existent employees and at the next abuse of official power.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">The audit carried out in this year showed that the state per month comes at least one million dollars (700 000 gbp) to payouts non-existent employees and at the next abuse of official power.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">The audit carried out in this year showed that the state comes a month at least one million dollars of 700 000 pounds on transfers of nonexistent employees and a further abuse of official power.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">The audit carried out in this year showed that the state per month comes at the slightest about one million dollars (700 000 gbp) for the payouts non-existent employees and at the next abuse of official power.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Audit conducted in this year showed that the state per month comes at least one million dollars (700 000 gbp) on payouts non-existent employees and at the next abuse official power.</translation>
+    </seg>
+    <seg>
+      <source id="1886">Česko si vymohlo právo s částí nesouhlasit</source>
+      <reference>The Czech Republic has reserved the right to disagree with parts of the sanctions.</reference>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">The Czech Republic recovered the right with a part to do not disagree.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">The Czech Republic had enforced the right to disagree with the parts</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Czech to recover the right to disagree with part</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The Czech we had made the right to disagree with parts of</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">Česko si recover right s parts disagree</translation>
+    </seg>
+    <seg>
+      <source id="1239">Ke zdůvodnění lynčování jste potřebovali spolupráci bělošek.</source>
+      <reference>You needed the white woman to be complicit in the narrative to justify the lynching.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">To justify a lynching you needed collaboration white women.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">You need to justify the lynching cooperation of white women.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">To justify the lynching, you needed the cooperation of the white.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">To justify the lynching you needed the cooperation of white women.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">To justify of lynčování, you needed cooperation of běloška.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="368">Keňa začala s biometrickou registrací všech svých státních úředníků, aby se pokusila odstranit z výplatní listiny vlády neexistující zaměstnance.</source>
+      <reference>Kenya has started biometrically registering all civil servants in an attempt to remove "ghost workers" from the government's payroll.</reference>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">Kenya began with biometric the registration of all their civil servants to try to remove from the payroll of a government that did not exist.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Kenya began with biometric authorisation all their state officials, to try to remove from the Charter of governments non-existent employees.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Keňa began with biometric registration of all its civil servants to try to eliminate the pay of governments , non @-@ existent employees .</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">Kenya started with biometric registration of all their national officials to try to remove from the Charter of government non-existent employees.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt">Kenya started with biometric registration of all its state officials to try to remove from the Charter of governments non-existent employees.</translation>
+    </seg>
+    <seg>
+      <source id="1967">Hamás svými střelami útočí i na své arabské bratry.</source>
+      <reference>Hamas is also attacking its Arab brothers with its rockets.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Hamas its missiles attack on its Arab brothers.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Hamas for its missile attacks on its Arab brothers.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Hamas its missiles attacks to their Arab brothers.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Hamas its shells attacks to their Arab brothers.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Hamas also its missiles attacks on its Arab brothers.</translation>
+    </seg>
+    <seg>
+      <source id="2030">Žádná z nich nemá důkazní oporu a žádná se nedá historicky potvrdit.</source>
+      <reference>None of them have any evidentiary support, and none of them are historically verifiable.</reference>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">None of them have of proof of backing and no cannot be historically confirm.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">None of them has the backing and no cannot be historically confirm .</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">None of them does not have the burden of support and no is not historically confirmed.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">None of them has the support and no cannot be historically confirmed.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">None of them has any evidentiary support and are not historically confirmed.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1434">Stěny i podlaha je jenom udusaný písek, pouze strop je podbitý.</source>
+      <reference>The walls and the floor are only compacted sand, and only the ceiling is wooden.</reference>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The walls and floor is only udusaný sand , only the ceiling is podbitý .</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">The walls and floors are only sand sand, only the ceiling is podbitý.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">The walls and the floor is only udusaný písek, only the ceiling is podbitý.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Walls and a floor only a packed sand the only ceiling is podbitý are.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Even the floor of the wall is only udusaný písek, only the ceiling is podbitý.</translation>
+    </seg>
+    <seg>
+      <source id="1905">Poslanec za ČSSD Stanislav Huml má jasno v tom, kdo sestřelil malajsijské letadlo nad Ukrajinou.</source>
+      <reference>Czech Social Democratic MP Stanislav Huml is clearly convinced of who shot down the Malaysian plane over Ukraine.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">The Member for ČSSD Stanislav Huml is clear about who shot down the Malaysian airliner over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">A member of a CSSD Stanislav huml is clear on this, who is shot down the Malay plane over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">A member of a CSSD Stanislav huml is clear about who shot down the Malay plane over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Member for CSSD Stanislav huml is clear in this, who shot down the Malay plane over Ukraine.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">A member of a CSSD Stanislav huml clear about who has shot down the Malay plane over Ukraine.</translation>
+    </seg>
+    <seg>
+      <source id="174">Španělský celostátní deník ABC citoval nespokojené majitele nočních podniků, podle kterých má zvýhodňování ze strany veřejných činitelů vážné dopady na jejich podnikání.</source>
+      <reference>Spanish national daily ABC reported the disgruntled nightclub owners as saying favouritism by authorities was having a serious effect on their businesses.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">The Spanish national newspaper vorschläge quoted disaffected owners night-time businesses, according to which it is benefiting from the public officials serious effects on their business.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The Spanish national newspaper ABC quoted upset the nightlife , according to which is benefiting from the public officials serious effects on their business .</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Spanish national newspaper ABC quoted a disgruntled owner of nightclubs, according to which preferential treatment by public officials a serious impact on their business.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Spanish national newspaper vorschläge quoted disaffected owners night-time enterprises, according to which is benefiting from the public officials serious effects on their business.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">The Spanish national daily ABC quoted disgruntled owners of nightspots, which has preferential treatment on the part of public officials serious impacts on their business.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1605">Svoje radikální tvrzení Kaluza odůvodňoval tím, že dodatečná dimenze poskytuje elegantní a přesvědčivý rámec, v němž lze Einsteinovu obecnou relativitu a Maxwellovu elektromagnetickou teorii vetkat do jediné, sjednocené pojmové struktury.</source>
+      <reference>Kaluza explained his radical claim by pointing out that an additional dimension provides an elegant and convincing framework, in which Einstein's general relativity and Maxwell's electromagnetic theory could be combined into one unified concept.</reference>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Their radical claims kaluza odůvodňoval by that additional dimension of the provides an elegant and convincing framework, in which can be einsteinovu general relativitu and maxwellovu elektromagnetickou theory vetkat into a single, united pojmové structures.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">You claim justifying justifying tím, že additional dimenze provides elegant a convincing framework, v které lze Einstein general relativity a Maxwellovu electromagnetic teorii surreal do only, united conceptual struktury.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">His radical claim Kaluza justified by the fact that the additional dimension offers elegant and persuasive framework within which to Einstein's theory of general relativity and Maxwell electromagnetic use into a single, unified conceptual structure.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Their radical claim kaluza odůvodňoval by an additional dimension gives an elegant and clinching framework, in which can be einsteinovu general relativitu and maxwellovu elektromagnetickou theory vetkat into a single, united pojmové structures.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Its radical kaluza ’ s claim that the additional dimension offers elegant and convincing framework in which can be einsteinovu general relativitu and maxwellovu elektromagnetickou theory vetkat into a single , united pojmové structures .</translation>
+    </seg>
+    <seg>
+      <source id="1110">Jejich reakce byla odlišná.</source>
+      <reference>They reacted very differently.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Their response was different.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The response was different .</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt,newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.online-A.0.cs-en.txt,newstest2015.online-B.0.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">Their reaction was different.</translation>
+    </seg>
+    <seg>
+      <source id="2545">A to i příteli.</source>
+      <reference>She even told this to her boyfriend.</reference>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt">And my friend.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Even friend .</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt">Even a friend.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">And it's also my friend.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Even my friend.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1329">Ale i Mira potvrdil, že auto jsme nachystali dobře.</source>
+      <reference>Even Mira confirmed to me that we had prepared the car well.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">But i Mira confirmed that the car we have prepared well.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">But also Mira confirmed that the car we nachystali well .</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">But Mira has confirmed that the car we have prepared well.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">But even mira confirmed that car we nachystali well.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">But even Mira confirmed that the car had been arranged well.</translation>
+    </seg>
+    <seg>
+      <source id="1843">Charitativní organizace CMT UK zahájila měsíc informovanosti o CMT, aby na tuto nemoc upozornila.</source>
+      <reference>Charity CMT UK has launched CMT awareness month to try to draw attention to the condition.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Charities cmt UK launched month awareness of cmt, to the disease to the attention.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt">The charities cmt the UK has launched a month awareness of cmt to the disease to the attention.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Charities cmt UK launched month awareness about cmt to this disease attention.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">The charity organisation of the UK has launched a month of information on the CMT to draw attention to this disease.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">CMT UK charity has launched awareness of CMT month to draw attention to this disease.</translation>
+    </seg>
+    <seg>
+      <source id="401">Její politické portfolio je také rozsáhlé.</source>
+      <reference>Her political rating is sturdy, too.</reference>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Its political portfolio is too large.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Its political portfolio is also widespread.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Her political portfolio is too large.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Its political portfolio is also a large @-@ scale .</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Its political portfolio is also extensive.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="2100">Zkoušela jsem zavřít pusu, ale nešlo to, byl zaseknutá, a uvědomila jsem si, že se něco děje.</source>
+      <reference>I tried to close my mouth but it would not close, it was locked, and then I came to the realisation that something was up.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">I tried to shut up, but he could not, he was stuck, and I realized that something was happening.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">I tried to close my mouth, but it didn't work, was stuck, and I realized that something was going on.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Has tried to I close pusu, but that it has been stuck, and I realised that something is happening.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">I tried to close my mouth, but I couldn't, and I realized that something was happening.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">I tried to close a mouth but did not go it, he was stick, and I realized that something happens.</translation>
+    </seg>
+    <seg>
+      <source id="2005">Druhou základní lží kreacionismu je víra, že posvátné texty byly sepsány bohem a nikoliv skutečnými lidskými autory.</source>
+      <reference>The 2nd foundational falsehood of creationism is the belief that sacred scriptures were written by a god rather than by the actual human authors.</reference>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The second basic lies Christianity is the belief that the sacred texts have been written by God and not the actual human authors .</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">The other basic lies Christianity is the belief that sacred texts are written God and not real human authors.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">The other basic lies Christianity, is the belief that the sacred texts are written by God and not the actual human authors.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Faith is the second basic lie of kreacionizmus that sacred texts were written by God and by not real human authors.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">The second lies creationism is the belief that the sacred texts were written by God and not the actual human authors.</translation>
+    </seg>
+    <seg>
+      <source id="792">Je to opravdový zázrak, že přežil.</source>
+      <reference>It is truly a miracle he was not killed.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">It's a real miracle that he survived.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">It's a real miracle he survived.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">It is a miracle that survived .</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">The real miracle he survived, it is.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">This is a real miracle that survived.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="799">Omdlel jsem.</source>
+      <reference>I lost consciousness.</reference>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">I am omdlel.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt,newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.online-B.0.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">I fainted.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Omdlel I .</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Omdlel I am.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt">I blacked out.</translation>
+    </seg>
+    <seg>
+      <source id="168">Ředitel policie v Magalufu obviněn z korupce</source>
+      <reference>Magaluf police chief charged over corruption</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">The director of the police in magalufu accused of corruption</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Chief of police in Magaluf accused of corruption</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">The Director of the police in magalufu accused of corruption .</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">Ředitel police v Magalufu charged z corruption</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Director, Police in Magaluf, being accused from corruption.</translation>
+    </seg>
+    <seg>
+      <source id="874">Pokud má fotoaparát bracketingový režim, který dělá série snímků s mírně odlišným rozptylem expozice, využijte toho.</source>
+      <reference>Also, if your camera has a bracket mode, which shoots a burst of shots at slightly different exposure settings, take advantage of it.</reference>
+      <translation system="newstest2015.online-A.0.cs-en.txt">If the camera bracketingový mode, which makes a series of images with slightly different exposure variance, take advantage of it.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt">If it is camera bracketingový regime that is doing a series of images with slightly different very expositions, take advantage of.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">If has camera bracketingový regime, which makes a series of images with slightly different very exposure, take advantage of.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">If has the camera the bracketingový mode which series of pictures with slightly different scatter of exposure does take it.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">If has camera bracketingový regime, which makes a series of images with slightly different very expositions, take advantage of this.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1667">Další gól bez čekání?</source>
+      <reference>Another goal without waiting?</reference>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">An another goal without Wait?</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Another goal without waiting for?</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Next goal without waiting?</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt,newstest2015.Neural-MT.4088.cs-en.txt,newstest2015.online-B.0.cs-en.txt,newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt,newstest2015.uedin-jhu-phrase.4071.cs-en.txt,newstest2015.uedin-syntax.4004.cs-en.txt">Another goal without waiting ?</translation>
+    </seg>
+    <seg>
+      <source id="399">Sedm let byla výkonnou ředitelkou Financial Times. Na funkci rezignovala, když nejvyšší funkci v mateřské společnosti Pearson's obsadil její mladší kolega.</source>
+      <reference>She was chief executive of the Financial Times for seven years, resigning when the top job at its parent company Pearson's went to a junior male colleague.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">For seven years, was the executive director of the Financial Times. The office resigned as the highest office in the parent company Pearson's took her younger colleague.</translation>
+      <translation system="newstest2015.tuning-task-ILLC-UvA.cs-en.txt">Seven years was the executive director of the financial times for the post resigned, when the highest office in the parent company Pearson's occupied its younger colleague.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Seven years was executive director of the Financial Times. He resigned when the highest office in the parent company Pearson's cast her younger colleague.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Seven years was the Executive Director of financial times . To resign , when the highest office in the parent company Pearson occupied with its younger fellow Member .</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Seven years was the executive director of the Financial Times. For the post of resigned, when the highest office in the parent company Pearson 'with occupied its younger colleague.</translation>
+    </seg>
+    <seg>
+      <source id="551">Bezinkové víno, takže pití za to nemohlo.</source>
+      <reference>Elderflower wine, so drink wasn't his excuse.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt">Bezinkové wine, so the drink for this might not.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Elder wine, so it could drink.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Elderberry wine, so drink as it could.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Elderberry wine, so it could not drink.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Bezinkové wine, so drinking for this might not.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="1387">18 dostalo mimo kontrolu, vyjelo ze druhé zatáčky a narazilo do Stewartova, čímž oba vozy poslalo do hrazení.</source>
+      <reference>18 machine got loose coming out of turn 2 and banged into Stewart, sending both cars against the wall.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt">Received outside the control of 18, vyjelo from the second zatáčky and flown into stewartova, thus both lorries sent to bear.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt">Received outside the control of 18, vyjelo from the second zatáčky and flown into stewartova, thus both lorries sent into reimbursement.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Received outside the control of 18, vyjelo from the second zatáčky and flown into stewartova, thereby both lorries sent into reimbursement.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">18 got out of control, out of the second bend and hit Stewart, which sent both cars into the fence.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">18 it got out of a control, it came from the second curve, and it crashed Stewart's thereby it sent the both cars to a payment.</translation>
+    </seg>
+    <seg>
+      <source id="2061">Mezi odmítnutými položkami najdeme spisy jak apoštolů, tak proroků.</source>
+      <reference>Among the rejected items were the writings of both apostles and prophets.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Between odmítnutými items we find the writings of both the apostles and prophets.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Among the items we find odmítnutými writings as apostles and prophets.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Among the rejected items we find the writings of the Apostles, the prophets, as well.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Between odmítnutými headings find writings as apostles and prophets.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">Declined items can be found among the writings of both apostles and prophets.</translation>
+    </seg>
+    <seg>
+      <source id="1397">V současnosti rozhoduje výše nabídky.</source>
+      <reference>The amount of the offer is currently decisive.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">At present, decides the amount of supply.</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt">Currently decides the menu above.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">At the moment is decided by the supply.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">At present is the supply.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">At the moment is the supply .</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="272">Nech sestru na pokoji.</source>
+      <reference>Leave your sister alone.</reference>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Leave a sister on a room.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-DCU.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Let in-room sister.</translation>
+      <translation system="newstest2015.Illinois.4083.cs-en.txt">Let sister .</translation>
+      <translation system="newstest2015.online-A.0.cs-en.txt,newstest2015.online-B.0.cs-en.txt">Leave my sister alone.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Let sister in-room.</translation>
+    </seg>
+    <seg>
+      <source id="2175">Pokud ano, mohou se starší vydání prodávat za zlomek ceny poslední verze.</source>
+      <reference>If so, old editions can often be found for a tiny fraction of the cost of the latest version.</reference>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">If so, the older issue may be sold at a fraction of the last version.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">If so, can the older editions sell for a fraction of the final version.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">If so, can the older extradition to sell at a fraction of the final version.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">If so, they can sell for a fraction of the price of the older edition of the latest version.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">If so, an older edition may sell for a fraction of the price of the last version.</translation>
+    </seg>
+    <seg>
+      <source id="1981">Twitch, který teprve před třemi lety založila Justin.tv, měl našlápnuto k tomu, aby se stal všeobecně používanou video streamingovou službou - živá verze YouTube.</source>
+      <reference>Twitch, founded only three years ago as Justin.tv, set out to be a general streaming service - a live version of YouTube.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">Twitch, who only three years ago, Justin.tv, he was primed to become widely used video streamingovou service - a live version of YouTube.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">Twitch, that has only just three years ago, established justin.tv, had the projected to has become widely much-used video streamingovou service - lively version of the YouTube.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">The twitch, which only three years ago, established justin.tv, had the projected to become widely much-used video streamingovou service - animated version of gehorig.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">Twitch, which only three years ago, established justin.tv, should projected to become widely much-used video streamingovou service - lively version of YouTube.</translation>
+      <translation system="newstest2015.CU-TectoMT.4138.cs-en.txt">Twitch which ago only three years she established Justin.tv, he had being našlápnouted to this to become the generally use video streamingový service a - live version YouTube.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="ces" target-language="eng">
+    <seg>
+      <source id="714">Jednou chci pracovat u policie a doufám, že mě příští rok přijmou na akademii.</source>
+      <reference>I want to serve in the police one day and hope they enrol me to the training academy next year.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.cs-en.txt">Once I want to work with police and I hope that me next year will take on the academy.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">Once I want to work with the police, and I hope that next year would take me at the academy.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt">Once I want to work with police and I hope that I next year will take on janeway.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">I want to work at the police once, and I hope they'll take me at the academy next year.</translation>
+      <translation system="newstest2015.tuning-task-HKUST-MEANT.cs-en.txt">Once I want to work in the police force, and I hope that the next year will take me to janeway.</translation>
+    </seg>
+    <seg>
+      <source id="1546">Po chvíli ji pomalu odvádím ven z prostoru cíle.</source>
+      <reference>After a while, I gradually take her out from the space of the finish line.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4071.cs-en.txt">After a while, I'm doing it slowly out of the area.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-HKUST-MEANT.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">After the moment it slowly odvádím out of area objectives.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">After a while it slowly odvádím out of area objectives.</translation>
+      <translation system="newstest2015.tuning-task-DCU.cs-en.txt">After a while it slowly odvádím out of the area objectives.</translation>
+      <translation system="newstest2015.online-B.0.cs-en.txt">After a while I dispose of it slowly out of the target area.</translation>
+    </seg>
+    <seg>
+      <source id="922">„Je možné, že hodně azbestu bylo v suterénních chodbách Guy's Hospital, kde jsem strávil šest let na praxi,“ napsal.</source>
+      <reference>"It seems that there may have been a lot of asbestos in the tunnels at Guy's Hospital where I spent six years training," he wrote.</reference>
+      <translation system="newstest2015.online-B.0.cs-en.txt">"It is possible that a lot of asbestos was in the basement corridors of Guy's Hospital, where I spent six years in practice," he wrote.</translation>
+      <translation system="newstest2015.Neural-MT.4088.cs-en.txt">"It's possible that there was a lot of asbestos in the basement corridors of Guy's Hospital, where I spent six years in practice," he wrote.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.cs-en.txt,newstest2015.tuning-task-METEOR-CMU.cs-en.txt">“it is possible that a lot of asbestos was in suterénních hallways guy 'with hospital, where I spent six years in practice, ” wrote.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.cs-en.txt,newstest2015.tuning-task-bleu-MERT.cs-en.txt,newstest2015.tuning-task-bleu-MIRA-dense.cs-en.txt,newstest2015.tuning-task-ILLC-UvA.cs-en.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.cs-en.txt">“it is possible that a lot of asbestos was in suterénních hallways guy 'with hospital where I spent six years to the practice, ” he wrote.</translation>
+      <translation system="newstest2015.uedin-syntax.4004.cs-en.txt">"it is possible that a lot of asbestos was in the basement corridors, Guy's Hospital, where I spent six years of practice," he wrote.</translation>
+    </seg>
+  </hit>
+</hits>

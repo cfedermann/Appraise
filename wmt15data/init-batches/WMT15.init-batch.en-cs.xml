@@ -1,0 +1,716 @@
+<hits>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2230">The separatists consider these men to be mercenaries, and they say such people don't deserve anything other than death.</source>
+      <reference>Separatisté považují tyto muže za nájemné žoldnéře a ti si podle nich nic nezaslouží nic jiného než smrt.</reference>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Separatistů vzít v úvahu tyto muži, aby to bylo žoldáky, a říkají, takové lidé si polecają si zaslouží nic jiného než smrt.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Separatisté uváží tyto muže jenž má být námezdní vojska, a oni říkají, že takové lidi nezaslouží si cokoli jiná než smrt.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Separatisté z těchto lidí považuji za žoldáky, a oni říkají, že takoví lidé si nezaslouží nic jiného než smrt.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Separatisté považují tito muži jsou žoldáci a říká se, že takoví lidé si nezaslouží nic jiného než smrt.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Separatistů zvážit těchto mužů, aby být žoldáky, a říkají takové lidé si very si zaslouží nic jiného než smrti.</translation>
+    </seg>
+    <seg>
+      <source id="1092">Graham Abbott went in for surgery in March 2012.</source>
+      <reference>Graham Abbott podstoupil v březnu 2012 operaci.</reference>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Graham Abbott vstoupili v na operaci v březnu roku 2012.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Grahama Abbott se v pro operace v březnu roku 2012.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt">Graham Abbott vstoupili v na operaci v březnu 2012.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Grahama Abbott se v na operaci v březnu roku 2012.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Graham Abbott šel na operaci března 2012.</translation>
+    </seg>
+    <seg>
+      <source id="2537">That's something I can't explain to you," she said in response to the judge.</source>
+      <reference>To vám vysvětlit nedokážu," odpověděla na dotaz soudci.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">To je něco, co jsem vám nemůže vysvětlit, "řekla v reakci na soudce.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">To je něco, co nedokážu vysvětlit,“ řekla v reakci na soudce.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">To je něco, co nedokážu to vysvětlit, "řekla v reakci na soudce.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">To je něco, co já nemohu vysvětlit Vám, " ona řekla v odpověď na soudce.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Je to něco, kterou vám nemohu vysvětlit,“ řekla důsledek soudce.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="914">As a result, mesothelioma is no respecter of class, wealth, occupation, or age.</source>
+      <reference>Mezoteliom tedy nerespektuje sociální vrstvu, bohatství, povolání ani věk.</reference>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Výsledkem mesothelioma není žádný znovupřízrak třídy, bohatství, povolání nebo věku.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">V důsledku toho mezoteliom se neohlíží na třídu, bohatství, zaměstnání, nebo věku.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jako výsledek, mesothelioma je žádné respecter z class, bohatství, okupace, nebo věku.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">V důsledku toho mezoteliom se neohlíží na třídu, bohatství, zaměstnání, nebo věk.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Výsledkem je mezoteliom se neohlíží na třídy, bohatství, okupace nebo věk.</translation>
+    </seg>
+    <seg>
+      <source id="1531">After the last refreshment break, no one runs ahead of us any more, and we speed up.</source>
+      <reference>Za poslední občerstvovačkou už nás nikdo nepředbíhá, zrychlujeme.</reference>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Po poslední přestávce na občerstvení nikdo neběží před námi, a urychlili.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Po posledních drinky break, nikdo je před námi déle, a urychlíme.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Po poslední rozchod s občerstvením, nikdo před námi, což urychlí.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Po posledním občerstvení, nikdo už běží před námi, a my se urychlí.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Po poslední přestávce na občerstvení nikdo neběží před námi žádný a zrychlovali jsme.</translation>
+    </seg>
+    <seg>
+      <source id="1954">Does the world want to finish what Hitler didn't manage to?</source>
+      <reference>To chce svět dokončit to, co se nepovedlo Hitlerovi?</reference>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Svět chce dokončit, co Hitler nedokázal?</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Dělá svět chce skončit co Hitler nedařil se?</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Chtěl dokončit, co Hitler na světě?</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Svět chce dokončit co Hitler cožpak řídit?</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Svět chce dokončit to, co Hitler nedokázal?</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1123">I have seen napkins made of it glowing on the hearths at banquets</source>
+      <reference>Viděl jsem z ní vyrobené ubrousky, které zářily v krbech na hostinách</reference>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Viděl jsem ubrousky, které jsou z ní zářila na krbů na bankety</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Viděl jsem Ubrousky to zářící na ohnišť na hostinách</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Viděl jsem ubrousky, které se na, v bankety.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Viděl jsem ubrousky, které byly z něj, které září na ohništích, na banketech</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Viděl jsem z něj udělala ubrousky zářila v krbu na banketech</translation>
+    </seg>
+    <seg>
+      <source id="126">The HTA and Royal Horticultural Society said that renting property or a lack of garden space did not mean people could not grow plants.</source>
+      <reference>HTA a Královská zahradnická společnost uvedly, že bydlení v podnájmu nebo nedostatek prostoru neznamená, že by lidé nemohli pěstovat rostliny.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Na hta a Royal zahradnictví společnosti řekl, že pronájem vlastnictví nebo nedostatek garden prostor se neznamená lidí by ne růst elektráren.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">HTA A královská zahradnická společnost řekla, že pronajme majetek nebo nedostatek zahradnického prostoru nechtěl lidi mohli růst rostliny.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">HTA a Royal Horticultural Society řekl, že pronájem majetku nebo nedostatek zahradního prostoru neznamená že lidé nemohli pěstovat rostliny.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Hta a Royal zahradnictví společnosti řekl, že pronájem vlastnictví nebo nedostatek garden prostor nechtěl lidé nemohou pěstovat rostliny.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Hta a Royal hortikulturní společnosti řekl, že pronájem vlastnictví nebo nedostatek zahrada prostor nechtěl lidé nemohou pěstovat rostliny.</translation>
+    </seg>
+    <seg>
+      <source id="521">No word could get beyond the soundproofing of the giant cabbage-like leaves.</source>
+      <reference>Zpoza zvukotěsných listů nemohlo uniknout ani slovo.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Žádné slovo, mohla by se za jsou zvukotěsné obřích cabbage-like listí.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Žádné slovo se nemohlo dostat přes izolaci obřích cabbage-like listů.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Ani slovo, mohl dostat i mimo zvuková izolace z obří cabbage-like listy.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Žádné slovo by nemohlo být za soundproofing obrovských rády zelí listů.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Žádné slovo mohlo dostat mimo odhlučnění obřích zelí-jako listy.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1401">They will pay CZK 2.1 million per year.</source>
+      <reference>Ročně zaplatí 2,1 milionu korun.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt,newstest2015.uedin-jhu-phrase.4069.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Budou platit 2,1 milionu korun ročně.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Budou zaplatí 2,1 mil Kč ročně.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Budou platit czk 2,1 milionu ročně.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Oni zaplatí 2,1 milionů korun ročně.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Budou platit czk 2,1 milionů za rok.</translation>
+    </seg>
+    <seg>
+      <source id="614">But what is the past for if not to learn from it -</source>
+      <reference>Ale k čemu jinému je minulost, než k tomu, abychom se z ní poučili -</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Ale co je minulosti pro ne-li k tomu, aby se z ní -</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt">Ale to, co je minulosti pro ne-li k tomu, aby se z ní -</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Ale jaký je minulost pro jestli nepoučit se z toho -</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt">Ale co je minulosti pro ne-li poučily se z něj -</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Ale co je minulosti pro, pokud ne, aby se z to -</translation>
+    </seg>
+    <seg>
+      <source id="1938">We are keeping our fingers crossed.</source>
+      <reference>Držíme jí palce.</reference>
+      <translation system="newstest2015.online-A.0.en-cs.txt,newstest2015.online-B.0.en-cs.txt,newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Držíme palce.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">We naše prsty.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Zdržujeme prsty year.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">My jsme udržující se naše prsty zkřížené.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Držíme, naše prsty překročily.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1202">I think major progress has been made in recent years for minor-league soccer," Vymazal added.</source>
+      <reference>Myslím si, že pro malou kopanou se za poslední roky udělal obrovský pokrok," dodal Vymazal.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt">Myslím, že došlo k významnému posunu v posledních letech z minor-league fotbal, "vymazal přidány.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Myslím, že již byl dosažen významného pokroku v posledních letech pro druholigový fotbal,“ dodal Vymazal.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Domnívám se, že došlo k významnému posunu v posledních letech z minor-league soccer, "vymazal přidány.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Myslím, že významný pokrok v posledních letech za druholigový fotbalový nebyla, "dodal Vymazal.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Myslím, že značného pokroku bylo dosaženo v posledních letech za druholigový fotbal,"dodal Vymazal.</translation>
+    </seg>
+    <seg>
+      <source id="1539">Hour thirteen and six seconds.</source>
+      <reference>Hodina třináct a šest sekund.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Hodina třináct a šest vteřin.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.CU-TectoMT.3949.en-cs.txt,newstest2015.Neural-MT.4096.en-cs.txt,newstest2015.online-A.0.en-cs.txt">Hodina třináct a šest sekund.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt,newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Hodinu třináct a šest sekund.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Hodina třináct a šesti sekund.</translation>
+    </seg>
+    <seg>
+      <source id="732">Nothing has changed, people still want to kill each other and it is so sad.</source>
+      <reference>Nic se nezměnilo, lidé se pořád chtějí navzájem vraždit, je to tak smutné.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Nic se nezměnilo, lidé stále chtějí navzájem zabít, a je tak smutné.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Nic se nezměnilo, lidé stále chtějí navzájem zabít, a to je tak smutné.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Nic se změnil, lidé stále chtějí, aby zabít navzájem a je tak smutných.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Nic nezměnilo, lidé stále chtějí zabíjet každý druzí a je to tak smutné.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Nic se nezměnilo, lidé se stále chtějí navzájem zabít a je to tak smutné.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1973">Get informed that Hamas is on the list of global terrorist organizations.</source>
+      <reference>Informujte o tom, že Hamás je na seznamu světových teroristických organizací.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Dostaňte informované že Hamasy je na seznamu globálních teroristických organizací.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Get, že Hamas je na seznamu globálních teroristických organizací.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Se informováni, že Hamás je na seznam globální teroristických organizací.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Se informoval o tom, že Hamas je na seznamu globálních teroristických organizací.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Získejte informováni, že Hamás je na seznamu globální teroristických organizací.</translation>
+    </seg>
+    <seg>
+      <source id="284">It wasn't until my mum was poorly near the end of her life that we started saying 'I love you, I love you, I love you.</source>
+      <reference>Až když byla máma nemocná a umírala, začali jsme si říkat „mám tě rád, mám tě rád, mám tě rád.“</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Ne, dokud moje mamka nebyla na konci jejího života tak blízko, že jsme začali říkat "Miluji tě, miluju tě, miluju tě.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">To nebylo až moje maminka byla špatně blízko konce svého života, že jsme začali říkat "Miluji tě, miluji tě, miluji tě.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Nebylo to, než moje máma nebyla špatně u konce svého života, že jsme začali říkat, ' miluji vás, miluji vás, miluji vás.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Teprve moje máma byla špatně u konce svého života, že jsme začali říkat „miluji tě, miluji tě, miluji tě.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">To najma polecają dokud moji good enough byl špatně na sklonku svého života, začali jsme, "miluju, miluju vás, Miluji tě.</translation>
+    </seg>
+    <seg>
+      <source id="1510">We become interwoven with the yellow stretch of runners, who like Káťou are running their first race.</source>
+      <reference>Proplétáme se žlutým hadem běžců, kteří podobně jako Káťa běží svůj první závod.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jsme se svázány s žlutý stretch z běžce, kteří jako káťou jsou s jejich první rasy.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Jsme se svázány s žlutý úseku běžce, kteří jako káťou se chodu jejich první rasu.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Jsme se svázány s žlutý úseku běžce, kteří jako káťou jsou s jejich první rasy.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Jsme se prolíná s žlutý úsek běžců, kteří fungují jako Káťou jsou jejich první závod.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt">Jsme se svázány s žlutý úseku běžce, kteří jako káťou jsou chodu jejich první rasy.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="22">There would have to be a consensus among all parties, and mainly would depend on Chelsea's position as to whether or not to examine the offer.</source>
+      <reference>Muselo by dojít ke shodě všech stran Především by záleželo na postoji Chelsea, jestli by případnou nabídku klub řešil, nebo ne.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Zde by se na být konsensu mezi všechny strany, a především by záviset na Chelsea postoj jako zda nebo ne, aby zkoumat nabídnout.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Musela by být shoda mezi všemi stranami a hlavně by závisely na pozici Chelsea tak nebo nezkoumá nabídku.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Tam by musela být shoda mezi všemi stranami a hlavně záleží na Chelsea je postoj k tomu, zda je nebo není k posouzení nabídky.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Tam by musel být konsenzus mezi všemi stranami a hlavně bude záležet na postoji Chelsea, zda nabídku.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Bude muset být konsenzus mezi všechny strany, a především by záviset na Chelsea své postavení, abychom to, zda zkoumat nabídky.</translation>
+    </seg>
+    <seg>
+      <source id="2360">Nothing that could satisfy team head Josef Lébra, who following defeat in a match with Znojmo conditioned his investment of a million on diametrically differing performance in subsequent matches.</source>
+      <reference>Nic, co by mohlo uspokojit šéfa klubu Josefa Lébra, který po porážce se Znojmem podmínil svůj milionový vklad do pokladny diametrálně rozdílnými výkony v dalších zápasech.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Nic, který by mohl uspokojit tým hlavu Josef lébra, kteří po porážce v zápas s znojma conditioned své investice milionů na v diametrálním rozlišené výkon v následujících zápalky.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Nic, co by mohla uspokojit tým vedoucí Josef Lébra, který tímto porazit v utkání s Znojmo stabilizuje svou investici milion na diametrálně odlišné výkonnosti v dalších zápasech.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Nic který &lt;by&gt; mohl uspokojit tým šel k Josefovi Lébra, kdo následující porážka v utkání se Znojmo podmíněnou jeho investicí milionu na diametrálně lišícím se výkonu v následujících zápasech.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Nic, který by mohl uspokojit tým hlavu Josef lébra, kteří po porážku v zápasu s znojma conditioned své investice milionů na v diametrálním neshodných výkon v následujících zápalky.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Nic, co by mohlo splňovat tým hlava Josefa Lébra, který po porážce v utkání se Znojmem stabilizoval jeho investice milionů diametrálně liší výkony v následujících zápasech.</translation>
+    </seg>
+    <seg>
+      <source id="1321">Were you surprised that so many favorites withdrew?</source>
+      <reference>Překvapilo vás, že tolik favoritů odstoupilo?</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Byl překvapený že tolik favoritů stáhnuly?</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Byl jste překvapený, že tolik favoritů odstoupilo?</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Byl překvapen, že tolik oblíbené stáhla?</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Jste překvapen, že tak mnoho oblíbených stáhl?</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Byl, překvapili jste, že tak mnoho favoritů odstoupilo?</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1176">Pre-election propaganda?</source>
+      <reference>Předvolební agitka?</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Pre-election propaganda?</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt,newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Předvolební propagandy?</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Předvolební propagandu?</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt,newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.CU-TectoMT.3949.en-cs.txt,newstest2015.online-B.0.en-cs.txt,newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Předvolební propaganda?</translation>
+    </seg>
+    <seg>
+      <source id="1461">Réza jumped over it and howled like crazy.</source>
+      <reference>Réza nad ní poskakovala a pištěla jak blázen.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Réza přeskočil to a zařval jako blázna.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.online-A.0.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Réza ho přeskočil a vyl jako blázen.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Réza přeskočil přes něj a vyl jako blázen.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Réza nad ní skočil a vyl jako blázen.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Reza přeskočil ji a zařval jako blázen.</translation>
+    </seg>
+    <seg>
+      <source id="1580">Nonetheless, it is specific and entirely acceptable.</source>
+      <reference>Přesto je konkrétní a zcela přijatelný.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Nicméně, to je konkrétní a zcela přijatelné.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Přesto je specifické a zcela přijatelné.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Nicméně to je zvláštní a zcela přijatelné.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Přesto je konkrétní a zcela přijatelné.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Nicméně je to konkrétní a zcela přijatelné.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2619">Palmer, Chuck star Strahovski and Sucker Punch actress Browning yesterday had no comment on the hacked pictures.</source>
+      <reference>Palmerová, hvězda televizní série Chuck Strahovski a herečka z thrilleru Sucker Punch Browningová včera ukradené snímky nekomentovaly.</reference>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Palmer, Chuck hvězda Strahovski a Sráč Punch herečka Browning včera neměl žádný komentář k hacked obrázkům.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Palmer, Chuck hvězdný Strahovski a paňáca kojence herečky brovninku včera neměl žádný komentář na hrubě osekaných obrázcích.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Palmer, Chuck hvězda Strahovski a Sucker Punch herečka Browning včera neměl komentovat rozsekané obrázky.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Palmer, chuck Star strahovski a sucker punč herečka browning včera měl žádné komentář na hackováno fotek.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Palmer, chuck Star strahovski a sucker punč herečka browning včera měl bez komentáře na hackováno obrázky.</translation>
+    </seg>
+    <seg>
+      <source id="1322">Yes.</source>
+      <reference>Ano.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt,newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.CU-TectoMT.3949.en-cs.txt,newstest2015.Neural-MT.4096.en-cs.txt,newstest2015.online-A.0.en-cs.txt,newstest2015.online-B.0.en-cs.txt,newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt,newstest2015.uedin-jhu-phrase.4069.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Ano.</translation>
+    </seg>
+    <seg>
+      <source id="1394">The city previously used drawings to select management companies.</source>
+      <reference>Dříve město při výběru správců používalo losování.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Města dříve využívány výkresy vybrat řízení společnosti.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Město dříve používali kresby k výběru správcovské společnosti.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Město brzy používalo kresby pro výběr správcovské společnosti.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Město brzy používalo kresby, vybere správcovské společnosti.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Město předtím užívalo kresby vybrat manažerské společnosti.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="860">The cheapest option is a waterproof point-and-shoot, such as the Nikon Coolpix AW120 or an action cam, such as the GoPro Hero3+ Silver Edition, which both go for around $300.</source>
+      <reference>Nejlevnější možností je kompakt jako například Nikon Coolpix AW120 nebo outdoorová kamera typu GoPro Hero3+ Silver Edition, které stojí okolo 300 dolarů.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Nejlevnější opce je vodotěsný point-and-shoot, jako je Nikon Coolpix AW120 nebo akční vačkových, jako je, Hero3 + Silver Edition, který se pohybuje kolem 300 dolarů.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Nejlevnější možností je vodotěsný point-and-shoot, Nikon Coolpix AW120 nebo akce cam, například GoPro Hero3 + Silver Edition, které jdou za přibližně 300 dolarů.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Nejlacinějších možnost je vodotěsný point-and-shoot, tak jako nikon coolpix aw120 nebo akční kamerou, tak jako gopro hero3 + stříbrnou edition, která jak se pro přibližně 300 dolarů.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Nejlevnější variantou je vodotěsný point-and-shoot, jako je Nikon Coolpix AW120 nebo akční vačkou, jako je GoPro Hero3 + Silver Edition, který oba jdou za cca 300 dolarů.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Nejlevnější možností je vodotěsný point-and-shoot, jako je nikon coolpix aw120 nebo akční kamerou, jako je gopro hero3 + stříbrnou edition, které obě jít pro okolo 300 dolarů.</translation>
+    </seg>
+    <seg>
+      <source id="2341">They were taken by ambulance in a stable condition to Blue Mountains Hospital.</source>
+      <reference>Ve stabilizovaném stavu byli sanitkou převezeni do Blue Mountains Hospital.</reference>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Oni byli vzati do ambulance v stabilním stavu do Blue Mountains nemocnice.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">To byla přijata ambulanci v stabilní podmínkou pro modré mountains nemocnice.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Byli přijati sanitkou ve stabilním stavu Nemocnice v modré hoře.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Byli převezeni sanitkou ve stabilním stavu v Blue Mountains v nemocnici.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Byly přijatých ambulanci v stabilní podmínkou pro modré hory nemocnice.</translation>
+    </seg>
+    <seg>
+      <source id="1007">In fact many people will have been first exposed to asbestos in the classroom.</source>
+      <reference>Ve skutečnosti bylo mnoho lidí azbestu vystaveno už ve škole.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Ve skutečnosti mnoho lidí bude byly první vystaveny azbestových v třídě.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Ve skutečnosti mnoho lidí už první vystaveny azbestových ve třídě.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Ve skutečnosti mnoho lidí už první vystaveny azbestových v their.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Ve skutečnosti mnoho lidí bude byly první vystaveny azbestových v & # 160; učebně.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Ve skutečnosti mnoho lidí bude poprvé vystaven azbestu ve třídě.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1799">Rosický and his associates can be supported by fans already before the Wednesday game against the USA (8:15 p.m.).</source>
+      <reference>Rosického a spol. můžou fanoušci podpořit ještě před středečním zápasem proti USA (20:15).</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Rosický a jeho spolupracovníci mohou být podporovaný fanoušky již před středeční hrou proti USA (8:15 p.m.).</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Rosický a jeho společníci mohou být fanoušci už před středeční zápas proti USA (8: 15: 00).</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Rosický a jeho spolupracovníci mohou být podporováni fanoušky už před středečním zápasem proti USA (8: 15 p. m.).</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Rosický a jeho společníci mohou být podpořeny fanoušci již před středečním zápasem proti USA (8: 15 hod.).</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Rosický a jeho spolupracovníci mohou být podporováni fanoušky už před středu zápasem proti USA (8:15 hodin odpoledne).</translation>
+    </seg>
+    <seg>
+      <source id="2461">The town halls have only an advisory say, and they themselves cannot issue decrees.</source>
+      <reference>Radnice mají jen poradní hlas, samy vydávat vyhlášky nesmějí.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Town síněmi se jen poradní říci, a oni sami nemohou vydávat dekrety.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Radnice má jen slovo informační zprávy, a oni sebe nemohou vydat výnos.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Town hal se pouze poradní říci, a oni sami nemohou vydávat dekrety.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Radnicích mají pouze poradní názor, a oni sami nemohou vydávat dekrety.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Town síněmi mají jen poradní říci, a oni sami nemohou vydávat dekrety.</translation>
+    </seg>
+    <seg>
+      <source id="332">'This is what it's about, it's a serious thing, take it seriously, learn your lines, do some research.</source>
+      <reference>„O tom to je. Je to vážná věc, ber to vážně, nauč se text, něco si o tom zjisti.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt">'this je to, co je to o, je to vážné věc, ji brát vážně, učit se vaše směrem, některé opravdu výzkumu.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">„Je to, o čem to je, to je vážná věc, berte ho vážně, se naučit text a udělat průzkum.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">' To je to, o čem to je, to je vážná věc, brát vážně, Naučte se, udělat nějaký výzkum.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">'this je to, co je to o, je vážnou věc, ji brát vážně, učit se vaše směrem, některé opravdu výzkumu.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">"To je to, o čem to je, je to vážné, brát to vážně, naučit se vaše linie, udělat nějaký výzkum.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2152">Smart ways to save on college textbooks</source>
+      <reference>Chytrý způsob, jak ušetřit za vysokoškolská skripta</reference>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Chytré způsoby, jak ušetřit na vysokoškolských učebnic</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Chytré způsoby, jak ušetřit na univerzitní učebnice</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Chytré způsoby, jak zachránit učebnice na vysoké škole</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Inteligentní způsoby na záchranu na kolegia učebnice</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Chytré způsoby jak ušetřit na univerzitních učebnicích</translation>
+    </seg>
+    <seg>
+      <source id="906">But such complacency is misplaced.</source>
+      <reference>Taková samolibost ale není na místě.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Takové sebeuspokojení však není na místě.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Ale takové úslužnost je pochybenou.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Ale taková samolibost není na místě.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.online-A.0.en-cs.txt,newstest2015.online-B.0.en-cs.txt">Ale takové sebeuspokojení není na místě.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Ale podobné sebeuspokojení je na místě.</translation>
+    </seg>
+    <seg>
+      <source id="2317">In light of the current downturn, some commentators are arguing that his dire prophecy may have held some truth to it.</source>
+      <reference>Ve světle současného propadu prohlašují někteří komentátoři, že na jeho katastrofické věštbě může něco být.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Ve světle současné poklesu, někteří komentátoři tvrdí, že jeho strašlivé proroctví může mít se některé pravda, aby to.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">S ohledem na současnou recesi, někteří komentátoři tvrdí, že jeho strašlivé proroctví mohlo konat kousek pravdy.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Ve světle současného poklesu jsou někteří komentátoři tvrdí, že jeho strašlivé proroctví mohlo konat něco pravdy na tom.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Ve světle současné poklesu, někteří komentátoři tvrdí, že jeho hrůzná, proroctví může mít pořádáme něco pravdy, abychom to.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Ve světle současného poklesu někteří komentátoři tvrdí, že ho jeho zoufalé proroctví mohlo mít tu pravdu.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="351">So I'm sticking with it.</source>
+      <reference>Takže u toho zůstávám.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Tak jsem se s ní lepí.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Takže jsem držet se to.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Tak já držím se toho.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Tak jsem si s to.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Tak jsem se držet s ním.</translation>
+    </seg>
+    <seg>
+      <source id="2607">Nude photo scandal embroils Australian celebrities and Gabi Grecko</source>
+      <reference>Ve skandálu s odhalenými fotkami jsou zapleteny i australské celebrity a Gabi Grecko</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Nude vám vám Australian Australian celebrity and Gabi Grecko</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Nahé fotografie skandál zaplete australské osobnosti a Gabi Grecko</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Akt fotografie skandál zaplete australské osobnosti a Gabi Grecko</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Nude foto skandál vtahuje australské celebrity a Gabi Grécko</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Nahé Foto skandál embroils Australian celebrity a Gabi Grecko</translation>
+    </seg>
+    <seg>
+      <source id="990">I hadn't worried about it too much to be honest.</source>
+      <reference>Abych byl upřímný, moc jsem si s tím nedělal starosti.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt">Jsem nevzali polecają obávají ji příliš, že budou čestní.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jsem nevzali very obavy o to příliš mnoho, aby být upřímný.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Jsem neměl strach o tom příliš mnoho upřímně.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Měl jsem strach o tom moc, abych byl upřímný.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Jsem se na to moc upřímně.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2283">He considers himself a Russian officer, even though his family (mother) lives in Ukraine.</source>
+      <reference>Považuje se za ruského důstojníka, avšak jeho rodina - matka - žije na Ukrajině.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Chová se jako ruský důstojník, i když jeho rodina (matka) žije na Ukrajině.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Považuje sám ruského důstojníka, i když jeho rodiny (matkou) žijí na Ukrajině.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Považuje sám ruského důstojníka, i když jeho rodiny (matkou) životy na Ukrajině.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Považuje za ruského důstojníka, i když jeho rodiny (matkou) žijí na Ukrajině.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Považoval se za ruského důstojníka, i když jeho rodina (matka) žije na Ukrajině.</translation>
+    </seg>
+    <seg>
+      <source id="758">Haunting: The image of Georgy (left) was one of the most shocking of the attack and has been immortalised in a statue (right)</source>
+      <reference>Stále se vracející vzpomínky: Fotka Grigorije (vlevo) byla jedním z nejvíce šokujících obrázků útoku a byla zvěčněna jako socha (vpravo)</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Strašení: Obraz Georgij (vlevo) byl jedním z nejvíce šokujících útoku a byl jak na sochu (vpravo)</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Byl jedním z nejvíce šokující útok strašení: Obraz Georgij (vlevo), a nyní je zvěčnil v socha (vpravo)</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Sužujícími: obraz georgy (vlevo) byl jedním z nejvíce šokující útoku a byla immortalised v soše (právo)</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Sužujícími: obraz georgy (vlevo) byla jednou z šokující útoku a byla immortalised v soše (vpravo)</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Sužujícími: obraz georgy (vlevo) byla jednou z nejvíce šokujícím útoku a byla immortalised v sochu (vpravo)</translation>
+    </seg>
+    <seg>
+      <source id="1260">When the vast majority of employment visas are given to [male immigrants], the women who come with them are left in a position vulnerable to domestic violence and exploitation.</source>
+      <reference>Vzhledem k tomu, že většina pracovních povolení se uděluje mužům, ženy, které s nimi přijdou, se ocitají v pozici, kdy jsou zranitelné, co se týče domácího násilí a zneužívání.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Když převážná většina zaměstnanosti víz jsou vzhledem k [mužských přistěhovalců], ženy, kteří se s nimi jsou levice v postoj vůči domácí násilí a vykořisťování.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Když převážná většina zaměstnanosti víza jsou vzhledem k tomu na [mužských pristehovalci], žen, kteří se s nimi se levice v pozici zranitelné vůči domácím násilí a vykořisťování.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Vzhledem k tomu, že velká většina pracovních víz je dána pro [mužů přistěhovalci], ženy, které přicházejí s nimi, zůstávají v postavení zranitelné vůči domácím násilím a vykořisťování.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Kdy velká většina zaměstnaneckých víz je daná [mužským přistěhovalcům], ženám, které přijdou s nimi byly zanechané v pozici zranitelné domácím násilím a vykořisťováním.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Když převážná většina pracovních víz je dána mužským přistěhovalcům [], ženy, které jdou s nimi zůstávají v pozici vůči domácímu násilí a zneužívání.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1588">If we enlarge everything, we will suddenly see a second dimension, in the shape of a ring wrapping around the hose.</source>
+      <reference>Pokud vše zvětšíme, spatříme náhle druhý rozměr - ve tvaru kružnice ovíjející hadici.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Jestli my zvětšíme všechno, my budeme náhle vidět druhou dimenzi, v tvaru prstenu omotá se hadici.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Pokud budeme rozšiřovat vše, budeme, najednou uvědomují, druhý rozměr, v podobě ring balicí po celém hadice.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Pokud budeme rozšíření vše, náhle zjistili druhý rozměr, v podobě ring balicí po celém hadice.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Kdybychom enlarge všechno, budeme najednou vidím druhý rozměr, a to ve tvaru kruhu omotal kolem hadice.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Pokud budeme rozšiřovat vše, co, budeme, najednou uvědomují, druhý rozměr, v podobě ring balicí po celém hadice.</translation>
+    </seg>
+    <seg>
+      <source id="457">Jennifer Lawrence arrives at the 85th annual Academy Awards.</source>
+      <reference>Jennifer Lawrencová přijíždí na 85. ročník Cen Akademie.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Jennifer Lawrence příjezdy na 85 roční academy awards.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Jennifer Lawrence přichází v 85. annual Academy Awards.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jennifer lawrencem příjezdy na 85 roční academy awards.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Jennifer Lawrence přijede do 85th výročních Oskarů.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt,newstest2015.online-B.0.en-cs.txt">Jennifer Lawrence dorazí na 85 výroční ceny akademie.</translation>
+    </seg>
+    <seg>
+      <source id="1263">A picture for a house for sale in Suffolk was removed by estate agents when it emerged it showed a large pig at rest in the living room.</source>
+      <reference>Realitní kancelář odstranila obrázek domu na prodej v Suffolku - když ho zveřejnila, odpočívalo na něm v obýváku prase.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Obraz domu pro prodej ve Suffolk byl odstraněn z realitní kanceláře, když vyšlo najevo, že v obývacím pokoji je velké prase.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Pohled na dům na prodej v Suffolku byl odstraněn realitními agenty, když se ukázalo, ukázalo velké prase v klidu v obývacím pokoji.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Obraz domu na prodej v Suffolku byl odstraněn realitními agenty, kdy se objevilo, ukázalo velké prase v klidu v obývacím pokoji.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Obrázek pro dům pro prodej v suffolk byl stěhováno nemovitostí agentů, když to se ukázala velké prasete odpočívá v životní pokoje.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Obrázek na dům k prodeji v suffolk byl stěhováno usedlost agents, když se ukázalo, ukázala velké prasete odpočívá v obývacím pokoji.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="351">So I'm sticking with it.</source>
+      <reference>Takže u toho zůstávám.</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Tak jsem se s ní lepí.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Takže jsem držet se to.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Tak já držím se toho.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Tak jsem si s to.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Tak jsem se držet s ním.</translation>
+    </seg>
+    <seg>
+      <source id="2607">Nude photo scandal embroils Australian celebrities and Gabi Grecko</source>
+      <reference>Ve skandálu s odhalenými fotkami jsou zapleteny i australské celebrity a Gabi Grecko</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Nude vám vám Australian Australian celebrity and Gabi Grecko</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Nahé fotografie skandál zaplete australské osobnosti a Gabi Grecko</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Akt fotografie skandál zaplete australské osobnosti a Gabi Grecko</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Nude foto skandál vtahuje australské celebrity a Gabi Grécko</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Nahé Foto skandál embroils Australian celebrity a Gabi Grecko</translation>
+    </seg>
+    <seg>
+      <source id="990">I hadn't worried about it too much to be honest.</source>
+      <reference>Abych byl upřímný, moc jsem si s tím nedělal starosti.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt">Jsem nevzali polecają obávají ji příliš, že budou čestní.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jsem nevzali very obavy o to příliš mnoho, aby být upřímný.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Jsem neměl strach o tom příliš mnoho upřímně.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Měl jsem strach o tom moc, abych byl upřímný.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Jsem se na to moc upřímně.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1973">Get informed that Hamas is on the list of global terrorist organizations.</source>
+      <reference>Informujte o tom, že Hamás je na seznamu světových teroristických organizací.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Dostaňte informované že Hamasy je na seznamu globálních teroristických organizací.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Get, že Hamas je na seznamu globálních teroristických organizací.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Se informováni, že Hamás je na seznam globální teroristických organizací.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Se informoval o tom, že Hamas je na seznamu globálních teroristických organizací.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Získejte informováni, že Hamás je na seznamu globální teroristických organizací.</translation>
+    </seg>
+    <seg>
+      <source id="284">It wasn't until my mum was poorly near the end of her life that we started saying 'I love you, I love you, I love you.</source>
+      <reference>Až když byla máma nemocná a umírala, začali jsme si říkat „mám tě rád, mám tě rád, mám tě rád.“</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Ne, dokud moje mamka nebyla na konci jejího života tak blízko, že jsme začali říkat "Miluji tě, miluju tě, miluju tě.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">To nebylo až moje maminka byla špatně blízko konce svého života, že jsme začali říkat "Miluji tě, miluji tě, miluji tě.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Nebylo to, než moje máma nebyla špatně u konce svého života, že jsme začali říkat, ' miluji vás, miluji vás, miluji vás.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Teprve moje máma byla špatně u konce svého života, že jsme začali říkat „miluji tě, miluji tě, miluji tě.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">To najma polecają dokud moji good enough byl špatně na sklonku svého života, začali jsme, "miluju, miluju vás, Miluji tě.</translation>
+    </seg>
+    <seg>
+      <source id="1510">We become interwoven with the yellow stretch of runners, who like Káťou are running their first race.</source>
+      <reference>Proplétáme se žlutým hadem běžců, kteří podobně jako Káťa běží svůj první závod.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jsme se svázány s žlutý stretch z běžce, kteří jako káťou jsou s jejich první rasy.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Jsme se svázány s žlutý úseku běžce, kteří jako káťou se chodu jejich první rasu.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Jsme se svázány s žlutý úseku běžce, kteří jako káťou jsou s jejich první rasy.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Jsme se prolíná s žlutý úsek běžců, kteří fungují jako Káťou jsou jejich první závod.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt">Jsme se svázány s žlutý úseku běžce, kteří jako káťou jsou chodu jejich první rasy.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1588">If we enlarge everything, we will suddenly see a second dimension, in the shape of a ring wrapping around the hose.</source>
+      <reference>Pokud vše zvětšíme, spatříme náhle druhý rozměr - ve tvaru kružnice ovíjející hadici.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Jestli my zvětšíme všechno, my budeme náhle vidět druhou dimenzi, v tvaru prstenu omotá se hadici.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Pokud budeme rozšiřovat vše, budeme, najednou uvědomují, druhý rozměr, v podobě ring balicí po celém hadice.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Pokud budeme rozšíření vše, náhle zjistili druhý rozměr, v podobě ring balicí po celém hadice.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Kdybychom enlarge všechno, budeme najednou vidím druhý rozměr, a to ve tvaru kruhu omotal kolem hadice.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Pokud budeme rozšiřovat vše, co, budeme, najednou uvědomují, druhý rozměr, v podobě ring balicí po celém hadice.</translation>
+    </seg>
+    <seg>
+      <source id="457">Jennifer Lawrence arrives at the 85th annual Academy Awards.</source>
+      <reference>Jennifer Lawrencová přijíždí na 85. ročník Cen Akademie.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Jennifer Lawrence příjezdy na 85 roční academy awards.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Jennifer Lawrence přichází v 85. annual Academy Awards.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jennifer lawrencem příjezdy na 85 roční academy awards.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Jennifer Lawrence přijede do 85th výročních Oskarů.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt,newstest2015.online-B.0.en-cs.txt">Jennifer Lawrence dorazí na 85 výroční ceny akademie.</translation>
+    </seg>
+    <seg>
+      <source id="1263">A picture for a house for sale in Suffolk was removed by estate agents when it emerged it showed a large pig at rest in the living room.</source>
+      <reference>Realitní kancelář odstranila obrázek domu na prodej v Suffolku - když ho zveřejnila, odpočívalo na něm v obýváku prase.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Obraz domu pro prodej ve Suffolk byl odstraněn z realitní kanceláře, když vyšlo najevo, že v obývacím pokoji je velké prase.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Pohled na dům na prodej v Suffolku byl odstraněn realitními agenty, když se ukázalo, ukázalo velké prase v klidu v obývacím pokoji.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Obraz domu na prodej v Suffolku byl odstraněn realitními agenty, kdy se objevilo, ukázalo velké prase v klidu v obývacím pokoji.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Obrázek pro dům pro prodej v suffolk byl stěhováno nemovitostí agentů, když to se ukázala velké prasete odpočívá v životní pokoje.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Obrázek na dům k prodeji v suffolk byl stěhováno usedlost agents, když se ukázalo, ukázala velké prasete odpočívá v obývacím pokoji.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2152">Smart ways to save on college textbooks</source>
+      <reference>Chytrý způsob, jak ušetřit za vysokoškolská skripta</reference>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Chytré způsoby, jak ušetřit na vysokoškolských učebnic</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Chytré způsoby, jak ušetřit na univerzitní učebnice</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Chytré způsoby, jak zachránit učebnice na vysoké škole</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Inteligentní způsoby na záchranu na kolegia učebnice</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Chytré způsoby jak ušetřit na univerzitních učebnicích</translation>
+    </seg>
+    <seg>
+      <source id="906">But such complacency is misplaced.</source>
+      <reference>Taková samolibost ale není na místě.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Takové sebeuspokojení však není na místě.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Ale takové úslužnost je pochybenou.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Ale taková samolibost není na místě.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.online-A.0.en-cs.txt,newstest2015.online-B.0.en-cs.txt">Ale takové sebeuspokojení není na místě.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Ale podobné sebeuspokojení je na místě.</translation>
+    </seg>
+    <seg>
+      <source id="2317">In light of the current downturn, some commentators are arguing that his dire prophecy may have held some truth to it.</source>
+      <reference>Ve světle současného propadu prohlašují někteří komentátoři, že na jeho katastrofické věštbě může něco být.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Ve světle současné poklesu, někteří komentátoři tvrdí, že jeho strašlivé proroctví může mít se některé pravda, aby to.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">S ohledem na současnou recesi, někteří komentátoři tvrdí, že jeho strašlivé proroctví mohlo konat kousek pravdy.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Ve světle současného poklesu jsou někteří komentátoři tvrdí, že jeho strašlivé proroctví mohlo konat něco pravdy na tom.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt">Ve světle současné poklesu, někteří komentátoři tvrdí, že jeho hrůzná, proroctví může mít pořádáme něco pravdy, abychom to.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Ve světle současného poklesu někteří komentátoři tvrdí, že ho jeho zoufalé proroctví mohlo mít tu pravdu.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2230">The separatists consider these men to be mercenaries, and they say such people don't deserve anything other than death.</source>
+      <reference>Separatisté považují tyto muže za nájemné žoldnéře a ti si podle nich nic nezaslouží nic jiného než smrt.</reference>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Separatistů vzít v úvahu tyto muži, aby to bylo žoldáky, a říkají, takové lidé si polecają si zaslouží nic jiného než smrt.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Separatisté uváží tyto muže jenž má být námezdní vojska, a oni říkají, že takové lidi nezaslouží si cokoli jiná než smrt.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Separatisté z těchto lidí považuji za žoldáky, a oni říkají, že takoví lidé si nezaslouží nic jiného než smrt.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Separatisté považují tito muži jsou žoldáci a říká se, že takoví lidé si nezaslouží nic jiného než smrt.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Separatistů zvážit těchto mužů, aby být žoldáky, a říkají takové lidé si very si zaslouží nic jiného než smrti.</translation>
+    </seg>
+    <seg>
+      <source id="1092">Graham Abbott went in for surgery in March 2012.</source>
+      <reference>Graham Abbott podstoupil v březnu 2012 operaci.</reference>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Graham Abbott vstoupili v na operaci v březnu roku 2012.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Grahama Abbott se v pro operace v březnu roku 2012.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt">Graham Abbott vstoupili v na operaci v březnu 2012.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Grahama Abbott se v na operaci v březnu roku 2012.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Graham Abbott šel na operaci března 2012.</translation>
+    </seg>
+    <seg>
+      <source id="2537">That's something I can't explain to you," she said in response to the judge.</source>
+      <reference>To vám vysvětlit nedokážu," odpověděla na dotaz soudci.</reference>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">To je něco, co jsem vám nemůže vysvětlit, "řekla v reakci na soudce.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">To je něco, co nedokážu vysvětlit,“ řekla v reakci na soudce.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">To je něco, co nedokážu to vysvětlit, "řekla v reakci na soudce.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">To je něco, co já nemohu vysvětlit Vám, " ona řekla v odpověď na soudce.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Je to něco, kterou vám nemohu vysvětlit,“ řekla důsledek soudce.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2619">Palmer, Chuck star Strahovski and Sucker Punch actress Browning yesterday had no comment on the hacked pictures.</source>
+      <reference>Palmerová, hvězda televizní série Chuck Strahovski a herečka z thrilleru Sucker Punch Browningová včera ukradené snímky nekomentovaly.</reference>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Palmer, Chuck hvězda Strahovski a Sráč Punch herečka Browning včera neměl žádný komentář k hacked obrázkům.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Palmer, Chuck hvězdný Strahovski a paňáca kojence herečky brovninku včera neměl žádný komentář na hrubě osekaných obrázcích.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Palmer, Chuck hvězda Strahovski a Sucker Punch herečka Browning včera neměl komentovat rozsekané obrázky.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Palmer, chuck Star strahovski a sucker punč herečka browning včera měl žádné komentář na hackováno fotek.</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Palmer, chuck Star strahovski a sucker punč herečka browning včera měl bez komentáře na hackováno obrázky.</translation>
+    </seg>
+    <seg>
+      <source id="1322">Yes.</source>
+      <reference>Ano.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt,newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.CU-TectoMT.3949.en-cs.txt,newstest2015.Neural-MT.4096.en-cs.txt,newstest2015.online-A.0.en-cs.txt,newstest2015.online-B.0.en-cs.txt,newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt,newstest2015.uedin-jhu-phrase.4069.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Ano.</translation>
+    </seg>
+    <seg>
+      <source id="1394">The city previously used drawings to select management companies.</source>
+      <reference>Dříve město při výběru správců používalo losování.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Města dříve využívány výkresy vybrat řízení společnosti.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Město dříve používali kresby k výběru správcovské společnosti.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Město brzy používalo kresby pro výběr správcovské společnosti.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Město brzy používalo kresby, vybere správcovské společnosti.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Město předtím užívalo kresby vybrat manažerské společnosti.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="2283">He considers himself a Russian officer, even though his family (mother) lives in Ukraine.</source>
+      <reference>Považuje se za ruského důstojníka, avšak jeho rodina - matka - žije na Ukrajině.</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Chová se jako ruský důstojník, i když jeho rodina (matka) žije na Ukrajině.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Považuje sám ruského důstojníka, i když jeho rodiny (matkou) žijí na Ukrajině.</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Považuje sám ruského důstojníka, i když jeho rodiny (matkou) životy na Ukrajině.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Považuje za ruského důstojníka, i když jeho rodiny (matkou) žijí na Ukrajině.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Považoval se za ruského důstojníka, i když jeho rodina (matka) žije na Ukrajině.</translation>
+    </seg>
+    <seg>
+      <source id="758">Haunting: The image of Georgy (left) was one of the most shocking of the attack and has been immortalised in a statue (right)</source>
+      <reference>Stále se vracející vzpomínky: Fotka Grigorije (vlevo) byla jedním z nejvíce šokujících obrázků útoku a byla zvěčněna jako socha (vpravo)</reference>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Strašení: Obraz Georgij (vlevo) byl jedním z nejvíce šokujících útoku a byl jak na sochu (vpravo)</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Byl jedním z nejvíce šokující útok strašení: Obraz Georgij (vlevo), a nyní je zvěčnil v socha (vpravo)</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Sužujícími: obraz georgy (vlevo) byl jedním z nejvíce šokující útoku a byla immortalised v soše (právo)</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Sužujícími: obraz georgy (vlevo) byla jednou z šokující útoku a byla immortalised v soše (vpravo)</translation>
+      <translation system="newstest2015.tuning-task-DCU.en-cs.txt">Sužujícími: obraz georgy (vlevo) byla jednou z nejvíce šokujícím útoku a byla immortalised v sochu (vpravo)</translation>
+    </seg>
+    <seg>
+      <source id="1260">When the vast majority of employment visas are given to [male immigrants], the women who come with them are left in a position vulnerable to domestic violence and exploitation.</source>
+      <reference>Vzhledem k tomu, že většina pracovních povolení se uděluje mužům, ženy, které s nimi přijdou, se ocitají v pozici, kdy jsou zranitelné, co se týče domácího násilí a zneužívání.</reference>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Když převážná většina zaměstnanosti víz jsou vzhledem k [mužských přistěhovalců], ženy, kteří se s nimi jsou levice v postoj vůči domácí násilí a vykořisťování.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Když převážná většina zaměstnanosti víza jsou vzhledem k tomu na [mužských pristehovalci], žen, kteří se s nimi se levice v pozici zranitelné vůči domácím násilí a vykořisťování.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Vzhledem k tomu, že velká většina pracovních víz je dána pro [mužů přistěhovalci], ženy, které přicházejí s nimi, zůstávají v postavení zranitelné vůči domácím násilím a vykořisťování.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Kdy velká většina zaměstnaneckých víz je daná [mužským přistěhovalcům], ženám, které přijdou s nimi byly zanechané v pozici zranitelné domácím násilím a vykořisťováním.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Když převážná většina pracovních víz je dána mužským přistěhovalcům [], ženy, které jdou s nimi zůstávají v pozici vůči domácímu násilí a zneužívání.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="1176">Pre-election propaganda?</source>
+      <reference>Předvolební agitka?</reference>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Pre-election propaganda?</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt,newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-METEOR-CMU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Předvolební propagandy?</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Předvolební propagandu?</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt,newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.CU-TectoMT.3949.en-cs.txt,newstest2015.online-B.0.en-cs.txt,newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Předvolební propaganda?</translation>
+    </seg>
+    <seg>
+      <source id="1461">Réza jumped over it and howled like crazy.</source>
+      <reference>Réza nad ní poskakovala a pištěla jak blázen.</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Réza přeskočil to a zařval jako blázna.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt,newstest2015.online-A.0.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Réza ho přeskočil a vyl jako blázen.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Réza přeskočil přes něj a vyl jako blázen.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Réza nad ní skočil a vyl jako blázen.</translation>
+      <translation system="newstest2015.online-B.0.en-cs.txt">Reza přeskočil ji a zařval jako blázen.</translation>
+    </seg>
+    <seg>
+      <source id="1580">Nonetheless, it is specific and entirely acceptable.</source>
+      <reference>Přesto je konkrétní a zcela přijatelný.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt,newstest2015.uedin-syntax.3939.en-cs.txt">Nicméně, to je konkrétní a zcela přijatelné.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Přesto je specifické a zcela přijatelné.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Nicméně to je zvláštní a zcela přijatelné.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Přesto je konkrétní a zcela přijatelné.</translation>
+      <translation system="newstest2015.Neural-MT.4096.en-cs.txt">Nicméně je to konkrétní a zcela přijatelné.</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="914">As a result, mesothelioma is no respecter of class, wealth, occupation, or age.</source>
+      <reference>Mezoteliom tedy nerespektuje sociální vrstvu, bohatství, povolání ani věk.</reference>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Výsledkem mesothelioma není žádný znovupřízrak třídy, bohatství, povolání nebo věku.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">V důsledku toho mezoteliom se neohlíží na třídu, bohatství, zaměstnání, nebo věku.</translation>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Jako výsledek, mesothelioma je žádné respecter z class, bohatství, okupace, nebo věku.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">V důsledku toho mezoteliom se neohlíží na třídu, bohatství, zaměstnání, nebo věk.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Výsledkem je mezoteliom se neohlíží na třídy, bohatství, okupace nebo věk.</translation>
+    </seg>
+    <seg>
+      <source id="1531">After the last refreshment break, no one runs ahead of us any more, and we speed up.</source>
+      <reference>Za poslední občerstvovačkou už nás nikdo nepředbíhá, zrychlujeme.</reference>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Po poslední přestávce na občerstvení nikdo neběží před námi, a urychlili.</translation>
+      <translation system="newstest2015.tuning-task-AFRL.en-cs.txt,newstest2015.tuning-task-bleu-MERT.en-cs.txt,newstest2015.tuning-task-bleu-MIRA-dense.en-cs.txt,newstest2015.tuning-task-DCU.en-cs.txt,newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Po posledních drinky break, nikdo je před námi déle, a urychlíme.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Po poslední rozchod s občerstvením, nikdo před námi, což urychlí.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4069.en-cs.txt">Po posledním občerstvení, nikdo už běží před námi, a my se urychlí.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Po poslední přestávce na občerstvení nikdo neběží před námi žádný a zrychlovali jsme.</translation>
+    </seg>
+    <seg>
+      <source id="1954">Does the world want to finish what Hitler didn't manage to?</source>
+      <reference>To chce svět dokončit to, co se nepovedlo Hitlerovi?</reference>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Svět chce dokončit, co Hitler nedokázal?</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Dělá svět chce skončit co Hitler nedařil se?</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Chtěl dokončit, co Hitler na světě?</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Svět chce dokončit co Hitler cožpak řídit?</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Svět chce dokončit to, co Hitler nedokázal?</translation>
+    </seg>
+  </hit>
+  <hit block-id="-1" source-language="eng" target-language="ces">
+    <seg>
+      <source id="22">There would have to be a consensus among all parties, and mainly would depend on Chelsea's position as to whether or not to examine the offer.</source>
+      <reference>Muselo by dojít ke shodě všech stran Především by záleželo na postoji Chelsea, jestli by případnou nabídku klub řešil, nebo ne.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MIRA-sparse.en-cs.txt">Zde by se na být konsensu mezi všechny strany, a především by záviset na Chelsea postoj jako zda nebo ne, aby zkoumat nabídnout.</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Musela by být shoda mezi všemi stranami a hlavně by závisely na pozici Chelsea tak nebo nezkoumá nabídku.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Tam by musela být shoda mezi všemi stranami a hlavně záleží na Chelsea je postoj k tomu, zda je nebo není k posouzení nabídky.</translation>
+      <translation system="newstest2015.uedin-syntax.3939.en-cs.txt">Tam by musel být konsenzus mezi všemi stranami a hlavně bude záležet na postoji Chelsea, zda nabídku.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Bude muset být konsenzus mezi všechny strany, a především by záviset na Chelsea své postavení, abychom to, zda zkoumat nabídky.</translation>
+    </seg>
+    <seg>
+      <source id="2360">Nothing that could satisfy team head Josef Lébra, who following defeat in a match with Znojmo conditioned his investment of a million on diametrically differing performance in subsequent matches.</source>
+      <reference>Nic, co by mohlo uspokojit šéfa klubu Josefa Lébra, který po porážce se Znojmem podmínil svůj milionový vklad do pokladny diametrálně rozdílnými výkony v dalších zápasech.</reference>
+      <translation system="newstest2015.tuning-task-bleu-MERT.en-cs.txt">Nic, který by mohl uspokojit tým hlavu Josef lébra, kteří po porážce v zápas s znojma conditioned své investice milionů na v diametrálním rozlišené výkon v následujících zápalky.</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Nic, co by mohla uspokojit tým vedoucí Josef Lébra, který tímto porazit v utkání s Znojmo stabilizuje svou investici milion na diametrálně odlišné výkonnosti v dalších zápasech.</translation>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Nic který &lt;by&gt; mohl uspokojit tým šel k Josefovi Lébra, kdo následující porážka v utkání se Znojmo podmíněnou jeho investicí milionu na diametrálně lišícím se výkonu v následujících zápasech.</translation>
+      <translation system="newstest2015.tuning-task-USAAR-Tuna-Saarland.en-cs.txt">Nic, který by mohl uspokojit tým hlavu Josef lébra, kteří po porážku v zápasu s znojma conditioned své investice milionů na v diametrálním neshodných výkon v následujících zápalky.</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Nic, co by mohlo splňovat tým hlava Josefa Lébra, který po porážce v utkání se Znojmem stabilizoval jeho investice milionů diametrálně liší výkony v následujících zápasech.</translation>
+    </seg>
+    <seg>
+      <source id="1321">Were you surprised that so many favorites withdrew?</source>
+      <reference>Překvapilo vás, že tolik favoritů odstoupilo?</reference>
+      <translation system="newstest2015.commercial1.3987.en-cs.txt">Byl překvapený že tolik favoritů stáhnuly?</translation>
+      <translation system="newstest2015.CU-Chimera.3992.en-cs.txt">Byl jste překvapený, že tolik favoritů odstoupilo?</translation>
+      <translation system="newstest2015.online-A.0.en-cs.txt">Byl překvapen, že tolik oblíbené stáhla?</translation>
+      <translation system="newstest2015.tuning-task-METEOR-CMU.en-cs.txt">Jste překvapen, že tak mnoho oblíbených stáhl?</translation>
+      <translation system="newstest2015.CU-TectoMT.3949.en-cs.txt">Byl, překvapili jste, že tak mnoho favoritů odstoupilo?</translation>
+    </seg>
+  </hit>
+</hits>

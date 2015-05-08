@@ -84,7 +84,7 @@
 
       <hr/>
       <footer>
-        <p><small>This is the GitHub version {% if commit_tag %}<code><a href="https://github.com/cfedermann/Appraise/commit/{{commit_tag}}">{{commit_tag|stringformat:".8s"}}</a></code>{% endif %} of the Appraise evaluation system. Some rights reserved. Developed and maintained by <a href="mailto:cfedermann [at] gmail [dot] com">Christian Federmann</a>.{% block footer %}{% endblock %}</small></a></p>
+        <p><small><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> &nbsp; This is the GitHub version {% if commit_tag %}<code><a href="https://github.com/cfedermann/Appraise/commit/{{commit_tag}}">{{commit_tag|stringformat:".8s"}}</a></code>{% endif %} of the Appraise evaluation system. <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> &nbsp; Some rights reserved. <span class="glyphicon glyphicon-random" aria-hidden="true"></span> &nbsp; Developed and maintained by <a href="mailto:cfedermann [at] gmail [dot] com">Christian Federmann</a>.{% block footer %}{% endblock %}</small></a></p>
       </footer>
     </div> <!-- /container -->
 

@@ -135,7 +135,7 @@ if __name__ == "__main__":
     language_pairs = ('Czech-English', 'English-Czech', 'German-English',
       'English-German', 'Spanish-English', 'English-Spanish',
       'French-English', 'English-French', 'Russian-English',
-      'English-Russian', 'English-Hindi', 'Hindi-English')
+      'English-Russian', 'English-Finnish', 'Finnish-English')
     
     for language_pair in language_pairs:
         segments_data = results_data[language_pair]

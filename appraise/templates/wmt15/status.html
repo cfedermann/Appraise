@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="row">
-<div class="span12">
+<div class="col-md-12">
 
 {% if not global_stats and not language_pair_stats and not group_stats and not user_stats %}
 <h2>Not ready yet...</h2>
@@ -47,8 +47,8 @@
   <th width="30%">{{item.0}}</th>
   <td>
   <div class="progress" style="margin-bottom: 0px;">
-    <div class="bar {% if item.1.0 < 20 %}bar-danger{% elif item.1.0 < 50 %}bar-warning{% endif %}" style="width: {{item.1.1}}%; min-width: 5%; max-width: 95%;">{{item.1.0}} remaining</div>
-    <div class="bar {% if item.2.0 < 200 %}bar-info{% else %}bar-success{% endif %}" style="width: {{item.2.1}}%; min-width: 5%; max-width: 95%;">{{item.2.0}} completed</div>
+    <div class="progress-bar {% if item.1.0 < 20 %}progress-bar-danger{% elif item.1.0 < 50 %}progress-bar-warning{% endif %}" style="width: {{item.1.1}}%; min-width: 5%; max-width: 95%;">{{item.1.0}} remaining</div>
+    <div class="progress-bar {% if item.2.0 < 200 %}progress-bar-info{% else %}progress-bar-success{% endif %}" style="width: {{item.2.1}}%; min-width: 5%; max-width: 95%;">{{item.2.0}} completed</div>
   </div>
   </td>
 <!--

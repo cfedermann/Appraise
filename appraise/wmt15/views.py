@@ -80,7 +80,7 @@ def _compute_next_task_for_user(user, language_pair):
         
         # Compute list of compatible block ids and randomise its order.
         #
-        # cfedermann: for WMT15 Matt does not provide block ids anymore.
+        # cfedermann: for WMT14 Matt did not provide block ids anymore.
         #   This meant that our shuffled list of block ids only contained
         #   [-1, ..., -1] entries;  using these to filter and check for
         #   respective HIT status is a quadratic increase of redundant work

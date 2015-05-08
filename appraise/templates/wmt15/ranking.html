@@ -52,23 +52,22 @@ function validate_form()
   </table>
 </div>
 
-<div class="container">
 <div class="row">
 {% if reference_text.1 %}
-<div class="span5">
+<div class="col-sm-5">
 <blockquote>
 <p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
 </blockquote>
 </div>
-<div class="span5 offset1">
+<div class="col-sm-5 col-sm-offset-1">
 <blockquote>
 <p>{% if reference_text.0 %}{{reference_text.0}} {% endif %}<strong>{{reference_text.1}}</strong>{% if reference_text.2 %} {{reference_text.2}}{% endif %}</p>
 <small>Reference</small>
 </blockquote>
 </div>
 {% else %}
-<div class="span12">
+<div class="col-sm-12">
 <blockquote>
 <p>{% if source_text.0 %}{{source_text.0}} {% endif %}<strong>{{source_text.1}}</strong>{% if source_text.2 %} {{source_text.2}}{% endif %}</p>
 <small>Source</small>
@@ -87,7 +86,7 @@ function validate_form()
 <span id="translations">
 {% for translation in translations %}
 <div class="row">
-<div class="span11">
+<div class="col-sm-12">
 <blockquote>
 {% with forloop.counter0 as rank_id %}
 {% include 'wmt15/rank_selector.html' %}
@@ -112,11 +111,9 @@ function validate_form()
       <button name="submit_button" accesskey="3" type="submit" class="btn btn-danger" value="FLAG_ERROR"><i class="icon-white icon-exclamation-sign"></i> Skip Item</button>
     </td>
   </tr>
-  <table>
+  </table>
 </div>
 
 </form>
-
-</div>
 
 {% endblock %}

@@ -546,10 +546,16 @@ class RankingResult(models.Model):
         _src_lang = hit.hit_attributes['source-language']
         _trg_lang = hit.hit_attributes['target-language']
         
+        # TODO: this relies on the fact that we have five systems per HIT.
+        #   To resolve this, we might have to skip systems detection based
+        #   on the HIT attribute and instead process the translations.
+        #
         # System ids can be retrieved from HIT or segment level.
         if 'systems' in hit.hit_attributes.keys():
             _systems = hit.hit_attributes['systems'].split(',')
         
+        # See below for a potential implementation to address multi-systems.
+        #
         # On segment level, we have to extract the individual "system" values
         # from the <translation> attributes which are stored in the second
         # position of the translation tuple: (text, attrib).
@@ -576,6 +582,13 @@ class RankingResult(models.Model):
         values.append(str(_systems[3]))                    # system4Id
         values.append('-1')                                # system5Number
         values.append(str(_systems[4]))                    # system5Id
+        #
+        # TODO: decide what happens in case of k>5 systems due to
+        #   multi-systems.  Can we simply add annother CSV line and
+        #   add the extra system rankings?  If so, we should define
+        #   a "dummy" system to make sure we don't break CSV format.
+        #
+        #   Specifying a value of -1 for system rank should work...
         
         # system1rank,system2rank,system3rank,system4rank,system5rank
         if self.results:
@@ -594,37 +607,54 @@ class RankingResult(models.Model):
         item = self.item
         hit = self.item.hit
         
+        _systems = []
         # System ids can be retrieved from HIT or segment level.
-        if 'systems' in hit.hit_attributes.keys():
-            _systems = hit.hit_attributes['systems'].split(',')
+        # We cannot do this anymore as we might have multi-systems.
+        # if 'systems' in hit.hit_attributes.keys():
+        #    _systems = hit.hit_attributes['systems'].split(',')
         
         # On segment level, we have to extract the individual "system" values
         # from the <translation> attributes which are stored in the second
         # position of the translation tuple: (text, attrib).
-        else:
-            _systems = []
-            for translation in item.translations:
-                _systems.append(translation[1]['system'])
+        for translation in item.translations:
+            _systems.append(translation[1]['system'])
         
-        from itertools import combinations
+        from itertools import combinations, product
         results = []
         
+        # TODO: this relies on the fact that we have five systems per HIT.
+        #   To resolve this, we might have to skip systems detection based
+        #   on the HIT attribute and instead process the translations.
+        #
+        #   An additional problem is that we might have multi-systems.
+        #   These occur when two systems had the same translation output
+        #   during batch creation.  Such cases will spawn additional
+        #   result items when multi-systems get expanded into individual
+        #   units.  This may happen for both sides, e.g., systems A, B.
+        #
         # Note that srcIndex is 1-indexed for compatibility with evaluation
         # scripts from previous editions of the WMT.
         for a, b in combinations(range(5), 2):
             _c = self.user.username
             _i = '{0}.{1}.{2}'.format(item.source[1]['id'], a+1, b+1)
             
-            if not self.results:
-                _v = '{0}?{1}'.format(str(_systems[a]), str(_systems[b]))
-            elif self.results[a] > self.results[b]:
-                _v = '{0}>{1}'.format(str(_systems[a]), str(_systems[b]))
-            elif self.results[a] < self.results[b]:
-                _v = '{0}<{1}'.format(str(_systems[a]), str(_systems[b]))
-            else:
-                _v = '{0}={1}'.format(str(_systems[a]), str(_systems[b]))
+            # Determine individual systems for multi-system entries.
+            _individualA = _systems[a].split(',')
+            _individualB = _systems[b].split(',')
             
-            results.append('{0},{1},{2}'.format(_c, _i, _v))
+            for _systemA, _systemB in product(_individualA, _individualB):
+                _verdict = '?'
+                if self.results[a] > self.results[b]:
+                    _verdict = '>'
+                elif self.results[a] < self.results[b]:
+                    _verdict = '<'
+                elif self.results[a] == self.results[b]:
+                    _verdict = '='
+                
+                _v = '{0}{1}{2}'.format(str(systemA), _verdict, str(systemB))
+            
+                results.append('{0},{1},{2}'.format(_c, _i, _v))
+            
         return u'\n'.join(results)
 
 

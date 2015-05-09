@@ -112,6 +112,9 @@ def _compute_next_task_for_user(user, language_pair):
         
         # If we still haven't found a next HIT, there simply is none...
         if not random_hit:
+            # TODO: We should now investigate if there is any HIT assigned
+            #   to a user but has not been finished in a certain time span.
+            #   Such a HIT can be freed and assigned to the current user.            
             return None
         
         # Update User/HIT mappings s.t. the system knows about the next HIT.

@@ -123,7 +123,7 @@ class HITAdmin(admin.ModelAdmin):
     list_display = ('hit_id', 'block_id', 'language_pair', 'id')
     list_filter = ('language_pair', 'active', 'mturk_only', 'completed')
     search_fields = ('hit_id',)
-    readonly_fields = ('hit_id',)
+    readonly_fields = ('hit_id', 'assigned', 'finished')
     actions = (export_hit_xml, deactivate_hits, export_hit_ids_to_csv,
       export_hit_results_to_apf, export_hit_results_agreements)
     filter_horizontal = ('users',)
@@ -136,7 +136,7 @@ class HITAdmin(admin.ModelAdmin):
       }),
       ('Details', {
         'classes': ('wide', 'collapse'),
-        'fields': ('users', 'hit_xml')
+        'fields': ('users', 'hit_xml', 'assigned', 'finished')
       })
     )
     
@@ -180,7 +180,19 @@ class RankingResultAdmin(admin.ModelAdmin):
     list_display = ('item', 'user', 'readable_duration', 'results')
     list_filter = ('item__hit__language_pair', 'item__hit__active',
       'item__hit__mturk_only', 'user__groups')
+    readonly_fields = ('completion',)
     actions = (export_results_to_csv,)
+    
+    fieldsets = (
+      ('Overview', {
+        'classes': ('wide',),
+        'fields': ('item', 'user')
+      }),
+      ('Details', {
+        'classes': ('wide', 'collapse'),
+        'fields': ('completion',)
+      })
+    )
 
 
 class UserHITMappingAdmin(admin.ModelAdmin):

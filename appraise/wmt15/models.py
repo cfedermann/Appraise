@@ -6,6 +6,7 @@ Project: Appraise evaluation system
 import logging
 import uuid
 
+from datetime import datetime
 from xml.etree.ElementTree import fromstring, ParseError, tostring
 
 from django.dispatch import receiver
@@ -108,6 +109,10 @@ class HIT(models.Model):
       help_text="Indicates that this HIT instance is completed.",
       verbose_name="Completed?"
     )
+    
+    assigned = models.DateTimeField(blank=True, null=True, editable=False)
+    
+    finished = models.DateTimeField(blank=True, null=True, editable=False)
 
     class Meta:
         """
@@ -239,6 +244,14 @@ class HIT(models.Model):
             for _child in _tree:
                 new_item = RankingTask(hit=self, item_xml=tostring(_child))
                 new_item.save()
+        
+        # Check ranking tasks to update
+        try:
+            related_result = RankingResult.objects.filter(item__hit=self).latest('completion')
+            self.finished = related_result.completion 
+        
+        except RankingResult.DoesNotExist:
+            pass
         
         super(HIT, self).save(*args, **kwargs)
     
@@ -441,8 +454,10 @@ class RankingResult(models.Model):
       User,
       db_index=True
     )
-    
+        
     duration = models.TimeField(blank=True, null=True, editable=False)
+    
+    completion = models.DateTimeField(auto_now_add=True, editable=False)
     
     def readable_duration(self):
         """
@@ -752,6 +767,16 @@ class UserHITMapping(models.Model):
         """
         return u'<hitmap id="{0}" user="{1}" hit="{2}">'.format(self.id,
           self.user.username, self.hit.hit_id)
+
+    # pylint: disable-msg=E1002
+    def save(self, *args, **kwargs):
+        """
+        Makes sure that HIT's assigned field is updated.
+        """
+        self.hit.assigned = datetime.now()
+        self.hit.save()
+        
+        super(UserHITMapping, self).save(*args, **kwargs)
 
 
 # pylint: disable-msg=E1101

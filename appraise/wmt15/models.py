@@ -457,7 +457,7 @@ class RankingResult(models.Model):
         
     duration = models.TimeField(blank=True, null=True, editable=False)
     
-    completion = models.DateTimeField(auto_now_add=True, editable=False)
+    completion = models.DateTimeField(auto_now_add=True, blank=True, null=True, editable=False)
     
     def readable_duration(self):
         """

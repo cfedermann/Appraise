@@ -1040,13 +1040,13 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="1027">Then my mum and sister came to the realisation and they started wetting themselves, but I had to be rushed to A & E.</source>
+      <source id="1027">Then my mum and sister came to the realisation and they started wetting themselves, but I had to be rushed to A &amp; E.</source>
       <reference>Sitten äitini ja sisareni huomasivat saman asian, ja alkoivat nauraa, mutta minut piti kiidättää ensiapuun.</reference>
-      <translation system="newstest2015.online-B.0.en-fi.txt">Sitten äitini ja sisareni tuli toteutumista ja he alkoivat kastuu itse, mutta minulla oli kiidätettiin & E.</translation>
-      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Sitten tuli äidin ja sisareni ymmärtää ja alkoivat wetting itse, mutta minun täytyy olla kiirehti A & E</translation>
-      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Sitten äiti ja sisko tuli Kansainvälistymistakausta ja he alkoivat itse kehitetyllä, mutta jouduin lähtemään sairaalaan A & E.</translation>
-      <translation system="newstest2015.CMU.4075.en-fi.txt">Sitten äidin ja sisareni, ja he alkoivat wetting itse, mutta minun oli kiire A & E.</translation>
-      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Silloin vaikeneminen ja sisareni toteutumista, ja he alkoivat wetting itseään, mutta oli kiirehtinyt A & E.</translation>
+      <translation system="newstest2015.online-B.0.en-fi.txt">Sitten äitini ja sisareni tuli toteutumista ja he alkoivat kastuu itse, mutta minulla oli kiidätettiin &amp; E.</translation>
+      <translation system="newstest2015.AaltoMorphsRescored.3904.en-fi.txt">Sitten tuli äidin ja sisareni ymmärtää ja alkoivat wetting itse, mutta minun täytyy olla kiirehti A &amp; E</translation>
+      <translation system="newstest2015.abumatran-uncons.4116.en-fi.txt">Sitten äiti ja sisko tuli Kansainvälistymistakausta ja he alkoivat itse kehitetyllä, mutta jouduin lähtemään sairaalaan A &amp; E.</translation>
+      <translation system="newstest2015.CMU.4075.en-fi.txt">Sitten äidin ja sisareni, ja he alkoivat wetting itse, mutta minun oli kiire A &amp; E.</translation>
+      <translation system="newstest2015.uedin-syntax.3940.en-fi.txt">Silloin vaikeneminen ja sisareni toteutumista, ja he alkoivat wetting itseään, mutta oli kiirehtinyt A &amp; E.</translation>
     </seg>
     <seg>
       <source id="1170">The children should also be instructed about what electric devices they can use while they’re at home alone.</source>

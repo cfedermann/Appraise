@@ -565,13 +565,13 @@
       <translation system="newstest2015.online-F.0.en-ru.txt">Оба были опасаны смертельно, но на самом деле они выдержали.</translation>
     </seg>
     <seg>
-      <source id="1301">Mrs Allen was only 18 when she started working at M&S.</source>
-      <reference>Миссис Эллен было всего 18 лет, когда она начала работать в M&S.</reference>
-      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Миссис Аллен был только 18 лет, когда она начала работать в M & S.</translation>
-      <translation system="newstest2015.online-G.0.en-ru.txt">Миссис Аллен было всего 18, когда она начала работать в М&С.</translation>
-      <translation system="newstest2015.online-B.0.en-ru.txt">Миссис Аллен был только 18, когда она начала работать в M & S.</translation>
-      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt,newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Миссис Аллен было всего 18 лет, когда она начала работать в M & S.</translation>
-      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Госпожа Аллен было всего 18 лет, когда она начала работать на M & S.</translation>
+      <source id="1301">Mrs Allen was only 18 when she started working at M&amp;S.</source>
+      <reference>Миссис Эллен было всего 18 лет, когда она начала работать в M&amp;S.</reference>
+      <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Миссис Аллен был только 18 лет, когда она начала работать в M &amp; S.</translation>
+      <translation system="newstest2015.online-G.0.en-ru.txt">Миссис Аллен было всего 18, когда она начала работать в М&amp;С.</translation>
+      <translation system="newstest2015.online-B.0.en-ru.txt">Миссис Аллен был только 18, когда она начала работать в M &amp; S.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt,newstest2015.USAAR-gacha.3962.en-ru.txt,newstest2015.USAAR-gacha.4108.en-ru.txt">Миссис Аллен было всего 18 лет, когда она начала работать в M &amp; S.</translation>
+      <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Госпожа Аллен было всего 18 лет, когда она начала работать на M &amp; S.</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="eng" target-language="rus">
@@ -2006,7 +2006,7 @@
       <translation system="newstest2015.online-F.0.en-ru.txt">Приток mainlanders заправляет топливом конкуренцию для продуктов и услуга.</translation>
       <translation system="newstest2015.uedin-syntax.3938.en-ru.txt">Приток маинландерс конкуренции за товары и услуги.</translation>
       <translation system="newstest2015.LIMSI-NCode-SOUL.3996.en-ru.txt">Приток mainlanders усиливает конкуренцию за товары и услуги.</translation>
-      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Приток & quot подпитывает конкуренцию за продукты и услуги.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4144.en-ru.txt">Приток &quot; подпитывает конкуренцию за продукты и услуги.</translation>
     </seg>
     <seg>
       <source id="1707">However, part of the plant was destroyed by Ukrainian artillery.</source>

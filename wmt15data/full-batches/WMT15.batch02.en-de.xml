@@ -581,13 +581,13 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
     <seg>
-      <source id="1794">Then my mum and sister came to the realisation and they started wetting themselves, but I had to be rushed to A & E.</source>
+      <source id="1794">Then my mum and sister came to the realisation and they started wetting themselves, but I had to be rushed to A &amp; E.</source>
       <reference>Meine Mutter und meine Schwester sahen das auch und machten sich vor Lachen fast in die Hose, aber ich musste in die Notaufnahme.</reference>
-      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Dann kam meine Mutter und Schwester bei der Realisierung und sie begann sich feuchte, aber ich musste schnell auf A & E.</translation>
-      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Dann kam meine Mutter und Schwester zu der Erkenntnis, und sie begannen die Feuchte selbst, aber ich musste zu A & E.</translation>
-      <translation system="newstest2015.udsSant.4051.en-de.txt">dann Meine Mutter und Schwester kam zu der erkenntnis und feuchte begannen sie , aber sich hatte , eilte zu a & .</translation>
-      <translation system="newstest2015.online-B.0.en-de.txt">Dann meine Mutter und Schwester kamen zu der Erkenntnis, und sie begannen sich Benetzen, aber ich musste zu A & E. gehetzt werden</translation>
-      <translation system="newstest2015.ExEx.4124.en-de.txt">Dann kam meine Mutter und Schwester zur Realisierung, und sie begannen ihre Benetzungsprobleme. ich musste auf a & e. herbeigeeilt sein.</translation>
+      <translation system="newstest2015.uedin-jhu-phrase.4072.en-de.txt">Dann kam meine Mutter und Schwester bei der Realisierung und sie begann sich feuchte, aber ich musste schnell auf A &amp; E.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Dann kam meine Mutter und Schwester zu der Erkenntnis, und sie begannen die Feuchte selbst, aber ich musste zu A &amp; E.</translation>
+      <translation system="newstest2015.udsSant.4051.en-de.txt">dann Meine Mutter und Schwester kam zu der erkenntnis und feuchte begannen sie , aber sich hatte , eilte zu a &amp; .</translation>
+      <translation system="newstest2015.online-B.0.en-de.txt">Dann meine Mutter und Schwester kamen zu der Erkenntnis, und sie begannen sich Benetzen, aber ich musste zu A &amp; E. gehetzt werden</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Dann kam meine Mutter und Schwester zur Realisierung, und sie begannen ihre Benetzungsprobleme. ich musste auf a &amp; e. herbeigeeilt sein.</translation>
     </seg>
     <seg>
       <source id="1394">This was confirmed by the surveyor Ralph Heiliger from "IngenieurteamZwei" in Rheinback, who introduced the instruments used by the Romans for surveying, such as the Chorobat, Groma and Dioptra.</source>
@@ -851,13 +851,13 @@
       <translation system="newstest2015.online-E.0.en-de.txt">Es ist eine verschiedene Erfahrung von den Situationskomödien und den Komödien, die sein beschäftigtes arbeitendes Leben gepolstert haben.</translation>
     </seg>
     <seg>
-      <source id="1864">Sometimes those books are essentially rented by providing the electronic license for a specific period from distributors such as Amazon.com, Chegg and Barnes & Noble Inc .</source>
-      <reference>Manchmal werden diese Bücher de facto gemietet, indem eine elektronische Lizenz für einen bestimmten Zeitraum von Großhändlern wie Amazon.com, Chegg sowie Barnes & Noble Inc. bereitgestellt wird.</reference>
-      <translation system="newstest2015.online-F.0.en-de.txt">Manchmal werden jene Bücher im Wesentlichen gemietet, indem man die elektronische Lizenz während eines spezifischen Zeitraums von den Verteilern wie Amazon.com, Chegg und Barnes & Noble Inc. zur Verfügung stellt</translation>
+      <source id="1864">Sometimes those books are essentially rented by providing the electronic license for a specific period from distributors such as Amazon.com, Chegg and Barnes &amp; Noble Inc .</source>
+      <reference>Manchmal werden diese Bücher de facto gemietet, indem eine elektronische Lizenz für einen bestimmten Zeitraum von Großhändlern wie Amazon.com, Chegg sowie Barnes &amp; Noble Inc. bereitgestellt wird.</reference>
+      <translation system="newstest2015.online-F.0.en-de.txt">Manchmal werden jene Bücher im Wesentlichen gemietet, indem man die elektronische Lizenz während eines spezifischen Zeitraums von den Verteilern wie Amazon.com, Chegg und Barnes &amp; Noble Inc. zur Verfügung stellt</translation>
       <translation system="newstest2015.KIT.4019.en-de.txt">Manchmal sind die Bücher im Wesentlichen von den Händlern wie Amazon.com, Chegg und Barnes &amp; Noble Inc. durch die elektronische Lizenz für einen bestimmten Zeitraum gemietet werden.</translation>
-      <translation system="newstest2015.ExEx.4124.en-de.txt">Manchmal sind diese Bücher im Wesentlichen durch die Bereitstellung der elektronischen Lizenz für einen Zeitraum von Händlern wie Amazon. Com, Chegg und Barnes & Noble Inc gemietet.</translation>
+      <translation system="newstest2015.ExEx.4124.en-de.txt">Manchmal sind diese Bücher im Wesentlichen durch die Bereitstellung der elektronischen Lizenz für einen Zeitraum von Händlern wie Amazon. Com, Chegg und Barnes &amp; Noble Inc gemietet.</translation>
       <translation system="newstest2015.LIMSI-KIT-Joint.4020.en-de.txt">Manchmal sind diese Bücher, die im Wesentlichen durch die elektronische Lizenz für einen bestimmten Zeitraum von Händlern wie Amazon.com, Chegg und Barnes &amp; Noble Inc.</translation>
-      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Manchmal werden diese Bücher im Wesentlichen durch die Bereitstellung der elektronischen Lizenz für einen bestimmten Zeitraum von Händlern wie Amazon.com, Chegg und Barnes & Noble Inc.</translation>
+      <translation system="newstest2015.Neural-MT.4079.en-de.txt">Manchmal werden diese Bücher im Wesentlichen durch die Bereitstellung der elektronischen Lizenz für einen bestimmten Zeitraum von Händlern wie Amazon.com, Chegg und Barnes &amp; Noble Inc.</translation>
     </seg>
     <seg>
       <source id="1227">Once again Abbott put himself through six cycles of chemotherapy.</source>

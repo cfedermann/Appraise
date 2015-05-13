@@ -729,10 +729,10 @@ def _compute_global_stats():
     
     global_stats.append(('Users', len(wmt15_users)))
     global_stats.append(('Groups', len(groups)))
-    global_stats.append(('HITs completed', hits_completed))
-    global_stats.append(('HITs remaining', hits_remaining))
-    global_stats.append(('Ranking results', ranking_results.count()))
-    global_stats.append(('System comparisons', system_comparisons))
+    global_stats.append(('HITs completed', '{0:,}'.format(hits_completed)))
+    global_stats.append(('HITs remaining', '{0:,}'.format(hits_remaining)))
+    global_stats.append(('Ranking results', '{0:,}'.format(ranking_results.count())))
+    global_stats.append(('System comparisons', '{0:,}'.format(system_comparisons)))
     global_stats.append(('Average duration (per HIT)', seconds_to_timedelta(avg_time)))
     global_stats.append(('Average duration (per task)', seconds_to_timedelta(avg_user_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
@@ -810,6 +810,7 @@ def _compute_group_stats():
       # volunteers
       'MSR': 0,
       'JHU': 0,
+      'MTMA': 0,
       # participants, confirmed
       'Abu-MaTran': 600,
       'CIMS': 200,

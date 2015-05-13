@@ -903,7 +903,6 @@ def _compute_ranking_clusters(load_file=False):
     _script = join(ROOT_PATH, '..', 'scripts',
       'compute_ranking_clusters.perl')
     _wmt15 = join(TMP_PATH, 'wmt15-researcher-results.csv')
-    _mturk = join(ROOT_PATH, 'wmt15', 'fixtures', 'wmt15-mturk-results.csv')
     _dump = join(TMP_PATH, 'wmt15-ranking-clusters.txt')
     
     # If not loading cluster data from file, re-compute everything.
@@ -929,7 +928,7 @@ def _compute_ranking_clusters(load_file=False):
             outfile.write(export_csv)
         
         # Run Philipp's Perl script to compute ranking clusters.
-        PERL_OUTPUT = check_output(['perl', _script, _wmt15, _mturk], shell=True)
+        PERL_OUTPUT = check_output(['perl', _script, _wmt15], shell=True)
         
         with open(_dump, 'w') as outfile:
             outfile.write(PERL_OUTPUT)

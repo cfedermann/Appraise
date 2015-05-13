@@ -112,6 +112,9 @@ def _compute_next_task_for_user(user, language_pair):
         
         # If we still haven't found a next HIT, there simply is none...
         if not random_hit:
+            # TODO: We should now investigate if there is any HIT assigned
+            #   to a user but has not been finished in a certain time span.
+            #   Such a HIT can be freed and assigned to the current user.            
             return None
         
         # Update User/HIT mappings s.t. the system knows about the next HIT.
@@ -726,19 +729,12 @@ def _compute_global_stats():
     
     global_stats.append(('Users', len(wmt15_users)))
     global_stats.append(('Groups', len(groups)))
-    global_stats.append(('HITs completed', hits_completed))
-    global_stats.append(('HITs remaining', hits_remaining))
-    global_stats.append(('Ranking results', ranking_results.count()))
-    
-    # TODO: It is not safe to assume 10 comparisons per HIT anymore.
-    #   We have to compute the number of systems compared for each of
-    #   the individual RankingTask instances in each HIT and check if
-    #   there are any multi-systems included...
-    #
-    global_stats.append(('System comparisons', system_comparisons))
-    global_stats.append(('Average duration', seconds_to_timedelta(avg_time)))
-    global_stats.append(('Average duration (single user)',
-      seconds_to_timedelta(avg_user_time)))
+    global_stats.append(('HITs completed', '{0:,}'.format(hits_completed)))
+    global_stats.append(('HITs remaining', '{0:,}'.format(hits_remaining)))
+    global_stats.append(('Ranking results', '{0:,}'.format(ranking_results.count())))
+    global_stats.append(('System comparisons', '{0:,}'.format(system_comparisons)))
+    global_stats.append(('Average duration (per HIT)', seconds_to_timedelta(avg_time)))
+    global_stats.append(('Average duration (per task)', seconds_to_timedelta(avg_user_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     return global_stats
@@ -750,7 +746,7 @@ def _compute_language_pair_stats():
     """
     language_pair_stats = []
     
-    # TODO: update LANGUAGE_PAIR_CHOICES to include Finnish and move to better place.
+    # TODO: move LANGUAGE_PAIR_CHOICES better place.
     #
     # Running compute_remaining_hits() will also update completion status for HITs.
     for choice in LANGUAGE_PAIR_CHOICES:
@@ -814,6 +810,7 @@ def _compute_group_stats():
       # volunteers
       'MSR': 0,
       'JHU': 0,
+      'MTMA': 0,
       # participants, confirmed
       'Abu-MaTran': 600,
       'CIMS': 200,

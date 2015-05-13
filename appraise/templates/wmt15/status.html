@@ -42,6 +42,12 @@
 <div class="tab-pane" id="language_pair_stats">
 <h3>Language pair status</h3>
 <table class="table table-striped table-bordered table-condensed">
+<tr/>
+  <th>Language pair</th>
+  <th>Evaluated</th>
+  <th>HITs remaining/completed</th>
+</tr>
+
 {% for item in language_pair_stats %}
 <tr>
   <th width="20%">{{item.0}}</th>
@@ -67,6 +73,12 @@
 <div class="tab-pane" id="group_stats">
 <h3>Group status</h3>
 <table class="table table-striped table-bordered table-condensed">
+<tr/>
+  <th>Name</th>
+  <th>HITs completed</th>
+  <th>HITs required</th>
+  <th>Progress</th>
+</tr>
 {% for item in group_stats %}
 <tr>
   <th width="30%">{{item.0}}</th>
@@ -83,6 +95,12 @@
 <div class="tab-pane" id="user_stats">
 <h3>Top 25 contributors</h3>
 <table class="table table-striped table-bordered table-condensed">
+<tr/>
+  <th>Name</th>
+  <th>HITs completed</th>
+  <th>Average duration</th>
+  <th>Total duration</th>
+</tr>
 {% for item in user_stats %}
 <tr>
   <th width="30%">{{item.0}}</th>

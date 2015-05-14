@@ -601,10 +601,13 @@ class RankingResult(models.Model):
             _system_names.extend(_local_systems)
             _system_ranks.extend(_local_results)
         
-        _missing_systems = 5 - len(_system_names) % 5
-        for x in range(_missing_systems):
-            _system_names.append('PLACEHOLDER')
-            _system_ranks.append('-1')
+        # Check if we need to add placeholder systems to pad to 5*k systems.
+        # This is needed as our export format expects five systems per line.
+        if len(_system_names) % 5 > 0:
+            _missing_systems = 5 - len(_system_names) % 5
+            for x in range(_missing_systems):
+                _system_names.append('PLACEHOLDER')
+                _system_ranks.append('-1')
         
         all_values = []
         for _base_index in range(len(_system_names))[::5]:

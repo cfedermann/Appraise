@@ -302,13 +302,21 @@ class HIT(models.Model):
 
         results = []
         for item in RankingTask.objects.filter(hit=self):
+            item.reload_dynamic_fields()
+
+            try:
+                source_id = item.source[1]["id"]
+            except:
+                source_id = -1
+
             _results = []
             for _result in item.rankingresult_set.all():
                 _results.append(_result.export_to_xml())
-            results.append(_results)
+
+            results.append((source_id, _results))
 
         context = {'hit_id': self.hit_id, 'attributes': attributes,
-          'results': list(enumerate(results))}
+          'results': results}
         return template.render(Context(context))
 
     def export_to_apf(self):

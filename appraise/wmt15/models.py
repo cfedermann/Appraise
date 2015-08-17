@@ -304,14 +304,20 @@ class HIT(models.Model):
         for item in RankingTask.objects.filter(hit=self):
             item.reload_dynamic_fields()
 
+            try:
+                source_id = item.source[1]["id"]
+            except:
+                source_id = -1
+
             _results = []
             source_id = getattr(item, 'source[1]["id"]', -1)
             for _result in item.rankingresult_set.all():
                 _results.append(_result.export_to_xml())
+
             results.append((source_id, _results))
 
         context = {'hit_id': self.hit_id, 'attributes': attributes,
-          'results': results)}
+          'results': results}
         return template.render(Context(context))
 
     def export_to_apf(self):
@@ -705,7 +711,11 @@ class RankingResult(models.Model):
                 elif self.results[a] == self.results[b]:
                     _verdict = '='
 
+<<<<<<< HEAD
                 _v = '{0}{1}{2}'.format(str(systemA), _verdict, str(systemB))
+=======
+                _v = '{0}{1}{2}'.format(str(_systemA), _verdict, str(_systemB))
+>>>>>>> 8f4e74d858605212d4f564a2a178681856e19c79
 
                 results.append('{0},{1},{2}'.format(_c, _i, _v))
 

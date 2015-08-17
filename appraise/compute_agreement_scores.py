@@ -46,6 +46,26 @@ PARSER.add_argument("--points", action="store_true", default=False,
   dest="points", help="Display total number of data points in output table.")
 
 
+def extract_system_ids_from_label(label):
+    """
+    Extracts the two system IDs from the given label.
+    """
+    label_systems = []
+    for separator in ('>', '<', '='):
+        if separator in label:
+            label_systems = label.split(separator)
+            break
+    label_systems.sort()
+    
+    sorted_and_cleaned_label_systems = []
+    for label_system in label_systems:
+        cleaned_label_systems = label_system.split('+')
+        cleaned_label_systems.sort()
+        sorted_and_cleaned_label_systems.append('+'.join(cleaned_label_systems))
+    
+    return sorted_and_cleaned_label_systems
+
+
 def compute_agreement_scores(data):
     """
     Computes agreement scores for the given data set.
@@ -73,16 +93,35 @@ def compute_agreement_scores(data):
             # check length of x before using it ;)
             if len(item_labels) > 1:
                 for first_label, second_label in combinations(item_labels, 2):
-                    if first_label == second_label:
-                        identical_cnt += 1
-                    comparable_cnt += 1
-        
+                    #if first_label == second_label:
+                    #    identical_cnt += 1
+                    #comparable_cnt += 1
+                    #continue
+
+                    first_label_systems = extract_system_ids_from_label(first_label)
+                    second_label_systems = extract_system_ids_from_label(second_label)
+                    
+                    if set(first_label_systems) == set(second_label_systems):
+                        comparable_cnt += 1
+                        
+                        if first_label == second_label:
+                            identical_cnt += 1
+                
         return (identical_cnt, comparable_cnt, ties_cnt, ties_total)
     
     except:
         from traceback import print_exc
         print_exc()
 
+
+# Use 2 for pairwise rankings and 5 for plain WMT data...
+MAX_NUMBER_OF_SYSTEMS = 5
+
+LANGUAGE_CODE_TO_NAME = {
+  'ces': 'Czech', 'deu': 'German', 'fra': 'French', 'fre': 'French',
+  'esn': 'Spanish', 'fin': 'Finnish', 'rus': 'Russian', 'hin': 'Hindi',
+  'eng': 'English'
+}
 
 if __name__ == "__main__":
     args = PARSER.parse_args()
@@ -94,21 +133,49 @@ if __name__ == "__main__":
     
     results_data = defaultdict(lambda: defaultdict(list))
     for i, row in enumerate(DictReader(args.results_file)):
-        language_pair = '{0}-{1}'.format(row.get('srclang'), row.get('trglang'))
+        src_lang = row.get('srclang')
+        if src_lang in LANGUAGE_CODE_TO_NAME.keys():
+            src_lang = LANGUAGE_CODE_TO_NAME[src_lang]
+        
+        trg_lang = row.get('trglang')
+        if trg_lang in LANGUAGE_CODE_TO_NAME.keys():
+            trg_lang = LANGUAGE_CODE_TO_NAME[trg_lang]
+        
+        language_pair = '{0}-{1}'.format(src_lang, trg_lang)
         segment_id = int(row.get('srcIndex'))
         judge_id = row.get('judgeId')
+        if not judge_id:
+            judge_id = row.get('judgeID')
         
         # Filter out results where a user decided to "skip" ranking.
-        systems = [row.get('system%dId' % (y+1)) for y in range(5)]
-        rankings = [int(x) for x in \
-          [row.get('system%drank' % (y+1)) for y in range(5)]]
-        if all([x == -1 for x in rankings]):
+        systems = []
+        rankings = []
+        for y in range(MAX_NUMBER_OF_SYSTEMS):
+            system_id = row.get('system{0}Id'.format(y+1), None)
+            system_rank = row.get('system{0}rank'.format(y+1), -1)
+            
+            if system_id is not None:
+                systems.append(system_id)
+                rankings.append(int(system_rank))
+
+        # We need at least two systems to compare...
+        if len(systems) < 2:
             continue
+       
+#        systems = [row.get('system%dId' % (y+1)) for y in range(NUMBER_OF_SYSTEMS)]
+#        rankings = [int(x) for x in \
+#          [row.get('system%drank' % (y+1)) for y in range(NUMBER_OF_SYSTEMS)]]
+#        if all([x == -1 for x in rankings]):
+#            continue
         
         # Compute individual ranking decisions for this users.
-        for a, b in combinations(range(5), 2):
+        for a, b in combinations(range(len(systems)), 2):
             _c = judge_id
             _i = '{0}.{1}.{2}'.format(segment_id, systems[a], systems[b])
+            
+            # We have to skip any rankings = -1 as these don't contribute!
+            if rankings[a] == -1 or rankings[b] == -1:
+                continue
             
             if rankings[a] < rankings[b]:
                 _v = '{0}>{1}'.format(systems[a], systems[b])
@@ -121,7 +188,7 @@ if __name__ == "__main__":
             
             # Append ranking decision in Artstein and Poesio format.
             results_data[language_pair][segment_id].append((_c, _i, _v))
-    
+        
     # We allow to use multi-processing.
     pool = Pool(processes=args.processes)
     print('Language pair        pA     pE     kappa  ',
@@ -135,7 +202,7 @@ if __name__ == "__main__":
     language_pairs = ('Czech-English', 'English-Czech', 'German-English',
       'English-German', 'Spanish-English', 'English-Spanish',
       'French-English', 'English-French', 'Russian-English',
-      'English-Russian', 'English-Finnish', 'Finnish-English')
+      'English-Russian', 'Finnish-English', 'English-Finnish')
     
     for language_pair in language_pairs:
         segments_data = results_data[language_pair]
@@ -208,6 +275,10 @@ if __name__ == "__main__":
         
         # Compute kappa score.
         kappa = (pA - pE) / float(1.0 - pE)
+        
+        # No sense to print out empty results
+        if _comparable == 0:
+            continue
         
         # Display results for current language pair.
         print('{0:>20} {1: 0.3f} {2: 0.3f} {3: 0.3f}'.format(language_pair,

@@ -554,6 +554,41 @@ class RankingResult(models.Model):
 
         return template.render(Context(context))
 
+
+    def export_to_ranking_csv(self):
+        """
+        Renders this RankingResult as Ranking CSV String.
+
+        Format:
+        ID,user,duration,rank_1,word_count_1,rank_2,word_count_2,rank_3,word_count_3,rank_4,word_count_5,rank_1,word_count_5
+
+        """
+        ranking_csv_data = []
+
+        try:
+            ranking_csv_data.append(item.source[1]["id"])
+        except:
+            ranking_csv_data.append(-1)
+
+        ranking_csv_data.append(self.user.username)
+        ranking_csv_data.append(datetime_to_seconds(self.duration))
+
+        skipped = self.results is None
+
+        translations = []
+        if not skipped:
+            for index, translation in enumerate(self.item.translations):
+                _word_count = len(translation.split())
+                _rank = self.results[index]
+                translations.append((_rank, _word_count))
+
+        for rank, word_count in translations:
+            ranking_csv_data.append(rank)
+            ranking_csv_data.append(word_count)
+
+        return ranking_csv_data
+
+
     def export_to_csv(self):
         """
         Exports this RankingResult in CSV format.
@@ -711,11 +746,7 @@ class RankingResult(models.Model):
                 elif self.results[a] == self.results[b]:
                     _verdict = '='
 
-<<<<<<< HEAD
-                _v = '{0}{1}{2}'.format(str(systemA), _verdict, str(systemB))
-=======
                 _v = '{0}{1}{2}'.format(str(_systemA), _verdict, str(_systemB))
->>>>>>> 8f4e74d858605212d4f564a2a178681856e19c79
 
                 results.append('{0},{1},{2}'.format(_c, _i, _v))
 

@@ -589,7 +589,7 @@ class RankingResult(models.Model):
         return ranking_csv_data
 
 
-    def export_to_csv(self):
+    def export_to_csv(self, expand_multi_systems=True):
         """
         Exports this RankingResult in CSV format.
         """
@@ -640,10 +640,14 @@ class RankingResult(models.Model):
         _system_names = []
         _system_ranks = []
         for _result_index, _system in enumerate(_systems):
-            _local_systems = _system.split(',')
-            _local_results = [str(self.results[_result_index])] * len(_local_systems)
-            _system_names.extend(_local_systems)
-            _system_ranks.extend(_local_results)
+            if expand_multi_systems:
+                _local_systems = _system.split(',')
+                _local_results = [str(self.results[_result_index])] * len(_local_systems)
+                _system_names.extend(_local_systems)
+                _system_ranks.extend(_local_results)
+            else:
+                _system_names.append(_system.replace(',', '+'))
+                _system_ranks.append(str(self.results[_result_index]))
 
         # Check if we need to add placeholder systems to pad to 5*k systems.
         # This is needed as our export format expects five systems per line.

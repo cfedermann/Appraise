@@ -16,7 +16,7 @@ except ImportError:
     ROOT_PATH = os.getcwd()
     DEPLOYMENT_PREFIX = 'appraise/'
     DEBUG = True
-    
+
     ADMINS = (
       # ('Your Name', 'your_email@domain.com'),
     )
@@ -156,4 +156,5 @@ INSTALLED_APPS = (
   'django.contrib.messages',
 
   'appraise.wmt15',
+  'appraise.beta16',
 )

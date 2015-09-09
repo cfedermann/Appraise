@@ -13,7 +13,7 @@ from appraise.settings import MEDIA_ROOT, DEBUG, DEPLOYMENT_PREFIX
 admin.autodiscover()
 
 # HTTP error handlers supporting COMMIT_TAG.
-handler404 = 'appraise.views._page_not_found'  
+handler404 = 'appraise.views._page_not_found'
 handler500 = 'appraise.views._server_error'
 
 # Basis URL patterns for Appraise project.
@@ -65,6 +65,10 @@ urlpatterns += patterns('appraise.wmt15.views',
   (r'^{0}wmt15/update-status/(?P<key>(global_stats|language_pair_stats|group_stats|user_stats|clusters))?/?$'.format(DEPLOYMENT_PREFIX), 'update_status'),
   (r'^{0}wmt15/update-ranking/$'.format(DEPLOYMENT_PREFIX), 'update_ranking'),
   (r'^{0}wmt15/signup/$'.format(DEPLOYMENT_PREFIX), 'signup'),
+)
+
+urlpatterns += patterns('appraise.beta16.views',
+  (r'^{0}beta16/$'.format(DEPLOYMENT_PREFIX), 'overview'),
 )
 
 if DEBUG:

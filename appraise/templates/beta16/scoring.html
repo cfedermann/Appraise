@@ -1,0 +1,135 @@
+{% extends "beta16/base.html" %}
+
+{% block head %}
+<style>
+#slider .ui-slider-range { background: #729fcf; }
+#slider .ui-slider-handle { border-color: #729fcf; }
+</style>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="{{STATIC_URL}}js/jquery-2.1.4.min.js"></script>
+<!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>-->
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+<!--
+$(document).ready(function() {
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+  $('#slider').slider({orientation: "horizontal", range: "min", change: update_score});
+  $('input[name="score"]').val(-1);
+});
+
+function add_end_timestamp()
+{
+  $('input[name="end_timestamp"]').val(Date.now()/1000.0);
+}
+
+function reset_form()
+{
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+  $('#slider').slider('option', 'value', 0);
+  $('input[name="score"]').val(-1);
+}
+
+function validate_form()
+{
+  var score = $('input[name="score"]').val();
+  if (score == -1)
+  {
+    alert('Please score the given candidate sentence. Thanks!');
+    return false;
+  }
+
+  return true;
+}
+
+function update_score()
+{
+  var new_score = $('#slider').slider('value');
+  $('input[name="score"]').val(new_score);
+}
+-->
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-info">
+  <table style="width:100%">
+  <tr>
+    <td style="width:33%;text-align:left;">
+      <strong id="task_progress">1/1</strong>
+    </td>
+    <td style="width:33%;text-align:center;">
+      <strong>Segment #{{segment_id}}</strong>
+    </td>
+    <td style="width:33%;text-align:right;">
+      <strong>{{language_pair|safe}}</strong>
+    </td>
+  </tr>
+  </table>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<emph>MAGIC QUESTION GOES HERE AT SOME POINT</emph>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<blockquote>
+<p><strong>{{reference_text}}</strong></p>
+<small>Reference</small>
+</blockquote>
+</div>
+</div>
+
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
+
+<input name="end_timestamp" type="hidden" value="" />
+<input name="task_id" type="hidden" value="{{task_id}}" />
+<input name="start_timestamp" type="hidden" value="" />
+<input name="score" type="hidden" value="-1" />
+
+<span id="candidate">
+<div class="row">
+<div class="col-sm-12">
+<blockquote>
+<p><strong>{{candidate_text}}</strong></p>
+<small>Candidate translation</small>
+</blockquote>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<blockquote>
+<p>
+<div id="slider"></div>
+</P>
+<small>MAGIC QUESTION GOES HERE AT SOME POINT</small>
+</blockquote>
+</div>
+</div>
+
+</span>
+
+<div class="actions">
+  <table style="width:100%">
+  <tr>
+    <td style="width:50%;text-align:left;">
+      <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
+    </td>
+    <td style="width:50%;text-align:right;">
+      <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>
+      &nbsp;
+      <button name="submit_button" accesskey="3" type="submit" class="btn btn-danger" value="FLAG_ERROR"><i class="icon-white icon-exclamation-sign"></i> Skip Item</button>
+    </td>
+  </tr>
+  </table>
+</div>
+
+</form>
+
+{% endblock %}

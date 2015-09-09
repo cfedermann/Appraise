@@ -560,15 +560,27 @@ class RankingResult(models.Model):
         Renders this RankingResult as Ranking CSV String.
 
         Format:
-        ID,user,duration,rank_1,word_count_1,rank_2,word_count_2,rank_3,word_count_3,rank_4,word_count_5,rank_1,word_count_5
+        ID,srcLang,tgtLang,user,duration,rank_1,word_count_1,rank_2,word_count_2,rank_3,word_count_3,rank_4,word_count_5,rank_1,word_count_5
 
         """
         ranking_csv_data = []
 
         try:
-            ranking_csv_data.append(item.source[1]["id"])
+            ranking_csv_data.append(self.item.source[1]["id"])
         except:
             ranking_csv_data.append(-1)
+
+        iso639_3_to_name_mapping = {'ces': 'Czech', 'cze': 'Czech',
+          'deu': 'German', 'ger': 'German', 'eng': 'English',
+          'spa': 'Spanish', 'fra': 'French', 'fre': 'French',
+          'rus': 'Russian', 'fin': 'Finnish'}
+
+        _src_lang = self.item.hit.hit_attributes['source-language']
+        _trg_lang = self.item.hit.hit_attributes['target-language']
+
+        ranking_csv_data.append(iso639_3_to_name_mapping[_src_lang]) # srclang
+        ranking_csv_data.append(iso639_3_to_name_mapping[_trg_lang]) # trglang
+
 
         ranking_csv_data.append(self.user.username)
         ranking_csv_data.append(datetime_to_seconds(self.duration))
@@ -578,7 +590,7 @@ class RankingResult(models.Model):
         translations = []
         if not skipped:
             for index, translation in enumerate(self.item.translations):
-                _word_count = len(translation.split())
+                _word_count = len(translation[0].split())
                 _rank = self.results[index]
                 translations.append((_rank, _word_count))
 
@@ -589,7 +601,7 @@ class RankingResult(models.Model):
         return ranking_csv_data
 
 
-    def export_to_csv(self):
+    def export_to_csv(self, expand_multi_systems=True):
         """
         Exports this RankingResult in CSV format.
         """
@@ -640,10 +652,14 @@ class RankingResult(models.Model):
         _system_names = []
         _system_ranks = []
         for _result_index, _system in enumerate(_systems):
-            _local_systems = _system.split(',')
-            _local_results = [str(self.results[_result_index])] * len(_local_systems)
-            _system_names.extend(_local_systems)
-            _system_ranks.extend(_local_results)
+            if expand_multi_systems:
+                _local_systems = _system.split(',')
+                _local_results = [str(self.results[_result_index])] * len(_local_systems)
+                _system_names.extend(_local_systems)
+                _system_ranks.extend(_local_results)
+            else:
+                _system_names.append(_system.replace(',', '+'))
+                _system_ranks.append(str(self.results[_result_index]))
 
         # Check if we need to add placeholder systems to pad to 5*k systems.
         # This is needed as our export format expects five systems per line.

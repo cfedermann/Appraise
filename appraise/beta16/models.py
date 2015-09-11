@@ -49,6 +49,61 @@ and process
 
 """
 
+
+class MetaData(models.Model):
+    """
+    Stores object-specific metadata such as annotation start/end time.
+    """
+    start_time = models.DateTimeField(
+      help_text='Annotation start time',
+      verbose_name='start time',
+      blank=True,
+      null=True,
+      editable=False
+    )
+
+    end_time = models.DateTimeField(
+      help_text='Annotation end time',
+      verbose_name='end time',
+      blank=True,
+      null=True,
+      editable=False
+    )
+
+    users = models.ManyToManyField(
+      User,
+      blank=True,
+      db_index=True,
+      null=True,
+      help_text="Users who work on this task"
+    )
+
+    active = models.BooleanField(
+      db_index=True,
+      default=True,
+      help_text="Indicates that this task is still in use",
+      verbose_name="active?"
+    )
+
+    mturk_only = models.BooleanField(
+      db_index=True,
+      default=False,
+      help_text="Indicates that this task is only usable via MTurk",
+      verbose_name="MTurk only?"
+    )
+
+    completed = models.BooleanField(
+      db_index=True,
+      default=False,
+      help_text="Indicates that this task is completed",
+      verbose_name="completed?"
+    )
+
+    class Meta:
+        verbose_name='Meta data'
+        verbose_name_plural='Meta data'
+
+
 class AbsoluteScoringTask(models.Model):
     """
     Implements a multi-system-enabled version of Yvette Graham's
@@ -65,32 +120,46 @@ class AbsoluteScoringTask(models.Model):
     comparable as they have been assigned in the same "cognitive"
     state of the same human annotator.  We'll have to verify this!
     """
+    system_id = models.CharField(
+      help_text='Candidate system ID',
+      verbose_name='system ID',
+      max_length=255
+    )
+
     reference = models.TextField(
       help_text='Used to assess quality of the given candidate',
-      verbose_name='Reference text'
+      verbose_name='reference text'
     )
 
     candidate = models.TextField(
       help_text='Candidate system output',
-      verbose_name='Candidate text'
+      verbose_name='candidate text'
     )
 
     source_language = models.CharField(
       help_text='ISO 639-2 code for the source language',
-      verbose_name='Source language',
+      verbose_name='source language',
       max_length=10
     )
 
     target_language = models.CharField(
       help_text='ISO 639-2 code for the target language',
-      verbose_name='Target language',
+      verbose_name='target language',
       max_length=10
     )
 
     segment_id = models.IntegerField(
       help_text='Numeric segment ID, -1 denotes unknown ID',
-      verbose_name='Segment ID',
+      verbose_name='segment ID',
       default=-1
+    )
+
+    metadata = models.ForeignKey(
+      MetaData,
+      help_text='Metadata related to this task',
+      verbose_name='metadata',
+      blank=True,
+      null=True
     )
 
     def __unicode__(self):
@@ -107,24 +176,29 @@ class AbsoluteScoringData(models.Model):
     task = models.ForeignKey(
       AbsoluteScoringTask,
       help_text='AbsoluteScoringTask instance this data relates to',
-      verbose_name='Related task'
+      verbose_name='related task'
     )
 
     user = models.ForeignKey(
       User,
       help_text='User instance this data relates to',
-      verbose_name='Related user'
+      verbose_name='related user'
     )
 
     score = models.IntegerField(
       help_text='Numeric score for the related task [0-100], -1 denotes unset',
-      verbose_name='Score',
+      verbose_name='score',
       default=-1
     )
 
+    is_check = models.BooleanField(
+      help_text='Denotes whether this is a consistency check result',
+      verbose_name='consistency check?'
+    )
+
     class Meta:
-        verbose_name='Absolute scoring data'
-        verbose_name_plural='Absolute scoring data'
+        verbose_name='absolute scoring data'
+        verbose_name_plural='absolute scoring data'
 
     def __unicode__(self):
         _unicode = u'<score user="{0}" task="{1}" value="{2}" />'.format(

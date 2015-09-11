@@ -1,10 +1,13 @@
+from datetime import datetime
 from random import shuffle
 from traceback import format_exc
 
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render
 
 from appraise.beta16.models import AbsoluteScoringTask, AbsoluteScoringData
+from appraise.beta16.models import MetaData
 from appraise.settings import COMMIT_TAG, STATIC_URL
 
 # Base context for all views.
@@ -44,11 +47,15 @@ def scoring_handler(request):
                 scoring_data.score = score
                 scoring_data.save()
 
+                scoring_data.metadata.completed = True
+                scoring_data.metadata.end_time = datetime.now()
+                scoring_data.metadata.save()
+
         except:
             print format_exc()
             pass
 
-    scoring_task_ids = AbsoluteScoringTask.objects.values_list('id', flat=True)
+    scoring_task_ids = list(AbsoluteScoringTask.objects.filter(metadata__isnull=True).values_list('id', flat=True))
     shuffle(scoring_task_ids)
 
     try:
@@ -58,6 +65,18 @@ def scoring_handler(request):
 
     if not current_task:
         return HttpResponse("No scoring task available yet...")
+
+    if current_task.metadata:
+        current_meta = current_task.metadata
+    else:
+        current_meta = MetaData()
+        current_meta.save()
+        current_meta.users.add(request.user)
+
+    current_meta.assigned = datetime.now()
+
+    current_task.metadata = current_meta
+    current_task.save()
 
     dictionary = {
       'action_url': request.path,

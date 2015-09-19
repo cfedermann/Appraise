@@ -55,8 +55,24 @@ def scoring_handler(request):
             print format_exc()
             pass
 
-    scoring_task_ids = list(AbsoluteScoringTask.objects.filter(metadata__isnull=True).values_list('id', flat=True))
-    shuffle(scoring_task_ids)
+    # Check if there are one or more orphaned MetaData records for this user.
+    # If so, these should be annotated first to make sure we get results :)
+    try:
+        incomplete_metadata = request.user.metadata_set.filter(completed=False)
+        latest_unfinished_metadata = list(incomplete_metadata)[0]
+    except:
+        latest_unfinished_metadata = None
+
+    # Otherwise, get a random, unassigned AbsoluteScoringTask for annotation.
+    if not latest_unfinished_metadata:
+        open_tasks = AbsoluteScoringTask.objects.filter(metadata__isnull=True)
+        scoring_task_ids = list(open_tasks.values_list('id', flat=True))
+        shuffle(scoring_task_ids)
+
+    # We have an orphaned MetaData record, so we process the respetive task.
+    else:
+        related_task = latest_unfinished_metadata.absolutescoringtask_set.get()
+        scoring_task_ids = [related_task.id]
 
     try:
         current_task = AbsoluteScoringTask.objects.get(id=scoring_task_ids[0])

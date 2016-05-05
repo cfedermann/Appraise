@@ -133,6 +133,7 @@ def password_change(request, template_name):
               'message': 'You provided two non-matching values for your new password so your password has not been changed!',
             }
             context.update(BASE_CONTEXT)
+            
             return render(request, 'frontpage.html', context)
         
     

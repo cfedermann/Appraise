@@ -28,6 +28,7 @@ LOGGER.addHandler(LOG_HANDLER)
 
 
 LANGUAGE_PAIR_CHOICES = (
+  # News task languages
   ('eng2ces', 'English → Czech'),
   ('eng2deu', 'English → German'),
   ('eng2fin', 'English → Finnish'),
@@ -40,6 +41,12 @@ LANGUAGE_PAIR_CHOICES = (
   ('rom2eng', 'Romanian → English'),
   ('rus2eng', 'Russian → English'),
   ('trk2eng', 'Turkish → English'),
+  # IT task languages
+  ('eng2bul', 'English → Bulgarian'),
+  ('eng2esn', 'English → Spanish'),
+  ('eng2baq', 'English → Basque'),
+  ('eng2nld', 'English → Dutch'),
+  ('eng2ptb', 'English → Portguese'),
 )
 
 

@@ -6,7 +6,7 @@ Project: Appraise evaluation system
 
 usage: compute_ranking_clusters.py
 
-Computes ranking clusters for all language pairs and wmt16 and MTurk data.
+Computes ranking clusters for all WMT16 language pairss.
 
 """
 import os

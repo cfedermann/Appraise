@@ -6,7 +6,7 @@ Project: Appraise evaluation system
 
 usage: export_wmt16_results.py
 
-Exports wmt16 results for all language pairs, in CSV WMT format.
+Exports WMT16 results for all language pairs, in CSV WMT format.
 
 """
 from datetime import datetime

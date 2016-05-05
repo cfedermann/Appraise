@@ -101,7 +101,7 @@ if __name__ == "__main__":
             
                 else:
                     # Use get_or_create() to avoid exact duplicates.  We do allow
-                    # them for wmt16 to measure intra-annotator agreement...
+                    # them for WMT16 to measure intra-annotator agreement...
                     h = HIT(block_id=block_id, hit_xml=_hit_xml,
                       language_pair=language_pair, mturk_only=args.mturk_only)
                     h.save()

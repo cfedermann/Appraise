@@ -8,7 +8,7 @@ usage: python repair_wmt16_xml.py
                [-h] [--dry-run]
                hits-file
 
-Checks and repairs a given XML file containing HITs for wmt16. Uses
+Checks and repairs a given XML file containing HITs for WMT16. Uses
 appraise.wmt16.validators.validate_hits_xml_file() for validation.
 
 positional arguments:
@@ -31,7 +31,7 @@ import sys
 from xml.etree.ElementTree import fromstring, tostring
 
 PARSER = argparse.ArgumentParser(description="Checks and repairs a given " \
-  "XML file containing HITs for wmt16. Uses\nappraise.wmt16.validators." \
+  "XML file containing HITs for WMT16. Uses\nappraise.wmt16.validators." \
   "validate_hits_xml_file() for validation.")
 PARSER.add_argument("hits_file", metavar="hits-file", help="XML file " \
   "containing HITs.")

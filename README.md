@@ -1,6 +1,10 @@
 <h1 id="appraise_evaluation_system">Appraise Evaluation System</h1>
 
-<p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt15/">Tenth Workshop on Statistical Machine Translation 2015</a>. It has also been used for WMT 2014 and 2013. Second major release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software appeared in summer 2008...</p>
+<p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt16/">ACL 2016 First Conference on Machine Translation (WMT16)</a>. It has also been used for WMT 2015, 2014 and 2013. Second major release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software appeared in summer 2008...</p>
+
+<h2 id="wmt15">WMT16</h2>
+
+<p>We are currently finishing preparations for WMT16 &mdash; Evaluation campaign at <a href="http://www.appraise.cf/">http://appraise.cf/</a>. Stay tuned for official kick off.</p>
 
 <h2 id="wmt15">WMT15</h2>
 

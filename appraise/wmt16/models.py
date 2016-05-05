@@ -31,11 +31,13 @@ LANGUAGE_PAIR_CHOICES = (
   ('eng2ces', 'English → Czech'),
   ('eng2deu', 'English → German'),
   ('eng2fin', 'English → Finnish'),
+  ('eng2rom', 'English → Romanian'),
   ('eng2rus', 'English → Russian'),
   ('eng2trk', 'English → Turkish'),
   ('ces2eng', 'Czech → English'),
   ('deu2eng', 'German → English'),
   ('fin2eng', 'Finnish → English'),
+  ('rom2eng', 'Romanian → English'),
   ('rus2eng', 'Russian → English'),
   ('trk2eng', 'Turkish → English'),
 )

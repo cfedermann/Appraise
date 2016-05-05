@@ -129,9 +129,10 @@ def password_change(request, template_name):
         password1 = request.POST.get('password1', None)
         password2 = request.POST.get('password2', None)
         if password1 != password2:
-            context.update({
+            context = {
               'message': 'You provided two non-matching values for your new password so your password has not been changed!',
-            })
+            }
+            context.update(BASE_CONTEXT)
             return render(request, 'frontpage.html', context)
         
     

@@ -7,9 +7,9 @@ Project: Appraise evaluation system
 import argparse
 
 PARSER = argparse.ArgumentParser(description="Extracts segment IDs from a " \
-  "given CSV file in WMT15 format.")
+  "given CSV file in wmt16 format.")
 PARSER.add_argument("csv_file", metavar="csv-file", help="CSV file(s) " \
-  "containing WMT15 results.  Can be multiple files using patterns such as " \
+  "containing wmt16 results.  Can be multiple files using patterns such as " \
   " '*.xml' or similar.", nargs='+')
 PARSER.add_argument("output", type=str, help="output file")
 

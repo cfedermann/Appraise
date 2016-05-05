@@ -1,0 +1,7 @@
+<p>
+<span class="label label-success">Best</span> &larr;
+{% for translation in translations %}
+<span class="label label-warning" onclick="$(this).children('input').attr('checked', 'checked');">Rank {{forloop.counter}} <input type="radio" name="rank_{{rank_id}}" value="{{forloop.counter}}" style="vertical-align:baseline;" /></span>
+{% endfor %}
+&rarr; <span class="label label-danger">Worst</span>
+</p>

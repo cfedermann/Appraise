@@ -4,12 +4,12 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: python repair_wmt14_xml.py
+usage: python repair_wmt16_xml.py
                [-h] [--dry-run]
                hits-file
 
-Checks and repairs a given XML file containing HITs for WMT14. Uses
-appraise.wmt14.validators.validate_hits_xml_file() for validation.
+Checks and repairs a given XML file containing HITs for wmt16. Uses
+appraise.wmt16.validators.validate_hits_xml_file() for validation.
 
 positional arguments:
   hits-file             XML file(s) containing HITs. Can be multiple files
@@ -31,7 +31,7 @@ import sys
 from xml.etree.ElementTree import fromstring, tostring
 
 PARSER = argparse.ArgumentParser(description="Checks and repairs a given " \
-  "XML file containing HITs for WMT14. Uses\nappraise.wmt14.validators." \
+  "XML file containing HITs for wmt16. Uses\nappraise.wmt16.validators." \
   "validate_hits_xml_file() for validation.")
 PARSER.add_argument("hits_file", metavar="hits-file", help="XML file " \
   "containing HITs.")
@@ -68,7 +68,7 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt14.validators import validate_hits_xml_file
+    from appraise.wmt16.validators import validate_hits_xml_file
 
     with open(args.hits_file) as infile:
         hits_xml_string = unicode(infile.read(), "utf-8")

@@ -20,7 +20,7 @@ LOGGER.addHandler(LOG_HANDLER)
 BASE_CONTEXT = {
   'commit_tag': COMMIT_TAG,
   'title': 'Appraise evaluation system',
-  'installed_apps': ['wmt15'],
+  'installed_apps': ['wmt16'],
   'static_url': STATIC_URL,
 }
 
@@ -140,7 +140,7 @@ def password_change(request, template_name):
     if request.user.is_superuser:
         admin_url = reverse('admin:index')
     
-    post_change_redirect = reverse('appraise.wmt15.views.overview')
+    post_change_redirect = reverse('appraise.wmt16.views.overview')
     context = {
       'admin_url': admin_url,
     }

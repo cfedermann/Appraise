@@ -4,12 +4,12 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: python import_wmt15_xml.py
+usage: python import_wmt16_xml.py
                [-h] [--wait SLEEP_SECONDS] [--dry-run] [--mturk-only]
                hits-file [hits-file ...]
 
 Imports HITs from a given XML file into the Django database. Uses
-appraise.wmt15.validators.validate_hits_xml_file() for validation.
+appraise.wmt16.validators.validate_hits_xml_file() for validation.
 
 positional arguments:
   hits-file             XML file(s) containing HITs. Can be multiple files
@@ -30,7 +30,7 @@ import sys
 from xml.etree.ElementTree import fromstring, tostring
 
 PARSER = argparse.ArgumentParser(description="Imports HITs from a given " \
-  "XML file into the Django database.\nUses appraise.wmt15.validators." \
+  "XML file into the Django database.\nUses appraise.wmt16.validators." \
   "validate_hits_xml_file() for validation.")
 PARSER.add_argument("hits_file", metavar="hits-file", help="XML file(s) " \
   "containing HITs.  Can be multiple files using patterns such as '*.xml' " \
@@ -52,8 +52,8 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt15.models import HIT
-    from appraise.wmt15.validators import validate_hits_xml_file
+    from appraise.wmt16.models import HIT
+    from appraise.wmt16.validators import validate_hits_xml_file
     
     # We might potentially be dealing with more than a single input file.
     first_run = True
@@ -101,7 +101,7 @@ if __name__ == "__main__":
             
                 else:
                     # Use get_or_create() to avoid exact duplicates.  We do allow
-                    # them for WMT15 to measure intra-annotator agreement...
+                    # them for wmt16 to measure intra-annotator agreement...
                     h = HIT(block_id=block_id, hit_xml=_hit_xml,
                       language_pair=language_pair, mturk_only=args.mturk_only)
                     h.save()

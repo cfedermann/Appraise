@@ -6,7 +6,7 @@ Project: Appraise evaluation system
 
 usage: compute_ranking_clusters.py
 
-Computes ranking clusters for all language pairs and WMT15 and MTurk data.
+Computes ranking clusters for all language pairs and wmt16 and MTurk data.
 
 """
 import os
@@ -20,5 +20,5 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt15.views import update_ranking
+    from appraise.wmt16.views import update_ranking
     update_ranking()

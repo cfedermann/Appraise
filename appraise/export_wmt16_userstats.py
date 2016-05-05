@@ -4,7 +4,7 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: export_wmt15_userstats.py
+usage: export_wmt16_userstats.py
 
 Exports user statistics for all users.  This lists:
 
@@ -28,12 +28,12 @@ if __name__ == "__main__":
     
     # We have just added appraise to the system path list, hence this works.
     from django.contrib.auth.models import User, Group
-    from appraise.wmt15.models import HIT
+    from appraise.wmt16.models import HIT
     
     # Compute user statistics for all users.
     user_stats = []
-    wmt15 = Group.objects.get(name='WMT15')
-    users = wmt15.user_set.all()
+    wmt16 = Group.objects.get(name='WMT16')
+    users = wmt16.user_set.all()
     
     for user in users:
         _user_stats = HIT.compute_status_for_user(user)
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         for _g in user.groups.all():
             if _g.name.startswith("eng2") \
               or _g.name.endswith("2eng") \
-              or _g.name == "WMT15":
+              or _g.name == "WMT16":
                 continue
             
             _group = _g.name

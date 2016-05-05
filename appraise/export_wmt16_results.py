@@ -4,9 +4,9 @@
 Project: Appraise evaluation system
  Author: Christian Federmann <cfedermann@gmail.com>
 
-usage: export_wmt15_results.py
+usage: export_wmt16_results.py
 
-Exports WMT15 results for all language pairs, in CSV WMT format.
+Exports wmt16 results for all language pairs, in CSV WMT format.
 
 """
 from datetime import datetime
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt15.models import RankingResult
+    from appraise.wmt16.models import RankingResult
     
     # Print out results in CSV WMT format.
     headers = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \

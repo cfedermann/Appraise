@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{% if tasks %}<wmt16-results>
+
+{% for task in tasks %}{{task}}
+{% endfor %}</wmt16-results>
+{% else %}<wmt16-results />
+{% endif %}

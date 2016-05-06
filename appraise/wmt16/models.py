@@ -883,14 +883,18 @@ def remove_user_from_hit(sender, instance, **kwargs):
     """
     Removes user from list of users who have completed corresponding HIT.
     """
-    hit = instance.item.hit
-    user = instance.user
+    try:
+        hit = instance.item.hit
+        user = instance.user
 
-    LOGGER.debug('Removing user "{0}" from HIT {1}'.format(user, hit))
-    hit.users.remove(user)
+        LOGGER.debug('Removing user "{0}" from HIT {1}'.format(user, hit))
+        hit.users.remove(user)
 
-    from appraise.wmt16.views import _compute_next_task_for_user
-    _compute_next_task_for_user(user, hit.language_pair)
+        from appraise.wmt16.views import _compute_next_task_for_user
+        _compute_next_task_for_user(user, hit.language_pair)
+    
+    except DoesNotExist:
+        pass
 
 
 # pylint: disable-msg=E1101

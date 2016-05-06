@@ -733,6 +733,10 @@ class RankingResult(models.Model):
         # several times when multi-systems trigger multiple results...
         base_values = values
 
+        # Don't fail for skipped items
+        if not self.results:
+            self.results = [-1 * len(_systems)]
+
         _system_names = []
         _system_ranks = []
         for _result_index, _system in enumerate(_systems):

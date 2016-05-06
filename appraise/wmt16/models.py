@@ -13,6 +13,7 @@ from django.dispatch import receiver
 
 from django.contrib.auth.models import User, Group
 from django.core.urlresolvers import reverse
+from django.core.validators import RegexValidator
 from django.db import models
 from django.template import Context
 from django.template.loader import get_template
@@ -909,3 +910,41 @@ class UserInviteToken(models.Model):
             new_token = uuid.uuid4().hex[:8]
 
         return new_token
+
+
+class Project(models.Model):
+    """
+    Defines object model for an annotation project
+    """
+    # Project names are string-based and should match regex [a-zA-Z0-9\-]{1,100}
+    name = models.CharField(
+      blank=False,
+      db_index=True,
+      max_length=100,
+      null=False,
+      unique=True,
+      validators=[RegexValidator(regex=r'[a-zA-Z0-9\-]{1,100}')],
+    )
+    
+    # Users working on this project
+    users = models.ManyToManyField(
+      User,
+      blank=True,
+      db_index=True,
+      null=True,
+    )
+
+    def __str__(self):
+        return '<project id="{0}" name="{1}" users="{2}" />'.format(self.id, self.name, self.users.count())
+
+
+def initialize_database():
+    """
+    Initializes database with required language code and WMT16 groups
+    """
+    language_pair_codes = set(x[0] for x in LANGUAGE_PAIR_CHOICES)
+    for language_pair_code in language_pair_codes:
+        LOGGER.debug("Validating group '{0}'".format(language_pair_code))
+        _ = Group.objects.get_or_create(name=language_pair_code)
+    LOGGER.debug("Validating group 'WMT16'")
+    _ = Group.objects.get_or_create(name='WMT16')

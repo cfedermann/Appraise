@@ -22,7 +22,8 @@ from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt16.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
-  HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken
+  HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken, Project, \
+  initialize_database
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH, STATIC_URL
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
@@ -43,6 +44,9 @@ BASE_CONTEXT = {
 # access and avoid lengthy delays caused by computation of this data.
 STATUS_CACHE = {}
 RANKINGS_CACHE = {}
+
+# Initalized database
+initialize_database()
 
 
 def _compute_next_task_for_user(user, language_pair):
@@ -504,7 +508,7 @@ def overview(request):
     """
     Renders the evaluation tasks overview.
     """
-    LOGGER.info('Rendering wmt16 HIT overview for user "{0}".'.format(
+    LOGGER.info('Rendering WMT16 HIT overview for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
     # Re-initialise random number generator.
@@ -542,7 +546,7 @@ def overview(request):
     
     group = None
     for _group in request.user.groups.all():
-        if _group.name == 'wmt16' \
+        if _group.name == 'WMT16' \
           or _group.name.startswith('eng2') \
           or _group.name.endswith('2eng'):
             continue
@@ -576,7 +580,7 @@ def overview(request):
       'group_name': group_name,
       'group_status': group_status,
       'admin_url': admin_url,
-      'title': 'wmt16 Dashboard',
+      'title': 'WMT16 Dashboard',
     }
     dictionary.update(BASE_CONTEXT)
     
@@ -590,7 +594,7 @@ def status(request):
     """
     Renders the status overview.
     """
-    LOGGER.info('Rendering wmt16 HIT status for user "{0}".'.format(
+    LOGGER.info('Rendering WMT16 HIT status for user "{0}".'.format(
       request.user.username or "Anonymous"))
     
     if not STATUS_CACHE.has_key('global_stats'):
@@ -617,19 +621,19 @@ def status(request):
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
       'clusters': RANKINGS_CACHE.get('clusters', []),
-      'title': 'wmt16 Status',
+      'title': 'WMT16 Status',
       'admin_url': admin_url,
     }
     dictionary.update(BASE_CONTEXT)
     
-    return render(request, 'wmt16/status.html', dictionary)
+    return render(request, 'WMT16/status.html', dictionary)
 
 
 def update_ranking(request=None):
     """
     Updates the in-memory RANKINGS_CACHE dictionary.
     
-    In order to get things up and running quickly, for wmt16 we will fall back
+    In order to get things up and running quickly, for WMT16 we will fall back
     to calling an external Perl script provided by Philipp Koehn;  after the
     evaluation has ended, we will re-work this into a fully integrated, Python
     based solution...
@@ -675,11 +679,11 @@ def update_status(request=None, key=None):
 
 def _compute_global_stats():
     """
-    Computes some global statistics for the wmt16 evaluation campaign.
+    Computes some global statistics for the WMT16 evaluation campaign.
     """
     global_stats = []
     
-    wmt16_group = Group.objects.filter(name='wmt16')
+    wmt16_group = Group.objects.filter(name='WMT16')
     wmt16_users = []
     if wmt16_group.exists():
         wmt16_users = wmt16_group[0].user_set.all()
@@ -715,7 +719,7 @@ def _compute_global_stats():
     groups = set()
     for user in wmt16_users:
         for group in user.groups.all():
-            if group.name == 'wmt16' or group.name.startswith('eng2') \
+            if group.name == 'WMT16' or group.name.startswith('eng2') \
               or group.name.endswith('2eng'):
                 continue
             
@@ -780,11 +784,11 @@ def _compute_language_pair_stats():
 
 def _compute_group_stats():
     """
-    Computes group statistics for the wmt16 evaluation campaign.
+    Computes group statistics for the WMT16 evaluation campaign.
     """
     group_stats = []
     
-    wmt16_group = Group.objects.filter(name='wmt16')
+    wmt16_group = Group.objects.filter(name='WMT16')
     wmt16_users = []
     if wmt16_group.exists():
         wmt16_users = wmt16_group[0].user_set.all()
@@ -793,7 +797,7 @@ def _compute_group_stats():
     groups = set()
     for user in wmt16_users:
         for group in user.groups.all():
-            if group.name == 'wmt16' or group.name.startswith('eng2') \
+            if group.name == 'WMT16' or group.name.startswith('eng2') \
               or group.name.endswith('2eng'):
                 continue
             
@@ -805,7 +809,7 @@ def _compute_group_stats():
     # MINIMAL: move to local_settings.py?
     #
     # The following dictionary defines the number of HITs each group should
-    # have completed during the wmt16 evaluation campaign.
+    # have completed during the WMT16 evaluation campaign.
     group_hit_requirements = {
       # volunteers
       'MSR': 0,
@@ -867,11 +871,11 @@ def _compute_group_stats():
 
 def _compute_user_stats():
     """
-    Computes user statistics for the wmt16 evaluation campaign.
+    Computes user statistics for the WMT16 evaluation campaign.
     """
     user_stats = []
     
-    wmt16_group = Group.objects.filter(name='wmt16')
+    wmt16_group = Group.objects.filter(name='WMT16')
     wmt16_users = []
     if wmt16_group.exists():
         wmt16_users = wmt16_group[0].user_set.all()
@@ -911,7 +915,7 @@ def _compute_ranking_clusters(load_file=False):
           'system3Id,system4Number,system4Id,system5Number,system5Id,' \
           'system1rank,system2rank,system3rank,system4rank,system5rank']
         
-        # Compute current dump of wmt16 results in CSV format. We ignore any
+        # Compute current dump of WMT16 results in CSV format. We ignore any
         # results which are incomplete, i.e. have been SKIPPED.
         for result in RankingResult.objects.filter(item__hit__completed=True,
           item__hit__mturk_only=False):
@@ -969,7 +973,7 @@ def signup(request):
     """
     Renders the signup view.
     """
-    LOGGER.info('Rendering wmt16 signup view.')
+    LOGGER.info('Rendering WMT16 signup view.')
     errors = None
     username = None
     email = None
@@ -1013,8 +1017,8 @@ def signup(request):
                         if eng2xyz.exists():
                             eval_groups.extend(eng2xyz)
 
-                # Also, add user to wmt16 group.
-                wmt16_group = Group.objects.filter(name='wmt16')
+                # Also, add user to WMT16 group.
+                wmt16_group = Group.objects.filter(name='WMT16')
                 if wmt16_group.exists():
                     eval_groups.append(wmt16_group[0])
 
@@ -1025,17 +1029,15 @@ def signup(request):
                 user = User.objects.create_user(username, email, password)
                 
                 # Update group settings for the new user account.
-                user.groups.add(invite.group)
+                invite.group.user_set.add(user)
                 for eval_group in eval_groups:
-                    user.groups.add(eval_group)
-                
-                user.save()
+                    eval_group.user_set.add(user)
                 
                 # Disable invite token.
                 invite.active = False
                 invite.save()
                 
-                # Login user and redirect to wmt16 overview page.
+                # Login user and redirect to WMT16 overview page.
                 user = authenticate(username=username, password=password)
                 login(request, user)
                 return redirect('appraise.wmt16.views.overview')
@@ -1089,8 +1091,103 @@ def signup(request):
       'email': email,
       'token': token,
       'languages': languages,
-      'title': 'wmt16 Sign up',
+      'title': 'WMT16 Sign up',
     }
     context.update(BASE_CONTEXT)
     
     return render(request, 'wmt16/signup.html', context)
+
+@login_required
+def profile_update(request):
+    """
+    Renders the profile update view.
+    """
+    LOGGER.info('Rendering WMT16 profile update view.')
+    errors = None
+    project_choices = Project.objects.all().values_list('name', flat=True).order_by('id')
+    project_status = set()
+    languages = set()
+        
+    focus_input = 'id_projects'
+    
+    if request.method == "POST":
+        projects = request.POST.getlist('projects', None)
+        languages = request.POST.getlist('languages', None)
+        
+        LOGGER.debug(projects)
+        LOGGER.debug(languages)
+        
+        if projects and languages:
+            try:
+                # Update set of projects for this user.
+                for project_name in projects:
+                    project_instance = Project.objects.filter(name=project_name)
+                    if project_instance.exists():
+                        project_instance[0].users.add(request.user)
+                
+                # Compute set of evaluation languages for this user.
+                target_language_codes = set([x[0][3:] for x in LANGUAGE_PAIR_CHOICES])
+                LOGGER.debug('Language codes: {0}'.format(target_language_codes))
+                eval_groups = []
+                for eval_language in target_language_codes:
+                    if eval_language in languages:
+                        eng2xyz = Group.objects.filter(name__endswith=eval_language)
+                        if eng2xyz.exists():
+                            eval_groups.extend(eng2xyz)
+
+                # Also, add user to WMT16 group.
+                wmt16_group = Group.objects.filter(name='WMT16')
+                if wmt16_group.exists():
+                    eval_groups.append(wmt16_group[0])
+
+                LOGGER.debug('Evaluation languages: {0}'.format(eval_groups))
+                
+                # Update group settings for the new user account.
+                for eval_group in eval_groups:
+                    eval_group.user_set.add(request.user)
+                
+                # Redirect to WMT16 overview page.
+                return redirect('appraise.wmt16.views.overview')
+            
+            # For any other exception, clean up and ask user to retry.
+            except:
+                from traceback import format_exc
+                LOGGER.debug(format_exc())
+                
+                project_choices = Project.objects.all().values_list('name', flat=True).order_by('id')
+                project_status = set()
+                languages = set()
+        
+        # Detect which input should get focus for next page rendering.
+        if not projects:
+            focus_input = 'id_projects'
+            errors = ['invalid_projects']
+        elif not languages:
+            focus_input = 'id_languages'
+            errors = ['invalid_languages']
+    
+    # Determine user annotation projects
+    for project in Project.objects.all():
+        if request.user in project.users.all():
+            project_status.add(project.name)
+    
+    # Determine user target languages
+    for group in request.user.groups.all():
+        if 'eng2' in group.name or '2eng' in group.name:
+            languages.add(group.name[3:])
+    
+    LOGGER.debug("BLITZ")
+    LOGGER.debug(project_status)
+    
+    context = {
+      'active_page': "OVERVIEW",
+      'errors': errors,
+      'focus_input': focus_input,
+      'project_choices': project_choices,
+      'project_status': project_status,
+      'languages': languages,
+      'title': 'WMT16 profile update',
+    }
+    context.update(BASE_CONTEXT)
+    
+    return render(request, 'wmt16/profile_update.html', context)

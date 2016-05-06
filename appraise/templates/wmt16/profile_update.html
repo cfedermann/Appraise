@@ -1,0 +1,87 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+  {% if errors %}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    {% if 'invalid_projects' in errors %}
+    <p><strong>Warning!</strong> Invalid or missing project selection. Please choose at least one annotation project for evaluation.</p>
+    {% elif 'invalid_languages' in errors %}
+    <p><strong>Warning!</strong> Invalid or missing language selection. Please choose at least one target language for evaluation.</p>
+    {% else %}
+    <p><strong>Warning!</strong> Something bad happened. Please try again.</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="page-header">
+    <h1>User profile for WMT16</h1>
+    <p>Please select your annotation projects and tell us which target languages you can evaluate.</p>
+    
+    <div class="panel panel-primary" style="margin-top: 20px;">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>Note</strong></h3>
+      </div>
+      <div class="panel-body">
+        <p><strong>Note:</strong> you can select your annotation projects and define the target languages you want to evaluate for. You can change these settings at any time.</p>
+      </div>
+    </div>
+  </div>
+  <form class="form-horizontal" method="post" action="{% url appraise.wmt16.views.profile_update %}">
+  {% csrf_token %}
+  
+      <div class="form-group">
+      <label for="id_projects" class="col-sm-4 control-label">Projects</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <select class="form-control" name="projects" id="id_projects" multiple="multiple">
+          {% for project in project_choices %}
+            <option {% if project in project_status %}selected="selected"{% endif %}value="{{project}}">{{project}}</option>
+          {% endfor%}
+          </select>
+        </div>
+        <span id="helpProjects" class="help-block">Which annotation projects will you work on?</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id_languages" class="col-sm-4 control-label">Languages</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <select class="form-control" name="languages" id="id_languages" multiple="multiple">
+            <option {% if '2baq' in languages %}selected="selected"{% endif %}value="2baq">Basque (Euskara)</option>
+            <option {% if '2bul' in languages %}selected="selected"{% endif %}value="2bul">Bulgarian (Български)</option>
+            <option {% if '2ces' in languages %}selected="selected"{% endif %}value="2ces">Czech (Čeština)</option>
+            <option {% if '2deu' in languages %}selected="selected"{% endif %}value="2deu">German (Deutsch)</option>
+            <option {% if '2eng' in languages %}selected="selected"{% endif %}value="2eng">English</option>
+            <option {% if '2fin' in languages %}selected="selected"{% endif %}value="2fin">Finnish (Suomi)</option>
+            <option {% if '2nld' in languages %}selected="selected"{% endif %}value="2nld">Dutch (Nederlands)</option>
+            <option {% if '2ptb' in languages %}selected="selected"{% endif %}value="2ptb">Portuguese (Português)</option>
+            <option {% if '2rom' in languages %}selected="selected"{% endif %}value="2rom">Romanian (Română)</option>
+            <option {% if '2rus' in languages %}selected="selected"{% endif %}value="2rus">Russian (Русский)</option>
+            <option {% if '2esn' in languages %}selected="selected"{% endif %}value="2esn">Spanish (Español)</option>
+            <option {% if '2trk' in languages %}selected="selected"{% endif %}value="2trk">Turkish (Türkçe)</option>
+          </select>
+        </div>
+        <span id="helpLanguages" class="help-block">Which target languages will you evaluate?</span>
+      </div>
+    </div>
+
+    <button type="submit" class="col-sm-offset-4 btn btn-primary">Update</button>
+
+  </form>
+{% endblock %}
+
+{% block actions %}
+    <script>
+  {% if focus_input %}
+      // Set focus to given input
+      $('#{{ focus_input }}').focus();
+  {% else %}
+      // by default, set focus on username input
+      $('#id_projects').focus();
+  {% endif %}
+    </script>
+{% endblock %}

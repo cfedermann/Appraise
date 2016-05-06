@@ -34,6 +34,7 @@ urlpatterns += patterns('appraise.wmt16.views',
   (r'^{0}wmt16/update-status/(?P<key>(global_stats|language_pair_stats|group_stats|user_stats|clusters))?/?$'.format(DEPLOYMENT_PREFIX), 'update_status'),
   (r'^{0}wmt16/update-ranking/$'.format(DEPLOYMENT_PREFIX), 'update_ranking'),
   (r'^{0}wmt16/signup/$'.format(DEPLOYMENT_PREFIX), 'signup'),
+  (r'^{0}wmt16/profile/$'.format(DEPLOYMENT_PREFIX), 'profile_update'),
 )
 
 if DEBUG:

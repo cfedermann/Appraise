@@ -59,6 +59,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ user.username }} <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">Account</li>
+                <li><a href="{% url appraise.wmt16.views.profile_update %}">Update profile</a></li>
                 <li><a href="{% url appraise.views.password_change %}">Change password</a></li>
                 <li><a href="{% url appraise.views.logout %}">Logout "{{user.username}}"</a></li>
 {% if admin_url and user.is_superuser %}

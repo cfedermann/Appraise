@@ -11,7 +11,7 @@ from django.template import Context
 from django.template.loader import get_template
 
 from appraise.wmt16.models import HIT, RankingTask, RankingResult, \
-  UserHITMapping, UserInviteToken
+  UserHITMapping, UserInviteToken, Project
 
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
 
@@ -219,3 +219,4 @@ admin.site.register(RankingTask)
 admin.site.register(RankingResult, RankingResultAdmin)
 admin.site.register(UserHITMapping, UserHITMappingAdmin)
 admin.site.register(UserInviteToken, UserInviteTokenAdmin)
+admin.site.register(Project)

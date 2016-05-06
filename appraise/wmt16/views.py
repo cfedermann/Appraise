@@ -626,7 +626,7 @@ def status(request):
     }
     dictionary.update(BASE_CONTEXT)
     
-    return render(request, 'WMT16/status.html', dictionary)
+    return render(request, 'wmt16/status.html', dictionary)
 
 
 def update_ranking(request=None):

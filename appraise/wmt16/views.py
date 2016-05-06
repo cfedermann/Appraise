@@ -370,7 +370,7 @@ def hit_handler(request, hit_id):
     if not hit.active:
         LOGGER.debug('Detected inactive User/HIT mapping {0}->{1}'.format(
           request.user, hit))
-        new_hit = _compute_next_task_for_user(request.user, hit.language_pair)
+        new_hit = _compute_next_task_for_user(request.user, hit.project, hit.language_pair)
         if new_hit:
             return redirect('appraise.wmt16.views.hit_handler',
               hit_id=new_hit.hit_id)
@@ -541,7 +541,7 @@ def overview(request):
     language_pairs = request.user.groups.filter(name__in=language_codes)
     
     # Collect available annotation projects for the current user.
-    annotation_projects = request.user.project_set.values_list()
+    annotation_projects = request.user.project_set.all()
     
     hit_data = []
     total = [0, 0, 0]
@@ -1165,10 +1165,7 @@ def profile_update(request):
     for group in request.user.groups.all():
         if 'eng2' in group.name or '2eng' in group.name:
             languages.add(group.name[3:])
-    
-    LOGGER.debug("BLITZ")
-    LOGGER.debug(project_status)
-    
+        
     context = {
       'active_page': "OVERVIEW",
       'errors': errors,

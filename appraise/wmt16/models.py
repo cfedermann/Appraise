@@ -27,6 +27,8 @@ logging.basicConfig(level=LOG_LEVEL)
 LOGGER = logging.getLogger('appraise.wmt16.models')
 LOGGER.addHandler(LOG_HANDLER)
 
+# How many users can annotate a given HIT
+MAX_USERS_PER_HIT = 1
 
 LANGUAGE_PAIR_CHOICES = (
   # News task languages
@@ -220,10 +222,11 @@ class HIT(models.Model):
         return available
 
     @classmethod
-    def compute_status_for_user(cls, user, language_pair=None):
+    def compute_status_for_user(cls, user, project=None, language_pair=None):
         """
         Computes the HIT completion status for the given user.
 
+        If project is given, it constraints on the HITs' project.
         If language_pair is given, it constraints on the HITs' language pair.
 
         Returns a list containing:
@@ -234,6 +237,10 @@ class HIT(models.Model):
 
         """
         hits_qs = cls.objects.filter(users=user)
+        if project:
+            project_instance = Project.objects.filter(name=project)
+            if project_instance.exists():
+                hits_qs = hits_qs.filter(project=project_instance[0])
         if language_pair:
             hits_qs = hits_qs.filter(language_pair=language_pair)
 
@@ -256,13 +263,13 @@ class HIT(models.Model):
         return current_status
 
     @classmethod
-    def compute_status_for_group(cls, group, language_pair=None):
+    def compute_status_for_group(cls, group, project=None, language_pair=None):
         """
         Computes the HIT completion status for users of the given group.
         """
         combined = [0, 0, 0]
         for user in group.user_set.all():
-            _user_status = cls.compute_status_for_user(user, language_pair)
+            _user_status = cls.compute_status_for_user(user, project, language_pair)
             combined[0] = combined[0] + _user_status[0]
             combined[1] = combined[1] + _user_status[1]
             combined[2] = combined[2] + _user_status[2]
@@ -407,6 +414,40 @@ class HIT(models.Model):
             return None
 
         return (_alpha, _kappa, _pi, _S)
+
+
+class Project(models.Model):
+    """
+    Defines object model for an annotation project
+    """
+    # Project names are string-based and should match regex [a-zA-Z0-9\-]{1,100}
+    name = models.CharField(
+      blank=False,
+      db_index=True,
+      max_length=100,
+      null=False,
+      unique=True,
+      validators=[RegexValidator(regex=r'[a-zA-Z0-9\-]{1,100}')],
+    )
+    
+    # Users working on this project
+    users = models.ManyToManyField(
+      User,
+      blank=True,
+      db_index=True,
+      null=True,
+    )
+    
+    # HITs belonging to this project
+    HITs = models.ManyToManyField(
+      HIT,
+      blank=True,
+      db_index=True,
+      null=True,
+    )
+
+    def __str__(self):
+        return '<project id="{0}" name="{1}" users="{2}" HITs="{3}" />'.format(self.id, self.name, self.users.count(), self.HITs.count())
 
 
 class RankingTask(models.Model):
@@ -815,20 +856,20 @@ class RankingResult(models.Model):
 @receiver(models.signals.post_save, sender=RankingResult)
 def update_user_hit_mappings(sender, instance, created, **kwargs):
     """
-    Updates the User/HIT mappings.
+    Updates the User/Project/HIT mappings.
     """
     hit = instance.item.hit
     user = instance.user
     results = RankingResult.objects.filter(user=user, item__hit=hit)
 
     if len(results) > 2:
+        from appraise.wmt16.views import _compute_next_task_for_user
         LOGGER.debug('Deleting stale User/HIT mapping {0}->{1}'.format(
           user, hit))
         hit.users.add(user)
-        UserHITMapping.objects.filter(user=user, hit=hit).delete()
-
-        from appraise.wmt16.views import _compute_next_task_for_user
-        _compute_next_task_for_user(user, hit.language_pair)
+        for project in hit.project_set.all_values():
+            UserHITMapping.objects.filter(user=user, project=project, hit=hit).delete()
+            _compute_next_task_for_user(user, project, hit.language_pair)
 
 @receiver(models.signals.post_delete, sender=RankingResult)
 def remove_user_from_hit(sender, instance, **kwargs):
@@ -855,6 +896,11 @@ class UserHITMapping(models.Model):
       db_index=True
     )
 
+    project = models.ForeignKey(
+      Project,
+      db_index=True
+    )
+    
     hit = models.ForeignKey(
       HIT,
       db_index=True
@@ -864,15 +910,15 @@ class UserHITMapping(models.Model):
         """
         Metadata options for the UserHITMapping object model.
         """
-        verbose_name = "User/HIT mapping instance"
-        verbose_name_plural = "User/HIT mapping instances"
+        verbose_name = "User/Project/HIT mapping instance"
+        verbose_name_plural = "User/Project/HIT mapping instances"
 
     def __unicode__(self):
         """
         Returns a Unicode String for this UserHITMapping object.
         """
-        return u'<hitmap id="{0}" user="{1}" hit="{2}">'.format(self.id,
-          self.user.username, self.hit.hit_id)
+        return u'<hitmap id="{0}" user="{1}" project="{2}" hit="{3}">'.format(self.id,
+          self.user.username, self.project.name, self.hit.hit_id)
 
     # pylint: disable-msg=E1002
     def save(self, *args, **kwargs):
@@ -943,40 +989,6 @@ class UserInviteToken(models.Model):
             new_token = uuid.uuid4().hex[:8]
 
         return new_token
-
-
-class Project(models.Model):
-    """
-    Defines object model for an annotation project
-    """
-    # Project names are string-based and should match regex [a-zA-Z0-9\-]{1,100}
-    name = models.CharField(
-      blank=False,
-      db_index=True,
-      max_length=100,
-      null=False,
-      unique=True,
-      validators=[RegexValidator(regex=r'[a-zA-Z0-9\-]{1,100}')],
-    )
-    
-    # Users working on this project
-    users = models.ManyToManyField(
-      User,
-      blank=True,
-      db_index=True,
-      null=True,
-    )
-    
-    # HITs belonging to this project
-    HITs = models.ManyToManyField(
-      HIT,
-      blank=True,
-      db_index=True,
-      null=True,
-    )
-
-    def __str__(self):
-        return '<project id="{0}" name="{1}" users="{2}" HITs="{3}" />'.format(self.id, self.name, self.users.count(), self.HITs.count())
 
 
 def initialize_database():

@@ -37,6 +37,8 @@ PARSER.add_argument("hits_file", metavar="hits-file", help="XML file(s) " \
   "or similar.", nargs='+')
 PARSER.add_argument("--wait", action="store", default=5, dest="sleep_seconds",
   help="Amount of seconds to wait between individual files.", type=int)
+PARSER.add_argument("--project", action="store", dest="annotation_project",
+  help="Annotation project name.", type=str)
 PARSER.add_argument("--dry-run", action="store_true", default=False,
   dest="dry_run_enabled", help="Enable dry run to simulate import.")
 PARSER.add_argument("--mturk-only", action="store_true", default=False,
@@ -52,8 +54,14 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt16.models import HIT
+    from appraise.wmt16.models import HIT, Project
     from appraise.wmt16.validators import validate_hits_xml_file
+    
+    # Check if annotation project exists.
+    if not Project.objects.filter(name=args.annotation_project).exists():
+        print "Annotation project named '{0}' does not exist!".format(args.annotation_project)
+        sys.exit(-1)
+    project_instance = Project.objects.filter(name=args.annotation_project)[0]
     
     # We might potentially be dealing with more than a single input file.
     first_run = True
@@ -105,6 +113,9 @@ if __name__ == "__main__":
                     h = HIT(block_id=block_id, hit_xml=_hit_xml,
                       language_pair=language_pair, mturk_only=args.mturk_only)
                     h.save()
+                    
+                    # Add HIT instance to given project.
+                    project_instance.HITs.add(h)
         
             # pylint: disable-msg=W0703
             except Exception, msg:

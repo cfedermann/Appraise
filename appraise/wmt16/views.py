@@ -23,7 +23,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt16.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken, Project, \
-  GROUP_HIT_REQUIREMENTS, initialize_database
+  GROUP_HIT_REQUIREMENTS, MAX_USERS_PER_HIT, initialize_database
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH, STATIC_URL
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
@@ -61,9 +61,9 @@ def _get_active_users_for_group(group_to_check):
     return active_users
 
 
-def _compute_next_task_for_user(user, language_pair):
+def _compute_next_task_for_user(user, project, language_pair):
     """
-    Computes the next task for the given user and language pair combination.
+    Computes the next task for the given user, project and language pair combination.
 
     This may either be the HIT the given user is currently working on or a
     new HIT in case the user has completed all previous HITs already.
@@ -72,6 +72,13 @@ def _compute_next_task_for_user(user, language_pair):
     xxx and yyy are ISO-639-3 language codes.
 
     """
+    # Check if project is valid for the given user.
+    if not project in user.project_set.all():
+        LOGGER.debug('User {0} does not work on project {1}.'.format(
+          user, project
+        ))
+        return None
+    
     # Check if language_pair is valid for the given user.
     if not user.groups.filter(name=language_pair):
         LOGGER.debug('User {0} does not know language pair {1}.'.format(
@@ -80,7 +87,7 @@ def _compute_next_task_for_user(user, language_pair):
 
     # Check if there exists a current HIT for the given user.
     current_hitmap = UserHITMapping.objects.filter(user=user,
-      hit__language_pair=language_pair)
+      project=project, hit__language_pair=language_pair)
 
     # If there is no current HIT to continue with, find a random HIT for the
     # given user.  We keep generating a random block_id in [1, 1000] until we
@@ -91,8 +98,10 @@ def _compute_next_task_for_user(user, language_pair):
         
         # Compatible HIT instances need to match the given language pair!
         # Furthermore, they need to be active and not reserved for MTurk.
-        hits = HIT.objects.filter(language_pair=language_pair, active=True,
-          mturk_only=False, completed=False)
+        hits = HIT.objects.filter(active=True, mturk_only=False,
+          completed=False, project=project, language_pair=language_pair)
+        
+        LOGGER.debug("HITs = {0}".format(hits))
         
         # Compute list of compatible block ids and randomise its order.
         #
@@ -105,6 +114,7 @@ def _compute_next_task_for_user(user, language_pair):
         #   Converting to unique HIT ids will speed up things drastically.
         hit_ids = list(set(hits.values_list('hit_id', flat=True)))
         shuffle(hit_ids)
+        LOGGER.debug("HIT IDs = {0}".format(hit_ids))
         
         # Find the next HIT for the current user.
         random_hit = None
@@ -112,14 +122,14 @@ def _compute_next_task_for_user(user, language_pair):
             for hit in hits.filter(hit_id=hit_id):
                 hit_users = list(hit.users.all())
                 
-                # Check if this HIT is currently mapped to users.  This code
-                # prevents that more than three users complete a given HIT.
+                # Check if this HIT is mapped to users.  This code prevents
+                # that more than MAX_USERS_PER_HIT users complete a HIT.
                 for hitmap in UserHITMapping.objects.filter(hit=hit):
                     if not hitmap.user in hit_users:
                         hit_users.append(hitmap.user)
                 
                 if not user in hit_users:
-                    if len(hit_users) < 1:
+                    if len(hit_users) < MAX_USERS_PER_HIT:
                         random_hit = hit
                         break
             
@@ -135,7 +145,7 @@ def _compute_next_task_for_user(user, language_pair):
         
         # Update User/HIT mappings s.t. the system knows about the next HIT.
         current_hitmap = UserHITMapping.objects.create(user=user,
-          hit=random_hit)
+          project=project, hit=random_hit)
     
     # Otherwise, select first match from QuerySet.
     else:
@@ -150,7 +160,7 @@ def _compute_next_task_for_user(user, language_pair):
             LOGGER.debug('Detected stale User/HIT mapping {0}->{1}'.format(
               user, current_hitmap.hit))
             current_hitmap.delete()
-            return _compute_next_task_for_user(user, language_pair)
+            return _compute_next_task_for_user(user, project, language_pair)
     
     LOGGER.debug('User {0} currently working on HIT {1}'.format(user,
       current_hitmap.hit))
@@ -530,23 +540,28 @@ def overview(request):
     language_codes = set([x[0] for x in LANGUAGE_PAIR_CHOICES])
     language_pairs = request.user.groups.filter(name__in=language_codes)
     
+    # Collect available annotation projects for the current user.
+    annotation_projects = request.user.project_set.values_list()
+    
     hit_data = []
     total = [0, 0, 0]
+
     for language_pair in language_pairs:
-        hit = _compute_next_task_for_user(request.user, language_pair)
-        user_status = HIT.compute_status_for_user(request.user, language_pair)
-        for i in range(3):
-            total[i] = total[i] + user_status[i]
+        for annotation_project in annotation_projects:
+            hit = _compute_next_task_for_user(request.user, annotation_project, language_pair)
+            user_status = HIT.compute_status_for_user(request.user, language_pair)
+            for i in range(3):
+                total[i] = total[i] + user_status[i]
         
-        if hit:
-            # Convert status seconds back into datetime.time instances.
-            for i in range(2):
-                user_status[i+1] = seconds_to_timedelta(int(user_status[i+1]))
+            if hit:
+                # Convert status seconds back into datetime.time instances.
+                for i in range(2):
+                    user_status[i+1] = seconds_to_timedelta(int(user_status[i+1]))
             
-            hit_data.append(
-              (hit.get_language_pair_display(), hit.get_absolute_url(),
-               hit.hit_id, user_status)
-            )
+                hit_data.append(
+                  (hit.get_language_pair_display(), hit.get_absolute_url(),
+                   hit.hit_id, user_status, annotation_project)
+                )
     
     # Convert total seconds back into datetime.timedelta instances.
     total[1] = seconds_to_timedelta(int(total[2]) / float(int(total[0]) or 1))

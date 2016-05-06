@@ -897,7 +897,7 @@ def remove_user_from_hit(sender, instance, **kwargs):
         hit.users.remove(user)
 
         from appraise.wmt16.views import _compute_next_task_for_user
-        _compute_next_task_for_user(user, hit.language_pair)
+        _compute_next_task_for_user(user, hit.project, hit.language_pair)
     
     except (HIT.DoesNotExist, RankingTask.DoesNotExist):
         pass

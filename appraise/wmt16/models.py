@@ -387,9 +387,11 @@ class HIT(models.Model):
         """
         Computes alpha, kappa, pi and Bennett's S agreement scores using NLTK.
         """
-        _raw = self.export_to_apf().split('\n')
-        if not len(_raw):
+        _raw = self.export_to_apf()
+        if not _raw:
             return None
+        else:
+            _raw = _raw.split('\n')
 
         # Convert raw results data into data triples and create a new
         # AnnotationTask object for computation of agreement scores.
@@ -897,7 +899,7 @@ def remove_user_from_hit(sender, instance, **kwargs):
         from appraise.wmt16.views import _compute_next_task_for_user
         _compute_next_task_for_user(user, hit.language_pair)
     
-    except HIT.DoesNotExist:
+    except (HIT.DoesNotExist, RankingTask.DoesNotExist):
         pass
 
 

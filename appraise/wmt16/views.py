@@ -684,9 +684,12 @@ def _compute_global_stats():
     global_stats = []
     
     wmt16_group = Group.objects.filter(name='WMT16')
+    
+    # Determine all users active in the last 90 days.
+    ninetydaysago = datetime.now() - timedelta(days=90)
     wmt16_users = []
     if wmt16_group.exists():
-        wmt16_users = wmt16_group[0].user_set.all()
+        wmt16_users = wmt16_group[0].user_set.filter(last_login__gt=ninetydaysago)
       
     # Check how many HITs have been completed.  We now consider a HIT to be
     # completed once it has been annotated by one or more annotators.

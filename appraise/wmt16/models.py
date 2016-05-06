@@ -50,6 +50,39 @@ LANGUAGE_PAIR_CHOICES = (
   ('eng2ptb', 'English → Portguese'),
 )
 
+GROUP_HIT_REQUIREMENTS = {
+  # volunteers
+  'MSR': 0,
+  'MTMA': 0,
+
+  # participants
+  'Aalto': 100,
+  'Abu-Matran': 300,
+  'AFRL-MITLL': 400,
+  'AMU-UEDIN': 200,
+  'CMU': 100,
+  'CUNI': 500,
+  'JHU': 1600,
+  'KIT': 300,
+  'KIT-LIMSI': 100,
+  'LIMSI': 300,
+  'LMU-CUNI': 100,
+  'METAMIND': 100,
+  'TBTK': 200,
+  'Cambridge': 100,
+  'NRC': 100,
+  'NYU-Umontreal': 400,
+  'PJATK': 200,
+  'PROMT': 500,
+  'QT21': 100,
+  'RWTH': 100,
+  'UEdin': 1900,
+  'UH': 400,
+  'USFD': 100,
+  'UUT': 100,
+  'YSDA': 200,
+}
+
 
 # pylint: disable-msg=E1101
 class HIT(models.Model):
@@ -950,6 +983,10 @@ def initialize_database():
     """
     Initializes database with required language code and WMT16 groups
     """
+    researcher_group_names = set(GROUP_HIT_REQUIREMENTS.keys())
+    for researcher_group_name in researcher_group_names:
+        LOGGER.debug("Validating researcher group '{0}'".format(researcher_group_name))
+        _ = Group.objects.get_or_create(name=researcher_group_name)
     language_pair_codes = set(x[0] for x in LANGUAGE_PAIR_CHOICES)
     for language_pair_code in language_pair_codes:
         LOGGER.debug("Validating group '{0}'".format(language_pair_code))

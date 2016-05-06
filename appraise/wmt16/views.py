@@ -23,7 +23,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt16.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken, Project, \
-  initialize_database
+  GROUP_HIT_REQUIREMENTS, initialize_database
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH, STATIC_URL
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
@@ -818,46 +818,15 @@ def _compute_group_stats():
     #
     # The following dictionary defines the number of HITs each group should
     # have completed during the WMT16 evaluation campaign.
-    group_hit_requirements = {
-      # volunteers
-      'MSR': 0,
-      'MTMA': 0,
-      # participants, confirmed
-      'Aalto': 100,
-      'Abu-Matran': 300,
-      'AFRL-MITLL': 400,
-      'AMU-UEDIN': 200,
-      'CMU': 100,
-      'CUNI': 500,
-      'JHU': 1600,
-      'KIT': 300,
-      'KIT-LIMSI': 100,
-      'LIMSI': 300,
-      'LMU-CUNI': 100,
-      'METAMIND': 100,
-      'TBTK': 200,
-      'Cambridge': 100,
-      'NRC': 100,
-      'NYU-Umontreal': 400,
-      'PJATK': 200,
-      'PROMT': 500,
-      'QT21': 100,
-      'RWTH': 100,
-      'UEdin': 1900,
-      'UH': 400,
-      'USFD': 100,
-      'UUT': 100,
-      'YSDA': 200,
-    }
     
     for group in groups:
         _name = group.name
-        if not _name in group_hit_requirements.keys():
+        if not _name in GROUP_HIT_REQUIREMENTS.keys():
             continue
         
         _group_stats = HIT.compute_status_for_group(group)
         _total = _group_stats[0]
-        _required = group_hit_requirements[_name]
+        _required = GROUP_HIT_REQUIREMENTS[_name]
         _delta = _total - _required
         _data = (_total, _required, _delta)
         

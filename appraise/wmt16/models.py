@@ -696,7 +696,10 @@ class RankingResult(models.Model):
         iso639_3_to_name_mapping = {'ces': 'Czech', 'cze': 'Czech',
           'deu': 'German', 'ger': 'German', 'eng': 'English',
           'spa': 'Spanish', 'fra': 'French', 'fre': 'French',
-          'rus': 'Russian', 'fin': 'Finnish'}
+          'rus': 'Russian', 'fin': 'Finnish', 'rom': 'Romanian',
+          'ron': 'Romanian', 'trk': 'Turkish', 'tur': 'Turkish',
+          'eus': 'Basque', 'baq': 'Basque', 'bul': 'Bulgarian',
+          'nld': 'Dutch', 'ptb': 'Portguese',}
 
         _src_lang = hit.hit_attributes['source-language']
         _trg_lang = hit.hit_attributes['target-language']
@@ -735,7 +738,7 @@ class RankingResult(models.Model):
 
         # Don't fail for skipped items
         if not self.results:
-            self.results = [-1 * len(_systems)]
+            self.results = [-1] * len(_systems)
 
         _system_names = []
         _system_ranks = []

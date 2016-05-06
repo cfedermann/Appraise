@@ -933,9 +933,17 @@ class Project(models.Model):
       db_index=True,
       null=True,
     )
+    
+    # HITs belonging to this project
+    HITs = models.ManyToManyField(
+      HIT,
+      blank=True,
+      db_index=True,
+      null=True,
+    )
 
     def __str__(self):
-        return '<project id="{0}" name="{1}" users="{2}" />'.format(self.id, self.name, self.users.count())
+        return '<project id="{0}" name="{1}" users="{2}" HITs="{3}" />'.format(self.id, self.name, self.users.count(), self.HITs.count())
 
 
 def initialize_database():

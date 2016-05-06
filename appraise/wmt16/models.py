@@ -805,6 +805,9 @@ class RankingResult(models.Model):
         """
         Exports this RankingResult to Artstein and Poesio (2007) format.
         """
+        if not self.results:
+            return None
+        
         item = self.item
         hit = self.item.hit
 
@@ -883,9 +886,10 @@ def remove_user_from_hit(sender, instance, **kwargs):
     """
     Removes user from list of users who have completed corresponding HIT.
     """
+    user = instance.user
+
     try:
         hit = instance.item.hit
-        user = instance.user
 
         LOGGER.debug('Removing user "{0}" from HIT {1}'.format(user, hit))
         hit.users.remove(user)
@@ -893,7 +897,7 @@ def remove_user_from_hit(sender, instance, **kwargs):
         from appraise.wmt16.views import _compute_next_task_for_user
         _compute_next_task_for_user(user, hit.language_pair)
     
-    except DoesNotExist:
+    except HIT.DoesNotExist:
         pass
 
 

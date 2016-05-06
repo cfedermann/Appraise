@@ -867,7 +867,7 @@ def update_user_hit_mappings(sender, instance, created, **kwargs):
         LOGGER.debug('Deleting stale User/HIT mapping {0}->{1}'.format(
           user, hit))
         hit.users.add(user)
-        for project in hit.project_set.all_values():
+        for project in hit.project_set.all():
             UserHITMapping.objects.filter(user=user, project=project, hit=hit).delete()
             _compute_next_task_for_user(user, project, hit.language_pair)
 

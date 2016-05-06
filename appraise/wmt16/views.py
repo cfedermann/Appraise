@@ -49,6 +49,18 @@ RANKINGS_CACHE = {}
 initialize_database()
 
 
+    
+def _get_active_users_for_group(group_to_check):
+    """
+    Determine all users in the given group who have been active in the last 90 days.
+    """
+    ninetydaysago = datetime.now() - timedelta(days=90)
+    active_users = []
+    if group_to_check.exists():
+        active_users = group_to_check[0].user_set.filter(last_login__gt=ninetydaysago)
+    return active_users
+
+
 def _compute_next_task_for_user(user, language_pair):
     """
     Computes the next task for the given user and language pair combination.
@@ -684,12 +696,7 @@ def _compute_global_stats():
     global_stats = []
     
     wmt16_group = Group.objects.filter(name='WMT16')
-    
-    # Determine all users active in the last 90 days.
-    ninetydaysago = datetime.now() - timedelta(days=90)
-    wmt16_users = []
-    if wmt16_group.exists():
-        wmt16_users = wmt16_group[0].user_set.filter(last_login__gt=ninetydaysago)
+    wmt16_users = _get_active_users_for_group(wmt16_group)
       
     # Check how many HITs have been completed.  We now consider a HIT to be
     # completed once it has been annotated by one or more annotators.
@@ -792,9 +799,7 @@ def _compute_group_stats():
     group_stats = []
     
     wmt16_group = Group.objects.filter(name='WMT16')
-    wmt16_users = []
-    if wmt16_group.exists():
-        wmt16_users = wmt16_group[0].user_set.all()
+    wmt16_users = _get_active_users_for_group(wmt16_group)
     
     # Aggregate information about participating groups.
     groups = set()
@@ -879,9 +884,7 @@ def _compute_user_stats():
     user_stats = []
     
     wmt16_group = Group.objects.filter(name='WMT16')
-    wmt16_users = []
-    if wmt16_group.exists():
-        wmt16_users = wmt16_group[0].user_set.all()
+    wmt16_users = _get_active_users_for_group(wmt16_group)
     
     for user in wmt16_users:
         _user_stats = HIT.compute_status_for_user(user)

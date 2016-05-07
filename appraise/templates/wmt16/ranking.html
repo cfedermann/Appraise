@@ -35,7 +35,7 @@ function validate_form()
 {% endblock %}
 
 {% block content %}
-
+<!--
 <div class="alert alert-info">
   <table style="width:100%">
   <tr>
@@ -51,6 +51,7 @@ function validate_form()
   </tr>
   </table>
 </div>
+//-->
 
 <div class="row">
 {% if reference_text.1 %}
@@ -84,19 +85,20 @@ function validate_form()
 <input name="order" type="hidden" value="{{order}}" />
 
 <span id="translations">
-{% for translation in translations %}
 <div class="row">
 <div class="col-sm-12">
 <blockquote>
+
+{% for translation in translations %}
 {% with forloop.counter0 as rank_id %}
 {% include 'wmt16/rank_selector.html' %}
 {% endwith %}
 <p><strong>{{translation.0}}</strong></p>
-<small>Translation {{forloop.counter}}</small>
+<!--<small>Translation {{forloop.counter}}</small>-->
+{% endfor %}
 </blockquote>
 </div>
 </div>
-{% endfor %}
 </span>
 
 <div class="actions">

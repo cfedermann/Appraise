@@ -41,14 +41,12 @@ PARSER.add_argument('-save', type=str, default=None, dest="saveDir", help='direc
 def cleanup_translation(input_str):
     """Cleans a translation for identity comparison.
     
-    Removes punctuation, superfluous whitespace and ignores case.
+    Removes superfluous whitespace and ignores case.
     
     """
     import re
-    punctuation = re.compile('[.,;:!?\'"\-«»<>&()\[\]]+', re.I)
     whitespace = re.compile('\s{2,}')
-    cleaned_str = punctuation.sub(' ', input_str)
-    cleaned_str = whitespace.sub(' ', cleaned_str)
+    cleaned_str = whitespace.sub(' ', input_str)
     return cleaned_str.lower()
 
 def random_from_range(range_max, num_draws, tuple_size = 3, sequential = True):

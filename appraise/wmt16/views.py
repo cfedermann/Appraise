@@ -549,7 +549,7 @@ def overview(request):
     for language_pair in language_pairs:
         for annotation_project in annotation_projects:
             hit = _compute_next_task_for_user(request.user, annotation_project, language_pair)
-            user_status = HIT.compute_status_for_user(request.user, language_pair)
+            user_status = HIT.compute_status_for_user(request.user, annotation_project, language_pair)
             for i in range(3):
                 total[i] = total[i] + user_status[i]
         

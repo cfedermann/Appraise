@@ -211,7 +211,7 @@ class HIT(models.Model):
         available = 0
         for hit in hits_qs:
             # Before we checked if `hit.users.count() < 3`.
-            if hit.users.count() < 1:
+            if hit.users.count() < MAX_USERS_PER_HIT:
                 available = available + 1
 
             # Set active HITs to completed if there exists at least one result.
@@ -238,9 +238,12 @@ class HIT(models.Model):
         """
         hits_qs = cls.objects.filter(users=user)
         if project:
-            project_instance = Project.objects.filter(name=project)
+            project_instance = Project.objects.filter(id=project.id)
             if project_instance.exists():
                 hits_qs = hits_qs.filter(project=project_instance[0])
+            else:
+                return [0, 0, 0]
+        
         if language_pair:
             hits_qs = hits_qs.filter(language_pair=language_pair)
 

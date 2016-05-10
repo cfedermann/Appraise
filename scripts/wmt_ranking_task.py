@@ -13,6 +13,7 @@ will have a control), and so on.
 
 import os
 import sys
+import glob
 import math
 import random
 import hashlib
@@ -23,7 +24,7 @@ PARSER = argparse.ArgumentParser(description="Build evaluation task input file."
 PARSER.add_argument("output", type=str, help="output file")
 PARSER.add_argument("source", type=file, help="source language file")
 PARSER.add_argument("reference", type=file, nargs="?", help="reference language file")
-PARSER.add_argument("system", metavar="system", nargs="*", type=file, help="parallel files to compare")
+PARSER.add_argument("system", metavar="system", type=str, help="parallel files to compare")
 PARSER.add_argument("-id", type=str, default="none", help="ID name to use for the system name")
 PARSER.add_argument("-source", type=str, default="spa", dest="sourceLang", help="the source language")
 PARSER.add_argument("-target", type=str, default="eng", dest="targetLang", help="the target language")
@@ -93,29 +94,30 @@ if __name__ == "__main__":
 
     source = []
     for line in args.source:
-        source.append(line.decode("utf8").strip())
+        source.append(line.decode("utf-8").strip())
     
     reference = []
     if args.reference:
         for line in args.reference:
-            reference.append(line.decode("utf8").strip())
-
+            reference.append(line.decode("utf-8").strip())
+    
     if len(reference) != len(source):
-        sys.stderr.write('* FATAL: reference length (%d) != source length (%d)\n' % (len(source), len(reference)))
+        sys.stderr.write('* FATAL: reference length (%d) != source length (%d)\n' % (len(reference), len(source)))
         sys.exit(1)
 
     systems = []
     system_names = []
     if len(args.system):
-        for i, system in enumerate(args.system):
+        for i, system in enumerate(glob.glob(args.system)):
             systems.append([])
-            system_name = os.path.basename(system.name)
+            system_name = os.path.basename(system)
             system_names.append(system_name)
-            for line in system:
-                systems[i].append(line.decode("utf8").strip())
-
+            with open(system, "r") as input:
+                for line in input:
+                    systems[i].append(line.decode("utf-8").strip())
+            
             if len(systems[i]) != len(source):
-                sys.stderr.write('* FATAL: system %s length (%d) != source length (%d)\n' % (system_name, len(source), len(reference)))
+                sys.stderr.write('* FATAL: system %s length (%d) != source length (%d)\n' % (system_name, len(systems[i]), len(source)))
                 sys.exit(1)
 
     system_hashes = [hashlib.sha1(x).hexdigest() for x in system_names]
@@ -141,8 +143,8 @@ if __name__ == "__main__":
             os.makedirs(args.saveDir)
         dump_system(args.source.name, source)
         dump_system(args.reference.name, reference)
-        for i,system in enumerate(args.system):
-            dump_system(system.name, systems[i])
+        for i, system in enumerate(glob.glob(args.system)):
+            dump_system(system, systems[i])
         dump_system('line_numbers', [x + 1 for x in eligible])
 
     random_blocks = random_from_range(len(eligible), args.numhits - args.redundancy, tuple_size = args.tasksperhit, sequential = args.sequential)

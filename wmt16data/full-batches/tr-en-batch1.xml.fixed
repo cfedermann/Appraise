@@ -3131,13 +3131,13 @@
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
     <seg>
-      <source id="477">Aynı zamanda Kingfisher ülke genelinde 60 B&Q satış noktasını kapatıyor</source>
-      <reference>At same time Kingfisher is closing 60 B&Q outlets across the country</reference>
+      <source id="477">Aynı zamanda Kingfisher ülke genelinde 60 B&amp;Q satış noktasını kapatıyor</source>
+      <reference>At same time Kingfisher is closing 60 B&amp;Q outlets across the country</reference>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">At the same time, the Kingfisher 60 across the country B &amp; Q sales point kapatıyor</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">At the same time, Kingfisher closed its sale B&Q 60 locations across the country.</translation>
-      <translation system="newstest2016.online-A.0.tr-en">At the same time, Kingfisher B&Q sales location throughout the country makes up 60</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">At the same time, Kingfisher closed its sale B&amp;Q 60 locations across the country.</translation>
+      <translation system="newstest2016.online-A.0.tr-en">At the same time, Kingfisher B&amp;Q sales location throughout the country makes up 60</translation>
       <translation system="newstest2016.online-B.0.tr-en">Also closes the 60 Kingfisher B &amp; Q outlets across the country</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">At the same time, throughout the country, 60 Kingfisher B&Q outlets shutting down</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">At the same time, throughout the country, 60 Kingfisher B&amp;Q outlets shutting down</translation>
     </seg>
     <seg>
       <source id="478">Yazan: Rupert Steiner, Daily Mail Şehir Baş Muhabiri</source>
@@ -3711,13 +3711,13 @@
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
     <seg>
-      <source id="484">Bayan Laury B&Q mağazalarında daha fazla kadının işe alınmasını istediğini çünkü mağazadaki on satın alma kararından sekizinin kadınlar tarafından verildiğini söyledi.</source>
-      <reference>Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
+      <source id="484">Bayan Laury B&amp;Q mağazalarında daha fazla kadının işe alınmasını istediğini çünkü mağazadaki on satın alma kararından sekizinin kadınlar tarafından verildiğini söyledi.</source>
+      <reference>Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">Female Laury B &amp; Q mağazalarında wants more and more women were hired because eight out of ten mağazadaki purchasing decision is given by the women, he said.</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Laury Bobsleigh B&Q stores it wants to put more women in the business because eight out of ten decision to buy in the stores were given by the women, he said.</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Laury Bobsleigh B&amp;Q stores it wants to put more women in the business because eight out of ten decision to buy in the stores were given by the women, he said.</translation>
       <translation system="newstest2016.online-B.0.tr-en">Mrs. Laury B &amp; Q stores in more women from buying them at the store because he wanted the decision that he was recruited by the eight women.</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">Women Laury B&Q stores to buy at the store because he wanted to hiring more women in the decision given by eight of ten women said.</translation>
-      <translation system="newstest2016.online-G.0.tr-en">Mrs. Laura B&Q stores in the store because he wants to be in the employment of more women in the pre-purchase of the decision that was given by eight women, she said.</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">Women Laury B&amp;Q stores to buy at the store because he wanted to hiring more women in the decision given by eight of ten women said.</translation>
+      <translation system="newstest2016.online-G.0.tr-en">Mrs. Laura B&amp;Q stores in the store because he wants to be in the employment of more women in the pre-purchase of the decision that was given by eight women, she said.</translation>
     </seg>
     <seg>
       <source id="485">Şu anda personelin çoğunluğu erkek.</source>
@@ -4010,13 +4010,13 @@
       <translation system="newstest2016.PROMT-SMT.4335.tr-en">Then, when they have the cost of the stores closing group Kingfisher, six months in a decline in sales and profits and announced.</translation>
     </seg>
     <seg>
-      <source id="496">Trend sonucunda Screwfix ve B&Q'nun sahibi olan Kingfisher 200 yeni mağaza açacak</source>
-      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</reference>
+      <source id="496">Trend sonucunda Screwfix ve B&amp;Q'nun sahibi olan Kingfisher 200 yeni mağaza açacak</source>
+      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</reference>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">As a result of the trend in the Screwfix and B &amp; Q owner Kingfisher, to open 200 new stores</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">The owner of B&Q and Screwfix trend in the end, the Kingfisher 200 new store will open</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">The owner of B&amp;Q and Screwfix trend in the end, the Kingfisher 200 new store will open</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">As a result of the trend to open 200 new stores Kingfisher, owner of B &amp; Q and Screwfix</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">Trend, Screwfix and b&Q owner Kingfisher will open 200 new stores</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result of the trend will open 200 new stores and Screwfix B&Q's Kingfisher, owner of</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">Trend, Screwfix and b&amp;Q owner Kingfisher will open 200 new stores</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result of the trend will open 200 new stores and Screwfix B&amp;Q's Kingfisher, owner of</translation>
     </seg>
     <seg>
       <source id="497">ABD Merkez Bankası FED için faiz artışına karar zamanı</source>
@@ -4320,22 +4320,22 @@
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
     <seg>
-      <source id="483">Sonuç olarak Kingfisher 60 B&Q satış noktasını kapatırken zanaatkarlara yönelik 200 yeni Screwfix mağazası daha açmayı planlıyor.</source>
-      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</reference>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result, while 60 Kingfisher B&Q closed its selling point for artisans, more plans to open 200 new stores Screwfix.</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">As a result, 60 Kingfisher's b&Q stores closed its plans to open 200 new screwfix outlets for the artisans.</translation>
-      <translation system="newstest2016.online-A.0.tr-en">As a result, when closing the sales point B&Q Kingfisher 60 craftsmen plans to open more than 200 new Screwfix for the store.</translation>
+      <source id="483">Sonuç olarak Kingfisher 60 B&amp;Q satış noktasını kapatırken zanaatkarlara yönelik 200 yeni Screwfix mağazası daha açmayı planlıyor.</source>
+      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</reference>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result, while 60 Kingfisher B&amp;Q closed its selling point for artisans, more plans to open 200 new stores Screwfix.</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">As a result, 60 Kingfisher's b&amp;Q stores closed its plans to open 200 new screwfix outlets for the artisans.</translation>
+      <translation system="newstest2016.online-A.0.tr-en">As a result, when closing the sales point B&amp;Q Kingfisher 60 craftsmen plans to open more than 200 new Screwfix for the store.</translation>
       <translation system="newstest2016.online-B.0.tr-en">As a result, 60 Kingfisher B &amp; Q store in the 200 new Screwfix outlets for closing craftsmen plans to open more.</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">As a result, 60 B&Q when Kingfisher, close to its point of sale for the craftsmen is planning to open more stores 200 new Screwfix.</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">As a result, 60 B&amp;Q when Kingfisher, close to its point of sale for the craftsmen is planning to open more stores 200 new Screwfix.</translation>
     </seg>
     <seg>
-      <source id="484">Bayan Laury B&Q mağazalarında daha fazla kadının işe alınmasını istediğini çünkü mağazadaki on satın alma kararından sekizinin kadınlar tarafından verildiğini söyledi.</source>
-      <reference>Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Laury Bobsleigh B&Q stores it wants to put more women in the business because eight out of ten decision to buy in the stores were given by the women, he said.</translation>
-      <translation system="newstest2016.online-G.0.tr-en">Mrs. Laura B&Q stores in the store because he wants to be in the employment of more women in the pre-purchase of the decision that was given by eight women, she said.</translation>
+      <source id="484">Bayan Laury B&amp;Q mağazalarında daha fazla kadının işe alınmasını istediğini çünkü mağazadaki on satın alma kararından sekizinin kadınlar tarafından verildiğini söyledi.</source>
+      <reference>Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Laury Bobsleigh B&amp;Q stores it wants to put more women in the business because eight out of ten decision to buy in the stores were given by the women, he said.</translation>
+      <translation system="newstest2016.online-G.0.tr-en">Mrs. Laura B&amp;Q stores in the store because he wants to be in the employment of more women in the pre-purchase of the decision that was given by eight women, she said.</translation>
       <translation system="newstest2016.online-B.0.tr-en">Mrs. Laury B &amp; Q stores in more women from buying them at the store because he wanted the decision that he was recruited by the eight women.</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Ms Laury B&Q stores in the store you want more women to have this job because he said it was given eight of the decision to buy by women.</translation>
-      <translation system="newstest2016.online-A.0.tr-en">BA B&Q stores that employment more woman Laury want because eight of ten in the store purchasing decision by women said.</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Ms Laury B&amp;Q stores in the store you want more women to have this job because he said it was given eight of the decision to buy by women.</translation>
+      <translation system="newstest2016.online-A.0.tr-en">BA B&amp;Q stores that employment more woman Laury want because eight of ten in the store purchasing decision by women said.</translation>
     </seg>
     <seg>
       <source id="485">Şu anda personelin çoğunluğu erkek.</source>
@@ -4349,13 +4349,13 @@
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
     <seg>
-      <source id="473">B&Q patronu bu trendin arkasında ucuza çalışan Doğu Avrupalı zanaatkarların olduğunu söylüyor</source>
-      <reference>B&Q boss says Eastern European tradesmen working cheap is behind trend</reference>
+      <source id="473">B&amp;Q patronu bu trendin arkasında ucuza çalışan Doğu Avrupalı zanaatkarların olduğunu söylüyor</source>
+      <reference>B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</reference>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">B &amp; Q boss behind this trend is a cheap employee says the Eastern European zanaatkarların</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">Eastern European zanaatkarların working cheaply behind the trend of B &amp; Q boss says</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">B&Q boss says he's cheap Eastern European craftsmen behind the trend</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">B&amp;Q boss says he's cheap Eastern European craftsmen behind the trend</translation>
       <translation system="newstest2016.online-B.0.tr-en">B &amp; Q boss says that cheaper Eastern European craftsmen working behind this trend</translation>
-      <translation system="newstest2016.online-G.0.tr-en">B&Q boss says Eastern European craftsmen behind this trend works for cheap</translation>
+      <translation system="newstest2016.online-G.0.tr-en">B&amp;Q boss says Eastern European craftsmen behind this trend works for cheap</translation>
     </seg>
     <seg>
       <source id="474">Veronique Laury Britanyalıların giderek daha fazla ustayı işe aldıklarını söylüyor</source>
@@ -4996,13 +4996,13 @@
       <translation system="newstest2016.online-A.0.tr-en">If you are good at using a hammer or wall stain resourceful you are in the minority these days.</translation>
     </seg>
     <seg>
-      <source id="481">Çünkü B&Q'nun arkasındaki şirketin patronuna göre, Britanyalılar evlerindeki DIY işleri yaptırmak için giderek daha fazla usta çalıştırıyorlar.</source>
-      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</reference>
-      <translation system="newstest2016.online-A.0.tr-en">Because according to the boss of the company behind the B&Q, Britons Home DIY jobs they run more and more to make a master.</translation>
+      <source id="481">Çünkü B&amp;Q'nun arkasındaki şirketin patronuna göre, Britanyalılar evlerindeki DIY işleri yaptırmak için giderek daha fazla usta çalıştırıyorlar.</source>
+      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</reference>
+      <translation system="newstest2016.online-A.0.tr-en">Because according to the boss of the company behind the B&amp;Q, Britons Home DIY jobs they run more and more to make a master.</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">Because of the B &amp; Q, according to the company behind patronuna, Britanyalılar evlerindeki DIY for the memory of things more and more veteran on their engines.</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Because B&Q's behind the company, according to the boss of the Britanyalılar DIY in their homes to work in order to do more and more jobs.</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Because B&amp;Q's behind the company, according to the boss of the Britanyalılar DIY in their homes to work in order to do more and more jobs.</translation>
       <translation system="newstest2016.online-B.0.tr-en">Because, according to the company's boss behind B &amp; Q, the British are running more adept going to make DIY jobs at home.</translation>
-      <translation system="newstest2016.online-G.0.tr-en">Because B&Q the boss of the company behind, according to the British Foreign Affairs in the house they employ to do increasingly more adept.</translation>
+      <translation system="newstest2016.online-G.0.tr-en">Because B&amp;Q the boss of the company behind, according to the British Foreign Affairs in the house they employ to do increasingly more adept.</translation>
     </seg>
     <seg>
       <source id="482">Ev iyileştirme zincirinin sahibi Kingfisher'ın yeni genel müdürü Veronique Laury bu trendin arkasında düşük fiyatlara hizmetler sunan Doğu Avrupalı becerikli zanaatkarların sayısındaki büyük artışın bulunduğunu söyledi.</source>
@@ -5422,12 +5422,12 @@
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
     <seg>
-      <source id="496">Trend sonucunda Screwfix ve B&Q'nun sahibi olan Kingfisher 200 yeni mağaza açacak</source>
-      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</reference>
-      <translation system="newstest2016.online-A.0.tr-en">As a result of the trend-B&Q owns Screwfix and Kingfisher will open new stores 200</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">The owner of B&Q and Screwfix trend in the end, the Kingfisher 200 new store will open</translation>
+      <source id="496">Trend sonucunda Screwfix ve B&amp;Q'nun sahibi olan Kingfisher 200 yeni mağaza açacak</source>
+      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</reference>
+      <translation system="newstest2016.online-A.0.tr-en">As a result of the trend-B&amp;Q owns Screwfix and Kingfisher will open new stores 200</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">The owner of B&amp;Q and Screwfix trend in the end, the Kingfisher 200 new store will open</translation>
       <translation system="newstest2016.online-B.0.tr-en">Trend results on Screwfix and B &amp; Q owner Kingfisher is to open 200 new stores</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">Trend, Screwfix and b&Q owner Kingfisher will open 200 new stores</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">Trend, Screwfix and b&amp;Q owner Kingfisher will open 200 new stores</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">As a result of the trend in the Screwfix and B &amp; Q owner Kingfisher, to open 200 new stores</translation>
     </seg>
     <seg>
@@ -8510,13 +8510,13 @@
       <translation system="newstest2016.jhu-syntax.4391.tr-en">As a result of more than 200 new Screwfix stores aimed at town opening</translation>
     </seg>
     <seg>
-      <source id="477">Aynı zamanda Kingfisher ülke genelinde 60 B&Q satış noktasını kapatıyor</source>
-      <reference>At same time Kingfisher is closing 60 B&Q outlets across the country</reference>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">At the same time, throughout the country, 60 Kingfisher B&Q outlets shutting down</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">At the same time, Kingfisher closed its sale B&Q 60 locations across the country.</translation>
+      <source id="477">Aynı zamanda Kingfisher ülke genelinde 60 B&amp;Q satış noktasını kapatıyor</source>
+      <reference>At same time Kingfisher is closing 60 B&amp;Q outlets across the country</reference>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">At the same time, throughout the country, 60 Kingfisher B&amp;Q outlets shutting down</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">At the same time, Kingfisher closed its sale B&amp;Q 60 locations across the country.</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">Problematic point of 60 B &amp; Q sales across the country at the same time, Kingfisher</translation>
       <translation system="newstest2016.online-B.0.tr-en">Also closes the 60 Kingfisher B &amp; Q outlets across the country</translation>
-      <translation system="newstest2016.online-A.0.tr-en">At the same time, Kingfisher B&Q sales location throughout the country makes up 60</translation>
+      <translation system="newstest2016.online-A.0.tr-en">At the same time, Kingfisher B&amp;Q sales location throughout the country makes up 60</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
@@ -10957,12 +10957,12 @@
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
     <seg>
-      <source id="481">Çünkü B&Q'nun arkasındaki şirketin patronuna göre, Britanyalılar evlerindeki DIY işleri yaptırmak için giderek daha fazla usta çalıştırıyorlar.</source>
-      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</reference>
-      <translation system="newstest2016.online-G.0.tr-en">Because B&Q the boss of the company behind, according to the British Foreign Affairs in the house they employ to do increasingly more adept.</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">Because B&Q behind the boss of the company, according to their homes to do what they are working for us britanyalilar dıy and more.</translation>
-      <translation system="newstest2016.online-A.0.tr-en">Because according to the boss of the company behind the B&Q, Britons Home DIY jobs they run more and more to make a master.</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Because, on the back of B&Q boss says that the company to build the DIY jobs, the British in their home, more and more master, they make you work.</translation>
+      <source id="481">Çünkü B&amp;Q'nun arkasındaki şirketin patronuna göre, Britanyalılar evlerindeki DIY işleri yaptırmak için giderek daha fazla usta çalıştırıyorlar.</source>
+      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</reference>
+      <translation system="newstest2016.online-G.0.tr-en">Because B&amp;Q the boss of the company behind, according to the British Foreign Affairs in the house they employ to do increasingly more adept.</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">Because B&amp;Q behind the boss of the company, according to their homes to do what they are working for us britanyalilar dıy and more.</translation>
+      <translation system="newstest2016.online-A.0.tr-en">Because according to the boss of the company behind the B&amp;Q, Britons Home DIY jobs they run more and more to make a master.</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Because, on the back of B&amp;Q boss says that the company to build the DIY jobs, the British in their home, more and more master, they make you work.</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">Because of the B &amp; Q, according to the company behind patronuna, Britanyalılar evlerindeki DIY for the memory of things more and more veteran on their engines.</translation>
     </seg>
     <seg>
@@ -10975,12 +10975,12 @@
       <translation system="newstest2016.online-B.0.tr-en">He said the home improvement chain owner Kingfisher's new general manager Veronique Laury that the large increase in the number of Eastern European skilled artisans offer services at low prices behind this trend.</translation>
     </seg>
     <seg>
-      <source id="483">Sonuç olarak Kingfisher 60 B&Q satış noktasını kapatırken zanaatkarlara yönelik 200 yeni Screwfix mağazası daha açmayı planlıyor.</source>
-      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</reference>
-      <translation system="newstest2016.online-A.0.tr-en">As a result, when closing the sales point B&Q Kingfisher 60 craftsmen plans to open more than 200 new Screwfix for the store.</translation>
-      <translation system="newstest2016.online-G.0.tr-en">As a result, 60 Kingfisher B&Q screwfix store plans to open 200 new artisans for the point of sale when closing.</translation>
+      <source id="483">Sonuç olarak Kingfisher 60 B&amp;Q satış noktasını kapatırken zanaatkarlara yönelik 200 yeni Screwfix mağazası daha açmayı planlıyor.</source>
+      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</reference>
+      <translation system="newstest2016.online-A.0.tr-en">As a result, when closing the sales point B&amp;Q Kingfisher 60 craftsmen plans to open more than 200 new Screwfix for the store.</translation>
+      <translation system="newstest2016.online-G.0.tr-en">As a result, 60 Kingfisher B&amp;Q screwfix store plans to open 200 new artisans for the point of sale when closing.</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">As a result, the 60 Kingfisher B &amp; Q sales point to kapatırken zanaatkarlara 200 new Screwfix plans to open more stores.</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result, while 60 Kingfisher B&Q closed its selling point for artisans, more plans to open 200 new stores Screwfix.</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result, while 60 Kingfisher B&amp;Q closed its selling point for artisans, more plans to open 200 new stores Screwfix.</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">As a result, 60 B &amp; Q, Kingfisher plans to open more than 200 new Screwfix stores for zanaatkarlara kapatırken sales spot.</translation>
     </seg>
   </hit>
@@ -17584,13 +17584,13 @@
       <translation system="newstest2016.online-A.0.tr-en">If you are good at using a hammer or wall stain resourceful you are in the minority these days.</translation>
     </seg>
     <seg>
-      <source id="481">Çünkü B&Q'nun arkasındaki şirketin patronuna göre, Britanyalılar evlerindeki DIY işleri yaptırmak için giderek daha fazla usta çalıştırıyorlar.</source>
-      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</reference>
+      <source id="481">Çünkü B&amp;Q'nun arkasındaki şirketin patronuna göre, Britanyalılar evlerindeki DIY işleri yaptırmak için giderek daha fazla usta çalıştırıyorlar.</source>
+      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</reference>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">Because B &amp; Q DIY Britanyalılar, according to the company's patronuna evlerindeki veteran is becoming more and more on their engines to build things.</translation>
       <translation system="newstest2016.online-B.0.tr-en">Because, according to the company's boss behind B &amp; Q, the British are running more adept going to make DIY jobs at home.</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Because, on the back of B&Q boss says that the company to build the DIY jobs, the British in their home, more and more master, they make you work.</translation>
-      <translation system="newstest2016.online-A.0.tr-en">Because according to the boss of the company behind the B&Q, Britons Home DIY jobs they run more and more to make a master.</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">Because B&Q behind the boss of the company, according to their homes to do what they are working for us britanyalilar dıy and more.</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Because, on the back of B&amp;Q boss says that the company to build the DIY jobs, the British in their home, more and more master, they make you work.</translation>
+      <translation system="newstest2016.online-A.0.tr-en">Because according to the boss of the company behind the B&amp;Q, Britons Home DIY jobs they run more and more to make a master.</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">Because B&amp;Q behind the boss of the company, according to their homes to do what they are working for us britanyalilar dıy and more.</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
@@ -18996,13 +18996,13 @@
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">In the other half of this amount will receive them.</translation>
     </seg>
     <seg>
-      <source id="473">B&Q patronu bu trendin arkasında ucuza çalışan Doğu Avrupalı zanaatkarların olduğunu söylüyor</source>
-      <reference>B&Q boss says Eastern European tradesmen working cheap is behind trend</reference>
+      <source id="473">B&amp;Q patronu bu trendin arkasında ucuza çalışan Doğu Avrupalı zanaatkarların olduğunu söylüyor</source>
+      <reference>B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</reference>
       <translation system="newstest2016.online-B.0.tr-en">B &amp; Q boss says that cheaper Eastern European craftsmen working behind this trend</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">Eastern European zanaatkarların working cheaply behind the trend of B &amp; Q boss says</translation>
-      <translation system="newstest2016.online-A.0.tr-en">B&Q boss behind this trend says cheap Eastern European craftsmen working</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">B&Q boss says he's cheap Eastern European craftsmen behind the trend</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Eastern European craftsmen who worked on the cheap is behind the trend B&Q boss said.</translation>
+      <translation system="newstest2016.online-A.0.tr-en">B&amp;Q boss behind this trend says cheap Eastern European craftsmen working</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">B&amp;Q boss says he's cheap Eastern European craftsmen behind the trend</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Eastern European craftsmen who worked on the cheap is behind the trend B&amp;Q boss said.</translation>
     </seg>
     <seg>
       <source id="474">Veronique Laury Britanyalıların giderek daha fazla ustayı işe aldıklarını söylüyor</source>
@@ -19440,13 +19440,13 @@
       <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Half of this amount will receive the other wounded.</translation>
     </seg>
     <seg>
-      <source id="473">B&Q patronu bu trendin arkasında ucuza çalışan Doğu Avrupalı zanaatkarların olduğunu söylüyor</source>
-      <reference>B&Q boss says Eastern European tradesmen working cheap is behind trend</reference>
+      <source id="473">B&amp;Q patronu bu trendin arkasında ucuza çalışan Doğu Avrupalı zanaatkarların olduğunu söylüyor</source>
+      <reference>B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</reference>
       <translation system="newstest2016.online-B.0.tr-en">B &amp; Q boss says that cheaper Eastern European craftsmen working behind this trend</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">Eastern European zanaatkarların working cheaply behind the trend of B &amp; Q boss says</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">B &amp; Q boss behind this trend is a cheap employee says the Eastern European zanaatkarların</translation>
-      <translation system="newstest2016.online-G.0.tr-en">B&Q boss says Eastern European craftsmen behind this trend works for cheap</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">B&Q owner says there are craftsmen who worked on this trend on the back of cheap eastern european</translation>
+      <translation system="newstest2016.online-G.0.tr-en">B&amp;Q boss says Eastern European craftsmen behind this trend works for cheap</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">B&amp;Q owner says there are craftsmen who worked on this trend on the back of cheap eastern european</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">
@@ -22009,21 +22009,21 @@
       <translation system="newstest2016.dvorkanton.4346.tr-en">Kingfisher home improvement chain's new owner, general manager Veronique Laury, skilled artisans offer services at lower prices this trend on the back of the large increase in the number of eastern european countries that were found.</translation>
     </seg>
     <seg>
-      <source id="483">Sonuç olarak Kingfisher 60 B&Q satış noktasını kapatırken zanaatkarlara yönelik 200 yeni Screwfix mağazası daha açmayı planlıyor.</source>
-      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</reference>
-      <translation system="newstest2016.online-A.0.tr-en">As a result, when closing the sales point B&Q Kingfisher 60 craftsmen plans to open more than 200 new Screwfix for the store.</translation>
+      <source id="483">Sonuç olarak Kingfisher 60 B&amp;Q satış noktasını kapatırken zanaatkarlara yönelik 200 yeni Screwfix mağazası daha açmayı planlıyor.</source>
+      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</reference>
+      <translation system="newstest2016.online-A.0.tr-en">As a result, when closing the sales point B&amp;Q Kingfisher 60 craftsmen plans to open more than 200 new Screwfix for the store.</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">As a result, 60 B &amp; Q, Kingfisher plans to open more than 200 new Screwfix stores for zanaatkarlara kapatırken sales spot.</translation>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">As a result, 60 Kingfisher's b&Q stores closed its plans to open 200 new screwfix outlets for the artisans.</translation>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">As a result, 60 Kingfisher's b&amp;Q stores closed its plans to open 200 new screwfix outlets for the artisans.</translation>
       <translation system="newstest2016.online-B.0.tr-en">As a result, 60 Kingfisher B &amp; Q store in the 200 new Screwfix outlets for closing craftsmen plans to open more.</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">As a result, the 60 Kingfisher B &amp; Q sales point to kapatırken zanaatkarlara 200 new Screwfix plans to open more stores.</translation>
     </seg>
     <seg>
-      <source id="484">Bayan Laury B&Q mağazalarında daha fazla kadının işe alınmasını istediğini çünkü mağazadaki on satın alma kararından sekizinin kadınlar tarafından verildiğini söyledi.</source>
-      <reference>Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
-      <translation system="newstest2016.dvorkanton.4346.tr-en">Women Laury B&Q stores to buy at the store because he wanted to hiring more women in the decision given by eight of ten women said.</translation>
+      <source id="484">Bayan Laury B&amp;Q mağazalarında daha fazla kadının işe alınmasını istediğini çünkü mağazadaki on satın alma kararından sekizinin kadınlar tarafından verildiğini söyledi.</source>
+      <reference>Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
+      <translation system="newstest2016.dvorkanton.4346.tr-en">Women Laury B&amp;Q stores to buy at the store because he wanted to hiring more women in the decision given by eight of ten women said.</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">Female Laury B &amp; Q mağazalarında wants more and more women were hired because eight out of ten mağazadaki purchasing decision is given by the women, he said.</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Laury Bobsleigh B&Q stores it wants to put more women in the business because eight out of ten decision to buy in the stores were given by the women, he said.</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Ms Laury B&Q stores in the store you want more women to have this job because he said it was given eight of the decision to buy by women.</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Laury Bobsleigh B&amp;Q stores it wants to put more women in the business because eight out of ten decision to buy in the stores were given by the women, he said.</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Ms Laury B&amp;Q stores in the store you want more women to have this job because he said it was given eight of the decision to buy by women.</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">Female mağazadaki because he wants more women hired by purchasing women from eight to ten mağazalarında Laury B &amp; Q said.</translation>
     </seg>
   </hit>
@@ -23458,13 +23458,13 @@
       <translation system="newstest2016.online-A.0.tr-en">As a result, more than 200 artisans aiming new Screwfix store opening</translation>
     </seg>
     <seg>
-      <source id="477">Aynı zamanda Kingfisher ülke genelinde 60 B&Q satış noktasını kapatıyor</source>
-      <reference>At same time Kingfisher is closing 60 B&Q outlets across the country</reference>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">At the same time, Kingfisher closed its sale B&Q 60 locations across the country.</translation>
+      <source id="477">Aynı zamanda Kingfisher ülke genelinde 60 B&amp;Q satış noktasını kapatıyor</source>
+      <reference>At same time Kingfisher is closing 60 B&amp;Q outlets across the country</reference>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">At the same time, Kingfisher closed its sale B&amp;Q 60 locations across the country.</translation>
       <translation system="newstest2016.jhu-pbmt.4285.tr-en">At the same time, the Kingfisher 60 across the country B &amp; Q sales point kapatıyor</translation>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">Problematic point of 60 B &amp; Q sales across the country at the same time, Kingfisher</translation>
-      <translation system="newstest2016.online-G.0.tr-en">Also 60 across the country, Kingfisher B&Q is closing the sales point</translation>
-      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Across the country in the same time, Kingfisher, 60 B&Q closing its point of sale</translation>
+      <translation system="newstest2016.online-G.0.tr-en">Also 60 across the country, Kingfisher B&amp;Q is closing the sales point</translation>
+      <translation system="newstest2016.PROMT-SMT.4335.tr-en">Across the country in the same time, Kingfisher, 60 B&amp;Q closing its point of sale</translation>
     </seg>
     <seg>
       <source id="478">Yazan: Rupert Steiner, Daily Mail Şehir Baş Muhabiri</source>
@@ -25406,13 +25406,13 @@
       <translation system="newstest2016.tbtk-syscomb.4509.tr-en">Take the cost of the group, which closed shops, Kingfisher both under a monthly profit after it was announced that a decline in sales.</translation>
     </seg>
     <seg>
-      <source id="496">Trend sonucunda Screwfix ve B&Q'nun sahibi olan Kingfisher 200 yeni mağaza açacak</source>
-      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</reference>
+      <source id="496">Trend sonucunda Screwfix ve B&amp;Q'nun sahibi olan Kingfisher 200 yeni mağaza açacak</source>
+      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</reference>
       <translation system="newstest2016.jhu-syntax.4391.tr-en">As a result of the trend to open 200 new stores Kingfisher, owner of B &amp; Q and Screwfix</translation>
-      <translation system="newstest2016.online-G.0.tr-en">Trend as a result of Screwfix and B&Q owner Kingfisher will open 200 new stores</translation>
+      <translation system="newstest2016.online-G.0.tr-en">Trend as a result of Screwfix and B&amp;Q owner Kingfisher will open 200 new stores</translation>
       <translation system="newstest2016.online-B.0.tr-en">Trend results on Screwfix and B &amp; Q owner Kingfisher is to open 200 new stores</translation>
-      <translation system="newstest2016.online-A.0.tr-en">As a result of the trend-B&Q owns Screwfix and Kingfisher will open new stores 200</translation>
-      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result of the trend will open 200 new stores and Screwfix B&Q's Kingfisher, owner of</translation>
+      <translation system="newstest2016.online-A.0.tr-en">As a result of the trend-B&amp;Q owns Screwfix and Kingfisher will open new stores 200</translation>
+      <translation system="newstest2016.tbtk-syscomb.4509.tr-en">As a result of the trend will open 200 new stores and Screwfix B&amp;Q's Kingfisher, owner of</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="tur" target-language="eng">

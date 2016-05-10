@@ -837,11 +837,11 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
     <seg>
-      <source id="665">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>B&Q Boss sagt, dass die Zeit der billigen osteuropäischen Handwerker vorüber ist</reference>
+      <source id="665">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>B&amp;Q Boss sagt, dass die Zeit der billigen osteuropäischen Handwerker vorüber ist</reference>
       <translation system="newstest2016.KIT.4504.en-de">B &amp; F-Chef sagt, die osteuropäischen Handwerker billiger arbeiten hinter Trend</translation>
       <translation system="newstest2016.cambridge.4502.en-de">B &amp; Q-Chef sagt osteuropäischen Handwerker arbeiten billig ist hinter Trend</translation>
-      <translation system="newstest2016.online-F.0.en-de">B&Q-Chef sagt Ost - die europäischen Händler, die billig arbeiten, ist hinter Tendenz</translation>
+      <translation system="newstest2016.online-F.0.en-de">B&amp;Q-Chef sagt Ost - die europäischen Händler, die billig arbeiten, ist hinter Tendenz</translation>
       <translation system="newstest2016.uedin-nmt.4312.en-de">B &amp; Q-Chef sagt osteuropäische Handwerker, die billig arbeiten, liegt hinter dem Trend</translation>
       <translation system="newstest2016.online-B.0.en-de">Chef B &amp; Q sagt osteuropäische Handwerker arbeiten billig ist hinter Trend</translation>
     </seg>
@@ -2934,9 +2934,9 @@
       <translation system="newstest2016.jhu-pbmt.4441.en-de">Andere erhalten die Hälfte, dass die Menge verletzt wurden.</translation>
     </seg>
     <seg>
-      <source id="665">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>B&Q Boss sagt, dass die Zeit der billigen osteuropäischen Handwerker vorüber ist</reference>
-      <translation system="newstest2016.online-F.0.en-de">B&Q-Chef sagt Ost - die europäischen Händler, die billig arbeiten, ist hinter Tendenz</translation>
+      <source id="665">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>B&amp;Q Boss sagt, dass die Zeit der billigen osteuropäischen Handwerker vorüber ist</reference>
+      <translation system="newstest2016.online-F.0.en-de">B&amp;Q-Chef sagt Ost - die europäischen Händler, die billig arbeiten, ist hinter Tendenz</translation>
       <translation system="newstest2016.uedin-syntax.4262.en-de">B und Q-Boss sagt osteuropäische Handwerker, die billig ist hinter dem Trend</translation>
       <translation system="newstest2016.online-B.0.en-de">Chef B &amp; Q sagt osteuropäische Handwerker arbeiten billig ist hinter Trend</translation>
       <translation system="newstest2016.KIT-LIMSI.4500.en-de">B &amp; F-Chef sagt osteuropäische Handwerker billig hinter Trend</translation>
@@ -7647,8 +7647,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
     <seg>
-      <source id="688">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Wegen des Trends wird Kingfisher, der Screwfix und B&Q besitzt, 200 neue Filialen eröffnen.</reference>
+      <source id="688">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Wegen des Trends wird Kingfisher, der Screwfix und B&amp;Q besitzt, 200 neue Filialen eröffnen.</reference>
       <translation system="newstest2016.jhu-pbmt.4441.en-de">Als Folge des Trends Kingfisher, dem Screwfix und B &amp; Q, 200 neue Filialen eröffnen</translation>
       <translation system="newstest2016.cambridge.4502.en-de">Als Folge des Trends Kingfisher, der mittels Screwfix und B &amp; Q besitzt, öffnet sich 200 neue Geschäfte.</translation>
       <translation system="newstest2016.uedin-syntax.4262.en-de">Als Folge der Trend ist Kingfisher, die Screwfix und B + F besitzt, 200 neue Läden eröffnen</translation>
@@ -8627,16 +8627,16 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
     <seg>
-      <source id="675">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Daher plant Kingfisher, 200 weitere Screwfix Shops zu eröffnen, die sich an Handwerker richten und 60 Verkaufsstellen von B&Q zu schließen.</reference>
-      <translation system="newstest2016.PROMT-Rule-based.4275.en-de">Infolgedessen plant Eisvogel, noch 200 Läden von Screwfix zu öffnen, die auf Großhändler gerichtet werden, während man 60 B&Q Ausgänge schließt.</translation>
-      <translation system="newstest2016.online-F.0.en-de">Infolgedessen plant Eisvogel, 200 weitere Screwfix-Speicher zu öffnen, die angestrebte Händler sind, beim Schließen von 60 B&Q-Ausgängen.</translation>
+      <source id="675">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Daher plant Kingfisher, 200 weitere Screwfix Shops zu eröffnen, die sich an Handwerker richten und 60 Verkaufsstellen von B&amp;Q zu schließen.</reference>
+      <translation system="newstest2016.PROMT-Rule-based.4275.en-de">Infolgedessen plant Eisvogel, noch 200 Läden von Screwfix zu öffnen, die auf Großhändler gerichtet werden, während man 60 B&amp;Q Ausgänge schließt.</translation>
+      <translation system="newstest2016.online-F.0.en-de">Infolgedessen plant Eisvogel, 200 weitere Screwfix-Speicher zu öffnen, die angestrebte Händler sind, beim Schließen von 60 B&amp;Q-Ausgängen.</translation>
       <translation system="newstest2016.uedin-nmt.4312.en-de">Daher plant Kingfisher, 200 weitere Screwfix Stores zu öffnen, die auf Gewerbetreibende ausgerichtet sind, während sie 60 B &amp; Q-Verkaufsstellen schließen.</translation>
       <translation system="newstest2016.uedin-pbmt.4338.en-de">Infolgedessen plant Kingfisher 200 mehr Screwfix Filialen zu eröffnen, die für Handwerker, während 60 B &amp; Q.</translation>
       <translation system="newstest2016.uedin-syntax.4262.en-de">Infolgedessen plant Kingfisher, 200 weitere Screwfix Filialen zu eröffnen, die sich an Gewerbetreibende richtet, während 60 B und Q Outlets schließen.</translation>
     </seg>
     <seg>
-      <source id="676">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <source id="676">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
       <reference>Mrs Laury sagte, sie wolle mehr Frauen in B &amp; Q-Shops beschäftigen, denn acht von zehn Kaufentscheidungen im Laden werden von Frauen getroffen.</reference>
       <translation system="newstest2016.jhu-syntax.4528.en-de">Frau Lorbeeren sagte, sie will, dass mehr Frauen in B &amp; Q-Shops angestellt werden, weil acht von zehn Kaufentscheidungen im Laden von dem schönen Geschlecht gemacht werden.</translation>
       <translation system="newstest2016.uedin-nmt.4312.en-de">Frau Laury sagte, sie wolle, dass mehr Frauen in B &amp; Q-Geschäften beschäftigt werden, weil acht von zehn Kaufentscheidungen im Laden durch den faireren Sex gemacht werden.</translation>
@@ -9497,17 +9497,17 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
     <seg>
-      <source id="673">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Denn Briten beschäftigen zunehmend Handwerker, um Heimwerkerjobs in ihren Häusern durchzuführen, so der Chef des Unternehmens hinter B&Q.</reference>
+      <source id="673">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Denn Briten beschäftigen zunehmend Handwerker, um Heimwerkerjobs in ihren Häusern durchzuführen, so der Chef des Unternehmens hinter B&amp;Q.</reference>
       <translation system="newstest2016.jhu-pbmt.4441.en-de">Denn die Briten sind zunehmend die Heimwerker DIY durchzuführen, Arbeitsplätze in ihren Häusern, laut dem Chef des Unternehmens hinter B &amp; Q.</translation>
       <translation system="newstest2016.NYU-UMontreal.4407.en-de">Weil die Briten zunehmend Handymen beschäftigen, um DIY-Arbeitsplätze in ihren Häusern durchzuführen, gemäß dem Chef des Unternehmens hinter B &amp; Q.</translation>
-      <translation system="newstest2016.online-F.0.en-de">Weil Briten in zunehmendem Maße Heimwerker beschäftigen, um DIY-Jobs in ihren Häusern durchzuführen, entsprechend dem Chef der Firma hinter B&Q.</translation>
+      <translation system="newstest2016.online-F.0.en-de">Weil Briten in zunehmendem Maße Heimwerker beschäftigen, um DIY-Jobs in ihren Häusern durchzuführen, entsprechend dem Chef der Firma hinter B&amp;Q.</translation>
       <translation system="newstest2016.cambridge.4502.en-de">Weil die Briten zunehmend mit DIY arbeiten, um in ihren Häusern zu verrichten, laut dem Chef des Unternehmens hinter B &amp; Q.</translation>
       <translation system="newstest2016.jhu-syntax.4528.en-de">Denn die Briten sind zunehmend mit Heimwerker to carry out DIY Arbeitsplätze in ihren Häusern, laut dem Chef der Firma hinter B &amp; Q</translation>
     </seg>
     <seg>
-      <source id="675">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Daher plant Kingfisher, 200 weitere Screwfix Shops zu eröffnen, die sich an Handwerker richten und 60 Verkaufsstellen von B&Q zu schließen.</reference>
+      <source id="675">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Daher plant Kingfisher, 200 weitere Screwfix Shops zu eröffnen, die sich an Handwerker richten und 60 Verkaufsstellen von B&amp;Q zu schließen.</reference>
       <translation system="newstest2016.metamind.4480.en-de">Infolgedessen plant Kingfisher 200 weitere Schraubfixstores zu eröffnen, die auf Handwerker ausgerichtet sind, während 60 B &amp; Q Outlets schließen.</translation>
       <translation system="newstest2016.uedin-nmt.4312.en-de">Daher plant Kingfisher, 200 weitere Screwfix Stores zu öffnen, die auf Gewerbetreibende ausgerichtet sind, während sie 60 B &amp; Q-Verkaufsstellen schließen.</translation>
       <translation system="newstest2016.online-B.0.en-de">Als Ergebnis plant Eisvogel 200 mehr Screwfix Geschäfte zu eröffnen, die an Gewerbetreibende gerichtet sind, während 60 B &amp; Q Filialen schließen.</translation>
@@ -9515,11 +9515,11 @@
       <translation system="newstest2016.NYU-UMontreal.4407.en-de">Infolgedessen plant Kingfisher 200 mehr Screwfix-Geschäfte, die auf Handelsmänner ausgerichtet sind, während die Schließung von 60 B &amp; Q-Verkaufsstellen.</translation>
     </seg>
     <seg>
-      <source id="676">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <source id="676">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
       <reference>Mrs Laury sagte, sie wolle mehr Frauen in B &amp; Q-Shops beschäftigen, denn acht von zehn Kaufentscheidungen im Laden werden von Frauen getroffen.</reference>
       <translation system="newstest2016.uedin-nmt.4312.en-de">Frau Laury sagte, sie wolle, dass mehr Frauen in B &amp; Q-Geschäften beschäftigt werden, weil acht von zehn Kaufentscheidungen im Laden durch den faireren Sex gemacht werden.</translation>
       <translation system="newstest2016.KIT-LIMSI.4500.en-de">Frau Laury sagte, sie will mehr Frauen in den Geschäften B &amp; Q, da acht von zehn Kaufentscheidungen im Geschäft mit dem schönen Geschlecht.</translation>
-      <translation system="newstest2016.online-G.0.en-de">Frau Laury sagte, Sie will mehr Frauen beschäftigt werden, die im B&F-shops, weil acht von zehn Kaufentscheidungen im laden gemacht werden, indem das weibliche Geschlecht.</translation>
+      <translation system="newstest2016.online-G.0.en-de">Frau Laury sagte, Sie will mehr Frauen beschäftigt werden, die im B&amp;F-shops, weil acht von zehn Kaufentscheidungen im laden gemacht werden, indem das weibliche Geschlecht.</translation>
       <translation system="newstest2016.uedin-pbmt.4338.en-de">Frau Laury sagte, sie will mehr Frauen in B &amp; Q Geschäfte, weil acht von zehn Kaufentscheidungen im Laden mit dem schönen Geschlecht gemacht werden.</translation>
       <translation system="newstest2016.jhu-syntax.4528.en-de">Frau Lorbeeren sagte, sie will, dass mehr Frauen in B &amp; Q-Shops angestellt werden, weil acht von zehn Kaufentscheidungen im Laden von dem schönen Geschlecht gemacht werden.</translation>
     </seg>
@@ -12125,13 +12125,13 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
     <seg>
-      <source id="676">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <source id="676">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
       <reference>Mrs Laury sagte, sie wolle mehr Frauen in B &amp; Q-Shops beschäftigen, denn acht von zehn Kaufentscheidungen im Laden werden von Frauen getroffen.</reference>
-      <translation system="newstest2016.online-F.0.en-de">Frau Laury sagte, dass sie mehr Frauen in B&Q-Shops beschäftigt werden wünscht, weil acht aus zehn Kaufentscheidungen im Speicher heraus durch den angemesseneren Sex gemacht werden.</translation>
+      <translation system="newstest2016.online-F.0.en-de">Frau Laury sagte, dass sie mehr Frauen in B&amp;Q-Shops beschäftigt werden wünscht, weil acht aus zehn Kaufentscheidungen im Speicher heraus durch den angemesseneren Sex gemacht werden.</translation>
       <translation system="newstest2016.uedin-nmt.4312.en-de">Frau Laury sagte, sie wolle, dass mehr Frauen in B &amp; Q-Geschäften beschäftigt werden, weil acht von zehn Kaufentscheidungen im Laden durch den faireren Sex gemacht werden.</translation>
       <translation system="newstest2016.NYU-UMontreal.4407.en-de">Frau Laury sagte, sie möchte, dass mehr Frauen in B &amp; Q-Geschäften beschäftigt werden, weil acht von zehn Einkaufsentscheidungen durch den gerechteren Geschlecht getroffen werden.</translation>
       <translation system="newstest2016.online-A.0.en-de">Laury Frau sagte, sie will mehr Frauen in B &amp; Q Geschäften eingesetzt werden, da acht von zehn Kaufentscheidungen im Speicher durch das schöne Geschlecht gemacht werden.</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4275.en-de">Mrs Laury sagte, dass sie will, dass mehr Frauen in B&Q Geschäften angestellt werden, weil acht aus zehn Kaufentscheidungen im Laden durch das schönere Geschlecht gemacht werden.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4275.en-de">Mrs Laury sagte, dass sie will, dass mehr Frauen in B&amp;Q Geschäften angestellt werden, weil acht aus zehn Kaufentscheidungen im Laden durch das schönere Geschlecht gemacht werden.</translation>
     </seg>
     <seg>
       <source id="677">Currently the majority of staff are men.</source>
@@ -16200,8 +16200,8 @@
       <translation system="newstest2016.jhu-pbmt.4441.en-de">Die Fluggesellschaft veröffentlichte einen Rückgang bei Gewinn und Umsatz von einem halben Jahr, nachdem die Gruppe hat, die Kosten für die Filialen zu schließen.</translation>
     </seg>
     <seg>
-      <source id="688">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Wegen des Trends wird Kingfisher, der Screwfix und B&Q besitzt, 200 neue Filialen eröffnen.</reference>
+      <source id="688">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Wegen des Trends wird Kingfisher, der Screwfix und B&amp;Q besitzt, 200 neue Filialen eröffnen.</reference>
       <translation system="newstest2016.jhu-pbmt.4441.en-de">Als Folge des Trends Kingfisher, dem Screwfix und B &amp; Q, 200 neue Filialen eröffnen</translation>
       <translation system="newstest2016.KIT-LIMSI.4500.en-de,newstest2016.KIT.4504.en-de">Aufgrund der Entwicklung der Eisvogel, der Screwfix und B &amp; Q, 200 neue Läden eröffnen</translation>
       <translation system="newstest2016.NYU-UMontreal.4407.en-de">Das Ergebnis des Trends Kingfisher, der Screwfix und B &amp; Q besitzt, öffnet 200 neue Geschäfte.</translation>
@@ -16703,12 +16703,12 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
     <seg>
-      <source id="669">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Gleichzeitig wird Kingfisher 60 B&Q Verkaufsstellen landesweit schließen</reference>
+      <source id="669">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Gleichzeitig wird Kingfisher 60 B&amp;Q Verkaufsstellen landesweit schließen</reference>
       <translation system="newstest2016.online-B.0.en-de">Zur gleichen Zeit schließt Eisvogel 60 B &amp; Q Filialen im ganzen Land</translation>
       <translation system="newstest2016.uedin-pbmt.4338.en-de">Gleichzeitig Kingfisher schließt 60 B &amp; Q im ganzen Land</translation>
       <translation system="newstest2016.uedin-syntax.4262.en-de">Zur gleichen Zeit ist Kingfisher 60 B und Q Outlets im ganzen Land schließen</translation>
-      <translation system="newstest2016.online-F.0.en-de">Zur gleichen Zeit schließt Eisvogel 60 B&Q-Ausgänge im Ganzen Land</translation>
+      <translation system="newstest2016.online-F.0.en-de">Zur gleichen Zeit schließt Eisvogel 60 B&amp;Q-Ausgänge im Ganzen Land</translation>
       <translation system="newstest2016.KIT-LIMSI.4500.en-de">Gleichzeitig schließt Kingfisher 60 B &amp; Q im ganzen Land</translation>
     </seg>
     <seg>
@@ -17791,8 +17791,8 @@
       <translation system="newstest2016.online-F.0.en-de">Mit dem Ergebnis 200 weiterer Screwfix-Speicher angestrebte Händler, öffnend</translation>
     </seg>
     <seg>
-      <source id="669">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Gleichzeitig wird Kingfisher 60 B&Q Verkaufsstellen landesweit schließen</reference>
+      <source id="669">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Gleichzeitig wird Kingfisher 60 B&amp;Q Verkaufsstellen landesweit schließen</reference>
       <translation system="newstest2016.uedin-syntax.4262.en-de">Zur gleichen Zeit ist Kingfisher 60 B und Q Outlets im ganzen Land schließen</translation>
       <translation system="newstest2016.online-A.0.en-de">Gleichzeitig ist Kingfisher 60 B &amp; Q Verkaufsstellen landesweit schließen.</translation>
       <translation system="newstest2016.KIT.4504.en-de">Gleichzeitig schließen Kingfisher mit 60 B &amp; Q im ganzen Land</translation>
@@ -21032,13 +21032,13 @@
       <translation system="newstest2016.online-G.0.en-de">Wenn Sie praktisch mit einem hammer oder ein Genie bei der Malerei die Wände, es scheint, Sie sind in der Minderheit in diesen Tagen.</translation>
     </seg>
     <seg>
-      <source id="673">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Denn Briten beschäftigen zunehmend Handwerker, um Heimwerkerjobs in ihren Häusern durchzuführen, so der Chef des Unternehmens hinter B&Q.</reference>
+      <source id="673">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Denn Briten beschäftigen zunehmend Handwerker, um Heimwerkerjobs in ihren Häusern durchzuführen, so der Chef des Unternehmens hinter B&amp;Q.</reference>
       <translation system="newstest2016.uedin-syntax.4262.en-de">Denn die Briten sind zunehmend die Heimwerker, Heimwerkerjobs in ihren Häusern durchzuführen, laut dem Chef der Firma hinter B und F.</translation>
       <translation system="newstest2016.online-A.0.en-de">Da die Briten zunehmend Bastler Heimwerkerarbeiten in ihren Häusern, nach dem Chef der Firma hinter B &amp; Q zu beschäftigen.</translation>
       <translation system="newstest2016.KIT-LIMSI.4500.en-de">Denn die Briten sind zunehmend mit Heimwerker, DIY Arbeitsplätze in ihren Häusern durchzuführen, laut dem Chef des Unternehmens hinter B &amp; F.</translation>
       <translation system="newstest2016.online-B.0.en-de">Da die Briten zunehmend handymen beschäftigt DIY Arbeitsplätze in ihren Häusern durchzuführen, nach dem Chef der Firma hinter B &amp; Q.</translation>
-      <translation system="newstest2016.online-G.0.en-de">Denn die Briten sind zunehmend beschäftigen Handwerker zur Durchführung von DIY-Arbeitsplätze in Ihren Häusern, nach dem Chef des Unternehmens, das hinter B&F.</translation>
+      <translation system="newstest2016.online-G.0.en-de">Denn die Briten sind zunehmend beschäftigen Handwerker zur Durchführung von DIY-Arbeitsplätze in Ihren Häusern, nach dem Chef des Unternehmens, das hinter B&amp;F.</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="eng" target-language="deu">
@@ -21516,8 +21516,8 @@
       <translation system="newstest2016.KIT.4504.en-de">Die anderen Verletzten werden die Hälfte dieser Summe erhalten.</translation>
     </seg>
     <seg>
-      <source id="665">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>B&Q Boss sagt, dass die Zeit der billigen osteuropäischen Handwerker vorüber ist</reference>
+      <source id="665">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>B&amp;Q Boss sagt, dass die Zeit der billigen osteuropäischen Handwerker vorüber ist</reference>
       <translation system="newstest2016.metamind.4480.en-de">B &amp; Q-Chef sagt, osteuropäische Handwerker arbeiten billig hinter Trend</translation>
       <translation system="newstest2016.cambridge.4502.en-de">B &amp; Q-Chef sagt osteuropäischen Handwerker arbeiten billig ist hinter Trend</translation>
       <translation system="newstest2016.KIT.4504.en-de">B &amp; F-Chef sagt, die osteuropäischen Handwerker billiger arbeiten hinter Trend</translation>
@@ -22726,21 +22726,21 @@
       <translation system="newstest2016.online-B.0.en-de">Wenn Sie mit einem Hammer oder einem Senkrechtstarter in der Malerei Wände praktisch sind, es scheint, dass Sie in der Minderheit in diesen Tagen sind.</translation>
     </seg>
     <seg>
-      <source id="673">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Denn Briten beschäftigen zunehmend Handwerker, um Heimwerkerjobs in ihren Häusern durchzuführen, so der Chef des Unternehmens hinter B&Q.</reference>
+      <source id="673">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Denn Briten beschäftigen zunehmend Handwerker, um Heimwerkerjobs in ihren Häusern durchzuführen, so der Chef des Unternehmens hinter B&amp;Q.</reference>
       <translation system="newstest2016.NYU-UMontreal.4407.en-de">Weil die Briten zunehmend Handymen beschäftigen, um DIY-Arbeitsplätze in ihren Häusern durchzuführen, gemäß dem Chef des Unternehmens hinter B &amp; Q.</translation>
       <translation system="newstest2016.uedin-pbmt.4338.en-de">Denn die Briten sind zunehmend die Heimwerker, DIY Arbeitsplätze in ihren Häusern, laut dem Chef der Firma hinter B &amp; Q.</translation>
       <translation system="newstest2016.uedin-nmt.4312.en-de">Denn die Briten beschäftigen zunehmend Handballer, um DIY-Jobs in ihren Häusern durchzuführen, so der Chef des Unternehmens hinter B &amp; Q.</translation>
       <translation system="newstest2016.KIT.4504.en-de">Denn die Briten sind zunehmend mit Heimwerker, DIY-Arbeitsplätze in ihren Häusern durchzuführen, laut dem Chef des Unternehmens hinter B &amp; Q.</translation>
-      <translation system="newstest2016.online-G.0.en-de">Denn die Briten sind zunehmend beschäftigen Handwerker zur Durchführung von DIY-Arbeitsplätze in Ihren Häusern, nach dem Chef des Unternehmens, das hinter B&F.</translation>
+      <translation system="newstest2016.online-G.0.en-de">Denn die Briten sind zunehmend beschäftigen Handwerker zur Durchführung von DIY-Arbeitsplätze in Ihren Häusern, nach dem Chef des Unternehmens, das hinter B&amp;F.</translation>
     </seg>
     <seg>
-      <source id="675">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Daher plant Kingfisher, 200 weitere Screwfix Shops zu eröffnen, die sich an Handwerker richten und 60 Verkaufsstellen von B&Q zu schließen.</reference>
+      <source id="675">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Daher plant Kingfisher, 200 weitere Screwfix Shops zu eröffnen, die sich an Handwerker richten und 60 Verkaufsstellen von B&amp;Q zu schließen.</reference>
       <translation system="newstest2016.cambridge.4502.en-de">Infolgedessen plant Kingfisher, 200 weitere Screwfix-Geschäfte zu öffnen, die auf eine abzielen, während die Schließung 60 B &amp; Q Outlets.</translation>
       <translation system="newstest2016.jhu-pbmt.4441.en-de">Aus diesem Grund plant Kingfisher 200 mehr Screwfix Filialen zu eröffnen, die sich an Handwerker, während die Schließung von 60 B &amp; Q.</translation>
       <translation system="newstest2016.metamind.4480.en-de">Infolgedessen plant Kingfisher 200 weitere Schraubfixstores zu eröffnen, die auf Handwerker ausgerichtet sind, während 60 B &amp; Q Outlets schließen.</translation>
-      <translation system="newstest2016.online-F.0.en-de">Infolgedessen plant Eisvogel, 200 weitere Screwfix-Speicher zu öffnen, die angestrebte Händler sind, beim Schließen von 60 B&Q-Ausgängen.</translation>
+      <translation system="newstest2016.online-F.0.en-de">Infolgedessen plant Eisvogel, 200 weitere Screwfix-Speicher zu öffnen, die angestrebte Händler sind, beim Schließen von 60 B&amp;Q-Ausgängen.</translation>
       <translation system="newstest2016.NYU-UMontreal.4407.en-de">Infolgedessen plant Kingfisher 200 mehr Screwfix-Geschäfte, die auf Handelsmänner ausgerichtet sind, während die Schließung von 60 B &amp; Q-Verkaufsstellen.</translation>
     </seg>
   </hit>
@@ -23102,12 +23102,12 @@
       <translation system="newstest2016.uedin-nmt.4312.en-de">Kingfisher erzielte einen Rückgang des Halbjahresgewinns und den Umsatz, nachdem die Gruppe die Kosten für die Abschaltung von Geschäften übernommen hatte.</translation>
     </seg>
     <seg>
-      <source id="688">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Wegen des Trends wird Kingfisher, der Screwfix und B&Q besitzt, 200 neue Filialen eröffnen.</reference>
+      <source id="688">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Wegen des Trends wird Kingfisher, der Screwfix und B&amp;Q besitzt, 200 neue Filialen eröffnen.</reference>
       <translation system="newstest2016.KIT-LIMSI.4500.en-de,newstest2016.KIT.4504.en-de">Aufgrund der Entwicklung der Eisvogel, der Screwfix und B &amp; Q, 200 neue Läden eröffnen</translation>
       <translation system="newstest2016.jhu-syntax.4528.en-de">Als Folge der Trend Kingfisher besitzt die Screwfix und B &amp; Q, ist 200 neue Läden eröffnen</translation>
-      <translation system="newstest2016.online-G.0.en-de">Als ein Ergebnis der trend Kingfisher, die besitzt Screwfix und B&Q, ist die Eröffnung von 200 neuen Läden</translation>
-      <translation system="newstest2016.online-F.0.en-de">Infolge des Tendenz Eisvogels der Screwfix und B&Q besitzt, öffnet 200 neue Speicher</translation>
+      <translation system="newstest2016.online-G.0.en-de">Als ein Ergebnis der trend Kingfisher, die besitzt Screwfix und B&amp;Q, ist die Eröffnung von 200 neuen Läden</translation>
+      <translation system="newstest2016.online-F.0.en-de">Infolge des Tendenz Eisvogels der Screwfix und B&amp;Q besitzt, öffnet 200 neue Speicher</translation>
       <translation system="newstest2016.online-A.0.en-de">Als Folge der Trend ist Kingfisher, die Screwfix und B &amp; Q besitzt, 200 neue Geschäfte öffnen</translation>
     </seg>
     <seg>
@@ -23363,12 +23363,12 @@
       <translation system="newstest2016.cambridge.4502.en-de">Das Ergebnis in 200 Screwfix Läden, die auf darauf,,,,,,,</translation>
     </seg>
     <seg>
-      <source id="669">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Gleichzeitig wird Kingfisher 60 B&Q Verkaufsstellen landesweit schließen</reference>
+      <source id="669">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Gleichzeitig wird Kingfisher 60 B&amp;Q Verkaufsstellen landesweit schließen</reference>
       <translation system="newstest2016.metamind.4480.en-de">Gleichzeitig beendet Kingfisher 60 B &amp; Q-Outlets im ganzen Land</translation>
-      <translation system="newstest2016.online-F.0.en-de">Zur gleichen Zeit schließt Eisvogel 60 B&Q-Ausgänge im Ganzen Land</translation>
+      <translation system="newstest2016.online-F.0.en-de">Zur gleichen Zeit schließt Eisvogel 60 B&amp;Q-Ausgänge im Ganzen Land</translation>
       <translation system="newstest2016.uedin-syntax.4262.en-de">Zur gleichen Zeit ist Kingfisher 60 B und Q Outlets im ganzen Land schließen</translation>
-      <translation system="newstest2016.online-G.0.en-de">Zur gleichen Zeit Kingfisher geschlossen 60 B&F outlets im ganzen Land</translation>
+      <translation system="newstest2016.online-G.0.en-de">Zur gleichen Zeit Kingfisher geschlossen 60 B&amp;F outlets im ganzen Land</translation>
       <translation system="newstest2016.jhu-pbmt.4441.en-de">Gleichzeitig schließt Kingfisher 60 B &amp; Q Verkaufsstellen im ganzen Land</translation>
     </seg>
     <seg>

@@ -56,6 +56,15 @@ XML_REPAIR_PATTERNS = [
   (u'<службе', u'&lt;службе'),
   (u'<security', u'&lt;security'),
   (u'< ', u'&lt; '),
+  (u'B&Q', u'B&amp;Q'),
+  (u'B&F', u'B&amp;F'),
+  (u'Q&A', u'Q&amp;A'),
+  (u'</p >', u'&lt;/p &gt;'),
+  (u'<dollar-symbol>', u'&lt;dollar-symbol&gt;'),
+  (u'Б&', u'Б&amp;'),
+  (u'B&S', u'B&amp;S'),
+  (u'b&', u'b&amp;'),
+  (u'B & Q', u'B &amp; Q'),
 ]
 
 

@@ -1533,7 +1533,7 @@
       <translation system="newstest2016.KIT.4428.en-ro">Ankle-shattering coborari irons!</translation>
       <translation system="newstest2016.LIMSI.4423.en-ro">Ankle-shattering fiarele de călcat picior!</translation>
       <translation system="newstest2016.uedin-pbmt.4362.en-ro">Gleznă-picior irons senzaționale!</translation>
-      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Ankle-shattering coborari calcă! </p ></translation>
+      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Ankle-shattering coborari calcă! &lt;/p &gt;</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="eng" target-language="ron">
@@ -2736,7 +2736,7 @@
       <source id="616">In the quarter that ended Aug. 31, FedEx earned $692 million, up 6 percent from a year earlier.</source>
       <reference>În trimestrul care s-a încheiat la 31 august, FedEx a câștigat 692 milioane dolari, cu 6% mai mult decât anul precedent.</reference>
       <translation system="newstest2016.online-A.0.en-ro">În cartierul care sa încheiat 31 august, FedEx a câştigat 692 milioane dolari, 6 la sută de la un an mai devreme.</translation>
-      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">În trimestrul care s-a încheiat Aug. 31, FedEx a câștigat <dollar-symbol> 692 de milioane de dolari, cu 6 procente față de la un an mai devreme.</translation>
+      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">În trimestrul care s-a încheiat Aug. 31, FedEx a câștigat &lt;dollar-symbol&gt; 692 de milioane de dolari, cu 6 procente față de la un an mai devreme.</translation>
       <translation system="newstest2016.uedin-nmt.4301.en-ro">În trimestrul care a încheiat UNK .31, FedEx a câștigat 692 de milioane de dolari, cu până la 6 procente de la un an mai devreme.</translation>
       <translation system="newstest2016.usfd-rescoring.4449.en-ro">în acest trimestru , care s- a încheiat la 31 Aug. FedEx obținut 692 de milioane USD , cu 6 procente față de anul anterior .</translation>
       <translation system="newstest2016.KIT.4428.en-ro">În trimestrul care s- a încheiat Aug. de 31 de ani, FedEx a câștigat schimburile 692 de milioane de euro, cu 6 procente față de anul precedent.</translation>
@@ -4415,7 +4415,7 @@
       <source id="463">Ankle-shattering leg irons!</source>
       <reference>Fiare pentru zdrobirea gleznelor!</reference>
       <translation system="newstest2016.RWTH-SYSCOMB.4497.en-ro">Ankle-shattering calcă piciorul!</translation>
-      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Ankle-shattering coborari calcă! </p ></translation>
+      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Ankle-shattering coborari calcă! &lt;/p &gt;</translation>
       <translation system="newstest2016.jhu-pbmt.4291.en-ro">Componenta ankle spectaculoase irons!</translation>
       <translation system="newstest2016.KIT.4428.en-ro">Ankle-shattering coborari irons!</translation>
       <translation system="newstest2016.uedin-lmu-hiero.4432.en-ro">Ankle-shattering picior irons!</translation>
@@ -14801,7 +14801,7 @@
       <translation system="newstest2016.jhu-pbmt.4291.en-ro">Componenta ankle spectaculoase irons!</translation>
       <translation system="newstest2016.usfd-rescoring.4449.en-ro">irons Ankle-shattering picior !</translation>
       <translation system="newstest2016.lmu-cuni.4495.en-ro">Ankle - piciorul afectat irons!</translation>
-      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Ankle-shattering coborari calcă! </p ></translation>
+      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Ankle-shattering coborari calcă! &lt;/p &gt;</translation>
       <translation system="newstest2016.uedin-pbmt.4362.en-ro">Gleznă-picior irons senzaționale!</translation>
     </seg>
     <seg>
@@ -15553,7 +15553,7 @@
       <source id="616">In the quarter that ended Aug. 31, FedEx earned $692 million, up 6 percent from a year earlier.</source>
       <reference>În trimestrul care s-a încheiat la 31 august, FedEx a câștigat 692 milioane dolari, cu 6% mai mult decât anul precedent.</reference>
       <translation system="newstest2016.RWTH-SYSCOMB.4497.en-ro">În trimestrul încheiat Aug. 31, FedEx a câștigat 692 de milioane de dolari, în creștere cu 6 la sută față de anul anterior.</translation>
-      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">În trimestrul care s-a încheiat Aug. 31, FedEx a câștigat <dollar-symbol> 692 de milioane de dolari, cu 6 procente față de la un an mai devreme.</translation>
+      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">În trimestrul care s-a încheiat Aug. 31, FedEx a câștigat &lt;dollar-symbol&gt; 692 de milioane de dolari, cu 6 procente față de la un an mai devreme.</translation>
       <translation system="newstest2016.usfd-rescoring.4449.en-ro">în acest trimestru , care s- a încheiat la 31 Aug. FedEx obținut 692 de milioane USD , cu 6 procente față de anul anterior .</translation>
       <translation system="newstest2016.lmu-cuni.4495.en-ro">În trimestru care s- a încheiat Aug. 31, FedEx a câștigat 692 milioane USD, in crestere cu 6 procente față de anul precedent.</translation>
       <translation system="newstest2016.uedin-pbmt.4362.en-ro">În trimestrul care s-a încheiat în 31 Aug., FedEx a obținut 692 de milioane de dolari, în creștere cu 6% de la un an mai devreme.</translation>
@@ -15565,7 +15565,7 @@
       <translation system="newstest2016.jhu-pbmt.4291.en-ro">Câştigurile per acţiune se ridicau la 2.42 USD, la 2.44 USD per acţiune previziunea medie de 12 analiștii intervievați de Zacks Investment Research.</translation>
       <translation system="newstest2016.LIMSI.4423.en-ro">Câștigurile per acțiune s-au ridicat la $2.42, $2.44 pe cota medie prognozată de 12 analiștii intervievați de Zacks Investment Research.</translation>
       <translation system="newstest2016.KIT.4428.en-ro">Câștigurile pe acțiune s- au ridicat la schimburile 2.42, de schimburile 2.44 pe previziunea medie de 12 analiști intervievați de Zacks Investment Research.</translation>
-      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Câștigurile per acțiune s-au ridicat la <dollar-symbol> 2.42, scurt de 2.44 previziunea medie de 12 analiști intervievați de Zacks Investment Research.</translation>
+      <translation system="newstest2016.QT21-HimL-SysComb.4513.en-ro">Câștigurile per acțiune s-au ridicat la &lt;dollar-symbol&gt; 2.42, scurt de 2.44 previziunea medie de 12 analiști intervievați de Zacks Investment Research.</translation>
     </seg>
     <seg>
       <source id="618">Revenue rose 5 percent, to $12.3 billion.</source>

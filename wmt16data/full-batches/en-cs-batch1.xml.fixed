@@ -1237,8 +1237,8 @@
       <translation system="newstest2016.tuning-task-dcu.0.en-cs">Ledňáček zveřejnil na podzim v obou pololetní zisk a tržby poté, co skupina si náklady na uzavření obchodů.</translation>
     </seg>
     <seg>
-      <source id="601">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Výsledkem trendu Kingfisher, který vlastní Screwfix a B&Q, je otevřít 200 nových obchodů</reference>
+      <source id="601">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Výsledkem trendu Kingfisher, který vlastní Screwfix a B&amp;Q, je otevřít 200 nových obchodů</reference>
       <translation system="newstest2016.tuning-task-usaar-harmonic-mert-mira.0.en-cs">Jak je vývojovou tendenci se stala společnost Kingfisher bral v úvahu nové tahle společnost má. Screwfix Q, T S, T a vloupáních kolonistům umožnila nashromáždit velké zásoby dvěma sty čísly. Otevírá</translation>
       <translation system="newstest2016.uedin-cu-syntax.4494.en-cs">V důsledku trendu Kingfisher, který vlastní Screwfix a B &amp; Q, je otevření 200 nových prodejen</translation>
       <translation system="newstest2016.cu-mergedtrees.4406.en-cs">V důsledku vývoje ledňáček, která vlastní screwfix a b &amp; Q, otevírá 200 nových</translation>
@@ -5569,8 +5569,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="cze">
     <seg>
-      <source id="586">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Protože Britové stále více zaměstnávají řemeslníky, aby prováděli kutilské práce u nich doma, podle šéfky společnosti za Screwfix B&Q.</reference>
+      <source id="586">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Protože Britové stále více zaměstnávají řemeslníky, aby prováděli kutilské práce u nich doma, podle šéfky společnosti za Screwfix B&amp;Q.</reference>
       <translation system="newstest2016.tuning-task-usaar-hmm-mert.0.en-cs">Protože Britové stále častěji využívají pracovníci vykonávat domácí práce doma, podle šéfa společnosti za kutil.</translation>
       <translation system="newstest2016.tuning-task-usaar-harmonic-mert-mira.0.en-cs">Kteří Britům vylíčili, proto, že ve stále větší míře a a nezapoměňte, že, která používají u sebe, že si zařídili tady v out ve svých domovech umírají při útocích jedovatým pracovními místy, které, že v souladu s, které začnu dusit a za nimi n barvy displeje dle m (a to podle společnosti musel omlouvat.</translation>
       <translation system="newstest2016.tuning-task-usaar-hmm-mira.0.en-cs">Protože Britové budou více zařízení, aby si práci domů, aby společnost za A.</translation>
@@ -5578,8 +5578,8 @@
       <translation system="newstest2016.online-B.0.en-cs">Vzhledem k tomu, Britové stále častěji využívají domácí kutily, aby provádět DIY pracovních míst ve svých domovech, podle šéfa firmy za B &amp; Q.</translation>
     </seg>
     <seg>
-      <source id="588">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Výsledkem je, že Kingfisher plánuje otevřít 200 dalších Screwfix obchodů zaměřených na obchodníky, a zavírá 60 B&Q outletů.</reference>
+      <source id="588">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Výsledkem je, že Kingfisher plánuje otevřít 200 dalších Screwfix obchodů zaměřených na obchodníky, a zavírá 60 B&amp;Q outletů.</reference>
       <translation system="newstest2016.jhu-pbmt.4292.en-cs">Výsledkem je, že Kingfisher plánuje otevřít dalších 200 Screwfix obchodů, které jsou zaměřené na obchodníky, zatímco zavírání 60 B &amp; Q prodejen.</translation>
       <translation system="newstest2016.uedin-cu-syntax.4494.en-cs">Kingfisher proto plánuje otevřít dalších 200 Screwfix zavírání obchodů, které jsou zaměřené na obchodníky, zatímco 60 prodejen B &amp; Q.</translation>
       <translation system="newstest2016.cu-tamchyna.4514.en-cs">To má za následek, že ledňáček plánuje otevření dalších obchodů Screwfix 200, které jsou zaměřeny na obchodníky, při zavírání 60 DIZU prodejen.</translation>
@@ -5587,8 +5587,8 @@
       <translation system="newstest2016.tuning-task-bleu-mert.0.en-cs,newstest2016.tuning-task-bleu-mira.0.en-cs,newstest2016.tuning-task-dcu.0.en-cs">Výsledkem je, že ledňáčka plánuje otevření dalších 200 screwfix obchodů, které jsou zaměřeny na obchodníky, zatímco 60 B &amp; Q prodejen.</translation>
     </seg>
     <seg>
-      <source id="589">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
-      <reference>Paní Laury tvrdí, že chce zaměstnat více žen v obchodech B&Q, protože osm z deseti nákupních rozhodnutí v obchodě dělají lepší polovičky.</reference>
+      <source id="589">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <reference>Paní Laury tvrdí, že chce zaměstnat více žen v obchodech B&amp;Q, protože osm z deseti nákupních rozhodnutí v obchodě dělají lepší polovičky.</reference>
       <translation system="newstest2016.online-B.0.en-cs">Paní Laury uvedl, že chce více žen, které mají být použity v obchodech, B &amp; Q, protože osm z deseti rozhodnutí o nákupu v obchodě jsou vyrobeny něžnému pohlaví.</translation>
       <translation system="newstest2016.cu-chimera.4527.en-cs">Paní Laury říkala, že chce další ženy, které budou využity v Bauhausu obchodů, protože osm z deseti nákupních rozhodnutí v obchodě jsou vytvářeny něžné pohlaví.</translation>
       <translation system="newstest2016.NYU-UMontreal.4294.en-cs">Paní Lauryová říkala, že chce, aby byly více žen zaměstnány v obchodech B &amp; Q, protože osm z deseti kupních rozhodnutí v obchodě provádí spravedlivější sex.</translation>
@@ -5645,8 +5645,8 @@
       <translation system="newstest2016.uedin-nmt.4360.en-cs">Výsledkem je 200 dalších skladů Screwfix, zaměřené na živnostníky, otevření</translation>
     </seg>
     <seg>
-      <source id="582">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Současně Kingfisher uzavírá 60 B&Q outletů po celé zemi</reference>
+      <source id="582">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Současně Kingfisher uzavírá 60 B&amp;Q outletů po celé zemi</reference>
       <translation system="newstest2016.online-A.0.en-cs">V téže době Kingfisher zavírá 60 B &amp; Q prodejen po celé zemi</translation>
       <translation system="newstest2016.cu-chimera.4527.en-cs">Ve stejné době ledňáček zavře 60 Ikei prodejen po celé zemi</translation>
       <translation system="newstest2016.cu-tamchyna.4514.en-cs">Ve stejné době ledňáček uzavře 60 Ikei prodejen po celé zemi</translation>
@@ -6622,8 +6622,8 @@
       <translation system="newstest2016.online-A.0.en-cs">Další zraněný obdrží polovinu této částky.</translation>
     </seg>
     <seg>
-      <source id="578">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>Šéf B&Q tvrdí, že obchodníci Východní Evropy pracující za levno už nění trendem</reference>
+      <source id="578">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>Šéf B&amp;Q tvrdí, že obchodníci Východní Evropy pracující za levno už nění trendem</reference>
       <translation system="newstest2016.tuning-task-bleu-mert.0.en-cs">B &amp; q šéf říká, že východoevropské řemeslníci, pracující za trend je levný</translation>
       <translation system="newstest2016.cu-mergedtrees.4406.en-cs">B &amp; Q šéf říká východní Evropy pracovní Cheap je za trend</translation>
       <translation system="newstest2016.tuning-task-afrl2.0.en-cs,newstest2016.tuning-task-beer-pro.0.en-cs">B &amp; q šéf říká východoevropských řemeslníci, pracující za levný je trend</translation>
@@ -7947,8 +7947,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="cze">
     <seg>
-      <source id="582">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Současně Kingfisher uzavírá 60 B&Q outletů po celé zemi</reference>
+      <source id="582">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Současně Kingfisher uzavírá 60 B&amp;Q outletů po celé zemi</reference>
       <translation system="newstest2016.jhu-pbmt.4292.en-cs">Ve stejné době Kingfisher uzavírá 60 B &amp; Q prodejen po celé zemi</translation>
       <translation system="newstest2016.cu-tamchyna.4514.en-cs">Ve stejné době ledňáček uzavře 60 Ikei prodejen po celé zemi</translation>
       <translation system="newstest2016.uedin-cu-syntax.4494.en-cs">Kingfisher ve stejné chvíli zavírá 60 B &amp; Q prodejních míst po celé zemi</translation>
@@ -11987,8 +11987,8 @@
       <translation system="newstest2016.tuning-task-usaar-hmm-mert.0.en-cs">Ledňáček zveřejnila pololetní zisk a pokles prodeje skupiny si náklady na uzavření obchodů.</translation>
     </seg>
     <seg>
-      <source id="601">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Výsledkem trendu Kingfisher, který vlastní Screwfix a B&Q, je otevřít 200 nových obchodů</reference>
+      <source id="601">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Výsledkem trendu Kingfisher, který vlastní Screwfix a B&amp;Q, je otevřít 200 nových obchodů</reference>
       <translation system="newstest2016.tuning-task-usaar-hmm-mira.0.en-cs">Při vývoji, který screwfix a m, 100 obchodů</translation>
       <translation system="newstest2016.online-B.0.en-cs">V důsledku trendu Kingfisher, která je vlastníkem Screwfix A a B &amp; Q, je otevření 200 nových prodejen</translation>
       <translation system="newstest2016.online-A.0.en-cs">Jako důsledek trendu ledňáčka, který vlastní Screwfix a B &amp; Q, otevírá 200 nové obchody</translation>
@@ -16056,8 +16056,8 @@
       <translation system="newstest2016.tuning-task-usaar-hmm-mert.0.en-cs">Další zranění, obdrží polovinu.</translation>
     </seg>
     <seg>
-      <source id="578">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>Šéf B&Q tvrdí, že obchodníci Východní Evropy pracující za levno už nění trendem</reference>
+      <source id="578">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>Šéf B&amp;Q tvrdí, že obchodníci Východní Evropy pracující za levno už nění trendem</reference>
       <translation system="newstest2016.NYU-UMontreal.4294.en-cs">B &amp; Q šéf říká, že východní evropští obchodníci, kteří pracují levně, je za trendem.</translation>
       <translation system="newstest2016.tuning-task-bleu-mira.0.en-cs,newstest2016.tuning-task-dcu.0.en-cs">B &amp; q šéf říká, že východoevropské řemeslníci, pracující levně je za trend</translation>
       <translation system="newstest2016.cu-chimera.4527.en-cs">Kutil šéf říká, že východní Evropy je za trendem levné.</translation>
@@ -16241,8 +16241,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="cze">
     <seg>
-      <source id="588">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Výsledkem je, že Kingfisher plánuje otevřít 200 dalších Screwfix obchodů zaměřených na obchodníky, a zavírá 60 B&Q outletů.</reference>
+      <source id="588">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Výsledkem je, že Kingfisher plánuje otevřít 200 dalších Screwfix obchodů zaměřených na obchodníky, a zavírá 60 B&amp;Q outletů.</reference>
       <translation system="newstest2016.tuning-task-bleu-mert.0.en-cs,newstest2016.tuning-task-bleu-mira.0.en-cs,newstest2016.tuning-task-dcu.0.en-cs">Výsledkem je, že ledňáčka plánuje otevření dalších 200 screwfix obchodů, které jsou zaměřeny na obchodníky, zatímco 60 B &amp; Q prodejen.</translation>
       <translation system="newstest2016.uedin-nmt.4360.en-cs">V důsledku toho plánuje Kingfisher otevřít 200 dalších obchodů s názvem Screwfix, které jsou zaměřeny na živnostníky, zatímco uzavírá 60 B &amp; Q prodejen.</translation>
       <translation system="newstest2016.tuning-task-afrl1.0.en-cs,newstest2016.tuning-task-afrl2.0.en-cs">V důsledku toho Kingfisher plánuje otevření dalších 200 screwfix obchodů, které jsou zaměřeny na obchodníky, zatímco 60 B &amp; Q prodejen.</translation>
@@ -16250,8 +16250,8 @@
       <translation system="newstest2016.online-A.0.en-cs">Jako výsledek Kingfisher plánuje otevřít 200 více Screwfix obchody, které jsou zaměřeny na řemeslníky, při zavírání 60 B &amp; Q prodejny.</translation>
     </seg>
     <seg>
-      <source id="589">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
-      <reference>Paní Laury tvrdí, že chce zaměstnat více žen v obchodech B&Q, protože osm z deseti nákupních rozhodnutí v obchodě dělají lepší polovičky.</reference>
+      <source id="589">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <reference>Paní Laury tvrdí, že chce zaměstnat více žen v obchodech B&amp;Q, protože osm z deseti nákupních rozhodnutí v obchodě dělají lepší polovičky.</reference>
       <translation system="newstest2016.cu-tamchyna.4514.en-cs">Paní Laury říkala, že chce další ženy, aby byli zaměstnáni v Bauhausu obchody, protože osm z deseti nákupních rozhodnutí v obchodě jsou něžné pohlaví.</translation>
       <translation system="newstest2016.uedin-nmt.4360.en-cs">Paní Laury řekla, že chce, aby bylo v obchodech B &amp; Q zaměstnáno více žen, protože osm z deseti nákupních rozhodnutí v obchodě se skládá ze spravedlivějšího pohlaví.</translation>
       <translation system="newstest2016.online-B.0.en-cs">Paní Laury uvedl, že chce více žen, které mají být použity v obchodech, B &amp; Q, protože osm z deseti rozhodnutí o nákupu v obchodě jsou vyrobeny něžnému pohlaví.</translation>
@@ -16375,8 +16375,8 @@
       <translation system="newstest2016.tuning-task-usaar-harmonic-mert-mira.0.en-cs">Pøece jen se hodíš v případě, který with, který nemáchají kladivy nebo trochu umělec šest. Ohromující. Se vás zeptal, pane Těrenťjeve elektrického světla přímo jiskřila že jako jeden z mála v dnešní době......</translation>
     </seg>
     <seg>
-      <source id="586">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Protože Britové stále více zaměstnávají řemeslníky, aby prováděli kutilské práce u nich doma, podle šéfky společnosti za Screwfix B&Q.</reference>
+      <source id="586">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Protože Britové stále více zaměstnávají řemeslníky, aby prováděli kutilské práce u nich doma, podle šéfky společnosti za Screwfix B&amp;Q.</reference>
       <translation system="newstest2016.online-A.0.en-cs">Protože Britové stále zaměstnává kutily k provádění DIY pracovních míst ve svých domovech, podle šéfa společnosti za B &amp; Q.</translation>
       <translation system="newstest2016.cu-TectoMT.4330.en-cs">Protože Britové stále používají údržbáře, aby prováděli DIY práce ve svých domech, podle šéfa společnosti za B &amp; Q.</translation>
       <translation system="newstest2016.cu-chimera.4527.en-cs">Vzhledem k tomu, že Britové stále používají údržbáře, aby provádějí DIY pracovních míst ve svých domech, podle šéfa firmy za Kutil.</translation>
@@ -18909,8 +18909,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="cze">
     <seg>
-      <source id="601">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Výsledkem trendu Kingfisher, který vlastní Screwfix a B&Q, je otevřít 200 nových obchodů</reference>
+      <source id="601">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Výsledkem trendu Kingfisher, který vlastní Screwfix a B&amp;Q, je otevřít 200 nových obchodů</reference>
       <translation system="newstest2016.online-A.0.en-cs">Jako důsledek trendu ledňáčka, který vlastní Screwfix a B &amp; Q, otevírá 200 nové obchody</translation>
       <translation system="newstest2016.cu-chimera.4527.en-cs">V důsledku tohoto trendu ledňáčka, který vlastní Screwfix a Kutil, otevírá 200 nových obchodů</translation>
       <translation system="newstest2016.tuning-task-fjfi.0.en-cs">V důsledku trend Kingfisher, který vlastní screwfix a B &amp; Q, otvírá 200 nových obchodů</translation>
@@ -19092,8 +19092,8 @@
       <translation system="newstest2016.cu-tamchyna.4514.en-cs">Jste-li po ruce s kladivem nebo esem v malování stěn, zdá se, že jste v menšině v těchto dnech.</translation>
     </seg>
     <seg>
-      <source id="586">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Protože Britové stále více zaměstnávají řemeslníky, aby prováděli kutilské práce u nich doma, podle šéfky společnosti za Screwfix B&Q.</reference>
+      <source id="586">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Protože Britové stále více zaměstnávají řemeslníky, aby prováděli kutilské práce u nich doma, podle šéfky společnosti za Screwfix B&amp;Q.</reference>
       <translation system="newstest2016.online-B.0.en-cs">Vzhledem k tomu, Britové stále častěji využívají domácí kutily, aby provádět DIY pracovních míst ve svých domovech, podle šéfa firmy za B &amp; Q.</translation>
       <translation system="newstest2016.NYU-UMontreal.4294.en-cs">Protože Britové stále více zaměstnávají muže, aby prováděli pracovní místa DIY ve svých domovech, podle šéfa společnosti za B &amp; Q.</translation>
       <translation system="newstest2016.uedin-cu-syntax.4494.en-cs">Vzhledem k tomu, že Britové jsou ve stále větší míře využívají kutilové provádět DIY pracovních míst ve svých domovech, podle šéfa firmy za B &amp; Q.</translation>
@@ -19101,8 +19101,8 @@
       <translation system="newstest2016.cu-tamchyna.4514.en-cs">Vzhledem k tomu, že Britové stále používají údržbáře, aby prováděli DIY pracovních míst ve svých domech, podle šéfa firmy za Bauhausu.</translation>
     </seg>
     <seg>
-      <source id="588">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Výsledkem je, že Kingfisher plánuje otevřít 200 dalších Screwfix obchodů zaměřených na obchodníky, a zavírá 60 B&Q outletů.</reference>
+      <source id="588">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Výsledkem je, že Kingfisher plánuje otevřít 200 dalších Screwfix obchodů zaměřených na obchodníky, a zavírá 60 B&amp;Q outletů.</reference>
       <translation system="newstest2016.cu-mergedtrees.4406.en-cs">V důsledku ledňáček hodlá zahájit 200 screwfix, které zaměřeny na, zatímco zavírání 60 b &amp; Q.</translation>
       <translation system="newstest2016.cu-tamchyna.4514.en-cs">To má za následek, že ledňáček plánuje otevření dalších obchodů Screwfix 200, které jsou zaměřeny na obchodníky, při zavírání 60 DIZU prodejen.</translation>
       <translation system="newstest2016.tuning-task-beer-pro.0.en-cs">Výsledkem je, že ledňáčka plánuje otevření dalších 200 screwfix obchodů, které jsou zaměřeny na obchodníky, zatímco 60 B &amp; Q odbytiště.</translation>
@@ -19179,8 +19179,8 @@
       <translation system="newstest2016.cu-chimera.4527.en-cs">V důsledku dalších 200 obchodů Screwfix zaměřených na obchodníky, otevření</translation>
     </seg>
     <seg>
-      <source id="582">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Současně Kingfisher uzavírá 60 B&Q outletů po celé zemi</reference>
+      <source id="582">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Současně Kingfisher uzavírá 60 B&amp;Q outletů po celé zemi</reference>
       <translation system="newstest2016.cu-TectoMT.4330.en-cs">Ve stejné době ledňáček zavírá 60 B &amp; Q prodejen po zemi</translation>
       <translation system="newstest2016.cu-mergedtrees.4406.en-cs">Současně ledňáček zavírá 60 b &amp; Q po celé zemi</translation>
       <translation system="newstest2016.uedin-nmt.4360.en-cs">Zároveň Kingfisher uzavírá 60 B &amp; Q prodejen po celé zemi</translation>
@@ -20794,8 +20794,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="cze">
     <seg>
-      <source id="578">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>Šéf B&Q tvrdí, že obchodníci Východní Evropy pracující za levno už nění trendem</reference>
+      <source id="578">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>Šéf B&amp;Q tvrdí, že obchodníci Východní Evropy pracující za levno už nění trendem</reference>
       <translation system="newstest2016.cu-mergedtrees.4406.en-cs">B &amp; Q šéf říká východní Evropy pracovní Cheap je za trend</translation>
       <translation system="newstest2016.jhu-pbmt.4292.en-cs">B &amp; Q šéf říká, že východoevropští obchodníci pracují levně je za trend</translation>
       <translation system="newstest2016.tuning-task-afrl2.0.en-cs,newstest2016.tuning-task-beer-pro.0.en-cs">B &amp; q šéf říká východoevropských řemeslníci, pracující za levný je trend</translation>
@@ -22621,8 +22621,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="cze">
     <seg>
-      <source id="589">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
-      <reference>Paní Laury tvrdí, že chce zaměstnat více žen v obchodech B&Q, protože osm z deseti nákupních rozhodnutí v obchodě dělají lepší polovičky.</reference>
+      <source id="589">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <reference>Paní Laury tvrdí, že chce zaměstnat více žen v obchodech B&amp;Q, protože osm z deseti nákupních rozhodnutí v obchodě dělají lepší polovičky.</reference>
       <translation system="newstest2016.cu-mergedtrees.4406.en-cs">Paní beru do oznámil že stále že chce víc žen využít v b &amp; Q obchody protože osm z deseti koupi rozhodování v něžné pohlaví.</translation>
       <translation system="newstest2016.tuning-task-afrl2.0.en-cs,newstest2016.tuning-task-bleu-mert.0.en-cs,newstest2016.tuning-task-bleu-mira.0.en-cs,newstest2016.tuning-task-dcu.0.en-cs">Paní Laury řekla, že chce více žen zaměstnaných v B &amp; Q obchodů, protože osm z deseti rozhodnutí o nákupu v obchodě jsou něžné pohlaví.</translation>
       <translation system="newstest2016.tuning-task-beer-pro.0.en-cs">Paní Laury řekla, že chce být více žen zaměstnaných v B &amp; Q obchody, protože osm z deseti rozhodnutí o nákupu v obchodě jsou něžné pohlaví.</translation>

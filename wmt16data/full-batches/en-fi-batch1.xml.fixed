@@ -392,8 +392,8 @@
       <translation system="newstest2016.abumatran-nmt.4412.en-fi">Toiset loukkaantuneet saavat puolet siitä summasta.</translation>
     </seg>
     <seg>
-      <source id="519">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>B&Q-pomo sanoo, että itäeurooppalaiset halvalla työskentelevät työmiehet ovat suosion takana</reference>
+      <source id="519">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>B&amp;Q-pomo sanoo, että itäeurooppalaiset halvalla työskentelevät työmiehet ovat suosion takana</reference>
       <translation system="newstest2016.online-A.0.en-fi">BQ/Teachers &amp; pomo sanoo Itä-Euroopan käsityöläisten työtä halpoja on takana trend</translation>
       <translation system="newstest2016.UH-factored.4382.en-fi">B &amp; q johtaja sanoo Itä-Euroopan käsityöläisten töitä trendin taustalla on halpaa</translation>
       <translation system="newstest2016.UH-opus.4414.en-fi">B &amp; q pomo sanoo itäeurooppalaiset kauppiaat toimivat kehityksen takana on halpaa</translation>
@@ -1262,12 +1262,12 @@
       <translation system="newstest2016.abumatran-pbsmt.4409.en-fi">Jos olet kätevän vasaran tai whizz seinien maalaamisella, olet vähemmistössä näinä päivinä.</translation>
     </seg>
     <seg>
-      <source id="527">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Britit näet palkkaavat yhä enemmän apumiehiä hoitamaan tee-se-itse-töitä kodeissaan, kertoo B&Q:n takana olevan yrityksen pomo.</reference>
+      <source id="527">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Britit näet palkkaavat yhä enemmän apumiehiä hoitamaan tee-se-itse-töitä kodeissaan, kertoo B&amp;Q:n takana olevan yrityksen pomo.</reference>
       <translation system="newstest2016.online-B.0.en-fi">Koska britit ovat yhä käyttävät handymen suorittaa DIY työpaikkoja kotinsa, mukaan pomo yrityksen takana B &amp; Q.</translation>
       <translation system="newstest2016.aalto.4405.en-fi">Koska britit ovat yhä työllistää hengittämisestä rakennusmiehille suorittaa itse -työstä työpaikkaa kotiinsa, pomo mukaan yrityksen takana B &amp; Q</translation>
       <translation system="newstest2016.UH-factored.4382.en-fi">Koska britit ovat yhä työllistää rakennusmiehet suorittamaan tee-se-itse-strategia työpaikkojen koteihinsa mukaan yhtiön johtaja B &amp; q takana.</translation>
-      <translation system="newstest2016.online-G.0.en-fi">Koska Britit ovat yhä työllistävät yleismiehet suorittaa DIY työpaikkoja kodeissaan, mukaan pomo yrityksen takana B&Q.</translation>
+      <translation system="newstest2016.online-G.0.en-fi">Koska Britit ovat yhä työllistävät yleismiehet suorittaa DIY työpaikkoja kodeissaan, mukaan pomo yrityksen takana B&amp;Q.</translation>
       <translation system="newstest2016.jhu-pbmt.4289.en-fi">Koska britit ovat yhä palkata käsityöläisille aiheutuvia sivuvaikutuksia suorittaa askartelen työpaikkoja kodeissa, yrityksen johtaja takana B &amp; Q</translation>
     </seg>
   </hit>
@@ -1302,11 +1302,11 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="523">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Samaan aikaan Kingfisher sulkee 60 B&Q-myymälää ympäri maata</reference>
+      <source id="523">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Samaan aikaan Kingfisher sulkee 60 B&amp;Q-myymälää ympäri maata</reference>
       <translation system="newstest2016.aalto.4405.en-fi">Samalla tasolla kuningaskalastajat sulkee kuudestakymmenestä B &amp; Q-liikkeissä ympäri maan</translation>
       <translation system="newstest2016.abumatran-combo.4496.en-fi,newstest2016.abumatran-nmt.4412.en-fi">Samaan aikaan Kingfisher täydentyy 60 B &amp; Q myymälää eri puolilla maata</translation>
-      <translation system="newstest2016.online-G.0.en-fi">Samaan aikaan Kingfisher lähestyy 60 B&Q myyntipisteistä eri puolilla maata</translation>
+      <translation system="newstest2016.online-G.0.en-fi">Samaan aikaan Kingfisher lähestyy 60 B&amp;Q myyntipisteistä eri puolilla maata</translation>
       <translation system="newstest2016.online-A.0.en-fi">Samalla Kingfisher suljetaan 60 BQ/Teachers &amp; myyntipisteistä eri puolilla maata</translation>
       <translation system="newstest2016.UUT.4529.en-fi">Samaan aikaan Kingfisher sulkee 60 b:n &amp; q:n myyntipisteitä ympäri maata</translation>
     </seg>
@@ -1513,12 +1513,12 @@
       <translation system="newstest2016.online-G.0.en-fi">Kingfisher lähetetty lasku sekä puolet vuoden tuloksesta ja myynnin jälkeen ryhmä harteilleen kustannukset sulkeminen myymälöissä.</translation>
     </seg>
     <seg>
-      <source id="542">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Trendin tuloksena Screwfix- ja B&Q-myymälät omistava Kingfisher on avaamassa 200 uutta liikettä</reference>
+      <source id="542">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Trendin tuloksena Screwfix- ja B&amp;Q-myymälät omistava Kingfisher on avaamassa 200 uutta liikettä</reference>
       <translation system="newstest2016.UH-opus.4414.en-fi">Kehityksen seurauksena kuningaskalastaja, joka omistaa screwfix ja B &amp; Q, avaa 200 uutta kaupoissa</translation>
       <translation system="newstest2016.NYU-UMontreal.4329.en-fi">Suuntauksen kehityssuuntaus, joka omistaa Serswadin ja B &amp; Q: n, avaa 200 uutta varastoa.</translation>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Seurauksena suuntaus Kingfisher, joka omistaa Screwfix ja B &amp; Q 200, avaa uusia tavarataloja</translation>
-      <translation system="newstest2016.online-G.0.en-fi">Seurauksena trendi Kingfisher, joka omistaa Screwfix ja B&Q, avaamalla 200 uutta myymälää</translation>
+      <translation system="newstest2016.online-G.0.en-fi">Seurauksena trendi Kingfisher, joka omistaa Screwfix ja B&amp;Q, avaamalla 200 uutta myymälää</translation>
       <translation system="newstest2016.aalto.4405.en-fi">Seurauksena kuningaskalastajat suuntaus, joka omistaa Screwfix ja B &amp; Q, avautuu kaksisataa uutta myymälöihin</translation>
     </seg>
     <seg>
@@ -11597,8 +11597,8 @@
       <translation system="newstest2016.aalto.4405.en-fi">Mikä lisää kahteensataan Screwfix ketjuista, jolla pyritään kauppiaita,</translation>
     </seg>
     <seg>
-      <source id="523">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Samaan aikaan Kingfisher sulkee 60 B&Q-myymälää ympäri maata</reference>
+      <source id="523">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Samaan aikaan Kingfisher sulkee 60 B&amp;Q-myymälää ympäri maata</reference>
       <translation system="newstest2016.UH-factored.4382.en-fi">Tällä samalla sulkee 60 B &amp; mindanaonkalastaja q:n myymälöitä ympäri maata</translation>
       <translation system="newstest2016.abumatran-combo.4496.en-fi,newstest2016.abumatran-nmt.4412.en-fi">Samaan aikaan Kingfisher täydentyy 60 B &amp; Q myymälää eri puolilla maata</translation>
       <translation system="newstest2016.UUT.4529.en-fi">Samaan aikaan Kingfisher sulkee 60 b:n &amp; q:n myyntipisteitä ympäri maata</translation>
@@ -16807,8 +16807,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="542">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Trendin tuloksena Screwfix- ja B&Q-myymälät omistava Kingfisher on avaamassa 200 uutta liikettä</reference>
+      <source id="542">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Trendin tuloksena Screwfix- ja B&amp;Q-myymälät omistava Kingfisher on avaamassa 200 uutta liikettä</reference>
       <translation system="newstest2016.abumatran-pbsmt.4409.en-fi">Suuntauksen seurauksena Kingfisher, joka omistaa Screwfix ja B &amp; Q, avaa uuden myymälän 200</translation>
       <translation system="newstest2016.online-A.0.en-fi">Seurauksena trendi Kingfisher, joka omistaa Screwfix ja B/Teachers &amp; Q, avaa 200 uutta myymälää</translation>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Seurauksena suuntaus Kingfisher, joka omistaa Screwfix ja B &amp; Q 200, avaa uusia tavarataloja</translation>
@@ -17111,13 +17111,13 @@
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Johti 200 enemmän suunnattu Screwfix myymälöihin, kauppiaita, avaa</translation>
     </seg>
     <seg>
-      <source id="523">At same time Kingfisher is closing 60 B&Q outlets across the country</source>
-      <reference>Samaan aikaan Kingfisher sulkee 60 B&Q-myymälää ympäri maata</reference>
+      <source id="523">At same time Kingfisher is closing 60 B&amp;Q outlets across the country</source>
+      <reference>Samaan aikaan Kingfisher sulkee 60 B&amp;Q-myymälää ympäri maata</reference>
       <translation system="newstest2016.UH-factored.4382.en-fi">Tällä samalla sulkee 60 B &amp; mindanaonkalastaja q:n myymälöitä ympäri maata</translation>
       <translation system="newstest2016.abumatran-pbsmt.4409.en-fi">Samaan aikaan Kingfisher sulkee 60 B &amp; Q myymälää eri puolilla maata</translation>
       <translation system="newstest2016.aalto.4405.en-fi">Samalla tasolla kuningaskalastajat sulkee kuudestakymmenestä B &amp; Q-liikkeissä ympäri maan</translation>
       <translation system="newstest2016.online-B.0.en-fi">Samanaikaisesti Kingfisher sulkee 60 B &amp; Q myyntipisteistä eri puolilla maata</translation>
-      <translation system="newstest2016.online-G.0.en-fi">Samaan aikaan Kingfisher lähestyy 60 B&Q myyntipisteistä eri puolilla maata</translation>
+      <translation system="newstest2016.online-G.0.en-fi">Samaan aikaan Kingfisher lähestyy 60 B&amp;Q myyntipisteistä eri puolilla maata</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
@@ -17343,13 +17343,13 @@
       <translation system="newstest2016.abumatran-pbsmt.4409.en-fi">Kingfisher lähetettyjen laskuun sekä kuusi kuukautta sen jälkeen, kun konsernin voiton ja myynnin kustannukset kantoivat pimentämäkaupoissa.</translation>
     </seg>
     <seg>
-      <source id="542">As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</source>
-      <reference>Trendin tuloksena Screwfix- ja B&Q-myymälät omistava Kingfisher on avaamassa 200 uutta liikettä</reference>
+      <source id="542">As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</source>
+      <reference>Trendin tuloksena Screwfix- ja B&amp;Q-myymälät omistava Kingfisher on avaamassa 200 uutta liikettä</reference>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Seurauksena suuntaus Kingfisher, joka omistaa Screwfix ja B &amp; Q 200, avaa uusia tavarataloja</translation>
       <translation system="newstest2016.NYU-UMontreal.4329.en-fi">Suuntauksen kehityssuuntaus, joka omistaa Serswadin ja B &amp; Q: n, avaa 200 uutta varastoa.</translation>
       <translation system="newstest2016.UH-factored.4382.en-fi">Tuloksesta, joka omistaa mindanaonkalastaja trendejä ja B &amp; q screwfix, avaa 200 uutta myrkkyvarastoihin</translation>
       <translation system="newstest2016.abumatran-pbsmt.4409.en-fi">Suuntauksen seurauksena Kingfisher, joka omistaa Screwfix ja B &amp; Q, avaa uuden myymälän 200</translation>
-      <translation system="newstest2016.online-G.0.en-fi">Seurauksena trendi Kingfisher, joka omistaa Screwfix ja B&Q, avaamalla 200 uutta myymälää</translation>
+      <translation system="newstest2016.online-G.0.en-fi">Seurauksena trendi Kingfisher, joka omistaa Screwfix ja B&amp;Q, avaamalla 200 uutta myymälää</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
@@ -17904,8 +17904,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="527">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Britit näet palkkaavat yhä enemmän apumiehiä hoitamaan tee-se-itse-töitä kodeissaan, kertoo B&Q:n takana olevan yrityksen pomo.</reference>
+      <source id="527">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Britit näet palkkaavat yhä enemmän apumiehiä hoitamaan tee-se-itse-töitä kodeissaan, kertoo B&amp;Q:n takana olevan yrityksen pomo.</reference>
       <translation system="newstest2016.UH-factored.4382.en-fi">Koska britit ovat yhä työllistää rakennusmiehet suorittamaan tee-se-itse-strategia työpaikkojen koteihinsa mukaan yhtiön johtaja B &amp; q takana.</translation>
       <translation system="newstest2016.jhu-pbmt.4289.en-fi">Koska britit ovat yhä palkata käsityöläisille aiheutuvia sivuvaikutuksia suorittaa askartelen työpaikkoja kodeissa, yrityksen johtaja takana B &amp; Q</translation>
       <translation system="newstest2016.abumatran-combo.4496.en-fi,newstest2016.abumatran-nmt.4412.en-fi">Koska britit työllistävät yhä yhä työpaikkoja kodeissaan, yhtiön pomon taustalla on B &amp; Q.</translation>
@@ -17913,8 +17913,8 @@
       <translation system="newstest2016.abumatran-pbsmt.4409.en-fi">Koska britit työllistävät yhä useammin handymen tekemään töitä kotoaan itsenäisesti toimivan yrityksen johtajan takana B &amp; Q.</translation>
     </seg>
     <seg>
-      <source id="529">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Tämä johtaa siihen, että Kingfisher suunnittelee avaavansa 200 uutta työmiehille suunnattua Screwfix-kauppaa ja sulkevansa 60 B&Q-myymälää.</reference>
+      <source id="529">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Tämä johtaa siihen, että Kingfisher suunnittelee avaavansa 200 uutta työmiehille suunnattua Screwfix-kauppaa ja sulkevansa 60 B&amp;Q-myymälää.</reference>
       <translation system="newstest2016.UH-factored.4382.en-fi">Tämän seurauksena mindanaonkalastaja suunnittelee auki 200 enemmän screwfix myymälöissä, joissa kauppiaat, sulkemalla 60 B &amp; q myymälään.</translation>
       <translation system="newstest2016.UUT.4529.en-fi">Seurauksena kuningaskalastajat Kingfisher aikoo avata 200 enemmän Screwfix myymälöitä, joilla pyritään kauppiaita, sulkemalla 60 b:n &amp; q:n myymälät.</translation>
       <translation system="newstest2016.abumatran-combo.4496.en-fi,newstest2016.abumatran-nmt.4412.en-fi">Tämän seurauksena Kingfisher suunnittelee avaavansa 200 myymälää lisää Screwfix, joiden tavoitteena on, vaikka sulkee 60 B &amp; Q myymälää.</translation>
@@ -17922,8 +17922,8 @@
       <translation system="newstest2016.NYU-UMontreal.4329.en-fi">Tämän seurauksena Kingaljer suunnittelee avaamaan 200 enemmän sellaisia varastoja, joiden tavoitteena on elinkeinonharjoittajia, samalla kun suljetaan 60 B &amp; Q-markkinoita.</translation>
     </seg>
     <seg>
-      <source id="530">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
-      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
+      <source id="530">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&amp;Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
       <translation system="newstest2016.online-B.0.en-fi">Rouva Laury sanoi hän haluaa enemmän naisia saa työskennellä B &amp; Q kauppoja koska kahdeksan kymmenestä ostopäätöksiin myymälässä tehdään oikeudenmukaisempi sukupuolen.</translation>
       <translation system="newstest2016.abumatran-combo.4496.en-fi,newstest2016.abumatran-nmt.4412.en-fi">Jäsen Laury sanoi haluavansa enemmän naisia, jotka työskentelevät B &amp; Q:n myymälöissä, koska kahdeksan kymmenestä hankintapäätöksestä tehdään oikeudenmukaisemman sukupuolen mukaan.</translation>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Rouva Laury sanoi hän haluaa lisää naisia töihin B &amp; Q kaupoissa koska kahdeksan kymmenestä ostopäätöksiä arvioidessani tekevät sukupuolta kohtaan.</translation>
@@ -18000,12 +18000,12 @@
       <translation system="newstest2016.jhu-pbmt.4289.en-fi">Muut haavoittuneet saavat puolet tuosta määrästä.</translation>
     </seg>
     <seg>
-      <source id="519">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>B&Q-pomo sanoo, että itäeurooppalaiset halvalla työskentelevät työmiehet ovat suosion takana</reference>
+      <source id="519">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>B&amp;Q-pomo sanoo, että itäeurooppalaiset halvalla työskentelevät työmiehet ovat suosion takana</reference>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">B &amp; Q pomo sanoo Itä-euroopan kauppiaat toimivat halvan kehityksen takana on</translation>
       <translation system="newstest2016.online-B.0.en-fi">B &amp; Q pomo sanoo Itä-Euroopan kauppiaat työskentelevät halpa on takana trendi</translation>
       <translation system="newstest2016.aalto.4405.en-fi">B &amp; Q pomo sanoo Itä-Euroopan käsityöläisten työhalpoja takana on trendi</translation>
-      <translation system="newstest2016.online-G.0.en-fi">B&Q-pomo sanoo, että Itä-Euroopan kauppiaat työskentelevät halpa on takana trendi</translation>
+      <translation system="newstest2016.online-G.0.en-fi">B&amp;Q-pomo sanoo, että Itä-Euroopan kauppiaat työskentelevät halpa on takana trendi</translation>
       <translation system="newstest2016.UH-opus.4414.en-fi">B &amp; q pomo sanoo itäeurooppalaiset kauppiaat toimivat kehityksen takana on halpaa</translation>
     </seg>
     <seg>
@@ -18165,9 +18165,9 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="519">B&Q boss says Eastern European tradesmen working cheap is behind trend</source>
-      <reference>B&Q-pomo sanoo, että itäeurooppalaiset halvalla työskentelevät työmiehet ovat suosion takana</reference>
-      <translation system="newstest2016.online-G.0.en-fi">B&Q-pomo sanoo, että Itä-Euroopan kauppiaat työskentelevät halpa on takana trendi</translation>
+      <source id="519">B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</source>
+      <reference>B&amp;Q-pomo sanoo, että itäeurooppalaiset halvalla työskentelevät työmiehet ovat suosion takana</reference>
+      <translation system="newstest2016.online-G.0.en-fi">B&amp;Q-pomo sanoo, että Itä-Euroopan kauppiaat työskentelevät halpa on takana trendi</translation>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">B &amp; Q pomo sanoo Itä-euroopan kauppiaat toimivat halvan kehityksen takana on</translation>
       <translation system="newstest2016.UUT.4529.en-fi">B:n &amp; q:n pomo sanoo itäeurooppalaiset kauppiaat tekevät halpojen takana on suuntaus</translation>
       <translation system="newstest2016.online-B.0.en-fi">B &amp; Q pomo sanoo Itä-Euroopan kauppiaat työskentelevät halpa on takana trendi</translation>
@@ -22192,17 +22192,17 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="529">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Tämä johtaa siihen, että Kingfisher suunnittelee avaavansa 200 uutta työmiehille suunnattua Screwfix-kauppaa ja sulkevansa 60 B&Q-myymälää.</reference>
+      <source id="529">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Tämä johtaa siihen, että Kingfisher suunnittelee avaavansa 200 uutta työmiehille suunnattua Screwfix-kauppaa ja sulkevansa 60 B&amp;Q-myymälää.</reference>
       <translation system="newstest2016.UH-factored.4382.en-fi">Tämän seurauksena mindanaonkalastaja suunnittelee auki 200 enemmän screwfix myymälöissä, joissa kauppiaat, sulkemalla 60 B &amp; q myymälään.</translation>
       <translation system="newstest2016.UH-opus.4414.en-fi">Tämän seurauksena Kingfisher aikoo avata 200 enemmän screwfix kauppoja, joissa kauppiaat sulkemalla 60 B &amp; q myymälöistä.</translation>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Seurauksena Kingfisher aikoo avata 200 lisää Screwfix varastot, jotka tähtäävät kauppiaita, sulkemalla 60 B &amp; Q pisteisiin.</translation>
       <translation system="newstest2016.UUT.4529.en-fi">Seurauksena kuningaskalastajat Kingfisher aikoo avata 200 enemmän Screwfix myymälöitä, joilla pyritään kauppiaita, sulkemalla 60 b:n &amp; q:n myymälät.</translation>
-      <translation system="newstest2016.online-G.0.en-fi">Seurauksena, Kingfisher suunnittelee avaavansa 200 enemmän Screwfix myymälää, joiden kauppiaat, kun taas sulkeminen 60 B&Q myyntipisteistä.</translation>
+      <translation system="newstest2016.online-G.0.en-fi">Seurauksena, Kingfisher suunnittelee avaavansa 200 enemmän Screwfix myymälää, joiden kauppiaat, kun taas sulkeminen 60 B&amp;Q myyntipisteistä.</translation>
     </seg>
     <seg>
-      <source id="530">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
-      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
+      <source id="530">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&amp;Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
       <translation system="newstest2016.abumatran-combo.4496.en-fi,newstest2016.abumatran-nmt.4412.en-fi">Jäsen Laury sanoi haluavansa enemmän naisia, jotka työskentelevät B &amp; Q:n myymälöissä, koska kahdeksan kymmenestä hankintapäätöksestä tehdään oikeudenmukaisemman sukupuolen mukaan.</translation>
       <translation system="newstest2016.UH-opus.4414.en-fi">Rouva laury sanoi haluavansa enemmän naisia työskentelee B &amp; q kaupoissa, sillä kahdeksan kymmenestä ostopäätösten tehdään varastossa sukupuolesta.</translation>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Rouva Laury sanoi hän haluaa lisää naisia töihin B &amp; Q kaupoissa koska kahdeksan kymmenestä ostopäätöksiä arvioidessani tekevät sukupuolta kohtaan.</translation>
@@ -24482,8 +24482,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="530">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
-      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
+      <source id="530">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&amp;Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
       <translation system="newstest2016.NYU-UMontreal.4329.en-fi">Jäsen Lause sanoi, että hän haluaa enemmän naisia B &amp; Q: n kaupoissa, koska oikeudenmukaisempi sukupuoli tekee kahdeksan kymmenestä ostopäätöksestä.</translation>
       <translation system="newstest2016.online-B.0.en-fi">Rouva Laury sanoi hän haluaa enemmän naisia saa työskennellä B &amp; Q kauppoja koska kahdeksan kymmenestä ostopäätöksiin myymälässä tehdään oikeudenmukaisempi sukupuolen.</translation>
       <translation system="newstest2016.UH-factored.4382.en-fi">Rouva laury sanoi hän haluaa lisää naisia töihin, koska kauppojen B &amp; q kahdeksan kymmenestä myymälästä ostopäätökset tehdään kauniimpaa sukupuolta.</translation>
@@ -24810,8 +24810,8 @@
       <translation system="newstest2016.UH-factored.4382.en-fi">Jos olet kätevä vasaralla tai whizz seinien maalausta, näyttää siltä, että olette vähemmistössä näinä päivinä.</translation>
     </seg>
     <seg>
-      <source id="527">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</source>
-      <reference>Britit näet palkkaavat yhä enemmän apumiehiä hoitamaan tee-se-itse-töitä kodeissaan, kertoo B&Q:n takana olevan yrityksen pomo.</reference>
+      <source id="527">Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</source>
+      <reference>Britit näet palkkaavat yhä enemmän apumiehiä hoitamaan tee-se-itse-töitä kodeissaan, kertoo B&amp;Q:n takana olevan yrityksen pomo.</reference>
       <translation system="newstest2016.abumatran-combo.4496.en-fi,newstest2016.abumatran-nmt.4412.en-fi">Koska britit työllistävät yhä yhä työpaikkoja kodeissaan, yhtiön pomon taustalla on B &amp; Q.</translation>
       <translation system="newstest2016.jhu-hltcoe.4466.en-fi">Koska Britit ovat yhä työllistää handymen suorittaa DIY työpaikkoja kotinsa mukaan yhtiön pomo takana B &amp; Q.</translation>
       <translation system="newstest2016.UH-factored.4382.en-fi">Koska britit ovat yhä työllistää rakennusmiehet suorittamaan tee-se-itse-strategia työpaikkojen koteihinsa mukaan yhtiön johtaja B &amp; q takana.</translation>
@@ -24819,12 +24819,12 @@
       <translation system="newstest2016.aalto.4405.en-fi">Koska britit ovat yhä työllistää hengittämisestä rakennusmiehille suorittaa itse -työstä työpaikkaa kotiinsa, pomo mukaan yrityksen takana B &amp; Q</translation>
     </seg>
     <seg>
-      <source id="529">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</source>
-      <reference>Tämä johtaa siihen, että Kingfisher suunnittelee avaavansa 200 uutta työmiehille suunnattua Screwfix-kauppaa ja sulkevansa 60 B&Q-myymälää.</reference>
+      <source id="529">As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</source>
+      <reference>Tämä johtaa siihen, että Kingfisher suunnittelee avaavansa 200 uutta työmiehille suunnattua Screwfix-kauppaa ja sulkevansa 60 B&amp;Q-myymälää.</reference>
       <translation system="newstest2016.online-B.0.en-fi">Tämän seurauksena Kingfisher suunnittelee avaavansa 200 enemmän Screwfix kaupat, joilla pyritään kauppiaat, suljettiin 60 B &amp; Q myyntipisteistä.</translation>
       <translation system="newstest2016.jhu-pbmt.4289.en-fi">Tämän seurauksena Kingfisher aikoo avata 200 enemmän Screwfix myymälöihin, jotka tähtäävät kauppiaita, sulkemalla 60 B &amp; Q pisteisiin.</translation>
       <translation system="newstest2016.aalto.4405.en-fi">Tämän seurauksena kuningaskalastajat aikoo avata kaksisataa enemmän Screwfixketjuista, jolla pyritään kauppiaita, sulkemalla kuudestakymmenestä B &amp; Q kaupoissa.</translation>
-      <translation system="newstest2016.online-G.0.en-fi">Seurauksena, Kingfisher suunnittelee avaavansa 200 enemmän Screwfix myymälää, joiden kauppiaat, kun taas sulkeminen 60 B&Q myyntipisteistä.</translation>
+      <translation system="newstest2016.online-G.0.en-fi">Seurauksena, Kingfisher suunnittelee avaavansa 200 enemmän Screwfix myymälää, joiden kauppiaat, kun taas sulkeminen 60 B&amp;Q myyntipisteistä.</translation>
       <translation system="newstest2016.abumatran-pbsmt.4409.en-fi">Tämän seurauksena Kingfisher aikoo avata 200 enemmän Screwfix -varastoja, jotka tähtäävät kauppiaita, sulkemalla 60 B &amp; Q pisteisiin.</translation>
     </seg>
   </hit>
@@ -25497,8 +25497,8 @@
   </hit>
   <hit block-id="-1" source-language="eng" target-language="fin">
     <seg>
-      <source id="530">Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
-      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
+      <source id="530">Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</source>
+      <reference>Laury sanoi, että hän haluaa lisää naisia töihin B&amp;Q-myymälöihin, koska kahdeksan kymmenestä kaupassa tehdystä ostopäätöksestä on nimenomaan kauniimman sukupuolen tekemiä.</reference>
       <translation system="newstest2016.NYU-UMontreal.4329.en-fi">Jäsen Lause sanoi, että hän haluaa enemmän naisia B &amp; Q: n kaupoissa, koska oikeudenmukaisempi sukupuoli tekee kahdeksan kymmenestä ostopäätöksestä.</translation>
       <translation system="newstest2016.online-B.0.en-fi">Rouva Laury sanoi hän haluaa enemmän naisia saa työskennellä B &amp; Q kauppoja koska kahdeksan kymmenestä ostopäätöksiin myymälässä tehdään oikeudenmukaisempi sukupuolen.</translation>
       <translation system="newstest2016.UH-factored.4382.en-fi">Rouva laury sanoi hän haluaa lisää naisia töihin, koska kauppojen B &amp; q kahdeksan kymmenestä myymälästä ostopäätökset tehdään kauniimpaa sukupuolta.</translation>

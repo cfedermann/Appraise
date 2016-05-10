@@ -829,12 +829,12 @@
       <translation system="newstest2016.online-B.0.ru-en">Once the group has assumed the costs of closure of the shops, the Kingfisher company reported lower profits and sales for six months.</translation>
     </seg>
     <seg>
-      <source id="569">В результате данного тренда Kingfisher, владеющая брендами Screwfix и B&Q, открывает 200 новых магазинов</source>
-      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</reference>
-      <translation system="newstest2016.online-F.0.ru-en">As a result of this trend of Kingfisher, which manages the brands of Screwfix and B&Q, are opened 200 new stores</translation>
+      <source id="569">В результате данного тренда Kingfisher, владеющая брендами Screwfix и B&amp;Q, открывает 200 новых магазинов</source>
+      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</reference>
+      <translation system="newstest2016.online-F.0.ru-en">As a result of this trend of Kingfisher, which manages the brands of Screwfix and B&amp;Q, are opened 200 new stores</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">As a result of this trend Kingfisher, which owns B &amp; Q and Screwfix brands, opened 200 new stores</translation>
-      <translation system="newstest2016.online-A.0.ru-en">As a result of this trend, Kingfisher, which owns the brands Screwfix and B&Q opens new stores 200</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of this trend of Kingfisher, Screwfix owning brands and B&Q, opens 200 new shops</translation>
+      <translation system="newstest2016.online-A.0.ru-en">As a result of this trend, Kingfisher, which owns the brands Screwfix and B&amp;Q opens new stores 200</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of this trend of Kingfisher, Screwfix owning brands and B&amp;Q, opens 200 new shops</translation>
       <translation system="newstest2016.online-B.0.ru-en,newstest2016.uedin-nmt.4309.ru-en">As a result of this trend Kingfisher, which owns brands Screwfix and B &amp; Q, opens 200 new stores</translation>
     </seg>
   </hit>
@@ -2169,10 +2169,10 @@
   </hit>
   <hit block-id="-1" source-language="rus" target-language="eng">
     <seg>
-      <source id="557">Г-жа Лори рассказала, что хотела бы видеть больше женщин в составе персонала магазинов B&Q, так как восемь из десяти решений о покупках в магазине принимаются представительницами слабого пола.</source>
-      <reference>Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
-      <translation system="newstest2016.online-G.0.ru-en">Ms. Lori said that would like to see more women in the staff of the stores B&Q, as eight out of ten purchasing decisions in store are accepted by the fairer sex.</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Mrs. Laurie told that she would like to see more women as a part of personnel of B&Q shops as eight of ten decisions on purchases in shop are accepted by women.</translation>
+      <source id="557">Г-жа Лори рассказала, что хотела бы видеть больше женщин в составе персонала магазинов B&amp;Q, так как восемь из десяти решений о покупках в магазине принимаются представительницами слабого пола.</source>
+      <reference>Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
+      <translation system="newstest2016.online-G.0.ru-en">Ms. Lori said that would like to see more women in the staff of the stores B&amp;Q, as eight out of ten purchasing decisions in store are accepted by the fairer sex.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Mrs. Laurie told that she would like to see more women as a part of personnel of B&amp;Q shops as eight of ten decisions on purchases in shop are accepted by women.</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Mrs Laurie said she would like to see more women in the B &amp; Q store staff as eight out of ten decisions about purchases in store are accepted spokeswomen of weak gender.</translation>
       <translation system="newstest2016.NRC.4456.ru-en">Ms. Laurie said she would like to see more women in the B&amp;Q store personnel, as eight out of ten decisions on purchases at the store are taken by women.</translation>
       <translation system="newstest2016.uedin-nmt.4309.ru-en">MS Lori said she would like to see more women in B &amp; Q's staff line-up as eight out of ten decisions on purchases in the shop are accepted by spokespersons of the weak sex.</translation>
@@ -4639,12 +4639,12 @@
       <translation system="newstest2016.NRC.4456.ru-en">The result - the discovery of more than 200 new Screwfix stores for specialists</translation>
     </seg>
     <seg>
-      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&Q по всей стране</source>
-      <reference>At same time Kingfisher is closing 60 B&Q outlets across the country</reference>
-      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&Q depots throughout the country</translation>
+      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&amp;Q по всей стране</source>
+      <reference>At same time Kingfisher is closing 60 B&amp;Q outlets across the country</reference>
+      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&amp;Q depots throughout the country</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">At the same time, Kingfisher closes 60 B &amp; Q Throughout the country</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">At the same time, Kingfisher closes 60 magazinovscladov B &amp; Q throughout the country</translation>
-      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&Q across the country</translation>
+      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&amp;Q across the country</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">At the same time Kingfisher closes 60 shops of B &amp; Q stores across the country</translation>
     </seg>
   </hit>
@@ -5465,11 +5465,11 @@
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en,newstest2016.NRC.4456.ru-en,newstest2016.online-A.0.ru-en">The remaining victims will receive half that amount.</translation>
     </seg>
     <seg>
-      <source id="546">Глава B&Q утверждает, что тренд объясняется наличием восточноевропейских мастеров, работающих за небольшие деньги</source>
-      <reference>B&Q boss says Eastern European tradesmen working cheap is behind trend</reference>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">The head of B&Q claims that the trend is explained by presence of the East European masters working for small money</translation>
+      <source id="546">Глава B&amp;Q утверждает, что тренд объясняется наличием восточноевропейских мастеров, работающих за небольшие деньги</source>
+      <reference>B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</reference>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">The head of B&amp;Q claims that the trend is explained by presence of the East European masters working for small money</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">The head of B &amp; Q argues that the trend can be explained by the presence of Eastern European masters who work for small money</translation>
-      <translation system="newstest2016.online-A.0.ru-en">Chapter B&Q argues that the trend can be explained by Eastern European masters, working for little money</translation>
+      <translation system="newstest2016.online-A.0.ru-en">Chapter B&amp;Q argues that the trend can be explained by Eastern European masters, working for little money</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">The head of B &amp; Q argues that the trend can be explained by the presence of Eastern European tradesmen working for little money</translation>
       <translation system="newstest2016.NRC.4456.ru-en">The head of B&amp;Q argues that the trend can be explained by the presence of Eastern European artists working for small money</translation>
     </seg>
@@ -6065,13 +6065,13 @@
   </hit>
   <hit block-id="-1" source-language="rus" target-language="eng">
     <seg>
-      <source id="546">Глава B&Q утверждает, что тренд объясняется наличием восточноевропейских мастеров, работающих за небольшие деньги</source>
-      <reference>B&Q boss says Eastern European tradesmen working cheap is behind trend</reference>
+      <source id="546">Глава B&amp;Q утверждает, что тренд объясняется наличием восточноевропейских мастеров, работающих за небольшие деньги</source>
+      <reference>B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</reference>
       <translation system="newstest2016.online-B.0.ru-en">The head of B &amp; Q says that the trend is due to the presence of Eastern European artists working for little money</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">The head of B &amp; Q argues that the trend can be explained by the presence of Eastern European masters who work for small money</translation>
-      <translation system="newstest2016.online-G.0.ru-en">The head of B&Q claims that the trend is due to the presence of Eastern European artists, working for little money</translation>
+      <translation system="newstest2016.online-G.0.ru-en">The head of B&amp;Q claims that the trend is due to the presence of Eastern European artists, working for little money</translation>
       <translation system="newstest2016.uedin-nmt.4309.ru-en">Chapter B &amp; Q argues that the trend is explained by the presence of East European masters working for small money</translation>
-      <translation system="newstest2016.online-F.0.ru-en">Head B&Q asserts that the trend is explained by the presence of East-European masters, who work for the small money</translation>
+      <translation system="newstest2016.online-F.0.ru-en">Head B&amp;Q asserts that the trend is explained by the presence of East-European masters, who work for the small money</translation>
     </seg>
     <seg>
       <source id="547">По словам Вероник Лори, британцы все чаще нанимают специалистов по ремонту</source>
@@ -8851,13 +8851,13 @@
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">After the group assumed the costs of closing stores, Kingfisher company showed lower profit and sales volumes for six months.</translation>
     </seg>
     <seg>
-      <source id="569">В результате данного тренда Kingfisher, владеющая брендами Screwfix и B&Q, открывает 200 новых магазинов</source>
-      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</reference>
-      <translation system="newstest2016.online-G.0.ru-en">As a result of this trend Kingfisher, which owns brands Screwfix and B&Q, opens 200 new stores</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of this trend of Kingfisher, Screwfix owning brands and B&Q, opens 200 new shops</translation>
+      <source id="569">В результате данного тренда Kingfisher, владеющая брендами Screwfix и B&amp;Q, открывает 200 новых магазинов</source>
+      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</reference>
+      <translation system="newstest2016.online-G.0.ru-en">As a result of this trend Kingfisher, which owns brands Screwfix and B&amp;Q, opens 200 new stores</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of this trend of Kingfisher, Screwfix owning brands and B&amp;Q, opens 200 new shops</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">As a result of this trend, Kingfisher, which owns the brands and B &amp; Q, opens up 200 new stores</translation>
-      <translation system="newstest2016.online-F.0.ru-en">As a result of this trend of Kingfisher, which manages the brands of Screwfix and B&Q, are opened 200 new stores</translation>
-      <translation system="newstest2016.online-A.0.ru-en">As a result of this trend, Kingfisher, which owns the brands Screwfix and B&Q opens new stores 200</translation>
+      <translation system="newstest2016.online-F.0.ru-en">As a result of this trend of Kingfisher, which manages the brands of Screwfix and B&amp;Q, are opened 200 new stores</translation>
+      <translation system="newstest2016.online-A.0.ru-en">As a result of this trend, Kingfisher, which owns the brands Screwfix and B&amp;Q opens new stores 200</translation>
     </seg>
     <seg>
       <source id="570">Время принятия решения по процентной ставке Федерального Резерва США</source>
@@ -11605,22 +11605,22 @@
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">If you know how to handle a hammer or cleverly to paint the walls, it seems that these days you are in the minority.</translation>
     </seg>
     <seg>
-      <source id="554">Потому что, по словам компании-владельца B&Q, британцы все чеще нанимают специалистов-мастеров для выполнения несложной работы по дому.</source>
-      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</reference>
+      <source id="554">Потому что, по словам компании-владельца B&amp;Q, британцы все чеще нанимают специалистов-мастеров для выполнения несложной работы по дому.</source>
+      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</reference>
       <translation system="newstest2016.NRC.4456.ru-en">Because, according to the owner of the B&amp;Q, the British company cheshcha hire specialists masters to perform simple tasks.</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Because, according to the owner of B &amp; Q, Britons still hire professional artists to perform simple chall work at home.</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">Because, according to the organization B &amp; Q, the British all cage hire to perform simple specialistovmasterov household chores.</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">Because, according to the organization B &amp; Q, the British all employ to perform simple household chores.</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Because, according to the B&Q company owner, British everything cheshche employ specialists masters for performance of simple housework.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Because, according to the B&amp;Q company owner, British everything cheshche employ specialists masters for performance of simple housework.</translation>
     </seg>
   </hit>
   <hit block-id="-1" source-language="rus" target-language="eng">
     <seg>
-      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&Q по всей стране</source>
-      <reference>At same time Kingfisher is closing 60 B&Q outlets across the country</reference>
-      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&Q depots throughout the country</translation>
+      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&amp;Q по всей стране</source>
+      <reference>At same time Kingfisher is closing 60 B&amp;Q outlets across the country</reference>
+      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&amp;Q depots throughout the country</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">At the same time, Kingfisher closes 60 B &amp; Q Throughout the country</translation>
-      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&Q across the country</translation>
+      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&amp;Q across the country</translation>
       <translation system="newstest2016.uedin-nmt.4309.ru-en">Simultaneously Kingfisher covers 60 stores of B &amp; Q warehouses all over the country.</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">At the same time Kingfisher closes 60 shops of B &amp; Q stores across the country</translation>
     </seg>
@@ -11695,7 +11695,7 @@
       <source id="218">Джереми Корбин дебютирует в сессии вопросов Премьер-министру</source>
       <reference>Jeremy Corbyn to make debut at Prime Minister's Questions</reference>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Jeremy Corbyn debuts in session of Prime Minister questions</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Jeremy Corbyn debuts in a Q&A session to the Prime minister</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Jeremy Corbyn debuts in a Q&amp;A session to the Prime minister</translation>
       <translation system="newstest2016.online-G.0.ru-en">Jeremy Corbin debuts in the session of Prime Minister's questions.</translation>
       <translation system="newstest2016.online-F.0.ru-en">Jeremy Korbin makes a debut in the session of questions to the Prime Minister</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en,newstest2016.uedin-nmt.4309.ru-en">Jeremy Corbyn will debut in a session of questions to the Prime Minister</translation>
@@ -11703,19 +11703,19 @@
   </hit>
   <hit block-id="-1" source-language="rus" target-language="eng">
     <seg>
-      <source id="556">В результате Kingfisher планирует открыть еще 200 магазинов Screwfix, специализирующихся на товарах для мастеров, и одновременно закрыть 60 магазинов-складов B&Q.</source>
-      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</reference>
+      <source id="556">В результате Kingfisher планирует открыть еще 200 магазинов Screwfix, специализирующихся на товарах для мастеров, и одновременно закрыть 60 магазинов-складов B&amp;Q.</source>
+      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</reference>
       <translation system="newstest2016.online-B.0.ru-en">As a result, Kingfisher plans to open another 200 Screwfix stores specializing in products for craftsmen, and at the same time to close 60 stores, warehouses B &amp; Q.</translation>
-      <translation system="newstest2016.online-A.0.ru-en">As a result, Kingfisher plans to open 200 stores Screwfix, specializing in products for the masters, and at the same time close 60 shops-warehouses B&Q.</translation>
-      <translation system="newstest2016.online-F.0.ru-en">As a result of Kingfisher it plans to open the 200 additional stores of Screwfix, which are specialized in the goods for the masters, and to simultaneously shut 60 store-storages B&Q.</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of Kingfisher plans to open 200 more Screwfix shops specializing in goods for masters and at the same time to close 60 B&Q shops warehouses.</translation>
-      <translation system="newstest2016.online-G.0.ru-en">As a result Kingfisher is planning to open another 200 stores Screwfix, specializing in products for and to close 60 stores-warehouses of B&Q.</translation>
+      <translation system="newstest2016.online-A.0.ru-en">As a result, Kingfisher plans to open 200 stores Screwfix, specializing in products for the masters, and at the same time close 60 shops-warehouses B&amp;Q.</translation>
+      <translation system="newstest2016.online-F.0.ru-en">As a result of Kingfisher it plans to open the 200 additional stores of Screwfix, which are specialized in the goods for the masters, and to simultaneously shut 60 store-storages B&amp;Q.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of Kingfisher plans to open 200 more Screwfix shops specializing in goods for masters and at the same time to close 60 B&amp;Q shops warehouses.</translation>
+      <translation system="newstest2016.online-G.0.ru-en">As a result Kingfisher is planning to open another 200 stores Screwfix, specializing in products for and to close 60 stores-warehouses of B&amp;Q.</translation>
     </seg>
     <seg>
-      <source id="557">Г-жа Лори рассказала, что хотела бы видеть больше женщин в составе персонала магазинов B&Q, так как восемь из десяти решений о покупках в магазине принимаются представительницами слабого пола.</source>
-      <reference>Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
-      <translation system="newstest2016.online-G.0.ru-en">Ms. Lori said that would like to see more women in the staff of the stores B&Q, as eight out of ten purchasing decisions in store are accepted by the fairer sex.</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Mrs. Laurie told that she would like to see more women as a part of personnel of B&Q shops as eight of ten decisions on purchases in shop are accepted by women.</translation>
+      <source id="557">Г-жа Лори рассказала, что хотела бы видеть больше женщин в составе персонала магазинов B&amp;Q, так как восемь из десяти решений о покупках в магазине принимаются представительницами слабого пола.</source>
+      <reference>Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
+      <translation system="newstest2016.online-G.0.ru-en">Ms. Lori said that would like to see more women in the staff of the stores B&amp;Q, as eight out of ten purchasing decisions in store are accepted by the fairer sex.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Mrs. Laurie told that she would like to see more women as a part of personnel of B&amp;Q shops as eight of ten decisions on purchases in shop are accepted by women.</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">Ms. Laurie said that would like to see more women in the composition of personnel stores B &amp; Q as eight out of ten decisions on purchases at the store accepted members of the weaker sex.</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">Ms. Laurie told me that would like to see more women in the B &amp; Q store staff, as eight out of ten decisions on purchases in the store accepted members of the weaker sex.</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Mrs Laurie said she would like to see more women in the B &amp; Q store staff as eight out of ten decisions about purchases in store are accepted spokeswomen of weak gender.</translation>
@@ -13622,12 +13622,12 @@
       <translation system="newstest2016.online-B.0.ru-en">If you are familiar with a hammer or deftly painted walls, it seems that these days you are in the minority.</translation>
     </seg>
     <seg>
-      <source id="554">Потому что, по словам компании-владельца B&Q, британцы все чеще нанимают специалистов-мастеров для выполнения несложной работы по дому.</source>
-      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</reference>
+      <source id="554">Потому что, по словам компании-владельца B&amp;Q, британцы все чеще нанимают специалистов-мастеров для выполнения несложной работы по дому.</source>
+      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</reference>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">Because, according to the organization B &amp; Q, the British all employ to perform simple household chores.</translation>
-      <translation system="newstest2016.online-G.0.ru-en">Because, according to the company that owns B&Q, the British have all my վ hire professional artists to perform simple household chores.</translation>
+      <translation system="newstest2016.online-G.0.ru-en">Because, according to the company that owns B&amp;Q, the British have all my վ hire professional artists to perform simple household chores.</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Because, according to the owner of B &amp; Q, Britons still hire professional artists to perform simple chall work at home.</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Because, according to the B&Q company owner, British everything cheshche employ specialists masters for performance of simple housework.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Because, according to the B&amp;Q company owner, British everything cheshche employ specialists masters for performance of simple housework.</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">Because, according to the organization B &amp; Q, the British all cage hire to perform simple specialistovmasterov household chores.</translation>
     </seg>
     <seg>
@@ -13816,12 +13816,12 @@
   </hit>
   <hit block-id="-1" source-language="rus" target-language="eng">
     <seg>
-      <source id="554">Потому что, по словам компании-владельца B&Q, британцы все чеще нанимают специалистов-мастеров для выполнения несложной работы по дому.</source>
-      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&Q.</reference>
+      <source id="554">Потому что, по словам компании-владельца B&amp;Q, британцы все чеще нанимают специалистов-мастеров для выполнения несложной работы по дому.</source>
+      <reference>Because Britons are increasingly employing handymen to carry out DIY jobs in their homes, according to the boss of the company behind B&amp;Q.</reference>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">Because, according to the organization B &amp; Q, the British all cage hire to perform simple specialistovmasterov household chores.</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">Because, according to the organization B &amp; Q, the British all employ to perform simple household chores.</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Because, according to the owner of B &amp; Q, Britons still hire professional artists to perform simple chall work at home.</translation>
-      <translation system="newstest2016.online-F.0.ru-en">Because according to the company-owner of B&Q, Britons entire cheshche hire specialist-masters for fulfilling the simple work on the house.</translation>
+      <translation system="newstest2016.online-F.0.ru-en">Because according to the company-owner of B&amp;Q, Britons entire cheshche hire specialist-masters for fulfilling the simple work on the house.</translation>
       <translation system="newstest2016.online-B.0.ru-en">Because, according to the company that owns the B &amp; Q, British all chesche hire specialists-masters to perform simple household chores.</translation>
     </seg>
     <seg>
@@ -13834,10 +13834,10 @@
       <translation system="newstest2016.NRC.4456.ru-en">Veronique Laurie, the new CEO of Kingfisher, which owns a network of services on the construction of the House, the trend is a substantial influx of skilled craftsmen from Eastern Europe, offering services at minimum prices.</translation>
     </seg>
     <seg>
-      <source id="556">В результате Kingfisher планирует открыть еще 200 магазинов Screwfix, специализирующихся на товарах для мастеров, и одновременно закрыть 60 магазинов-складов B&Q.</source>
-      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</reference>
+      <source id="556">В результате Kingfisher планирует открыть еще 200 магазинов Screwfix, специализирующихся на товарах для мастеров, и одновременно закрыть 60 магазинов-складов B&amp;Q.</source>
+      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</reference>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">As a result, Kingfisher plans to open another 200 Screwfix stores specializing in products for masters, and at the same time close 60 stores of B &amp; Q stores</translation>
-      <translation system="newstest2016.online-G.0.ru-en">As a result Kingfisher is planning to open another 200 stores Screwfix, specializing in products for and to close 60 stores-warehouses of B&Q.</translation>
+      <translation system="newstest2016.online-G.0.ru-en">As a result Kingfisher is planning to open another 200 stores Screwfix, specializing in products for and to close 60 stores-warehouses of B&amp;Q.</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">As a result, Kingfisher plans to open another 200 stores specializing in products for craftsmen, and simultaneously close 60 B &amp; Q.</translation>
       <translation system="newstest2016.uedin-nmt.4309.ru-en">As a result, Kingfisher plans to open more than 200 Screwfix stores, specializing in products for masters, and at the same time close 60 stores of B &amp; Q.</translation>
       <translation system="newstest2016.online-B.0.ru-en">As a result, Kingfisher plans to open another 200 Screwfix stores specializing in products for craftsmen, and at the same time to close 60 stores, warehouses B &amp; Q.</translation>
@@ -14335,11 +14335,11 @@
   </hit>
   <hit block-id="-1" source-language="rus" target-language="eng">
     <seg>
-      <source id="569">В результате данного тренда Kingfisher, владеющая брендами Screwfix и B&Q, открывает 200 новых магазинов</source>
-      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&Q, is opening 200 new stores</reference>
+      <source id="569">В результате данного тренда Kingfisher, владеющая брендами Screwfix и B&amp;Q, открывает 200 новых магазинов</source>
+      <reference>As a result of the trend Kingfisher, which owns Screwfix and B&amp;Q, is opening 200 new stores</reference>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">As a result of this trend Kingfisher, which owns B &amp; Q and Screwfix brands, opened 200 new stores</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">As a result of this trend Kingfisher, which owns the brands Screwfix and B &amp; Q, opens up to 200 new stores</translation>
-      <translation system="newstest2016.online-G.0.ru-en">As a result of this trend Kingfisher, which owns brands Screwfix and B&Q, opens 200 new stores</translation>
+      <translation system="newstest2016.online-G.0.ru-en">As a result of this trend Kingfisher, which owns brands Screwfix and B&amp;Q, opens 200 new stores</translation>
       <translation system="newstest2016.NRC.4456.ru-en">As a result of this trend Kingfisher, which owns B&amp;Q and Screwfix brands, opens up 200 new stores</translation>
       <translation system="newstest2016.online-B.0.ru-en,newstest2016.uedin-nmt.4309.ru-en">As a result of this trend Kingfisher, which owns brands Screwfix and B &amp; Q, opens 200 new stores</translation>
     </seg>
@@ -15672,7 +15672,7 @@
       <reference>Jeremy Corbyn to make debut at Prime Minister's Questions</reference>
       <translation system="newstest2016.online-B.0.ru-en">Jeremy Corbin makes his debut in the session of questions to the Prime Minister</translation>
       <translation system="newstest2016.NRC.4456.ru-en">Jeremy Corbyn will debut in the session of questions the Prime Minister</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Jeremy Corbyn debuts in a Q&A session to the Prime minister</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">Jeremy Corbyn debuts in a Q&amp;A session to the Prime minister</translation>
       <translation system="newstest2016.online-F.0.ru-en">Jeremy Korbin makes a debut in the session of questions to the Prime Minister</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Jeremy Corbyn debuts in session of Prime Minister questions</translation>
     </seg>
@@ -19940,12 +19940,12 @@
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">The remaining victims will receive half of that amount.</translation>
     </seg>
     <seg>
-      <source id="546">Глава B&Q утверждает, что тренд объясняется наличием восточноевропейских мастеров, работающих за небольшие деньги</source>
-      <reference>B&Q boss says Eastern European tradesmen working cheap is behind trend</reference>
-      <translation system="newstest2016.online-A.0.ru-en">Chapter B&Q argues that the trend can be explained by Eastern European masters, working for little money</translation>
-      <translation system="newstest2016.online-G.0.ru-en">The head of B&Q claims that the trend is due to the presence of Eastern European artists, working for little money</translation>
+      <source id="546">Глава B&amp;Q утверждает, что тренд объясняется наличием восточноевропейских мастеров, работающих за небольшие деньги</source>
+      <reference>B&amp;Q boss says Eastern European tradesmen working cheap is behind trend</reference>
+      <translation system="newstest2016.online-A.0.ru-en">Chapter B&amp;Q argues that the trend can be explained by Eastern European masters, working for little money</translation>
+      <translation system="newstest2016.online-G.0.ru-en">The head of B&amp;Q claims that the trend is due to the presence of Eastern European artists, working for little money</translation>
       <translation system="newstest2016.online-B.0.ru-en">The head of B &amp; Q says that the trend is due to the presence of Eastern European artists working for little money</translation>
-      <translation system="newstest2016.online-F.0.ru-en">Head B&Q asserts that the trend is explained by the presence of East-European masters, who work for the small money</translation>
+      <translation system="newstest2016.online-F.0.ru-en">Head B&amp;Q asserts that the trend is explained by the presence of East-European masters, who work for the small money</translation>
       <translation system="newstest2016.uedin-nmt.4309.ru-en">Chapter B &amp; Q argues that the trend is explained by the presence of East European masters working for small money</translation>
     </seg>
   </hit>
@@ -20143,7 +20143,7 @@
     <seg>
       <source id="219">После выборов г-на Корбина его дебют на сессии вопросов Премьер-министру ожидается с большим нетерпением</source>
       <reference>Since his election, Mr Corbyn's debut at PMQs has been keenly awaited</reference>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">After elections of Mr. Corbyn his debut at a Q&A session to the Prime minister is expected with big impatience</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">After elections of Mr. Corbyn his debut at a Q&amp;A session to the Prime minister is expected with big impatience</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">After the election of Mr Corbyn on his debut at the session questions the Prime Minister is expected to look great</translation>
       <translation system="newstest2016.online-A.0.ru-en">After the election, Mr. Corbin his debut session of questions to the Prime Minister was expected to eagerly</translation>
       <translation system="newstest2016.uedin-nmt.4309.ru-en">After Mr Corbyn's election his debut at a session of questions to the Prime Minister is expected with a great look</translation>
@@ -20563,13 +20563,13 @@
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">After the election of Mr Corbyn on his debut at the session questions the Prime Minister is expected to look great</translation>
       <translation system="newstest2016.NRC.4456.ru-en">After the election of Mr Corbyn as his prime minister is expected to debut at the session of questions with great impatience</translation>
       <translation system="newstest2016.online-F.0.ru-en">After Mr. Korbin's elections his debut at the session of questions to Prime Minister is expected with the large impatience</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">After elections of Mr. Corbyn his debut at a Q&A session to the Prime minister is expected with big impatience</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">After elections of Mr. Corbyn his debut at a Q&amp;A session to the Prime minister is expected with big impatience</translation>
       <translation system="newstest2016.online-A.0.ru-en">After the election, Mr. Corbin his debut session of questions to the Prime Minister was expected to eagerly</translation>
     </seg>
     <seg>
       <source id="220">Новый лидер лейбористской партии Джереми Корбин скоро впервые выступит на сессии вопросов Премьер-министру, в первый раз меряясь силами с Дэвидом Кэмероном.</source>
       <reference>New Labour leader Jeremy Corbyn is to make his debut at Prime Minister's Questions later, taking on David Cameron for the first time.</reference>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">The new leader of the Labour Party Jeremy Corbyn will for the first time make a speech at a Q&A session to the Prime minister soon, being for the first time measured by forces with David Cameron.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">The new leader of the Labour Party Jeremy Corbyn will for the first time make a speech at a Q&amp;A session to the Prime minister soon, being for the first time measured by forces with David Cameron.</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">The new leader of the Labour Party, Jeremy Corbin soon, for the first time at a session of questions to the Prime Minister, the first time the forces with David Cameron.</translation>
       <translation system="newstest2016.online-B.0.ru-en">The new leader of the Labour Party, Jeremy Corbin soon the first time to speak at the session of questions to the Prime Minister for the first time meryayas forces with David Cameron.</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">The new leader of the Labour party Jeremy Corbyn soon will for the first time at the session of questions to the prime minister, the first time merges forces with David Cameron.</translation>
@@ -20886,19 +20886,19 @@
       <translation system="newstest2016.online-G.0.ru-en">Veronique Laurie, the new CEO of Kingfisher, which owns a network of services for home improvement, said that this trend is a significant influx of skilled craftsmen from Eastern Europe, offering services at the lowest prices.</translation>
     </seg>
     <seg>
-      <source id="556">В результате Kingfisher планирует открыть еще 200 магазинов Screwfix, специализирующихся на товарах для мастеров, и одновременно закрыть 60 магазинов-складов B&Q.</source>
-      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&Q outlets.</reference>
-      <translation system="newstest2016.online-G.0.ru-en">As a result Kingfisher is planning to open another 200 stores Screwfix, specializing in products for and to close 60 stores-warehouses of B&Q.</translation>
+      <source id="556">В результате Kingfisher планирует открыть еще 200 магазинов Screwfix, специализирующихся на товарах для мастеров, и одновременно закрыть 60 магазинов-складов B&amp;Q.</source>
+      <reference>As a result, Kingfisher is planning to open 200 more Screwfix stores, which are aimed at tradesmen, while closing 60 B&amp;Q outlets.</reference>
+      <translation system="newstest2016.online-G.0.ru-en">As a result Kingfisher is planning to open another 200 stores Screwfix, specializing in products for and to close 60 stores-warehouses of B&amp;Q.</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">As a result, Kingfisher plans to open another 200 Screwfix stores specializing in products for masters, and at the same time close 60 stores of B &amp; Q stores</translation>
       <translation system="newstest2016.NRC.4456.ru-en">As a result of the Kingfisher plans to open another 200 Screwfix stores specializing in products for Masters, and simultaneously to close 60 B&amp;Q warehouse stores.</translation>
-      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of Kingfisher plans to open 200 more Screwfix shops specializing in goods for masters and at the same time to close 60 B&Q shops warehouses.</translation>
+      <translation system="newstest2016.PROMT-Rule-based.4277.ru-en">As a result of Kingfisher plans to open 200 more Screwfix shops specializing in goods for masters and at the same time to close 60 B&amp;Q shops warehouses.</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">As a result, Kingfisher plans to open another 200 stores Screwfix, specializing in products for craftsmen, and at the same time close 60 magazinovscladov B &amp; Q.</translation>
     </seg>
     <seg>
-      <source id="557">Г-жа Лори рассказала, что хотела бы видеть больше женщин в составе персонала магазинов B&Q, так как восемь из десяти решений о покупках в магазине принимаются представительницами слабого пола.</source>
-      <reference>Mrs Laury said she wants more women to be employed in B&Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
+      <source id="557">Г-жа Лори рассказала, что хотела бы видеть больше женщин в составе персонала магазинов B&amp;Q, так как восемь из десяти решений о покупках в магазине принимаются представительницами слабого пола.</source>
+      <reference>Mrs Laury said she wants more women to be employed in B&amp;Q shops because eight out of ten purchasing decisions in store are made by the fairer sex.</reference>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">Mrs Laurie said she would like to see more women in the B &amp; Q store staff as eight out of ten decisions about purchases in store are accepted spokeswomen of weak gender.</translation>
-      <translation system="newstest2016.online-A.0.ru-en">Ms. Laurie told me that would like to see more women in the composition of the staff of the B&Q stores, as eight out of ten decisions about purchases at the store accepted women the weaker sex.</translation>
+      <translation system="newstest2016.online-A.0.ru-en">Ms. Laurie told me that would like to see more women in the composition of the staff of the B&amp;Q stores, as eight out of ten decisions about purchases at the store accepted women the weaker sex.</translation>
       <translation system="newstest2016.online-B.0.ru-en">Ms. Laurie said she would like to see more women in the staff stores B &amp; Q, since eight out of ten purchasing decisions are made in the shop of the fairer sex.</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">Ms. Laurie said that would like to see more women in the composition of personnel stores B &amp; Q as eight out of ten decisions on purchases at the store accepted members of the weaker sex.</translation>
       <translation system="newstest2016.NRC.4456.ru-en">Ms. Laurie said she would like to see more women in the B&amp;Q store personnel, as eight out of ten decisions on purchases at the store are taken by women.</translation>
@@ -24987,13 +24987,13 @@
       <translation system="newstest2016.online-G.0.ru-en">The result is opening over 200 new stores Screwfix for professionals</translation>
     </seg>
     <seg>
-      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&Q по всей стране</source>
-      <reference>At same time Kingfisher is closing 60 B&Q outlets across the country</reference>
+      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&amp;Q по всей стране</source>
+      <reference>At same time Kingfisher is closing 60 B&amp;Q outlets across the country</reference>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">At the same time, Kingfisher closes 60 magazinovscladov B &amp; Q throughout the country</translation>
       <translation system="newstest2016.online-B.0.ru-en">Simultaneously Kingfisher closes 60 warehouse stores B &amp; Q across the country</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">At the same time, Kingfisher closes 60 B &amp; Q Throughout the country</translation>
-      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&Q depots throughout the country</translation>
-      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&Q across the country</translation>
+      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&amp;Q depots throughout the country</translation>
+      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&amp;Q across the country</translation>
     </seg>
     <seg>
       <source id="551">Автор: Руперт Стейнер, главный городской корреспондент Daily Mail</source>
@@ -26211,12 +26211,12 @@
       <translation system="newstest2016.NRC.4456.ru-en">The result - the discovery of more than 200 new Screwfix stores for specialists</translation>
     </seg>
     <seg>
-      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&Q по всей стране</source>
-      <reference>At same time Kingfisher is closing 60 B&Q outlets across the country</reference>
-      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&Q depots throughout the country</translation>
+      <source id="550">Одновременно Kingfisher закрывает 60 магазинов-складов B&amp;Q по всей стране</source>
+      <reference>At same time Kingfisher is closing 60 B&amp;Q outlets across the country</reference>
+      <translation system="newstest2016.online-A.0.ru-en">At the same time Kingfisher closes 60 stores-B&amp;Q depots throughout the country</translation>
       <translation system="newstest2016.AFRL-MITLL-Phrase.4383.ru-en">At the same time, Kingfisher closes 60 B &amp; Q Throughout the country</translation>
       <translation system="newstest2016.AFRL-MITLL-contrast.4524.ru-en">At the same time, Kingfisher closes 60 magazinovscladov B &amp; Q throughout the country</translation>
-      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&Q across the country</translation>
+      <translation system="newstest2016.online-G.0.ru-en">At the same time the gate closes 60 stores-warehouses of B&amp;Q across the country</translation>
       <translation system="newstest2016.AMU-UEDIN.4458.ru-en">At the same time Kingfisher closes 60 shops of B &amp; Q stores across the country</translation>
     </seg>
   </hit>

@@ -78,7 +78,7 @@ GROUP_HIT_REQUIREMENTS = {
   'PROMT': 500,
   'QT21': 100,
   'RWTH': 100,
-  'UEdin': 1900,
+  'UEdin': 1800,
   'UH': 400,
   'USFD': 100,
   'UUT': 100,

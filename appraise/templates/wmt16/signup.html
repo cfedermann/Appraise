@@ -68,6 +68,21 @@
     </div>
 
     <div class="form-group">
+      <label for="id_projects" class="col-sm-4 control-label">Projects</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <select class="form-control" name="projects" id="id_projects" multiple="multiple">
+          {% for project in project_choices %}
+            <option {% if project in project_status %}selected="selected"{% endif %}value="{{project}}">{{project}}</option>
+          {% endfor%}
+          </select>
+        </div>
+        <span id="helpProjects" class="help-block">Which annotation projects will you work on?</span>
+      </div>
+    </div>
+
+    <div class="form-group">
       <label for="id_languages" class="col-sm-4 control-label">Languages</label>
       <div class="col-sm-4">
         <div class="input-group">

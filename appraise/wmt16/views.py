@@ -968,7 +968,9 @@ def signup(request):
     username = None
     email = None
     token = None
-    languages = []
+    project_choices = Project.objects.all().values_list('name', flat=True).order_by('id')
+    project_status = set()
+    languages = set()
     
     focus_input = 'id_username'
     
@@ -976,9 +978,13 @@ def signup(request):
         username = request.POST.get('username', None)
         email = request.POST.get('email', None)
         token = request.POST.get('token', None)
+        projects = request.POST.getlist('projects', None)
         languages = request.POST.getlist('languages', None)
         
-        if username and email and token and languages:
+        LOGGER.debug(projects)
+        LOGGER.debug(languages)
+        
+        if username and email and token and projects and languages:
             try:
                 # Check if given invite token is still active.
                 invite = UserInviteToken.objects.filter(token=token)
@@ -1000,8 +1006,9 @@ def signup(request):
                     raise ValueError('invalid_username')
                 
                 # Compute set of evaluation languages for this user.
+                target_language_codes = set([x[0][3:] for x in LANGUAGE_PAIR_CHOICES])
                 eval_groups = []
-                for eval_language in ('2ces', '2deu', '2eng', '2fin', '2fra', '2hin', '2rus'):
+                for eval_language in target_language_codes:
                     if eval_language in languages:
                         eng2xyz = Group.objects.filter(name__endswith=eval_language)
                         if eng2xyz.exists():
@@ -1011,12 +1018,18 @@ def signup(request):
                 wmt16_group = Group.objects.filter(name='WMT16')
                 if wmt16_group.exists():
                     eval_groups.append(wmt16_group[0])
-
+                
                 LOGGER.debug('Evaluation languages: {0}'.format(eval_groups))
                 
                 # Create new user account and add to group.
                 password = md5(invite.group.name).hexdigest()[:8]
                 user = User.objects.create_user(username, email, password)
+                
+                # Update set of projects for this user.
+                for project_name in projects:
+                    project_instance = Project.objects.filter(name=project_name)
+                    if project_instance.exists():
+                        project_instance[0].users.add(user)
                 
                 # Update group settings for the new user account.
                 invite.group.user_set.add(user)
@@ -1047,7 +1060,9 @@ def signup(request):
                     username = None
                     email = None
                     token = None
-                    languages = None
+                    project_choices = Project.objects.all().values_list('name', flat=True).order_by('id')
+                    project_status = set()
+                    languages = set()
             
             # For any other exception, clean up and ask user to retry.
             except:
@@ -1057,7 +1072,9 @@ def signup(request):
                 username = None
                 email = None
                 token = None
-                languages = None
+                project_choices = Project.objects.all().values_list('name', flat=True).order_by('id')
+                project_status = set()
+                languages = set()
         
         # Detect which input should get focus for next page rendering.
         if not username:
@@ -1069,10 +1086,13 @@ def signup(request):
         elif not token:
             focus_input = 'id_token'
             errors = ['invalid_token']
+        if not projects:
+            focus_input = 'id_projects'
+            errors = ['invalid_projects']
         elif not languages:
             focus_input = 'id_languages'
             errors = ['invalid_languages']
-    
+
     context = {
       'active_page': "OVERVIEW",
       'errors': errors,
@@ -1080,6 +1100,8 @@ def signup(request):
       'username': username,
       'email': email,
       'token': token,
+      'project_choices': project_choices,
+      'project_status': project_status,
       'languages': languages,
       'title': 'WMT16 Sign up',
     }

@@ -95,7 +95,8 @@ if __name__ == "__main__":
               _child.attrib["target-language"])
         
             # Hotfix potentially wrong ISO codes;  we are using ISO-639-3.
-            iso_639_2_to_3_mapping = {'cze': 'ces', 'fre': 'fra', 'ger': 'deu'}
+            iso_639_2_to_3_mapping = {'cze': 'ces', 'fre': 'fra', 'ger': 'deu',
+              'ron': 'rom', 'tur': 'trk'}
             for part2_code, part3_code in iso_639_2_to_3_mapping.items():
                 language_pair = language_pair.replace(part2_code, part3_code)
         

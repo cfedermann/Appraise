@@ -57,7 +57,7 @@ GROUP_HIT_REQUIREMENTS = {
   'MSR': 0,
   'MTMA': 0,
 
-  # participants
+  # NewsTask participants
   'Aalto': 100,
   'Abu-Matran': 300,
   'AFRL-MITLL': 400,
@@ -75,7 +75,7 @@ GROUP_HIT_REQUIREMENTS = {
   'NRC': 100,
   'NYU-Umontreal': 400,
   'PJATK': 200,
-  'PROMT': 500,
+  'PROMT': 800, # 500 NewsTask, 300 ITTask
   'QT21': 100,
   'RWTH': 100,
   'UEdin': 1800,
@@ -83,6 +83,17 @@ GROUP_HIT_REQUIREMENTS = {
   'USFD': 100,
   'UUT': 100,
   'YSDA': 200,
+  
+  # ITTask participants
+  'Berlin': 600,
+  'Hamburg': 200,
+  'Prague': 400,
+  'Amsterdam': 200,
+  'Saarbrücken': 100,
+  'Groningen': 300,
+  'Sofia': 200,
+  'Donostia': 500,
+  'Lisbon': 300,
 }
 
 

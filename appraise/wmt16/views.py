@@ -836,12 +836,14 @@ def _compute_group_stats():
     
     for group in groups:
         _name = group.name
-        if not _name in GROUP_HIT_REQUIREMENTS.keys():
-            continue
         
         _group_stats = HIT.compute_status_for_group(group)
         _total = _group_stats[0]
-        _required = GROUP_HIT_REQUIREMENTS[_name]
+        
+        if _total > 0 and not _name in GROUP_HIT_REQUIREMENTS.keys():
+            _required = 0
+        elif _name in GROUP_HIT_REQUIREMENTS.keys():
+            _required = GROUP_HIT_REQUIREMENTS[_name]
         _delta = _total - _required
         _data = (_total, _required, _delta)
         

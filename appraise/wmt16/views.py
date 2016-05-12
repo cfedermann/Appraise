@@ -770,6 +770,7 @@ def _compute_global_stats():
     # Create new status data snapshot
     new_data = StatusData()
     new_data.date_and_time = datetime.now()
+    new_data.save()
     
     # TODO: refactor
     kv_vdata = KeyValueData(key='users', value=str(len(wmt16_users)))
@@ -807,7 +808,6 @@ def _compute_global_stats():
     kv_data = KeyValueData(key='duration_total', value=str(seconds_to_timedelta(total_time)))
     kv_data.save()
     new_data.data_points.add(kv_data)
-    new_data.save()
     
     return global_stats
 

@@ -770,15 +770,43 @@ def _compute_global_stats():
     # Create new status data snapshot
     new_data = StatusData()
     new_data.date_and_time = datetime.now()
-    new_data.data_points.add(KeyValueData(key='users', value=str(len(wmt16_users))))
-    new_data.data_points.add(KeyValueData(key='groups', value=str(len(groups))))
-    new_data.data_points.add(KeyValueData(key='hits_completed', value=str(hits_completed)))
-    new_data.data_points.add(KeyValueData(key='hits_remaining', value=str(hits_remaining)))
-    new_data.data_points.add(KeyValueData(key='ranking_results', value=str(ranking_results.count())))
-    new_data.data_points.add(KeyValueData(key='system_comparisons', value=str(system_comparisons)))
-    new_data.data_points.add(KeyValueData(key='duration_per_hit', value=str(seconds_to_timedelta(avg_time))))
-    new_data.data_points.add(KeyValueData(key='duration_per_task', value=str(seconds_to_timedelta(avg_user_time))))
-    new_data.data_points.add(KeyValueData(key='duration_total', value=str(seconds_to_timedelta(total_time))))
+    
+    # TODO: refactor
+    kv_vdata = KeyValueData(key='users', value=str(len(wmt16_users)))
+    kv_vdata.save()
+    new_data.data_points.add(kv_data)
+    
+    kv_data = KeyValueData(key='groups', value=str(len(groups)))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
+    
+    kv_data = KeyValueData(key='hits_completed', value=str(hits_completed))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
+    
+    kv_data = KeyValueData(key='hits_remaining', value=str(hits_remaining))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
+    
+    kv_data = KeyValueData(key='ranking_results', value=str(ranking_results.count()))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
+    
+    kv_data = KeyValueData(key='system_comparisons', value=str(system_comparisons))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
+    
+    KeyValueData(key='duration_per_hit', value=str(seconds_to_timedelta(avg_time)))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
+    
+    kv_data = KeyValueData(key='duration_per_task', value=str(seconds_to_timedelta(avg_user_time)))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
+    
+    kv_data = KeyValueData(key='duration_total', value=str(seconds_to_timedelta(total_time)))
+    kv_data.save()
+    new_data.data_points.add(kv_data)
     new_data.save()
     
     return global_stats

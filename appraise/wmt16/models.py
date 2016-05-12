@@ -73,7 +73,7 @@ GROUP_HIT_REQUIREMENTS = {
   'TBTK': 200,
   'Cambridge': 100,
   'NRC': 100,
-  'NYU-Umontreal': 400,
+  'NYU-UMontreal': 400,
   'PJATK': 200,
   'PROMT': 800, # 500 NewsTask, 300 ITTask
   'QT21': 100,

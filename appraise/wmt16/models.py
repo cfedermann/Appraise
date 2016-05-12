@@ -52,6 +52,14 @@ LANGUAGE_PAIR_CHOICES = (
   ('eng2ptb', 'English → Portguese'),
 )
 
+ISO639_3_TO_NAME_MAPPING = {
+  'ces': 'Czech', 'cze': 'Czech', 'deu': 'German', 'ger': 'German',
+  'eng': 'English', 'esn': 'Spanish', 'spa': 'Spanish', 'fra': 'French',
+  'fre': 'French', 'rus': 'Russian', 'fin': 'Finnish', 'rom': 'Romanian',
+  'ron': 'Romanian', 'trk': 'Turkish', 'tur': 'Turkish', 'eus': 'Basque',
+  'baq': 'Basque', 'bul': 'Bulgarian', 'nld': 'Dutch', 'ptb': 'Portguese',
+}
+
 GROUP_HIT_REQUIREMENTS = {
   # volunteers
   'MSR': 0,
@@ -671,17 +679,11 @@ class RankingResult(models.Model):
         except:
             ranking_csv_data.append(-1)
 
-        iso639_3_to_name_mapping = {'ces': 'Czech', 'cze': 'Czech',
-          'deu': 'German', 'ger': 'German', 'eng': 'English',
-          'spa': 'Spanish', 'fra': 'French', 'fre': 'French',
-          'rus': 'Russian', 'fin': 'Finnish'}
-
         _src_lang = self.item.hit.hit_attributes['source-language']
         _trg_lang = self.item.hit.hit_attributes['target-language']
 
-        ranking_csv_data.append(iso639_3_to_name_mapping[_src_lang]) # srclang
-        ranking_csv_data.append(iso639_3_to_name_mapping[_trg_lang]) # trglang
-
+        ranking_csv_data.append(ISO639_3_TO_NAME_MAPPING[_src_lang]) # srclang
+        ranking_csv_data.append(ISO639_3_TO_NAME_MAPPING[_trg_lang]) # trglang
 
         ranking_csv_data.append(self.user.username)
         ranking_csv_data.append(datetime_to_seconds(self.duration))
@@ -709,15 +711,7 @@ class RankingResult(models.Model):
         item = self.item
         hit = self.item.hit
         values = []
-
-        iso639_3_to_name_mapping = {'ces': 'Czech', 'cze': 'Czech',
-          'deu': 'German', 'ger': 'German', 'eng': 'English',
-          'spa': 'Spanish', 'fra': 'French', 'fre': 'French',
-          'rus': 'Russian', 'fin': 'Finnish', 'rom': 'Romanian',
-          'ron': 'Romanian', 'trk': 'Turkish', 'tur': 'Turkish',
-          'eus': 'Basque', 'baq': 'Basque', 'bul': 'Bulgarian',
-          'nld': 'Dutch', 'ptb': 'Portguese',}
-
+        
         _src_lang = hit.hit_attributes['source-language']
         _trg_lang = hit.hit_attributes['target-language']
 
@@ -742,8 +736,8 @@ class RankingResult(models.Model):
 
         # Note that srcIndex and segmentId are 1-indexed for compatibility
         # with evaluation scripts from previous editions of the WMT.
-        values.append(iso639_3_to_name_mapping[_src_lang]) # srclang
-        values.append(iso639_3_to_name_mapping[_trg_lang]) # trglang
+        values.append(ISO639_3_TO_NAME_MAPPING[_src_lang]) # srclang
+        values.append(ISO639_3_TO_NAME_MAPPING[_trg_lang]) # trglang
         values.append(item.source[1]['id'])                # srcIndex
         values.append('-1')                                # documentId
         values.append(item.source[1]['id'])                # segmentId (= srcIndex)

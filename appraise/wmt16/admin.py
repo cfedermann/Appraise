@@ -11,7 +11,7 @@ from django.template import Context
 from django.template.loader import get_template
 
 from appraise.wmt16.models import HIT, RankingTask, RankingResult, \
-  UserHITMapping, UserInviteToken, Project, KeyValueData, StatusData
+  UserHITMapping, UserInviteToken, Project, TimedKeyValueData
 
 from appraise.settings import LOG_LEVEL, LOG_HANDLER
 
@@ -204,7 +204,6 @@ class UserHITMappingAdmin(admin.ModelAdmin):
     search_fields = ('user__username', 'user__first_name', 'user__last_name')
 
 
-
 class UserInviteTokenAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for UserInviteToken instances.
@@ -214,11 +213,19 @@ class UserInviteTokenAdmin(admin.ModelAdmin):
     search_fields = ('group__name', 'token')
 
 
+class TimedKeyValueDataAdmin(admin.ModelAdmin):
+    """
+    ModelAdmin class for TimedKeyValueData instances.
+    """
+    list_display = ('key', 'value', 'date_and_time')
+    list_filter = ('key',)
+    search_fields = ('key', 'value')
+
+
 admin.site.register(HIT, HITAdmin)
 admin.site.register(RankingTask)
 admin.site.register(RankingResult, RankingResultAdmin)
 admin.site.register(UserHITMapping, UserHITMappingAdmin)
 admin.site.register(UserInviteToken, UserInviteTokenAdmin)
 admin.site.register(Project)
-admin.site.register(KeyValueData)
-admin.site.register(StatusData)
+admin.site.register(TimedKeyValueData, TimedKeyValueDataAdmin)

@@ -1017,21 +1017,13 @@ class UserInviteToken(models.Model):
         return new_token
 
 
-class KeyValueData(models.Model):
+class TimedKeyValueData(models.Model):
     """
     Stores a simple (key, value) pair.
     """
     key = models.CharField(max_length=100, blank=False, null=False)
     value = models.TextField(blank=False, null=False)
-
-
-class StatusData(models.Model):
-    """
-    Stores status data for a given point in time.
-    """
-    date_and_time = models.DateTimeField(blank=False, null=False, editable=False)
-    
-    data_points = models.ManyToManyField(KeyValueData)
+    date_and_time = models.DateTimeField(blank=False, null=False, editable=False, auto_now_add=True)
 
 
 def initialize_database():

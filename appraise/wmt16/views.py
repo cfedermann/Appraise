@@ -24,7 +24,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from appraise.wmt16.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken, Project, \
   GROUP_HIT_REQUIREMENTS, MAX_USERS_PER_HIT, initialize_database, \
-  KeyValueData, StatusData
+  TimedKeyValueData
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH, STATIC_URL
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
@@ -768,46 +768,32 @@ def _compute_global_stats():
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     # Create new status data snapshot
-    new_data = StatusData()
-    new_data.date_and_time = datetime.now()
-    new_data.save()
-    
-    # TODO: refactor
-    kv_vdata = KeyValueData(key='users', value=str(len(wmt16_users)))
+    kv_vdata = TimedKeyValueData(key='users', value=str(len(wmt16_users)))
     kv_vdata.save()
-    new_data.data_points.add(kv_data)
     
-    kv_data = KeyValueData(key='groups', value=str(len(groups)))
+    kv_data = TimedKeyValueData(key='groups', value=str(len(groups)))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
-    kv_data = KeyValueData(key='hits_completed', value=str(hits_completed))
+    kv_data = TimedKeyValueData(key='hits_completed', value=str(hits_completed))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
-    kv_data = KeyValueData(key='hits_remaining', value=str(hits_remaining))
+    kv_data = TimedKeyValueData(key='hits_remaining', value=str(hits_remaining))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
-    kv_data = KeyValueData(key='ranking_results', value=str(ranking_results.count()))
+    kv_data = TimedKeyValueData(key='ranking_results', value=str(ranking_results.count()))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
-    kv_data = KeyValueData(key='system_comparisons', value=str(system_comparisons))
+    kv_data = TimedKeyValueData(key='system_comparisons', value=str(system_comparisons))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
-    KeyValueData(key='duration_per_hit', value=str(seconds_to_timedelta(avg_time)))
+    kv_data = TimedKeyValueData(key='duration_per_hit', value=str(seconds_to_timedelta(avg_time)))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
-    kv_data = KeyValueData(key='duration_per_task', value=str(seconds_to_timedelta(avg_user_time)))
+    kv_data = TimedKeyValueData(key='duration_per_task', value=str(seconds_to_timedelta(avg_user_time)))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
-    kv_data = KeyValueData(key='duration_total', value=str(seconds_to_timedelta(total_time)))
+    kv_data = TimedKeyValueData(key='duration_total', value=str(seconds_to_timedelta(total_time)))
     kv_data.save()
-    new_data.data_points.add(kv_data)
     
     return global_stats
 

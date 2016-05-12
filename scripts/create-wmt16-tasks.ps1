@@ -7,11 +7,13 @@ $source = $args[1]
 $target = $args[2]
 $plaindir = $args[3]
 $outdir = $args[4]
+$testid = $args[5]
+
+echo "Valid testid settings = 'newstest2016', 'it-test2016'";
 
 $pair = "$source-$target"
 $filename = $pair + "-batch" + $batch_no + ".xml"
 $outfile = [System.IO.Path]::Combine($outdir, $pair, $filename)
-$testid = "newstest2016"
 
 $language_map = @{
   'en' = 'eng';
@@ -21,6 +23,11 @@ $language_map = @{
   'ru' = 'rus';
   'ro' = 'ron';
   'tr' = 'tur';
+  'bg' = 'bul';
+  'es' = 'esn';
+  'eu' = 'eus';
+  'nl' = 'nld';
+  'pt' = 'ptb';
 }
 
 $src_file = [System.IO.Path]::Combine($plaindir, "sources", $testid + "-" + $source + $target + "-src." + $source)

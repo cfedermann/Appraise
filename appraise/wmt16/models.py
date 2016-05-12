@@ -92,6 +92,7 @@ GROUP_HIT_REQUIREMENTS = {
   'UUT': 100,
   'YSDA': 200,
   'JXNU-IIP': 100,
+  'UPF': 100,
   
   # ITTask participants
   'Berlin': 600,

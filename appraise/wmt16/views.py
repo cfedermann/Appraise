@@ -768,32 +768,15 @@ def _compute_global_stats():
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
     
     # Create new status data snapshot
-    kv_vdata = TimedKeyValueData(key='users', value=str(len(wmt16_users)))
-    kv_vdata.save()
-    
-    kv_data = TimedKeyValueData(key='groups', value=str(len(groups)))
-    kv_data.save()
-    
-    kv_data = TimedKeyValueData(key='hits_completed', value=str(hits_completed))
-    kv_data.save()
-    
-    kv_data = TimedKeyValueData(key='hits_remaining', value=str(hits_remaining))
-    kv_data.save()
-    
-    kv_data = TimedKeyValueData(key='ranking_results', value=str(ranking_results.count()))
-    kv_data.save()
-    
-    kv_data = TimedKeyValueData(key='system_comparisons', value=str(system_comparisons))
-    kv_data.save()
-    
-    kv_data = TimedKeyValueData(key='duration_per_hit', value=str(seconds_to_timedelta(avg_time)))
-    kv_data.save()
-    
-    kv_data = TimedKeyValueData(key='duration_per_task', value=str(seconds_to_timedelta(avg_user_time)))
-    kv_data.save()
-    
-    kv_data = TimedKeyValueData(key='duration_total', value=str(seconds_to_timedelta(total_time)))
-    kv_data.save()
+    TimedKeyValueData.update_status_if_changed('users', str(len(wmt16_users)))
+    TimedKeyValueData.update_status_if_changed('groups', str(len(groups)))
+    TimedKeyValueData.update_status_if_changed('hits_completed', str(hits_completed))
+    TimedKeyValueData.update_status_if_changed('hits_remaining', str(hits_remaining))
+    TimedKeyValueData.update_status_if_changed('ranking_results', str(ranking_results.count()))
+    TimedKeyValueData.update_status_if_changed('system_comparisons', str(system_comparisons))
+    TimedKeyValueData.update_status_if_changed('duration_per_hit', str(seconds_to_timedelta(avg_time)))
+    TimedKeyValueData.update_status_if_changed('duration_per_task', str(seconds_to_timedelta(avg_user_time)))
+    TimedKeyValueData.update_status_if_changed('duration_total', str(seconds_to_timedelta(total_time)))
     
     return global_stats
 

@@ -1025,14 +1025,14 @@ class TimedKeyValueData(models.Model):
     value = models.TextField(blank=False, null=False)
     date_and_time = models.DateTimeField(blank=False, null=False, editable=False, auto_now_add=True)
     
-    @staticmethod
-    def update_status_if_changed(key, new_value):
+    @classmethod
+    def update_status_if_changed(cls, key, new_value):
         """
         Stores a new TimedKeyValueData instance if value for key has changed
         """
-        _latest_value = TimedKeyValueData.objects.filter(key=key).order_by(date_and_time).last()
-        if _latest_value.value != new_value:
-            new_data = TimedKeyValueData(key=key, value=new_value)
+        _latest_values = cls.objects.filter(key=key).order_by('date_and_time').reverse().values_list('value', flat=True)
+        if _latest_values[0] != new_value:
+            new_data = cls(key=key, value=new_value)
             new_data.save()
 
 

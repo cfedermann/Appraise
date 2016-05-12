@@ -1138,7 +1138,7 @@ def profile_update(request):
     
     if request.method == "POST":
         projects = request.POST.getlist('projects', None)
-        languages = request.POST.getlist('languages', None)
+        languages = set(request.POST.getlist('languages', None))
         
         LOGGER.debug(projects)
         LOGGER.debug(languages)

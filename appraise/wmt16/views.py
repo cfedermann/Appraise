@@ -23,7 +23,8 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from appraise.wmt16.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken, Project, \
-  GROUP_HIT_REQUIREMENTS, MAX_USERS_PER_HIT, initialize_database
+  GROUP_HIT_REQUIREMENTS, MAX_USERS_PER_HIT, initialize_database, \
+  KeyValueData, StatusData
 from appraise.settings import LOG_LEVEL, LOG_HANDLER, COMMIT_TAG, ROOT_PATH, STATIC_URL
 from appraise.utils import datetime_to_seconds, seconds_to_timedelta
 
@@ -765,6 +766,20 @@ def _compute_global_stats():
     global_stats.append(('Average duration (per HIT)', seconds_to_timedelta(avg_time)))
     global_stats.append(('Average duration (per task)', seconds_to_timedelta(avg_user_time)))
     global_stats.append(('Total duration', seconds_to_timedelta(total_time)))
+    
+    # Create new status data snapshot
+    new_data = StatusData()
+    new_data.date_and_time = datetime.now()
+    new_data.data_points.add(KeyValueData(key='users', value=str(len(wmt16_users))))
+    new_data.data_points.add(KeyValueData(key='groups', value=str(len(groups))))
+    new_data.data_points.add(KeyValueData(key='hits_completed', value=str(hits_completed)))
+    new_data.data_points.add(KeyValueData(key='hits_remaining', value=str(hits_remaining)))
+    new_data.data_points.add(KeyValueData(key='ranking_results', value=str(ranking_results.count())))
+    new_data.data_points.add(KeyValueData(key='system_comparisons', value=str(system_comparisons)))
+    new_data.data_points.add(KeyValueData(key='duration_per_hit', value=str(seconds_to_timedelta(avg_time))))
+    new_data.data_points.add(KeyValueData(key='duration_per_task', value=str(seconds_to_timedelta(avg_user_time))))
+    new_data.data_points.add(KeyValueData(key='duration_total', value=str(seconds_to_timedelta(total_time))))
+    new_data.save()
     
     return global_stats
 

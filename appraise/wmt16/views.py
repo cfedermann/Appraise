@@ -804,6 +804,7 @@ def _compute_language_pair_stats():
                     for _system in set(_translation[1]['system'].split(',')):
                          _unique_systems_for_language_pair.add(_system)
         
+        LOGGER.info(_unique_systems_for_language_pair)
         _completed_hits = _completed_hits.count()
         _total_hits = _remaining_hits + _completed_hits
                 

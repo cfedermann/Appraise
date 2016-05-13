@@ -20,6 +20,8 @@ import argparse
 import os
 import sys
 
+from hashlib import md5
+
 PARSER = argparse.ArgumentParser(description="Creates the requested number " \
   "of invite tokens for the given group.")
 PARSER.add_argument("group_name", metavar="group-name", help="Name of the " \
@@ -65,7 +67,12 @@ if __name__ == "__main__":
         new_token.save()
         generated_tokens.append(new_token.token)
     
+    # Print group name:initial password to screen.
+    group_password = md5(group.name).hexdigest()[:8]
+    print "   Group: {0}".format(group.name)
+    print "Password: {0}".format(group_password)
+    
     # Print user invite tokens to screen.
+    print "Tokens:"
     for token in generated_tokens:
         print token
-

@@ -35,6 +35,7 @@ urlpatterns += patterns('appraise.wmt16.views',
   (r'^{0}wmt16/update-ranking/$'.format(DEPLOYMENT_PREFIX), 'update_ranking'),
   (r'^{0}wmt16/signup/$'.format(DEPLOYMENT_PREFIX), 'signup'),
   (r'^{0}wmt16/profile/$'.format(DEPLOYMENT_PREFIX), 'profile_update'),
+  (r'^{0}wmt16/export-to-pairwise-csv/(?P<token>[^/]+)/$'.format(DEPLOYMENT_PREFIX), 'export_to_pairwise_csv'),
 )
 
 if DEBUG:

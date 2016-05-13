@@ -182,7 +182,10 @@ def export_results_to_pairwise_csv(modeladmin, request, queryset):
     
     for result in queryset:
         if isinstance(result, RankingResult):
-            results.append(result.export_to_pairwise_csv())
+            current_csv = result.export_to_pairwise_csv()
+            if current_csv is None:
+                continue
+            results.append(current_csv)
     
     export_csv = u"\n".join(results)
     export_csv = export_csv + u"\n"

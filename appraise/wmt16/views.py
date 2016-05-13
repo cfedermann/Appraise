@@ -1215,3 +1215,30 @@ def profile_update(request):
     context.update(BASE_CONTEXT)
     
     return render(request, 'wmt16/profile_update.html', context)
+    
+
+def export_to_pairwise_csv(request, token):
+    """
+    Exports all current annotations in pairwise CSV format.
+    
+    Requires that given token matches the secret token set in local config.
+    """
+    from local_settings import EXPORT_TOKEN
+    if not token == EXPORT_TOKEN:
+        return HttpResponseForbidden()
+        
+    queryset = RankingResult.objects.filter(item__hit__completed=True)
+
+    results = [u'srclang,trglang,srcIndex,segmentId,judgeId,' \
+      'system1Id,system1rank,system2Id,system2rank,rankingID']
+    
+    for result in queryset:
+        if isinstance(result, RankingResult):
+            current_csv = result.export_to_pairwise_csv()
+            if current_csv is None:
+                continue
+            results.append(current_csv)
+    
+    export_csv = u"\n".join(results)
+    export_csv = export_csv + u"\n"
+    return HttpResponse(export_csv, mimetype='text/plain')

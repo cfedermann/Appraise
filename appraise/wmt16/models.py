@@ -86,7 +86,7 @@ GROUP_HIT_REQUIREMENTS = {
   'PROMT': 800, # 500 NewsTask, 300 ITTask
   'QT21': 100,
   'RWTH': 100,
-  'UEdin': 1800,
+  'UEdin': 1900,
   'UH': 400,
   'USFD': 100,
   'UUT': 100,

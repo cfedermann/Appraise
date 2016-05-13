@@ -795,7 +795,7 @@ def _compute_language_pair_stats():
         _name = choice[1]
         _remaining_hits = HIT.compute_remaining_hits(language_pair=_code)
         _completed_hits = HIT.objects.filter(completed=True, mturk_only=False,
-          language_pair=_code)
+          active=True, language_pair=_code)
         
         _unique_systems_for_language_pair = set()
         for _hit in _completed_hits:

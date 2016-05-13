@@ -157,7 +157,7 @@ def export_results_to_csv(modeladmin, request, queryset):
     """
     Exports the results in the given queryset to CSV format.
     """
-    results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \
+    results = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeID,' \
       'system1Number,system1Id,system2Number,system2Id,system3Number,' \
       'system3Id,system4Number,system4Id,system5Number,system5Id,' \
       'system1rank,system2rank,system3rank,system4rank,system5rank']
@@ -173,6 +173,24 @@ def export_results_to_csv(modeladmin, request, queryset):
 export_results_to_csv.short_description = "Export selected results to CSV"
 
 
+def export_results_to_pairwise_csv(modeladmin, request, queryset):
+    """
+    Exports the results in the given queryset to pairwise CSV format.
+    """
+    results = [u'srclang,trglang,srcIndex,segmentId,judgeId,' \
+      'system1Id,system1rank,system2Id,system2rank,rankingID']
+    
+    for result in queryset:
+        if isinstance(result, RankingResult):
+            results.append(result.export_to_pairwise_csv())
+    
+    export_csv = u"\n".join(results)
+    export_csv = export_csv + u"\n"
+    return HttpResponse(export_csv, mimetype='text/plain')
+
+export_results_to_pairwise_csv.short_description = "Export selected results to pairwise CSV"
+
+
 class RankingResultAdmin(admin.ModelAdmin):
     """
     ModelAdmin class for RankingResult instances.
@@ -181,7 +199,7 @@ class RankingResultAdmin(admin.ModelAdmin):
     list_filter = ('item__hit__language_pair', 'item__hit__active',
       'item__hit__mturk_only', 'user__groups')
     readonly_fields = ('completion',)
-    actions = (export_results_to_csv,)
+    actions = (export_results_to_csv, export_results_to_pairwise_csv,)
     
     fieldsets = (
       ('Overview', {

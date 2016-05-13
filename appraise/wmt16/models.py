@@ -384,7 +384,6 @@ class HIT(models.Model):
                 source_id = -1
 
             _results = []
-            source_id = getattr(item, 'source[1]["id"]', -1)
             for _result in item.rankingresult_set.all():
                 _results.append(_result.export_to_xml())
 

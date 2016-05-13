@@ -1032,7 +1032,7 @@ class TimedKeyValueData(models.Model):
         Stores a new TimedKeyValueData instance if value for key has changed
         """
         _latest_values = cls.objects.filter(key=key).order_by('date_and_time').reverse().values_list('value', flat=True)
-        if _latest_values[0] != new_value:
+        if not _latest_values or _latest_values[0] != new_value:
             new_data = cls(key=key, value=new_value)
             new_data.save()
 

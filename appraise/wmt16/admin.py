@@ -121,7 +121,7 @@ class HITAdmin(admin.ModelAdmin):
     ModelAdmin class for HIT instances.
     """
     list_display = ('hit_id', 'block_id', 'language_pair', 'id')
-    list_filter = ('language_pair', 'active', 'mturk_only', 'completed')
+    list_filter = ('language_pair', 'active', 'mturk_only', 'completed', 'project__name')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id', 'assigned', 'finished')
     actions = (export_hit_xml, deactivate_hits, export_hit_ids_to_csv,

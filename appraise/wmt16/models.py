@@ -664,6 +664,58 @@ class RankingResult(models.Model):
         return template.render(Context(context))
 
 
+    def export_to_pairwise_csv(self):
+        """
+        Renders this RankingResult as pairwise CSV String.
+
+        Format:
+        srclang,trglang,srcIndex,segmentId,judgeID,system1Id,system1rank,system2Id,system2rank,rankingID
+
+        """
+        skipped = self.results is None
+        if skipped:
+            return None
+        
+        try:
+            srcIndex = self.item.source[1]["id"]
+        except:
+            srcIndex = -1
+
+        _src_lang = self.item.hit.hit_attributes['source-language']
+        _trg_lang = self.item.hit.hit_attributes['target-language']
+
+        csv_data = []
+        csv_data.append(_src_lang)              # srclang
+        csv_data.append(_trg_lang)              # trglang
+        csv_data.append(srcIndex)               # srcIndex
+        csv_data.append(srcIndex)               # segmentId
+        csv_data.append(self.user.username)     # judgeID
+        
+        base_values = csv_data
+
+        systems = set()
+        for index, translation in enumerate(self.item.translations):
+            name = translation[1]['system'].replace(',', '+')
+            rank = self.results[index]
+            systems.add((name, rank))
+            
+        csv_output = []
+        from itertools import combinations
+        for (sysA, sysB) in combinations(systems, 2):
+            csv_local = []
+            csv_local.extend(base_values)
+            csv_local.append(sysA[0])           # system1Id
+            csv_local.append(str(sysA[1]))      # system1rank
+            csv_local.append(sysB[0])           # system2Id
+            csv_local.append(str(sysB[1]))      # system2rank
+            csv_local.append(str(self.item.id)) # rankingID
+            
+            csv_output.append(u",".join(csv_local))
+            csv_local = []
+
+        return u"\n".join(csv_output)
+        
+
     def export_to_ranking_csv(self):
         """
         Renders this RankingResult as Ranking CSV String.
@@ -760,7 +812,7 @@ class RankingResult(models.Model):
                 _system_names.extend(_local_systems)
                 _system_ranks.extend(_local_results)
             else:
-                _system_names.append(_system.replace(',', ';'))
+                _system_names.append(_system.replace(',', '+'))
                 _system_ranks.append(str(self.results[_result_index]))
 
         # Check if we need to add placeholder systems to pad to 5*k systems.

@@ -371,13 +371,16 @@ def hit_handler(request, hit_id):
     if not hit.active:
         LOGGER.debug('Detected inactive User/HIT mapping {0}->{1}'.format(
           request.user, hit))
-        new_hit = _compute_next_task_for_user(request.user, hit.project, hit.language_pair)
-        if new_hit:
-            return redirect('appraise.wmt16.views.hit_handler',
-              hit_id=new_hit.hit_id)
+        # Try to find a new HIT for the current annotation project
+        if hit.project_set.count() > 0:
+            annotation_project = list(hit.project_set.all())[0]
+            new_hit = _compute_next_task_for_user(request.user, annotation_project, hit.language_pair)
+            if new_hit:
+                return redirect('appraise.wmt16.views.hit_handler',
+                  hit_id=new_hit.hit_id)
         
-        else:
-            return redirect('appraise.wmt16.views.overview')
+        # If that fails, return to overview page
+        return redirect('appraise.wmt16.views.overview')
     
     items = RankingTask.objects.filter(hit=hit)
     if not items:

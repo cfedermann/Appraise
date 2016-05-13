@@ -42,13 +42,13 @@ PARSER.add_argument('-save', type=str, default=None, dest="saveDir", help='direc
 def cleanup_translation(input_str):
     """Cleans a translation for identity comparison.
     
-    Removes superfluous whitespace and ignores case.
+    Removes superfluous whitespace.
     
     """
     import re
     whitespace = re.compile('\s{2,}')
     cleaned_str = whitespace.sub(' ', input_str)
-    return cleaned_str.lower()
+    return cleaned_str
 
 def random_from_range(range_max, num_draws, tuple_size = 3, sequential = True):
     """Returns a set of tuples (of size `size') of numbers, representing sentences to use in constructing a HIT. `range_max' is the number of sentences, `num_draws' is the number of HITs to create, `tuple_size' is the number of sentences in each HIT, and `sequential' indicates that we should draw sentences in block groups."""

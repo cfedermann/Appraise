@@ -1226,7 +1226,7 @@ def export_to_pairwise_csv(request, token):
     
     Requires that given token matches the secret token set in local config.
     """
-    from local_settings import EXPORT_TOKEN
+    from appraise.local_settings import EXPORT_TOKEN
     if not token == EXPORT_TOKEN:
         return HttpResponseForbidden()
         

@@ -743,6 +743,8 @@ def _compute_global_stats():
     system_comparisons = 0
     for result in ranking_results:
         result.reload_dynamic_fields()
+        # TODO: this implicitly counts A=B comparisons for multi systems.
+        # Basically, inflating the number of pairwise comparisons... Fix!
         combinations = factorial(result.systems)/(factorial(result.systems-2) * 2) if result.systems > 2 else 0
         system_comparisons = system_comparisons + combinations
     

@@ -20,6 +20,8 @@ from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
+from django.template import Context
+from django.template.loader import get_template
 
 from appraise.wmt16.models import LANGUAGE_PAIR_CHOICES, UserHITMapping, \
   HIT, RankingTask, RankingResult, UserHITMapping, UserInviteToken, Project, \
@@ -1220,15 +1222,17 @@ def profile_update(request):
     return render(request, 'wmt16/profile_update.html', context)
     
 
-def export_to_pairwise_csv(request, token):
+def export_to_pairwise_csv(request, token, project):
     """
-    Exports all current annotations in pairwise CSV format.
+    Exports all annotations for the given project in pairwise CSV format.
     
     Requires that given token matches the secret token set in local config.
     """
     from appraise.local_settings import EXPORT_TOKEN
     if not token == EXPORT_TOKEN:
         return HttpResponseForbidden()
+        
+    annotation_project = get_object_or_404(Project, name=project)
         
     queryset = RankingResult.objects.filter(item__hit__completed=True)
 
@@ -1237,11 +1241,72 @@ def export_to_pairwise_csv(request, token):
     
     for result in queryset:
         if isinstance(result, RankingResult):
-            current_csv = result.export_to_pairwise_csv()
-            if current_csv is None:
-                continue
-            results.append(current_csv)
+            if result.item.hit.project_set.filter(id=annotation_project.id):
+                current_csv = result.export_to_pairwise_csv()
+                if current_csv is None:
+                    continue
+                results.append(current_csv)
     
     export_csv = u"\n".join(results)
     export_csv = export_csv + u"\n"
     return HttpResponse(export_csv, mimetype='text/plain')
+
+
+def export_to_ranking_csv(request, token, project):
+    """
+    Exports all annotations for the given project in ranking CSV format.
+    
+    Requires that given token matches the secret token set in local config.
+    """
+    from appraise.local_settings import EXPORT_TOKEN
+    if not token == EXPORT_TOKEN:
+        return HttpResponseForbidden()
+        
+    annotation_project = get_object_or_404(Project, name=project)
+        
+    queryset = RankingResult.objects.filter(item__hit__completed=True)
+
+    results = [u'srclang,trglang,srcIndex,doucmentId,segmentId,judgeId,' \
+      'system1Number,system1Id,system2Number,system2Id,system3Number,' \
+      'system3Id,system4Number,system4Id,system5Number,system5Id,' \
+      'system1rank,system2rank,system3rank,system4rank,system5rank']
+    
+    for result in queryset:
+        if isinstance(result, RankingResult):
+            if result.item.hit.project_set.filter(id=annotation_project.id):
+                # Current implementation of export_to_pairwise_csv() is weird.
+                # By contrast, export_to_csv() generates the right thing...
+                current_csv = result.export_to_csv()
+                if current_csv is None:
+                    continue
+                results.append(current_csv)
+    
+    export_csv = u"\n".join(results)
+    export_csv = export_csv + u"\n"
+    return HttpResponse(export_csv, mimetype='text/plain')
+
+
+def export_to_ranking_xml(request, token, project):
+    """
+    Exports all annotations for the given project in ranking XML format.
+    
+    Requires that given token matches the secret token set in local config.
+    """
+    from appraise.local_settings import EXPORT_TOKEN
+    if not token == EXPORT_TOKEN:
+        return HttpResponseForbidden()
+        
+    annotation_project = get_object_or_404(Project, name=project)
+    
+    template = get_template('wmt16/result_export.xml')
+    
+    queryset = HIT.objects.filter(completed=True)
+    
+    results = []
+    for task in queryset:
+        if isinstance(task, HIT):
+            if task.project_set.filter(id=annotation_project.id):
+                results.append(task.export_to_xml())
+    
+    export_xml = template.render(Context({'tasks': results}))
+    return HttpResponse(export_xml, mimetype='text/xml; charset=UTF-8')

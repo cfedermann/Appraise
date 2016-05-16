@@ -686,11 +686,11 @@ class RankingResult(models.Model):
         _trg_lang = self.item.hit.hit_attributes['target-language']
 
         csv_data = []
-        csv_data.append(_src_lang)              # srclang
-        csv_data.append(_trg_lang)              # trglang
-        csv_data.append(srcIndex)               # srcIndex
-        csv_data.append(srcIndex)               # segmentId
-        csv_data.append(self.user.username)     # judgeID
+        csv_data.append(ISO639_3_TO_NAME_MAPPING[_src_lang]) # srclang
+        csv_data.append(ISO639_3_TO_NAME_MAPPING[_trg_lang]) # trglang
+        csv_data.append(srcIndex)                            # srcIndex
+        csv_data.append(srcIndex)                            # segmentId
+        csv_data.append(self.user.username)                  # judgeID
         
         base_values = csv_data
 
@@ -703,16 +703,20 @@ class RankingResult(models.Model):
         csv_output = []
         from itertools import combinations
         for (sysA, sysB) in combinations(systems, 2):
-            csv_local = []
-            csv_local.extend(base_values)
-            csv_local.append(sysA[0])           # system1Id
-            csv_local.append(str(sysA[1]))      # system1rank
-            csv_local.append(sysB[0])           # system2Id
-            csv_local.append(str(sysB[1]))      # system2rank
-            csv_local.append(str(self.item.id)) # rankingID
+            # Compute all systems in sysA, sysB which can be multi systems
+            expandedA = sysA[0].split('+')
+            expandedB = sysB[0].split('+')
             
-            csv_output.append(u",".join(csv_local))
-            csv_local = []
+            for singleA in expandedA:
+                for singleB in expandedB:        
+                    csv_local = []
+                    csv_local.extend(base_values)
+                    csv_local.append(singleA)               # system1Id
+                    csv_local.append(str(sysA[1]))          # system1rank
+                    csv_local.append(singleB)               # system2Id
+                    csv_local.append(str(sysB[1]))          # system2rank
+                    csv_local.append(str(self.item.id))     # rankingID
+                    csv_output.append(u",".join(csv_local))
 
         return u"\n".join(csv_output)
         
@@ -725,6 +729,10 @@ class RankingResult(models.Model):
         ID,srcLang,tgtLang,user,duration,rank_1,word_count_1,rank_2,word_count_2,rank_3,word_count_3,rank_4,word_count_5,rank_1,word_count_5
 
         """
+        # TODO: this needs to be cleaned up...
+        # We'd like to have a minimal version of the ranking CSV output.
+        # Not sure why this one generates ranks and word counts... :)
+        raise NotImplementedError("not ready yet")
         ranking_csv_data = []
 
         try:
@@ -739,7 +747,7 @@ class RankingResult(models.Model):
         ranking_csv_data.append(ISO639_3_TO_NAME_MAPPING[_trg_lang]) # trglang
 
         ranking_csv_data.append(self.user.username)
-        ranking_csv_data.append(datetime_to_seconds(self.duration))
+        ranking_csv_data.append(str(datetime_to_seconds(self.duration)))
 
         skipped = self.results is None
 
@@ -751,10 +759,10 @@ class RankingResult(models.Model):
                 translations.append((_rank, _word_count))
 
         for rank, word_count in translations:
-            ranking_csv_data.append(rank)
-            ranking_csv_data.append(word_count)
+            ranking_csv_data.append(str(rank))
+            ranking_csv_data.append(str(word_count))
 
-        return ranking_csv_data
+        return u",".join(ranking_csv_data)
 
 
     def export_to_csv(self, expand_multi_systems=False):

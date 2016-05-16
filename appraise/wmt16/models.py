@@ -707,6 +707,7 @@ class RankingResult(models.Model):
             expandedA = sysA[0].split('+')
             expandedB = sysB[0].split('+')
             
+            # Pairwise comparisons without intra-multi-system pairs
             for singleA in expandedA:
                 for singleB in expandedB:        
                     csv_local = []
@@ -716,7 +717,41 @@ class RankingResult(models.Model):
                     csv_local.append(singleB)               # system2Id
                     csv_local.append(str(sysB[1]))          # system2rank
                     csv_local.append(str(self.item.id))     # rankingID
-                    csv_output.append(u",".join(csv_local))
+                    csv_joint = u",".join(csv_local)
+                    if not csv_joint in csv_output:
+                        csv_output.append(csv_joint)
+            
+            # Intra-multi-system pairs, sharing the same rank
+            # We'll only add these once to prevent duplicate entries
+            if len(expandedA) > 1:
+                print len(expandedA)
+                for (singleA1, singleA2) in combinations(expandedA, 2):
+                    csv_local = []
+                    csv_local.extend(base_values)
+                    csv_local.append(singleA1)              # system1Id
+                    csv_local.append(str(sysA[1]))          # system1rank
+                    csv_local.append(singleA2)              # system2Id
+                    csv_local.append(str(sysA[1]))          # system2rank
+                    csv_local.append(str(self.item.id))     # rankingID
+                    csv_joint = u",".join(csv_local)
+                    if not csv_joint in csv_output:
+                        csv_output.append(csv_joint)
+                    
+            # Intra-multi-system pairs, sharing the same rank
+            # We'll only add these once to prevent duplicate entries
+            if len(expandedB) > 1:
+                print len(expandedB)
+                for (singleB1, singleB2) in combinations(expandedB, 2):
+                    csv_local = []
+                    csv_local.extend(base_values)
+                    csv_local.append(singleB1)              # system1Id
+                    csv_local.append(str(sysB[1]))          # system1rank
+                    csv_local.append(singleB2)              # system2Id
+                    csv_local.append(str(sysB[1]))          # system2rank
+                    csv_local.append(str(self.item.id))     # rankingID
+                    csv_joint = u",".join(csv_local)
+                    if not csv_joint in csv_output:
+                        csv_output.append(csv_joint)
 
         return u"\n".join(csv_output)
         

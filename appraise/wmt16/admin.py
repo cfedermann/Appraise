@@ -38,6 +38,19 @@ def export_hit_xml(modeladmin, request, queryset):
 export_hit_xml.short_description = "Export selected HITs to XML"
 
 
+def complete_hits(modeladmin, request, queryset):
+    """
+    Completes the HIT instances for the given queryset.
+    """
+    for hit in queryset:
+        if isinstance(hit, HIT):
+            if hit.users.count() >= 1:
+                hit.completed = True
+                hit.save()
+
+complete_hits.short_description = "Complete selected HITs"
+
+
 def activate_hits(modeladmin, request, queryset):
     """
     Activates the HIT instances for the given queryset.

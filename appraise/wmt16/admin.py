@@ -225,8 +225,9 @@ class RankingResultAdmin(admin.ModelAdmin):
     ModelAdmin class for RankingResult instances.
     """
     list_display = ('item', 'user', 'readable_duration', 'results')
-    list_filter = ('item__hit__language_pair', 'item__hit__active',
-      'item__hit__mturk_only', 'user__groups')
+    list_filter = ('item__hit__language_pair', 'item__hit__completed',
+      'item__hit__active', 'item__hit__mturk_only',
+      'item__hit__project__name', 'user__groups')
     readonly_fields = ('completion',)
     actions = (export_results_to_csv, export_results_to_pairwise_csv,)
     

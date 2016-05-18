@@ -38,6 +38,18 @@ def export_hit_xml(modeladmin, request, queryset):
 export_hit_xml.short_description = "Export selected HITs to XML"
 
 
+def activate_hits(modeladmin, request, queryset):
+    """
+    Activates the HIT instances for the given queryset.
+    """
+    for hit in queryset:
+        if isinstance(hit, HIT):
+            hit.active = True
+            hit.save()
+
+activate_hits.short_description = "Activate selected HITs"
+
+
 def deactivate_hits(modeladmin, request, queryset):
     """
     Deactivates the HIT instances for the given queryset.

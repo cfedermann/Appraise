@@ -149,8 +149,9 @@ class HITAdmin(admin.ModelAdmin):
     list_filter = ('language_pair', 'active', 'mturk_only', 'completed', 'project__name')
     search_fields = ('hit_id',)
     readonly_fields = ('hit_id', 'assigned', 'finished')
-    actions = (export_hit_xml, deactivate_hits, export_hit_ids_to_csv,
-      export_hit_results_to_apf, export_hit_results_agreements)
+    actions = (export_hit_xml, complete_hits, activate_hits, deactivate_hits,
+      export_hit_ids_to_csv, export_hit_results_to_apf,
+      export_hit_results_agreements)
     filter_horizontal = ('users',)
     
     fieldsets = (

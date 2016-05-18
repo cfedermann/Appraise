@@ -56,15 +56,16 @@ def _identify_groups_for_user(user):
     """
     Identifies the annotation groups for the given user
     """
-    groups = set()
-    for group in request.user.groups.all():
+    groups = []
+    for group in user.groups.all():
         if group.name == 'WMT16' \
-          or group.name.towlower().startswith('wmt')
-          or _group.name.startswith('eng2') \
-          or _group.name.endswith('2eng'):
+          or group.name.lower().startswith('wmt') \
+          or group.name.startswith('eng2') \
+          or group.name.endswith('2eng'):
             continue
         
-        groups.add(group)
+        if not group in groups:
+            groups.append(group)
     
     return groups
 
@@ -456,8 +457,10 @@ def overview(request):
     groups = _identify_groups_for_user(request.user)
     group = None
     if len(groups) > 1:
-        LOGGER.debug('User "{0}" assigned to multiple annotation groups: {1}',
-          request.user.username or "Anonymous", u', '.join(groups))
+        LOGGER.debug(u'User "{0}" assigned to multiple annotation groups: {1}'.format(
+          request.user.username or u'Anonymous',
+          u', '.join([x.name for x in groups]))
+        )
         group = groups[0]
     
     if group is not None:
@@ -487,6 +490,7 @@ def overview(request):
       'group_status': group_status,
       'admin_url': admin_url,
       'title': 'WMT16 Dashboard',
+      'annotation_groups': [x.name for x in groups],
     }
     dictionary.update(BASE_CONTEXT)
     
@@ -527,8 +531,8 @@ def status(request):
       'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
       'clusters': RANKINGS_CACHE.get('clusters', []),
-      'title': 'WMT16 Status',
       'admin_url': admin_url,
+      'title': 'WMT16 Status',
     }
     dictionary.update(BASE_CONTEXT)
     

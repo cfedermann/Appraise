@@ -52,7 +52,23 @@ RANKINGS_CACHE = {}
 initialize_database()
 
 
+def _identify_groups_for_user(user):
+    """
+    Identifies the annotation groups for the given user
+    """
+    groups = set()
+    for group in request.user.groups.all():
+        if group.name == 'WMT16' \
+          or group.name.towlower().startswith('wmt')
+          or _group.name.startswith('eng2') \
+          or _group.name.endswith('2eng'):
+            continue
+        
+        groups.add(group)
     
+    return groups
+
+
 def _get_active_users_for_group(group_to_check):
     """
     Determine all users in the given group who have been active in the last 90 days.
@@ -437,15 +453,12 @@ def overview(request):
     
     total[2] = seconds_to_timedelta(int(total[2]))
     
+    groups = _identify_groups_for_user(request.user)
     group = None
-    for _group in request.user.groups.all():
-        if _group.name == 'WMT16' \
-          or _group.name.startswith('eng2') \
-          or _group.name.endswith('2eng'):
-            continue
-        
-        group = _group
-        break
+    if len(groups) > 1:
+        LOGGER.debug('User "{0}" assigned to multiple annotation groups: {1}',
+          request.user.username or "Anonymous", u', '.join(groups))
+        group = groups[0]
     
     if group is not None:
         group_name = group.name
@@ -611,11 +624,7 @@ def _compute_global_stats():
     # Aggregate information about participating groups.
     groups = set()
     for user in wmt16_users:
-        for group in user.groups.all():
-            if group.name == 'WMT16' or group.name.startswith('eng2') \
-              or group.name.endswith('2eng'):
-                continue
-            
+        for group in _identify_groups_for_user(user):
             groups.add(group)
     
     # Compute average/total duration over all results.
@@ -699,11 +708,7 @@ def _compute_group_stats():
     # Aggregate information about participating groups.
     groups = set()
     for user in wmt16_users:
-        for group in user.groups.all():
-            if group.name == 'WMT16' or group.name.startswith('eng2') \
-              or group.name.endswith('2eng'):
-                continue
-            
+        for group in _identify_groups_for_user(user):
             groups.add(group)
             
     # TODO: move this to property of evaluation group or add dedicated data model.

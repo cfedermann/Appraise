@@ -10,7 +10,7 @@ Exports user statistics for all users.  This lists:
 
 - username
 - email
-- research group
+- research groups
 - number of completed HITs
 - total annotation time
 
@@ -28,30 +28,31 @@ if __name__ == "__main__":
     
     # We have just added appraise to the system path list, hence this works.
     from django.contrib.auth.models import User, Group
-    from appraise.wmt16.models import HIT
+    from appraise.wmt16.models import HIT, Project
+    from appraise.wmt16.views import _identify_groups_for_user
     
     # Compute user statistics for all users.
     user_stats = []
     wmt16 = Group.objects.get(name='WMT16')
     users = wmt16.user_set.all()
     
+    # Iterate over all users and collect stats for all projects
     for user in users:
-        _user_stats = HIT.compute_status_for_user(user)
-        _name = user.username
-        _email = user.email
+        for project in Project.objects.all():
+            _user_stats = HIT.compute_status_for_user(user, project)
+            _name = user.username
+            _email = user.email
+            _project = project.name
         
-        _group = "UNDEFINED"
-        for _g in user.groups.all():
-            if _g.name.startswith("eng2") \
-              or _g.name.endswith("2eng") \
-              or _g.name == "WMT16":
-                continue
-            
-            _group = _g.name
-            break
+            groups = _identify_groups_for_user(user)
+            _group = "UNDEFINED"
+            if len(groups) > 0:
+                _group = ';'.join(groups)
         
-        _data = (_name, _email, _group, _user_stats[0], _user_stats[2])
-        user_stats.append(_data)
+        
+           
+           _data = (_name, _email, _project, _group, _user_stats[0], _user_stats[2])
+           user_stats.append(_data)
     
     # Sort by research group.
     user_stats.sort(key=lambda x: x[2])

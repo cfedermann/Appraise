@@ -51,8 +51,8 @@ if __name__ == "__main__":
         
         
            
-           _data = (_name, _email, _project, _group, _user_stats[0], _user_stats[2])
-           user_stats.append(_data)
+            _data = (_name, _email, _project, _group, _user_stats[0], _user_stats[2])
+            user_stats.append(_data)
     
     # Sort by research group.
     user_stats.sort(key=lambda x: x[2])

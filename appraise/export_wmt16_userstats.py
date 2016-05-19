@@ -47,7 +47,7 @@ if __name__ == "__main__":
             groups = _identify_groups_for_user(user)
             _group = "UNDEFINED"
             if len(groups) > 0:
-                _group = ';'.join(groups)
+                _group = ';'.join([g.name for g in groups])
         
         
            

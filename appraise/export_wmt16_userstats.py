@@ -47,12 +47,11 @@ if __name__ == "__main__":
             groups = _identify_groups_for_user(user)
             _group = "UNDEFINED"
             if len(groups) > 0:
-                _group = ';'.join([g.name for g in groups])
-        
-        
-           
+                _group = u";".join([g.name for g in groups])
+            
             _data = (_name, _email, _project, _group, _user_stats[0], _user_stats[2])
-            user_stats.append(_data)
+            if _data[-2] > 0:
+                user_stats.append(_data)
     
     # Sort by research group.
     user_stats.sort(key=lambda x: x[2])

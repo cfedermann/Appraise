@@ -54,8 +54,13 @@
   <td width="10%">{{item.1}} systems</td>
   <td>
   <div class="progress" style="margin-bottom: 0px;">
+{% if item.2.0 == 0 %}
+    <div class="progress-bar progress-bar-striped" style="background-color: #777; width: 10%; min-width: 5%; max-width: 95%;">{{item.2.0}} remaining</div>
+    <div class="progress-bar progress-bar-striped" style="background-color: #777; width: 90%; min-width: 5%; max-width: 95%;">{{item.3.0}} completed</div>
+{% else %}
     <div class="progress-bar {% if item.2.0 < 20 %}progress-bar-danger{% elif item.2.0 < 50 %}progress-bar-warning{% endif %}" style="width: {{item.2.1}}%; min-width: 5%; max-width: 95%;">{{item.2.0}} remaining</div>
     <div class="progress-bar {% if item.3.0 < 200 %}progress-bar-info{% else %}progress-bar-success{% endif %}" style="width: {{item.3.1}}%; min-width: 5%; max-width: 95%;">{{item.3.0}} completed</div>
+{% endif %}
   </div>
   </td>
 <!--

@@ -84,7 +84,7 @@ GROUP_HIT_REQUIREMENTS = {
   'NYU-UMontreal': 400,
   'PJATK': 200,
   'PROMT': 800, # 500 NewsTask, 300 ITTask
-  'QT21': 100,
+  'QT21/HimL': 100,
   'RWTH': 100,
   'UEdin': 1900,
   'UH': 400,

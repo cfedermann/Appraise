@@ -10,11 +10,19 @@ Exports WMT16 results for all language pairs, in CSV WMT format.
 
 """
 from datetime import datetime
+import argparse
 import os
 import sys
 
+PARSER = argparse.ArgumentParser(description="Exports pairwise results for " \
+  "the given annotation project to CSV format.")
+PARSER.add_argument("--project", action="store", dest="annotation_project",
+  help="Annotation project name.", type=str)
+  
 
 if __name__ == "__main__":
+    args = PARSER.parse_args()
+    
     # Properly set DJANGO_SETTINGS_MODULE environment variable.
     os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
     PROJECT_HOME = os.path.normpath(os.getcwd() + "/..")
@@ -24,9 +32,13 @@ if __name__ == "__main__":
     from django.shortcuts import get_object_or_404
     from appraise.wmt16.models import RankingResult, Project
     
-    # Print out results in CSV WMT format.
-    annotation_project = get_object_or_404(Project, name=project)
+    # Check if annotation project exists.
+    if not Project.objects.filter(name=args.annotation_project).exists():
+        print "Annotation project named '{0}' does not exist!".format(args.annotation_project)
+        sys.exit(-1)
+    project_instance = Project.objects.filter(name=args.annotation_project)[0]
     
+    # Print out results in CSV WMT format.    
     queryset = RankingResult.objects.filter(item__hit__completed=True)
 
     results = [u'srclang,trglang,srcIndex,segmentId,judgeId,' \
@@ -34,7 +46,7 @@ if __name__ == "__main__":
     
     for result in queryset:
         if isinstance(result, RankingResult):
-            if result.item.hit.project_set.filter(id=annotation_project.id):
+            if result.item.hit.project_set.filter(id=project_instance.id):
                 try:
                     current_csv = result.export_to_pairwise_csv()
                     if current_csv is None:

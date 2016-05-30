@@ -39,7 +39,8 @@ if __name__ == "__main__":
     project_instance = Project.objects.filter(name=args.annotation_project)[0]
     
     # Print out results in CSV WMT format.    
-    queryset = RankingResult.objects.filter(item__hit__completed=True)
+    queryset = RankingResult.objects.filter(item__hit__completed=True,
+      item__hit__project__id=project_instance.id)
 
     header = u'srclang,trglang,srcIndex,segmentId,judgeId,' \
       'system1Id,system1rank,system2Id,system2rank,rankingID'
@@ -47,12 +48,11 @@ if __name__ == "__main__":
     print header
     for result in queryset:
         if isinstance(result, RankingResult):
-            if result.item.hit.project_set.filter(id=project_instance.id):
-                try:
-                    current_csv = result.export_to_pairwise_csv()
-                    if current_csv is None:
-                        continue
+            try:
+                current_csv = result.export_to_pairwise_csv()
+                if current_csv is None:
+                    continue
                     
-                    print current_csv
-                except:
-                    pass
+                print current_csv
+            except:
+                pass

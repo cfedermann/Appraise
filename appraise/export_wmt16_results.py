@@ -21,18 +21,24 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
-    from appraise.wmt16.models import RankingResult
+    from appraise.wmt16.models import RankingResult, Project
     
     # Print out results in CSV WMT format.
-    headers = [u'srclang,trglang,srcIndex,documentId,segmentId,judgeId,' \
-      'system1Number,system1Id,system2Number,system2Id,system3Number,' \
-      'system3Id,system4Number,system4Id,system5Number,system5Id,' \
-      'system1rank,system2rank,system3rank,system4rank,system5rank']
-    print u",".join(headers)
-    for result in RankingResult.objects.filter(item__hit__completed=True):
-        result.reload_dynamic_fields()
-        try:
-            print result.export_to_csv()
-        except:
-            pass
+    annotation_project = get_object_or_404(Project, name=project)
+    
+    queryset = RankingResult.objects.filter(item__hit__completed=True)
 
+    results = [u'srclang,trglang,srcIndex,segmentId,judgeId,' \
+      'system1Id,system1rank,system2Id,system2rank,rankingID']
+    
+    for result in queryset:
+        if isinstance(result, RankingResult):
+            if result.item.hit.project_set.filter(id=annotation_project.id):
+                try:
+                    current_csv = result.export_to_pairwise_csv()
+                    if current_csv is None:
+                        continue
+                    
+                    print current_csv
+                except:
+                    pass

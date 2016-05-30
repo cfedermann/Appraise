@@ -13,6 +13,7 @@ from datetime import datetime
 import os
 import sys
 
+from django.shortcuts import get_object_or_404
 
 if __name__ == "__main__":
     # Properly set DJANGO_SETTINGS_MODULE environment variable.

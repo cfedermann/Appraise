@@ -41,9 +41,10 @@ if __name__ == "__main__":
     # Print out results in CSV WMT format.    
     queryset = RankingResult.objects.filter(item__hit__completed=True)
 
-    results = [u'srclang,trglang,srcIndex,segmentId,judgeId,' \
-      'system1Id,system1rank,system2Id,system2rank,rankingID']
+    header = u'srclang,trglang,srcIndex,segmentId,judgeId,' \
+      'system1Id,system1rank,system2Id,system2rank,rankingID'
     
+    print header
     for result in queryset:
         if isinstance(result, RankingResult):
             if result.item.hit.project_set.filter(id=project_instance.id):
@@ -52,6 +53,7 @@ if __name__ == "__main__":
                     if current_csv is None:
                         continue
                     
-                    print current_csv
+                    if len(current_csv.split(',')) == 10:
+                        print current_csv
                 except:
                     pass

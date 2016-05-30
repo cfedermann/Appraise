@@ -13,7 +13,6 @@ from datetime import datetime
 import os
 import sys
 
-from django.shortcuts import get_object_or_404
 
 if __name__ == "__main__":
     # Properly set DJANGO_SETTINGS_MODULE environment variable.
@@ -22,6 +21,7 @@ if __name__ == "__main__":
     sys.path.append(PROJECT_HOME)
     
     # We have just added appraise to the system path list, hence this works.
+    from django.shortcuts import get_object_or_404
     from appraise.wmt16.models import RankingResult, Project
     
     # Print out results in CSV WMT format.

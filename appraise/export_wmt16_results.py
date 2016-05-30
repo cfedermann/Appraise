@@ -53,7 +53,6 @@ if __name__ == "__main__":
                     if current_csv is None:
                         continue
                     
-                    if len(current_csv.split(',')) == 10:
-                        print current_csv
+                    print current_csv
                 except:
                     pass

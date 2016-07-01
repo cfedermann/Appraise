@@ -84,7 +84,7 @@ GROUP_HIT_REQUIREMENTS = {
   'NYU-UMontreal': 400,
   'PJATK': 200,
   'PROMT': 800, # 500 NewsTask, 300 ITTask
-  'QT21': 100,
+  'QT21/HimL': 100,
   'RWTH': 100,
   'UEdin': 1900,
   'UH': 400,
@@ -724,7 +724,6 @@ class RankingResult(models.Model):
             # Intra-multi-system pairs, sharing the same rank
             # We'll only add these once to prevent duplicate entries
             if len(expandedA) > 1:
-                print len(expandedA)
                 for (singleA1, singleA2) in combinations(expandedA, 2):
                     csv_local = []
                     csv_local.extend(base_values)
@@ -740,7 +739,6 @@ class RankingResult(models.Model):
             # Intra-multi-system pairs, sharing the same rank
             # We'll only add these once to prevent duplicate entries
             if len(expandedB) > 1:
-                print len(expandedB)
                 for (singleB1, singleB2) in combinations(expandedB, 2):
                     csv_local = []
                     csv_local.extend(base_values)

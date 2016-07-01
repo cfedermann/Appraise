@@ -27,16 +27,16 @@ BASE_CONTEXT = {
 # HTTP error handlers supporting COMMIT_TAG.
 def _page_not_found(request, template_name='404.html'):  
     """Custom HTTP 404 handler that preserves URL_PREFIX."""  
-    LOGGER.info('Rendering HTTP 404 view for user "{0}".'.format(
-      request.user.username or "Anonymous"))
+    LOGGER.info('Rendering HTTP 404 view for user "{0}". Request.path={1}'.format(
+      request.user.username or "Anonymous", request.path))
     
     return render_to_response('404.html', BASE_CONTEXT)
 
   
 def _server_error(request, template_name='500.html'):  
     """Custom HTTP 500 handler that preserves URL_PREFIX."""  
-    LOGGER.info('Rendering HTTP 500 view for user "{0}".'.format(
-      request.user.username or "Anonymous"))
+    LOGGER.info('Rendering HTTP 500 view for user "{0}". Request.path={1}'.format(
+      request.user.username or "Anonymous", request.path))
 
     return render_to_response('500.html', BASE_CONTEXT)
 

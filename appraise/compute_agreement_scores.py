@@ -113,14 +113,14 @@ def compute_agreement_scores(data):
         from traceback import print_exc
         print_exc()
 
-
 # Use 2 for pairwise rankings and 5 for plain WMT data...
 MAX_NUMBER_OF_SYSTEMS = 5
 
 LANGUAGE_CODE_TO_NAME = {
   'ces': 'Czech', 'deu': 'German', 'fra': 'French', 'fre': 'French',
   'esn': 'Spanish', 'fin': 'Finnish', 'rus': 'Russian', 'hin': 'Hindi',
-  'eng': 'English'
+  'eng': 'English', 'ron': 'Romanian', 'tur': 'Turkish',
+  'Portguese': 'Portuguese'
 }
 
 if __name__ == "__main__":
@@ -202,7 +202,10 @@ if __name__ == "__main__":
     language_pairs = ('Czech-English', 'English-Czech', 'German-English',
       'English-German', 'Spanish-English', 'English-Spanish',
       'French-English', 'English-French', 'Russian-English',
-      'English-Russian', 'Finnish-English', 'English-Finnish')
+      'English-Russian', 'Finnish-English', 'English-Finnish',
+      'English-Romanian', 'Romanian-English', 'English-Turkish',
+      'Turkish-English', 'English-Bulgarian', 'English-Basque',
+      'English-Portuguese', 'English-Dutch')
     
     for language_pair in language_pairs:
         segments_data = results_data[language_pair]

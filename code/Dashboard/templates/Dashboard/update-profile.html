@@ -1,0 +1,63 @@
+{% extends "Dashboard/base.html" %}
+
+{% block content %}
+  {% if errors %}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    {% if 'invalid_projects' in errors %}
+    <p><strong>Warning!</strong> Invalid or missing project selection. Please choose at least one annotation project for evaluation.</p>
+    {% elif 'invalid_languages' in errors %}
+    <p><strong>Warning!</strong> Invalid or missing language selection. Please choose at least one target language for evaluation.</p>
+    {% else %}
+    <p><strong>Warning!</strong> Something bad happened. Please try again.</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="page-header">
+    <h1>Update profile</h1>
+    <p>Please tell us which target languages you can evaluate.</p>
+    
+    <div class="panel panel-primary" style="margin-top: 20px;">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>Note</strong></h3>
+      </div>
+      <div class="panel-body">
+        <p>You can select the target languages you want to evaluate. You can change these settings at any time. Unfinished annotation work will be shown in your dashboard until it has been completed, even if you opt out of annotation for the respective target language. <strong>Hold down "Control", or "Command" on a Mac, to select more than one.</strong></p>
+      </div>
+    </div>
+  </div>
+  <form class="form-horizontal" method="post" action="{% url 'update-profile' %}">
+  {% csrf_token %}
+
+    <div class="form-group">
+      <label for="id_languages" class="col-sm-4 control-label">Languages</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <select class="form-control" name="languages" id="id_languages" multiple="multiple">
+{% for code, name in language_choices %}
+            <option {% if code in languages %}selected="selected"{% endif %}value="{{code}}">{{name}}</option>
+{% endfor %}
+          </select>
+        </div>
+        <span id="helpLanguages" class="help-block">Which target languages will you evaluate?</span>
+      </div>
+    </div>
+
+    <button type="submit" class="col-sm-offset-4 btn btn-primary">Update profile</button>
+
+  </form>
+{% endblock %}
+
+{% block actions %}
+    <script>
+  {% if focus_input %}
+      // Set focus to given input
+      $('#{{ focus_input }}').focus();
+  {% else %}
+      // by default, set focus on username input
+      $('#id_languages').focus();
+  {% endif %}
+    </script>
+{% endblock %}

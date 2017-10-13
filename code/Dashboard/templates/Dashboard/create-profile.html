@@ -1,0 +1,100 @@
+{% extends "Dashboard/base.html" %}
+
+{% block content %}
+  {% if errors %}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    {% if 'invalid_username' in errors %}
+    <p><strong>Warning!</strong> Invalid or missing username. Please provide a new username.</p>
+    {% elif 'invalid_email' in errors %}
+    <p><strong>Warning!</strong> Invalid or missing email address. Please provide your email address. It will never be shared.</p>
+    {% elif 'invalid_token' in errors %}
+    <p><strong>Warning!</strong> Invalid or inactive invite token. Please try again and contact your team lead if the problem persists.</p>
+    {% elif 'invalid_languages' in errors %}
+    <p><strong>Warning!</strong> Invalid or missing language selection. Please choose at least one target language for evaluation.</p>
+    {% else %}
+    <p><strong>Warning!</strong> Something bad happened. Please try again.</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="page-header">
+    <h1>Create profile</h1>
+    <p>Please enter your desired username, your email address and your unique invite token. Then, tell us which target languages you can evaluate.</p>
+    
+    <div class="panel panel-primary" style="margin-top: 20px;">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>Note</strong></h3>
+      </div>
+      <div class="panel-body">
+        <p>Each invite token can only be used once. After submitting this form you will be redirected to the front page. If successful you will be automatically logged into a new browser session. No confirmation message will be shown. If you provided a wrong value for the invite token field you will see an error message.</p>
+      </div>
+    </div>
+  </div>
+  <form class="form-horizontal" method="post" action="{% url 'create-profile' %}">
+  {% csrf_token %}
+
+    <div class="form-group">
+      <label for="id_username" class="col-sm-4 control-label">Username</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <input class="form-control" name="username" id="id_username" type="text" size="30" value="{% if username %}{{username}}{% endif %}" aria-describedby="helpUsername" />
+        </div>
+        <span id="helpUsername" class="help-block">Please enter your desired username</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id_email" class="col-sm-4 control-label">Email</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <input class="form-control" name="email" id="id_email" type="text" size="30" value="{% if email %}{{email}}{% endif %}" aria-describedby="helpEmail" />
+        </div>
+        <span id="helpEmail" class="help-block">Please enter your email address</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id_token" class="col-sm-4 control-label">Token</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <input class="form-control" name="token" id="id_token" type="text" size="30" value="{% if token %}{{token}}{% endif %}" aria-describedby="helpToken" />
+        </div>
+        <span id="helpToken" class="help-block">And also provide your invite token</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id_languages" class="col-sm-4 control-label">Languages</label>
+      <div class="col-sm-4">
+        <div class="input-group">
+          <div class="input-group-addon">required</div>
+          <select class="form-control" name="languages" id="id_languages" multiple="multiple">
+{% for code, name in language_choices %}
+            <option {% if code in languages %}selected="selected"{% endif %}value="{{code}}">{{name}}</option>
+{% endfor %}
+          </select>
+        </div>
+        <span id="helpLanguages" class="help-block">Which languages will you evaluate?</span>
+      </div>
+    </div>
+
+    <button type="submit" class="col-sm-offset-4 btn btn-primary">Create profile</button>
+
+  </form>
+{% endblock %}
+
+{% block actions %}
+    <script>
+  {% if focus_input %}
+      // Set focus to given input
+      $('#{{ focus_input }}').focus();
+  {% else %}
+      // by default, set focus on username input
+      $('#id_username').focus();
+  {% endif %}
+    </script>
+{% endblock %}

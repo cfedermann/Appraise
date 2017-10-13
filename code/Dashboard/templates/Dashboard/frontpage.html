@@ -1,0 +1,33 @@
+{% extends 'Dashboard/base.html' %}
+
+{% block content %}
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Welcome to Appraise!</h1>
+        <h3>An open-source system for manual evaluation of MT output</h3>
+
+        <div class="panel panel-primary" style="margin-top: 20px;">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>This is Appraise</strong></h3>
+          </div>
+          <div class="panel-body">
+            <p><small>It supports collaborative collection of human feedback for MT evaluation. It implements tasks such as <em>Translation Quality Checking</em>, <em>Ranking and Error Classification</em>, and <em>Manual Post-Editing</em>. For WMT17, we added support for <em>Direct Assessment</em>.</small></p>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-md-offset-1">
+          <div class="col-md-5">
+            <a class="btn btn-default btn-lg btn-block" href="{% url 'dashboard' %}" role="button">Access dashboard &raquo;</a>
+          </div>
+          <div class="col-md-5">
+{% if request.user.is_authenticated %}
+            <a class="btn btn-primary btn-lg btn-block" href="{% url 'update-profile' %}" role="button">Update profile &raquo;</a>
+{% else %}
+            <a class="btn btn-primary btn-lg btn-block" href="{% url 'create-profile' %}" role="button">Create profile &raquo;</a>
+{% endif %}
+          </div>
+        </div>
+
+        <div>&nbsp;</div>
+      </div>
+{% endblock %}

@@ -1,0 +1,177 @@
+{% extends "Dashboard/base.html" %}
+{% load static %}
+
+{% block head %}
+<style>
+#slider .ui-slider-range { background: #729fcf; }
+#slider .ui-slider-handle { border-color: #729fcf; }
+</style>
+
+<link rel="stylesheet" href="{% static 'EvalView/css/jquery-ui.css' %}">
+<script src="{% static 'EvalView/js/jquery-ui.min.js' %}"></script>
+<script>
+<!--
+var idleTime = 0;
+//var idleTimeoutInSeconds = 5;
+
+$(document).ready(function() {
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+  $('#slider').slider({orientation: "horizontal", range: "min", change: update_score});
+  $('input[name="score"]').val(-1);
+
+  // Increment the idle time counter every second.
+  //var idleInterval = setInterval(timerIncrement, 1000);
+
+  // Zero idle timer on mouse movement.
+  //$(this).mousemove(function (e) {
+  //  idleTime = 0;
+  //});
+
+  // Zero idle timer on key presses.
+  //$(this).keypress(function (e) {
+  //  idleTime = 0;
+  //});
+});
+
+// Uncomment this to activate timeout functionality
+/*
+function timerIncrement() {
+  idleTime = idleTime + 1;
+  if (idleTime > idleTimeoutInSeconds) {
+    alert('Annotation has been paused after ' + idleTimeoutInSeconds+ ' seconds of inactiviy.\nClick "OK" to continue annotation.');
+    reset_timer();
+  }
+}
+
+function reset_timer()
+{
+  idleTime = 0;
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+}
+*/
+
+function add_end_timestamp()
+{
+  $('input[name="end_timestamp"]').val(Date.now()/1000.0);
+}
+
+function reset_form()
+{
+  idleTime = 0;
+  $('input[name="start_timestamp"]').val(Date.now()/1000.0);
+  $('#slider').slider('option', 'value', 0);
+  $('input[name="score"]').val(-1);
+}
+
+function validate_form()
+{
+  var score = $('input[name="score"]').val();
+  if (score == -1)
+  {
+    alert('Please score the given candidate sentence. Thanks!');
+    return false;
+  }
+
+  return true;
+}
+
+function update_score()
+{
+  var new_score = $('#slider').slider('value');
+  $('input[name="score"]').val(new_score);
+}
+-->
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+<form action="{{action_url}}" method="post" onsubmit="javascript:add_end_timestamp();">
+{% csrf_token %}
+
+<div class="alert alert-info">
+  <table style="width:100%">
+  <tr>
+    <td style="width:33%;text-align:left;">
+      <strong id="task_progress">{% if trusted_user %}<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> {% endif %}{{completed_blocks}}/10 blocks, {{items_left_in_block}} items left in block</strong>
+    </td>
+    <td style="width:33%;text-align:center;">
+      <strong>{{campaign}} #{{datask_id}}:Segment #{{item_id}}</strong>
+    </td>
+    <td style="width:33%;text-align:right;">
+      <strong>{% if source_language %}{{source_language}} &rarr; {% endif %}{{target_language}}</strong>
+    </td>
+  </tr>
+  </table>
+</div>
+
+<div class="row">
+<div class="col-sm-6">
+<blockquote>
+<img src="{{image_url}}" class="img-responsive img-fluid" style="padding: 2px;" />
+<small>Corresponding image</small>
+</blockquote>
+</div>
+
+<div class="col-sm-6">
+<blockquote>
+<p><strong>{{reference_text|safe}}</strong></p>
+<small>Source text</small>
+</blockquote>
+
+<blockquote>
+<p><strong>{{candidate_text|safe}}</strong></p>
+<small>Candidate translation</small>
+</blockquote>
+
+</div>
+</div>
+
+<input name="end_timestamp" type="hidden" value="" />
+<input name="item_id" type="hidden" value="{{item_id}}" />
+<input name="task_id" type="hidden" value="{{task_id}}" />
+<input name="start_timestamp" type="hidden" value="" />
+<input name="score" type="hidden" value="-1" />
+
+<div class="row">
+<div class="col-sm-12">
+  <table class="col-sm-12" style="color: #777;">
+  <tr>
+    <td style="width:25%;text-align: right;">|</td>
+    <td style="width:25%;text-align: right;">|</td>
+    <td style="width:25%;text-align: right;">|</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</div>
+<div class="col-sm-12">
+<blockquote>
+<div id="slider"></div>
+<small>How accurately does the above candidate text convey the original semantics of the reference text? Slider ranges from <emph>Not a all</emph> (left) to <emph>Perfectly</emph> (right).</small>
+</blockquote>
+</div>
+</div>
+
+</span>
+
+<div class="actions">
+  <table style="width:100%">
+  <tr>
+    <td style="width:50%;text-align:left;">
+      <button onclick="javascript:reset_form();" accesskey="2" type="reset" class="btn"><i class="icon-repeat"></i> Reset</button>
+<!--
+      &nbsp;
+      <button name="submit_button" accesskey="3" type="submit" class="btn btn-danger" value="FLAG_ERROR"><i class="icon-white icon-exclamation-sign"></i> Skip Item</button>
+-->
+    </td>
+    <td style="width:50%;text-align:right;">
+      <button class="btn btn-primary" name="submit_button" accesskey="1" type="submit" value="SUBMIT" onclick="javascript:return validate_form();"><i class="icon-ok-sign icon-white"></i> Submit</button>
+    </td>
+  </tr>
+  </table>
+</div>
+
+</form>
+
+{% endblock %}

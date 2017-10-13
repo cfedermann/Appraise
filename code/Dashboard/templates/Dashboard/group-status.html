@@ -1,0 +1,23 @@
+{% extends 'Dashboard/base.html' %}
+{% load humanize %}
+
+{% block content %}
+  <div class="page-header">
+    <h1>Group status</h1>
+    <p>Computed based on all completed annotation tasks.</p>
+
+    <table class="table table-striped">
+      <tr>
+        <th>Group name</th><th>Completed tasks</th><th>Total tasks</th>
+      </tr>
+{% for item in group_status %}
+      <tr>
+        <td>{{item.0}}</td><td>{{item.1}}</td><td>{{item.2}}</td>
+      </tr>
+{% endfor %}
+      <tr>
+        <td>Total</td><td>{{sum_completed|intcomma}}</td><td>{{sum_total|intcomma}}</td>
+      </tr>
+    </table>
+  </div>
+{% endblock %}

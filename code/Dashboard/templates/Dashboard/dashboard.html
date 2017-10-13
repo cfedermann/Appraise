@@ -1,0 +1,52 @@
+{% extends 'Dashboard/base.html' %}
+
+{% block content %}
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Dashboard</h1>
+        <h3>Evaluation Campaign for the <a href="http://statmt.org/wmt17/">Second Conference on Machine Translation</a> (WMT17)</h3>
+
+        <div class="panel panel-primary" style="margin-top: 20px;">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>This is Appraise</strong></h3>
+          </div>
+          <div class="panel-body">
+{% if current_task %}
+            <h3>Current HIT</h3>
+{% if current_type == 'multimodal' %}
+            <p>Continue annotation for <a href="{% url 'multimodal-assessment' %}">{{current_task.campaign}}:{{current_task.marketTargetLanguage}}</a>.</p>
+{% elif current_type == 'direct' %}
+            <p>Continue annotation for <a href="{% url 'direct-assessment' %}">{{current_task.campaign}}:{{current_task.marketTargetLanguage}}</a>.</p>
+{% endif %}
+{% elif languages or multimodal %}
+{% if languages %}
+            <h3>Next HIT</h3>
+            <p>Start annotation for:
+{% for code, language, campaign in languages %}
+              <a href="{% url 'direct-assessment' code campaign %}">{{campaign}}:{{language}}</a>{% if not forloop.last %} &middot; {% endif %}
+{% endfor %}
+            </p>
+{% endif %}
+{% if multimodal %}
+            <h3>Multimodal HIT</h3>
+            <p>Start annotation for:
+{% for code, language, campaign in multimodal %}
+              <a href="{% url 'multimodal-assessment' code campaign %}">{{campaign}}:{{language}}</a>{% if not forloop.last %} &middot; {% endif %}
+{% endfor %}
+            </p>
+{% endif %}
+            <p><small>You will be assigned a free annotation task for the selected target language.</small></p>
+
+{% elif work_completed%}
+            <h3>Work completed</h3>
+            <p>You have successfully completed all tasks assigned to you. Thank you very much!</p>
+{% else %}
+            <h3>Next HIT</h3>
+            <p>We are currently finalising the registration process for annotator accounts. Once this has been completed, direct assessment tasks will be become available from this page. Please check back in a little while.</p>
+{% endif %}
+            <h3>User status</h3>
+            <p>{{annotations}} annotation{{annotations|pluralize}}, {{hits}} HIT{{hits|pluralize}} completed. Total annotation duration {% if days %}{{days|stringformat:"02d"}}d{% endif %}{{hours|stringformat:"02d"}}h{{minutes|stringformat:"02d"}}m{{seconds|stringformat:"02d"}}s.</p>
+          </div>
+        </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{{ title }}</title>
+
+    <!-- Bootstrap v3.3.7 -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{% static 'Dashboard/css/bootstrap.min.css' %}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'Dashboard/js/html5shiv.min.js' %}"></script>
+      <script src="{% static 'Dashboard/js/respond.min.js' %}"></script>
+    <![endif]-->
+
+    <!-- jQuery v3.2.1 (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'Dashboard/js/jquery.min.js' %}"></script>
+{% block head %}{% endblock %}
+  </head>
+  <body style="padding-top: 100px">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'frontpage' %}">Appraise</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li{% if active_page == 'dashboard' %} class="active"{% endif %}><a href="{% url 'dashboard' %}">Dashboard</a></li>
+{% if active_page == 'sign-in' %}
+            <li class="active"><a name="#sign-in">Sign in</a></li>
+{% elif active_page == 'register' %}
+            <li class="active"><a name="#register">Register</a></li>
+{% endif %}
+          </ul>
+{% if not is_special_page %}
+          <ul class="nav navbar-nav navbar-right">
+{% if not request.user.is_authenticated %}
+            <li><a href="{% url 'sign-in' %}">Sign in</a></li>
+            <li><a href="{% url 'create-profile' %}">Create profile</a></li>
+{% else %}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ request.user.username }}<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Account</li>
+                <li><a href="{% url 'update-profile' %}">Update profile</a></li>
+                <li><a href="{% url 'change-password' %}">Change password</a></li>
+                <li><a href="{% url 'sign-out' %}">Sign out "{{ request.user.username }}"</a></li>
+{% if request.user.is_staff %}
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Management</li>
+{% if request.user.is_superuser %}
+                <li><a href="{% url 'admin:index' %}">Admin backend</a></li>
+{% endif %}
+                <li><a href="{% url 'group-status' %}">Campaign status</a></li>
+{% endif %}
+              </ul>
+            </li>
+{% endif %}
+          </ul>
+{% endif %}
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+{% comment %}TODO: this needs proper cleanup{% endcomment %}
+    <div class="container" role="main">
+{% if messages %}
+      <ul class="messages">
+{% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+{% endfor %}
+     </ul>
+{% endif %}
+
+{% block content %}{% endblock %}
+
+      <hr/>
+      <footer>
+        <p class="text-center"><small><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> &nbsp; This is the GitHub version <code>{{ commit_tag }}</code> of the Appraise evaluation system. <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> &nbsp; Some rights reserved. <span class="glyphicon glyphicon-random" aria-hidden="true"></span> &nbsp; Developed and maintained by <a href="mailto:cfedermann [at] gmail [dot] com">Christian Federmann</a>.</small></p>
+{% if template_debug and debug_times %}
+        <p class="text-center"><small class="color: #ddd;">
+          Runtime: {% for debug_time in debug_times %}{{debug_time}}{% if not forloop.last %} &middot; {% endif %}{% endfor %}
+        </small></p>
+{% endif %}
+      </footer>
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="{% static 'Dashboard/js/bootstrap.min.js' %}" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+{% block actions %}{% endblock %}
+  </body>
+</html>

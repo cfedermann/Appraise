@@ -1,0 +1,22 @@
+{% extends 'Dashboard/base.html' %}
+
+{% block content %}
+  <div class="page-header">
+    <h1>System status</h1>
+    <p>Computed based on all completed annotation items.</p>
+
+    <table class="table table-striped">
+      <tr>
+        <th>System name</th><th>Language pair</th><th>Completed items</th>
+      </tr>
+{% for item in system_status %}
+      <tr>
+        <td>{{item.1}}</td><td>{{item.0}}</td><td>{{item.2}}</td>
+      </tr>
+{% endfor %}
+      <tr>
+        <td>Total</td><td></td><td>{{total_completed}}</td>
+      </tr>
+    </table>
+  </div>
+{% endblock %}

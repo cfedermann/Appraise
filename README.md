@@ -6,6 +6,18 @@
 
 <p>There are several other changes waiting for release and I hope to make the full WMT18 system available in the coming weeks. This would give us an unprecendented amount of testing time before the actual evaluation campaigns start. And it would allow us to experiment with other annotation tasks. Cheers!</p>
 
+<h2>Quick Start</h2>
+<p>The following is a quick walkthrough the steps required to get the <code>wmt17code</code> branch up and running. This will be much improved when this branch will replace <code>master</code>. If you run into issues, ping me by email and I will try to help.</p>
+
+<ol>
+<li>Check out code and and check that there are no warnings: <code>python manage.py check</code>
+<li>Initialize database (debug version will use local SQLite database): <code>python manage.py migrate</code>
+<li>Create super user account: <code>python manage.py createsuperuser</code>
+<li>Check that you can log into admin backend: <code>python manage.py runserver</code>, open http://127.0.0.1:8000/admin/
+</ol>
+
+<h2>Previous Notes</h2>
+
 <p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt16/">ACL 2016 First Conference on Machine Translation (WMT16)</a>. It has also been used for WMT 2015, 2014 and 2013. Second major release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software appeared in summer 2008...</p>
 
 <h2 id="wmt15">WMT16</h2>

@@ -16,6 +16,23 @@
 <li>Check that you can log into admin backend: <code>python manage.py runserver</code>, open http://127.0.0.1:8000/admin/
 </ol>
 
+<h2>Create Annotation Tasks</h2>
+<p>You can either create <code>DirectAssessmentTask</code> or <code>MultiModalAssessmentTask</code> instances. To do so, you will need source data and then run <code>python manage.py CreateDirectAssessmentData</code> or <code>python manage.py CreateMultiModalAssessmentData</code>. This process is (currently too) complicated and will be simplified in a future release. For now, you can use batches from WMT17 to test things. These are available from the <code>wmt17data</code> folder.
+
+<h2>Create Annotation Campaign</h2>
+<p>Annotation work is organized in campaigns. Each campaign contains one or more batches of data. Each batch is a collection of annotation tasks (either plain direct assessment or multimodal direct assessment). For each campaign, there exists a campaign team, though currently annotation work is not actively constrained to only members of that team.<p>
+
+<ol>
+<li>Create new <code>Batch</code> instance for your task; this will require you to also create corresponding <code>Market</code> and <code>Metadata</code> instances. It will upload the batch data file to a folder named <code>Batches</code> within your Appraise code folder.</li>
+<li>Create a new <code>CampaignTeam</code> instance and add users as desired.</li>
+<li>Create a new <code>Campaign</code> instance, linking to the batch and team you just created.</li>
+<li>Go to the command line and run <code>python manage.py ValidateCampaignData [campaign-name]</code>. On UNIX, this needs to use <code>validatecampaigndata</code> (will be fixed in the future)</li>
+<li>Create tasks using <code>python manage.py ProcessCampaignData [campaign-name] [Direct|MultiModal]</code>. This will import tasks into the database but not activate them yet.</li>
+<li>Activate tasks using <code>python manage.py UpdateEvalDataModels</code></li>
+<li>Go to your admin dashboard and check that you have <code>DirectAssessmentTask</code> or <code>MultiModalAssessmentTask</code> instances.</li>
+<li>Until <code>WorkAgenda</code> creation is automated, access annotation interfaces using direct URLs.</li>
+</ol>
+
 <h2>Previous Notes</h2>
 
 <p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt16/">ACL 2016 First Conference on Machine Translation (WMT16)</a>. It has also been used for WMT 2015, 2014 and 2013. Second major release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software appeared in summer 2008...</p>

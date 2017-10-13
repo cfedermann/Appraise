@@ -1,5 +1,11 @@
 <h1 id="appraise_evaluation_system">Appraise Evaluation System</h1>
 
+<h2>WMT17 code released</h2>
+
+<p>An updated version of the WMT17 code has been released under the <code>wmt17code</code> branch. This will become the new <code>master</code> branch soon, but still requires some cleanup and refactoring as I have changed underlying data structures and code. The new branch should be feature identical to what was used at WMT17, except that it uses <code>WorkAgenda</code> objects instead of dynamic task allocation. This will require you to pre-select tasks for users, otherwise they will not see any in their dashboard (this will be cleaned up before the release to <code>master</code>). Multimodal annotation tasks do not currently support such pre-allocation and will not be visible from the dashboard (you can hack the template or wait for the next update). They work fine, though, if you point users directly to the respective task URL.</p>
+
+<p>There are several other changes waiting for release and I hope to make the full WMT18 system available in the coming weeks. This would give us an unprecendented amount of testing time before the actual evaluation campaigns start. And it would allow us to experiment with other annotation tasks. Cheers!</p>
+
 <p>Current release used to run the evaluation of the <a href="http://www.statmt.org/wmt16/">ACL 2016 First Conference on Machine Translation (WMT16)</a>. It has also been used for WMT 2015, 2014 and 2013. Second major release in time for the <a href="http://www.statmt.org/mtm12/">Seventh MT Marathon 2012</a> which took place September 3-8, 2012 in Edinburgh, Scotland. Initial import into GitHub on Oct 23, 2011. First versions of this software appeared in summer 2008...</p>
 
 <h2 id="wmt15">WMT16</h2>

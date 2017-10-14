@@ -68,6 +68,11 @@ TASKAGENDA_REGISTERED_TYPES = (
   ('MM', 'Multimodal Assessment')
 )
 
+TYPE_TO_CLASS_MAPPING = {
+  'DA': 'DirectAssessmentTask',
+  'MM': 'MultiModalAssessmentTask'
+}
+
 def seconds_to_timedelta(value):
     """
     Converst the given value in secodns to datetime.timedelta.
@@ -2072,3 +2077,24 @@ class TaskAgenda(models.Model):
           self._open_tasks.count(),
           self._completed_tasks.count()
         )
+
+    def get_next_task(self):
+        """
+        Computes next task for this agenda. Returns None if there is none.
+        """
+        if TASKAGENDA_STRATEGY_CHOICES[self.strategy] == 'Manual':
+            return self._open_tasks.first()
+
+        if TASKAGENDA_REGISTERED_TYPES[self.datatype]:
+            _qs = '{0}.objects.filter(activated=True, campaign={2})'.format(
+              TYPE_TO_CLASS_MAPPING[self.datatype], self.campaign
+            )
+
+            try:
+                qs = eval(_qs)
+                return qs.first()
+
+            except:
+                return None
+
+        return None

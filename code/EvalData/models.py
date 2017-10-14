@@ -58,6 +58,11 @@ SET_ITEMTYPE_CHOICES = (
   ('CHK', 'Redundant check')
 )
 
+TASKAGENDA_STRATEGY_CHOICES = (
+  ('A', 'Automatic'),
+  ('M', 'Manual')
+)
+
 def seconds_to_timedelta(value):
     """
     Converst the given value in secodns to datetime.timedelta.
@@ -2013,6 +2018,13 @@ class TaskAgenda(models.Model):
     campaign = models.ForeignKey(
       'Campaign.Campaign',
       verbose_name=_('Campaign')
+    )
+
+    strategy = models.CharField(
+      max_length=1,
+      default='M',
+      choices=TASKAGENDA_STRATEGY_CHOICES,
+      verbose_name=_('Strategy')
     )
 
     _open_tasks = models.ManyToManyField(

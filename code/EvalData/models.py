@@ -63,6 +63,11 @@ TASKAGENDA_STRATEGY_CHOICES = (
   ('M', 'Manual')
 )
 
+TASKAGENDA_REGISTERED_TYPES = (
+  ('DA', 'Direct Assessment'),
+  ('MM', 'Multimodal Assessment')
+)
+
 def seconds_to_timedelta(value):
     """
     Converst the given value in secodns to datetime.timedelta.
@@ -2018,6 +2023,13 @@ class TaskAgenda(models.Model):
     campaign = models.ForeignKey(
       'Campaign.Campaign',
       verbose_name=_('Campaign')
+    )
+
+    task_type = models.CharField(
+      max_length=2,
+      blank=True,
+      choices=TASKAGENDA_REGISTERED_TYPES,
+      verbose_name=_('Task type')
     )
 
     strategy = models.CharField(

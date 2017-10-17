@@ -19,7 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.decorators import login_required
 from Dashboard import views as dashboard_views
 from EvalView import views as evalview_views
-from Appraise.settings import BASE_CONTEXT, DEBUG
+from Appraise.settings import BASE_CONTEXT, DEBUG, DEBUG_TOOLBAR_AVAILABLE
 
 # Base context for all views.
 #BASE_CON3TEXT = {
@@ -90,7 +90,7 @@ urlpatterns = [
     url(r'^multimodal-assessment/(?P<code>[a-z]{3})/(?P<campaign_name>[a-zA-Z0-9]+)/$', evalview_views.multimodal_assessment, name='multimodal-assessment'),
 ]
 
-if DEBUG:
+if DEBUG and DEBUG_TOOLBAR_AVAILABLE:
     import debug_toolbar
     urlpatterns = [
         url(r'^__debug__/', include(debug_toolbar.urls)),

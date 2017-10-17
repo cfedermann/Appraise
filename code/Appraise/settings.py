@@ -85,11 +85,18 @@ INSTALLED_APPS = [
     'Campaign',
 ]
 
+DEBUG_TOOLBAR_AVAILABLE = False
 if DEBUG:
-    INSTALLED_APPS.append('debug_toolbar')
+    try:
+        import debug_toolbar
+        INSTALLED_APPS.append('debug_toolbar')
+        DEBUG_TOOLBAR_AVAILABLE = True
+
+    except ImportError:
+        print('debug_toolbar support not available')
 
 MIDDLEWARE = []
-if DEBUG:
+if DEBUG and DEBUG_TOOLBAR_AVAILABLE:
     MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
 
 MIDDLEWARE.extend([

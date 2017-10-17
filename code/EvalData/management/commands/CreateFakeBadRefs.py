@@ -38,6 +38,10 @@ class Command(BaseCommand):
           '--filter-expr', type=str, default='*',
           help='Filter expression for file names'
         )
+        parser.add_argument(
+          '--unicode', action='store_true',
+          help='Expects text files in Unicode encoding'
+        )
 
     def handle(self, *args, **options):
         # Initialize random number generator
@@ -47,6 +51,7 @@ class Command(BaseCommand):
           if options['random_seed'] is not None \
           else int(datetime.now().timestamp()*10**6)
         filter_expr = options['filter_expr']
+        unicode_enc = options['unicode']
 
         _msg = '\n[{0}]\n\n'.format(path.basename(__file__))
         self.stdout.write(_msg)
@@ -76,7 +81,7 @@ class Command(BaseCommand):
                 # Write random number generator seed value to file.
                 seed_value_file = path.join(target_path, "seed_value.txt")
                 with open(seed_value_file, mode='w') as output_file:
-                    output_file.write('{0}\r\n'.format(random_seed))
+                    output_file.write('{0}\n'.format(random_seed))
 
             # pylint: disable=W0702
             except:
@@ -117,7 +122,8 @@ class Command(BaseCommand):
                     copyfile(source_ids_file, target_ids_file)
 
                 # Otherwise, process file, creating bad refs and ids file
-                Command.create_bad_refs_for_file(source_file, target_file)
+                encoding = 'utf16' if unicode_enc else 'utf8'
+                Command.create_bad_refs_for_file(source_file, target_file, encoding)
                 self.stdout.write('OK')
 
             # pylint: disable=W0702
@@ -146,15 +152,15 @@ class Command(BaseCommand):
                     segment_ids.append(segment_id)
                     bad_ref = Command.create_bad_ref_for_segment(current_line.strip())
                     output_file.write(bad_ref)
-                    output_file.write('\r\n')
+                    output_file.write('\n')
                     segment_id += 1
 
         target_ids_file = Command._create_target_file_name(
           source_file, path.dirname(target_file), EXTENSION_FOR_IDS_FILES
         )
         if not path.exists(target_ids_file):
-            with open(target_ids_file, mode='w', encoding=encoding) as ids_file:
-                ids_file.writelines(['{0}\r\n'.format(x) for x in segment_ids])
+            with open(target_ids_file, mode='w', encoding='utf8') as ids_file:
+                ids_file.writelines(['{0}\n'.format(x) for x in segment_ids])
 
 
     @staticmethod

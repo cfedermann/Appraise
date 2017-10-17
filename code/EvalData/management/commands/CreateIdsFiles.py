@@ -139,5 +139,5 @@ class Command(BaseCommand):
                 # pylint: disable=W0612
                 for current_line in input_file:
                     output_file.write(str(segment_id))
-                    output_file.write('\r\n')
+                    output_file.write("\n")
                     segment_id += 1

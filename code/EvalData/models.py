@@ -102,6 +102,12 @@ class ObjectID(models.Model):
         value=MAX_PRIMARYID_LENGTH))
     )
 
+    _str_name = models.TextField(
+      blank=True,
+      default="",
+      editable=False
+    )
+
     def get_object_instance(self):
         """
         Returns actual object instance for current ObjectID instance.
@@ -125,7 +131,20 @@ class ObjectID(models.Model):
             LOGGER.warn(format_exc())
 
         finally:
+            _new_name = str(instance)
+            if _new_name != self._str_name:
+                self._str_name = _new_name
+                self.save()
+
             return instance
+
+    # pylint: disable=E1136
+    def __str__(self):
+        if self._str_name == "":
+            # This will populate self._str_name
+            _ = self.get_object_instance()
+
+        return self._str_name
 
 
 # pylint: disable=C0103,R0903
@@ -2082,19 +2101,26 @@ class TaskAgenda(models.Model):
         """
         Computes next task for this agenda. Returns None if there is none.
         """
-        if TASKAGENDA_STRATEGY_CHOICES[self.strategy] == 'Manual':
+        if self.strategy == 'M':
             return self._open_tasks.first()
 
-        if TASKAGENDA_REGISTERED_TYPES[self.datatype]:
-            _qs = '{0}.objects.filter(activated=True, campaign={2})'.format(
-              TYPE_TO_CLASS_MAPPING[self.datatype], self.campaign
+        if self.task_type:
+            print(self.task_type)
+            _qs = '{0}.objects.filter(activated=True, campaign=\'{1}\')'.format(
+              TYPE_TO_CLASS_MAPPING[self.task_type], self.campaign.id
             )
+            print(_qs)
+            print(dir(MultiModalAssessmentTask))
 
             try:
                 qs = eval(_qs)
+                print(qs)
                 return qs.first()
 
             except:
+                from traceback import format_exc
+                print('BAD')
+                print(format_exc())
                 return None
 
         return None

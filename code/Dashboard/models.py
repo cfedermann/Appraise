@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from uuid import uuid4
 from django.contrib.auth.models import Group, User
 from django.db import models

@@ -15,6 +15,9 @@
 <h2 id="updates2015">Updates 2015</h2>
 
 <p><strong>2015-05-08</strong><blockquote class="twitter-tweet" lang="en"><p>Here we go again! <a href="https://twitter.com/search?q=%23WMT15&amp;src=hash">#WMT15</a> evaluation campaign is running!<br/> Happy annotating! <a href="http://t.co/an6M1WElar">appraise.cf</a> -- <a href="http://t.co/tuIEbUAIdS">statmt.org/wmt15/</a> <a href="https://twitter.com/search?q=%23WMT&amp;src=hash">#WMT</a> <a href="https://twitter.com/search?q=%23Appraise&amp;src=hash">#Appraise</a></p>&mdash; Christian Federmann (@cfedermann) <a href="https://twitter.com/cfedermann/status/596581479422922754">May 8, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+These changes are intended to increase the amount of work available to Masters Workers and present a simpler experience for Requesters.
+   
+     
 
 <h2 id="wmt14">WMT14</h2>
 

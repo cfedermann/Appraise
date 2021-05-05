@@ -1,4 +1,4 @@
-<b style="background-color: yellow"><u>2019/12/06: WMT19 code upload coming soon! ETA: 12/09/2019...</u></b>
+<b style="background-color: yellow"><u>!!! Please note that the new official repository of Appraise is now https://github.com/AppraiseDev/Appraise. The newest release available from there includes code used at WMT 2020 and better documentation. !!!</u></b>
 
 <h1 id="appraise_evaluation_system">Appraise Evaluation System</h1>
 

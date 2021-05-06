@@ -1,4 +1,4 @@
-<b style="background-color: yellow"><u>!!! Please note that the new official repository of Appraise is now https://github.com/AppraiseDev/Appraise. The newest release available from there includes code used at WMT 2020 and better documentation. !!!</u></b>
+<b style="background-color: yellow"><u>!!! Please note that the new official repository of Appraise is now <a href="https://github.com/AppraiseDev/Appraise">https://github.com/AppraiseDev/Appraise</a>. The newest release available from there includes code used at WMT 2020 and better documentation. !!!</u></b>
 
 <h1 id="appraise_evaluation_system">Appraise Evaluation System</h1>
 
